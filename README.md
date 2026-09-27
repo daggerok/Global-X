@@ -1,6 +1,6 @@
 # Global X
 
-Global X ETF holdings to Watchlist. A single-file client-side tool reading the generated `./api/globalx` static feed (Global X ETF catalog and fund pages, dated official daily holdings CSV files, SEC EDGAR N-PORT-P and Yahoo Finance history) into a searchable ETF/asset-class catalog with per-fund tabs, watchlist aggregation, ticker copy and CSV/TXT export — the same look, feel, columns and business logic as the sibling applications.
+One of the app's features lets you select Global X ETFs in the Watchlist and aggregate their holdings to see how often each ticker appears across the selected funds. Repeated holdings make overlapping exposure visible: the more selected funds include a ticker, the greater its potential influence on the portfolio; gains in that holding may help, while declines may hurt, and actual impact also depends on each fund's position size. A single-file client-side tool reading the generated `./api/globalx` static feed (Global X ETF catalog and fund pages, dated official daily holdings CSV files, SEC EDGAR N-PORT-P and Yahoo Finance history) into a searchable ETF/asset-class catalog with per-fund tabs, watchlist aggregation, ticker copy and CSV/TXT export — the same look, feel, columns and business logic as the sibling applications.
 
 ## Using Bun
 
