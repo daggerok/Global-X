@@ -1,0 +1,275 @@
+{
+  "ticker": "TLTX",
+  "name": "Treasury Bond Enhanced Income ETF",
+  "category": "Other",
+  "fundPage": "https://www.globalxetfs.com/funds/tltx/",
+  "dataFile": "./funds/TLTX/meta.json",
+  "cusip": null,
+  "isin": null,
+  "ter": "0.29%",
+  "terValue": 0.29,
+  "terGross": "0.29%",
+  "terGrossValue": 0.29,
+  "nav": {
+    "display": "—",
+    "value": null,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": null,
+    "kind": "derived (Net Assets / Shares Outstanding)"
+  },
+  "navValue": null,
+  "aum": {
+    "display": "$14.68M",
+    "value": 14677888,
+    "asOfDate": "Sep 25 2026",
+    "source": "GLOBALX fund page Fund Details \"Net Assets\""
+  },
+  "aumValue": 14677888,
+  "asOfDate": "Sep 25 2026",
+  "inceptionDate": "Jul 15 2025",
+  "inceptionDateFundPage": null,
+  "exchange": "BTS",
+  "closePrice": "$20.34",
+  "closePriceValue": 20.34,
+  "premiumDiscount": {
+    "display": "—",
+    "value": null,
+    "derivedValue": null,
+    "kind": "derived (Market Price - NAV) / NAV"
+  },
+  "premiumDiscountValue": null,
+  "premiumDiscountDerivedValue": null,
+  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
+  "bidAskSpread": {
+    "display": null,
+    "value": null,
+    "asOfDate": null,
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+  },
+  "bidAskSpreadValue": null,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 14677888,
+  "sharesOutstanding": {
+    "display": null,
+    "value": null,
+    "asOfDate": "Sep 25 2026"
+  },
+  "netAssetsAsOf": "Sep 25 2026",
+  "secYieldAsOf": null,
+  "distributions": {
+    "frequency": "01 - Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Dividend"
+    ],
+    "rows": [
+      {
+        "Ex-Date": "Sep 21 2026",
+        "Dividend": "$0.2700"
+      },
+      {
+        "Ex-Date": "Aug 24 2026",
+        "Dividend": "$0.3330"
+      },
+      {
+        "Ex-Date": "Jul 20 2026",
+        "Dividend": "$0.2370"
+      },
+      {
+        "Ex-Date": "Jun 22 2026",
+        "Dividend": "$0.3320"
+      },
+      {
+        "Ex-Date": "May 18 2026",
+        "Dividend": "$0.2960"
+      },
+      {
+        "Ex-Date": "Apr 20 2026",
+        "Dividend": "$0.3370"
+      },
+      {
+        "Ex-Date": "Mar 23 2026",
+        "Dividend": "$0.4180"
+      },
+      {
+        "Ex-Date": "Feb 23 2026",
+        "Dividend": "$0.3900"
+      },
+      {
+        "Ex-Date": "Jan 20 2026",
+        "Dividend": "$0.2940"
+      },
+      {
+        "Ex-Date": "Dec 22 2025",
+        "Dividend": "$0.2750"
+      },
+      {
+        "Ex-Date": "Nov 24 2025",
+        "Dividend": "$0.3560"
+      },
+      {
+        "Ex-Date": "Oct 20 2025",
+        "Dividend": "$0.3790"
+      },
+      {
+        "Ex-Date": "Sep 22 2025",
+        "Dividend": "$0.4310"
+      },
+      {
+        "Ex-Date": "Aug 18 2025",
+        "Dividend": "$0.4080"
+      }
+    ],
+    "fallback": true,
+    "source": "Yahoo Finance dividend history (GLOBALX published no distribution rows)"
+  },
+  "returns": {
+    "derivedFrom": "official GLOBALX fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "returnsBasis": "official GLOBALX fund page NAV Performance (monthly series)"
+  },
+  "distributionFrequency": "00 - —",
+  "providerCategory": "Other",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 20,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://assets.globalxetfs.com/funds/holdings/tltx_full-holdings_20260927.csv",
+    "sourceKind": "official GLOBALX daily holdings CSV (download_holdings_csv)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 302,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/TLTX?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "derived (Net Assets / Shares Outstanding)",
+  "source": {
+    "provider": "GLOBALX Investment Management LLC (GLOBALX ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore/",
+    "fundPage": "https://www.globalxetfs.com/funds/tltx/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/tltx_full-holdings_20260927.csv",
+    "holdingsSource": "official GLOBALX daily holdings CSV (download_holdings_csv)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/TLTX?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "returnsSource": "GLOBALX fund page performance tables (NAV Performance)",
+    "distributionsSource": "GLOBALX fund page Distribution History table",
+    "distributionInfoSource": "GLOBALX fund page Distribution Information block",
+    "documentsSource": "GLOBALX fund page Documents table",
+    "registrant": "GLOBALX ETF Trust (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "GLOBALX fund page Fund Details \"Primary Exchange\"",
+    "navSource": "GLOBALX fund page Fund Details \"Net Asset Value\" (derived (Net Assets / Shares Outstanding))",
+    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
+    "bidAskSpreadSource": "GLOBALX fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+  },
+  "identifiers": {
+    "cusip": null,
+    "isin": null,
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.29%",
+    "value": 0.29,
+    "managementFeeDisplay": "0.29%",
+    "managementFeeValue": 0.29
+  },
+  "marketPrice": {
+    "display": "$20.34",
+    "value": 20.34,
+    "asOfDate": "",
+    "dailyChangeText": null,
+    "source": "Yahoo Finance daily close"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official GLOBALX Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "official GLOBALX 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": null
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": null,
+    "summaryProspectus": null,
+    "sai": null,
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

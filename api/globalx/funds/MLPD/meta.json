@@ -1,0 +1,339 @@
+{
+  "ticker": "MLPD",
+  "name": "MLP & Energy Infrastructure Covered Call ETF",
+  "category": "Other",
+  "fundPage": "https://www.globalxetfs.com/funds/mlpd/",
+  "dataFile": "./funds/MLPD/meta.json",
+  "cusip": null,
+  "isin": null,
+  "ter": "0.60%",
+  "terValue": 0.6,
+  "terGross": "0.60%",
+  "terGrossValue": 0.6,
+  "nav": {
+    "display": "—",
+    "value": null,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": null,
+    "kind": "derived (Net Assets / Shares Outstanding)"
+  },
+  "navValue": null,
+  "aum": {
+    "display": "$25.99M",
+    "value": 25994322,
+    "asOfDate": "Sep 25 2026",
+    "source": "GLOBALX fund page Fund Details \"Net Assets\""
+  },
+  "aumValue": 25994322,
+  "asOfDate": "Sep 25 2026",
+  "inceptionDate": "May 7 2024",
+  "inceptionDateFundPage": null,
+  "exchange": "PCX",
+  "closePrice": "$24.30",
+  "closePriceValue": 24.3,
+  "premiumDiscount": {
+    "display": "—",
+    "value": null,
+    "derivedValue": null,
+    "kind": "derived (Market Price - NAV) / NAV"
+  },
+  "premiumDiscountValue": null,
+  "premiumDiscountDerivedValue": null,
+  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
+  "bidAskSpread": {
+    "display": null,
+    "value": null,
+    "asOfDate": null,
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+  },
+  "bidAskSpreadValue": null,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 25994322,
+  "sharesOutstanding": {
+    "display": null,
+    "value": null,
+    "asOfDate": "Sep 25 2026"
+  },
+  "netAssetsAsOf": "Sep 25 2026",
+  "secYieldAsOf": null,
+  "distributions": {
+    "frequency": "01 - Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Dividend"
+    ],
+    "rows": [
+      {
+        "Ex-Date": "Sep 21 2026",
+        "Dividend": "$0.2530"
+      },
+      {
+        "Ex-Date": "Aug 24 2026",
+        "Dividend": "$0.2520"
+      },
+      {
+        "Ex-Date": "Jul 20 2026",
+        "Dividend": "$0.2510"
+      },
+      {
+        "Ex-Date": "Jun 22 2026",
+        "Dividend": "$0.2500"
+      },
+      {
+        "Ex-Date": "May 18 2026",
+        "Dividend": "$0.2570"
+      },
+      {
+        "Ex-Date": "Apr 20 2026",
+        "Dividend": "$0.2020"
+      },
+      {
+        "Ex-Date": "Mar 23 2026",
+        "Dividend": "$0.2560"
+      },
+      {
+        "Ex-Date": "Feb 23 2026",
+        "Dividend": "$0.2570"
+      },
+      {
+        "Ex-Date": "Jan 20 2026",
+        "Dividend": "$0.2500"
+      },
+      {
+        "Ex-Date": "Dec 30 2025",
+        "Dividend": "$0.5830"
+      },
+      {
+        "Ex-Date": "Dec 22 2025",
+        "Dividend": "$0.1610"
+      },
+      {
+        "Ex-Date": "Nov 24 2025",
+        "Dividend": "$0.2230"
+      },
+      {
+        "Ex-Date": "Oct 20 2025",
+        "Dividend": "$0.2170"
+      },
+      {
+        "Ex-Date": "Sep 22 2025",
+        "Dividend": "$0.2570"
+      },
+      {
+        "Ex-Date": "Aug 18 2025",
+        "Dividend": "$0.2340"
+      },
+      {
+        "Ex-Date": "Jul 21 2025",
+        "Dividend": "$0.2180"
+      },
+      {
+        "Ex-Date": "Jun 23 2025",
+        "Dividend": "$0.2510"
+      },
+      {
+        "Ex-Date": "May 19 2025",
+        "Dividend": "$0.2450"
+      },
+      {
+        "Ex-Date": "Apr 21 2025",
+        "Dividend": "$0.2360"
+      },
+      {
+        "Ex-Date": "Mar 24 2025",
+        "Dividend": "$0.2510"
+      },
+      {
+        "Ex-Date": "Feb 24 2025",
+        "Dividend": "$0.2510"
+      },
+      {
+        "Ex-Date": "Jan 21 2025",
+        "Dividend": "$0.2340"
+      },
+      {
+        "Ex-Date": "Dec 30 2024",
+        "Dividend": "$0.2580"
+      },
+      {
+        "Ex-Date": "Nov 18 2024",
+        "Dividend": "$0.2620"
+      },
+      {
+        "Ex-Date": "Oct 21 2024",
+        "Dividend": "$0.2030"
+      },
+      {
+        "Ex-Date": "Sep 23 2024",
+        "Dividend": "$0.2350"
+      },
+      {
+        "Ex-Date": "Aug 19 2024",
+        "Dividend": "$0.2540"
+      },
+      {
+        "Ex-Date": "Jul 22 2024",
+        "Dividend": "$0.1690"
+      },
+      {
+        "Ex-Date": "Jun 24 2024",
+        "Dividend": "$0.1530"
+      },
+      {
+        "Ex-Date": "May 20 2024",
+        "Dividend": "$0.1760"
+      }
+    ],
+    "fallback": true,
+    "source": "Yahoo Finance dividend history (GLOBALX published no distribution rows)"
+  },
+  "returns": {
+    "derivedFrom": "official GLOBALX fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "returnsBasis": "official GLOBALX fund page NAV Performance (monthly series)"
+  },
+  "distributionFrequency": "00 - —",
+  "providerCategory": "Other",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 4,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://assets.globalxetfs.com/funds/holdings/mlpd_full-holdings_20260927.csv",
+    "sourceKind": "official GLOBALX daily holdings CSV (download_holdings_csv)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 598,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/MLPD?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "derived (Net Assets / Shares Outstanding)",
+  "source": {
+    "provider": "GLOBALX Investment Management LLC (GLOBALX ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore/",
+    "fundPage": "https://www.globalxetfs.com/funds/mlpd/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/mlpd_full-holdings_20260927.csv",
+    "holdingsSource": "official GLOBALX daily holdings CSV (download_holdings_csv)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MLPD?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "returnsSource": "GLOBALX fund page performance tables (NAV Performance)",
+    "distributionsSource": "GLOBALX fund page Distribution History table",
+    "distributionInfoSource": "GLOBALX fund page Distribution Information block",
+    "documentsSource": "GLOBALX fund page Documents table",
+    "registrant": "GLOBALX ETF Trust (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "GLOBALX fund page Fund Details \"Primary Exchange\"",
+    "navSource": "GLOBALX fund page Fund Details \"Net Asset Value\" (derived (Net Assets / Shares Outstanding))",
+    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
+    "bidAskSpreadSource": "GLOBALX fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+  },
+  "identifiers": {
+    "cusip": null,
+    "isin": null,
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.60%",
+    "value": 0.6,
+    "managementFeeDisplay": "0.60%",
+    "managementFeeValue": 0.6
+  },
+  "marketPrice": {
+    "display": "$24.30",
+    "value": 24.3,
+    "asOfDate": "",
+    "dailyChangeText": null,
+    "source": "Yahoo Finance daily close"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official GLOBALX Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "official GLOBALX 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": null
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": null,
+    "summaryProspectus": null,
+    "sai": null,
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}
