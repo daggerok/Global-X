@@ -1,166 +1,215 @@
 {
   "ticker": "EART",
   "name": "Rare Earth & Critical Materials ETF",
-  "category": "Other",
+  "category": "Alternatives & Specialty Equity / Commodities",
   "fundPage": "https://www.globalxetfs.com/funds/eart/",
   "dataFile": "./funds/EART/meta.json",
-  "cusip": null,
-  "isin": null,
+  "cusip": "37960A867",
+  "isin": "US37960A8678",
   "ter": "0.59%",
   "terValue": 0.59,
   "terGross": "0.59%",
   "terGrossValue": 0.59,
   "nav": {
-    "display": "—",
-    "value": null,
+    "display": "$28.35",
+    "value": 28.35,
     "asOfDate": "Sep 25 2026",
-    "dailyChangeText": null,
-    "kind": "derived (Net Assets / Shares Outstanding)"
+    "dailyChangeText": "$0.13 (0.46%)",
+    "kind": "official (fund page Fund Details)"
   },
-  "navValue": null,
+  "navValue": 28.35,
   "aum": {
     "display": "$41.68M",
-    "value": 41677196,
+    "value": 41677195.91,
     "asOfDate": "Sep 25 2026",
-    "source": "GLOBALX fund page Fund Details \"Net Assets\""
+    "source": "Global X fund page Fund Details \"Net Assets\""
   },
-  "aumValue": 41677196,
+  "aumValue": 41677195.91,
   "asOfDate": "Sep 25 2026",
   "inceptionDate": "Jan 24 2022",
-  "inceptionDateFundPage": null,
-  "exchange": "NGM",
+  "inceptionDateFundPage": "Jan 24 2022",
+  "exchange": "Nasdaq",
   "closePrice": "$28.42",
   "closePriceValue": 28.42,
   "premiumDiscount": {
-    "display": "—",
-    "value": null,
-    "derivedValue": null,
-    "kind": "derived (Market Price - NAV) / NAV"
+    "display": "0.24%",
+    "value": 0.2404,
+    "derivedValue": 0.25,
+    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
   },
-  "premiumDiscountValue": null,
-  "premiumDiscountDerivedValue": null,
-  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
+  "premiumDiscountValue": 0.2404,
+  "premiumDiscountDerivedValue": 0.25,
+  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
-    "display": null,
-    "value": null,
-    "asOfDate": null,
+    "display": "0.67%",
+    "value": 0.67,
+    "asOfDate": "Sep 25 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
-  "bidAskSpreadValue": null,
+  "bidAskSpreadValue": 0.67,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 41677196,
+  "totalNetAssets": 41677195.91,
   "sharesOutstanding": {
-    "display": null,
-    "value": null,
+    "display": "1,470,000",
+    "value": 1470000,
     "asOfDate": "Sep 25 2026"
   },
   "netAssetsAsOf": "Sep 25 2026",
-  "secYieldAsOf": null,
+  "secYieldAsOf": "Sep 25 2026",
   "distributions": {
-    "frequency": "00 - Unknown",
-    "paymentsPerYear": null,
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 6,
     "headers": [
-      "Ex-Date",
-      "Dividend"
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
     ],
     "rows": [
       {
-        "Ex-Date": "Jun 29 2026",
-        "Dividend": "$0.1370"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-30",
+        "Record Date": "2026-12-30",
+        "Payable Date": "2027-01-07",
+        "Amount ($)": ""
       },
       {
-        "Ex-Date": "Dec 30 2025",
-        "Dividend": "$0.0500"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-06-29",
+        "Record Date": "2026-06-29",
+        "Payable Date": "2026-07-07",
+        "Amount ($)": "$0.137000"
       },
       {
-        "Ex-Date": "Jun 27 2025",
-        "Dividend": "$0.1310"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.049510"
       },
       {
-        "Ex-Date": "Dec 30 2024",
-        "Dividend": "$0.0950"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-06-27",
+        "Record Date": "2025-06-27",
+        "Payable Date": "2025-07-07",
+        "Amount ($)": "$0.130665"
       },
       {
-        "Ex-Date": "Jun 27 2024",
-        "Dividend": "$0.0550"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-12-30",
+        "Record Date": "2024-12-30",
+        "Payable Date": "2025-01-07",
+        "Amount ($)": "$0.094947"
       },
       {
-        "Ex-Date": "Dec 28 2023",
-        "Dividend": "$0.1250"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-06-27",
+        "Record Date": "2024-06-27",
+        "Payable Date": "2024-07-05",
+        "Amount ($)": "$0.054765"
       },
       {
-        "Ex-Date": "Jun 29 2023",
-        "Dividend": "$0.1570"
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-12-28",
+        "Record Date": "2023-12-29",
+        "Payable Date": "2024-01-08",
+        "Amount ($)": "$0.124596"
       },
       {
-        "Ex-Date": "Dec 29 2022",
-        "Dividend": "$0.1470"
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-06-29",
+        "Record Date": "2023-06-30",
+        "Payable Date": "2023-07-10",
+        "Amount ($)": "$0.156839"
       },
       {
-        "Ex-Date": "Jun 29 2022",
-        "Dividend": "$0.2500"
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-12-29",
+        "Record Date": "2022-12-30",
+        "Payable Date": "2023-01-09",
+        "Amount ($)": "$0.147282"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-06-29",
+        "Record Date": "2022-06-30",
+        "Payable Date": "2022-07-08",
+        "Amount ($)": "$0.250084"
       }
     ],
-    "fallback": true,
-    "source": "Yahoo Finance dividend history (GLOBALX published no distribution rows)"
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
   },
   "returns": {
-    "derivedFrom": "official GLOBALX fund page performance tables (NAV Performance series)",
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
     "monthEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Aug 31 2026",
+      "raw": "2026-08-31",
+      "mo1": 15,
+      "mo3": -3.18,
       "mo6": null,
-      "ytd": null,
-      "yr1": null,
-      "yr3": null,
+      "ytd": 13.59,
+      "yr1": 52.16,
+      "yr3": 24.07,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null,
-      "sinceInceptionCumulative": null,
-      "market": {},
-      "benchmarkName": null,
-      "benchmark": {}
+      "sinceInception": 7.53,
+      "sinceInceptionCumulative": 39.66,
+      "market": {
+        "ONE_YEAR": 50.96,
+        "SINCE_INCEPTION": 7.56,
+        "THREE_YEAR": 23.81
+      },
+      "benchmarkName": "Index",
+      "benchmark": {
+        "ONE_YEAR": 53.12,
+        "SINCE_INCEPTION": 8.12,
+        "THREE_YEAR": 24.85
+      }
     },
     "quarterEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Jun 30 2026",
+      "raw": "2026-06-30",
+      "mo1": -10.63,
+      "mo3": -0.52,
       "mo6": null,
-      "ytd": null,
-      "yr1": null,
-      "yr3": null,
+      "ytd": 4.85,
+      "yr1": 75.7,
+      "yr3": 18.09,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null,
-      "sinceInceptionCumulative": null,
-      "market": {}
+      "sinceInception": 5.9,
+      "sinceInceptionCumulative": 28.92,
+      "market": {
+        "ONE_YEAR": 77.03,
+        "SINCE_INCEPTION": 6.08,
+        "THREE_YEAR": 17.98
+      }
     }
   },
   "metrics": {
-    "ytd": null,
-    "tr1y": null,
-    "tr3y": null,
+    "ytd": 13.59,
+    "tr1y": 52.16,
+    "tr3y": 90.99,
     "tr5y": null,
     "tr10y": null,
-    "cagr3y": null,
+    "cagr3y": 24.07,
     "cagr5y": null,
     "cagr10y": null,
-    "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "distributionYield": null,
-    "distributionYieldText": "—",
+    "siAnn": 7.53,
+    "dividendYield": 0.66,
+    "dividendYieldText": "0.66%",
+    "distributionYield": 0.66,
+    "distributionYieldText": "0.66%",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": null,
-    "secYieldText": "—",
-    "returnsBasis": "official GLOBALX fund page NAV Performance (monthly series)"
+    "secYield": 0.54,
+    "secYieldText": "0.54%",
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)"
   },
-  "distributionFrequency": "00 - —",
-  "providerCategory": "Other",
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Alternatives & Specialty Equity / Commodities",
   "holdings": {
     "pages": [
       "./holdings/001.json"
@@ -169,8 +218,8 @@
     "totalRows": 56,
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
-    "source": "https://assets.globalxetfs.com/funds/holdings/eart_full-holdings_20260927.csv",
-    "sourceKind": "official GLOBALX daily holdings CSV (download_holdings_csv)"
+    "source": "https://assets.globalxetfs.com/funds/holdings/eart_full-holdings_20260925.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
     "pages": [
@@ -181,36 +230,36 @@
     "totalRows": 1170,
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
-    "source": "https://query1.finance.yahoo.com/v8/finance/chart/EART?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/EART",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
-  "navKind": "derived (Net Assets / Shares Outstanding)",
+  "navKind": "official (fund page Fund Details)",
   "source": {
-    "provider": "GLOBALX Investment Management LLC (GLOBALX ETFs)",
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
     "site": "https://www.globalxetfs.com",
-    "lineup": "https://www.globalxetfs.com/explore/",
+    "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/eart/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/eart_full-holdings_20260927.csv",
-    "holdingsSource": "official GLOBALX daily holdings CSV (download_holdings_csv)",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/eart_full-holdings_20260925.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
-    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EART?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
-    "returnsSource": "GLOBALX fund page performance tables (NAV Performance)",
-    "distributionsSource": "GLOBALX fund page Distribution History table",
-    "distributionInfoSource": "GLOBALX fund page Distribution Information block",
-    "documentsSource": "GLOBALX fund page Documents table",
-    "registrant": "GLOBALX ETF Trust (Investment Company Act file 811-22209)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EART",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
-    "exchangeSource": "GLOBALX fund page Fund Details \"Primary Exchange\"",
-    "navSource": "GLOBALX fund page Fund Details \"Net Asset Value\" (derived (Net Assets / Shares Outstanding))",
-    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
-    "bidAskSpreadSource": "GLOBALX fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
   },
   "identifiers": {
-    "cusip": null,
-    "isin": null,
+    "cusip": "37960A867",
+    "isin": "US37960A8678",
     "underlyingExposure": null,
     "indexName": null,
-    "benchmarkIndexName": null
+    "benchmarkIndexName": "Index"
   },
   "expenseRatio": {
     "display": "0.59%",
@@ -221,24 +270,24 @@
   "marketPrice": {
     "display": "$28.42",
     "value": 28.42,
-    "asOfDate": "",
-    "dailyChangeText": null,
-    "source": "Yahoo Finance daily close"
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.10 (0.35%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldKind": "official GLOBALX Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": null,
-    "distributionRateText": "—",
+    "dividendYield": 0.66,
+    "dividendYieldText": "0.66%",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": 0.66,
+    "distributionRateText": "0.66%",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "official GLOBALX 30-Day SEC Yield",
+    "secYield": 0.54,
+    "secYieldText": "0.54%",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": null
+    "distributionInfoAsOfDate": "Sep 25 2026"
   },
   "navIndex": null,
   "documents": {

@@ -2,63 +2,46 @@
   "ticker": "BITS",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 6,
+  "totalRows": 3,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "Ticker",
-      "Name": "Name",
-      "Weight (%)": "Exposure (%)",
-      "Price": "Price/Unit ($)",
-      "Shares": "Units Held",
-      "Market Value": "Exposure Amount ($)"
-    },
-    {
-      "Ticker": "",
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "",
-      "Price": "1.0",
-      "Shares": "-2,950.38",
-      "Market Value": ""
-    },
-    {
-      "Ticker": "BTCV6 Curncy",
       "Name": "CME BITCOIN FUT OCT26",
-      "Weight (%)": "53.98",
-      "Price": "422100.0",
-      "Shares": "35.00",
-      "Market Value": "14,773,500.00"
+      "Ticker": "BTCV6 Curncy",
+      "Identifier": "",
+      "Weight": "53.98%",
+      "Market Value": "14,773,500.00",
+      "Shares Held": "35.00",
+      "Asset Category": "Equity",
+      "Price": "422100.0"
     },
     {
-      "Ticker": "BKCH",
       "Name": "GLOBAL X BLOCKCHAIN ETF",
-      "Weight (%)": "45.92",
-      "Price": "74.94",
-      "Shares": "167,710.00",
-      "Market Value": "12,568,187.40"
+      "Ticker": "BKCH",
+      "Identifier": "BMBX2Y9",
+      "Weight": "45.92%",
+      "Market Value": "12,568,187.40",
+      "Shares Held": "167,710.00",
+      "Asset Category": "Fund",
+      "Price": "74.94"
     },
     {
-      "Ticker": "",
-      "Name": "CASH",
-      "Weight (%)": "",
-      "Price": "1.0",
-      "Shares": "7,874,323.94",
-      "Market Value": ""
-    },
-    {
-      "Ticker": "CLIP",
       "Name": "GLOBAL X 1-3 MONTH T-BILL",
-      "Weight (%)": "25.32",
-      "Price": "100.31",
-      "Shares": "69,090.00",
-      "Market Value": "6,930,417.90"
+      "Ticker": "CLIP",
+      "Identifier": "BS096K4",
+      "Weight": "25.32%",
+      "Market Value": "6,930,417.90",
+      "Shares Held": "69,090.00",
+      "Asset Category": "Treasury",
+      "Price": "100.31"
     }
   ]
 }

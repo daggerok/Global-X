@@ -2,255 +2,286 @@
   "ticker": "COMD",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 30,
+  "totalRows": 27,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "Ticker",
-      "Name": "Name",
-      "Weight (%)": "Exposure (%)",
-      "Price": "Price/Unit ($)",
-      "Shares": "Units Held",
-      "Market Value": "Exposure Amount ($)"
-    },
-    {
-      "Ticker": "",
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "",
-      "Price": "1.0",
-      "Shares": "-1,069.23",
-      "Market Value": ""
-    },
-    {
-      "Ticker": "CLIP",
       "Name": "GLOBAL X 1-3 MONTH T-BILL",
-      "Weight (%)": "84.26",
-      "Price": "100.31",
-      "Shares": "30,550.00",
-      "Market Value": "3,064,470.50"
+      "Ticker": "CLIP",
+      "Identifier": "BS096K4",
+      "Weight": "84.26%",
+      "Market Value": "3,064,470.50",
+      "Shares Held": "30,550.00",
+      "Asset Category": "Treasury",
+      "Price": "100.31"
     },
     {
-      "Ticker": "",
-      "Name": "CASH",
-      "Weight (%)": "",
-      "Price": "1.0",
-      "Shares": "463,349.63",
-      "Market Value": ""
-    },
-    {
-      "Ticker": "MGCZ6 Comdty",
       "Name": "MICRO GOLD DEC26",
-      "Weight (%)": "11.88",
-      "Price": "43212.0",
-      "Shares": "10.00",
-      "Market Value": "432,120.00"
+      "Ticker": "MGCZ6 Comdty",
+      "Identifier": "",
+      "Weight": "11.88%",
+      "Market Value": "432,120.00",
+      "Shares Held": "10.00",
+      "Asset Category": "Equity",
+      "Price": "43212.0"
     },
     {
-      "Ticker": "COF7 Comdty",
       "Name": "BRENT CRUDE FUTR JAN27",
-      "Weight (%)": "10.35",
-      "Price": "94110.0",
-      "Shares": "4.00",
-      "Market Value": "376,440.00"
+      "Ticker": "COF7 Comdty",
+      "Identifier": "",
+      "Weight": "10.35%",
+      "Market Value": "376,440.00",
+      "Shares Held": "4.00",
+      "Asset Category": "Equity",
+      "Price": "94110.0"
     },
     {
-      "Ticker": "CLX6 Comdty",
       "Name": "WTI CRUDE FUTURE NOV26",
-      "Weight (%)": "7.62",
-      "Price": "92410.0",
-      "Shares": "3.00",
-      "Market Value": "277,230.00"
+      "Ticker": "CLX6 Comdty",
+      "Identifier": "",
+      "Weight": "7.62%",
+      "Market Value": "277,230.00",
+      "Shares Held": "3.00",
+      "Asset Category": "Equity",
+      "Price": "92410.0"
     },
     {
-      "Ticker": "HOX6 Comdty",
       "Name": "NY HARB ULSD FUT NOV26",
-      "Weight (%)": "5.15",
-      "Price": "187408.2",
-      "Shares": "1.00",
-      "Market Value": "187,408.20"
+      "Ticker": "HOX6 Comdty",
+      "Identifier": "",
+      "Weight": "5.15%",
+      "Market Value": "187,408.20",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "187408.2"
     },
     {
-      "Ticker": "HGZ6 Comdty",
       "Name": "COPPER FUTURE DEC26",
-      "Weight (%)": "4.65",
-      "Price": "169150.0",
-      "Shares": "1.00",
-      "Market Value": "169,150.00"
+      "Ticker": "HGZ6 Comdty",
+      "Identifier": "",
+      "Weight": "4.65%",
+      "Market Value": "169,150.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "169150.0"
     },
     {
-      "Ticker": "LAZ26 Comdty",
       "Name": "LME PRI ALUM FUTR DEC26",
-      "Weight (%)": "4.50",
-      "Price": "81799.5",
-      "Shares": "2.00",
-      "Market Value": "163,599.00"
+      "Ticker": "LAZ26 Comdty",
+      "Identifier": "",
+      "Weight": "4.50%",
+      "Market Value": "163,599.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Equity",
+      "Price": "81799.5"
     },
     {
-      "Ticker": "NGX26 Comdty",
       "Name": "NATURAL GAS FUTR NOV26",
-      "Weight (%)": "4.43",
-      "Price": "32250.0",
-      "Shares": "5.00",
-      "Market Value": "161,250.00"
+      "Ticker": "NGX26 Comdty",
+      "Identifier": "",
+      "Weight": "4.43%",
+      "Market Value": "161,250.00",
+      "Shares Held": "5.00",
+      "Asset Category": "Equity",
+      "Price": "32250.0"
     },
     {
-      "Ticker": "C Z6 Comdty",
       "Name": "CORN FUTURE DEC26",
-      "Weight (%)": "4.36",
-      "Price": "26412.5",
-      "Shares": "6.00",
-      "Market Value": "158,475.00"
+      "Ticker": "C Z6 Comdty",
+      "Identifier": "",
+      "Weight": "4.36%",
+      "Market Value": "158,475.00",
+      "Shares Held": "6.00",
+      "Asset Category": "Equity",
+      "Price": "26412.5"
     },
     {
-      "Ticker": "QSX6 Comdty",
       "Name": "LOW SU GASOIL G NOV26",
-      "Weight (%)": "3.87",
-      "Price": "140750.0",
-      "Shares": "1.00",
-      "Market Value": "140,750.00"
+      "Ticker": "QSX6 Comdty",
+      "Identifier": "",
+      "Weight": "3.87%",
+      "Market Value": "140,750.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "140750.0"
     },
     {
-      "Ticker": "XBX6 Comdty",
       "Name": "GASOLINE RBOB FUT NOV26",
-      "Weight (%)": "3.68",
-      "Price": "133875.0",
-      "Shares": "1.00",
-      "Market Value": "133,875.00"
+      "Ticker": "XBX6 Comdty",
+      "Identifier": "",
+      "Weight": "3.68%",
+      "Market Value": "133,875.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "133875.0"
     },
     {
-      "Ticker": "S X6 Comdty",
       "Name": "SOYBEAN FUTURE NOV26",
-      "Weight (%)": "3.63",
-      "Price": "65950.0",
-      "Shares": "2.00",
-      "Market Value": "131,900.00"
+      "Ticker": "S X6 Comdty",
+      "Identifier": "",
+      "Weight": "3.63%",
+      "Market Value": "131,900.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Equity",
+      "Price": "65950.0"
     },
     {
-      "Ticker": "QSF7 Comdty",
       "Name": "LOW SU GASOIL G JAN27",
-      "Weight (%)": "3.55",
-      "Price": "129150.0",
-      "Shares": "1.00",
-      "Market Value": "129,150.00"
+      "Ticker": "QSF7 Comdty",
+      "Identifier": "",
+      "Weight": "3.55%",
+      "Market Value": "129,150.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "129150.0"
     },
     {
-      "Ticker": "SBH7 Comdty",
       "Name": "SUGAR #11 (WORLD) MAR27",
-      "Weight (%)": "3.42",
-      "Price": "20720.0",
-      "Shares": "6.00",
-      "Market Value": "124,320.00"
+      "Ticker": "SBH7 Comdty",
+      "Identifier": "",
+      "Weight": "3.42%",
+      "Market Value": "124,320.00",
+      "Shares Held": "6.00",
+      "Asset Category": "Equity",
+      "Price": "20720.0"
     },
     {
-      "Ticker": "BOZ6 Comdty",
       "Name": "SOYBEAN OIL FUTR DEC26",
-      "Weight (%)": "3.36",
-      "Price": "40704.0",
-      "Shares": "3.00",
-      "Market Value": "122,112.00"
+      "Ticker": "BOZ6 Comdty",
+      "Identifier": "",
+      "Weight": "3.36%",
+      "Market Value": "122,112.00",
+      "Shares Held": "3.00",
+      "Asset Category": "Equity",
+      "Price": "40704.0"
     },
     {
-      "Ticker": "CCZ6 Comdty",
       "Name": "COCOA FUTURE DEC26",
-      "Weight (%)": "3.09",
-      "Price": "56190.0",
-      "Shares": "2.00",
-      "Market Value": "112,380.00"
+      "Ticker": "CCZ6 Comdty",
+      "Identifier": "",
+      "Weight": "3.09%",
+      "Market Value": "112,380.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Equity",
+      "Price": "56190.0"
     },
     {
-      "Ticker": "W Z6 Comdty",
       "Name": "WHEAT FUTURE(CBT) DEC26",
-      "Weight (%)": "2.90",
-      "Price": "35162.5",
-      "Shares": "3.00",
-      "Market Value": "105,487.50"
+      "Ticker": "W Z6 Comdty",
+      "Identifier": "",
+      "Weight": "2.90%",
+      "Market Value": "105,487.50",
+      "Shares Held": "3.00",
+      "Asset Category": "Equity",
+      "Price": "35162.5"
     },
     {
-      "Ticker": "LXZ6 Comdty",
       "Name": "LME ZINC FUTURE DEC26",
-      "Weight (%)": "2.69",
-      "Price": "97742.75",
-      "Shares": "1.00",
-      "Market Value": "97,742.75"
+      "Ticker": "LXZ6 Comdty",
+      "Identifier": "",
+      "Weight": "2.69%",
+      "Market Value": "97,742.75",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "97742.75"
     },
     {
-      "Ticker": "LCZ6 Comdty",
       "Name": "LIVE CATTLE FUTR DEC26",
-      "Weight (%)": "2.44",
-      "Price": "88860.0",
-      "Shares": "1.00",
-      "Market Value": "88,860.00"
+      "Ticker": "LCZ6 Comdty",
+      "Identifier": "",
+      "Weight": "2.44%",
+      "Market Value": "88,860.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "88860.0"
     },
     {
-      "Ticker": "CTZ6 Comdty",
       "Name": "COTTON NO.2 FUTR DEC26",
-      "Weight (%)": "2.27",
-      "Price": "41355.0",
-      "Shares": "2.00",
-      "Market Value": "82,710.00"
+      "Ticker": "CTZ6 Comdty",
+      "Identifier": "",
+      "Weight": "2.27%",
+      "Market Value": "82,710.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Equity",
+      "Price": "41355.0"
     },
     {
-      "Ticker": "KWZ6 Comdty",
       "Name": "KC HRW WHEAT FUT DEC26",
-      "Weight (%)": "2.10",
-      "Price": "38100.0",
-      "Shares": "2.00",
-      "Market Value": "76,200.00"
+      "Ticker": "KWZ6 Comdty",
+      "Identifier": "",
+      "Weight": "2.10%",
+      "Market Value": "76,200.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Equity",
+      "Price": "38100.0"
     },
     {
-      "Ticker": "SMZ6 Comdty",
       "Name": "SOYBEAN MEAL FUTR DEC26",
-      "Weight (%)": "2.04",
-      "Price": "37100.0",
-      "Shares": "2.00",
-      "Market Value": "74,200.00"
+      "Ticker": "SMZ6 Comdty",
+      "Identifier": "",
+      "Weight": "2.04%",
+      "Market Value": "74,200.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Equity",
+      "Price": "37100.0"
     },
     {
-      "Ticker": "SRUUF",
       "Name": "SPROTT PHYSICAL URANIUM TR",
-      "Weight (%)": "2.01",
-      "Price": "18.99",
-      "Shares": "3,850.00",
-      "Market Value": "73,111.50"
+      "Ticker": "SRUUF",
+      "Identifier": "BN73FJ6",
+      "Weight": "2.01%",
+      "Market Value": "73,111.50",
+      "Shares Held": "3,850.00",
+      "Asset Category": "Equity",
+      "Price": "18.99"
     },
     {
-      "Ticker": "S F7 Comdty",
       "Name": "SOYBEAN FUTURE JAN27",
-      "Weight (%)": "1.83",
-      "Price": "66625.0",
-      "Shares": "1.00",
-      "Market Value": "66,625.00"
+      "Ticker": "S F7 Comdty",
+      "Identifier": "",
+      "Weight": "1.83%",
+      "Market Value": "66,625.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "66625.0"
     },
     {
-      "Ticker": "SIOZ6 Comdty",
       "Name": "MICRO SILVER DEC26",
-      "Weight (%)": "1.78",
-      "Price": "64801.0",
-      "Shares": "1.00",
-      "Market Value": "64,801.00"
+      "Ticker": "SIOZ6 Comdty",
+      "Identifier": "",
+      "Weight": "1.78%",
+      "Market Value": "64,801.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "64801.0"
     },
     {
-      "Ticker": "IBIT",
       "Name": "ISHARES BITCOIN TRUST ETF",
-      "Weight (%)": "1.02",
-      "Price": "47.57",
-      "Shares": "780.00",
-      "Market Value": "37,104.60"
+      "Ticker": "IBIT",
+      "Identifier": "BQ9CHK7",
+      "Weight": "1.02%",
+      "Market Value": "37,104.60",
+      "Shares Held": "780.00",
+      "Asset Category": "Fund",
+      "Price": "47.57"
     },
     {
-      "Ticker": "LHZ6 Comdty",
       "Name": "LEAN HOGS FUTURE DEC26",
-      "Weight (%)": "0.76",
-      "Price": "27610.0",
-      "Shares": "1.00",
-      "Market Value": "27,610.00"
+      "Ticker": "LHZ6 Comdty",
+      "Identifier": "",
+      "Weight": "0.76%",
+      "Market Value": "27,610.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "27610.0"
     }
   ]
 }

@@ -4,77 +4,94 @@
   "pageSize": 250,
   "totalRows": 508,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "SYK",
       "Name": "STRYKER CORP",
-      "Weight (%)": "0.14",
-      "Price": "272.36",
-      "Shares": "22.00",
-      "Market Value": "5,991.92"
+      "Ticker": "SYK",
+      "Identifier": "2853688",
+      "Weight": "0.14%",
+      "Market Value": "5,991.92",
+      "Shares Held": "22.00",
+      "Asset Category": "Equity",
+      "Price": "272.36"
     },
     {
-      "Ticker": "SO",
       "Name": "SOUTHERN CO/THE",
-      "Weight (%)": "0.14",
-      "Price": "82.88",
-      "Shares": "72.00",
-      "Market Value": "5,967.36"
+      "Ticker": "SO",
+      "Identifier": "2829601",
+      "Weight": "0.14%",
+      "Market Value": "5,967.36",
+      "Shares Held": "72.00",
+      "Asset Category": "Equity",
+      "Price": "82.88"
     },
     {
-      "Ticker": "ADBE",
       "Name": "ADOBE INC",
-      "Weight (%)": "0.14",
-      "Price": "235.47",
-      "Shares": "25.00",
-      "Market Value": "5,886.75"
+      "Ticker": "ADBE",
+      "Identifier": "2008154",
+      "Weight": "0.14%",
+      "Market Value": "5,886.75",
+      "Shares Held": "25.00",
+      "Asset Category": "Equity",
+      "Price": "235.47"
     },
     {
-      "Ticker": "USB",
       "Name": "US BANCORP",
-      "Weight (%)": "0.14",
-      "Price": "59.33",
-      "Shares": "99.00",
-      "Market Value": "5,873.67"
+      "Ticker": "USB",
+      "Identifier": "2736035",
+      "Weight": "0.14%",
+      "Market Value": "5,873.67",
+      "Shares Held": "99.00",
+      "Asset Category": "Equity",
+      "Price": "59.33"
     },
     {
-      "Ticker": "HOOD",
       "Name": "ROBINHOOD MARKETS INC - A",
-      "Weight (%)": "0.14",
-      "Price": "119.4",
-      "Shares": "49.00",
-      "Market Value": "5,850.60"
+      "Ticker": "HOOD",
+      "Identifier": "BP0TQN6",
+      "Weight": "0.14%",
+      "Market Value": "5,850.60",
+      "Shares Held": "49.00",
+      "Asset Category": "Equity",
+      "Price": "119.4"
     },
     {
-      "Ticker": "PWR",
       "Name": "QUANTA SERVICES INC",
-      "Weight (%)": "0.14",
-      "Price": "649.13",
-      "Shares": "9.00",
-      "Market Value": "5,842.17"
+      "Ticker": "PWR",
+      "Identifier": "2150204",
+      "Weight": "0.14%",
+      "Market Value": "5,842.17",
+      "Shares Held": "9.00",
+      "Asset Category": "Equity",
+      "Price": "649.13"
     },
     {
-      "Ticker": "CME",
       "Name": "CME GROUP INC",
-      "Weight (%)": "0.14",
-      "Price": "264.48",
-      "Shares": "22.00",
-      "Market Value": "5,818.56"
+      "Ticker": "CME",
+      "Identifier": "2965839",
+      "Weight": "0.14%",
+      "Market Value": "5,818.56",
+      "Shares Held": "22.00",
+      "Asset Category": "Equity",
+      "Price": "264.48"
     },
     {
-      "Ticker": "HWM",
       "Name": "HOWMET AEROSPACE INC",
-      "Weight (%)": "0.14",
-      "Price": "232.48",
-      "Shares": "25.00",
-      "Market Value": "5,812.00"
+      "Ticker": "HWM",
+      "Identifier": "BKLJ8V2",
+      "Weight": "0.14%",
+      "Market Value": "5,812.00",
+      "Shares Held": "25.00",
+      "Asset Category": "Equity",
+      "Price": "232.48"
     }
   ]
 }

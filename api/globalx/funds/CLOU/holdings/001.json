@@ -4,333 +4,414 @@
   "pageSize": 250,
   "totalRows": 40,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.04",
-      "Price": "1.0",
-      "Shares": "142,349.14",
-      "Market Value": "142,349.14"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.04%",
+      "Market Value": "142,349.14",
+      "Shares Held": "142,349.14",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.02",
-      "Price": "1.0",
-      "Shares": "-75,037.83",
-      "Market Value": "-75,037.83"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.02%",
+      "Market Value": "-75,037.83",
+      "Shares Held": "-75,037.83",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "SNOW",
       "Name": "SNOWFLAKE INC",
-      "Weight (%)": "7.14",
-      "Price": "335.94",
-      "Shares": "79,038.00",
-      "Market Value": "26,552,025.72"
+      "Ticker": "SNOW",
+      "Identifier": "BN134B7",
+      "Weight": "7.14%",
+      "Market Value": "26,552,025.72",
+      "Shares Held": "79,038.00",
+      "Asset Category": "Equity",
+      "Price": "335.94"
     },
     {
-      "Ticker": "DDOG",
       "Name": "DATADOG INC - CLASS A",
-      "Weight (%)": "5.88",
-      "Price": "268.13",
-      "Shares": "81,600.00",
-      "Market Value": "21,879,408.00"
+      "Ticker": "DDOG",
+      "Identifier": "BKT9Y49",
+      "Weight": "5.88%",
+      "Market Value": "21,879,408.00",
+      "Shares Held": "81,600.00",
+      "Asset Category": "Equity",
+      "Price": "268.13"
     },
     {
-      "Ticker": "TWLO",
       "Name": "TWILIO INC - A",
-      "Weight (%)": "5.41",
-      "Price": "275.8",
-      "Shares": "72,889.00",
-      "Market Value": "20,102,786.20"
+      "Ticker": "TWLO",
+      "Identifier": "BD6P5Q0",
+      "Weight": "5.41%",
+      "Market Value": "20,102,786.20",
+      "Shares Held": "72,889.00",
+      "Asset Category": "Equity",
+      "Price": "275.8"
     },
     {
-      "Ticker": "PAYC",
       "Name": "PAYCOM SOFTWARE INC",
-      "Weight (%)": "5.05",
-      "Price": "220.46",
-      "Shares": "85,114.00",
-      "Market Value": "18,764,232.44"
+      "Ticker": "PAYC",
+      "Identifier": "BL95MY0",
+      "Weight": "5.05%",
+      "Market Value": "18,764,232.44",
+      "Shares Held": "85,114.00",
+      "Asset Category": "Equity",
+      "Price": "220.46"
     },
     {
-      "Ticker": "NET",
       "Name": "CLOUDFLARE INC - CLASS A",
-      "Weight (%)": "4.94",
-      "Price": "349.02",
-      "Shares": "52,627.00",
-      "Market Value": "18,367,875.54"
+      "Ticker": "NET",
+      "Identifier": "BJXC5M2",
+      "Weight": "4.94%",
+      "Market Value": "18,367,875.54",
+      "Shares Held": "52,627.00",
+      "Asset Category": "Equity",
+      "Price": "349.02"
     },
     {
-      "Ticker": "WDAY",
       "Name": "WORKDAY INC-CLASS A",
-      "Weight (%)": "4.49",
-      "Price": "189.45",
-      "Shares": "88,129.00",
-      "Market Value": "16,696,039.05"
+      "Ticker": "WDAY",
+      "Identifier": "B8K6ZD1",
+      "Weight": "4.49%",
+      "Market Value": "16,696,039.05",
+      "Shares Held": "88,129.00",
+      "Asset Category": "Equity",
+      "Price": "189.45"
     },
     {
-      "Ticker": "NOW",
       "Name": "SERVICENOW INC",
-      "Weight (%)": "4.46",
-      "Price": "135.62",
-      "Shares": "122,156.00",
-      "Market Value": "16,566,796.72"
+      "Ticker": "NOW",
+      "Identifier": "B80NXX8",
+      "Weight": "4.46%",
+      "Market Value": "16,566,796.72",
+      "Shares Held": "122,156.00",
+      "Asset Category": "Equity",
+      "Price": "135.62"
     },
     {
-      "Ticker": "ZS",
       "Name": "ZSCALER INC",
-      "Weight (%)": "4.29",
-      "Price": "193.05",
-      "Shares": "82,558.00",
-      "Market Value": "15,937,821.90"
+      "Ticker": "ZS",
+      "Identifier": "BZ00V34",
+      "Weight": "4.29%",
+      "Market Value": "15,937,821.90",
+      "Shares Held": "82,558.00",
+      "Asset Category": "Equity",
+      "Price": "193.05"
     },
     {
-      "Ticker": "DOCN",
       "Name": "DIGITALOCEAN HOLDINGS INC",
-      "Weight (%)": "4.21",
-      "Price": "139.75",
-      "Shares": "111,861.00",
-      "Market Value": "15,632,574.75"
+      "Ticker": "DOCN",
+      "Identifier": "BNC23Q1",
+      "Weight": "4.21%",
+      "Market Value": "15,632,574.75",
+      "Shares Held": "111,861.00",
+      "Asset Category": "Equity",
+      "Price": "139.75"
     },
     {
-      "Ticker": "CRM",
       "Name": "SALESFORCE INC",
-      "Weight (%)": "3.85",
-      "Price": "234.02",
-      "Shares": "61,136.00",
-      "Market Value": "14,307,046.72"
+      "Ticker": "CRM",
+      "Identifier": "2310525",
+      "Weight": "3.85%",
+      "Market Value": "14,307,046.72",
+      "Shares Held": "61,136.00",
+      "Asset Category": "Equity",
+      "Price": "234.02"
     },
     {
-      "Ticker": "QLYS",
       "Name": "QUALYS INC",
-      "Weight (%)": "3.76",
-      "Price": "172.43",
-      "Shares": "81,064.00",
-      "Market Value": "13,977,865.52"
+      "Ticker": "QLYS",
+      "Identifier": "B7XJTN8",
+      "Weight": "3.76%",
+      "Market Value": "13,977,865.52",
+      "Shares Held": "81,064.00",
+      "Asset Category": "Equity",
+      "Price": "172.43"
     },
     {
-      "Ticker": "SHOP",
       "Name": "SHOPIFY INC - CLASS A",
-      "Weight (%)": "3.41",
-      "Price": "142.25",
-      "Shares": "89,069.00",
-      "Market Value": "12,670,065.25"
+      "Ticker": "SHOP",
+      "Identifier": "BXDZ9Z0",
+      "Weight": "3.41%",
+      "Market Value": "12,670,065.25",
+      "Shares Held": "89,069.00",
+      "Asset Category": "Equity",
+      "Price": "142.25"
     },
     {
-      "Ticker": "DBX",
       "Name": "DROPBOX INC-CLASS A",
-      "Weight (%)": "3.23",
-      "Price": "32.32",
-      "Shares": "370,934.00",
-      "Market Value": "11,988,586.88"
+      "Ticker": "DBX",
+      "Identifier": "BG0T321",
+      "Weight": "3.23%",
+      "Market Value": "11,988,586.88",
+      "Shares Held": "370,934.00",
+      "Asset Category": "Equity",
+      "Price": "32.32"
     },
     {
-      "Ticker": "AKAM",
       "Name": "AKAMAI TECHNOLOGIES INC",
-      "Weight (%)": "3.21",
-      "Price": "113.94",
-      "Shares": "104,768.00",
-      "Market Value": "11,937,265.92"
+      "Ticker": "AKAM",
+      "Identifier": "2507457",
+      "Weight": "3.21%",
+      "Market Value": "11,937,265.92",
+      "Shares Held": "104,768.00",
+      "Asset Category": "Equity",
+      "Price": "113.94"
     },
     {
-      "Ticker": "HUBS",
       "Name": "HUBSPOT INC",
-      "Weight (%)": "2.80",
-      "Price": "213.74",
-      "Shares": "48,644.00",
-      "Market Value": "10,397,168.56"
+      "Ticker": "HUBS",
+      "Identifier": "BR4T3B3",
+      "Weight": "2.80%",
+      "Market Value": "10,397,168.56",
+      "Shares Held": "48,644.00",
+      "Asset Category": "Equity",
+      "Price": "213.74"
     },
     {
-      "Ticker": "ZM",
       "Name": "ZOOM COMMUNICATIONS INC",
-      "Weight (%)": "2.68",
-      "Price": "89.71",
-      "Shares": "111,066.00",
-      "Market Value": "9,963,730.86"
+      "Ticker": "ZM",
+      "Identifier": "BGSP7M9",
+      "Weight": "2.68%",
+      "Market Value": "9,963,730.86",
+      "Shares Held": "111,066.00",
+      "Asset Category": "Equity",
+      "Price": "89.71"
     },
     {
-      "Ticker": "BOX",
       "Name": "BOX INC - CLASS A",
-      "Weight (%)": "2.66",
-      "Price": "31.39",
-      "Shares": "314,557.00",
-      "Market Value": "9,873,944.23"
+      "Ticker": "BOX",
+      "Identifier": "BVB3BV2",
+      "Weight": "2.66%",
+      "Market Value": "9,873,944.23",
+      "Shares Held": "314,557.00",
+      "Asset Category": "Equity",
+      "Price": "31.39"
     },
     {
-      "Ticker": "DLR",
       "Name": "DIGITAL REALTY TRUST INC",
-      "Weight (%)": "2.58",
-      "Price": "178.61",
-      "Shares": "53,693.00",
-      "Market Value": "9,590,106.73"
+      "Ticker": "DLR",
+      "Identifier": "B03GQS4",
+      "Weight": "2.58%",
+      "Market Value": "9,590,106.73",
+      "Shares Held": "53,693.00",
+      "Asset Category": "Fund",
+      "Price": "178.61"
     },
     {
-      "Ticker": "PCOR",
       "Name": "PROCORE TECHNOLOGIES INC",
-      "Weight (%)": "2.53",
-      "Price": "49.3",
-      "Shares": "190,708.00",
-      "Market Value": "9,401,904.40"
+      "Ticker": "PCOR",
+      "Identifier": "BLH11J8",
+      "Weight": "2.53%",
+      "Market Value": "9,401,904.40",
+      "Shares Held": "190,708.00",
+      "Asset Category": "Equity",
+      "Price": "49.3"
     },
     {
-      "Ticker": "WIX",
       "Name": "WIX.COM LTD",
-      "Weight (%)": "2.48",
-      "Price": "73.78999999999999",
-      "Shares": "125,044.00",
-      "Market Value": "9,226,996.76"
+      "Ticker": "WIX",
+      "Identifier": "BFZCHN7",
+      "Weight": "2.48%",
+      "Market Value": "9,226,996.76",
+      "Shares Held": "125,044.00",
+      "Asset Category": "Equity",
+      "Price": "73.78999999999999"
     },
     {
-      "Ticker": "FSLY",
       "Name": "FASTLY INC - CLASS A",
-      "Weight (%)": "2.38",
-      "Price": "24.96",
-      "Shares": "355,264.00",
-      "Market Value": "8,867,389.44"
+      "Ticker": "FSLY",
+      "Identifier": "BJN4MY9",
+      "Weight": "2.38%",
+      "Market Value": "8,867,389.44",
+      "Shares Held": "355,264.00",
+      "Asset Category": "Equity",
+      "Price": "24.96"
     },
     {
-      "Ticker": "SINCH SS",
       "Name": "SINCH AB",
-      "Weight (%)": "2.33",
-      "Price": "4.962946895360389",
-      "Shares": "1,749,414.00",
-      "Market Value": "8,682,248.78"
+      "Ticker": "SINCH SS",
+      "Identifier": "BKP8Q11",
+      "Weight": "2.33%",
+      "Market Value": "8,682,248.78",
+      "Shares Held": "1,749,414.00",
+      "Asset Category": "Equity",
+      "Price": "4.962946895360389"
     },
     {
-      "Ticker": "WK",
       "Name": "WORKIVA INC",
-      "Weight (%)": "2.24",
-      "Price": "69.64",
-      "Shares": "119,803.00",
-      "Market Value": "8,343,080.92"
+      "Ticker": "WK",
+      "Identifier": "BSS6HY8",
+      "Weight": "2.24%",
+      "Market Value": "8,343,080.92",
+      "Shares Held": "119,803.00",
+      "Asset Category": "Equity",
+      "Price": "69.64"
     },
     {
-      "Ticker": "FRSH",
       "Name": "FRESHWORKS INC-CL A",
-      "Weight (%)": "1.86",
-      "Price": "12.54",
-      "Shares": "553,063.00",
-      "Market Value": "6,935,410.02"
+      "Ticker": "FRSH",
+      "Identifier": "BPF0BB7",
+      "Weight": "1.86%",
+      "Market Value": "6,935,410.02",
+      "Shares Held": "553,063.00",
+      "Asset Category": "Equity",
+      "Price": "12.54"
     },
     {
-      "Ticker": "MSFT",
       "Name": "MICROSOFT CORP",
-      "Weight (%)": "1.83",
-      "Price": "516.17",
-      "Shares": "13,214.00",
-      "Market Value": "6,820,670.38"
+      "Ticker": "MSFT",
+      "Identifier": "2588173",
+      "Weight": "1.83%",
+      "Market Value": "6,820,670.38",
+      "Shares Held": "13,214.00",
+      "Asset Category": "Equity",
+      "Price": "516.17"
     },
     {
-      "Ticker": "SPSC",
       "Name": "SPS COMMERCE INC",
-      "Weight (%)": "1.83",
-      "Price": "81.3",
-      "Shares": "83,856.00",
-      "Market Value": "6,817,492.80"
+      "Ticker": "SPSC",
+      "Identifier": "B57VWJ3",
+      "Weight": "1.83%",
+      "Market Value": "6,817,492.80",
+      "Shares Held": "83,856.00",
+      "Asset Category": "Equity",
+      "Price": "81.3"
     },
     {
-      "Ticker": "FIVN",
       "Name": "FIVE9 INC",
-      "Weight (%)": "1.67",
-      "Price": "35.77",
-      "Shares": "173,968.00",
-      "Market Value": "6,222,835.36"
+      "Ticker": "FIVN",
+      "Identifier": "BKY7X18",
+      "Weight": "1.67%",
+      "Market Value": "6,222,835.36",
+      "Shares Held": "173,968.00",
+      "Asset Category": "Equity",
+      "Price": "35.77"
     },
     {
-      "Ticker": "AMZN",
       "Name": "AMAZON.COM INC",
-      "Weight (%)": "1.37",
-      "Price": "249.67",
-      "Shares": "20,377.00",
-      "Market Value": "5,087,525.59"
+      "Ticker": "AMZN",
+      "Identifier": "2000019",
+      "Weight": "1.37%",
+      "Market Value": "5,087,525.59",
+      "Shares Held": "20,377.00",
+      "Asset Category": "Equity",
+      "Price": "249.67"
     },
     {
-      "Ticker": "GOOGL",
       "Name": "ALPHABET INC-CL A",
-      "Weight (%)": "1.30",
-      "Price": "343.92",
-      "Shares": "14,035.00",
-      "Market Value": "4,826,917.20"
+      "Ticker": "GOOGL",
+      "Identifier": "BYVY8G0",
+      "Weight": "1.30%",
+      "Market Value": "4,826,917.20",
+      "Shares Held": "14,035.00",
+      "Asset Category": "Equity",
+      "Price": "343.92"
     },
     {
-      "Ticker": "VNET",
       "Name": "VNET GROUP INCORPORATION",
-      "Weight (%)": "1.13",
-      "Price": "6.64",
-      "Shares": "633,864.00",
-      "Market Value": "4,208,856.96"
+      "Ticker": "VNET",
+      "Identifier": "B3Q0VS9",
+      "Weight": "1.13%",
+      "Market Value": "4,208,856.96",
+      "Shares Held": "633,864.00",
+      "Asset Category": "Equity",
+      "Price": "6.64"
     },
     {
-      "Ticker": "AI",
       "Name": "C3.AI INC-A",
-      "Weight (%)": "0.92",
-      "Price": "10.65",
-      "Shares": "321,576.00",
-      "Market Value": "3,424,784.40"
+      "Ticker": "AI",
+      "Identifier": "BMGNBJ2",
+      "Weight": "0.92%",
+      "Market Value": "3,424,784.40",
+      "Shares Held": "321,576.00",
+      "Asset Category": "Equity",
+      "Price": "10.65"
     },
     {
-      "Ticker": "YEXT",
       "Name": "YEXT INC",
-      "Weight (%)": "0.49",
-      "Price": "6.47",
-      "Shares": "280,250.00",
-      "Market Value": "1,813,217.50"
+      "Ticker": "YEXT",
+      "Identifier": "BD8ZJW2",
+      "Weight": "0.49%",
+      "Market Value": "1,813,217.50",
+      "Shares Held": "280,250.00",
+      "Asset Category": "Equity",
+      "Price": "6.47"
     },
     {
-      "Ticker": "PUBM",
       "Name": "PUBMATIC INC-CLASS A",
-      "Weight (%)": "0.44",
-      "Price": "18.6",
-      "Shares": "87,294.00",
-      "Market Value": "1,623,668.40"
+      "Ticker": "PUBM",
+      "Identifier": "BNHP503",
+      "Weight": "0.44%",
+      "Market Value": "1,623,668.40",
+      "Shares Held": "87,294.00",
+      "Asset Category": "Equity",
+      "Price": "18.6"
     },
     {
-      "Ticker": "ORCL",
       "Name": "ORACLE CORP",
-      "Weight (%)": "0.32",
-      "Price": "137.1",
-      "Shares": "8,727.00",
-      "Market Value": "1,196,471.70"
+      "Ticker": "ORCL",
+      "Identifier": "2661568",
+      "Weight": "0.32%",
+      "Market Value": "1,196,471.70",
+      "Shares Held": "8,727.00",
+      "Asset Category": "Equity",
+      "Price": "137.1"
     },
     {
-      "Ticker": "4716 JP",
       "Name": "ORACLE CORP JAPAN",
-      "Weight (%)": "0.25",
-      "Price": "62.92749642832846",
-      "Shares": "14,699.00",
-      "Market Value": "924,971.27"
+      "Ticker": "4716 JP",
+      "Identifier": "6141680",
+      "Weight": "0.25%",
+      "Market Value": "924,971.27",
+      "Shares Held": "14,699.00",
+      "Asset Category": "Equity",
+      "Price": "62.92749642832846"
     },
     {
-      "Ticker": "BABA",
       "Name": "ALIBABA GROUP HOLDING-SP ADR",
-      "Weight (%)": "0.21",
-      "Price": "109.74",
-      "Shares": "7,289.00",
-      "Market Value": "799,894.86"
+      "Ticker": "BABA",
+      "Identifier": "BP41ZD1",
+      "Weight": "0.21%",
+      "Market Value": "799,894.86",
+      "Shares Held": "7,289.00",
+      "Asset Category": "Equity",
+      "Price": "109.74"
     },
     {
-      "Ticker": "IBM",
       "Name": "INTL BUSINESS MACHINES CORP",
-      "Weight (%)": "0.21",
-      "Price": "225.51",
-      "Shares": "3,499.00",
-      "Market Value": "789,059.49"
+      "Ticker": "IBM",
+      "Identifier": "2005973",
+      "Weight": "0.21%",
+      "Market Value": "789,059.49",
+      "Shares Held": "3,499.00",
+      "Asset Category": "Equity",
+      "Price": "225.51"
     },
     {
-      "Ticker": "KC",
       "Name": "KINGSOFT CLOUD HOLDINGS-ADR",
-      "Weight (%)": "0.14",
-      "Price": "9.66",
-      "Shares": "52,497.00",
-      "Market Value": "507,121.02"
+      "Ticker": "KC",
+      "Identifier": "BM8R675",
+      "Weight": "0.14%",
+      "Market Value": "507,121.02",
+      "Shares Held": "52,497.00",
+      "Asset Category": "Equity",
+      "Price": "9.66"
     }
   ]
 }

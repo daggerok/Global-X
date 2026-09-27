@@ -4,429 +4,534 @@
   "pageSize": 250,
   "totalRows": 52,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.00",
-      "Price": "1.0",
-      "Shares": "1,600.19",
-      "Market Value": "1,600.19"
-    },
-    {
-      "Ticker": "TEN",
-      "Name": "TSAKOS ENERGY NAVIGATION LTD",
-      "Weight (%)": "3.30",
-      "Price": "46.23",
-      "Shares": "546,608.00",
-      "Market Value": "25,269,687.84"
-    },
-    {
-      "Ticker": "CBL",
-      "Name": "CBL & ASSOCIATES PROPERTIES",
-      "Weight (%)": "2.87",
-      "Price": "51.91",
-      "Shares": "422,162.00",
-      "Market Value": "21,914,429.42"
-    },
-    {
-      "Ticker": "TIGO",
-      "Name": "MILLICOM INTL CELLULAR S.A.",
-      "Weight (%)": "2.86",
-      "Price": "92.63000000000001",
-      "Shares": "235,999.00",
-      "Market Value": "21,860,587.37"
-    },
-    {
-      "Ticker": "SFL",
-      "Name": "SFL CORP LTD",
-      "Weight (%)": "2.52",
-      "Price": "12.78",
-      "Shares": "1,507,705.00",
-      "Market Value": "19,268,469.90"
-    },
-    {
-      "Ticker": "PAA",
-      "Name": "PLAINS ALL AMER PIPELINE LP",
-      "Weight (%)": "2.44",
-      "Price": "24.42",
-      "Shares": "762,507.00",
-      "Market Value": "18,620,420.94"
-    },
-    {
-      "Ticker": "UAN",
-      "Name": "CVR PARTNERS LP",
-      "Weight (%)": "2.35",
-      "Price": "122.7",
-      "Shares": "146,543.00",
-      "Market Value": "17,980,826.10"
-    },
-    {
-      "Ticker": "FLNG",
-      "Name": "FLEX LNG LTD",
-      "Weight (%)": "2.35",
-      "Price": "30.88",
-      "Shares": "581,033.00",
-      "Market Value": "17,942,299.04"
-    },
-    {
-      "Ticker": "GSL",
-      "Name": "GLOBAL SHIP LEASE INC-CL A",
-      "Weight (%)": "2.33",
-      "Price": "44.33",
-      "Shares": "402,605.00",
-      "Market Value": "17,847,479.65"
-    },
-    {
-      "Ticker": "SXC",
-      "Name": "SUNCOKE ENERGY INC",
-      "Weight (%)": "2.32",
-      "Price": "9.57",
-      "Shares": "1,853,373.00",
-      "Market Value": "17,736,779.61"
-    },
-    {
-      "Ticker": "TFSL",
-      "Name": "TFS FINANCIAL CORP",
-      "Weight (%)": "2.22",
-      "Price": "16.72",
-      "Shares": "1,016,161.00",
-      "Market Value": "16,990,211.92"
-    },
-    {
-      "Ticker": "ALX",
-      "Name": "ALEXANDER'S INC",
-      "Weight (%)": "2.21",
-      "Price": "247.12",
-      "Shares": "68,377.00",
-      "Market Value": "16,897,324.24"
-    },
-    {
-      "Ticker": "LTC",
-      "Name": "LTC PROPERTIES INC",
-      "Weight (%)": "2.20",
-      "Price": "42.94",
-      "Shares": "391,563.00",
-      "Market Value": "16,813,715.22"
-    },
-    {
-      "Ticker": "EBF",
-      "Name": "ENNIS INC",
-      "Weight (%)": "2.20",
-      "Price": "22.13",
-      "Shares": "759,090.00",
-      "Market Value": "16,798,661.70"
-    },
-    {
-      "Ticker": "PRGO",
-      "Name": "PERRIGO CO PLC",
-      "Weight (%)": "2.18",
-      "Price": "15.42",
-      "Shares": "1,083,190.00",
-      "Market Value": "16,702,789.80"
-    },
-    {
-      "Ticker": "PFE",
-      "Name": "PFIZER INC",
-      "Weight (%)": "2.14",
-      "Price": "28.67",
-      "Shares": "570,773.00",
-      "Market Value": "16,364,061.91"
-    },
-    {
-      "Ticker": "WES",
-      "Name": "WESTERN MIDSTREAM PARTNERS L",
-      "Weight (%)": "2.14",
-      "Price": "45.6",
-      "Shares": "358,567.00",
-      "Market Value": "16,350,655.20"
-    },
-    {
-      "Ticker": "HESM",
-      "Name": "HESS MIDSTREAM LP - CLASS A",
-      "Weight (%)": "2.13",
-      "Price": "38.25",
-      "Shares": "426,322.00",
-      "Market Value": "16,306,816.50"
-    },
-    {
-      "Ticker": "MO",
-      "Name": "ALTRIA GROUP INC",
-      "Weight (%)": "2.12",
-      "Price": "68.82",
-      "Shares": "235,650.00",
-      "Market Value": "16,217,433.00"
-    },
-    {
-      "Ticker": "WLKP",
-      "Name": "WESTLAKE CHEMICAL PARTNERS L",
-      "Weight (%)": "2.08",
-      "Price": "21.6",
-      "Shares": "735,214.00",
-      "Market Value": "15,880,622.40"
-    },
-    {
-      "Ticker": "GLP",
-      "Name": "GLOBAL PARTNERS LP",
-      "Weight (%)": "2.04",
-      "Price": "47.54000000000001",
-      "Shares": "328,449.00",
-      "Market Value": "15,614,465.46"
-    },
-    {
-      "Ticker": "DKL",
-      "Name": "DELEK LOGISTICS PARTNERS LP",
-      "Weight (%)": "2.04",
-      "Price": "53.89",
-      "Shares": "288,875.00",
-      "Market Value": "15,567,473.75"
-    },
-    {
-      "Ticker": "KHC",
-      "Name": "KRAFT HEINZ CO/THE",
-      "Weight (%)": "2.03",
-      "Price": "23.63",
-      "Shares": "657,752.00",
-      "Market Value": "15,542,679.76"
-    },
-    {
-      "Ticker": "NWE",
-      "Name": "NORTHWESTERN ENERGY GROUP",
-      "Weight (%)": "2.03",
-      "Price": "68.84",
-      "Shares": "225,767.00",
-      "Market Value": "15,541,800.28"
-    },
-    {
-      "Ticker": "MPLX",
-      "Name": "MPLX LP",
-      "Weight (%)": "2.03",
-      "Price": "56.8",
-      "Shares": "273,411.00",
-      "Market Value": "15,529,744.80"
-    },
-    {
-      "Ticker": "USAC",
-      "Name": "USA COMPRESSION PARTNERS LP",
-      "Weight (%)": "2.02",
-      "Price": "25.54",
-      "Shares": "604,710.00",
-      "Market Value": "15,444,293.40"
-    },
-    {
-      "Ticker": "MTN",
-      "Name": "VAIL RESORTS INC",
-      "Weight (%)": "2.01",
-      "Price": "136.11",
-      "Shares": "113,076.00",
-      "Market Value": "15,390,774.36"
-    },
-    {
-      "Ticker": "OHI",
-      "Name": "OMEGA HEALTHCARE INVESTORS",
-      "Weight (%)": "1.98",
-      "Price": "46.28",
-      "Shares": "327,351.00",
-      "Market Value": "15,149,804.28"
-    },
-    {
-      "Ticker": "VZ",
-      "Name": "VERIZON COMMUNICATIONS INC",
-      "Weight (%)": "1.97",
-      "Price": "47.08",
-      "Shares": "319,300.00",
-      "Market Value": "15,032,644.00"
-    },
-    {
-      "Ticker": "ENR",
-      "Name": "ENERGIZER HOLDINGS INC",
-      "Weight (%)": "1.96",
-      "Price": "22.0",
-      "Shares": "680,354.00",
-      "Market Value": "14,967,788.00"
-    },
-    {
-      "Ticker": "DEA",
-      "Name": "EASTERLY GOVERNMENT PROPERTI",
-      "Weight (%)": "1.96",
-      "Price": "22.91",
-      "Shares": "652,523.00",
-      "Market Value": "14,949,301.93"
-    },
-    {
-      "Ticker": "NWN",
-      "Name": "NORTHWEST NATURAL HOLDING CO",
-      "Weight (%)": "1.91",
-      "Price": "47.04",
-      "Shares": "310,307.00",
-      "Market Value": "14,596,841.28"
-    },
-    {
-      "Ticker": "D",
-      "Name": "DOMINION ENERGY INC",
-      "Weight (%)": "1.89",
-      "Price": "60.68",
-      "Shares": "238,248.00",
-      "Market Value": "14,456,888.64"
-    },
-    {
-      "Ticker": "AMBP",
-      "Name": "ARDAGH METAL PACKAGING SA",
-      "Weight (%)": "1.87",
-      "Price": "4.38",
-      "Shares": "3,259,902.00",
-      "Market Value": "14,278,370.76"
-    },
-    {
-      "Ticker": "CPA",
-      "Name": "COPA HOLDINGS SA-CLASS A",
-      "Weight (%)": "1.86",
-      "Price": "133.72",
-      "Shares": "106,660.00",
-      "Market Value": "14,262,575.20"
-    },
-    {
-      "Ticker": "T",
-      "Name": "AT&T INC",
-      "Weight (%)": "1.81",
-      "Price": "25.38",
-      "Shares": "544,730.00",
-      "Market Value": "13,825,247.40"
-    },
-    {
-      "Ticker": "UHT",
-      "Name": "UNIVERSAL HEALTH RLTY INCOME",
-      "Weight (%)": "1.80",
-      "Price": "38.65",
-      "Shares": "357,260.00",
-      "Market Value": "13,808,099.00"
-    },
-    {
-      "Ticker": "AVA",
-      "Name": "AVISTA CORP",
-      "Weight (%)": "1.68",
-      "Price": "35.11",
-      "Shares": "365,793.00",
-      "Market Value": "12,842,992.23"
-    },
-    {
-      "Ticker": "GLPI",
-      "Name": "GAMING AND LEISURE PROPERTIE",
-      "Weight (%)": "1.67",
-      "Price": "38.79",
-      "Shares": "328,285.00",
-      "Market Value": "12,734,175.15"
-    },
-    {
-      "Ticker": "UPS",
-      "Name": "UNITED PARCEL SERVICE-CL B",
-      "Weight (%)": "1.66",
-      "Price": "93.96000000000001",
-      "Shares": "135,417.00",
-      "Market Value": "12,723,781.32"
-    },
-    {
-      "Ticker": "SPH",
-      "Name": "SUBURBAN PROPANE PARTNERS LP",
-      "Weight (%)": "1.66",
-      "Price": "16.62",
-      "Shares": "765,194.00",
-      "Market Value": "12,717,524.28"
-    },
-    {
-      "Ticker": "ARR",
-      "Name": "ARMOUR RESIDENTIAL REIT INC",
-      "Weight (%)": "1.64",
-      "Price": "14.1",
-      "Shares": "886,741.00",
-      "Market Value": "12,503,048.10"
-    },
-    {
-      "Ticker": "UVV",
-      "Name": "UNIVERSAL CORP/VA",
-      "Weight (%)": "1.63",
-      "Price": "42.47",
-      "Shares": "292,744.00",
-      "Market Value": "12,432,837.68"
-    },
-    {
-      "Ticker": "IIPR",
-      "Name": "INNOVATIVE INDUSTRIAL PROPER",
-      "Weight (%)": "1.60",
-      "Price": "55.52",
-      "Shares": "221,016.00",
-      "Market Value": "12,270,808.32"
-    },
-    {
-      "Ticker": "VTS",
-      "Name": "VITESSE ENERGY INC",
-      "Weight (%)": "1.57",
-      "Price": "16.75",
-      "Shares": "718,751.00",
-      "Market Value": "12,039,079.25"
-    },
-    {
-      "Ticker": "CWEN",
-      "Name": "CLEARWAY ENERGY INC-C",
-      "Weight (%)": "1.50",
-      "Price": "29.77",
-      "Shares": "384,685.00",
-      "Market Value": "11,452,072.45"
-    },
-    {
-      "Ticker": "NHI",
-      "Name": "NATL HEALTH INVESTORS INC",
-      "Weight (%)": "1.49",
-      "Price": "66.92",
-      "Shares": "170,515.00",
-      "Market Value": "11,410,863.80"
-    },
-    {
-      "Ticker": "JBS",
-      "Name": "JBS NV-A",
-      "Weight (%)": "1.46",
-      "Price": "11.57",
-      "Shares": "962,067.00",
-      "Market Value": "11,131,115.19"
-    },
-    {
-      "Ticker": "AMCR",
-      "Name": "AMCOR PLC",
-      "Weight (%)": "1.43",
-      "Price": "42.51",
-      "Shares": "257,961.00",
-      "Market Value": "10,965,922.11"
-    },
-    {
-      "Ticker": "WU",
-      "Name": "WESTERN UNION CO",
-      "Weight (%)": "1.33",
-      "Price": "6.18",
-      "Shares": "1,643,858.00",
-      "Market Value": "10,159,042.44"
-    },
-    {
-      "Ticker": "CPB",
-      "Name": "THE CAMPBELL'S COMPANY",
-      "Weight (%)": "1.32",
-      "Price": "19.37",
-      "Shares": "523,343.00",
-      "Market Value": "10,137,153.91"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "1,600.19",
+      "Shares Held": "1,600.19",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "TSAKOS ENERGY NAVIGATION LTD",
+      "Ticker": "TEN",
+      "Identifier": "BMX5PY4",
+      "Weight": "3.30%",
+      "Market Value": "25,269,687.84",
+      "Shares Held": "546,608.00",
+      "Asset Category": "Equity",
+      "Price": "46.23"
+    },
+    {
+      "Name": "CBL & ASSOCIATES PROPERTIES",
+      "Ticker": "CBL",
+      "Identifier": "BNTC8Y7",
+      "Weight": "2.87%",
+      "Market Value": "21,914,429.42",
+      "Shares Held": "422,162.00",
+      "Asset Category": "Equity",
+      "Price": "51.91"
+    },
+    {
+      "Name": "MILLICOM INTL CELLULAR S.A.",
+      "Ticker": "TIGO",
+      "Identifier": "2418128",
+      "Weight": "2.86%",
+      "Market Value": "21,860,587.37",
+      "Shares Held": "235,999.00",
+      "Asset Category": "Equity",
+      "Price": "92.63000000000001"
+    },
+    {
+      "Name": "SFL CORP LTD",
+      "Ticker": "SFL",
+      "Identifier": "BJXT857",
+      "Weight": "2.52%",
+      "Market Value": "19,268,469.90",
+      "Shares Held": "1,507,705.00",
+      "Asset Category": "Equity",
+      "Price": "12.78"
+    },
+    {
+      "Name": "PLAINS ALL AMER PIPELINE LP",
+      "Ticker": "PAA",
+      "Identifier": "2311960",
+      "Weight": "2.44%",
+      "Market Value": "18,620,420.94",
+      "Shares Held": "762,507.00",
+      "Asset Category": "Equity",
+      "Price": "24.42"
+    },
+    {
+      "Name": "CVR PARTNERS LP",
+      "Ticker": "UAN",
+      "Identifier": "BMWS3Y0",
+      "Weight": "2.35%",
+      "Market Value": "17,980,826.10",
+      "Shares Held": "146,543.00",
+      "Asset Category": "Equity",
+      "Price": "122.7"
+    },
+    {
+      "Name": "FLEX LNG LTD",
+      "Ticker": "FLNG",
+      "Identifier": "BH3T3L4",
+      "Weight": "2.35%",
+      "Market Value": "17,942,299.04",
+      "Shares Held": "581,033.00",
+      "Asset Category": "Equity",
+      "Price": "30.88"
+    },
+    {
+      "Name": "GLOBAL SHIP LEASE INC-CL A",
+      "Ticker": "GSL",
+      "Identifier": "BJ5S5P1",
+      "Weight": "2.33%",
+      "Market Value": "17,847,479.65",
+      "Shares Held": "402,605.00",
+      "Asset Category": "Equity",
+      "Price": "44.33"
+    },
+    {
+      "Name": "SUNCOKE ENERGY INC",
+      "Ticker": "SXC",
+      "Identifier": "B3R0638",
+      "Weight": "2.32%",
+      "Market Value": "17,736,779.61",
+      "Shares Held": "1,853,373.00",
+      "Asset Category": "Equity",
+      "Price": "9.57"
+    },
+    {
+      "Name": "TFS FINANCIAL CORP",
+      "Ticker": "TFSL",
+      "Identifier": "B1W8J67",
+      "Weight": "2.22%",
+      "Market Value": "16,990,211.92",
+      "Shares Held": "1,016,161.00",
+      "Asset Category": "Equity",
+      "Price": "16.72"
+    },
+    {
+      "Name": "ALEXANDER'S INC",
+      "Ticker": "ALX",
+      "Identifier": "2014021",
+      "Weight": "2.21%",
+      "Market Value": "16,897,324.24",
+      "Shares Held": "68,377.00",
+      "Asset Category": "Equity",
+      "Price": "247.12"
+    },
+    {
+      "Name": "LTC PROPERTIES INC",
+      "Ticker": "LTC",
+      "Identifier": "2498788",
+      "Weight": "2.20%",
+      "Market Value": "16,813,715.22",
+      "Shares Held": "391,563.00",
+      "Asset Category": "Equity",
+      "Price": "42.94"
+    },
+    {
+      "Name": "ENNIS INC",
+      "Ticker": "EBF",
+      "Identifier": "2316103",
+      "Weight": "2.20%",
+      "Market Value": "16,798,661.70",
+      "Shares Held": "759,090.00",
+      "Asset Category": "Equity",
+      "Price": "22.13"
+    },
+    {
+      "Name": "PERRIGO CO PLC",
+      "Ticker": "PRGO",
+      "Identifier": "BGH1M56",
+      "Weight": "2.18%",
+      "Market Value": "16,702,789.80",
+      "Shares Held": "1,083,190.00",
+      "Asset Category": "Equity",
+      "Price": "15.42"
+    },
+    {
+      "Name": "PFIZER INC",
+      "Ticker": "PFE",
+      "Identifier": "2684703",
+      "Weight": "2.14%",
+      "Market Value": "16,364,061.91",
+      "Shares Held": "570,773.00",
+      "Asset Category": "Equity",
+      "Price": "28.67"
+    },
+    {
+      "Name": "WESTERN MIDSTREAM PARTNERS L",
+      "Ticker": "WES",
+      "Identifier": "BJ552C8",
+      "Weight": "2.14%",
+      "Market Value": "16,350,655.20",
+      "Shares Held": "358,567.00",
+      "Asset Category": "Equity",
+      "Price": "45.6"
+    },
+    {
+      "Name": "HESS MIDSTREAM LP - CLASS A",
+      "Ticker": "HESM",
+      "Identifier": "BKPK695",
+      "Weight": "2.13%",
+      "Market Value": "16,306,816.50",
+      "Shares Held": "426,322.00",
+      "Asset Category": "Equity",
+      "Price": "38.25"
+    },
+    {
+      "Name": "ALTRIA GROUP INC",
+      "Ticker": "MO",
+      "Identifier": "2692632",
+      "Weight": "2.12%",
+      "Market Value": "16,217,433.00",
+      "Shares Held": "235,650.00",
+      "Asset Category": "Equity",
+      "Price": "68.82"
+    },
+    {
+      "Name": "WESTLAKE CHEMICAL PARTNERS L",
+      "Ticker": "WLKP",
+      "Identifier": "BP9F5H2",
+      "Weight": "2.08%",
+      "Market Value": "15,880,622.40",
+      "Shares Held": "735,214.00",
+      "Asset Category": "Equity",
+      "Price": "21.6"
+    },
+    {
+      "Name": "GLOBAL PARTNERS LP",
+      "Ticker": "GLP",
+      "Identifier": "B0H9BJ5",
+      "Weight": "2.04%",
+      "Market Value": "15,614,465.46",
+      "Shares Held": "328,449.00",
+      "Asset Category": "Equity",
+      "Price": "47.54000000000001"
+    },
+    {
+      "Name": "DELEK LOGISTICS PARTNERS LP",
+      "Ticker": "DKL",
+      "Identifier": "B927XT1",
+      "Weight": "2.04%",
+      "Market Value": "15,567,473.75",
+      "Shares Held": "288,875.00",
+      "Asset Category": "Equity",
+      "Price": "53.89"
+    },
+    {
+      "Name": "KRAFT HEINZ CO/THE",
+      "Ticker": "KHC",
+      "Identifier": "BYRY499",
+      "Weight": "2.03%",
+      "Market Value": "15,542,679.76",
+      "Shares Held": "657,752.00",
+      "Asset Category": "Equity",
+      "Price": "23.63"
+    },
+    {
+      "Name": "NORTHWESTERN ENERGY GROUP",
+      "Ticker": "NWE",
+      "Identifier": "B03PGL4",
+      "Weight": "2.03%",
+      "Market Value": "15,541,800.28",
+      "Shares Held": "225,767.00",
+      "Asset Category": "Equity",
+      "Price": "68.84"
+    },
+    {
+      "Name": "MPLX LP",
+      "Ticker": "MPLX",
+      "Identifier": "B847R56",
+      "Weight": "2.03%",
+      "Market Value": "15,529,744.80",
+      "Shares Held": "273,411.00",
+      "Asset Category": "Equity",
+      "Price": "56.8"
+    },
+    {
+      "Name": "USA COMPRESSION PARTNERS LP",
+      "Ticker": "USAC",
+      "Identifier": "B83VQY1",
+      "Weight": "2.02%",
+      "Market Value": "15,444,293.40",
+      "Shares Held": "604,710.00",
+      "Asset Category": "Equity",
+      "Price": "25.54"
+    },
+    {
+      "Name": "VAIL RESORTS INC",
+      "Ticker": "MTN",
+      "Identifier": "2954194",
+      "Weight": "2.01%",
+      "Market Value": "15,390,774.36",
+      "Shares Held": "113,076.00",
+      "Asset Category": "Equity",
+      "Price": "136.11"
+    },
+    {
+      "Name": "OMEGA HEALTHCARE INVESTORS",
+      "Ticker": "OHI",
+      "Identifier": "2043274",
+      "Weight": "1.98%",
+      "Market Value": "15,149,804.28",
+      "Shares Held": "327,351.00",
+      "Asset Category": "Equity",
+      "Price": "46.28"
+    },
+    {
+      "Name": "VERIZON COMMUNICATIONS INC",
+      "Ticker": "VZ",
+      "Identifier": "2090571",
+      "Weight": "1.97%",
+      "Market Value": "15,032,644.00",
+      "Shares Held": "319,300.00",
+      "Asset Category": "Equity",
+      "Price": "47.08"
+    },
+    {
+      "Name": "ENERGIZER HOLDINGS INC",
+      "Ticker": "ENR",
+      "Identifier": "BYZFPN5",
+      "Weight": "1.96%",
+      "Market Value": "14,967,788.00",
+      "Shares Held": "680,354.00",
+      "Asset Category": "Equity",
+      "Price": "22.0"
+    },
+    {
+      "Name": "EASTERLY GOVERNMENT PROPERTI",
+      "Ticker": "DEA",
+      "Identifier": "BTTRRD6",
+      "Weight": "1.96%",
+      "Market Value": "14,949,301.93",
+      "Shares Held": "652,523.00",
+      "Asset Category": "Equity",
+      "Price": "22.91"
+    },
+    {
+      "Name": "NORTHWEST NATURAL HOLDING CO",
+      "Ticker": "NWN",
+      "Identifier": "BFNR303",
+      "Weight": "1.91%",
+      "Market Value": "14,596,841.28",
+      "Shares Held": "310,307.00",
+      "Asset Category": "Equity",
+      "Price": "47.04"
+    },
+    {
+      "Name": "DOMINION ENERGY INC",
+      "Ticker": "D",
+      "Identifier": "2542049",
+      "Weight": "1.89%",
+      "Market Value": "14,456,888.64",
+      "Shares Held": "238,248.00",
+      "Asset Category": "Equity",
+      "Price": "60.68"
+    },
+    {
+      "Name": "ARDAGH METAL PACKAGING SA",
+      "Ticker": "AMBP",
+      "Identifier": "BMWT6B1",
+      "Weight": "1.87%",
+      "Market Value": "14,278,370.76",
+      "Shares Held": "3,259,902.00",
+      "Asset Category": "Equity",
+      "Price": "4.38"
+    },
+    {
+      "Name": "COPA HOLDINGS SA-CLASS A",
+      "Ticker": "CPA",
+      "Identifier": "B0TNJH9",
+      "Weight": "1.86%",
+      "Market Value": "14,262,575.20",
+      "Shares Held": "106,660.00",
+      "Asset Category": "Equity",
+      "Price": "133.72"
+    },
+    {
+      "Name": "AT&T INC",
+      "Ticker": "T",
+      "Identifier": "2831811",
+      "Weight": "1.81%",
+      "Market Value": "13,825,247.40",
+      "Shares Held": "544,730.00",
+      "Asset Category": "Equity",
+      "Price": "25.38"
+    },
+    {
+      "Name": "UNIVERSAL HEALTH RLTY INCOME",
+      "Ticker": "UHT",
+      "Identifier": "2927497",
+      "Weight": "1.80%",
+      "Market Value": "13,808,099.00",
+      "Shares Held": "357,260.00",
+      "Asset Category": "Equity",
+      "Price": "38.65"
+    },
+    {
+      "Name": "AVISTA CORP",
+      "Ticker": "AVA",
+      "Identifier": "2942605",
+      "Weight": "1.68%",
+      "Market Value": "12,842,992.23",
+      "Shares Held": "365,793.00",
+      "Asset Category": "Equity",
+      "Price": "35.11"
+    },
+    {
+      "Name": "GAMING AND LEISURE PROPERTIE",
+      "Ticker": "GLPI",
+      "Identifier": "BFPK4S5",
+      "Weight": "1.67%",
+      "Market Value": "12,734,175.15",
+      "Shares Held": "328,285.00",
+      "Asset Category": "Equity",
+      "Price": "38.79"
+    },
+    {
+      "Name": "UNITED PARCEL SERVICE-CL B",
+      "Ticker": "UPS",
+      "Identifier": "2517382",
+      "Weight": "1.66%",
+      "Market Value": "12,723,781.32",
+      "Shares Held": "135,417.00",
+      "Asset Category": "Equity",
+      "Price": "93.96000000000001"
+    },
+    {
+      "Name": "SUBURBAN PROPANE PARTNERS LP",
+      "Ticker": "SPH",
+      "Identifier": "2144070",
+      "Weight": "1.66%",
+      "Market Value": "12,717,524.28",
+      "Shares Held": "765,194.00",
+      "Asset Category": "Equity",
+      "Price": "16.62"
+    },
+    {
+      "Name": "ARMOUR RESIDENTIAL REIT INC",
+      "Ticker": "ARR",
+      "Identifier": "BRJ8H91",
+      "Weight": "1.64%",
+      "Market Value": "12,503,048.10",
+      "Shares Held": "886,741.00",
+      "Asset Category": "Equity",
+      "Price": "14.1"
+    },
+    {
+      "Name": "UNIVERSAL CORP/VA",
+      "Ticker": "UVV",
+      "Identifier": "2923804",
+      "Weight": "1.63%",
+      "Market Value": "12,432,837.68",
+      "Shares Held": "292,744.00",
+      "Asset Category": "Equity",
+      "Price": "42.47"
+    },
+    {
+      "Name": "INNOVATIVE INDUSTRIAL PROPER",
+      "Ticker": "IIPR",
+      "Identifier": "BD0NN55",
+      "Weight": "1.60%",
+      "Market Value": "12,270,808.32",
+      "Shares Held": "221,016.00",
+      "Asset Category": "Equity",
+      "Price": "55.52"
+    },
+    {
+      "Name": "VITESSE ENERGY INC",
+      "Ticker": "VTS",
+      "Identifier": "BMBX3P7",
+      "Weight": "1.57%",
+      "Market Value": "12,039,079.25",
+      "Shares Held": "718,751.00",
+      "Asset Category": "Equity",
+      "Price": "16.75"
+    },
+    {
+      "Name": "CLEARWAY ENERGY INC-C",
+      "Ticker": "CWEN",
+      "Identifier": "BGJRH57",
+      "Weight": "1.50%",
+      "Market Value": "11,452,072.45",
+      "Shares Held": "384,685.00",
+      "Asset Category": "Equity",
+      "Price": "29.77"
+    },
+    {
+      "Name": "NATL HEALTH INVESTORS INC",
+      "Ticker": "NHI",
+      "Identifier": "2626125",
+      "Weight": "1.49%",
+      "Market Value": "11,410,863.80",
+      "Shares Held": "170,515.00",
+      "Asset Category": "Equity",
+      "Price": "66.92"
+    },
+    {
+      "Name": "JBS NV-A",
+      "Ticker": "JBS",
+      "Identifier": "BT18HL5",
+      "Weight": "1.46%",
+      "Market Value": "11,131,115.19",
+      "Shares Held": "962,067.00",
+      "Asset Category": "Equity",
+      "Price": "11.57"
+    },
+    {
+      "Name": "AMCOR PLC",
+      "Ticker": "AMCR",
+      "Identifier": "BV7DQ55",
+      "Weight": "1.43%",
+      "Market Value": "10,965,922.11",
+      "Shares Held": "257,961.00",
+      "Asset Category": "Equity",
+      "Price": "42.51"
+    },
+    {
+      "Name": "WESTERN UNION CO",
+      "Ticker": "WU",
+      "Identifier": "B1F76F9",
+      "Weight": "1.33%",
+      "Market Value": "10,159,042.44",
+      "Shares Held": "1,643,858.00",
+      "Asset Category": "Equity",
+      "Price": "6.18"
+    },
+    {
+      "Name": "THE CAMPBELL'S COMPANY",
+      "Ticker": "CPB",
+      "Identifier": "2162845",
+      "Weight": "1.32%",
+      "Market Value": "10,137,153.91",
+      "Shares Held": "523,343.00",
+      "Asset Category": "Equity",
+      "Price": "19.37"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.20",
-      "Price": "1.0",
-      "Shares": "1,563,713.50",
-      "Market Value": "1,563,713.50"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.20%",
+      "Market Value": "1,563,713.50",
+      "Shares Held": "1,563,713.50",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     }
   ]
 }

@@ -4,61 +4,74 @@
   "pageSize": 250,
   "totalRows": 506,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "EQIX",
       "Name": "EQUINIX INC",
-      "Weight (%)": "0.14",
-      "Price": "1008.08",
-      "Shares": "7.00",
-      "Market Value": "7,056.56"
+      "Ticker": "EQIX",
+      "Identifier": "BVLZX12",
+      "Weight": "0.14%",
+      "Market Value": "7,056.56",
+      "Shares Held": "7.00",
+      "Asset Category": "Equity",
+      "Price": "1008.08"
     },
     {
-      "Ticker": "HWM",
       "Name": "HOWMET AEROSPACE INC",
-      "Weight (%)": "0.14",
-      "Price": "232.48",
-      "Shares": "30.00",
-      "Market Value": "6,974.40"
+      "Ticker": "HWM",
+      "Identifier": "BKLJ8V2",
+      "Weight": "0.14%",
+      "Market Value": "6,974.40",
+      "Shares Held": "30.00",
+      "Asset Category": "Equity",
+      "Price": "232.48"
     },
     {
-      "Ticker": "SO",
       "Name": "SOUTHERN CO/THE",
-      "Weight (%)": "0.14",
-      "Price": "82.88",
-      "Shares": "84.00",
-      "Market Value": "6,961.92"
+      "Ticker": "SO",
+      "Identifier": "2829601",
+      "Weight": "0.14%",
+      "Market Value": "6,961.92",
+      "Shares Held": "84.00",
+      "Asset Category": "Equity",
+      "Price": "82.88"
     },
     {
-      "Ticker": "HOOD",
       "Name": "ROBINHOOD MARKETS INC - A",
-      "Weight (%)": "0.14",
-      "Price": "119.4",
-      "Shares": "58.00",
-      "Market Value": "6,925.20"
+      "Ticker": "HOOD",
+      "Identifier": "BP0TQN6",
+      "Weight": "0.14%",
+      "Market Value": "6,925.20",
+      "Shares Held": "58.00",
+      "Asset Category": "Equity",
+      "Price": "119.4"
     },
     {
-      "Ticker": "JCI",
       "Name": "JOHNSON CONTROLS INTERNATION",
-      "Weight (%)": "0.14",
-      "Price": "150.2",
-      "Shares": "46.00",
-      "Market Value": "6,909.20"
+      "Ticker": "JCI",
+      "Identifier": "BY7QL61",
+      "Weight": "0.14%",
+      "Market Value": "6,909.20",
+      "Shares Held": "46.00",
+      "Asset Category": "Equity",
+      "Price": "150.2"
     },
     {
-      "Ticker": "PNC",
       "Name": "PNC FINANCIAL SERVICES GROUP",
-      "Weight (%)": "0.14",
-      "Price": "225.64",
-      "Shares": "30.00",
-      "Market Value": "6,769.20"
+      "Ticker": "PNC",
+      "Identifier": "2692665",
+      "Weight": "0.14%",
+      "Market Value": "6,769.20",
+      "Shares Held": "30.00",
+      "Asset Category": "Equity",
+      "Price": "225.64"
     }
   ]
 }

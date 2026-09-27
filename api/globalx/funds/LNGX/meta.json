@@ -1,83 +1,99 @@
 {
   "ticker": "LNGX",
   "name": "U.S. Natural Gas ETF",
-  "category": "Other",
+  "category": "Alternatives & Specialty Equity / Commodities",
   "fundPage": "https://www.globalxetfs.com/funds/lngx/",
   "dataFile": "./funds/LNGX/meta.json",
-  "cusip": null,
-  "isin": null,
+  "cusip": "37960A172",
+  "isin": "US37960A1723",
   "ter": "0.45%",
   "terValue": 0.45,
   "terGross": "0.45%",
   "terGrossValue": 0.45,
   "nav": {
-    "display": "—",
-    "value": null,
+    "display": "$42.38",
+    "value": 42.38,
     "asOfDate": "Sep 25 2026",
-    "dailyChangeText": null,
-    "kind": "derived (Net Assets / Shares Outstanding)"
+    "dailyChangeText": "$-0.94 (-2.17%)",
+    "kind": "official (fund page Fund Details)"
   },
-  "navValue": null,
+  "navValue": 42.38,
   "aum": {
     "display": "$52.55M",
-    "value": 52551419,
+    "value": 52551419.01,
     "asOfDate": "Sep 25 2026",
-    "source": "GLOBALX fund page Fund Details \"Net Assets\""
+    "source": "Global X fund page Fund Details \"Net Assets\""
   },
-  "aumValue": 52551419,
+  "aumValue": 52551419.01,
   "asOfDate": "Sep 25 2026",
   "inceptionDate": "Oct 28 2025",
-  "inceptionDateFundPage": null,
-  "exchange": "PCX",
+  "inceptionDateFundPage": "Oct 28 2025",
+  "exchange": "NYSE Arca",
   "closePrice": "$42.57",
   "closePriceValue": 42.57,
   "premiumDiscount": {
-    "display": "—",
-    "value": null,
-    "derivedValue": null,
-    "kind": "derived (Market Price - NAV) / NAV"
+    "display": "0.45%",
+    "value": 0.4479,
+    "derivedValue": 0.45,
+    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
   },
-  "premiumDiscountValue": null,
-  "premiumDiscountDerivedValue": null,
-  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
+  "premiumDiscountValue": 0.4479,
+  "premiumDiscountDerivedValue": 0.45,
+  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
-    "display": null,
-    "value": null,
-    "asOfDate": null,
+    "display": "0.38%",
+    "value": 0.38,
+    "asOfDate": "Sep 25 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
-  "bidAskSpreadValue": null,
+  "bidAskSpreadValue": 0.38,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 52551419,
+  "totalNetAssets": 52551419.01,
   "sharesOutstanding": {
-    "display": null,
-    "value": null,
+    "display": "1,240,000",
+    "value": 1240000,
     "asOfDate": "Sep 25 2026"
   },
   "netAssetsAsOf": "Sep 25 2026",
-  "secYieldAsOf": null,
+  "secYieldAsOf": "Sep 25 2026",
   "distributions": {
-    "frequency": "00 - Unknown",
-    "paymentsPerYear": null,
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 6,
     "headers": [
-      "Ex-Date",
-      "Dividend"
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
     ],
     "rows": [
       {
-        "Ex-Date": "Jun 29 2026",
-        "Dividend": "$0.2560"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-30",
+        "Record Date": "2026-12-30",
+        "Payable Date": "2027-01-05",
+        "Amount ($)": ""
       },
       {
-        "Ex-Date": "Dec 30 2025",
-        "Dividend": "$0.0950"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-06-29",
+        "Record Date": "2026-06-29",
+        "Payable Date": "2026-07-02",
+        "Amount ($)": "$0.256100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.094915"
       }
     ],
-    "fallback": true,
-    "source": "Yahoo Finance dividend history (GLOBALX published no distribution rows)"
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
   },
   "returns": {
-    "derivedFrom": "official GLOBALX fund page performance tables (NAV Performance series)",
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
     "monthEnd": {
       "asOfDate": "",
       "raw": "",
@@ -121,18 +137,18 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "distributionYield": null,
-    "distributionYieldText": "—",
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "distributionYield": 0,
+    "distributionYieldText": "0.00%",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": null,
-    "secYieldText": "—",
-    "returnsBasis": "official GLOBALX fund page NAV Performance (monthly series)"
+    "secYield": 1.84,
+    "secYieldText": "1.84%",
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)"
   },
-  "distributionFrequency": "00 - —",
-  "providerCategory": "Other",
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Alternatives & Specialty Equity / Commodities",
   "holdings": {
     "pages": [
       "./holdings/001.json"
@@ -141,8 +157,8 @@
     "totalRows": 37,
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
-    "source": "https://assets.globalxetfs.com/funds/holdings/lngx_full-holdings_20260927.csv",
-    "sourceKind": "official GLOBALX daily holdings CSV (download_holdings_csv)"
+    "source": "https://assets.globalxetfs.com/funds/holdings/lngx_full-holdings_20260925.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
     "pages": [
@@ -152,33 +168,33 @@
     "totalRows": 227,
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
-    "source": "https://query1.finance.yahoo.com/v8/finance/chart/LNGX?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/LNGX",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
-  "navKind": "derived (Net Assets / Shares Outstanding)",
+  "navKind": "official (fund page Fund Details)",
   "source": {
-    "provider": "GLOBALX Investment Management LLC (GLOBALX ETFs)",
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
     "site": "https://www.globalxetfs.com",
-    "lineup": "https://www.globalxetfs.com/explore/",
+    "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/lngx/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/lngx_full-holdings_20260927.csv",
-    "holdingsSource": "official GLOBALX daily holdings CSV (download_holdings_csv)",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/lngx_full-holdings_20260925.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
-    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LNGX?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
-    "returnsSource": "GLOBALX fund page performance tables (NAV Performance)",
-    "distributionsSource": "GLOBALX fund page Distribution History table",
-    "distributionInfoSource": "GLOBALX fund page Distribution Information block",
-    "documentsSource": "GLOBALX fund page Documents table",
-    "registrant": "GLOBALX ETF Trust (Investment Company Act file 811-22209)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LNGX",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
-    "exchangeSource": "GLOBALX fund page Fund Details \"Primary Exchange\"",
-    "navSource": "GLOBALX fund page Fund Details \"Net Asset Value\" (derived (Net Assets / Shares Outstanding))",
-    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
-    "bidAskSpreadSource": "GLOBALX fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
   },
   "identifiers": {
-    "cusip": null,
-    "isin": null,
+    "cusip": "37960A172",
+    "isin": "US37960A1723",
     "underlyingExposure": null,
     "indexName": null,
     "benchmarkIndexName": null
@@ -192,24 +208,24 @@
   "marketPrice": {
     "display": "$42.57",
     "value": 42.57,
-    "asOfDate": "",
-    "dailyChangeText": null,
-    "source": "Yahoo Finance daily close"
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$-1.27 (-2.90%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldKind": "official GLOBALX Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": null,
-    "distributionRateText": "—",
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": 0,
+    "distributionRateText": "0.00%",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "official GLOBALX 30-Day SEC Yield",
+    "secYield": 1.84,
+    "secYieldText": "1.84%",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": null
+    "distributionInfoAsOfDate": "Sep 25 2026"
   },
   "navIndex": null,
   "documents": {

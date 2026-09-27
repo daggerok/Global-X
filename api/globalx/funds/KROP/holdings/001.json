@@ -4,301 +4,374 @@
   "pageSize": 250,
   "totalRows": 36,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "403490 KS",
       "Name": "WOODEUMGEEFARM CO LTD",
-      "Weight (%)": "0.14",
-      "Price": "1.537612632370449",
-      "Shares": "15,959.00",
-      "Market Value": "24,538.76"
+      "Ticker": "403490 KS",
+      "Identifier": "BNG9V31",
+      "Weight": "0.14%",
+      "Market Value": "24,538.76",
+      "Shares Held": "15,959.00",
+      "Asset Category": "Equity",
+      "Price": "1.537612632370449"
     },
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.07",
-      "Price": "1.0",
-      "Shares": "12,650.98",
-      "Market Value": "12,650.98"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.07%",
+      "Market Value": "12,650.98",
+      "Shares Held": "12,650.98",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "NRF-R TB",
       "Name": "NR INSTANT PRODUCE PCL-NVDR",
-      "Weight (%)": "0.04",
-      "Price": "0.006294967622571692",
-      "Shares": "1,081,000.00",
-      "Market Value": "6,804.86"
+      "Ticker": "NRF-R TB",
+      "Identifier": "BM9F151",
+      "Weight": "0.04%",
+      "Market Value": "6,804.86",
+      "Shares Held": "1,081,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.006294967622571692"
     },
     {
-      "Ticker": "",
       "Name": "CHINESE YUAN RENMINBI",
-      "Weight (%)": "0.00",
-      "Price": "0.1487191358024691",
-      "Shares": "2,592.00",
-      "Market Value": "385.48"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "385.48",
+      "Shares Held": "2,592.00",
+      "Asset Category": "Equity",
+      "Price": "0.1487191358024691"
     },
     {
-      "Ticker": "",
       "Name": "KOREAN WON",
-      "Weight (%)": "0.00",
-      "Price": "0.0007345807345807347",
-      "Shares": "1,443.00",
-      "Market Value": "1.06"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "1.06",
+      "Shares Held": "1,443.00",
+      "Asset Category": "Equity",
+      "Price": "0.0007345807345807347"
     },
     {
-      "Ticker": "",
       "Name": "CANADIAN DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.7073455110765643",
-      "Shares": "-25.73",
-      "Market Value": "-18.20"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-18.20",
+      "Shares Held": "-25.73",
+      "Asset Category": "Equity",
+      "Price": "0.7073455110765643"
+    },
+    {
       "Name": "CASH",
-      "Weight (%)": "-0.03",
-      "Price": "1.0",
-      "Shares": "-5,734.03",
-      "Market Value": "-5,734.03"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.03%",
+      "Market Value": "-5,734.03",
+      "Shares Held": "-5,734.03",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "DE",
       "Name": "DEERE & CO",
-      "Weight (%)": "14.48",
-      "Price": "690.46",
-      "Shares": "3,823.00",
-      "Market Value": "2,639,628.58"
+      "Ticker": "DE",
+      "Identifier": "2261203",
+      "Weight": "14.48%",
+      "Market Value": "2,639,628.58",
+      "Shares Held": "3,823.00",
+      "Asset Category": "Equity",
+      "Price": "690.46"
     },
     {
-      "Ticker": "NTR",
       "Name": "NUTRIEN LTD",
-      "Weight (%)": "11.90",
-      "Price": "72.23",
-      "Shares": "30,018.00",
-      "Market Value": "2,168,200.14"
+      "Ticker": "NTR",
+      "Identifier": "BDH3SB9",
+      "Weight": "11.90%",
+      "Market Value": "2,168,200.14",
+      "Shares Held": "30,018.00",
+      "Asset Category": "Equity",
+      "Price": "72.23"
     },
     {
-      "Ticker": "6326 JP",
       "Name": "KUBOTA CORP",
-      "Weight (%)": "11.28",
-      "Price": "17.70114210925122",
-      "Shares": "116,136.00",
-      "Market Value": "2,055,739.84"
+      "Ticker": "6326 JP",
+      "Identifier": "6497509",
+      "Weight": "11.28%",
+      "Market Value": "2,055,739.84",
+      "Shares Held": "116,136.00",
+      "Asset Category": "Equity",
+      "Price": "17.70114210925122"
     },
     {
-      "Ticker": "CTVA",
       "Name": "CORTEVA INC",
-      "Weight (%)": "11.26",
-      "Price": "78.52",
-      "Shares": "26,129.00",
-      "Market Value": "2,051,649.08"
+      "Ticker": "CTVA",
+      "Identifier": "BK73B42",
+      "Weight": "11.26%",
+      "Market Value": "2,051,649.08",
+      "Shares Held": "26,129.00",
+      "Asset Category": "Equity",
+      "Price": "78.52"
     },
     {
-      "Ticker": "CNH",
       "Name": "CNH INDUSTRIAL NV",
-      "Weight (%)": "5.50",
-      "Price": "13.09",
-      "Shares": "76,585.00",
-      "Market Value": "1,002,497.65"
+      "Ticker": "CNH",
+      "Identifier": "BDX85Z1",
+      "Weight": "5.50%",
+      "Market Value": "1,002,497.65",
+      "Shares Held": "76,585.00",
+      "Asset Category": "Equity",
+      "Price": "13.09"
     },
     {
-      "Ticker": "BAYN GR",
       "Name": "BAYER AG-REG",
-      "Weight (%)": "5.11",
-      "Price": "57.03014577973784",
-      "Shares": "16,326.00",
-      "Market Value": "931,074.16"
+      "Ticker": "BAYN GR",
+      "Identifier": "5069211",
+      "Weight": "5.11%",
+      "Market Value": "931,074.16",
+      "Shares Held": "16,326.00",
+      "Asset Category": "Equity",
+      "Price": "57.03014577973784"
     },
     {
-      "Ticker": "AGCO",
       "Name": "AGCO CORP",
-      "Weight (%)": "4.57",
-      "Price": "118.02",
-      "Shares": "7,051.00",
-      "Market Value": "832,159.02"
+      "Ticker": "AGCO",
+      "Identifier": "2010278",
+      "Weight": "4.57%",
+      "Market Value": "832,159.02",
+      "Shares Held": "7,051.00",
+      "Asset Category": "Equity",
+      "Price": "118.02"
     },
     {
-      "Ticker": "LNN",
       "Name": "LINDSAY CORP",
-      "Weight (%)": "4.50",
-      "Price": "114.25",
-      "Shares": "7,177.00",
-      "Market Value": "819,972.25"
+      "Ticker": "LNN",
+      "Identifier": "2516613",
+      "Weight": "4.50%",
+      "Market Value": "819,972.25",
+      "Shares Held": "7,177.00",
+      "Asset Category": "Equity",
+      "Price": "114.25"
     },
     {
-      "Ticker": "000998 C2",
       "Name": "YUAN LONGPING HIGH-TECH AG-A",
-      "Weight (%)": "4.30",
-      "Price": "1.290898271035732",
-      "Shares": "607,300.00",
-      "Market Value": "783,962.52"
+      "Ticker": "000998 C2",
+      "Identifier": "BD5CK34",
+      "Weight": "4.30%",
+      "Market Value": "783,962.52",
+      "Shares Held": "607,300.00",
+      "Asset Category": "Equity",
+      "Price": "1.290898271035732"
     },
     {
-      "Ticker": "603156 C1",
       "Name": "HEBEI YANGYUAN ZHIHUI BEVE-A",
-      "Weight (%)": "4.17",
-      "Price": "6.52885184866724",
-      "Shares": "116,300.00",
-      "Market Value": "759,305.47"
+      "Ticker": "603156 C1",
+      "Identifier": "BHWLWH0",
+      "Weight": "4.17%",
+      "Market Value": "759,305.47",
+      "Shares Held": "116,300.00",
+      "Asset Category": "Equity",
+      "Price": "6.52885184866724"
     },
     {
-      "Ticker": "ADM",
       "Name": "ARCHER-DANIELS-MIDLAND CO",
-      "Weight (%)": "3.96",
-      "Price": "81.11999999999999",
-      "Shares": "8,906.00",
-      "Market Value": "722,454.72"
+      "Ticker": "ADM",
+      "Identifier": "2047317",
+      "Weight": "3.96%",
+      "Market Value": "722,454.72",
+      "Shares Held": "8,906.00",
+      "Asset Category": "Equity",
+      "Price": "81.11999999999999"
     },
     {
-      "Ticker": "FMC",
       "Name": "FMC CORP",
-      "Weight (%)": "2.96",
-      "Price": "9.58",
-      "Shares": "56,371.00",
-      "Market Value": "540,034.18"
+      "Ticker": "FMC",
+      "Identifier": "2328603",
+      "Weight": "2.96%",
+      "Market Value": "540,034.18",
+      "Shares Held": "56,371.00",
+      "Asset Category": "Equity",
+      "Price": "9.58"
     },
     {
-      "Ticker": "NUF AU",
       "Name": "NUFARM LTD",
-      "Weight (%)": "2.91",
-      "Price": "2.135446320092048",
-      "Shares": "248,566.00",
-      "Market Value": "530,799.35"
+      "Ticker": "NUF AU",
+      "Identifier": "6335331",
+      "Weight": "2.91%",
+      "Market Value": "530,799.35",
+      "Shares Held": "248,566.00",
+      "Asset Category": "Equity",
+      "Price": "2.135446320092048"
     },
     {
-      "Ticker": "000848 C2",
       "Name": "CHENG DE LOLO CO LTD-A",
-      "Weight (%)": "2.53",
-      "Price": "1.198691252144082",
-      "Shares": "384,780.00",
-      "Market Value": "461,232.42"
+      "Ticker": "000848 C2",
+      "Identifier": "BD5C9D7",
+      "Weight": "2.53%",
+      "Market Value": "461,232.42",
+      "Shares Held": "384,780.00",
+      "Asset Category": "Equity",
+      "Price": "1.198691252144082"
     },
     {
-      "Ticker": "SFM",
       "Name": "SPROUTS FARMERS MARKET INC",
-      "Weight (%)": "2.10",
-      "Price": "62.49",
-      "Shares": "6,111.00",
-      "Market Value": "381,876.39"
+      "Ticker": "SFM",
+      "Identifier": "BCGCR79",
+      "Weight": "2.10%",
+      "Market Value": "381,876.39",
+      "Shares Held": "6,111.00",
+      "Asset Category": "Equity",
+      "Price": "62.49"
     },
     {
-      "Ticker": "TITN",
       "Name": "TITAN MACHINERY INC",
-      "Weight (%)": "1.90",
-      "Price": "23.49",
-      "Shares": "14,732.00",
-      "Market Value": "346,054.68"
+      "Ticker": "TITN",
+      "Identifier": "B29H3T5",
+      "Weight": "1.90%",
+      "Market Value": "346,054.68",
+      "Shares Held": "14,732.00",
+      "Asset Category": "Equity",
+      "Price": "23.49"
     },
     {
-      "Ticker": "SIGMAFA MM",
       "Name": "SIGMA FOODS SAB DE CV",
-      "Weight (%)": "1.46",
-      "Price": "1.025322874806801",
-      "Shares": "258,800.00",
-      "Market Value": "265,353.56"
+      "Ticker": "SIGMAFA MM",
+      "Identifier": "2043423",
+      "Weight": "1.46%",
+      "Market Value": "265,353.56",
+      "Shares Held": "258,800.00",
+      "Asset Category": "Equity",
+      "Price": "1.025322874806801"
     },
     {
-      "Ticker": "OTLY",
       "Name": "OATLY GROUP AB",
-      "Weight (%)": "1.37",
-      "Price": "11.84",
-      "Shares": "21,031.00",
-      "Market Value": "249,007.04"
+      "Ticker": "OTLY",
+      "Identifier": "BPNZBT2",
+      "Weight": "1.37%",
+      "Market Value": "249,007.04",
+      "Shares Held": "21,031.00",
+      "Asset Category": "Equity",
+      "Price": "11.84"
     },
     {
-      "Ticker": "MFI CN",
       "Name": "MAPLE LEAF FOODS INC",
-      "Weight (%)": "0.53",
-      "Price": "18.14387839101964",
-      "Shares": "5,345.00",
-      "Market Value": "96,979.03"
+      "Ticker": "MFI CN",
+      "Identifier": "2555865",
+      "Weight": "0.53%",
+      "Market Value": "96,979.03",
+      "Shares Held": "5,345.00",
+      "Asset Category": "Equity",
+      "Price": "18.14387839101964"
     },
     {
-      "Ticker": "BYND",
       "Name": "BEYOND MEAT INC",
-      "Weight (%)": "0.53",
-      "Price": "8.35",
-      "Shares": "11,587.00",
-      "Market Value": "96,751.45"
+      "Ticker": "BYND",
+      "Identifier": "BXCH076",
+      "Weight": "0.53%",
+      "Market Value": "96,751.45",
+      "Shares Held": "11,587.00",
+      "Asset Category": "Equity",
+      "Price": "8.35"
     },
     {
-      "Ticker": "BELL SW",
       "Name": "BELL FOOD GROUP AG - REG",
-      "Weight (%)": "0.38",
-      "Price": "286.0936776859504",
-      "Shares": "242.00",
-      "Market Value": "69,234.67"
+      "Ticker": "BELL SW",
+      "Identifier": "BD6T1P3",
+      "Weight": "0.38%",
+      "Market Value": "69,234.67",
+      "Shares Held": "242.00",
+      "Asset Category": "Equity",
+      "Price": "286.0936776859504"
     },
     {
-      "Ticker": "CBUS",
       "Name": "CIBUS INC",
-      "Weight (%)": "0.34",
-      "Price": "1.52",
-      "Shares": "40,994.00",
-      "Market Value": "62,310.88"
+      "Ticker": "CBUS",
+      "Identifier": "BRXJ8Q4",
+      "Weight": "0.34%",
+      "Market Value": "62,310.88",
+      "Shares Held": "40,994.00",
+      "Asset Category": "Equity",
+      "Price": "1.52"
     },
     {
-      "Ticker": "SADAFCO AB",
       "Name": "SAUDIA DAIRY & FOODSTUFF CO",
-      "Weight (%)": "0.29",
-      "Price": "50.60729186602871",
-      "Shares": "1,045.00",
-      "Market Value": "52,884.62"
+      "Ticker": "SADAFCO AB",
+      "Identifier": "B133P41",
+      "Weight": "0.29%",
+      "Market Value": "52,884.62",
+      "Shares Held": "1,045.00",
+      "Asset Category": "Equity",
+      "Price": "50.60729186602871"
     },
     {
-      "Ticker": "GRWG",
       "Name": "GROWGENERATION CORP",
-      "Weight (%)": "0.29",
-      "Price": "1.56",
-      "Shares": "33,355.00",
-      "Market Value": "52,033.80"
+      "Ticker": "GRWG",
+      "Identifier": "BZ159N4",
+      "Weight": "0.29%",
+      "Market Value": "52,033.80",
+      "Shares Held": "33,355.00",
+      "Asset Category": "Equity",
+      "Price": "1.56"
     },
     {
-      "Ticker": "600300 C1",
       "Name": "V V FOOD & BEVERAGE CO-A",
-      "Weight (%)": "0.26",
-      "Price": "0.455086268939394",
-      "Shares": "105,600.00",
-      "Market Value": "48,057.11"
+      "Ticker": "600300 C1",
+      "Identifier": "BP3RDH0",
+      "Weight": "0.26%",
+      "Market Value": "48,057.11",
+      "Shares Held": "105,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.455086268939394"
     },
     {
-      "Ticker": "MONDE PM",
       "Name": "MONDE NISSIN CORP",
-      "Weight (%)": "0.25",
-      "Price": "0.09827931252072171",
-      "Shares": "467,505.00",
-      "Market Value": "45,946.07"
+      "Ticker": "MONDE PM",
+      "Identifier": "BMDTTT9",
+      "Weight": "0.25%",
+      "Market Value": "45,946.07",
+      "Shares Held": "467,505.00",
+      "Asset Category": "Equity",
+      "Price": "0.09827931252072171"
     },
     {
-      "Ticker": "FFB MK",
       "Name": "FARM FRESH BHD",
-      "Weight (%)": "0.24",
-      "Price": "0.4810996735582154",
-      "Shares": "91,900.00",
-      "Market Value": "44,213.06"
+      "Ticker": "FFB MK",
+      "Identifier": "BNDMT28",
+      "Weight": "0.24%",
+      "Market Value": "44,213.06",
+      "Shares Held": "91,900.00",
+      "Asset Category": "Equity",
+      "Price": "0.4810996735582154"
     },
     {
-      "Ticker": "MYOR IJ",
       "Name": "MAYORA INDAH PT",
-      "Weight (%)": "0.23",
-      "Price": "0.08023483314585678",
-      "Shares": "533,400.00",
-      "Market Value": "42,797.26"
+      "Ticker": "MYOR IJ",
+      "Identifier": "6543877",
+      "Weight": "0.23%",
+      "Market Value": "42,797.26",
+      "Shares Held": "533,400.00",
+      "Asset Category": "Equity",
+      "Price": "0.08023483314585678"
     },
     {
-      "Ticker": "HAIN",
       "Name": "HAIN CELESTIAL GROUP INC",
-      "Weight (%)": "0.19",
-      "Price": "0.4974999999999999",
-      "Shares": "68,892.00",
-      "Market Value": "34,273.77"
+      "Ticker": "HAIN",
+      "Identifier": "2492337",
+      "Weight": "0.19%",
+      "Market Value": "34,273.77",
+      "Shares Held": "68,892.00",
+      "Asset Category": "Equity",
+      "Price": "0.4974999999999999"
     }
   ]
 }

@@ -4,61 +4,74 @@
   "pageSize": 250,
   "totalRows": 6,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "-0.02",
-      "Price": "1.0",
-      "Shares": "-2,614.66",
-      "Market Value": "-2,614.66"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.02%",
+      "Market Value": "-2,614.66",
+      "Shares Held": "-2,614.66",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "4QQQ 10/02/2026 C744.5",
-      "Weight (%)": "-0.24",
-      "Price": "736.81575",
-      "Shares": "-40.00",
-      "Market Value": "-29,472.63"
-    },
-    {
-      "Ticker": "QQQM",
-      "Name": "INVESCO NASDAQ 100 ETF",
-      "Weight (%)": "98.24",
-      "Price": "306.54",
-      "Shares": "38,649.00",
-      "Market Value": "11,847,464.46"
-    },
-    {
-      "Ticker": "SCHG",
-      "Name": "SCHWAB US LARGE-CAP GROWTH",
-      "Weight (%)": "0.97",
-      "Price": "36.26",
-      "Shares": "3,237.00",
-      "Market Value": "117,373.62"
-    },
-    {
       "Ticker": "",
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.53",
-      "Price": "1.0",
-      "Shares": "63,850.98",
-      "Market Value": "63,850.98"
+      "Identifier": "",
+      "Weight": "-0.24%",
+      "Market Value": "-29,472.63",
+      "Shares Held": "-40.00",
+      "Asset Category": "Equity",
+      "Price": "736.81575"
     },
     {
-      "Ticker": "IQQ",
+      "Name": "INVESCO NASDAQ 100 ETF",
+      "Ticker": "QQQM",
+      "Identifier": "BMXZ8S9",
+      "Weight": "98.24%",
+      "Market Value": "11,847,464.46",
+      "Shares Held": "38,649.00",
+      "Asset Category": "Fund",
+      "Price": "306.54"
+    },
+    {
+      "Name": "SCHWAB US LARGE-CAP GROWTH",
+      "Ticker": "SCHG",
+      "Identifier": "B4ZGNX4",
+      "Weight": "0.97%",
+      "Market Value": "117,373.62",
+      "Shares Held": "3,237.00",
+      "Asset Category": "Equity",
+      "Price": "36.26"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.53%",
+      "Market Value": "63,850.98",
+      "Shares Held": "63,850.98",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "ISHRS NASDAQ 100 ETF",
-      "Weight (%)": "0.52",
-      "Price": "25.19",
-      "Shares": "2,500.00",
-      "Market Value": "62,975.00"
+      "Ticker": "IQQ",
+      "Identifier": "BWM2VK4",
+      "Weight": "0.52%",
+      "Market Value": "62,975.00",
+      "Shares Held": "2,500.00",
+      "Asset Category": "Fund",
+      "Price": "25.19"
     }
   ]
 }

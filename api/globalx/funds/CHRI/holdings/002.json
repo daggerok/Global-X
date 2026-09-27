@@ -4,1781 +4,2224 @@
   "pageSize": 250,
   "totalRows": 471,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "EFX",
       "Name": "EQUIFAX INC",
-      "Weight (%)": "0.03",
-      "Price": "148.11",
-      "Shares": "16.00",
-      "Market Value": "2,369.76"
+      "Ticker": "EFX",
+      "Identifier": "2319146",
+      "Weight": "0.03%",
+      "Market Value": "2,369.76",
+      "Shares Held": "16.00",
+      "Asset Category": "Equity",
+      "Price": "148.11"
     },
     {
-      "Ticker": "FTV",
       "Name": "FORTIVE CORP",
-      "Weight (%)": "0.03",
-      "Price": "56.09",
-      "Shares": "42.00",
-      "Market Value": "2,355.78"
+      "Ticker": "FTV",
+      "Identifier": "BYT3MK1",
+      "Weight": "0.03%",
+      "Market Value": "2,355.78",
+      "Shares Held": "42.00",
+      "Asset Category": "Equity",
+      "Price": "56.09"
     },
     {
-      "Ticker": "CHRW",
       "Name": "C.H. ROBINSON WORLDWIDE INC",
-      "Weight (%)": "0.03",
-      "Price": "147.1",
-      "Shares": "16.00",
-      "Market Value": "2,353.60"
+      "Ticker": "CHRW",
+      "Identifier": "2116228",
+      "Weight": "0.03%",
+      "Market Value": "2,353.60",
+      "Shares Held": "16.00",
+      "Asset Category": "Equity",
+      "Price": "147.1"
     },
     {
-      "Ticker": "ALGN",
       "Name": "ALIGN TECHNOLOGY INC",
-      "Weight (%)": "0.03",
-      "Price": "146.78",
-      "Shares": "16.00",
-      "Market Value": "2,348.48"
+      "Ticker": "ALGN",
+      "Identifier": "2679204",
+      "Weight": "0.03%",
+      "Market Value": "2,348.48",
+      "Shares Held": "16.00",
+      "Asset Category": "Equity",
+      "Price": "146.78"
     },
     {
-      "Ticker": "FIS",
       "Name": "FIDELITY NATIONAL INFO SERVICES",
-      "Weight (%)": "0.03",
-      "Price": "35.41",
-      "Shares": "66.00",
-      "Market Value": "2,337.06"
+      "Ticker": "FIS",
+      "Identifier": "2769796",
+      "Weight": "0.03%",
+      "Market Value": "2,337.06",
+      "Shares Held": "66.00",
+      "Asset Category": "Equity",
+      "Price": "35.41"
     },
     {
-      "Ticker": "SBAC",
       "Name": "SBA COMMUNICATIONS CORP",
-      "Weight (%)": "0.03",
-      "Price": "166.15",
-      "Shares": "14.00",
-      "Market Value": "2,326.10"
+      "Ticker": "SBAC",
+      "Identifier": "BZ6TS23",
+      "Weight": "0.03%",
+      "Market Value": "2,326.10",
+      "Shares Held": "14.00",
+      "Asset Category": "Equity",
+      "Price": "166.15"
     },
     {
-      "Ticker": "NI",
       "Name": "NISOURCE INC",
-      "Weight (%)": "0.03",
-      "Price": "39.42",
-      "Shares": "59.00",
-      "Market Value": "2,325.78"
+      "Ticker": "NI",
+      "Identifier": "2645409",
+      "Weight": "0.03%",
+      "Market Value": "2,325.78",
+      "Shares Held": "59.00",
+      "Asset Category": "Equity",
+      "Price": "39.42"
     },
     {
-      "Ticker": "PODD",
       "Name": "INSULET CORP",
-      "Weight (%)": "0.03",
-      "Price": "136.13",
-      "Shares": "17.00",
-      "Market Value": "2,314.21"
+      "Ticker": "PODD",
+      "Identifier": "B1XGNW4",
+      "Weight": "0.03%",
+      "Market Value": "2,314.21",
+      "Shares Held": "17.00",
+      "Asset Category": "Equity",
+      "Price": "136.13"
     },
     {
-      "Ticker": "IP",
       "Name": "INTERNATIONAL PAPER CO",
-      "Weight (%)": "0.03",
-      "Price": "35.02",
-      "Shares": "66.00",
-      "Market Value": "2,311.32"
+      "Ticker": "IP",
+      "Identifier": "2465254",
+      "Weight": "0.03%",
+      "Market Value": "2,311.32",
+      "Shares Held": "66.00",
+      "Asset Category": "Equity",
+      "Price": "35.02"
     },
     {
-      "Ticker": "FSLR",
       "Name": "FIRST SOLAR INC",
-      "Weight (%)": "0.03",
-      "Price": "177.71",
-      "Shares": "13.00",
-      "Market Value": "2,310.23"
+      "Ticker": "FSLR",
+      "Identifier": "B1HMF22",
+      "Weight": "0.03%",
+      "Market Value": "2,310.23",
+      "Shares Held": "13.00",
+      "Asset Category": "Equity",
+      "Price": "177.71"
     },
     {
-      "Ticker": "IEX",
       "Name": "IDEX CORP",
-      "Weight (%)": "0.03",
-      "Price": "230.08",
-      "Shares": "10.00",
-      "Market Value": "2,300.80"
+      "Ticker": "IEX",
+      "Identifier": "2456612",
+      "Weight": "0.03%",
+      "Market Value": "2,300.80",
+      "Shares Held": "10.00",
+      "Asset Category": "Equity",
+      "Price": "230.08"
     },
     {
-      "Ticker": "NDSN",
       "Name": "NORDSON CORP",
-      "Weight (%)": "0.03",
-      "Price": "325.77",
-      "Shares": "7.00",
-      "Market Value": "2,280.39"
+      "Ticker": "NDSN",
+      "Identifier": "2641838",
+      "Weight": "0.03%",
+      "Market Value": "2,280.39",
+      "Shares Held": "7.00",
+      "Asset Category": "Equity",
+      "Price": "325.77"
     },
     {
-      "Ticker": "BBY",
       "Name": "BEST BUY CO INC",
-      "Weight (%)": "0.03",
-      "Price": "90.51",
-      "Shares": "25.00",
-      "Market Value": "2,262.75"
+      "Ticker": "BBY",
+      "Identifier": "2094670",
+      "Weight": "0.03%",
+      "Market Value": "2,262.75",
+      "Shares Held": "25.00",
+      "Asset Category": "Equity",
+      "Price": "90.51"
     },
     {
-      "Ticker": "JBHT",
       "Name": "HUNT (JB) TRANSPRT SVCS INC",
-      "Weight (%)": "0.03",
-      "Price": "225.46",
-      "Shares": "10.00",
-      "Market Value": "2,254.60"
+      "Ticker": "JBHT",
+      "Identifier": "2445416",
+      "Weight": "0.03%",
+      "Market Value": "2,254.60",
+      "Shares Held": "10.00",
+      "Asset Category": "Equity",
+      "Price": "225.46"
     },
     {
-      "Ticker": "BRO",
       "Name": "BROWN & BROWN INC",
-      "Weight (%)": "0.03",
-      "Price": "60.82000000000001",
-      "Shares": "37.00",
-      "Market Value": "2,250.34"
+      "Ticker": "BRO",
+      "Identifier": "2692687",
+      "Weight": "0.03%",
+      "Market Value": "2,250.34",
+      "Shares Held": "37.00",
+      "Asset Category": "Equity",
+      "Price": "60.82000000000001"
     },
     {
-      "Ticker": "ZBRA",
       "Name": "ZEBRA TECHNOLOGIES CORP-CL A",
-      "Weight (%)": "0.03",
-      "Price": "370.04",
-      "Shares": "6.00",
-      "Market Value": "2,220.24"
+      "Ticker": "ZBRA",
+      "Identifier": "2989356",
+      "Weight": "0.03%",
+      "Market Value": "2,220.24",
+      "Shares Held": "6.00",
+      "Asset Category": "Equity",
+      "Price": "370.04"
     },
     {
-      "Ticker": "J",
       "Name": "JACOBS SOLUTIONS INC",
-      "Weight (%)": "0.03",
-      "Price": "138.37",
-      "Shares": "16.00",
-      "Market Value": "2,213.92"
+      "Ticker": "J",
+      "Identifier": "BNGC0D3",
+      "Weight": "0.03%",
+      "Market Value": "2,213.92",
+      "Shares Held": "16.00",
+      "Asset Category": "Equity",
+      "Price": "138.37"
     },
     {
-      "Ticker": "GPC",
       "Name": "GENUINE PARTS CO",
-      "Weight (%)": "0.03",
-      "Price": "129.61",
-      "Shares": "17.00",
-      "Market Value": "2,203.37"
+      "Ticker": "GPC",
+      "Identifier": "2367480",
+      "Weight": "0.03%",
+      "Market Value": "2,203.37",
+      "Shares Held": "17.00",
+      "Asset Category": "Equity",
+      "Price": "129.61"
     },
     {
-      "Ticker": "L",
       "Name": "LOEWS CORP",
-      "Weight (%)": "0.03",
-      "Price": "104.82",
-      "Shares": "21.00",
-      "Market Value": "2,201.22"
+      "Ticker": "L",
+      "Identifier": "2523022",
+      "Weight": "0.03%",
+      "Market Value": "2,201.22",
+      "Shares Held": "21.00",
+      "Asset Category": "Equity",
+      "Price": "104.82"
     },
     {
-      "Ticker": "EVRG",
       "Name": "EVERGY INC",
-      "Weight (%)": "0.03",
-      "Price": "78.03999999999999",
-      "Shares": "28.00",
-      "Market Value": "2,185.12"
+      "Ticker": "EVRG",
+      "Identifier": "BFMXGR0",
+      "Weight": "0.03%",
+      "Market Value": "2,185.12",
+      "Shares Held": "28.00",
+      "Asset Category": "Equity",
+      "Price": "78.03999999999999"
     },
     {
-      "Ticker": "CF",
       "Name": "CF INDUSTRIES HOLDINGS INC",
-      "Weight (%)": "0.03",
-      "Price": "114.67",
-      "Shares": "19.00",
-      "Market Value": "2,178.73"
+      "Ticker": "CF",
+      "Identifier": "B0G4K50",
+      "Weight": "0.03%",
+      "Market Value": "2,178.73",
+      "Shares Held": "19.00",
+      "Asset Category": "Equity",
+      "Price": "114.67"
     },
     {
-      "Ticker": "LDOS",
       "Name": "LEIDOS HOLDINGS INC",
-      "Weight (%)": "0.03",
-      "Price": "123.61",
-      "Shares": "17.00",
-      "Market Value": "2,101.37"
+      "Ticker": "LDOS",
+      "Identifier": "BDV82B8",
+      "Weight": "0.03%",
+      "Market Value": "2,101.37",
+      "Shares Held": "17.00",
+      "Asset Category": "Equity",
+      "Price": "123.61"
     },
     {
-      "Ticker": "TSCO",
       "Name": "TRACTOR SUPPLY COMPANY",
-      "Weight (%)": "0.03",
-      "Price": "32.27",
-      "Shares": "65.00",
-      "Market Value": "2,097.55"
+      "Ticker": "TSCO",
+      "Identifier": "2900335",
+      "Weight": "0.03%",
+      "Market Value": "2,097.55",
+      "Shares Held": "65.00",
+      "Asset Category": "Equity",
+      "Price": "32.27"
     },
     {
-      "Ticker": "TSN",
       "Name": "TYSON FOODS INC-CL A",
-      "Weight (%)": "0.03",
-      "Price": "50.91999999999999",
-      "Shares": "41.00",
-      "Market Value": "2,087.72"
+      "Ticker": "TSN",
+      "Identifier": "2909730",
+      "Weight": "0.03%",
+      "Market Value": "2,087.72",
+      "Shares Held": "41.00",
+      "Asset Category": "Equity",
+      "Price": "50.91999999999999"
     },
     {
-      "Ticker": "HST",
       "Name": "HOST HOTELS & RESORTS INC",
-      "Weight (%)": "0.03",
-      "Price": "22.42",
-      "Shares": "92.00",
-      "Market Value": "2,062.64"
+      "Ticker": "HST",
+      "Identifier": "2567503",
+      "Weight": "0.03%",
+      "Market Value": "2,062.64",
+      "Shares Held": "92.00",
+      "Asset Category": "Equity",
+      "Price": "22.42"
     },
     {
-      "Ticker": "AKAM",
       "Name": "AKAMAI TECHNOLOGIES INC",
-      "Weight (%)": "0.03",
-      "Price": "113.94",
-      "Shares": "18.00",
-      "Market Value": "2,050.92"
+      "Ticker": "AKAM",
+      "Identifier": "2507457",
+      "Weight": "0.03%",
+      "Market Value": "2,050.92",
+      "Shares Held": "18.00",
+      "Asset Category": "Equity",
+      "Price": "113.94"
     },
     {
-      "Ticker": "LNT",
       "Name": "ALLIANT ENERGY CORP",
-      "Weight (%)": "0.03",
-      "Price": "63.6",
-      "Shares": "32.00",
-      "Market Value": "2,035.20"
+      "Ticker": "LNT",
+      "Identifier": "2973821",
+      "Weight": "0.03%",
+      "Market Value": "2,035.20",
+      "Shares Held": "32.00",
+      "Asset Category": "Equity",
+      "Price": "63.6"
     },
     {
-      "Ticker": "CDW",
       "Name": "CDW CORP/DE",
-      "Weight (%)": "0.03",
-      "Price": "135.43",
-      "Shares": "15.00",
-      "Market Value": "2,031.45"
+      "Ticker": "CDW",
+      "Identifier": "BBM5MD6",
+      "Weight": "0.03%",
+      "Market Value": "2,031.45",
+      "Shares Held": "15.00",
+      "Asset Category": "Equity",
+      "Price": "135.43"
     },
     {
-      "Ticker": "KIM",
       "Name": "KIMCO REALTY CORP",
-      "Weight (%)": "0.02",
-      "Price": "22.44",
-      "Shares": "90.00",
-      "Market Value": "2,019.60"
+      "Ticker": "KIM",
+      "Identifier": "2491594",
+      "Weight": "0.02%",
+      "Market Value": "2,019.60",
+      "Shares Held": "90.00",
+      "Asset Category": "Equity",
+      "Price": "22.44"
     },
     {
-      "Ticker": "HSIC",
       "Name": "HENRY SCHEIN INC",
-      "Weight (%)": "0.02",
-      "Price": "86.37",
-      "Shares": "23.00",
-      "Market Value": "1,986.51"
+      "Ticker": "HSIC",
+      "Identifier": "2416962",
+      "Weight": "0.02%",
+      "Market Value": "1,986.51",
+      "Shares Held": "23.00",
+      "Asset Category": "Equity",
+      "Price": "86.37"
     },
     {
-      "Ticker": "LEN",
       "Name": "LENNAR CORP-A",
-      "Weight (%)": "0.02",
-      "Price": "82.14999999999999",
-      "Shares": "24.00",
-      "Market Value": "1,971.60"
+      "Ticker": "LEN",
+      "Identifier": "2511920",
+      "Weight": "0.02%",
+      "Market Value": "1,971.60",
+      "Shares Held": "24.00",
+      "Asset Category": "Equity",
+      "Price": "82.14999999999999"
     },
     {
-      "Ticker": "WY",
       "Name": "WEYERHAEUSER CO",
-      "Weight (%)": "0.02",
-      "Price": "20.01",
-      "Shares": "97.00",
-      "Market Value": "1,940.97"
+      "Ticker": "WY",
+      "Identifier": "2958936",
+      "Weight": "0.02%",
+      "Market Value": "1,940.97",
+      "Shares Held": "97.00",
+      "Asset Category": "Equity",
+      "Price": "20.01"
     },
     {
-      "Ticker": "WRB",
       "Name": "WR BERKLEY CORP",
-      "Weight (%)": "0.02",
-      "Price": "66.82",
-      "Shares": "29.00",
-      "Market Value": "1,937.78"
+      "Ticker": "WRB",
+      "Identifier": "2093644",
+      "Weight": "0.02%",
+      "Market Value": "1,937.78",
+      "Shares Held": "29.00",
+      "Asset Category": "Equity",
+      "Price": "66.82"
     },
     {
-      "Ticker": "SJM",
       "Name": "JM SMUCKER CO/THE",
-      "Weight (%)": "0.02",
-      "Price": "121.0",
-      "Shares": "16.00",
-      "Market Value": "1,936.00"
+      "Ticker": "SJM",
+      "Identifier": "2951452",
+      "Weight": "0.02%",
+      "Market Value": "1,936.00",
+      "Shares Held": "16.00",
+      "Asset Category": "Equity",
+      "Price": "121.0"
     },
     {
-      "Ticker": "SWK",
       "Name": "STANLEY BLACK & DECKER INC",
-      "Weight (%)": "0.02",
-      "Price": "91.4",
-      "Shares": "21.00",
-      "Market Value": "1,919.40"
+      "Ticker": "SWK",
+      "Identifier": "B3Q2FJ4",
+      "Weight": "0.02%",
+      "Market Value": "1,919.40",
+      "Shares Held": "21.00",
+      "Asset Category": "Equity",
+      "Price": "91.4"
     },
     {
-      "Ticker": "INVH",
       "Name": "INVITATION HOMES INC",
-      "Weight (%)": "0.02",
-      "Price": "26.62",
-      "Shares": "72.00",
-      "Market Value": "1,916.64"
+      "Ticker": "INVH",
+      "Identifier": "BD81GW9",
+      "Weight": "0.02%",
+      "Market Value": "1,916.64",
+      "Shares Held": "72.00",
+      "Asset Category": "Equity",
+      "Price": "26.62"
     },
     {
-      "Ticker": "MAA",
       "Name": "MID-AMERICA APARTMENT COMM",
-      "Weight (%)": "0.02",
-      "Price": "118.35",
-      "Shares": "16.00",
-      "Market Value": "1,893.60"
+      "Ticker": "MAA",
+      "Identifier": "2589132",
+      "Weight": "0.02%",
+      "Market Value": "1,893.60",
+      "Shares Held": "16.00",
+      "Asset Category": "Equity",
+      "Price": "118.35"
     },
     {
-      "Ticker": "BALL",
       "Name": "BALL CORP",
-      "Weight (%)": "0.02",
-      "Price": "56.83000000000001",
-      "Shares": "33.00",
-      "Market Value": "1,875.39"
+      "Ticker": "BALL",
+      "Identifier": "2073022",
+      "Weight": "0.02%",
+      "Market Value": "1,875.39",
+      "Shares Held": "33.00",
+      "Asset Category": "Equity",
+      "Price": "56.83000000000001"
     },
     {
-      "Ticker": "LYB",
       "Name": "LYONDELLBASELL INDU-CL A",
-      "Weight (%)": "0.02",
-      "Price": "58.14",
-      "Shares": "32.00",
-      "Market Value": "1,860.48"
+      "Ticker": "LYB",
+      "Identifier": "B3SPXZ3",
+      "Weight": "0.02%",
+      "Market Value": "1,860.48",
+      "Shares Held": "32.00",
+      "Asset Category": "Equity",
+      "Price": "58.14"
     },
     {
-      "Ticker": "MAS",
       "Name": "MASCO CORP",
-      "Weight (%)": "0.02",
-      "Price": "68.85000000000001",
-      "Shares": "27.00",
-      "Market Value": "1,858.95"
+      "Ticker": "MAS",
+      "Identifier": "2570200",
+      "Weight": "0.02%",
+      "Market Value": "1,858.95",
+      "Shares Held": "27.00",
+      "Asset Category": "Equity",
+      "Price": "68.85000000000001"
     },
     {
-      "Ticker": "ALLE",
       "Name": "ALLEGION PLC",
-      "Weight (%)": "0.02",
-      "Price": "154.47",
-      "Shares": "12.00",
-      "Market Value": "1,853.64"
+      "Ticker": "ALLE",
+      "Identifier": "BFRT3W7",
+      "Weight": "0.02%",
+      "Market Value": "1,853.64",
+      "Shares Held": "12.00",
+      "Asset Category": "Equity",
+      "Price": "154.47"
     },
     {
-      "Ticker": "EG",
       "Name": "EVEREST GROUP LTD",
-      "Weight (%)": "0.02",
-      "Price": "370.43",
-      "Shares": "5.00",
-      "Market Value": "1,852.15"
+      "Ticker": "EG",
+      "Identifier": "2556868",
+      "Weight": "0.02%",
+      "Market Value": "1,852.15",
+      "Shares Held": "5.00",
+      "Asset Category": "Equity",
+      "Price": "370.43"
     },
     {
-      "Ticker": "TXT",
       "Name": "TEXTRON INC",
-      "Weight (%)": "0.02",
-      "Price": "76.59",
-      "Shares": "24.00",
-      "Market Value": "1,838.16"
+      "Ticker": "TXT",
+      "Identifier": "2885937",
+      "Weight": "0.02%",
+      "Market Value": "1,838.16",
+      "Shares Held": "24.00",
+      "Asset Category": "Equity",
+      "Price": "76.59"
     },
     {
-      "Ticker": "APA",
       "Name": "APA CORP",
-      "Weight (%)": "0.02",
-      "Price": "42.74",
-      "Shares": "43.00",
-      "Market Value": "1,837.82"
+      "Ticker": "APA",
+      "Identifier": "BNNF1C1",
+      "Weight": "0.02%",
+      "Market Value": "1,837.82",
+      "Shares Held": "43.00",
+      "Asset Category": "Equity",
+      "Price": "42.74"
     },
     {
-      "Ticker": "PTC",
       "Name": "PTC INC",
-      "Weight (%)": "0.02",
-      "Price": "138.12",
-      "Shares": "13.00",
-      "Market Value": "1,795.56"
+      "Ticker": "PTC",
+      "Identifier": "B95N910",
+      "Weight": "0.02%",
+      "Market Value": "1,795.56",
+      "Shares Held": "13.00",
+      "Asset Category": "Equity",
+      "Price": "138.12"
     },
     {
-      "Ticker": "RL",
       "Name": "RALPH LAUREN CORP",
-      "Weight (%)": "0.02",
-      "Price": "357.1",
-      "Shares": "5.00",
-      "Market Value": "1,785.50"
+      "Ticker": "RL",
+      "Identifier": "B4V9661",
+      "Weight": "0.02%",
+      "Market Value": "1,785.50",
+      "Shares Held": "5.00",
+      "Asset Category": "Equity",
+      "Price": "357.1"
     },
     {
-      "Ticker": "MKC",
       "Name": "MCCORMICK & CO-NON VTG SHRS",
-      "Weight (%)": "0.02",
-      "Price": "47.94",
-      "Shares": "37.00",
-      "Market Value": "1,773.78"
+      "Ticker": "MKC",
+      "Identifier": "2550161",
+      "Weight": "0.02%",
+      "Market Value": "1,773.78",
+      "Shares Held": "37.00",
+      "Asset Category": "Equity",
+      "Price": "47.94"
     },
     {
-      "Ticker": "IVZ",
       "Name": "INVESCO LTD",
-      "Weight (%)": "0.02",
-      "Price": "30.92",
-      "Shares": "57.00",
-      "Market Value": "1,762.44"
+      "Ticker": "IVZ",
+      "Identifier": "B28XP76",
+      "Weight": "0.02%",
+      "Market Value": "1,762.44",
+      "Shares Held": "57.00",
+      "Asset Category": "Equity",
+      "Price": "30.92"
     },
     {
-      "Ticker": "SWKS",
       "Name": "SKYWORKS SOLUTIONS INC",
-      "Weight (%)": "0.02",
-      "Price": "89.34",
-      "Shares": "19.00",
-      "Market Value": "1,697.46"
+      "Ticker": "SWKS",
+      "Identifier": "2961053",
+      "Weight": "0.02%",
+      "Market Value": "1,697.46",
+      "Shares Held": "19.00",
+      "Asset Category": "Equity",
+      "Price": "89.34"
     },
     {
-      "Ticker": "TRMB",
       "Name": "TRIMBLE INC",
-      "Weight (%)": "0.02",
-      "Price": "57.85",
-      "Shares": "29.00",
-      "Market Value": "1,677.65"
+      "Ticker": "TRMB",
+      "Identifier": "2903958",
+      "Weight": "0.02%",
+      "Market Value": "1,677.65",
+      "Shares Held": "29.00",
+      "Asset Category": "Equity",
+      "Price": "57.85"
     },
     {
-      "Ticker": "GL",
       "Name": "GLOBE LIFE INC",
-      "Weight (%)": "0.02",
-      "Price": "167.04",
-      "Shares": "10.00",
-      "Market Value": "1,670.40"
+      "Ticker": "GL",
+      "Identifier": "BK6YKG1",
+      "Weight": "0.02%",
+      "Market Value": "1,670.40",
+      "Shares Held": "10.00",
+      "Asset Category": "Equity",
+      "Price": "167.04"
     },
     {
-      "Ticker": "GNRC",
       "Name": "GENERAC HOLDINGS INC",
-      "Weight (%)": "0.02",
-      "Price": "208.14",
-      "Shares": "8.00",
-      "Market Value": "1,665.12"
+      "Ticker": "GNRC",
+      "Identifier": "B6197Q2",
+      "Weight": "0.02%",
+      "Market Value": "1,665.12",
+      "Shares Held": "8.00",
+      "Asset Category": "Equity",
+      "Price": "208.14"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.02",
-      "Price": "1.0",
-      "Shares": "1,654.56",
-      "Market Value": "1,654.56"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.02%",
+      "Market Value": "1,654.56",
+      "Shares Held": "1,654.56",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "ALB",
       "Name": "ALBEMARLE CORP",
-      "Weight (%)": "0.02",
-      "Price": "109.73",
-      "Shares": "15.00",
-      "Market Value": "1,645.95"
+      "Ticker": "ALB",
+      "Identifier": "2046853",
+      "Weight": "0.02%",
+      "Market Value": "1,645.95",
+      "Shares Held": "15.00",
+      "Asset Category": "Equity",
+      "Price": "109.73"
     },
     {
-      "Ticker": "TYL",
       "Name": "TYLER TECHNOLOGIES INC",
-      "Weight (%)": "0.02",
-      "Price": "325.57",
-      "Shares": "5.00",
-      "Market Value": "1,627.85"
+      "Ticker": "TYL",
+      "Identifier": "2909644",
+      "Weight": "0.02%",
+      "Market Value": "1,627.85",
+      "Shares Held": "5.00",
+      "Asset Category": "Equity",
+      "Price": "325.57"
     },
     {
-      "Ticker": "REG",
       "Name": "REGENCY CENTERS CORP",
-      "Weight (%)": "0.02",
-      "Price": "73.23",
-      "Shares": "22.00",
-      "Market Value": "1,611.06"
+      "Ticker": "REG",
+      "Identifier": "2726177",
+      "Weight": "0.02%",
+      "Market Value": "1,611.06",
+      "Shares Held": "22.00",
+      "Asset Category": "Equity",
+      "Price": "73.23"
     },
     {
-      "Ticker": "AIZ",
       "Name": "ASSURANT INC",
-      "Weight (%)": "0.02",
-      "Price": "265.0",
-      "Shares": "6.00",
-      "Market Value": "1,590.00"
+      "Ticker": "AIZ",
+      "Identifier": "2331430",
+      "Weight": "0.02%",
+      "Market Value": "1,590.00",
+      "Shares Held": "6.00",
+      "Asset Category": "Equity",
+      "Price": "265.0"
     },
     {
-      "Ticker": "HAS",
       "Name": "HASBRO INC",
-      "Weight (%)": "0.02",
-      "Price": "88.08999999999999",
-      "Shares": "18.00",
-      "Market Value": "1,585.62"
+      "Ticker": "HAS",
+      "Identifier": "2414580",
+      "Weight": "0.02%",
+      "Market Value": "1,585.62",
+      "Shares Held": "18.00",
+      "Asset Category": "Equity",
+      "Price": "88.08999999999999"
     },
     {
-      "Ticker": "CHTR",
       "Name": "CHARTER COMMUNICATIONS INC-A",
-      "Weight (%)": "0.02",
-      "Price": "112.91",
-      "Shares": "14.00",
-      "Market Value": "1,580.74"
+      "Ticker": "CHTR",
+      "Identifier": "BZ6VT82",
+      "Weight": "0.02%",
+      "Market Value": "1,580.74",
+      "Shares Held": "14.00",
+      "Asset Category": "Equity",
+      "Price": "112.91"
     },
     {
-      "Ticker": "FOXA",
       "Name": "FOX CORP - CLASS A",
-      "Weight (%)": "0.02",
-      "Price": "63.07",
-      "Shares": "25.00",
-      "Market Value": "1,576.75"
+      "Ticker": "FOXA",
+      "Identifier": "BJJMGL2",
+      "Weight": "0.02%",
+      "Market Value": "1,576.75",
+      "Shares Held": "25.00",
+      "Asset Category": "Equity",
+      "Price": "63.07"
     },
     {
-      "Ticker": "GDDY",
       "Name": "GODADDY INC - CLASS A",
-      "Weight (%)": "0.02",
-      "Price": "97.14",
-      "Shares": "16.00",
-      "Market Value": "1,554.24"
+      "Ticker": "GDDY",
+      "Identifier": "BWFRFC6",
+      "Weight": "0.02%",
+      "Market Value": "1,554.24",
+      "Shares Held": "16.00",
+      "Asset Category": "Equity",
+      "Price": "97.14"
     },
     {
-      "Ticker": "AVY",
       "Name": "AVERY DENNISON CORP",
-      "Weight (%)": "0.02",
-      "Price": "170.34",
-      "Shares": "9.00",
-      "Market Value": "1,533.06"
+      "Ticker": "AVY",
+      "Identifier": "2066408",
+      "Weight": "0.02%",
+      "Market Value": "1,533.06",
+      "Shares Held": "9.00",
+      "Asset Category": "Equity",
+      "Price": "170.34"
     },
     {
-      "Ticker": "ECHO",
       "Name": "ECHOSTAR CORP-A",
-      "Weight (%)": "0.02",
-      "Price": "90.11",
-      "Shares": "17.00",
-      "Market Value": "1,531.87"
+      "Ticker": "ECHO",
+      "Identifier": "B2NC471",
+      "Weight": "0.02%",
+      "Market Value": "1,531.87",
+      "Shares Held": "17.00",
+      "Asset Category": "Equity",
+      "Price": "90.11"
     },
     {
-      "Ticker": "CSGP",
       "Name": "COSTAR GROUP INC",
-      "Weight (%)": "0.02",
-      "Price": "28.09",
-      "Shares": "54.00",
-      "Market Value": "1,516.86"
+      "Ticker": "CSGP",
+      "Identifier": "2262864",
+      "Weight": "0.02%",
+      "Market Value": "1,516.86",
+      "Shares Held": "54.00",
+      "Asset Category": "Equity",
+      "Price": "28.09"
     },
     {
-      "Ticker": "CLX",
       "Name": "CLOROX COMPANY",
-      "Weight (%)": "0.02",
-      "Price": "83.80000000000001",
-      "Shares": "18.00",
-      "Market Value": "1,508.40"
+      "Ticker": "CLX",
+      "Identifier": "2204026",
+      "Weight": "0.02%",
+      "Market Value": "1,508.40",
+      "Shares Held": "18.00",
+      "Asset Category": "Equity",
+      "Price": "83.80000000000001"
     },
     {
-      "Ticker": "IT",
       "Name": "GARTNER INC",
-      "Weight (%)": "0.02",
-      "Price": "187.9",
-      "Shares": "8.00",
-      "Market Value": "1,503.20"
+      "Ticker": "IT",
+      "Identifier": "2372763",
+      "Weight": "0.02%",
+      "Market Value": "1,503.20",
+      "Shares Held": "8.00",
+      "Asset Category": "Equity",
+      "Price": "187.9"
     },
     {
-      "Ticker": "LII",
       "Name": "LENNOX INTERNATIONAL INC",
-      "Weight (%)": "0.02",
-      "Price": "373.77",
-      "Shares": "4.00",
-      "Market Value": "1,495.08"
+      "Ticker": "LII",
+      "Identifier": "2442053",
+      "Weight": "0.02%",
+      "Market Value": "1,495.08",
+      "Shares Held": "4.00",
+      "Asset Category": "Equity",
+      "Price": "373.77"
     },
     {
-      "Ticker": "GEN",
       "Name": "GEN DIGITAL INC",
-      "Weight (%)": "0.02",
-      "Price": "21.62",
-      "Shares": "67.00",
-      "Market Value": "1,448.54"
+      "Ticker": "GEN",
+      "Identifier": "BJN4XN5",
+      "Weight": "0.02%",
+      "Market Value": "1,448.54",
+      "Shares Held": "67.00",
+      "Asset Category": "Equity",
+      "Price": "21.62"
     },
     {
-      "Ticker": "DVA",
       "Name": "DAVITA INC",
-      "Weight (%)": "0.02",
-      "Price": "178.47",
-      "Shares": "8.00",
-      "Market Value": "1,427.76"
+      "Ticker": "DVA",
+      "Identifier": "2898087",
+      "Weight": "0.02%",
+      "Market Value": "1,427.76",
+      "Shares Held": "8.00",
+      "Asset Category": "Equity",
+      "Price": "178.47"
     },
     {
-      "Ticker": "PNW",
       "Name": "PINNACLE WEST CAPITAL",
-      "Weight (%)": "0.02",
-      "Price": "91.74",
-      "Shares": "15.00",
-      "Market Value": "1,376.10"
+      "Ticker": "PNW",
+      "Identifier": "2048804",
+      "Weight": "0.02%",
+      "Market Value": "1,376.10",
+      "Shares Held": "15.00",
+      "Asset Category": "Equity",
+      "Price": "91.74"
     },
     {
-      "Ticker": "FDS",
       "Name": "FACTSET RESEARCH SYSTEMS INC",
-      "Weight (%)": "0.02",
-      "Price": "273.08",
-      "Shares": "5.00",
-      "Market Value": "1,365.40"
+      "Ticker": "FDS",
+      "Identifier": "2329770",
+      "Weight": "0.02%",
+      "Market Value": "1,365.40",
+      "Shares Held": "5.00",
+      "Asset Category": "Equity",
+      "Price": "273.08"
     },
     {
-      "Ticker": "DECK",
       "Name": "DECKERS OUTDOOR CORP",
-      "Weight (%)": "0.02",
-      "Price": "78.67",
-      "Shares": "17.00",
-      "Market Value": "1,337.39"
+      "Ticker": "DECK",
+      "Identifier": "2267278",
+      "Weight": "0.02%",
+      "Market Value": "1,337.39",
+      "Shares Held": "17.00",
+      "Asset Category": "Equity",
+      "Price": "78.67"
     },
     {
-      "Ticker": "BXP",
       "Name": "BXP INC",
-      "Weight (%)": "0.02",
-      "Price": "63.40000000000001",
-      "Shares": "21.00",
-      "Market Value": "1,331.40"
+      "Ticker": "BXP",
+      "Identifier": "2019479",
+      "Weight": "0.02%",
+      "Market Value": "1,331.40",
+      "Shares Held": "21.00",
+      "Asset Category": "Equity",
+      "Price": "63.40000000000001"
     },
     {
-      "Ticker": "JKHY",
       "Name": "JACK HENRY & ASSOCIATES INC",
-      "Weight (%)": "0.02",
-      "Price": "147.79",
-      "Shares": "9.00",
-      "Market Value": "1,330.11"
+      "Ticker": "JKHY",
+      "Identifier": "2469193",
+      "Weight": "0.02%",
+      "Market Value": "1,330.11",
+      "Shares Held": "9.00",
+      "Asset Category": "Equity",
+      "Price": "147.79"
     },
     {
-      "Ticker": "HII",
       "Name": "HUNTINGTON INGALLS INDUSTRIE",
-      "Weight (%)": "0.02",
-      "Price": "264.02",
-      "Shares": "5.00",
-      "Market Value": "1,320.10"
+      "Ticker": "HII",
+      "Identifier": "B40SSC9",
+      "Weight": "0.02%",
+      "Market Value": "1,320.10",
+      "Shares Held": "5.00",
+      "Asset Category": "Equity",
+      "Price": "264.02"
     },
     {
-      "Ticker": "UDR",
       "Name": "UDR INC",
-      "Weight (%)": "0.02",
-      "Price": "33.84",
-      "Shares": "39.00",
-      "Market Value": "1,319.76"
+      "Ticker": "UDR",
+      "Identifier": "2727910",
+      "Weight": "0.02%",
+      "Market Value": "1,319.76",
+      "Shares Held": "39.00",
+      "Asset Category": "Equity",
+      "Price": "33.84"
     },
     {
-      "Ticker": "LULU",
       "Name": "LULULEMON ATHLETICA INC",
-      "Weight (%)": "0.02",
-      "Price": "101.3",
-      "Shares": "13.00",
-      "Market Value": "1,316.90"
+      "Ticker": "LULU",
+      "Identifier": "B23FN39",
+      "Weight": "0.02%",
+      "Market Value": "1,316.90",
+      "Shares Held": "13.00",
+      "Asset Category": "Equity",
+      "Price": "101.3"
     },
     {
-      "Ticker": "AES",
       "Name": "AES CORP",
-      "Weight (%)": "0.02",
-      "Price": "14.87",
-      "Shares": "88.00",
-      "Market Value": "1,308.56"
+      "Ticker": "AES",
+      "Identifier": "2002479",
+      "Weight": "0.02%",
+      "Market Value": "1,308.56",
+      "Shares Held": "88.00",
+      "Asset Category": "Equity",
+      "Price": "14.87"
     },
     {
-      "Ticker": "NWSA",
       "Name": "NEWS CORP - CLASS A",
-      "Weight (%)": "0.02",
-      "Price": "28.49",
-      "Shares": "45.00",
-      "Market Value": "1,282.05"
+      "Ticker": "NWSA",
+      "Identifier": "BBGVT40",
+      "Weight": "0.02%",
+      "Market Value": "1,282.05",
+      "Shares Held": "45.00",
+      "Asset Category": "Equity",
+      "Price": "28.49"
     },
     {
-      "Ticker": "TKO",
       "Name": "TKO GROUP HOLDINGS INC",
-      "Weight (%)": "0.01",
-      "Price": "182.67",
-      "Shares": "7.00",
-      "Market Value": "1,278.69"
+      "Ticker": "TKO",
+      "Identifier": "BQBBFD1",
+      "Weight": "0.01%",
+      "Market Value": "1,278.69",
+      "Shares Held": "7.00",
+      "Asset Category": "Equity",
+      "Price": "182.67"
     },
     {
-      "Ticker": "CPT",
       "Name": "CAMDEN PROPERTY TRUST",
-      "Weight (%)": "0.01",
-      "Price": "98.11999999999999",
-      "Shares": "13.00",
-      "Market Value": "1,275.56"
+      "Ticker": "CPT",
+      "Identifier": "2166320",
+      "Weight": "0.01%",
+      "Market Value": "1,275.56",
+      "Shares Held": "13.00",
+      "Asset Category": "Fund",
+      "Price": "98.11999999999999"
     },
     {
-      "Ticker": "BEN",
       "Name": "FRANKLIN TEMPLETON INC",
-      "Weight (%)": "0.01",
-      "Price": "33.02",
-      "Shares": "38.00",
-      "Market Value": "1,254.76"
+      "Ticker": "BEN",
+      "Identifier": "2350684",
+      "Weight": "0.01%",
+      "Market Value": "1,254.76",
+      "Shares Held": "38.00",
+      "Asset Category": "Equity",
+      "Price": "33.02"
     },
     {
-      "Ticker": "ROL",
       "Name": "ROLLINS INC",
-      "Weight (%)": "0.01",
-      "Price": "30.03",
-      "Shares": "41.00",
-      "Market Value": "1,231.23"
+      "Ticker": "ROL",
+      "Identifier": "2747305",
+      "Weight": "0.01%",
+      "Market Value": "1,231.23",
+      "Shares Held": "41.00",
+      "Asset Category": "Equity",
+      "Price": "30.03"
     },
     {
-      "Ticker": "FRT",
       "Name": "FEDERAL REALTY INVS TRUST",
-      "Weight (%)": "0.01",
-      "Price": "110.52",
-      "Shares": "11.00",
-      "Market Value": "1,215.72"
+      "Ticker": "FRT",
+      "Identifier": "BN7P9B2",
+      "Weight": "0.01%",
+      "Market Value": "1,215.72",
+      "Shares Held": "11.00",
+      "Asset Category": "Fund",
+      "Price": "110.52"
     },
     {
-      "Ticker": "PNR",
       "Name": "PENTAIR PLC",
-      "Weight (%)": "0.01",
-      "Price": "53.66",
-      "Shares": "22.00",
-      "Market Value": "1,180.52"
+      "Ticker": "PNR",
+      "Identifier": "BLS09M3",
+      "Weight": "0.01%",
+      "Market Value": "1,180.52",
+      "Shares Held": "22.00",
+      "Asset Category": "Equity",
+      "Price": "53.66"
     },
     {
-      "Ticker": "DPZ",
       "Name": "DOMINO'S PIZZA INC",
-      "Weight (%)": "0.01",
-      "Price": "292.14",
-      "Shares": "4.00",
-      "Market Value": "1,168.56"
+      "Ticker": "DPZ",
+      "Identifier": "B01SD70",
+      "Weight": "0.01%",
+      "Market Value": "1,168.56",
+      "Shares Held": "4.00",
+      "Asset Category": "Equity",
+      "Price": "292.14"
     },
     {
-      "Ticker": "APTV",
       "Name": "APTIV PLC",
-      "Weight (%)": "0.01",
-      "Price": "44.79",
-      "Shares": "26.00",
-      "Market Value": "1,164.54"
+      "Ticker": "APTV",
+      "Identifier": "BTDN8H1",
+      "Weight": "0.01%",
+      "Market Value": "1,164.54",
+      "Shares Held": "26.00",
+      "Asset Category": "Equity",
+      "Price": "44.79"
     },
     {
-      "Ticker": "FOX",
       "Name": "FOX CORP - CLASS B",
-      "Weight (%)": "0.01",
-      "Price": "56.54",
-      "Shares": "17.00",
-      "Market Value": "961.18"
+      "Ticker": "FOX",
+      "Identifier": "BJJMGY5",
+      "Weight": "0.01%",
+      "Market Value": "961.18",
+      "Shares Held": "17.00",
+      "Asset Category": "Equity",
+      "Price": "56.54"
     },
     {
-      "Ticker": "MOS",
       "Name": "MOSAIC CO/THE",
-      "Weight (%)": "0.01",
-      "Price": "23.01",
-      "Shares": "40.00",
-      "Market Value": "920.40"
+      "Ticker": "MOS",
+      "Identifier": "B3NPHP6",
+      "Weight": "0.01%",
+      "Market Value": "920.40",
+      "Shares Held": "40.00",
+      "Asset Category": "Equity",
+      "Price": "23.01"
     },
     {
-      "Ticker": "AOS",
       "Name": "SMITH (A.O.) CORP",
-      "Weight (%)": "0.01",
-      "Price": "58.65",
-      "Shares": "15.00",
-      "Market Value": "879.75"
+      "Ticker": "AOS",
+      "Identifier": "2816023",
+      "Weight": "0.01%",
+      "Market Value": "879.75",
+      "Shares Held": "15.00",
+      "Asset Category": "Equity",
+      "Price": "58.65"
     },
     {
-      "Ticker": "HRL",
       "Name": "HORMEL FOODS CORP",
-      "Weight (%)": "0.01",
-      "Price": "19.71",
-      "Shares": "43.00",
-      "Market Value": "847.53"
+      "Ticker": "HRL",
+      "Identifier": "2437264",
+      "Weight": "0.01%",
+      "Market Value": "847.53",
+      "Shares Held": "43.00",
+      "Asset Category": "Equity",
+      "Price": "19.71"
     },
     {
-      "Ticker": "NCLH",
       "Name": "NORWEGIAN CRUISE LINE HOLDIN",
-      "Weight (%)": "0.01",
-      "Price": "14.61",
-      "Shares": "57.00",
-      "Market Value": "832.77"
+      "Ticker": "NCLH",
+      "Identifier": "B9CGTC3",
+      "Weight": "0.01%",
+      "Market Value": "832.77",
+      "Shares Held": "57.00",
+      "Asset Category": "Equity",
+      "Price": "14.61"
     },
     {
-      "Ticker": "PSKY",
       "Name": "PARAMOUNT SKYDANCE CORP",
-      "Weight (%)": "0.01",
-      "Price": "9.959999999999999",
-      "Shares": "68.00",
-      "Market Value": "677.28"
+      "Ticker": "PSKY",
+      "Identifier": "BSNMNQ5",
+      "Weight": "0.01%",
+      "Market Value": "677.28",
+      "Shares Held": "68.00",
+      "Asset Category": "Equity",
+      "Price": "9.959999999999999"
     },
     {
-      "Ticker": "ERIE",
       "Name": "ERIE INDEMNITY COMPANY-CL A",
-      "Weight (%)": "0.01",
-      "Price": "222.86",
-      "Shares": "3.00",
-      "Market Value": "668.58"
+      "Ticker": "ERIE",
+      "Identifier": "2311711",
+      "Weight": "0.01%",
+      "Market Value": "668.58",
+      "Shares Held": "3.00",
+      "Asset Category": "Equity",
+      "Price": "222.86"
     },
     {
-      "Ticker": "NWS",
       "Name": "NEWS CORP - CLASS B",
-      "Weight (%)": "0.01",
-      "Price": "31.75",
-      "Shares": "15.00",
-      "Market Value": "476.25"
+      "Ticker": "NWS",
+      "Identifier": "BBGVT51",
+      "Weight": "0.01%",
+      "Market Value": "476.25",
+      "Shares Held": "15.00",
+      "Asset Category": "Equity",
+      "Price": "31.75"
     },
     {
-      "Ticker": "NVDA",
       "Name": "NVIDIA CORP",
-      "Weight (%)": "8.16",
-      "Price": "225.07",
-      "Shares": "2,998.00",
-      "Market Value": "674,759.86"
+      "Ticker": "NVDA",
+      "Identifier": "2379504",
+      "Weight": "8.16%",
+      "Market Value": "674,759.86",
+      "Shares Held": "2,998.00",
+      "Asset Category": "Equity",
+      "Price": "225.07"
     },
     {
-      "Ticker": "AAPL",
       "Name": "APPLE INC",
-      "Weight (%)": "7.46",
-      "Price": "341.0700000000001",
-      "Shares": "1,808.00",
-      "Market Value": "616,654.56"
+      "Ticker": "AAPL",
+      "Identifier": "2046251",
+      "Weight": "7.46%",
+      "Market Value": "616,654.56",
+      "Shares Held": "1,808.00",
+      "Asset Category": "Equity",
+      "Price": "341.0700000000001"
     },
     {
-      "Ticker": "MSFT",
       "Name": "MICROSOFT CORP",
-      "Weight (%)": "5.75",
-      "Price": "516.1700000000001",
-      "Shares": "920.00",
-      "Market Value": "474,876.40"
+      "Ticker": "MSFT",
+      "Identifier": "2588173",
+      "Weight": "5.75%",
+      "Market Value": "474,876.40",
+      "Shares Held": "920.00",
+      "Asset Category": "Equity",
+      "Price": "516.1700000000001"
     },
     {
-      "Ticker": "AMZN",
       "Name": "AMAZON.COM INC",
-      "Weight (%)": "3.70",
-      "Price": "249.67",
-      "Shares": "1,226.00",
-      "Market Value": "306,095.42"
+      "Ticker": "AMZN",
+      "Identifier": "2000019",
+      "Weight": "3.70%",
+      "Market Value": "306,095.42",
+      "Shares Held": "1,226.00",
+      "Asset Category": "Equity",
+      "Price": "249.67"
     },
     {
-      "Ticker": "GOOGL",
       "Name": "ALPHABET INC-CL A",
-      "Weight (%)": "3.04",
-      "Price": "343.92",
-      "Shares": "731.00",
-      "Market Value": "251,405.52"
+      "Ticker": "GOOGL",
+      "Identifier": "BYVY8G0",
+      "Weight": "3.04%",
+      "Market Value": "251,405.52",
+      "Shares Held": "731.00",
+      "Asset Category": "Equity",
+      "Price": "343.92"
     },
     {
-      "Ticker": "AVGO",
       "Name": "BROADCOM INC",
-      "Weight (%)": "2.51",
-      "Price": "352.81",
-      "Shares": "589.00",
-      "Market Value": "207,805.09"
+      "Ticker": "AVGO",
+      "Identifier": "BDZ78H9",
+      "Weight": "2.51%",
+      "Market Value": "207,805.09",
+      "Shares Held": "589.00",
+      "Asset Category": "Equity",
+      "Price": "352.81"
     },
     {
-      "Ticker": "META",
       "Name": "META PLATFORMS INC",
-      "Weight (%)": "2.50",
-      "Price": "751.66",
-      "Shares": "275.00",
-      "Market Value": "206,706.50"
+      "Ticker": "META",
+      "Identifier": "B7TL820",
+      "Weight": "2.50%",
+      "Market Value": "206,706.50",
+      "Shares Held": "275.00",
+      "Asset Category": "Equity",
+      "Price": "751.66"
     },
     {
-      "Ticker": "GOOG",
       "Name": "ALPHABET INC-CL C",
-      "Weight (%)": "2.44",
-      "Price": "341.08",
-      "Shares": "592.00",
-      "Market Value": "201,919.36"
+      "Ticker": "GOOG",
+      "Identifier": "BYY88Y7",
+      "Weight": "2.44%",
+      "Market Value": "201,919.36",
+      "Shares Held": "592.00",
+      "Asset Category": "Equity",
+      "Price": "341.08"
     },
     {
-      "Ticker": "MU",
       "Name": "MICRON TECHNOLOGY INC",
-      "Weight (%)": "1.83",
-      "Price": "1082.28",
-      "Shares": "140.00",
-      "Market Value": "151,519.20"
+      "Ticker": "MU",
+      "Identifier": "2588184",
+      "Weight": "1.83%",
+      "Market Value": "151,519.20",
+      "Shares Held": "140.00",
+      "Asset Category": "Equity",
+      "Price": "1082.28"
     },
     {
-      "Ticker": "TSLA",
       "Name": "TESLA INC",
-      "Weight (%)": "1.58",
-      "Price": "372.11",
-      "Shares": "352.00",
-      "Market Value": "130,982.72"
+      "Ticker": "TSLA",
+      "Identifier": "B616C79",
+      "Weight": "1.58%",
+      "Market Value": "130,982.72",
+      "Shares Held": "352.00",
+      "Asset Category": "Equity",
+      "Price": "372.11"
     },
     {
-      "Ticker": "AMD",
       "Name": "ADVANCED MICRO DEVICES",
-      "Weight (%)": "1.54",
-      "Price": "630.63",
-      "Shares": "202.00",
-      "Market Value": "127,387.26"
+      "Ticker": "AMD",
+      "Identifier": "2007849",
+      "Weight": "1.54%",
+      "Market Value": "127,387.26",
+      "Shares Held": "202.00",
+      "Asset Category": "Equity",
+      "Price": "630.63"
     },
     {
-      "Ticker": "BRK/B",
       "Name": "BERKSHIRE HATHAWAY INC-CL B",
-      "Weight (%)": "1.46",
-      "Price": "505.48",
-      "Shares": "239.00",
-      "Market Value": "120,809.72"
+      "Ticker": "BRK/B",
+      "Identifier": "2073390",
+      "Weight": "1.46%",
+      "Market Value": "120,809.72",
+      "Shares Held": "239.00",
+      "Asset Category": "Equity",
+      "Price": "505.48"
     },
     {
-      "Ticker": "JPM",
       "Name": "JPMORGAN CHASE & CO",
-      "Weight (%)": "1.42",
-      "Price": "343.06",
-      "Shares": "342.00",
-      "Market Value": "117,326.52"
+      "Ticker": "JPM",
+      "Identifier": "2190385",
+      "Weight": "1.42%",
+      "Market Value": "117,326.52",
+      "Shares Held": "342.00",
+      "Asset Category": "Equity",
+      "Price": "343.06"
     },
     {
-      "Ticker": "ABBV",
       "Name": "ABBVIE INC",
-      "Weight (%)": "1.35",
-      "Price": "264.34",
-      "Shares": "421.00",
-      "Market Value": "111,287.14"
+      "Ticker": "ABBV",
+      "Identifier": "B92SR70",
+      "Weight": "1.35%",
+      "Market Value": "111,287.14",
+      "Shares Held": "421.00",
+      "Asset Category": "Equity",
+      "Price": "264.34"
     },
     {
-      "Ticker": "XOM",
       "Name": "EXXONMOBIL HOLDINGS CORP",
-      "Weight (%)": "0.99",
-      "Price": "160.59",
-      "Shares": "509.00",
-      "Market Value": "81,740.31"
+      "Ticker": "XOM",
+      "Identifier": "BVSRPD7",
+      "Weight": "0.99%",
+      "Market Value": "81,740.31",
+      "Shares Held": "509.00",
+      "Asset Category": "Equity",
+      "Price": "160.59"
     },
     {
-      "Ticker": "V",
       "Name": "VISA INC-CLASS A SHARES",
-      "Weight (%)": "0.97",
-      "Price": "367.38",
-      "Shares": "219.00",
-      "Market Value": "80,456.22"
+      "Ticker": "V",
+      "Identifier": "B2PZN04",
+      "Weight": "0.97%",
+      "Market Value": "80,456.22",
+      "Shares Held": "219.00",
+      "Asset Category": "Equity",
+      "Price": "367.38"
     },
     {
-      "Ticker": "INTC",
       "Name": "INTEL CORP",
-      "Weight (%)": "0.92",
-      "Price": "123.0",
-      "Shares": "616.00",
-      "Market Value": "75,768.00"
+      "Ticker": "INTC",
+      "Identifier": "2463247",
+      "Weight": "0.92%",
+      "Market Value": "75,768.00",
+      "Shares Held": "616.00",
+      "Asset Category": "Equity",
+      "Price": "123.0"
     },
     {
-      "Ticker": "WMT",
       "Name": "WALMART INC",
-      "Weight (%)": "0.85",
-      "Price": "107.98",
-      "Shares": "654.00",
-      "Market Value": "70,618.92"
+      "Ticker": "WMT",
+      "Identifier": "2936921",
+      "Weight": "0.85%",
+      "Market Value": "70,618.92",
+      "Shares Held": "654.00",
+      "Asset Category": "Equity",
+      "Price": "107.98"
     },
     {
-      "Ticker": "COST",
       "Name": "COSTCO WHOLESALE CORP",
-      "Weight (%)": "0.73",
-      "Price": "922.765076923077",
-      "Shares": "65.00",
-      "Market Value": "59,979.73"
+      "Ticker": "COST",
+      "Identifier": "2701271",
+      "Weight": "0.73%",
+      "Market Value": "59,979.73",
+      "Shares Held": "65.00",
+      "Asset Category": "Equity",
+      "Price": "922.765076923077"
     },
     {
-      "Ticker": "TMO",
       "Name": "THERMO FISHER SCIENTIFIC INC",
-      "Weight (%)": "0.72",
-      "Price": "675.0",
-      "Shares": "88.00",
-      "Market Value": "59,400.00"
+      "Ticker": "TMO",
+      "Identifier": "2886907",
+      "Weight": "0.72%",
+      "Market Value": "59,400.00",
+      "Shares Held": "88.00",
+      "Asset Category": "Equity",
+      "Price": "675.0"
     },
     {
-      "Ticker": "MA",
       "Name": "MASTERCARD INC - A",
-      "Weight (%)": "0.71",
-      "Price": "567.65",
-      "Shares": "104.00",
-      "Market Value": "59,035.60"
+      "Ticker": "MA",
+      "Identifier": "B121557",
+      "Weight": "0.71%",
+      "Market Value": "59,035.60",
+      "Shares Held": "104.00",
+      "Asset Category": "Equity",
+      "Price": "567.65"
     },
     {
-      "Ticker": "PLTR",
       "Name": "PALANTIR TECHNOLOGIES INC-A",
-      "Weight (%)": "0.65",
-      "Price": "189.67",
-      "Shares": "285.00",
-      "Market Value": "54,055.95"
+      "Ticker": "PLTR",
+      "Identifier": "BN78DQ4",
+      "Weight": "0.65%",
+      "Market Value": "54,055.95",
+      "Shares Held": "285.00",
+      "Asset Category": "Equity",
+      "Price": "189.67"
     },
     {
-      "Ticker": "AMGN",
       "Name": "AMGEN INC",
-      "Weight (%)": "0.65",
-      "Price": "414.61",
-      "Shares": "129.00",
-      "Market Value": "53,484.69"
+      "Ticker": "AMGN",
+      "Identifier": "2023607",
+      "Weight": "0.65%",
+      "Market Value": "53,484.69",
+      "Shares Held": "129.00",
+      "Asset Category": "Equity",
+      "Price": "414.61"
     },
     {
-      "Ticker": "CAT",
       "Name": "CATERPILLAR INC",
-      "Weight (%)": "0.64",
-      "Price": "821.58",
-      "Shares": "64.00",
-      "Market Value": "52,581.12"
+      "Ticker": "CAT",
+      "Identifier": "2180201",
+      "Weight": "0.64%",
+      "Market Value": "52,581.12",
+      "Shares Held": "64.00",
+      "Asset Category": "Equity",
+      "Price": "821.58"
     },
     {
-      "Ticker": "CSCO",
       "Name": "CISCO SYSTEMS INC",
-      "Weight (%)": "0.63",
-      "Price": "106.7",
-      "Shares": "488.00",
-      "Market Value": "52,069.60"
+      "Ticker": "CSCO",
+      "Identifier": "2198163",
+      "Weight": "0.63%",
+      "Market Value": "52,069.60",
+      "Shares Held": "488.00",
+      "Asset Category": "Equity",
+      "Price": "106.7"
     },
     {
-      "Ticker": "CVX",
       "Name": "CHEVRON CORP",
-      "Weight (%)": "0.61",
-      "Price": "204.45",
-      "Shares": "245.00",
-      "Market Value": "50,090.25"
+      "Ticker": "CVX",
+      "Identifier": "2838555",
+      "Weight": "0.61%",
+      "Market Value": "50,090.25",
+      "Shares Held": "245.00",
+      "Asset Category": "Equity",
+      "Price": "204.45"
     },
     {
-      "Ticker": "KO",
       "Name": "COCA-COLA CO/THE",
-      "Weight (%)": "0.60",
-      "Price": "87.81",
-      "Shares": "568.00",
-      "Market Value": "49,876.08"
+      "Ticker": "KO",
+      "Identifier": "2206657",
+      "Weight": "0.60%",
+      "Market Value": "49,876.08",
+      "Shares Held": "568.00",
+      "Asset Category": "Equity",
+      "Price": "87.81"
     },
     {
-      "Ticker": "PG",
       "Name": "PROCTER & GAMBLE CO/THE",
-      "Weight (%)": "0.60",
-      "Price": "146.23",
-      "Shares": "341.00",
-      "Market Value": "49,864.43"
+      "Ticker": "PG",
+      "Identifier": "2704407",
+      "Weight": "0.60%",
+      "Market Value": "49,864.43",
+      "Shares Held": "341.00",
+      "Asset Category": "Equity",
+      "Price": "146.23"
     },
     {
-      "Ticker": "LRCX",
       "Name": "LAM RESEARCH CORP",
-      "Weight (%)": "0.59",
-      "Price": "315.21",
-      "Shares": "155.00",
-      "Market Value": "48,857.55"
+      "Ticker": "LRCX",
+      "Identifier": "BSML4N7",
+      "Weight": "0.59%",
+      "Market Value": "48,857.55",
+      "Shares Held": "155.00",
+      "Asset Category": "Equity",
+      "Price": "315.21"
     },
     {
-      "Ticker": "AMAT",
       "Name": "APPLIED MATERIALS INC",
-      "Weight (%)": "0.57",
-      "Price": "485.0",
-      "Shares": "98.00",
-      "Market Value": "47,530.00"
+      "Ticker": "AMAT",
+      "Identifier": "2046552",
+      "Weight": "0.57%",
+      "Market Value": "47,530.00",
+      "Shares Held": "98.00",
+      "Asset Category": "Equity",
+      "Price": "485.0"
     },
     {
-      "Ticker": "BAC",
       "Name": "BANK OF AMERICA CORP",
-      "Weight (%)": "0.57",
-      "Price": "56.7",
-      "Shares": "836.00",
-      "Market Value": "47,401.20"
+      "Ticker": "BAC",
+      "Identifier": "2295677",
+      "Weight": "0.57%",
+      "Market Value": "47,401.20",
+      "Shares Held": "836.00",
+      "Asset Category": "Equity",
+      "Price": "56.7"
     },
     {
-      "Ticker": "GE",
       "Name": "GE AEROSPACE",
-      "Weight (%)": "0.57",
-      "Price": "327.09",
-      "Shares": "144.00",
-      "Market Value": "47,100.96"
+      "Ticker": "GE",
+      "Identifier": "BL59CR9",
+      "Weight": "0.57%",
+      "Market Value": "47,100.96",
+      "Shares Held": "144.00",
+      "Asset Category": "Equity",
+      "Price": "327.09"
     },
     {
-      "Ticker": "GILD",
       "Name": "GILEAD SCIENCES INC",
-      "Weight (%)": "0.54",
-      "Price": "150.93",
-      "Shares": "296.00",
-      "Market Value": "44,675.28"
+      "Ticker": "GILD",
+      "Identifier": "2369174",
+      "Weight": "0.54%",
+      "Market Value": "44,675.28",
+      "Shares Held": "296.00",
+      "Asset Category": "Equity",
+      "Price": "150.93"
     },
     {
-      "Ticker": "ABT",
       "Name": "ABBOTT LABORATORIES",
-      "Weight (%)": "0.51",
-      "Price": "101.29",
-      "Shares": "412.00",
-      "Market Value": "41,731.48"
+      "Ticker": "ABT",
+      "Identifier": "2002305",
+      "Weight": "0.51%",
+      "Market Value": "41,731.48",
+      "Shares Held": "412.00",
+      "Asset Category": "Equity",
+      "Price": "101.29"
     },
     {
-      "Ticker": "PANW",
       "Name": "PALO ALTO NETWORKS INC",
-      "Weight (%)": "0.46",
-      "Price": "374.74",
-      "Shares": "101.00",
-      "Market Value": "37,848.74"
+      "Ticker": "PANW",
+      "Identifier": "B87ZMX0",
+      "Weight": "0.46%",
+      "Market Value": "37,848.74",
+      "Shares Held": "101.00",
+      "Asset Category": "Equity",
+      "Price": "374.74"
     },
     {
-      "Ticker": "NFLX",
       "Name": "NETFLIX INC",
-      "Weight (%)": "0.45",
-      "Price": "71.14500963391137",
-      "Shares": "519.00",
-      "Market Value": "36,924.26"
+      "Ticker": "NFLX",
+      "Identifier": "2857817",
+      "Weight": "0.45%",
+      "Market Value": "36,924.26",
+      "Shares Held": "519.00",
+      "Asset Category": "Equity",
+      "Price": "71.14500963391137"
     },
     {
-      "Ticker": "HD",
       "Name": "HOME DEPOT INC",
-      "Weight (%)": "0.44",
-      "Price": "293.2",
-      "Shares": "125.00",
-      "Market Value": "36,650.00"
+      "Ticker": "HD",
+      "Identifier": "2434209",
+      "Weight": "0.44%",
+      "Market Value": "36,650.00",
+      "Shares Held": "125.00",
+      "Asset Category": "Equity",
+      "Price": "293.2"
     },
     {
-      "Ticker": "GEV",
       "Name": "GE VERNOVA INC",
-      "Weight (%)": "0.43",
-      "Price": "957.6299999999999",
-      "Shares": "37.00",
-      "Market Value": "35,432.31"
+      "Ticker": "GEV",
+      "Identifier": "BP6H4Y1",
+      "Weight": "0.43%",
+      "Market Value": "35,432.31",
+      "Shares Held": "37.00",
+      "Asset Category": "Equity",
+      "Price": "957.6299999999999"
     },
     {
-      "Ticker": "GS",
       "Name": "GOLDMAN SACHS GROUP INC",
-      "Weight (%)": "0.42",
-      "Price": "935.45",
-      "Shares": "37.00",
-      "Market Value": "34,611.65"
+      "Ticker": "GS",
+      "Identifier": "2407966",
+      "Weight": "0.42%",
+      "Market Value": "34,611.65",
+      "Shares Held": "37.00",
+      "Asset Category": "Equity",
+      "Price": "935.45"
     },
     {
-      "Ticker": "ISRG",
       "Name": "INTUITIVE SURGICAL INC",
-      "Weight (%)": "0.41",
-      "Price": "405.18",
-      "Shares": "84.00",
-      "Market Value": "34,035.12"
+      "Ticker": "ISRG",
+      "Identifier": "2871301",
+      "Weight": "0.41%",
+      "Market Value": "34,035.12",
+      "Shares Held": "84.00",
+      "Asset Category": "Equity",
+      "Price": "405.18"
     },
     {
-      "Ticker": "DHR",
       "Name": "DANAHER CORP",
-      "Weight (%)": "0.41",
-      "Price": "224.49",
-      "Shares": "149.00",
-      "Market Value": "33,449.01"
+      "Ticker": "DHR",
+      "Identifier": "2250870",
+      "Weight": "0.41%",
+      "Market Value": "33,449.01",
+      "Shares Held": "149.00",
+      "Asset Category": "Equity",
+      "Price": "224.49"
     },
     {
-      "Ticker": "SNDK",
       "Name": "SANDISK CORP",
-      "Weight (%)": "0.39",
-      "Price": "1777.8",
-      "Shares": "18.00",
-      "Market Value": "32,000.40"
+      "Ticker": "SNDK",
+      "Identifier": "BSNPZV3",
+      "Weight": "0.39%",
+      "Market Value": "32,000.40",
+      "Shares Held": "18.00",
+      "Asset Category": "Equity",
+      "Price": "1777.8"
     },
     {
-      "Ticker": "CRWD",
       "Name": "CROWDSTRIKE HOLDINGS INC - A",
-      "Weight (%)": "0.38",
-      "Price": "252.13",
-      "Shares": "126.00",
-      "Market Value": "31,768.38"
+      "Ticker": "CRWD",
+      "Identifier": "BJJP138",
+      "Weight": "0.38%",
+      "Market Value": "31,768.38",
+      "Shares Held": "126.00",
+      "Asset Category": "Equity",
+      "Price": "252.13"
     },
     {
-      "Ticker": "TXN",
       "Name": "TEXAS INSTRUMENTS INC",
-      "Weight (%)": "0.38",
-      "Price": "278.07",
-      "Shares": "113.00",
-      "Market Value": "31,421.91"
+      "Ticker": "TXN",
+      "Identifier": "2885409",
+      "Weight": "0.38%",
+      "Market Value": "31,421.91",
+      "Shares Held": "113.00",
+      "Asset Category": "Equity",
+      "Price": "278.07"
     },
     {
-      "Ticker": "KLAC",
       "Name": "KLA CORP",
-      "Weight (%)": "0.37",
-      "Price": "187.92",
-      "Shares": "162.00",
-      "Market Value": "30,443.04"
+      "Ticker": "KLAC",
+      "Identifier": "2480138",
+      "Weight": "0.37%",
+      "Market Value": "30,443.04",
+      "Shares Held": "162.00",
+      "Asset Category": "Equity",
+      "Price": "187.92"
     },
     {
-      "Ticker": "MS",
       "Name": "MORGAN STANLEY",
-      "Weight (%)": "0.36",
-      "Price": "196.31",
-      "Shares": "153.00",
-      "Market Value": "30,035.43"
+      "Ticker": "MS",
+      "Identifier": "2262314",
+      "Weight": "0.36%",
+      "Market Value": "30,035.43",
+      "Shares Held": "153.00",
+      "Asset Category": "Equity",
+      "Price": "196.31"
     },
     {
-      "Ticker": "ORCL",
       "Name": "ORACLE CORP",
-      "Weight (%)": "0.35",
-      "Price": "137.1",
-      "Shares": "214.00",
-      "Market Value": "29,339.40"
+      "Ticker": "ORCL",
+      "Identifier": "2661568",
+      "Weight": "0.35%",
+      "Market Value": "29,339.40",
+      "Shares Held": "214.00",
+      "Asset Category": "Equity",
+      "Price": "137.1"
     },
     {
-      "Ticker": "C",
       "Name": "CITIGROUP INC",
-      "Weight (%)": "0.35",
-      "Price": "134.28",
-      "Shares": "216.00",
-      "Market Value": "29,004.48"
+      "Ticker": "C",
+      "Identifier": "2297907",
+      "Weight": "0.35%",
+      "Market Value": "29,004.48",
+      "Shares Held": "216.00",
+      "Asset Category": "Equity",
+      "Price": "134.28"
     },
     {
-      "Ticker": "MRVL",
       "Name": "MARVELL TECHNOLOGY INC",
-      "Weight (%)": "0.34",
-      "Price": "261.9350458715596",
-      "Shares": "109.00",
-      "Market Value": "28,550.92"
+      "Ticker": "MRVL",
+      "Identifier": "BNKJSM5",
+      "Weight": "0.34%",
+      "Market Value": "28,550.92",
+      "Shares Held": "109.00",
+      "Asset Category": "Equity",
+      "Price": "261.9350458715596"
     },
     {
-      "Ticker": "CVS",
       "Name": "CVS HEALTH CORP",
-      "Weight (%)": "0.33",
-      "Price": "89.13000000000001",
-      "Shares": "305.00",
-      "Market Value": "27,184.65"
+      "Ticker": "CVS",
+      "Identifier": "2577609",
+      "Weight": "0.33%",
+      "Market Value": "27,184.65",
+      "Shares Held": "305.00",
+      "Asset Category": "Equity",
+      "Price": "89.13000000000001"
     },
     {
-      "Ticker": "MDT",
       "Name": "MEDTRONIC PLC",
-      "Weight (%)": "0.33",
-      "Price": "88.64",
-      "Shares": "305.00",
-      "Market Value": "27,035.20"
+      "Ticker": "MDT",
+      "Identifier": "BTN1Y11",
+      "Weight": "0.33%",
+      "Market Value": "27,035.20",
+      "Shares Held": "305.00",
+      "Asset Category": "Equity",
+      "Price": "88.64"
     },
     {
-      "Ticker": "ANET",
       "Name": "ARISTA NETWORKS INC",
-      "Weight (%)": "0.33",
-      "Price": "206.55",
-      "Shares": "130.00",
-      "Market Value": "26,851.50"
+      "Ticker": "ANET",
+      "Identifier": "BL9XPM3",
+      "Weight": "0.33%",
+      "Market Value": "26,851.50",
+      "Shares Held": "130.00",
+      "Asset Category": "Equity",
+      "Price": "206.55"
     },
     {
-      "Ticker": "LIN",
       "Name": "LINDE PLC",
-      "Weight (%)": "0.32",
-      "Price": "469.89",
-      "Shares": "57.00",
-      "Market Value": "26,783.73"
+      "Ticker": "LIN",
+      "Identifier": "BNZHB81",
+      "Weight": "0.32%",
+      "Market Value": "26,783.73",
+      "Shares Held": "57.00",
+      "Asset Category": "Equity",
+      "Price": "469.89"
     },
     {
-      "Ticker": "QCOM",
       "Name": "QUALCOMM INC",
-      "Weight (%)": "0.32",
-      "Price": "201.97",
-      "Shares": "132.00",
-      "Market Value": "26,660.04"
+      "Ticker": "QCOM",
+      "Identifier": "2714923",
+      "Weight": "0.32%",
+      "Market Value": "26,660.04",
+      "Shares Held": "132.00",
+      "Asset Category": "Equity",
+      "Price": "201.97"
     },
     {
-      "Ticker": "IBM",
       "Name": "INTL BUSINESS MACHINES CORP",
-      "Weight (%)": "0.32",
-      "Price": "225.51",
-      "Shares": "117.00",
-      "Market Value": "26,384.67"
+      "Ticker": "IBM",
+      "Identifier": "2005973",
+      "Weight": "0.32%",
+      "Market Value": "26,384.67",
+      "Shares Held": "117.00",
+      "Asset Category": "Equity",
+      "Price": "225.51"
     },
     {
-      "Ticker": "APH",
       "Name": "AMPHENOL CORP-CL A",
-      "Weight (%)": "0.31",
-      "Price": "84.09",
-      "Shares": "306.00",
-      "Market Value": "25,731.54"
+      "Ticker": "APH",
+      "Identifier": "2145084",
+      "Weight": "0.31%",
+      "Market Value": "25,731.54",
+      "Shares Held": "306.00",
+      "Asset Category": "Equity",
+      "Price": "84.09"
     },
     {
-      "Ticker": "PEP",
       "Name": "PEPSICO INC",
-      "Weight (%)": "0.31",
-      "Price": "128.63",
-      "Shares": "200.00",
-      "Market Value": "25,726.00"
+      "Ticker": "PEP",
+      "Identifier": "2681511",
+      "Weight": "0.31%",
+      "Market Value": "25,726.00",
+      "Shares Held": "200.00",
+      "Asset Category": "Equity",
+      "Price": "128.63"
     },
     {
-      "Ticker": "STX",
       "Name": "SEAGATE TECHNOLOGY HOLDINGS",
-      "Weight (%)": "0.31",
-      "Price": "916.83",
-      "Shares": "28.00",
-      "Market Value": "25,671.24"
+      "Ticker": "STX",
+      "Identifier": "BKVD2N4",
+      "Weight": "0.31%",
+      "Market Value": "25,671.24",
+      "Shares Held": "28.00",
+      "Asset Category": "Equity",
+      "Price": "916.83"
     },
     {
-      "Ticker": "VZ",
       "Name": "VERIZON COMMUNICATIONS INC",
-      "Weight (%)": "0.29",
-      "Price": "47.08",
-      "Shares": "518.00",
-      "Market Value": "24,387.44"
+      "Ticker": "VZ",
+      "Identifier": "2090571",
+      "Weight": "0.29%",
+      "Market Value": "24,387.44",
+      "Shares Held": "518.00",
+      "Asset Category": "Equity",
+      "Price": "47.08"
     },
     {
-      "Ticker": "MCK",
       "Name": "MCKESSON CORP",
-      "Weight (%)": "0.29",
-      "Price": "866.64",
-      "Shares": "28.00",
-      "Market Value": "24,265.92"
+      "Ticker": "MCK",
+      "Identifier": "2378534",
+      "Weight": "0.29%",
+      "Market Value": "24,265.92",
+      "Shares Held": "28.00",
+      "Asset Category": "Equity",
+      "Price": "866.64"
     },
     {
-      "Ticker": "DE",
       "Name": "DEERE & CO",
-      "Weight (%)": "0.29",
-      "Price": "690.4599999999999",
-      "Shares": "35.00",
-      "Market Value": "24,166.10"
+      "Ticker": "DE",
+      "Identifier": "2261203",
+      "Weight": "0.29%",
+      "Market Value": "24,166.10",
+      "Shares Held": "35.00",
+      "Asset Category": "Equity",
+      "Price": "690.4599999999999"
     },
     {
-      "Ticker": "ETN",
       "Name": "EATON CORP PLC",
-      "Weight (%)": "0.29",
-      "Price": "439.98",
-      "Shares": "54.00",
-      "Market Value": "23,758.92"
+      "Ticker": "ETN",
+      "Identifier": "B8KQN82",
+      "Weight": "0.29%",
+      "Market Value": "23,758.92",
+      "Shares Held": "54.00",
+      "Asset Category": "Equity",
+      "Price": "439.98"
     },
     {
-      "Ticker": "CRM",
       "Name": "SALESFORCE INC",
-      "Weight (%)": "0.29",
-      "Price": "234.02",
-      "Shares": "101.00",
-      "Market Value": "23,636.02"
+      "Ticker": "CRM",
+      "Identifier": "2310525",
+      "Weight": "0.29%",
+      "Market Value": "23,636.02",
+      "Shares Held": "101.00",
+      "Asset Category": "Equity",
+      "Price": "234.02"
     },
     {
-      "Ticker": "ADI",
       "Name": "ANALOG DEVICES INC",
-      "Weight (%)": "0.29",
-      "Price": "393.6",
-      "Shares": "60.00",
-      "Market Value": "23,616.00"
+      "Ticker": "ADI",
+      "Identifier": "2032067",
+      "Weight": "0.29%",
+      "Market Value": "23,616.00",
+      "Shares Held": "60.00",
+      "Asset Category": "Equity",
+      "Price": "393.6"
     },
     {
-      "Ticker": "DIS",
       "Name": "WALT DISNEY CO/THE",
-      "Weight (%)": "0.28",
-      "Price": "106.15",
-      "Shares": "215.00",
-      "Market Value": "22,822.25"
+      "Ticker": "DIS",
+      "Identifier": "2270726",
+      "Weight": "0.28%",
+      "Market Value": "22,822.25",
+      "Shares Held": "215.00",
+      "Asset Category": "Equity",
+      "Price": "106.15"
     },
     {
-      "Ticker": "UNP",
       "Name": "UNION PACIFIC CORP",
-      "Weight (%)": "0.28",
-      "Price": "273.79",
-      "Shares": "83.00",
-      "Market Value": "22,724.57"
+      "Ticker": "UNP",
+      "Identifier": "2914734",
+      "Weight": "0.28%",
+      "Market Value": "22,724.57",
+      "Shares Held": "83.00",
+      "Asset Category": "Equity",
+      "Price": "273.79"
     },
     {
-      "Ticker": "SYK",
       "Name": "STRYKER CORP",
-      "Weight (%)": "0.27",
-      "Price": "272.36",
-      "Shares": "83.00",
-      "Market Value": "22,605.88"
+      "Ticker": "SYK",
+      "Identifier": "2853688",
+      "Weight": "0.27%",
+      "Market Value": "22,605.88",
+      "Shares Held": "83.00",
+      "Asset Category": "Equity",
+      "Price": "272.36"
     },
     {
-      "Ticker": "WELL",
       "Name": "WELLTOWER INC",
-      "Weight (%)": "0.27",
-      "Price": "231.37",
-      "Shares": "97.00",
-      "Market Value": "22,442.89"
+      "Ticker": "WELL",
+      "Identifier": "BYVYHH4",
+      "Weight": "0.27%",
+      "Market Value": "22,442.89",
+      "Shares Held": "97.00",
+      "Asset Category": "Equity",
+      "Price": "231.37"
     },
     {
-      "Ticker": "BA",
       "Name": "BOEING CO/THE",
-      "Weight (%)": "0.26",
-      "Price": "198.07",
-      "Shares": "110.00",
-      "Market Value": "21,787.70"
+      "Ticker": "BA",
+      "Identifier": "2108601",
+      "Weight": "0.26%",
+      "Market Value": "21,787.70",
+      "Shares Held": "110.00",
+      "Asset Category": "Equity",
+      "Price": "198.07"
     },
     {
-      "Ticker": "T",
       "Name": "AT&T INC",
-      "Weight (%)": "0.26",
-      "Price": "25.38",
-      "Shares": "854.00",
-      "Market Value": "21,674.52"
+      "Ticker": "T",
+      "Identifier": "2831811",
+      "Weight": "0.26%",
+      "Market Value": "21,674.52",
+      "Shares Held": "854.00",
+      "Asset Category": "Equity",
+      "Price": "25.38"
     },
     {
-      "Ticker": "AXP",
       "Name": "AMERICAN EXPRESS CO",
-      "Weight (%)": "0.25",
-      "Price": "308.89",
-      "Shares": "68.00",
-      "Market Value": "21,004.52"
+      "Ticker": "AXP",
+      "Identifier": "2026082",
+      "Weight": "0.25%",
+      "Market Value": "21,004.52",
+      "Shares Held": "68.00",
+      "Asset Category": "Equity",
+      "Price": "308.89"
     },
     {
-      "Ticker": "DELL",
       "Name": "DELL TECHNOLOGIES -C",
-      "Weight (%)": "0.25",
-      "Price": "562.89",
-      "Shares": "37.00",
-      "Market Value": "20,826.93"
+      "Ticker": "DELL",
+      "Identifier": "BHKD3S6",
+      "Weight": "0.25%",
+      "Market Value": "20,826.93",
+      "Shares Held": "37.00",
+      "Asset Category": "Equity",
+      "Price": "562.89"
     },
     {
-      "Ticker": "MCD",
       "Name": "MCDONALD'S CORP",
-      "Weight (%)": "0.25",
-      "Price": "236.5",
-      "Shares": "88.00",
-      "Market Value": "20,812.00"
+      "Ticker": "MCD",
+      "Identifier": "2550707",
+      "Weight": "0.25%",
+      "Market Value": "20,812.00",
+      "Shares Held": "88.00",
+      "Asset Category": "Equity",
+      "Price": "236.5"
     },
     {
-      "Ticker": "SCHW",
       "Name": "SCHWAB (CHARLES) CORP",
-      "Weight (%)": "0.25",
-      "Price": "99.03",
-      "Shares": "209.00",
-      "Market Value": "20,697.27"
+      "Ticker": "SCHW",
+      "Identifier": "2779397",
+      "Weight": "0.25%",
+      "Market Value": "20,697.27",
+      "Shares Held": "209.00",
+      "Asset Category": "Equity",
+      "Price": "99.03"
     },
     {
-      "Ticker": "BLK",
       "Name": "BLACKROCK INC",
-      "Weight (%)": "0.25",
-      "Price": "1086.31",
-      "Shares": "19.00",
-      "Market Value": "20,639.89"
+      "Ticker": "BLK",
+      "Identifier": "BMZBBT7",
+      "Weight": "0.25%",
+      "Market Value": "20,639.89",
+      "Shares Held": "19.00",
+      "Asset Category": "Equity",
+      "Price": "1086.31"
     },
     {
-      "Ticker": "ELV",
       "Name": "ELEVANCE HEALTH INC",
-      "Weight (%)": "0.25",
-      "Price": "396.09",
-      "Shares": "52.00",
-      "Market Value": "20,596.68"
+      "Ticker": "ELV",
+      "Identifier": "BSPHGL4",
+      "Weight": "0.25%",
+      "Market Value": "20,596.68",
+      "Shares Held": "52.00",
+      "Asset Category": "Equity",
+      "Price": "396.09"
     },
     {
-      "Ticker": "WDC",
       "Name": "WESTERN DIGITAL CORP",
-      "Weight (%)": "0.25",
-      "Price": "456.81",
-      "Shares": "45.00",
-      "Market Value": "20,556.45"
+      "Ticker": "WDC",
+      "Identifier": "2954699",
+      "Weight": "0.25%",
+      "Market Value": "20,556.45",
+      "Shares Held": "45.00",
+      "Asset Category": "Equity",
+      "Price": "456.81"
     },
     {
-      "Ticker": "UBER",
       "Name": "UBER TECHNOLOGIES INC",
-      "Weight (%)": "0.24",
-      "Price": "69.62",
-      "Shares": "284.00",
-      "Market Value": "19,772.08"
+      "Ticker": "UBER",
+      "Identifier": "BK6N347",
+      "Weight": "0.24%",
+      "Market Value": "19,772.08",
+      "Shares Held": "284.00",
+      "Asset Category": "Equity",
+      "Price": "69.62"
     },
     {
-      "Ticker": "NEE",
       "Name": "NEXTERA ENERGY INC",
-      "Weight (%)": "0.24",
-      "Price": "76.08",
-      "Shares": "257.00",
-      "Market Value": "19,552.56"
+      "Ticker": "NEE",
+      "Identifier": "2328915",
+      "Weight": "0.24%",
+      "Market Value": "19,552.56",
+      "Shares Held": "257.00",
+      "Asset Category": "Equity",
+      "Price": "76.08"
     },
     {
-      "Ticker": "COP",
       "Name": "CONOCOPHILLIPS",
-      "Weight (%)": "0.23",
-      "Price": "127.3",
-      "Shares": "149.00",
-      "Market Value": "18,967.70"
+      "Ticker": "COP",
+      "Identifier": "2685717",
+      "Weight": "0.23%",
+      "Market Value": "18,967.70",
+      "Shares Held": "149.00",
+      "Asset Category": "Equity",
+      "Price": "127.3"
     },
     {
-      "Ticker": "TJX",
       "Name": "TJX COMPANIES INC",
-      "Weight (%)": "0.22",
-      "Price": "130.06",
-      "Shares": "138.00",
-      "Market Value": "17,948.28"
+      "Ticker": "TJX",
+      "Identifier": "2989301",
+      "Weight": "0.22%",
+      "Market Value": "17,948.28",
+      "Shares Held": "138.00",
+      "Asset Category": "Equity",
+      "Price": "130.06"
     },
     {
-      "Ticker": "PH",
       "Name": "PARKER HANNIFIN CORP",
-      "Weight (%)": "0.21",
-      "Price": "978.3299999999999",
-      "Shares": "18.00",
-      "Market Value": "17,609.94"
+      "Ticker": "PH",
+      "Identifier": "2671501",
+      "Weight": "0.21%",
+      "Market Value": "17,609.94",
+      "Shares Held": "18.00",
+      "Asset Category": "Equity",
+      "Price": "978.3299999999999"
     },
     {
-      "Ticker": "NOW",
       "Name": "SERVICENOW INC",
-      "Weight (%)": "0.21",
-      "Price": "135.62",
-      "Shares": "128.00",
-      "Market Value": "17,359.36"
+      "Ticker": "NOW",
+      "Identifier": "B80NXX8",
+      "Weight": "0.21%",
+      "Market Value": "17,359.36",
+      "Shares Held": "128.00",
+      "Asset Category": "Equity",
+      "Price": "135.62"
     },
     {
-      "Ticker": "CI",
       "Name": "THE CIGNA GROUP",
-      "Weight (%)": "0.21",
-      "Price": "272.01",
-      "Shares": "63.00",
-      "Market Value": "17,136.63"
+      "Ticker": "CI",
+      "Identifier": "BHJ0775",
+      "Weight": "0.21%",
+      "Market Value": "17,136.63",
+      "Shares Held": "63.00",
+      "Asset Category": "Equity",
+      "Price": "272.01"
     },
     {
-      "Ticker": "PLD",
       "Name": "PROLOGIS INC",
-      "Weight (%)": "0.21",
-      "Price": "133.05",
-      "Shares": "128.00",
-      "Market Value": "17,030.40"
+      "Ticker": "PLD",
+      "Identifier": "B44WZD7",
+      "Weight": "0.21%",
+      "Market Value": "17,030.40",
+      "Shares Held": "128.00",
+      "Asset Category": "Equity",
+      "Price": "133.05"
     },
     {
-      "Ticker": "NEM",
       "Name": "NEWMONT CORP",
-      "Weight (%)": "0.19",
-      "Price": "121.43",
-      "Shares": "131.00",
-      "Market Value": "15,907.33"
+      "Ticker": "NEM",
+      "Identifier": "2636607",
+      "Weight": "0.19%",
+      "Market Value": "15,907.33",
+      "Shares Held": "131.00",
+      "Asset Category": "Equity",
+      "Price": "121.43"
     },
     {
-      "Ticker": "COF",
       "Name": "CAPITAL ONE FINANCIAL CORP",
-      "Weight (%)": "0.19",
-      "Price": "200.2",
-      "Shares": "79.00",
-      "Market Value": "15,815.80"
+      "Ticker": "COF",
+      "Identifier": "2654461",
+      "Weight": "0.19%",
+      "Market Value": "15,815.80",
+      "Shares Held": "79.00",
+      "Asset Category": "Equity",
+      "Price": "200.2"
     },
     {
-      "Ticker": "SPGI",
       "Name": "S&P GLOBAL INC",
-      "Weight (%)": "0.19",
-      "Price": "403.3",
-      "Shares": "39.00",
-      "Market Value": "15,728.70"
+      "Ticker": "SPGI",
+      "Identifier": "BYV2325",
+      "Weight": "0.19%",
+      "Market Value": "15,728.70",
+      "Shares Held": "39.00",
+      "Asset Category": "Equity",
+      "Price": "403.3"
     },
     {
-      "Ticker": "PGR",
       "Name": "PROGRESSIVE CORP",
-      "Weight (%)": "0.19",
-      "Price": "205.5",
-      "Shares": "75.00",
-      "Market Value": "15,412.50"
+      "Ticker": "PGR",
+      "Identifier": "2705024",
+      "Weight": "0.19%",
+      "Market Value": "15,412.50",
+      "Shares Held": "75.00",
+      "Asset Category": "Equity",
+      "Price": "205.5"
     },
     {
-      "Ticker": "BKNG",
       "Name": "BOOKING HOLDINGS INC",
-      "Weight (%)": "0.19",
-      "Price": "163.95",
-      "Shares": "94.00",
-      "Market Value": "15,411.30"
+      "Ticker": "BKNG",
+      "Identifier": "BDRXDB4",
+      "Weight": "0.19%",
+      "Market Value": "15,411.30",
+      "Shares Held": "94.00",
+      "Asset Category": "Equity",
+      "Price": "163.95"
     },
     {
-      "Ticker": "GLW",
       "Name": "CORNING INC",
-      "Weight (%)": "0.19",
-      "Price": "156.74",
-      "Shares": "98.00",
-      "Market Value": "15,360.52"
+      "Ticker": "GLW",
+      "Identifier": "2224701",
+      "Weight": "0.19%",
+      "Market Value": "15,360.52",
+      "Shares Held": "98.00",
+      "Asset Category": "Equity",
+      "Price": "156.74"
     },
     {
-      "Ticker": "BSX",
       "Name": "BOSTON SCIENTIFIC CORP",
-      "Weight (%)": "0.18",
-      "Price": "43.92",
-      "Shares": "345.00",
-      "Market Value": "15,152.40"
+      "Ticker": "BSX",
+      "Identifier": "2113434",
+      "Weight": "0.18%",
+      "Market Value": "15,152.40",
+      "Shares Held": "345.00",
+      "Asset Category": "Equity",
+      "Price": "43.92"
     },
     {
-      "Ticker": "CB",
       "Name": "CHUBB LTD",
-      "Weight (%)": "0.18",
-      "Price": "333.37",
-      "Shares": "45.00",
-      "Market Value": "15,001.65"
+      "Ticker": "CB",
+      "Identifier": "B3BQMF6",
+      "Weight": "0.18%",
+      "Market Value": "15,001.65",
+      "Shares Held": "45.00",
+      "Asset Category": "Equity",
+      "Price": "333.37"
     },
     {
-      "Ticker": "ADP",
       "Name": "AUTOMATIC DATA PROCESSING",
-      "Weight (%)": "0.17",
-      "Price": "263.67",
-      "Shares": "55.00",
-      "Market Value": "14,501.85"
+      "Ticker": "ADP",
+      "Identifier": "2065308",
+      "Weight": "0.17%",
+      "Market Value": "14,501.85",
+      "Shares Held": "55.00",
+      "Asset Category": "Equity",
+      "Price": "263.67"
     },
     {
-      "Ticker": "TT",
       "Name": "TRANE TECHNOLOGIES PLC",
-      "Weight (%)": "0.17",
-      "Price": "454.44",
-      "Shares": "31.00",
-      "Market Value": "14,087.64"
+      "Ticker": "TT",
+      "Identifier": "BK9ZQ96",
+      "Weight": "0.17%",
+      "Market Value": "14,087.64",
+      "Shares Held": "31.00",
+      "Asset Category": "Equity",
+      "Price": "454.44"
     },
     {
-      "Ticker": "VLO",
       "Name": "VALERO ENERGY CORP",
-      "Weight (%)": "0.17",
-      "Price": "387.18",
-      "Shares": "36.00",
-      "Market Value": "13,938.48"
+      "Ticker": "VLO",
+      "Identifier": "2041364",
+      "Weight": "0.17%",
+      "Market Value": "13,938.48",
+      "Shares Held": "36.00",
+      "Asset Category": "Equity",
+      "Price": "387.18"
     },
     {
-      "Ticker": "COR",
       "Name": "CENCORA INC",
-      "Weight (%)": "0.17",
-      "Price": "306.92",
-      "Shares": "45.00",
-      "Market Value": "13,811.40"
+      "Ticker": "COR",
+      "Identifier": "2795393",
+      "Weight": "0.17%",
+      "Market Value": "13,811.40",
+      "Shares Held": "45.00",
+      "Asset Category": "Equity",
+      "Price": "306.92"
     },
     {
-      "Ticker": "MPC",
       "Name": "MARATHON PETROLEUM CORP",
-      "Weight (%)": "0.17",
-      "Price": "393.52",
-      "Shares": "35.00",
-      "Market Value": "13,773.20"
+      "Ticker": "MPC",
+      "Identifier": "B3K3L40",
+      "Weight": "0.17%",
+      "Market Value": "13,773.20",
+      "Shares Held": "35.00",
+      "Asset Category": "Equity",
+      "Price": "393.52"
     },
     {
-      "Ticker": "PWR",
       "Name": "QUANTA SERVICES INC",
-      "Weight (%)": "0.17",
-      "Price": "649.13",
-      "Shares": "21.00",
-      "Market Value": "13,631.73"
+      "Ticker": "PWR",
+      "Identifier": "2150204",
+      "Weight": "0.17%",
+      "Market Value": "13,631.73",
+      "Shares Held": "21.00",
+      "Asset Category": "Equity",
+      "Price": "649.13"
     },
     {
-      "Ticker": "SBUX",
       "Name": "STARBUCKS CORP",
-      "Weight (%)": "0.16",
-      "Price": "94.86",
-      "Shares": "142.00",
-      "Market Value": "13,470.12"
+      "Ticker": "SBUX",
+      "Identifier": "2842255",
+      "Weight": "0.16%",
+      "Market Value": "13,470.12",
+      "Shares Held": "142.00",
+      "Asset Category": "Equity",
+      "Price": "94.86"
     },
     {
-      "Ticker": "VRT",
       "Name": "VERTIV HOLDINGS CO-A",
-      "Weight (%)": "0.16",
-      "Price": "253.28",
-      "Shares": "53.00",
-      "Market Value": "13,423.84"
+      "Ticker": "VRT",
+      "Identifier": "BL3LWS8",
+      "Weight": "0.16%",
+      "Market Value": "13,423.84",
+      "Shares Held": "53.00",
+      "Asset Category": "Equity",
+      "Price": "253.28"
     },
     {
-      "Ticker": "ACN",
       "Name": "ACCENTURE PLC-CL A",
-      "Weight (%)": "0.16",
-      "Price": "176.11",
-      "Shares": "76.00",
-      "Market Value": "13,384.36"
+      "Ticker": "ACN",
+      "Identifier": "B4BNMY3",
+      "Weight": "0.16%",
+      "Market Value": "13,384.36",
+      "Shares Held": "76.00",
+      "Asset Category": "Equity",
+      "Price": "176.11"
     },
     {
-      "Ticker": "LOW",
       "Name": "LOWE'S COS INC",
-      "Weight (%)": "0.16",
-      "Price": "189.28",
-      "Shares": "70.00",
-      "Market Value": "13,249.60"
+      "Ticker": "LOW",
+      "Identifier": "2536763",
+      "Weight": "0.16%",
+      "Market Value": "13,249.60",
+      "Shares Held": "70.00",
+      "Asset Category": "Equity",
+      "Price": "189.28"
     },
     {
-      "Ticker": "FTNT",
       "Name": "FORTINET INC",
-      "Weight (%)": "0.16",
-      "Price": "173.46",
-      "Shares": "76.00",
-      "Market Value": "13,182.96"
+      "Ticker": "FTNT",
+      "Identifier": "B5B2106",
+      "Weight": "0.16%",
+      "Market Value": "13,182.96",
+      "Shares Held": "76.00",
+      "Asset Category": "Equity",
+      "Price": "173.46"
     },
     {
-      "Ticker": "EQIX",
       "Name": "EQUINIX INC",
-      "Weight (%)": "0.16",
-      "Price": "1008.08",
-      "Shares": "13.00",
-      "Market Value": "13,105.04"
+      "Ticker": "EQIX",
+      "Identifier": "BVLZX12",
+      "Weight": "0.16%",
+      "Market Value": "13,105.04",
+      "Shares Held": "13.00",
+      "Asset Category": "Equity",
+      "Price": "1008.08"
     },
     {
-      "Ticker": "BNY",
       "Name": "BANK OF NEW YORK MELLON CORP",
-      "Weight (%)": "0.16",
-      "Price": "150.15",
-      "Shares": "87.00",
-      "Market Value": "13,063.05"
+      "Ticker": "BNY",
+      "Identifier": "B1Z77F6",
+      "Weight": "0.16%",
+      "Market Value": "13,063.05",
+      "Shares Held": "87.00",
+      "Asset Category": "Equity",
+      "Price": "150.15"
     },
     {
-      "Ticker": "FCX",
       "Name": "FREEPORT-MCMORAN INC",
-      "Weight (%)": "0.16",
-      "Price": "72.31",
-      "Shares": "179.00",
-      "Market Value": "12,943.49"
+      "Ticker": "FCX",
+      "Identifier": "2352118",
+      "Weight": "0.16%",
+      "Market Value": "12,943.49",
+      "Shares Held": "179.00",
+      "Asset Category": "Equity",
+      "Price": "72.31"
     },
     {
-      "Ticker": "HWM",
       "Name": "HOWMET AEROSPACE INC",
-      "Weight (%)": "0.15",
-      "Price": "232.48",
-      "Shares": "55.00",
-      "Market Value": "12,786.40"
+      "Ticker": "HWM",
+      "Identifier": "BKLJ8V2",
+      "Weight": "0.15%",
+      "Market Value": "12,786.40",
+      "Shares Held": "55.00",
+      "Asset Category": "Equity",
+      "Price": "232.48"
     },
     {
-      "Ticker": "JCI",
       "Name": "JOHNSON CONTROLS INTERNATION",
-      "Weight (%)": "0.15",
-      "Price": "150.2",
-      "Shares": "84.00",
-      "Market Value": "12,616.80"
+      "Ticker": "JCI",
+      "Identifier": "BY7QL61",
+      "Weight": "0.15%",
+      "Market Value": "12,616.80",
+      "Shares Held": "84.00",
+      "Asset Category": "Equity",
+      "Price": "150.2"
     },
     {
-      "Ticker": "PSX",
       "Name": "PHILLIPS 66",
-      "Weight (%)": "0.15",
-      "Price": "255.75",
-      "Shares": "49.00",
-      "Market Value": "12,531.75"
+      "Ticker": "PSX",
+      "Identifier": "B78C4Y8",
+      "Weight": "0.15%",
+      "Market Value": "12,531.75",
+      "Shares Held": "49.00",
+      "Asset Category": "Equity",
+      "Price": "255.75"
     },
     {
-      "Ticker": "MMM",
       "Name": "3M CO",
-      "Weight (%)": "0.15",
-      "Price": "169.55",
-      "Shares": "72.00",
-      "Market Value": "12,207.60"
+      "Ticker": "MMM",
+      "Identifier": "2595708",
+      "Weight": "0.15%",
+      "Market Value": "12,207.60",
+      "Shares Held": "72.00",
+      "Asset Category": "Equity",
+      "Price": "169.55"
     },
     {
-      "Ticker": "EMR",
       "Name": "EMERSON ELECTRIC CO",
-      "Weight (%)": "0.15",
-      "Price": "158.23",
-      "Shares": "77.00",
-      "Market Value": "12,183.71"
+      "Ticker": "EMR",
+      "Identifier": "2313405",
+      "Weight": "0.15%",
+      "Market Value": "12,183.71",
+      "Shares Held": "77.00",
+      "Asset Category": "Equity",
+      "Price": "158.23"
     },
     {
-      "Ticker": "HOOD",
       "Name": "ROBINHOOD MARKETS INC - A",
-      "Weight (%)": "0.15",
-      "Price": "119.4",
-      "Shares": "102.00",
-      "Market Value": "12,178.80"
+      "Ticker": "HOOD",
+      "Identifier": "BP0TQN6",
+      "Weight": "0.15%",
+      "Market Value": "12,178.80",
+      "Shares Held": "102.00",
+      "Asset Category": "Equity",
+      "Price": "119.4"
     },
     {
-      "Ticker": "CME",
       "Name": "CME GROUP INC",
-      "Weight (%)": "0.15",
-      "Price": "264.48",
-      "Shares": "46.00",
-      "Market Value": "12,166.08"
+      "Ticker": "CME",
+      "Identifier": "2965839",
+      "Weight": "0.15%",
+      "Market Value": "12,166.08",
+      "Shares Held": "46.00",
+      "Asset Category": "Equity",
+      "Price": "264.48"
     },
     {
-      "Ticker": "CAH",
       "Name": "CARDINAL HEALTH INC",
-      "Weight (%)": "0.15",
-      "Price": "220.22",
-      "Shares": "55.00",
-      "Market Value": "12,112.10"
+      "Ticker": "CAH",
+      "Identifier": "2175672",
+      "Weight": "0.15%",
+      "Market Value": "12,112.10",
+      "Shares Held": "55.00",
+      "Asset Category": "Equity",
+      "Price": "220.22"
     },
     {
-      "Ticker": "CSX",
       "Name": "CSX CORP",
-      "Weight (%)": "0.14",
-      "Price": "46.77999999999999",
-      "Shares": "257.00",
-      "Market Value": "12,022.46"
+      "Ticker": "CSX",
+      "Identifier": "2160753",
+      "Weight": "0.14%",
+      "Market Value": "12,022.46",
+      "Shares Held": "257.00",
+      "Asset Category": "Equity",
+      "Price": "46.77999999999999"
     },
     {
-      "Ticker": "BDX",
       "Name": "BECTON DICKINSON AND CO",
-      "Weight (%)": "0.14",
-      "Price": "183.82",
-      "Shares": "65.00",
-      "Market Value": "11,948.30"
+      "Ticker": "BDX",
+      "Identifier": "2087807",
+      "Weight": "0.14%",
+      "Market Value": "11,948.30",
+      "Shares Held": "65.00",
+      "Asset Category": "Equity",
+      "Price": "183.82"
     },
     {
-      "Ticker": "USB",
       "Name": "US BANCORP",
-      "Weight (%)": "0.14",
-      "Price": "59.33",
-      "Shares": "200.00",
-      "Market Value": "11,866.00"
+      "Ticker": "USB",
+      "Identifier": "2736035",
+      "Weight": "0.14%",
+      "Market Value": "11,866.00",
+      "Shares Held": "200.00",
+      "Asset Category": "Equity",
+      "Price": "59.33"
     },
     {
-      "Ticker": "BE",
       "Name": "BLOOM ENERGY CORP- A",
-      "Weight (%)": "0.14",
-      "Price": "288.7",
-      "Shares": "41.00",
-      "Market Value": "11,836.70"
+      "Ticker": "BE",
+      "Identifier": "BDD1BB8",
+      "Weight": "0.14%",
+      "Market Value": "11,836.70",
+      "Shares Held": "41.00",
+      "Asset Category": "Equity",
+      "Price": "288.7"
     },
     {
-      "Ticker": "EW",
       "Name": "EDWARDS LIFESCIENCES CORP",
-      "Weight (%)": "0.14",
-      "Price": "86.28999999999999",
-      "Shares": "137.00",
-      "Market Value": "11,821.73"
+      "Ticker": "EW",
+      "Identifier": "2567116",
+      "Weight": "0.14%",
+      "Market Value": "11,821.73",
+      "Shares Held": "137.00",
+      "Asset Category": "Equity",
+      "Price": "86.28999999999999"
     },
     {
-      "Ticker": "SO",
       "Name": "SOUTHERN CO/THE",
-      "Weight (%)": "0.14",
-      "Price": "82.88",
-      "Shares": "142.00",
-      "Market Value": "11,768.96"
+      "Ticker": "SO",
+      "Identifier": "2829601",
+      "Weight": "0.14%",
+      "Market Value": "11,768.96",
+      "Shares Held": "142.00",
+      "Asset Category": "Equity",
+      "Price": "82.88"
     },
     {
-      "Ticker": "A",
       "Name": "AGILENT TECHNOLOGIES INC",
-      "Weight (%)": "0.14",
-      "Price": "172.79",
-      "Shares": "67.00",
-      "Market Value": "11,576.93"
+      "Ticker": "A",
+      "Identifier": "2520153",
+      "Weight": "0.14%",
+      "Market Value": "11,576.93",
+      "Shares Held": "67.00",
+      "Asset Category": "Equity",
+      "Price": "172.79"
     },
     {
-      "Ticker": "HUM",
       "Name": "HUMANA INC",
-      "Weight (%)": "0.14",
-      "Price": "397.9299999999999",
-      "Shares": "29.00",
-      "Market Value": "11,539.97"
+      "Ticker": "HUM",
+      "Identifier": "2445063",
+      "Weight": "0.14%",
+      "Market Value": "11,539.97",
+      "Shares Held": "29.00",
+      "Asset Category": "Equity",
+      "Price": "397.9299999999999"
     },
     {
-      "Ticker": "ADBE",
       "Name": "ADOBE INC",
-      "Weight (%)": "0.14",
-      "Price": "235.47",
-      "Shares": "49.00",
-      "Market Value": "11,538.03"
+      "Ticker": "ADBE",
+      "Identifier": "2008154",
+      "Weight": "0.14%",
+      "Market Value": "11,538.03",
+      "Shares Held": "49.00",
+      "Asset Category": "Equity",
+      "Price": "235.47"
     },
     {
-      "Ticker": "PNC",
       "Name": "PNC FINANCIAL SERVICES GROUP",
-      "Weight (%)": "0.14",
-      "Price": "225.64",
-      "Shares": "51.00",
-      "Market Value": "11,507.64"
+      "Ticker": "PNC",
+      "Identifier": "2692665",
+      "Weight": "0.14%",
+      "Market Value": "11,507.64",
+      "Shares Held": "51.00",
+      "Asset Category": "Equity",
+      "Price": "225.64"
     },
     {
-      "Ticker": "BX",
       "Name": "BLACKSTONE INC",
-      "Weight (%)": "0.14",
-      "Price": "118.42",
-      "Shares": "96.00",
-      "Market Value": "11,368.32"
+      "Ticker": "BX",
+      "Identifier": "BKF2SL7",
+      "Weight": "0.14%",
+      "Market Value": "11,368.32",
+      "Shares Held": "96.00",
+      "Asset Category": "Equity",
+      "Price": "118.42"
     }
   ]
 }

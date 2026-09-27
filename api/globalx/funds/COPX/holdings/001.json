@@ -4,381 +4,474 @@
   "pageSize": 250,
   "totalRows": 46,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.12",
-      "Price": "1.0",
-      "Shares": "9,136,023.53",
-      "Market Value": "9,136,023.53"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.12%",
+      "Market Value": "9,136,023.53",
+      "Shares Held": "9,136,023.53",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.08",
-      "Price": "1.0",
-      "Shares": "6,033,035.04",
-      "Market Value": "6,033,035.04"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.08%",
+      "Market Value": "6,033,035.04",
+      "Shares Held": "6,033,035.04",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "BVR AU",
       "Name": "BELLAVISTA RESOURCES LTD",
-      "Weight (%)": "0.01",
-      "Price": "0.2950287672231146",
-      "Shares": "2,236,747.00",
-      "Market Value": "659,904.71"
+      "Ticker": "BVR AU",
+      "Identifier": "BNNFYB1",
+      "Weight": "0.01%",
+      "Market Value": "659,904.71",
+      "Shares Held": "2,236,747.00",
+      "Asset Category": "Equity",
+      "Price": "0.2950287672231146"
     },
     {
-      "Ticker": "",
       "Name": "SAUDI RIYAL",
-      "Weight (%)": "0.00",
-      "Price": "0.2663541481537129",
-      "Shares": "377,776.02",
-      "Market Value": "100,622.21"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "100,622.21",
+      "Shares Held": "377,776.02",
+      "Asset Category": "Equity",
+      "Price": "0.2663541481537129"
     },
     {
-      "Ticker": "",
       "Name": "HONG KONG DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.1274868349215783",
-      "Shares": "-61,011.79",
-      "Market Value": "-7,778.20"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-7,778.20",
+      "Shares Held": "-61,011.79",
+      "Asset Category": "Equity",
+      "Price": "0.1274868349215783"
     },
     {
-      "Ticker": "",
       "Name": "CANADIAN DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.7073637730557639",
-      "Shares": "-16,274.13",
-      "Market Value": "-11,511.73"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-11,511.73",
+      "Shares Held": "-16,274.13",
+      "Asset Category": "Equity",
+      "Price": "0.7073637730557639"
+    },
+    {
       "Name": "JAPANESE YEN",
-      "Weight (%)": "-0.00",
-      "Price": "0.006362739572516774",
-      "Shares": "-18,239,780.00",
-      "Market Value": "-116,054.97"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.00%",
+      "Market Value": "-116,054.97",
+      "Shares Held": "-18,239,780.00",
+      "Asset Category": "Equity",
+      "Price": "0.006362739572516774"
     },
     {
-      "Ticker": "HBM CN",
       "Name": "HUDBAY MINERALS INC",
-      "Weight (%)": "5.65",
-      "Price": "26.63224163517947",
-      "Shares": "15,681,508.00",
-      "Market Value": "417,633,710.26"
+      "Ticker": "HBM CN",
+      "Identifier": "B05BDX1",
+      "Weight": "5.65%",
+      "Market Value": "417,633,710.26",
+      "Shares Held": "15,681,508.00",
+      "Asset Category": "Equity",
+      "Price": "26.63224163517947"
     },
     {
-      "Ticker": "TECK/B CN",
       "Name": "TECK RESOURCES LTD-CLS B",
-      "Weight (%)": "5.41",
-      "Price": "66.10313362146313",
-      "Shares": "6,051,902.00",
-      "Market Value": "400,049,686.57"
+      "Ticker": "TECK/B CN",
+      "Identifier": "2879327",
+      "Weight": "5.41%",
+      "Market Value": "400,049,686.57",
+      "Shares Held": "6,051,902.00",
+      "Asset Category": "Equity",
+      "Price": "66.10313362146313"
     },
     {
-      "Ticker": "FM CN",
       "Name": "FIRST QUANTUM MINERALS LTD",
-      "Weight (%)": "5.35",
-      "Price": "32.21334087842327",
-      "Shares": "12,287,903.00",
-      "Market Value": "395,834,408.02"
+      "Ticker": "FM CN",
+      "Identifier": "2347608",
+      "Weight": "5.35%",
+      "Market Value": "395,834,408.02",
+      "Shares Held": "12,287,903.00",
+      "Asset Category": "Equity",
+      "Price": "32.21334087842327"
     },
     {
-      "Ticker": "SCCO",
       "Name": "SOUTHERN COPPER CORP",
-      "Weight (%)": "5.24",
-      "Price": "203.92",
-      "Shares": "1,900,325.00",
-      "Market Value": "387,514,274.00"
+      "Ticker": "SCCO",
+      "Identifier": "2823777",
+      "Weight": "5.24%",
+      "Market Value": "387,514,274.00",
+      "Shares Held": "1,900,325.00",
+      "Asset Category": "Equity",
+      "Price": "203.92"
     },
     {
-      "Ticker": "BHP AU",
       "Name": "BHP GROUP LTD",
-      "Weight (%)": "5.04",
-      "Price": "42.65273006958209",
-      "Shares": "8,737,737.00",
-      "Market Value": "372,688,337.68"
+      "Ticker": "BHP AU",
+      "Identifier": "6144690",
+      "Weight": "5.04%",
+      "Market Value": "372,688,337.68",
+      "Shares Held": "8,737,737.00",
+      "Asset Category": "Equity",
+      "Price": "42.65273006958209"
     },
     {
-      "Ticker": "FCX",
       "Name": "FREEPORT-MCMORAN INC",
-      "Weight (%)": "5.01",
-      "Price": "72.31",
-      "Shares": "5,125,402.00",
-      "Market Value": "370,617,818.62"
+      "Ticker": "FCX",
+      "Identifier": "2352118",
+      "Weight": "5.01%",
+      "Market Value": "370,617,818.62",
+      "Shares Held": "5,125,402.00",
+      "Asset Category": "Equity",
+      "Price": "72.31"
     },
     {
-      "Ticker": "GLEN LN",
       "Name": "GLENCORE PLC",
-      "Weight (%)": "4.65",
-      "Price": "7.431788079457329",
-      "Shares": "46,309,536.00",
-      "Market Value": "344,162,657.61"
+      "Ticker": "GLEN LN",
+      "Identifier": "B4T3BW6",
+      "Weight": "4.65%",
+      "Market Value": "344,162,657.61",
+      "Shares Held": "46,309,536.00",
+      "Asset Category": "Equity",
+      "Price": "7.431788079457329"
     },
     {
-      "Ticker": "ANTO LN",
       "Name": "ANTOFAGASTA PLC",
-      "Weight (%)": "4.59",
-      "Price": "49.40397350965453",
-      "Shares": "6,877,751.00",
-      "Market Value": "339,788,228.21"
+      "Ticker": "ANTO LN",
+      "Identifier": "0045614",
+      "Weight": "4.59%",
+      "Market Value": "339,788,228.21",
+      "Shares Held": "6,877,751.00",
+      "Asset Category": "Equity",
+      "Price": "49.40397350965453"
     },
     {
-      "Ticker": "KGH PW",
       "Name": "KGHM POLSKA MIEDZ SA",
-      "Weight (%)": "4.55",
-      "Price": "86.09124891018546",
-      "Shares": "3,907,775.00",
-      "Market Value": "336,425,230.21"
+      "Ticker": "KGH PW",
+      "Identifier": "5263251",
+      "Weight": "4.55%",
+      "Market Value": "336,425,230.21",
+      "Shares Held": "3,907,775.00",
+      "Asset Category": "Equity",
+      "Price": "86.09124891018546"
     },
     {
-      "Ticker": "BOL SS",
       "Name": "BOLIDEN AB",
-      "Weight (%)": "4.18",
-      "Price": "52.56546721193644",
-      "Shares": "5,885,038.00",
-      "Market Value": "309,349,772.03"
+      "Ticker": "BOL SS",
+      "Identifier": "BPYTZ57",
+      "Weight": "4.18%",
+      "Market Value": "309,349,772.03",
+      "Shares Held": "5,885,038.00",
+      "Asset Category": "Equity",
+      "Price": "52.56546721193644"
     },
     {
-      "Ticker": "5713 JP",
       "Name": "SUMITOMO METAL MINING CO LTD",
-      "Weight (%)": "4.17",
-      "Price": "60.99958642258581",
-      "Shares": "5,057,723.00",
-      "Market Value": "308,519,011.24"
+      "Ticker": "5713 JP",
+      "Identifier": "6858849",
+      "Weight": "4.17%",
+      "Market Value": "308,519,011.24",
+      "Shares Held": "5,057,723.00",
+      "Asset Category": "Equity",
+      "Price": "60.99958642258581"
     },
     {
-      "Ticker": "2899 HK",
       "Name": "ZIJIN MINING GROUP CO LTD-H",
-      "Weight (%)": "4.06",
-      "Price": "4.143320648385759",
-      "Shares": "72,401,035.00",
-      "Market Value": "299,980,703.28"
+      "Ticker": "2899 HK",
+      "Identifier": "6725299",
+      "Weight": "4.06%",
+      "Market Value": "299,980,703.28",
+      "Shares Held": "72,401,035.00",
+      "Asset Category": "Equity",
+      "Price": "4.143320648385759"
     },
     {
-      "Ticker": "LUN CN",
       "Name": "LUNDIN MINING CORP",
-      "Weight (%)": "3.93",
-      "Price": "24.74358067474753",
-      "Shares": "11,734,967.00",
-      "Market Value": "290,365,102.68"
+      "Ticker": "LUN CN",
+      "Identifier": "2866857",
+      "Weight": "3.93%",
+      "Market Value": "290,365,102.68",
+      "Shares Held": "11,734,967.00",
+      "Asset Category": "Equity",
+      "Price": "24.74358067474753"
     },
     {
-      "Ticker": "SFR AU",
       "Name": "SANDFIRE RESOURCES LTD",
-      "Weight (%)": "3.82",
-      "Price": "15.72081849406654",
-      "Shares": "17,971,126.00",
-      "Market Value": "282,520,809.98"
+      "Ticker": "SFR AU",
+      "Identifier": "6739739",
+      "Weight": "3.82%",
+      "Market Value": "282,520,809.98",
+      "Shares Held": "17,971,126.00",
+      "Asset Category": "Equity",
+      "Price": "15.72081849406654"
     },
     {
-      "Ticker": "CS CN",
       "Name": "CAPSTONE COPPER CORP",
-      "Weight (%)": "3.55",
-      "Price": "10.28506755322111",
-      "Shares": "25,550,151.00",
-      "Market Value": "262,785,029.03"
+      "Ticker": "CS CN",
+      "Identifier": "BMY5XY9",
+      "Weight": "3.55%",
+      "Market Value": "262,785,029.03",
+      "Shares Held": "25,550,151.00",
+      "Asset Category": "Equity",
+      "Price": "10.28506755322111"
     },
     {
-      "Ticker": "2099 HK",
       "Name": "CHINA GOLD INTERNATIONAL RES",
-      "Weight (%)": "3.55",
-      "Price": "28.3785592716984",
-      "Shares": "9,259,900.00",
-      "Market Value": "262,782,621.00"
+      "Ticker": "2099 HK",
+      "Identifier": "B60FNV8",
+      "Weight": "3.55%",
+      "Market Value": "262,782,621.00",
+      "Shares Held": "9,259,900.00",
+      "Asset Category": "Equity",
+      "Price": "28.3785592716984"
     },
     {
-      "Ticker": "IVN CN",
       "Name": "IVANHOE MINES LTD-CL A",
-      "Weight (%)": "3.52",
-      "Price": "8.530805687196024",
-      "Shares": "30,507,547.00",
-      "Market Value": "260,253,955.45"
+      "Ticker": "IVN CN",
+      "Identifier": "BD73C40",
+      "Weight": "3.52%",
+      "Market Value": "260,253,955.45",
+      "Shares Held": "30,507,547.00",
+      "Asset Category": "Equity",
+      "Price": "8.530805687196024"
     },
     {
-      "Ticker": "NDA GR",
       "Name": "AURUBIS AG",
-      "Weight (%)": "2.55",
-      "Price": "191.4306562667992",
-      "Shares": "984,051.00",
-      "Market Value": "188,377,528.73"
+      "Ticker": "NDA GR",
+      "Identifier": "5485527",
+      "Weight": "2.55%",
+      "Market Value": "188,377,528.73",
+      "Shares Held": "984,051.00",
+      "Asset Category": "Equity",
+      "Price": "191.4306562667992"
     },
     {
-      "Ticker": "1208 HK",
       "Name": "MMG LTD",
-      "Weight (%)": "2.26",
-      "Price": "1.089374613551819",
-      "Shares": "153,409,960.00",
-      "Market Value": "167,120,915.89"
+      "Ticker": "1208 HK",
+      "Identifier": "6728793",
+      "Weight": "2.26%",
+      "Market Value": "167,120,915.89",
+      "Shares Held": "153,409,960.00",
+      "Asset Category": "Equity",
+      "Price": "1.089374613551819"
     },
     {
-      "Ticker": "358 HK",
       "Name": "JIANGXI COPPER CO LTD-H",
-      "Weight (%)": "2.23",
-      "Price": "4.199414835605243",
-      "Shares": "39,255,601.00",
-      "Market Value": "164,850,553.22"
+      "Ticker": "358 HK",
+      "Identifier": "6000305",
+      "Weight": "2.23%",
+      "Market Value": "164,850,553.22",
+      "Shares Held": "39,255,601.00",
+      "Asset Category": "Equity",
+      "Price": "4.199414835605243"
     },
     {
-      "Ticker": "5711 JP",
       "Name": "MITSUBISHI MATERIALS CORP",
-      "Weight (%)": "2.13",
-      "Price": "32.75538446906831",
-      "Shares": "4,805,185.00",
-      "Market Value": "157,395,682.12"
+      "Ticker": "5711 JP",
+      "Identifier": "6597089",
+      "Weight": "2.13%",
+      "Market Value": "157,395,682.12",
+      "Shares Held": "4,805,185.00",
+      "Asset Category": "Equity",
+      "Price": "32.75538446906831"
     },
     {
-      "Ticker": "ERO CN",
       "Name": "ERO COPPER CORP",
-      "Weight (%)": "1.95",
-      "Price": "37.8298083035193",
-      "Shares": "3,815,876.00",
-      "Market Value": "144,353,857.59"
+      "Ticker": "ERO CN",
+      "Identifier": "BF02Z72",
+      "Weight": "1.95%",
+      "Market Value": "144,353,857.59",
+      "Shares Held": "3,815,876.00",
+      "Asset Category": "Equity",
+      "Price": "37.8298083035193"
     },
     {
-      "Ticker": "TGB",
       "Name": "TREKOR METALS LTD",
-      "Weight (%)": "1.62",
-      "Price": "8.610000000000001",
-      "Shares": "13,952,313.00",
-      "Market Value": "120,129,414.93"
+      "Ticker": "TGB",
+      "Identifier": "BRSCTS7",
+      "Weight": "1.62%",
+      "Market Value": "120,129,414.93",
+      "Shares Held": "13,952,313.00",
+      "Asset Category": "Equity",
+      "Price": "8.610000000000001"
     },
     {
-      "Ticker": "1258 HK",
       "Name": "CHINA NONFERROUS MINING CORP",
-      "Weight (%)": "1.35",
-      "Price": "1.974770364398005",
-      "Shares": "50,417,400.00",
-      "Market Value": "99,562,787.37"
+      "Ticker": "1258 HK",
+      "Identifier": "B890GY2",
+      "Weight": "1.35%",
+      "Market Value": "99,562,787.37",
+      "Shares Held": "50,417,400.00",
+      "Asset Category": "Equity",
+      "Price": "1.974770364398005"
     },
     {
-      "Ticker": "NGEX CN",
       "Name": "NGEX MINERALS LTD",
-      "Weight (%)": "1.32",
-      "Price": "18.12973049435509",
-      "Shares": "5,406,640.00",
-      "Market Value": "98,020,926.08"
+      "Ticker": "NGEX CN",
+      "Identifier": "BVBCQW5",
+      "Weight": "1.32%",
+      "Market Value": "98,020,926.08",
+      "Shares Held": "5,406,640.00",
+      "Asset Category": "Equity",
+      "Price": "18.12973049435509"
     },
     {
-      "Ticker": "ALS CN",
       "Name": "ALTIUS MINERALS CORPORATION",
-      "Weight (%)": "1.15",
-      "Price": "47.23774492418038",
-      "Shares": "1,798,281.00",
-      "Market Value": "84,946,739.18"
+      "Ticker": "ALS CN",
+      "Identifier": "2122355",
+      "Weight": "1.15%",
+      "Market Value": "84,946,739.18",
+      "Shares Held": "1,798,281.00",
+      "Asset Category": "Equity",
+      "Price": "47.23774492418038"
     },
     {
-      "Ticker": "3939 HK",
       "Name": "WANGUO GOLD GROUP LTD",
-      "Weight (%)": "1.07",
-      "Price": "1.740194672423613",
-      "Shares": "45,542,660.00",
-      "Market Value": "79,253,094.30"
+      "Ticker": "3939 HK",
+      "Identifier": "BV106D0",
+      "Weight": "1.07%",
+      "Market Value": "79,253,094.30",
+      "Shares Held": "45,542,660.00",
+      "Asset Category": "Equity",
+      "Price": "1.740194672423613"
     },
     {
-      "Ticker": "ATYM LN",
       "Name": "ATALAYA MINING COPPER SA",
-      "Weight (%)": "0.86",
-      "Price": "13.72185430545436",
-      "Shares": "4,611,360.00",
-      "Market Value": "63,276,410.07"
+      "Ticker": "ATYM LN",
+      "Identifier": "BYZTVM8",
+      "Weight": "0.86%",
+      "Market Value": "63,276,410.07",
+      "Shares Held": "4,611,360.00",
+      "Asset Category": "Equity",
+      "Price": "13.72185430545436"
     },
     {
-      "Ticker": "IE",
       "Name": "IVANHOE ELECTRIC INC / US",
-      "Weight (%)": "0.67",
-      "Price": "10.56",
-      "Shares": "4,713,001.00",
-      "Market Value": "49,769,290.56"
+      "Ticker": "IE",
+      "Identifier": "BPF0KH6",
+      "Weight": "0.67%",
+      "Market Value": "49,769,290.56",
+      "Shares Held": "4,713,001.00",
+      "Asset Category": "Equity",
+      "Price": "10.56"
     },
     {
-      "Ticker": "AMAK AB",
       "Name": "AL MASANE AL KOBRA MINING CO",
-      "Weight (%)": "0.55",
-      "Price": "19.89665459121209",
-      "Shares": "2,028,081.00",
-      "Market Value": "40,352,027.14"
+      "Ticker": "AMAK AB",
+      "Identifier": "BNNVLT6",
+      "Weight": "0.55%",
+      "Market Value": "40,352,027.14",
+      "Shares Held": "2,028,081.00",
+      "Asset Category": "Equity",
+      "Price": "19.89665459121209"
     },
     {
-      "Ticker": "DVP AU",
       "Name": "DEVELOP GLOBAL LTD",
-      "Weight (%)": "0.50",
-      "Price": "3.737031027262516",
-      "Shares": "9,952,860.00",
-      "Market Value": "37,194,146.63"
+      "Ticker": "DVP AU",
+      "Identifier": "BNVQGB0",
+      "Weight": "0.50%",
+      "Market Value": "37,194,146.63",
+      "Shares Held": "9,952,860.00",
+      "Asset Category": "Equity",
+      "Price": "3.737031027262516"
     },
     {
-      "Ticker": "FFM AU",
       "Name": "FIREFLY METALS LTD",
-      "Weight (%)": "0.47",
-      "Price": "1.208213038899295",
-      "Shares": "28,625,223.00",
-      "Market Value": "34,585,367.67"
+      "Ticker": "FFM AU",
+      "Identifier": "BPDXXB2",
+      "Weight": "0.47%",
+      "Market Value": "34,585,367.67",
+      "Shares Held": "28,625,223.00",
+      "Asset Category": "Equity",
+      "Price": "1.208213038899295"
     },
     {
-      "Ticker": "ARG CN",
       "Name": "AMERIGO RESOURCES LTD",
-      "Weight (%)": "0.47",
-      "Price": "6.437009266352971",
-      "Shares": "5,363,383.00",
-      "Market Value": "34,524,146.07"
+      "Ticker": "ARG CN",
+      "Identifier": "2855822",
+      "Weight": "0.47%",
+      "Market Value": "34,524,146.07",
+      "Shares Held": "5,363,383.00",
+      "Asset Category": "Equity",
+      "Price": "6.437009266352971"
     },
     {
-      "Ticker": "1515 JP",
       "Name": "NITTETSU MINING CO LTD",
-      "Weight (%)": "0.45",
-      "Price": "20.64709063745633",
-      "Shares": "1,623,170.00",
-      "Market Value": "33,513,738.11"
+      "Ticker": "1515 JP",
+      "Identifier": "6641027",
+      "Weight": "0.45%",
+      "Market Value": "33,513,738.11",
+      "Shares Held": "1,623,170.00",
+      "Asset Category": "Equity",
+      "Price": "20.64709063745633"
     },
     {
-      "Ticker": "FDY CN",
       "Name": "FARADAY COPPER CORP",
-      "Weight (%)": "0.45",
-      "Price": "3.947089198702046",
-      "Shares": "8,396,602.00",
-      "Market Value": "33,142,137.06"
+      "Ticker": "FDY CN",
+      "Identifier": "BLNNJN8",
+      "Weight": "0.45%",
+      "Market Value": "33,142,137.06",
+      "Shares Held": "8,396,602.00",
+      "Asset Category": "Equity",
+      "Price": "3.947089198702046"
     },
     {
-      "Ticker": "NDM CN",
       "Name": "NORTHERN DYNASTY MINERALS",
-      "Weight (%)": "0.40",
-      "Price": "1.386432765126911",
-      "Shares": "21,130,173.00",
-      "Market Value": "29,295,564.18"
+      "Ticker": "NDM CN",
+      "Identifier": "2637848",
+      "Weight": "0.40%",
+      "Market Value": "29,295,564.18",
+      "Shares Held": "21,130,173.00",
+      "Asset Category": "Equity",
+      "Price": "1.386432765126911"
     },
     {
-      "Ticker": "OM CN",
       "Name": "OSISKO METALS INC",
-      "Weight (%)": "0.39",
-      "Price": "1.266180943801886",
-      "Shares": "22,997,284.00",
-      "Market Value": "29,118,722.76"
+      "Ticker": "OM CN",
+      "Identifier": "BYW9WY0",
+      "Weight": "0.39%",
+      "Market Value": "29,118,722.76",
+      "Shares Held": "22,997,284.00",
+      "Asset Category": "Equity",
+      "Price": "1.266180943801886"
     },
     {
-      "Ticker": "SLS CN",
       "Name": "SOLARIS RESOURCES INC",
-      "Weight (%)": "0.35",
-      "Price": "7.123152013498809",
-      "Shares": "3,621,060.00",
-      "Market Value": "25,793,360.83"
+      "Ticker": "SLS CN",
+      "Identifier": "BMQ5701",
+      "Weight": "0.35%",
+      "Market Value": "25,793,360.83",
+      "Shares Held": "3,621,060.00",
+      "Asset Category": "Equity",
+      "Price": "7.123152013498809"
     },
     {
-      "Ticker": "CNL CN",
       "Name": "COLLECTIVE MINING LTD",
-      "Weight (%)": "0.32",
-      "Price": "12.89523944133373",
-      "Shares": "1,822,555.00",
-      "Market Value": "23,502,283.12"
+      "Ticker": "CNL CN",
+      "Identifier": "BN79Z49",
+      "Weight": "0.32%",
+      "Market Value": "23,502,283.12",
+      "Shares Held": "1,822,555.00",
+      "Asset Category": "Equity",
+      "Price": "12.89523944133373"
     }
   ]
 }

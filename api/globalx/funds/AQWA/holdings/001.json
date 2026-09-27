@@ -4,365 +4,454 @@
   "pageSize": 250,
   "totalRows": 44,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.09",
-      "Price": "1.0",
-      "Shares": "19,315.48",
-      "Market Value": "19,315.48"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.09%",
+      "Market Value": "19,315.48",
+      "Shares Held": "19,315.48",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "BRITISH STERLING POUND",
-      "Weight (%)": "0.00",
-      "Price": "1.0",
-      "Shares": "0.01",
-      "Market Value": "0.01"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.01",
+      "Shares Held": "0.01",
+      "Asset Category": "Equity",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "SAUDI RIYAL",
-      "Weight (%)": "-0.00",
-      "Price": "0.2663536647309968",
-      "Shares": "-728.43",
-      "Market Value": "-194.02"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.00%",
+      "Market Value": "-194.02",
+      "Shares Held": "-728.43",
+      "Asset Category": "Equity",
+      "Price": "0.2663536647309968"
+    },
+    {
       "Name": "CASH",
-      "Weight (%)": "-0.03",
-      "Price": "1.0",
-      "Shares": "-5,242.09",
-      "Market Value": "-5,242.09"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.03%",
+      "Market Value": "-5,242.09",
+      "Shares Held": "-5,242.09",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "AWK",
       "Name": "AMERICAN WATER WORKS CO INC",
-      "Weight (%)": "8.30",
-      "Price": "130.91",
-      "Shares": "13,022.00",
-      "Market Value": "1,704,710.02"
+      "Ticker": "AWK",
+      "Identifier": "B2R3PV1",
+      "Weight": "8.30%",
+      "Market Value": "1,704,710.02",
+      "Shares Held": "13,022.00",
+      "Asset Category": "Equity",
+      "Price": "130.91"
     },
     {
-      "Ticker": "FERG",
       "Name": "FERGUSON ENTERPRISES INC",
-      "Weight (%)": "7.86",
-      "Price": "222.74",
-      "Shares": "7,241.00",
-      "Market Value": "1,612,860.34"
+      "Ticker": "FERG",
+      "Identifier": "BS6VHW3",
+      "Weight": "7.86%",
+      "Market Value": "1,612,860.34",
+      "Shares Held": "7,241.00",
+      "Asset Category": "Equity",
+      "Price": "222.74"
     },
     {
-      "Ticker": "XYL",
       "Name": "XYLEM INC",
-      "Weight (%)": "7.41",
-      "Price": "102.63",
-      "Shares": "14,820.00",
-      "Market Value": "1,520,976.60"
+      "Ticker": "XYL",
+      "Identifier": "B3P2CN8",
+      "Weight": "7.41%",
+      "Market Value": "1,520,976.60",
+      "Shares Held": "14,820.00",
+      "Asset Category": "Equity",
+      "Price": "102.63"
     },
     {
-      "Ticker": "UU/ LN",
       "Name": "UNITED UTILITIES GROUP PLC",
-      "Weight (%)": "7.20",
-      "Price": "18.5695364496313",
-      "Shares": "79,603.00",
-      "Market Value": "1,478,190.81"
+      "Ticker": "UU/ LN",
+      "Identifier": "B39J2M4",
+      "Weight": "7.20%",
+      "Market Value": "1,478,190.81",
+      "Shares Held": "79,603.00",
+      "Asset Category": "Equity",
+      "Price": "18.5695364496313"
     },
     {
-      "Ticker": "WTRG",
       "Name": "ESSENTIAL UTILITIES INC",
-      "Weight (%)": "6.17",
-      "Price": "39.53",
-      "Shares": "32,067.00",
-      "Market Value": "1,267,608.51"
+      "Ticker": "WTRG",
+      "Identifier": "BLCF3J9",
+      "Weight": "6.17%",
+      "Market Value": "1,267,608.51",
+      "Shares Held": "32,067.00",
+      "Asset Category": "Equity",
+      "Price": "39.53"
     },
     {
-      "Ticker": "SVT LN",
       "Name": "SEVERN TRENT PLC",
-      "Weight (%)": "4.67",
-      "Price": "40.55629131225932",
-      "Shares": "23,631.00",
-      "Market Value": "958,385.72"
+      "Ticker": "SVT LN",
+      "Identifier": "B1FH8J7",
+      "Weight": "4.67%",
+      "Market Value": "958,385.72",
+      "Shares Held": "23,631.00",
+      "Asset Category": "Equity",
+      "Price": "40.55629131225932"
     },
     {
-      "Ticker": "WTS",
       "Name": "WATTS WATER TECHNOLOGIES-A",
-      "Weight (%)": "4.49",
-      "Price": "357.79",
-      "Shares": "2,574.00",
-      "Market Value": "920,951.46"
+      "Ticker": "WTS",
+      "Identifier": "2943620",
+      "Weight": "4.49%",
+      "Market Value": "920,951.46",
+      "Shares Held": "2,574.00",
+      "Asset Category": "Equity",
+      "Price": "357.79"
     },
     {
-      "Ticker": "CNM",
       "Name": "CORE & MAIN INC-CLASS A",
-      "Weight (%)": "4.47",
-      "Price": "42.64",
-      "Shares": "21,516.00",
-      "Market Value": "917,442.24"
+      "Ticker": "CNM",
+      "Identifier": "BNXKS92",
+      "Weight": "4.47%",
+      "Market Value": "917,442.24",
+      "Shares Held": "21,516.00",
+      "Asset Category": "Equity",
+      "Price": "42.64"
     },
     {
-      "Ticker": "WMS",
       "Name": "ADVANCED DRAINAGE SYSTEMS IN",
-      "Weight (%)": "4.25",
-      "Price": "133.13",
-      "Shares": "6,556.00",
-      "Market Value": "872,800.28"
+      "Ticker": "WMS",
+      "Identifier": "BP7RS59",
+      "Weight": "4.25%",
+      "Market Value": "872,800.28",
+      "Shares Held": "6,556.00",
+      "Asset Category": "Equity",
+      "Price": "133.13"
     },
     {
-      "Ticker": "ZWS",
       "Name": "ZURN ELKAY WATER SOLUTIONS CORPORATION",
-      "Weight (%)": "4.15",
-      "Price": "46.65",
-      "Shares": "18,278.00",
-      "Market Value": "852,668.70"
+      "Ticker": "ZWS",
+      "Identifier": "BMV1ZD3",
+      "Weight": "4.15%",
+      "Market Value": "852,668.70",
+      "Shares Held": "18,278.00",
+      "Asset Category": "Equity",
+      "Price": "46.65"
     },
     {
-      "Ticker": "PNR",
       "Name": "PENTAIR PLC",
-      "Weight (%)": "3.91",
-      "Price": "53.66",
-      "Shares": "14,953.00",
-      "Market Value": "802,377.98"
+      "Ticker": "PNR",
+      "Identifier": "BLS09M3",
+      "Weight": "3.91%",
+      "Market Value": "802,377.98",
+      "Shares Held": "14,953.00",
+      "Asset Category": "Equity",
+      "Price": "53.66"
     },
     {
-      "Ticker": "AOS",
       "Name": "SMITH (A.O.) CORP",
-      "Weight (%)": "3.87",
-      "Price": "58.65",
-      "Shares": "13,546.00",
-      "Market Value": "794,472.90"
+      "Ticker": "AOS",
+      "Identifier": "2816023",
+      "Weight": "3.87%",
+      "Market Value": "794,472.90",
+      "Shares Held": "13,546.00",
+      "Asset Category": "Equity",
+      "Price": "58.65"
     },
     {
-      "Ticker": "6370 JP",
       "Name": "KURITA WATER INDUSTRIES LTD",
-      "Weight (%)": "2.91",
-      "Price": "49.13943978971579",
-      "Shares": "12,174.00",
-      "Market Value": "598,223.54"
+      "Ticker": "6370 JP",
+      "Identifier": "6497963",
+      "Weight": "2.91%",
+      "Market Value": "598,223.54",
+      "Shares Held": "12,174.00",
+      "Asset Category": "Equity",
+      "Price": "49.13943978971579"
     },
     {
-      "Ticker": "PRMB",
       "Name": "PRIMO BRANDS CORP",
-      "Weight (%)": "2.78",
-      "Price": "19.5",
-      "Shares": "29,321.00",
-      "Market Value": "571,759.50"
+      "Ticker": "PRMB",
+      "Identifier": "BNDXX18",
+      "Weight": "2.78%",
+      "Market Value": "571,759.50",
+      "Shares Held": "29,321.00",
+      "Asset Category": "Equity",
+      "Price": "19.5"
     },
     {
-      "Ticker": "FELE",
       "Name": "FRANKLIN ELECTRIC CO INC",
-      "Weight (%)": "2.42",
-      "Price": "97.07000000000001",
-      "Shares": "5,118.00",
-      "Market Value": "496,804.26"
+      "Ticker": "FELE",
+      "Identifier": "2350383",
+      "Weight": "2.42%",
+      "Market Value": "496,804.26",
+      "Shares Held": "5,118.00",
+      "Asset Category": "Equity",
+      "Price": "97.07000000000001"
     },
     {
-      "Ticker": "021240 KS",
       "Name": "COWAY CO LTD",
-      "Weight (%)": "2.28",
-      "Price": "73.42284322965756",
-      "Shares": "6,366.00",
-      "Market Value": "467,409.82"
+      "Ticker": "021240 KS",
+      "Identifier": "6173401",
+      "Weight": "2.28%",
+      "Market Value": "467,409.82",
+      "Shares Held": "6,366.00",
+      "Asset Category": "Equity",
+      "Price": "73.42284322965756"
     },
     {
-      "Ticker": "BMI",
       "Name": "BADGER METER INC",
-      "Weight (%)": "2.27",
-      "Price": "129.48",
-      "Shares": "3,595.00",
-      "Market Value": "465,480.60"
+      "Ticker": "BMI",
+      "Identifier": "2069128",
+      "Weight": "2.27%",
+      "Market Value": "465,480.60",
+      "Shares Held": "3,595.00",
+      "Asset Category": "Equity",
+      "Price": "129.48"
     },
     {
-      "Ticker": "MWA",
       "Name": "MUELLER WATER PRODUCTS INC-A",
-      "Weight (%)": "2.04",
-      "Price": "21.63",
-      "Shares": "19,320.00",
-      "Market Value": "417,891.60"
+      "Ticker": "MWA",
+      "Identifier": "B15RZR4",
+      "Weight": "2.04%",
+      "Market Value": "417,891.60",
+      "Shares Held": "19,320.00",
+      "Asset Category": "Equity",
+      "Price": "21.63"
     },
     {
-      "Ticker": "AWR",
       "Name": "AMERICAN STATES WATER CO",
-      "Weight (%)": "1.98",
-      "Price": "82.80000000000001",
-      "Shares": "4,898.00",
-      "Market Value": "405,554.40"
+      "Ticker": "AWR",
+      "Identifier": "2267171",
+      "Weight": "1.98%",
+      "Market Value": "405,554.40",
+      "Shares Held": "4,898.00",
+      "Asset Category": "Equity",
+      "Price": "82.80000000000001"
     },
     {
-      "Ticker": "270 HK",
       "Name": "GUANGDONG INVESTMENT LTD",
-      "Weight (%)": "1.83",
-      "Price": "1.109772507374631",
-      "Shares": "339,000.00",
-      "Market Value": "376,212.88"
+      "Ticker": "270 HK",
+      "Identifier": "6913168",
+      "Weight": "1.83%",
+      "Market Value": "376,212.88",
+      "Shares Held": "339,000.00",
+      "Asset Category": "Equity",
+      "Price": "1.109772507374631"
     },
     {
-      "Ticker": "600008 C1",
       "Name": "BEIJING CAPITAL ECO-ENVIRO-A",
-      "Weight (%)": "1.80",
-      "Price": "0.4030339116202946",
-      "Shares": "916,500.00",
-      "Market Value": "369,380.58"
+      "Ticker": "600008 C1",
+      "Identifier": "BP3R7K1",
+      "Weight": "1.80%",
+      "Market Value": "369,380.58",
+      "Shares Held": "916,500.00",
+      "Asset Category": "Equity",
+      "Price": "0.4030339116202946"
     },
     {
-      "Ticker": "CWT",
       "Name": "CALIFORNIA WATER SERVICE GRP",
-      "Weight (%)": "1.72",
-      "Price": "46.16999999999999",
-      "Shares": "7,662.00",
-      "Market Value": "353,754.54"
+      "Ticker": "CWT",
+      "Identifier": "2165383",
+      "Weight": "1.72%",
+      "Market Value": "353,754.54",
+      "Shares Held": "7,662.00",
+      "Asset Category": "Equity",
+      "Price": "46.16999999999999"
     },
     {
-      "Ticker": "HTO",
       "Name": "H2O AMERICA",
-      "Weight (%)": "1.48",
-      "Price": "62.27",
-      "Shares": "4,874.00",
-      "Market Value": "303,503.98"
+      "Ticker": "HTO",
+      "Identifier": "2811932",
+      "Weight": "1.48%",
+      "Market Value": "303,503.98",
+      "Shares Held": "4,874.00",
+      "Asset Category": "Equity",
+      "Price": "62.27"
     },
     {
-      "Ticker": "CSMG3 BZ",
       "Name": "CIA SANEAMENTO MINAS GERAIS",
-      "Weight (%)": "1.28",
-      "Price": "11.11505999576002",
-      "Shares": "23,585.00",
-      "Market Value": "262,148.69"
+      "Ticker": "CSMG3 BZ",
+      "Identifier": "B0YBZJ2",
+      "Weight": "1.28%",
+      "Market Value": "262,148.69",
+      "Shares Held": "23,585.00",
+      "Asset Category": "Equity",
+      "Price": "11.11505999576002"
     },
     {
-      "Ticker": "6368 JP",
       "Name": "ORGANO CORP",
-      "Weight (%)": "1.25",
-      "Price": "80.74316682375118",
-      "Shares": "3,183.00",
-      "Market Value": "257,005.50"
+      "Ticker": "6368 JP",
+      "Identifier": "6470522",
+      "Weight": "1.25%",
+      "Market Value": "257,005.50",
+      "Shares Held": "3,183.00",
+      "Asset Category": "Equity",
+      "Price": "80.74316682375118"
     },
     {
-      "Ticker": "KIT SP",
       "Name": "KEPPEL INFRASTRUCTURE TRUST",
-      "Weight (%)": "1.21",
-      "Price": "0.4031311202459274",
-      "Shares": "617,418.00",
-      "Market Value": "248,900.41"
+      "Ticker": "KIT SP",
+      "Identifier": "B1P31B8",
+      "Weight": "1.21%",
+      "Market Value": "248,900.41",
+      "Shares Held": "617,418.00",
+      "Asset Category": "Fund",
+      "Price": "0.4031311202459274"
     },
     {
-      "Ticker": "000598 C2",
       "Name": "CHENGDU XINGRONG ENVIRONME-A",
-      "Weight (%)": "0.79",
-      "Price": "1.048483031088083",
-      "Shares": "154,400.00",
-      "Market Value": "161,885.78"
+      "Ticker": "000598 C2",
+      "Identifier": "BD5CJV5",
+      "Weight": "0.79%",
+      "Market Value": "161,885.78",
+      "Shares Held": "154,400.00",
+      "Asset Category": "Equity",
+      "Price": "1.048483031088083"
     },
     {
-      "Ticker": "MSEX",
       "Name": "MIDDLESEX WATER CO",
-      "Weight (%)": "0.60",
-      "Price": "53.47",
-      "Shares": "2,291.00",
-      "Market Value": "122,499.77"
+      "Ticker": "MSEX",
+      "Identifier": "2589466",
+      "Weight": "0.60%",
+      "Market Value": "122,499.77",
+      "Shares Held": "2,291.00",
+      "Asset Category": "Equity",
+      "Price": "53.47"
     },
     {
-      "Ticker": "NWPX",
       "Name": "NWPX INFRASTRUCTURE INC",
-      "Weight (%)": "0.58",
-      "Price": "102.83",
-      "Shares": "1,163.00",
-      "Market Value": "119,591.29"
+      "Ticker": "NWPX",
+      "Identifier": "2035925",
+      "Weight": "0.58%",
+      "Market Value": "119,591.29",
+      "Shares Held": "1,163.00",
+      "Asset Category": "Equity",
+      "Price": "102.83"
     },
     {
-      "Ticker": "300070 C2",
       "Name": "BEIJING ORIGINWATER TECHNO-A",
-      "Weight (%)": "0.58",
-      "Price": "0.5011897544453853",
-      "Shares": "236,200.00",
-      "Market Value": "118,381.02"
+      "Ticker": "300070 C2",
+      "Identifier": "BD5CNZ7",
+      "Weight": "0.58%",
+      "Market Value": "118,381.02",
+      "Shares Held": "236,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.5011897544453853"
     },
     {
-      "Ticker": "000920 C2",
       "Name": "VONTRON TECHNOLOGY CO-A",
-      "Weight (%)": "0.48",
-      "Price": "1.890243930635838",
-      "Shares": "51,900.00",
-      "Market Value": "98,103.66"
+      "Ticker": "000920 C2",
+      "Identifier": "BD5LW68",
+      "Weight": "0.48%",
+      "Market Value": "98,103.66",
+      "Shares Held": "51,900.00",
+      "Asset Category": "Equity",
+      "Price": "1.890243930635838"
     },
     {
-      "Ticker": "371 HK",
       "Name": "BEIJING ENTERPRISES WATER GR",
-      "Weight (%)": "0.47",
-      "Price": "0.1976045276234063",
-      "Shares": "489,440.00",
-      "Market Value": "96,715.56"
+      "Ticker": "371 HK",
+      "Identifier": "B01YCG0",
+      "Weight": "0.47%",
+      "Market Value": "96,715.56",
+      "Shares Held": "489,440.00",
+      "Asset Category": "Equity",
+      "Price": "0.1976045276234063"
     },
     {
-      "Ticker": "6254 JP",
       "Name": "NOMURA MICRO SCIENCE CO LTD",
-      "Weight (%)": "0.36",
-      "Price": "21.76057033096927",
-      "Shares": "3,384.00",
-      "Market Value": "73,637.77"
+      "Ticker": "6254 JP",
+      "Identifier": "B248ZF3",
+      "Weight": "0.36%",
+      "Market Value": "73,637.77",
+      "Shares Held": "3,384.00",
+      "Asset Category": "Equity",
+      "Price": "21.76057033096927"
     },
     {
-      "Ticker": "CDZI",
       "Name": "CADIZ INC",
-      "Weight (%)": "0.34",
-      "Price": "3.65",
-      "Shares": "19,167.00",
-      "Market Value": "69,959.55"
+      "Ticker": "CDZI",
+      "Identifier": "2238661",
+      "Weight": "0.34%",
+      "Market Value": "69,959.55",
+      "Shares Held": "19,167.00",
+      "Asset Category": "Equity",
+      "Price": "3.65"
     },
     {
-      "Ticker": "601158 C1",
       "Name": "CHONGQING WATER GROUP-A",
-      "Weight (%)": "0.31",
-      "Price": "0.5919095500459136",
-      "Shares": "108,900.00",
-      "Market Value": "64,458.95"
+      "Ticker": "601158 C1",
+      "Identifier": "BP3R4X3",
+      "Weight": "0.31%",
+      "Market Value": "64,458.95",
+      "Shares Held": "108,900.00",
+      "Asset Category": "Equity",
+      "Price": "0.5919095500459136"
     },
     {
-      "Ticker": "YORW",
       "Name": "YORK WATER CO",
-      "Weight (%)": "0.30",
-      "Price": "30.98",
-      "Shares": "2,004.00",
-      "Market Value": "62,083.92"
+      "Ticker": "YORW",
+      "Identifier": "2425292",
+      "Weight": "0.30%",
+      "Market Value": "62,083.92",
+      "Shares Held": "2,004.00",
+      "Asset Category": "Equity",
+      "Price": "30.98"
     },
     {
-      "Ticker": "AWPT AB",
       "Name": "ALKHORAYEF WATER & POWER TEC",
-      "Weight (%)": "0.30",
-      "Price": "24.55785176377329",
-      "Shares": "2,523.00",
-      "Market Value": "61,959.46"
+      "Ticker": "AWPT AB",
+      "Identifier": "BN33QN1",
+      "Weight": "0.30%",
+      "Market Value": "61,959.46",
+      "Shares Held": "2,523.00",
+      "Asset Category": "Equity",
+      "Price": "24.55785176377329"
     },
     {
-      "Ticker": "MIAHONA AB",
       "Name": "MIAHONA",
-      "Weight (%)": "0.29",
-      "Price": "2.671531878668399",
-      "Shares": "22,319.00",
-      "Market Value": "59,625.92"
+      "Ticker": "MIAHONA AB",
+      "Identifier": "BS9CZJ6",
+      "Weight": "0.29%",
+      "Market Value": "59,625.92",
+      "Shares Held": "22,319.00",
+      "Asset Category": "Equity",
+      "Price": "2.671531878668399"
     },
     {
-      "Ticker": "CWCO",
       "Name": "CONSOLIDATED WATER CO-ORD SH",
-      "Weight (%)": "0.29",
-      "Price": "27.86",
-      "Shares": "2,130.00",
-      "Market Value": "59,341.80"
+      "Ticker": "CWCO",
+      "Identifier": "2099095",
+      "Weight": "0.29%",
+      "Market Value": "59,341.80",
+      "Shares Held": "2,130.00",
+      "Asset Category": "Equity",
+      "Price": "27.86"
     },
     {
-      "Ticker": "ERII",
       "Name": "ENERGY RECOVERY INC",
-      "Weight (%)": "0.26",
-      "Price": "6.81",
-      "Shares": "7,965.00",
-      "Market Value": "54,241.65"
+      "Ticker": "ERII",
+      "Identifier": "B3B5J07",
+      "Weight": "0.26%",
+      "Market Value": "54,241.65",
+      "Shares Held": "7,965.00",
+      "Asset Category": "Equity",
+      "Price": "6.81"
     }
   ]
 }

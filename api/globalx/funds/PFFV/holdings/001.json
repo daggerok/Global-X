@@ -4,493 +4,614 @@
   "pageSize": 250,
   "totalRows": 60,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "B 10/01/26",
-      "Weight (%)": "0.12",
-      "Price": "0.999685725",
-      "Shares": "400,000.00",
-      "Market Value": "399,874.29"
+      "Ticker": "",
+      "Identifier": "BVBFK11",
+      "Weight": "0.12%",
+      "Market Value": "399,874.29",
+      "Shares Held": "400,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.999685725"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.04",
-      "Price": "1.0",
-      "Shares": "127,301.59",
-      "Market Value": "127,301.59"
-    },
-    {
-      "Ticker": "MS",
-      "Name": "MS 4.71453 PERP",
-      "Weight (%)": "4.23",
-      "Price": "19.2",
-      "Shares": "717,910.00",
-      "Market Value": "13,783,872.00"
-    },
-    {
-      "Ticker": "RGA",
-      "Name": "RGA 7 1/8 10/15/52",
-      "Weight (%)": "3.49",
-      "Price": "25.43",
-      "Shares": "446,844.00",
-      "Market Value": "11,363,242.92"
-    },
-    {
-      "Ticker": "BAC",
-      "Name": "BAC 6.45 12/15/66",
-      "Weight (%)": "3.12",
-      "Price": "23.58",
-      "Shares": "430,989.00",
-      "Market Value": "10,162,720.62"
-    },
-    {
-      "Ticker": "APO",
-      "Name": "APO 7 5/8 09/15/53",
-      "Weight (%)": "3.01",
-      "Price": "25.43",
-      "Shares": "385,465.00",
-      "Market Value": "9,802,374.95"
-    },
-    {
-      "Ticker": "KEY",
-      "Name": "KEY 6.2 PERP",
-      "Weight (%)": "2.94",
-      "Price": "24.74",
-      "Shares": "386,840.00",
-      "Market Value": "9,570,421.60"
-    },
-    {
-      "Ticker": "USB",
-      "Name": "USB 4.61453 PERP",
-      "Weight (%)": "2.92",
-      "Price": "18.65",
-      "Shares": "510,012.00",
-      "Market Value": "9,511,723.80"
-    },
-    {
-      "Ticker": "JXN",
-      "Name": "JXN 8 PERP",
-      "Weight (%)": "2.79",
-      "Price": "25.47",
-      "Shares": "356,171.00",
-      "Market Value": "9,071,675.37"
-    },
-    {
-      "Ticker": "GS",
-      "Name": "GS 4.68873 PERP",
-      "Weight (%)": "2.67",
-      "Price": "19.0",
-      "Shares": "458,085.00",
-      "Market Value": "8,703,615.00"
-    },
-    {
-      "Ticker": "ALL",
-      "Name": "ALL 7.50094 01/15/53",
-      "Weight (%)": "2.52",
-      "Price": "25.71",
-      "Shares": "318,953.00",
-      "Market Value": "8,200,281.63"
-    },
-    {
-      "Ticker": "MET",
-      "Name": "MET 5.15616 PERP",
-      "Weight (%)": "2.52",
-      "Price": "21.42",
-      "Shares": "382,518.00",
-      "Market Value": "8,193,535.56"
-    },
-    {
-      "Ticker": "BANC",
-      "Name": "BANC 7 3/4 PERP",
-      "Weight (%)": "2.51",
-      "Price": "24.72",
-      "Shares": "331,018.00",
-      "Market Value": "8,182,764.96"
-    },
-    {
-      "Ticker": "SYF",
-      "Name": "SYF 8 1/4 PERP",
-      "Weight (%)": "2.50",
-      "Price": "25.51",
-      "Shares": "319,292.00",
-      "Market Value": "8,145,138.92"
-    },
-    {
-      "Ticker": "BNY",
-      "Name": "BNY 6.15 PERP",
-      "Weight (%)": "2.37",
-      "Price": "24.22",
-      "Shares": "318,793.00",
-      "Market Value": "7,721,166.46"
-    },
-    {
-      "Ticker": "CHSINC",
-      "Name": "CHSINC 6 3/4 PERP",
-      "Weight (%)": "2.28",
-      "Price": "23.89",
-      "Shares": "310,553.00",
-      "Market Value": "7,419,111.17"
-    },
-    {
-      "Ticker": "RF",
-      "Name": "RF 6.95 PERP",
-      "Weight (%)": "2.27",
-      "Price": "24.92",
-      "Shares": "297,197.00",
-      "Market Value": "7,406,149.24"
-    },
-    {
-      "Ticker": "FITB",
-      "Name": "FITB 7.67122 PERP",
-      "Weight (%)": "2.23",
-      "Price": "25.15780000760585",
-      "Shares": "289,251.00",
-      "Market Value": "7,276,918.81"
-    },
-    {
-      "Ticker": "WTFC",
-      "Name": "WTFC 7 7/8 PERP",
-      "Weight (%)": "2.18",
-      "Price": "25.98",
-      "Shares": "273,109.00",
-      "Market Value": "7,095,371.82"
-    },
-    {
-      "Ticker": "RF",
-      "Name": "RF 5.7 PERP",
-      "Weight (%)": "2.17",
-      "Price": "24.16",
-      "Shares": "292,549.00",
-      "Market Value": "7,067,983.84"
-    },
-    {
-      "Ticker": "CHSINC",
-      "Name": "CHSINC 7.1 PERP",
-      "Weight (%)": "2.02",
-      "Price": "24.62",
-      "Shares": "267,941.00",
-      "Market Value": "6,596,707.42"
-    },
-    {
-      "Ticker": "NLY",
-      "Name": "NLY 9.32894 PERP",
-      "Weight (%)": "2.02",
-      "Price": "25.27",
-      "Shares": "260,580.00",
-      "Market Value": "6,584,856.60"
-    },
-    {
-      "Ticker": "FITB",
-      "Name": "FITB 6 7/8 PERP",
-      "Weight (%)": "1.94",
-      "Price": "24.90030999925064",
-      "Shares": "253,549.00",
-      "Market Value": "6,313,448.70"
-    },
-    {
-      "Ticker": "ATH",
-      "Name": "ATH 6.35 PERP",
-      "Weight (%)": "1.93",
-      "Price": "23.65",
-      "Shares": "266,238.00",
-      "Market Value": "6,296,528.70"
-    },
-    {
-      "Ticker": "CFG",
-      "Name": "CFG 6 1/2 PERP",
-      "Weight (%)": "1.90",
-      "Price": "24.24",
-      "Shares": "255,557.00",
-      "Market Value": "6,194,701.68"
-    },
-    {
-      "Ticker": "FCNCA",
-      "Name": "FCNCA 6 5/8 PERP",
-      "Weight (%)": "1.82",
-      "Price": "23.25",
-      "Shares": "254,899.00",
-      "Market Value": "5,926,401.75"
-    },
-    {
-      "Ticker": "AQNCN",
-      "Name": "AQNCN 8.86372 07/01/2079",
-      "Weight (%)": "1.80",
-      "Price": "26.27",
-      "Shares": "223,248.00",
-      "Market Value": "5,864,724.96"
-    },
-    {
-      "Ticker": "PNFP",
-      "Name": "PNFP 8.397 PERP",
-      "Weight (%)": "1.74",
-      "Price": "25.71",
-      "Shares": "220,063.00",
-      "Market Value": "5,657,819.73"
-    },
-    {
-      "Ticker": "RITM",
-      "Name": "RITM 9.30494 PERP",
-      "Weight (%)": "1.72",
-      "Price": "24.36",
-      "Shares": "229,346.00",
-      "Market Value": "5,586,868.56"
-    },
-    {
-      "Ticker": "USB",
-      "Name": "USB 5.03452 PERP",
-      "Weight (%)": "1.70",
-      "Price": "772.98",
-      "Shares": "7,152.00",
-      "Market Value": "5,528,352.96"
-    },
-    {
-      "Ticker": "AGNC",
-      "Name": "AGNC 8.71153 PERP",
-      "Weight (%)": "1.68",
-      "Price": "25.22",
-      "Shares": "217,489.00",
-      "Market Value": "5,485,072.58"
-    },
-    {
-      "Ticker": "NGL",
-      "Name": "NGL 11.5489 PERP",
-      "Weight (%)": "1.64",
-      "Price": "25.90929997719321",
-      "Shares": "206,079.00",
-      "Market Value": "5,339,362.63"
-    },
-    {
-      "Ticker": "HBAN",
-      "Name": "HBAN 6 7/8 PERP",
-      "Weight (%)": "1.63",
-      "Price": "25.27",
-      "Shares": "210,025.00",
-      "Market Value": "5,307,331.75"
-    },
-    {
-      "Ticker": "UMBF",
-      "Name": "UMBF 7 3/4 PERP",
-      "Weight (%)": "1.52",
-      "Price": "25.92",
-      "Shares": "190,721.00",
-      "Market Value": "4,943,488.32"
-    },
-    {
-      "Ticker": "GS",
-      "Name": "GS 4.76873 PERP",
-      "Weight (%)": "1.51",
-      "Price": "19.16",
-      "Shares": "257,012.00",
-      "Market Value": "4,924,349.92"
-    },
-    {
-      "Ticker": "CIM",
-      "Name": "CIM 9.78483 PERP",
-      "Weight (%)": "1.47",
-      "Price": "23.24009997821298",
-      "Shares": "206,545.00",
-      "Market Value": "4,800,126.45"
-    },
-    {
-      "Ticker": "VOYA",
-      "Name": "VOYA 5.35 PERP",
-      "Weight (%)": "1.37",
-      "Price": "23.39",
-      "Shares": "190,958.00",
-      "Market Value": "4,466,507.62"
-    },
-    {
-      "Ticker": "ATH",
-      "Name": "ATH 7 1/4 03/30/64",
-      "Weight (%)": "1.33",
-      "Price": "24.35",
-      "Shares": "177,824.00",
-      "Market Value": "4,330,014.40"
-    },
-    {
-      "Ticker": "RITM",
-      "Name": "RITM 9.97594 PERP",
-      "Weight (%)": "1.23",
-      "Price": "25.33",
-      "Shares": "158,501.00",
-      "Market Value": "4,014,830.33"
-    },
-    {
-      "Ticker": "NLY",
-      "Name": "NLY 9.32494 PERP",
-      "Weight (%)": "1.22",
-      "Price": "24.96",
-      "Shares": "159,169.00",
-      "Market Value": "3,972,858.24"
-    },
-    {
-      "Ticker": "MFA",
-      "Name": "MFA 9.68094 PERP",
-      "Weight (%)": "1.22",
-      "Price": "22.38310002312608",
-      "Shares": "177,289.00",
-      "Market Value": "3,968,277.42"
-    },
-    {
-      "Ticker": "ATH",
-      "Name": "ATH 7 3/4 PERP",
-      "Weight (%)": "1.21",
-      "Price": "24.95",
-      "Shares": "157,857.00",
-      "Market Value": "3,938,532.15"
-    },
-    {
-      "Ticker": "TVA",
-      "Name": "TVA 2.134 06/01/28",
-      "Weight (%)": "1.21",
-      "Price": "23.8",
-      "Shares": "165,270.00",
-      "Market Value": "3,933,426.00"
-    },
-    {
-      "Ticker": "NLY",
-      "Name": "NLY 8.50794 PERP",
-      "Weight (%)": "1.19",
-      "Price": "25.12",
-      "Shares": "153,647.00",
-      "Market Value": "3,859,612.64"
-    },
-    {
-      "Ticker": "AGNC",
-      "Name": "AGNC 9.32894 PERP",
-      "Weight (%)": "1.18",
-      "Price": "25.57",
-      "Shares": "150,034.00",
-      "Market Value": "3,836,369.38"
-    },
-    {
-      "Ticker": "WSBC",
-      "Name": "WSBC 7 3/8 PERP",
-      "Weight (%)": "1.15",
-      "Price": "25.31",
-      "Shares": "147,724.00",
-      "Market Value": "3,738,894.44"
-    },
-    {
-      "Ticker": "RITM",
-      "Name": "RITM 8 3/4 PERP",
-      "Weight (%)": "1.04",
-      "Price": "24.3",
-      "Shares": "139,653.00",
-      "Market Value": "3,393,567.90"
-    },
-    {
-      "Ticker": "CIM",
-      "Name": "CIM 8.73683 PERP",
-      "Weight (%)": "1.04",
-      "Price": "21.46",
-      "Shares": "157,853.00",
-      "Market Value": "3,387,525.38"
-    },
-    {
-      "Ticker": "PNFP",
-      "Name": "PNFP 7.68794 PERP",
-      "Weight (%)": "0.97",
-      "Price": "25.25",
-      "Shares": "125,697.00",
-      "Market Value": "3,173,849.25"
-    },
-    {
-      "Ticker": "AGNC",
-      "Name": "AGNC 9.44694 PERP",
-      "Weight (%)": "0.95",
-      "Price": "25.69",
-      "Shares": "120,594.00",
-      "Market Value": "3,098,059.86"
-    },
-    {
-      "Ticker": "ADAM",
-      "Name": "ADAM 11.2827 PERP",
-      "Weight (%)": "0.93",
-      "Price": "25.675",
-      "Shares": "117,406.00",
-      "Market Value": "3,014,399.05"
-    },
-    {
-      "Ticker": "CIM",
-      "Name": "CIM 9.33173 PERP",
-      "Weight (%)": "0.89",
-      "Price": "23.22",
-      "Shares": "125,346.00",
-      "Market Value": "2,910,534.12"
-    },
-    {
-      "Ticker": "IVR",
-      "Name": "IVR 7 1/2 PERP",
-      "Weight (%)": "0.78",
-      "Price": "23.95",
-      "Shares": "106,449.00",
-      "Market Value": "2,549,453.55"
-    },
-    {
-      "Ticker": "VLY",
-      "Name": "VLY 8 1/4 PERP",
-      "Weight (%)": "0.76",
-      "Price": "25.37",
-      "Shares": "97,756.00",
-      "Market Value": "2,480,069.72"
-    },
-    {
-      "Ticker": "BAC NEW YORK",
-      "Name": "BAC 4.35225 PERP",
-      "Weight (%)": "0.72",
-      "Price": "18.64",
-      "Shares": "125,245.00",
-      "Market Value": "2,334,566.80"
-    },
-    {
-      "Ticker": "AGNC",
-      "Name": "AGNC 8.34653 PERP",
-      "Weight (%)": "0.68",
-      "Price": "25.21",
-      "Shares": "87,956.00",
-      "Market Value": "2,217,370.76"
-    },
-    {
       "Ticker": "",
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.62",
-      "Price": "1.0",
-      "Shares": "2,015,335.96",
-      "Market Value": "2,015,335.96"
+      "Identifier": "",
+      "Weight": "0.04%",
+      "Market Value": "127,301.59",
+      "Shares Held": "127,301.59",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
+      "Name": "MS 4.71453 PERP",
+      "Ticker": "MS",
+      "Identifier": "B1802M4",
+      "Weight": "4.23%",
+      "Market Value": "13,783,872.00",
+      "Shares Held": "717,910.00",
+      "Asset Category": "Equity",
+      "Price": "19.2"
+    },
+    {
+      "Name": "RGA 7 1/8 10/15/52",
+      "Ticker": "RGA",
+      "Identifier": "BMG9SY4",
+      "Weight": "3.49%",
+      "Market Value": "11,363,242.92",
+      "Shares Held": "446,844.00",
+      "Asset Category": "Equity",
+      "Price": "25.43"
+    },
+    {
+      "Name": "BAC 6.45 12/15/66",
       "Ticker": "BAC",
-      "Name": "BAC 4.77876 PERP",
-      "Weight (%)": "0.51",
-      "Price": "19.79",
-      "Shares": "83,824.00",
-      "Market Value": "1,658,876.96"
+      "Identifier": "BF2PL60",
+      "Weight": "3.12%",
+      "Market Value": "10,162,720.62",
+      "Shares Held": "430,989.00",
+      "Asset Category": "Equity",
+      "Price": "23.58"
     },
     {
-      "Ticker": "RITM",
-      "Name": "RITM 10.1379 PERP",
-      "Weight (%)": "0.47",
-      "Price": "25.38",
-      "Shares": "60,932.00",
-      "Market Value": "1,546,454.16"
+      "Name": "APO 7 5/8 09/15/53",
+      "Ticker": "APO",
+      "Identifier": "BQC5ZW1",
+      "Weight": "3.01%",
+      "Market Value": "9,802,374.95",
+      "Shares Held": "385,465.00",
+      "Asset Category": "Equity",
+      "Price": "25.43"
     },
     {
+      "Name": "KEY 6.2 PERP",
+      "Ticker": "KEY",
+      "Identifier": "BPLPQT9",
+      "Weight": "2.94%",
+      "Market Value": "9,570,421.60",
+      "Shares Held": "386,840.00",
+      "Asset Category": "Equity",
+      "Price": "24.74"
+    },
+    {
+      "Name": "USB 4.61453 PERP",
+      "Ticker": "USB",
+      "Identifier": "B125QN4",
+      "Weight": "2.92%",
+      "Market Value": "9,511,723.80",
+      "Shares Held": "510,012.00",
+      "Asset Category": "Equity",
+      "Price": "18.65"
+    },
+    {
+      "Name": "JXN 8 PERP",
+      "Ticker": "JXN",
+      "Identifier": "BMW6VL7",
+      "Weight": "2.79%",
+      "Market Value": "9,071,675.37",
+      "Shares Held": "356,171.00",
+      "Asset Category": "Equity",
+      "Price": "25.47"
+    },
+    {
+      "Name": "GS 4.68873 PERP",
       "Ticker": "GS",
+      "Identifier": "B15CKS5",
+      "Weight": "2.67%",
+      "Market Value": "8,703,615.00",
+      "Shares Held": "458,085.00",
+      "Asset Category": "Equity",
+      "Price": "19.0"
+    },
+    {
+      "Name": "ALL 7.50094 01/15/53",
+      "Ticker": "ALL",
+      "Identifier": "B87XV26",
+      "Weight": "2.52%",
+      "Market Value": "8,200,281.63",
+      "Shares Held": "318,953.00",
+      "Asset Category": "Equity",
+      "Price": "25.71"
+    },
+    {
+      "Name": "MET 5.15616 PERP",
+      "Ticker": "MET",
+      "Identifier": "B0B87W3",
+      "Weight": "2.52%",
+      "Market Value": "8,193,535.56",
+      "Shares Held": "382,518.00",
+      "Asset Category": "Equity",
+      "Price": "21.42"
+    },
+    {
+      "Name": "BANC 7 3/4 PERP",
+      "Ticker": "BANC",
+      "Identifier": "BMWDYS6",
+      "Weight": "2.51%",
+      "Market Value": "8,182,764.96",
+      "Shares Held": "331,018.00",
+      "Asset Category": "Equity",
+      "Price": "24.72"
+    },
+    {
+      "Name": "SYF 8 1/4 PERP",
+      "Ticker": "SYF",
+      "Identifier": "BSNWT01",
+      "Weight": "2.50%",
+      "Market Value": "8,145,138.92",
+      "Shares Held": "319,292.00",
+      "Asset Category": "Equity",
+      "Price": "25.51"
+    },
+    {
+      "Name": "BNY 6.15 PERP",
+      "Ticker": "BNY",
+      "Identifier": "BTJTLY1",
+      "Weight": "2.37%",
+      "Market Value": "7,721,166.46",
+      "Shares Held": "318,793.00",
+      "Asset Category": "Equity",
+      "Price": "24.22"
+    },
+    {
+      "Name": "CHSINC 6 3/4 PERP",
+      "Ticker": "CHSINC",
+      "Identifier": "BQS2V39",
+      "Weight": "2.28%",
+      "Market Value": "7,419,111.17",
+      "Shares Held": "310,553.00",
+      "Asset Category": "Equity",
+      "Price": "23.89"
+    },
+    {
+      "Name": "RF 6.95 PERP",
+      "Ticker": "RF",
+      "Identifier": "BNM9HL5",
+      "Weight": "2.27%",
+      "Market Value": "7,406,149.24",
+      "Shares Held": "297,197.00",
+      "Asset Category": "Equity",
+      "Price": "24.92"
+    },
+    {
+      "Name": "FITB 7.67122 PERP",
+      "Ticker": "FITB",
+      "Identifier": "BH58353",
+      "Weight": "2.23%",
+      "Market Value": "7,276,918.81",
+      "Shares Held": "289,251.00",
+      "Asset Category": "Equity",
+      "Price": "25.15780000760585"
+    },
+    {
+      "Name": "WTFC 7 7/8 PERP",
+      "Ticker": "WTFC",
+      "Identifier": "BVK4BN8",
+      "Weight": "2.18%",
+      "Market Value": "7,095,371.82",
+      "Shares Held": "273,109.00",
+      "Asset Category": "Equity",
+      "Price": "25.98"
+    },
+    {
+      "Name": "RF 5.7 PERP",
+      "Ticker": "RF",
+      "Identifier": "BJMXZX7",
+      "Weight": "2.17%",
+      "Market Value": "7,067,983.84",
+      "Shares Held": "292,549.00",
+      "Asset Category": "Equity",
+      "Price": "24.16"
+    },
+    {
+      "Name": "CHSINC 7.1 PERP",
+      "Ticker": "CHSINC",
+      "Identifier": "BKJ9QV0",
+      "Weight": "2.02%",
+      "Market Value": "6,596,707.42",
+      "Shares Held": "267,941.00",
+      "Asset Category": "Equity",
+      "Price": "24.62"
+    },
+    {
+      "Name": "NLY 9.32894 PERP",
+      "Ticker": "NLY",
+      "Identifier": "BD0B1Y4",
+      "Weight": "2.02%",
+      "Market Value": "6,584,856.60",
+      "Shares Held": "260,580.00",
+      "Asset Category": "Equity",
+      "Price": "25.27"
+    },
+    {
+      "Name": "FITB 6 7/8 PERP",
+      "Ticker": "FITB",
+      "Identifier": "BW9KZK9",
+      "Weight": "1.94%",
+      "Market Value": "6,313,448.70",
+      "Shares Held": "253,549.00",
+      "Asset Category": "Equity",
+      "Price": "24.90030999925064"
+    },
+    {
+      "Name": "ATH 6.35 PERP",
+      "Ticker": "ATH",
+      "Identifier": "BPSKDY1",
+      "Weight": "1.93%",
+      "Market Value": "6,296,528.70",
+      "Shares Held": "266,238.00",
+      "Asset Category": "Equity",
+      "Price": "23.65"
+    },
+    {
+      "Name": "CFG 6 1/2 PERP",
+      "Ticker": "CFG",
+      "Identifier": "BRT81P5",
+      "Weight": "1.90%",
+      "Market Value": "6,194,701.68",
+      "Shares Held": "255,557.00",
+      "Asset Category": "Equity",
+      "Price": "24.24"
+    },
+    {
+      "Name": "FCNCA 6 5/8 PERP",
+      "Ticker": "FCNCA",
+      "Identifier": "BVYDB19",
+      "Weight": "1.82%",
+      "Market Value": "5,926,401.75",
+      "Shares Held": "254,899.00",
+      "Asset Category": "Equity",
+      "Price": "23.25"
+    },
+    {
+      "Name": "AQNCN 8.86372 07/01/2079",
+      "Ticker": "AQNCN",
+      "Identifier": "BFYWGC0",
+      "Weight": "1.80%",
+      "Market Value": "5,864,724.96",
+      "Shares Held": "223,248.00",
+      "Asset Category": "Equity",
+      "Price": "26.27"
+    },
+    {
+      "Name": "PNFP 8.397 PERP",
+      "Ticker": "PNFP",
+      "Identifier": "BV6GQY4",
+      "Weight": "1.74%",
+      "Market Value": "5,657,819.73",
+      "Shares Held": "220,063.00",
+      "Asset Category": "Equity",
+      "Price": "25.71"
+    },
+    {
+      "Name": "RITM 9.30494 PERP",
+      "Ticker": "RITM",
+      "Identifier": "BLCF612",
+      "Weight": "1.72%",
+      "Market Value": "5,586,868.56",
+      "Shares Held": "229,346.00",
+      "Asset Category": "Equity",
+      "Price": "24.36"
+    },
+    {
+      "Name": "USB 5.03452 PERP",
+      "Ticker": "USB",
+      "Identifier": "B617Z40",
+      "Weight": "1.70%",
+      "Market Value": "5,528,352.96",
+      "Shares Held": "7,152.00",
+      "Asset Category": "Equity",
+      "Price": "772.98"
+    },
+    {
+      "Name": "AGNC 8.71153 PERP",
+      "Ticker": "AGNC",
+      "Identifier": "BK8ZYQ0",
+      "Weight": "1.68%",
+      "Market Value": "5,485,072.58",
+      "Shares Held": "217,489.00",
+      "Asset Category": "Equity",
+      "Price": "25.22"
+    },
+    {
+      "Name": "NGL 11.5489 PERP",
+      "Ticker": "NGL",
+      "Identifier": "BYSX804",
+      "Weight": "1.64%",
+      "Market Value": "5,339,362.63",
+      "Shares Held": "206,079.00",
+      "Asset Category": "Equity",
+      "Price": "25.90929997719321"
+    },
+    {
+      "Name": "HBAN 6 7/8 PERP",
+      "Ticker": "HBAN",
+      "Identifier": "BQMS207",
+      "Weight": "1.63%",
+      "Market Value": "5,307,331.75",
+      "Shares Held": "210,025.00",
+      "Asset Category": "Equity",
+      "Price": "25.27"
+    },
+    {
+      "Name": "UMBF 7 3/4 PERP",
+      "Ticker": "UMBF",
+      "Identifier": "BTNML68",
+      "Weight": "1.52%",
+      "Market Value": "4,943,488.32",
+      "Shares Held": "190,721.00",
+      "Asset Category": "Equity",
+      "Price": "25.92"
+    },
+    {
       "Name": "GS 4.76873 PERP",
-      "Weight (%)": "0.41",
-      "Price": "19.606",
-      "Shares": "67,820.00",
-      "Market Value": "1,329,678.92"
+      "Ticker": "GS",
+      "Identifier": "B07GC93",
+      "Weight": "1.51%",
+      "Market Value": "4,924,349.92",
+      "Shares Held": "257,012.00",
+      "Asset Category": "Equity",
+      "Price": "19.16"
+    },
+    {
+      "Name": "CIM 9.78483 PERP",
+      "Ticker": "CIM",
+      "Identifier": "BYYPKL9",
+      "Weight": "1.47%",
+      "Market Value": "4,800,126.45",
+      "Shares Held": "206,545.00",
+      "Asset Category": "Equity",
+      "Price": "23.24009997821298"
+    },
+    {
+      "Name": "VOYA 5.35 PERP",
+      "Ticker": "VOYA",
+      "Identifier": "BJGS497",
+      "Weight": "1.37%",
+      "Market Value": "4,466,507.62",
+      "Shares Held": "190,958.00",
+      "Asset Category": "Equity",
+      "Price": "23.39"
+    },
+    {
+      "Name": "ATH 7 1/4 03/30/64",
+      "Ticker": "ATH",
+      "Identifier": "BSLKYN5",
+      "Weight": "1.33%",
+      "Market Value": "4,330,014.40",
+      "Shares Held": "177,824.00",
+      "Asset Category": "Equity",
+      "Price": "24.35"
+    },
+    {
+      "Name": "RITM 9.97594 PERP",
+      "Ticker": "RITM",
+      "Identifier": "BHQZFQ8",
+      "Weight": "1.23%",
+      "Market Value": "4,014,830.33",
+      "Shares Held": "158,501.00",
+      "Asset Category": "Equity",
+      "Price": "25.33"
+    },
+    {
+      "Name": "NLY 9.32494 PERP",
+      "Ticker": "NLY",
+      "Identifier": "BK4QDZ9",
+      "Weight": "1.22%",
+      "Market Value": "3,972,858.24",
+      "Shares Held": "159,169.00",
+      "Asset Category": "Equity",
+      "Price": "24.96"
+    },
+    {
+      "Name": "MFA 9.68094 PERP",
+      "Ticker": "MFA",
+      "Identifier": "BLHGG32",
+      "Weight": "1.22%",
+      "Market Value": "3,968,277.42",
+      "Shares Held": "177,289.00",
+      "Asset Category": "Equity",
+      "Price": "22.38310002312608"
+    },
+    {
+      "Name": "ATH 7 3/4 PERP",
+      "Ticker": "ATH",
+      "Identifier": "BPLKV33",
+      "Weight": "1.21%",
+      "Market Value": "3,938,532.15",
+      "Shares Held": "157,857.00",
+      "Asset Category": "Equity",
+      "Price": "24.95"
+    },
+    {
+      "Name": "TVA 2.134 06/01/28",
+      "Ticker": "TVA",
+      "Identifier": "2612674",
+      "Weight": "1.21%",
+      "Market Value": "3,933,426.00",
+      "Shares Held": "165,270.00",
+      "Asset Category": "Equity",
+      "Price": "23.8"
+    },
+    {
+      "Name": "NLY 8.50794 PERP",
+      "Ticker": "NLY",
+      "Identifier": "BF4M2M2",
+      "Weight": "1.19%",
+      "Market Value": "3,859,612.64",
+      "Shares Held": "153,647.00",
+      "Asset Category": "Equity",
+      "Price": "25.12"
+    },
+    {
+      "Name": "AGNC 9.32894 PERP",
+      "Ticker": "AGNC",
+      "Identifier": "BK71BY6",
+      "Weight": "1.18%",
+      "Market Value": "3,836,369.38",
+      "Shares Held": "150,034.00",
+      "Asset Category": "Equity",
+      "Price": "25.57"
+    },
+    {
+      "Name": "WSBC 7 3/8 PERP",
+      "Ticker": "WSBC",
+      "Identifier": "BPCR4M3",
+      "Weight": "1.15%",
+      "Market Value": "3,738,894.44",
+      "Shares Held": "147,724.00",
+      "Asset Category": "Equity",
+      "Price": "25.31"
+    },
+    {
+      "Name": "RITM 8 3/4 PERP",
+      "Ticker": "RITM",
+      "Identifier": "BSSBSP1",
+      "Weight": "1.04%",
+      "Market Value": "3,393,567.90",
+      "Shares Held": "139,653.00",
+      "Asset Category": "Equity",
+      "Price": "24.3"
+    },
+    {
+      "Name": "CIM 8.73683 PERP",
+      "Ticker": "CIM",
+      "Identifier": "BGHCHV0",
+      "Weight": "1.04%",
+      "Market Value": "3,387,525.38",
+      "Shares Held": "157,853.00",
+      "Asset Category": "Equity",
+      "Price": "21.46"
+    },
+    {
+      "Name": "PNFP 7.68794 PERP",
+      "Ticker": "PNFP",
+      "Identifier": "BV6GRK7",
+      "Weight": "0.97%",
+      "Market Value": "3,173,849.25",
+      "Shares Held": "125,697.00",
+      "Asset Category": "Equity",
+      "Price": "25.25"
+    },
+    {
+      "Name": "AGNC 9.44694 PERP",
+      "Ticker": "AGNC",
+      "Identifier": "BDH3TH2",
+      "Weight": "0.95%",
+      "Market Value": "3,098,059.86",
+      "Shares Held": "120,594.00",
+      "Asset Category": "Equity",
+      "Price": "25.69"
+    },
+    {
+      "Name": "ADAM 11.2827 PERP",
+      "Ticker": "ADAM",
+      "Identifier": "BKVHQL2",
+      "Weight": "0.93%",
+      "Market Value": "3,014,399.05",
+      "Shares Held": "117,406.00",
+      "Asset Category": "Equity",
+      "Price": "25.675"
+    },
+    {
+      "Name": "CIM 9.33173 PERP",
+      "Ticker": "CIM",
+      "Identifier": "BHRS1F7",
+      "Weight": "0.89%",
+      "Market Value": "2,910,534.12",
+      "Shares Held": "125,346.00",
+      "Asset Category": "Equity",
+      "Price": "23.22"
+    },
+    {
+      "Name": "IVR 7 1/2 PERP",
+      "Ticker": "IVR",
+      "Identifier": "BZ0CHS7",
+      "Weight": "0.78%",
+      "Market Value": "2,549,453.55",
+      "Shares Held": "106,449.00",
+      "Asset Category": "Equity",
+      "Price": "23.95"
+    },
+    {
+      "Name": "VLY 8 1/4 PERP",
+      "Ticker": "VLY",
+      "Identifier": "BP09108",
+      "Weight": "0.76%",
+      "Market Value": "2,480,069.72",
+      "Shares Held": "97,756.00",
+      "Asset Category": "Equity",
+      "Price": "25.37"
+    },
+    {
+      "Name": "BAC 4.35225 PERP",
+      "Ticker": "BAC NEW YORK",
+      "Identifier": "B1GH4Y3",
+      "Weight": "0.72%",
+      "Market Value": "2,334,566.80",
+      "Shares Held": "125,245.00",
+      "Asset Category": "Equity",
+      "Price": "18.64"
+    },
+    {
+      "Name": "AGNC 8.34653 PERP",
+      "Ticker": "AGNC",
+      "Identifier": "BJBT6K0",
+      "Weight": "0.68%",
+      "Market Value": "2,217,370.76",
+      "Shares Held": "87,956.00",
+      "Asset Category": "Equity",
+      "Price": "25.21"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.62%",
+      "Market Value": "2,015,335.96",
+      "Shares Held": "2,015,335.96",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "BAC 4.77876 PERP",
+      "Ticker": "BAC",
+      "Identifier": "B0PR2S7",
+      "Weight": "0.51%",
+      "Market Value": "1,658,876.96",
+      "Shares Held": "83,824.00",
+      "Asset Category": "Equity",
+      "Price": "19.79"
+    },
+    {
+      "Name": "RITM 10.1379 PERP",
+      "Ticker": "RITM",
+      "Identifier": "BJHNY35",
+      "Weight": "0.47%",
+      "Market Value": "1,546,454.16",
+      "Shares Held": "60,932.00",
+      "Asset Category": "Equity",
+      "Price": "25.38"
+    },
+    {
+      "Name": "GS 4.76873 PERP",
+      "Ticker": "GS",
+      "Identifier": "B0N0V47",
+      "Weight": "0.41%",
+      "Market Value": "1,329,678.92",
+      "Shares Held": "67,820.00",
+      "Asset Category": "Equity",
+      "Price": "19.606"
     }
   ]
 }

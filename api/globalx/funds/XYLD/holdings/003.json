@@ -4,69 +4,84 @@
   "pageSize": 250,
   "totalRows": 507,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "CDNS",
       "Name": "CADENCE DESIGN SYS INC",
-      "Weight (%)": "0.14",
-      "Price": "326.1300000000001",
-      "Shares": "14,780.00",
-      "Market Value": "4,820,201.40"
+      "Ticker": "CDNS",
+      "Identifier": "2302232",
+      "Weight": "0.14%",
+      "Market Value": "4,820,201.40",
+      "Shares Held": "14,780.00",
+      "Asset Category": "Equity",
+      "Price": "326.1300000000001"
     },
     {
-      "Ticker": "HOOD",
       "Name": "ROBINHOOD MARKETS INC - A",
-      "Weight (%)": "0.14",
-      "Price": "119.4",
-      "Shares": "40,335.00",
-      "Market Value": "4,815,999.00"
+      "Ticker": "HOOD",
+      "Identifier": "BP0TQN6",
+      "Weight": "0.14%",
+      "Market Value": "4,815,999.00",
+      "Shares Held": "40,335.00",
+      "Asset Category": "Equity",
+      "Price": "119.4"
     },
     {
-      "Ticker": "JCI",
       "Name": "JOHNSON CONTROLS INTERNATION",
-      "Weight (%)": "0.14",
-      "Price": "150.2",
-      "Shares": "31,799.00",
-      "Market Value": "4,776,209.80"
+      "Ticker": "JCI",
+      "Identifier": "BY7QL61",
+      "Weight": "0.14%",
+      "Market Value": "4,776,209.80",
+      "Shares Held": "31,799.00",
+      "Asset Category": "Equity",
+      "Price": "150.2"
     },
     {
-      "Ticker": "HWM",
       "Name": "HOWMET AEROSPACE INC",
-      "Weight (%)": "0.14",
-      "Price": "232.48",
-      "Shares": "20,465.00",
-      "Market Value": "4,757,703.20"
+      "Ticker": "HWM",
+      "Identifier": "BKLJ8V2",
+      "Weight": "0.14%",
+      "Market Value": "4,757,703.20",
+      "Shares Held": "20,465.00",
+      "Asset Category": "Equity",
+      "Price": "232.48"
     },
     {
-      "Ticker": "PNC",
       "Name": "PNC FINANCIAL SERVICES GROUP",
-      "Weight (%)": "0.14",
-      "Price": "225.64",
-      "Shares": "21,064.00",
-      "Market Value": "4,752,880.96"
+      "Ticker": "PNC",
+      "Identifier": "2692665",
+      "Weight": "0.14%",
+      "Market Value": "4,752,880.96",
+      "Shares Held": "21,064.00",
+      "Asset Category": "Equity",
+      "Price": "225.64"
     },
     {
-      "Ticker": "USB",
       "Name": "US BANCORP",
-      "Weight (%)": "0.14",
-      "Price": "59.33",
-      "Shares": "79,286.00",
-      "Market Value": "4,704,038.38"
+      "Ticker": "USB",
+      "Identifier": "2736035",
+      "Weight": "0.14%",
+      "Market Value": "4,704,038.38",
+      "Shares Held": "79,286.00",
+      "Asset Category": "Equity",
+      "Price": "59.33"
     },
     {
-      "Ticker": "EMR",
       "Name": "EMERSON ELECTRIC CO",
-      "Weight (%)": "0.14",
-      "Price": "158.23",
-      "Shares": "29,308.00",
-      "Market Value": "4,637,404.84"
+      "Ticker": "EMR",
+      "Identifier": "2313405",
+      "Weight": "0.14%",
+      "Market Value": "4,637,404.84",
+      "Shares Held": "29,308.00",
+      "Asset Category": "Equity",
+      "Price": "158.23"
     }
   ]
 }

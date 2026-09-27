@@ -4,277 +4,344 @@
   "pageSize": 250,
   "totalRows": 33,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "NQZ6 Index",
       "Name": "NASDAQ 100 E-MINI DEC26",
-      "Weight (%)": "0.03",
-      "Price": "617785.0",
-      "Shares": "1.00",
-      "Market Value": "617,785.00"
+      "Ticker": "NQZ6 Index",
+      "Identifier": "",
+      "Weight": "0.03%",
+      "Market Value": "617,785.00",
+      "Shares Held": "1.00",
+      "Asset Category": "Equity",
+      "Price": "617785.0"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.03",
-      "Price": "1.0",
-      "Shares": "527,153.53",
-      "Market Value": "527,153.53"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.03%",
+      "Market Value": "527,153.53",
+      "Shares Held": "527,153.53",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.01",
-      "Price": "1.0",
-      "Shares": "-281,033.58",
-      "Market Value": "-281,033.58"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.01%",
+      "Market Value": "-281,033.58",
+      "Shares Held": "-281,033.58",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "OKTA",
       "Name": "OKTA INC",
-      "Weight (%)": "9.59",
-      "Price": "195.19",
-      "Shares": "971,318.00",
-      "Market Value": "189,591,560.42"
+      "Ticker": "OKTA",
+      "Identifier": "BDFZSP1",
+      "Weight": "9.59%",
+      "Market Value": "189,591,560.42",
+      "Shares Held": "971,318.00",
+      "Asset Category": "Equity",
+      "Price": "195.19"
     },
     {
-      "Ticker": "CRWD",
       "Name": "CROWDSTRIKE HOLDINGS INC - A",
-      "Weight (%)": "8.19",
-      "Price": "252.13",
-      "Shares": "641,619.00",
-      "Market Value": "161,771,398.47"
+      "Ticker": "CRWD",
+      "Identifier": "BJJP138",
+      "Weight": "8.19%",
+      "Market Value": "161,771,398.47",
+      "Shares Held": "641,619.00",
+      "Asset Category": "Equity",
+      "Price": "252.13"
     },
     {
-      "Ticker": "PANW",
       "Name": "PALO ALTO NETWORKS INC",
-      "Weight (%)": "7.56",
-      "Price": "374.74",
-      "Shares": "398,645.00",
-      "Market Value": "149,388,227.30"
+      "Ticker": "PANW",
+      "Identifier": "B87ZMX0",
+      "Weight": "7.56%",
+      "Market Value": "149,388,227.30",
+      "Shares Held": "398,645.00",
+      "Asset Category": "Equity",
+      "Price": "374.74"
     },
     {
-      "Ticker": "FTNT",
       "Name": "FORTINET INC",
-      "Weight (%)": "7.45",
-      "Price": "173.46",
-      "Shares": "848,352.00",
-      "Market Value": "147,155,137.92"
+      "Ticker": "FTNT",
+      "Identifier": "B5B2106",
+      "Weight": "7.45%",
+      "Market Value": "147,155,137.92",
+      "Shares Held": "848,352.00",
+      "Asset Category": "Equity",
+      "Price": "173.46"
     },
     {
-      "Ticker": "RBRK",
       "Name": "RUBRIK INC-A",
-      "Weight (%)": "5.59",
-      "Price": "109.55",
-      "Shares": "1,008,473.00",
-      "Market Value": "110,478,217.15"
+      "Ticker": "RBRK",
+      "Identifier": "BSLQK57",
+      "Weight": "5.59%",
+      "Market Value": "110,478,217.15",
+      "Shares Held": "1,008,473.00",
+      "Asset Category": "Equity",
+      "Price": "109.55"
     },
     {
-      "Ticker": "QLYS",
       "Name": "QUALYS INC",
-      "Weight (%)": "5.39",
-      "Price": "172.43",
-      "Shares": "617,369.00",
-      "Market Value": "106,452,936.67"
+      "Ticker": "QLYS",
+      "Identifier": "B7XJTN8",
+      "Weight": "5.39%",
+      "Market Value": "106,452,936.67",
+      "Shares Held": "617,369.00",
+      "Asset Category": "Equity",
+      "Price": "172.43"
     },
     {
-      "Ticker": "ZS",
       "Name": "ZSCALER INC",
-      "Weight (%)": "5.35",
-      "Price": "193.05",
-      "Shares": "547,265.00",
-      "Market Value": "105,649,508.25"
+      "Ticker": "ZS",
+      "Identifier": "BZ00V34",
+      "Weight": "5.35%",
+      "Market Value": "105,649,508.25",
+      "Shares Held": "547,265.00",
+      "Asset Category": "Equity",
+      "Price": "193.05"
     },
     {
-      "Ticker": "SAIL",
       "Name": "SAILPOINT INC",
-      "Weight (%)": "4.90",
-      "Price": "20.64",
-      "Shares": "4,693,859.00",
-      "Market Value": "96,881,249.76"
+      "Ticker": "SAIL",
+      "Identifier": "BRXZ3P6",
+      "Weight": "4.90%",
+      "Market Value": "96,881,249.76",
+      "Shares Held": "4,693,859.00",
+      "Asset Category": "Equity",
+      "Price": "20.64"
     },
     {
-      "Ticker": "NTSK",
       "Name": "NETSKOPE INC-CL A",
-      "Weight (%)": "4.81",
-      "Price": "17.67",
-      "Shares": "5,382,118.00",
-      "Market Value": "95,102,025.06"
+      "Ticker": "NTSK",
+      "Identifier": "BQT3J26",
+      "Weight": "4.81%",
+      "Market Value": "95,102,025.06",
+      "Shares Held": "5,382,118.00",
+      "Asset Category": "Equity",
+      "Price": "17.67"
     },
     {
-      "Ticker": "VRNS",
       "Name": "VARONIS SYSTEMS INC",
-      "Weight (%)": "4.77",
-      "Price": "46.25",
-      "Shares": "2,038,115.00",
-      "Market Value": "94,262,818.75"
+      "Ticker": "VRNS",
+      "Identifier": "BJZ2ZR5",
+      "Weight": "4.77%",
+      "Market Value": "94,262,818.75",
+      "Shares Held": "2,038,115.00",
+      "Asset Category": "Equity",
+      "Price": "46.25"
     },
     {
-      "Ticker": "TENB",
       "Name": "TENABLE HOLDINGS INC",
-      "Weight (%)": "4.35",
-      "Price": "33.49",
-      "Shares": "2,567,761.00",
-      "Market Value": "85,994,315.89"
+      "Ticker": "TENB",
+      "Identifier": "BF7J7N6",
+      "Weight": "4.35%",
+      "Market Value": "85,994,315.89",
+      "Shares Held": "2,567,761.00",
+      "Asset Category": "Equity",
+      "Price": "33.49"
     },
     {
-      "Ticker": "S",
       "Name": "SENTINELONE INC -CLASS A",
-      "Weight (%)": "4.29",
-      "Price": "22.38",
-      "Shares": "3,785,860.00",
-      "Market Value": "84,727,546.80"
+      "Ticker": "S",
+      "Identifier": "BP7L1B8",
+      "Weight": "4.29%",
+      "Market Value": "84,727,546.80",
+      "Shares Held": "3,785,860.00",
+      "Asset Category": "Equity",
+      "Price": "22.38"
     },
     {
-      "Ticker": "AKAM",
       "Name": "AKAMAI TECHNOLOGIES INC",
-      "Weight (%)": "4.00",
-      "Price": "113.94",
-      "Shares": "694,153.00",
-      "Market Value": "79,091,792.82"
+      "Ticker": "AKAM",
+      "Identifier": "2507457",
+      "Weight": "4.00%",
+      "Market Value": "79,091,792.82",
+      "Shares Held": "694,153.00",
+      "Asset Category": "Equity",
+      "Price": "113.94"
     },
     {
-      "Ticker": "CVLT",
       "Name": "COMMVAULT SYSTEMS INC",
-      "Weight (%)": "4.00",
-      "Price": "145.54",
-      "Shares": "542,694.00",
-      "Market Value": "78,983,684.76"
+      "Ticker": "CVLT",
+      "Identifier": "B142B38",
+      "Weight": "4.00%",
+      "Market Value": "78,983,684.76",
+      "Shares Held": "542,694.00",
+      "Asset Category": "Equity",
+      "Price": "145.54"
     },
     {
-      "Ticker": "4704 JP",
       "Name": "TREND MICRO INC",
-      "Weight (%)": "3.23",
-      "Price": "41.61868100327114",
-      "Shares": "1,534,022.00",
-      "Market Value": "63,843,972.27"
+      "Ticker": "4704 JP",
+      "Identifier": "6125286",
+      "Weight": "3.23%",
+      "Market Value": "63,843,972.27",
+      "Shares Held": "1,534,022.00",
+      "Asset Category": "Equity",
+      "Price": "41.61868100327114"
     },
     {
-      "Ticker": "CHKP",
       "Name": "CHECK POINT SOFTWARE TECH",
-      "Weight (%)": "3.17",
-      "Price": "131.24",
-      "Shares": "476,799.00",
-      "Market Value": "62,575,100.76"
+      "Ticker": "CHKP",
+      "Identifier": "2181334",
+      "Weight": "3.17%",
+      "Market Value": "62,575,100.76",
+      "Shares Held": "476,799.00",
+      "Asset Category": "Equity",
+      "Price": "131.24"
     },
     {
-      "Ticker": "GEN",
       "Name": "GEN DIGITAL INC",
-      "Weight (%)": "3.04",
-      "Price": "21.62",
-      "Shares": "2,779,133.00",
-      "Market Value": "60,084,855.46"
+      "Ticker": "GEN",
+      "Identifier": "BJN4XN5",
+      "Weight": "3.04%",
+      "Market Value": "60,084,855.46",
+      "Shares Held": "2,779,133.00",
+      "Asset Category": "Equity",
+      "Price": "21.62"
     },
     {
-      "Ticker": "ATEN",
       "Name": "A10 NETWORKS INC",
-      "Weight (%)": "2.37",
-      "Price": "25.73",
-      "Shares": "1,819,407.00",
-      "Market Value": "46,813,342.11"
+      "Ticker": "ATEN",
+      "Identifier": "BKQVBN6",
+      "Weight": "2.37%",
+      "Market Value": "46,813,342.11",
+      "Shares Held": "1,819,407.00",
+      "Asset Category": "Equity",
+      "Price": "25.73"
     },
     {
-      "Ticker": "RDWR",
       "Name": "RADWARE LTD",
-      "Weight (%)": "1.64",
-      "Price": "29.56",
-      "Shares": "1,094,470.00",
-      "Market Value": "32,352,533.20"
+      "Ticker": "RDWR",
+      "Identifier": "2494548",
+      "Weight": "1.64%",
+      "Market Value": "32,352,533.20",
+      "Shares Held": "1,094,470.00",
+      "Asset Category": "Equity",
+      "Price": "29.56"
     },
     {
-      "Ticker": "RPD",
       "Name": "RAPID7 INC",
-      "Weight (%)": "1.00",
-      "Price": "11.62",
-      "Shares": "1,694,572.00",
-      "Market Value": "19,690,926.64"
+      "Ticker": "RPD",
+      "Identifier": "BZ22CY6",
+      "Weight": "1.00%",
+      "Market Value": "19,690,926.64",
+      "Shares Held": "1,694,572.00",
+      "Asset Category": "Equity",
+      "Price": "11.62"
     },
     {
-      "Ticker": "OSPN",
       "Name": "ONESPAN INC",
-      "Weight (%)": "0.86",
-      "Price": "17.81",
-      "Shares": "950,925.00",
-      "Market Value": "16,935,974.25"
+      "Ticker": "OSPN",
+      "Identifier": "BFNSSD4",
+      "Weight": "0.86%",
+      "Market Value": "16,935,974.25",
+      "Shares Held": "950,925.00",
+      "Asset Category": "Equity",
+      "Price": "17.81"
     },
     {
-      "Ticker": "053800 KS",
       "Name": "AHNLAB INC",
-      "Weight (%)": "0.76",
-      "Price": "54.66249770324462",
-      "Shares": "274,300.00",
-      "Market Value": "14,993,923.12"
+      "Ticker": "053800 KS",
+      "Identifier": "6406271",
+      "Weight": "0.76%",
+      "Market Value": "14,993,923.12",
+      "Shares Held": "274,300.00",
+      "Asset Category": "Equity",
+      "Price": "54.66249770324462"
     },
     {
-      "Ticker": "NCC LN",
       "Name": "NCC GROUP PLC",
-      "Weight (%)": "0.68",
-      "Price": "1.880794702292679",
-      "Shares": "7,143,694.00",
-      "Market Value": "13,435,821.83"
+      "Ticker": "NCC LN",
+      "Identifier": "B01QGK8",
+      "Weight": "0.68%",
+      "Market Value": "13,435,821.83",
+      "Shares Held": "7,143,694.00",
+      "Asset Category": "Equity",
+      "Price": "1.880794702292679"
     },
     {
-      "Ticker": "2326 JP",
       "Name": "DIGITAL ARTS INC",
-      "Weight (%)": "0.56",
-      "Price": "31.1456113080908",
-      "Shares": "358,469.00",
-      "Market Value": "11,164,736.14"
+      "Ticker": "2326 JP",
+      "Identifier": "6543587",
+      "Weight": "0.56%",
+      "Market Value": "11,164,736.14",
+      "Shares Held": "358,469.00",
+      "Asset Category": "Equity",
+      "Price": "31.1456113080908"
     },
     {
-      "Ticker": "3692 JP",
       "Name": "FFRI SECURITY INC",
-      "Weight (%)": "0.53",
-      "Price": "50.13838959340839",
-      "Shares": "208,022.00",
-      "Market Value": "10,429,888.08"
+      "Ticker": "3692 JP",
+      "Identifier": "BQJYQS4",
+      "Weight": "0.53%",
+      "Market Value": "10,429,888.08",
+      "Shares Held": "208,022.00",
+      "Asset Category": "Equity",
+      "Price": "50.13838959340839"
     },
     {
-      "Ticker": "GRRR",
       "Name": "GORILLA TECHNOLOGY GROUP INC",
-      "Weight (%)": "0.50",
-      "Price": "14.01",
-      "Shares": "702,123.00",
-      "Market Value": "9,836,743.23"
+      "Ticker": "GRRR",
+      "Identifier": "BPBRRM5",
+      "Weight": "0.50%",
+      "Market Value": "9,836,743.23",
+      "Shares Held": "702,123.00",
+      "Asset Category": "Equity",
+      "Price": "14.01"
     },
     {
-      "Ticker": "TLS",
       "Name": "TELOS CORPORATION",
-      "Weight (%)": "0.41",
-      "Price": "4.04",
-      "Shares": "1,989,393.00",
-      "Market Value": "8,037,147.72"
+      "Ticker": "TLS",
+      "Identifier": "BLDDYL1",
+      "Weight": "0.41%",
+      "Market Value": "8,037,147.72",
+      "Shares Held": "1,989,393.00",
+      "Asset Category": "Equity",
+      "Price": "4.04"
     },
     {
-      "Ticker": "4258 JP",
       "Name": "AMIYA CORP",
-      "Weight (%)": "0.34",
-      "Price": "35.504088081429",
-      "Shares": "190,006.00",
-      "Market Value": "6,745,989.76"
+      "Ticker": "4258 JP",
+      "Identifier": "BN6SNS7",
+      "Weight": "0.34%",
+      "Market Value": "6,745,989.76",
+      "Shares Held": "190,006.00",
+      "Asset Category": "Equity",
+      "Price": "35.504088081429"
     },
     {
-      "Ticker": "4475 JP",
       "Name": "HENNGE KK",
-      "Weight (%)": "0.34",
-      "Price": "11.3256768339525",
-      "Shares": "587,079.00",
-      "Market Value": "6,649,067.03"
+      "Ticker": "4475 JP",
+      "Identifier": "BKWBPS3",
+      "Weight": "0.34%",
+      "Market Value": "6,649,067.03",
+      "Shares Held": "587,079.00",
+      "Asset Category": "Equity",
+      "Price": "11.3256768339525"
     },
     {
-      "Ticker": "ARQQ",
       "Name": "ARQIT QUANTUM INC",
-      "Weight (%)": "0.31",
-      "Price": "24.6",
-      "Shares": "248,800.00",
-      "Market Value": "6,120,480.00"
+      "Ticker": "ARQQ",
+      "Identifier": "BP092J4",
+      "Weight": "0.31%",
+      "Market Value": "6,120,480.00",
+      "Shares Held": "248,800.00",
+      "Asset Category": "Equity",
+      "Price": "24.6"
     }
   ]
 }

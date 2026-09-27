@@ -4,149 +4,184 @@
   "pageSize": 250,
   "totalRows": 17,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.12",
-      "Price": "1.0",
-      "Shares": "3,157.62",
-      "Market Value": "3,157.62"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.12%",
+      "Market Value": "3,157.62",
+      "Shares Held": "3,157.62",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.02",
-      "Price": "1.0",
-      "Shares": "-479.26",
-      "Market Value": "-479.26"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.02%",
+      "Market Value": "-479.26",
+      "Shares Held": "-479.26",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "6981 JP",
       "Name": "MURATA MANUFACTURING CO LTD",
-      "Weight (%)": "20.99",
-      "Price": "51.04189862861379",
-      "Shares": "10,792.00",
-      "Market Value": "550,844.17"
+      "Ticker": "6981 JP",
+      "Identifier": "6610403",
+      "Weight": "20.99%",
+      "Market Value": "550,844.17",
+      "Shares Held": "10,792.00",
+      "Asset Category": "Equity",
+      "Price": "51.04189862861379"
     },
     {
-      "Ticker": "009150 KS",
       "Name": "SAMSUNG ELECTRO-MECHANICS CO",
-      "Weight (%)": "20.70",
-      "Price": "1108.699653061224",
-      "Shares": "490.00",
-      "Market Value": "543,262.83"
+      "Ticker": "009150 KS",
+      "Identifier": "6771689",
+      "Weight": "20.70%",
+      "Market Value": "543,262.83",
+      "Shares Held": "490.00",
+      "Asset Category": "Equity",
+      "Price": "1108.699653061224"
     },
     {
-      "Ticker": "2327 TT",
       "Name": "YAGEO CORPORATION",
-      "Weight (%)": "14.53",
-      "Price": "18.22208952371853",
-      "Shares": "20,933.00",
-      "Market Value": "381,443.00"
+      "Ticker": "2327 TT",
+      "Identifier": "6984380",
+      "Weight": "14.53%",
+      "Market Value": "381,443.00",
+      "Shares Held": "20,933.00",
+      "Asset Category": "Equity",
+      "Price": "18.22208952371853"
     },
     {
-      "Ticker": "6762 JP",
       "Name": "TDK CORP",
-      "Weight (%)": "13.99",
-      "Price": "18.94823926950062",
-      "Shares": "19,384.00",
-      "Market Value": "367,292.67"
+      "Ticker": "6762 JP",
+      "Identifier": "6869302",
+      "Weight": "13.99%",
+      "Market Value": "367,292.67",
+      "Shares Held": "19,384.00",
+      "Asset Category": "Equity",
+      "Price": "18.94823926950062"
     },
     {
-      "Ticker": "6976 JP",
       "Name": "TAIYO YUDEN CO LTD",
-      "Weight (%)": "6.94",
-      "Price": "58.28269673704414",
-      "Shares": "3,126.00",
-      "Market Value": "182,191.71"
+      "Ticker": "6976 JP",
+      "Identifier": "6870564",
+      "Weight": "6.94%",
+      "Market Value": "182,191.71",
+      "Shares Held": "3,126.00",
+      "Asset Category": "Equity",
+      "Price": "58.28269673704414"
     },
     {
-      "Ticker": "2492 TT",
       "Name": "WALSIN TECHNOLOGY CORP",
-      "Weight (%)": "3.72",
-      "Price": "9.786519253910951",
-      "Shares": "9,972.00",
-      "Market Value": "97,591.17"
+      "Ticker": "2492 TT",
+      "Identifier": "6089694",
+      "Weight": "3.72%",
+      "Market Value": "97,591.17",
+      "Shares Held": "9,972.00",
+      "Asset Category": "Equity",
+      "Price": "9.786519253910951"
     },
     {
-      "Ticker": "001820 KS",
       "Name": "SAMWHA CAPACITOR CO LTD",
-      "Weight (%)": "2.96",
-      "Price": "108.0743055555556",
-      "Shares": "720.00",
-      "Market Value": "77,813.50"
+      "Ticker": "001820 KS",
+      "Identifier": "6220738",
+      "Weight": "2.96%",
+      "Market Value": "77,813.50",
+      "Shares Held": "720.00",
+      "Asset Category": "Equity",
+      "Price": "108.0743055555556"
     },
     {
-      "Ticker": "6173 TT",
       "Name": "PROSPERITY DIELECTRICS CO LT",
-      "Weight (%)": "2.79",
-      "Price": "9.629432102011306",
-      "Shares": "7,607.00",
-      "Market Value": "73,251.09"
+      "Ticker": "6173 TT",
+      "Identifier": "6431905",
+      "Weight": "2.79%",
+      "Market Value": "73,251.09",
+      "Shares Held": "7,607.00",
+      "Asset Category": "Equity",
+      "Price": "9.629432102011306"
     },
     {
-      "Ticker": "6996 JP",
       "Name": "NICHICON CORP",
-      "Weight (%)": "2.15",
-      "Price": "16.61311379006175",
-      "Shares": "3,401.00",
-      "Market Value": "56,501.20"
+      "Ticker": "6996 JP",
+      "Identifier": "6638546",
+      "Weight": "2.15%",
+      "Market Value": "56,501.20",
+      "Shares Held": "3,401.00",
+      "Asset Category": "Equity",
+      "Price": "16.61311379006175"
     },
     {
-      "Ticker": "2472 TT",
       "Name": "LELON ELECTRONICS CORP",
-      "Weight (%)": "2.04",
-      "Price": "6.864701425452678",
-      "Shares": "7,787.00",
-      "Market Value": "53,455.43"
+      "Ticker": "2472 TT",
+      "Identifier": "6272513",
+      "Weight": "2.04%",
+      "Market Value": "53,455.43",
+      "Shares Held": "7,787.00",
+      "Asset Category": "Equity",
+      "Price": "6.864701425452678"
     },
     {
-      "Ticker": "6999 JP",
       "Name": "KOA CORP",
-      "Weight (%)": "1.96",
-      "Price": "14.52613367174281",
-      "Shares": "3,546.00",
-      "Market Value": "51,509.67"
+      "Ticker": "6999 JP",
+      "Identifier": "6495860",
+      "Weight": "1.96%",
+      "Market Value": "51,509.67",
+      "Shares Held": "3,546.00",
+      "Asset Category": "Equity",
+      "Price": "14.52613367174281"
     },
     {
-      "Ticker": "2428 TT",
       "Name": "THINKING ELECTRONIC INDUSTRI",
-      "Weight (%)": "1.86",
-      "Price": "8.011436309914641",
-      "Shares": "6,092.00",
-      "Market Value": "48,805.67"
+      "Ticker": "2428 TT",
+      "Identifier": "6146629",
+      "Weight": "1.86%",
+      "Market Value": "48,805.67",
+      "Shares Held": "6,092.00",
+      "Asset Category": "Equity",
+      "Price": "8.011436309914641"
     },
     {
-      "Ticker": "3357 TT",
       "Name": "TAI-TECH ADVANCED ELECTRONIC",
-      "Weight (%)": "1.81",
-      "Price": "6.471983414899403",
-      "Shares": "7,356.00",
-      "Market Value": "47,607.91"
+      "Ticker": "3357 TT",
+      "Identifier": "B5VH4Z7",
+      "Weight": "1.81%",
+      "Market Value": "47,607.91",
+      "Shares Held": "7,356.00",
+      "Asset Category": "Equity",
+      "Price": "6.471983414899403"
     },
     {
-      "Ticker": "2478 TT",
       "Name": "TA-I TECHNOLOGY CO LTD",
-      "Weight (%)": "1.72",
-      "Price": "3.77008773395722",
-      "Shares": "11,968.00",
-      "Market Value": "45,120.41"
+      "Ticker": "2478 TT",
+      "Identifier": "6176079",
+      "Weight": "1.72%",
+      "Market Value": "45,120.41",
+      "Shares Held": "11,968.00",
+      "Asset Category": "Equity",
+      "Price": "3.77008773395722"
     },
     {
-      "Ticker": "6997 JP",
       "Name": "NIPPON CHEMI-CON CORP",
-      "Weight (%)": "1.72",
-      "Price": "16.54312179016875",
-      "Shares": "2,726.00",
-      "Market Value": "45,096.55"
+      "Ticker": "6997 JP",
+      "Identifier": "6640358",
+      "Weight": "1.72%",
+      "Market Value": "45,096.55",
+      "Shares Held": "2,726.00",
+      "Asset Category": "Equity",
+      "Price": "16.54312179016875"
     }
   ]
 }

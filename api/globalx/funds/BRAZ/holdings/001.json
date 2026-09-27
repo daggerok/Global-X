@@ -4,245 +4,304 @@
   "pageSize": 250,
   "totalRows": 29,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "BRAZILIAN REAL",
-      "Weight (%)": "0.00",
-      "Price": "0.1920867900446713",
-      "Shares": "172.37",
-      "Market Value": "33.11"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "33.11",
+      "Shares Held": "172.37",
+      "Asset Category": "Equity",
+      "Price": "0.1920867900446713"
     },
     {
-      "Ticker": "PBR",
       "Name": "PETROLEO BRASILEIRO-SPON ADR",
-      "Weight (%)": "15.49",
-      "Price": "20.37",
-      "Shares": "79,422.00",
-      "Market Value": "1,617,826.14"
+      "Ticker": "PBR",
+      "Identifier": "2616580",
+      "Weight": "15.49%",
+      "Market Value": "1,617,826.14",
+      "Shares Held": "79,422.00",
+      "Asset Category": "Equity",
+      "Price": "20.37"
     },
     {
-      "Ticker": "ITUB",
       "Name": "ITAU UNIBANCO H-SPON PRF ADR",
-      "Weight (%)": "10.58",
-      "Price": "8.110000000000001",
-      "Shares": "136,294.00",
-      "Market Value": "1,105,344.34"
+      "Ticker": "ITUB",
+      "Identifier": "2849739",
+      "Weight": "10.58%",
+      "Market Value": "1,105,344.34",
+      "Shares Held": "136,294.00",
+      "Asset Category": "Equity",
+      "Price": "8.110000000000001"
     },
     {
-      "Ticker": "NU",
       "Name": "NU HOLDINGS LTD/CAYMAN ISL-A",
-      "Weight (%)": "10.48",
-      "Price": "13.59",
-      "Shares": "80,567.00",
-      "Market Value": "1,094,905.53"
+      "Ticker": "NU",
+      "Identifier": "BN6NP19",
+      "Weight": "10.48%",
+      "Market Value": "1,094,905.53",
+      "Shares Held": "80,567.00",
+      "Asset Category": "Equity",
+      "Price": "13.59"
     },
     {
-      "Ticker": "VALE",
       "Name": "VALE SA-SP ADR",
-      "Weight (%)": "7.23",
-      "Price": "13.61",
-      "Shares": "55,501.00",
-      "Market Value": "755,368.61"
+      "Ticker": "VALE",
+      "Identifier": "2857334",
+      "Weight": "7.23%",
+      "Market Value": "755,368.61",
+      "Shares Held": "55,501.00",
+      "Asset Category": "Equity",
+      "Price": "13.61"
     },
     {
-      "Ticker": "BPAC11 BZ",
       "Name": "BANCO BTG PACTUAL SA-UNIT",
-      "Weight (%)": "5.22",
-      "Price": "12.04483686534216",
-      "Shares": "45,300.00",
-      "Market Value": "545,631.11"
+      "Ticker": "BPAC11 BZ",
+      "Identifier": "BZBZVC7",
+      "Weight": "5.22%",
+      "Market Value": "545,631.11",
+      "Shares Held": "45,300.00",
+      "Asset Category": "Equity",
+      "Price": "12.04483686534216"
     },
     {
-      "Ticker": "ITSA4 BZ",
       "Name": "ITAUSA SA",
-      "Weight (%)": "4.69",
-      "Price": "2.68751622762015",
-      "Shares": "182,251.00",
-      "Market Value": "489,802.52"
+      "Ticker": "ITSA4 BZ",
+      "Identifier": "2458771",
+      "Weight": "4.69%",
+      "Market Value": "489,802.52",
+      "Shares Held": "182,251.00",
+      "Asset Category": "Equity",
+      "Price": "2.68751622762015"
     },
     {
-      "Ticker": "AXIAY",
       "Name": "AXIA ENERGIA-ADR",
-      "Weight (%)": "4.40",
-      "Price": "10.45",
-      "Shares": "44,000.00",
-      "Market Value": "459,800.00"
+      "Ticker": "AXIAY",
+      "Identifier": "2186812",
+      "Weight": "4.40%",
+      "Market Value": "459,800.00",
+      "Shares Held": "44,000.00",
+      "Asset Category": "Equity",
+      "Price": "10.45"
     },
     {
-      "Ticker": "BBD",
       "Name": "BANCO BRADESCO-ADR",
-      "Weight (%)": "4.39",
-      "Price": "3.41",
-      "Shares": "134,552.00",
-      "Market Value": "458,822.32"
+      "Ticker": "BBD",
+      "Identifier": "B00FSK0",
+      "Weight": "4.39%",
+      "Market Value": "458,822.32",
+      "Shares Held": "134,552.00",
+      "Asset Category": "Equity",
+      "Price": "3.41"
     },
     {
-      "Ticker": "ELPC",
       "Name": "CIA PARANAENSE DE ENER-ADR",
-      "Weight (%)": "4.12",
-      "Price": "12.24",
-      "Shares": "35,198.00",
-      "Market Value": "430,823.52"
+      "Ticker": "ELPC",
+      "Identifier": "BPDHMY0",
+      "Weight": "4.12%",
+      "Market Value": "430,823.52",
+      "Shares Held": "35,198.00",
+      "Asset Category": "Equity",
+      "Price": "12.24"
     },
     {
-      "Ticker": "WEGE3 BZ",
       "Name": "WEG SA",
-      "Weight (%)": "4.00",
-      "Price": "9.810682863849767",
-      "Shares": "42,600.00",
-      "Market Value": "417,935.09"
+      "Ticker": "WEGE3 BZ",
+      "Identifier": "2945422",
+      "Weight": "4.00%",
+      "Market Value": "417,935.09",
+      "Shares Held": "42,600.00",
+      "Asset Category": "Equity",
+      "Price": "9.810682863849767"
     },
     {
-      "Ticker": "B3SA3 BZ",
       "Name": "B3 SA-BRASIL BOLSA BALCAO",
-      "Weight (%)": "3.88",
-      "Price": "3.450163744680851",
-      "Shares": "117,500.00",
-      "Market Value": "405,394.24"
+      "Ticker": "B3SA3 BZ",
+      "Identifier": "BG36ZK1",
+      "Weight": "3.88%",
+      "Market Value": "405,394.24",
+      "Shares Held": "117,500.00",
+      "Asset Category": "Equity",
+      "Price": "3.450163744680851"
     },
     {
-      "Ticker": "EMBJ",
       "Name": "EMBRAER SA-SPON ADR",
-      "Weight (%)": "2.65",
-      "Price": "78.63",
-      "Shares": "3,520.00",
-      "Market Value": "276,777.60"
+      "Ticker": "EMBJ",
+      "Identifier": "2611916",
+      "Weight": "2.65%",
+      "Market Value": "276,777.60",
+      "Shares Held": "3,520.00",
+      "Asset Category": "Equity",
+      "Price": "78.63"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "2.23",
-      "Price": "1.0",
-      "Shares": "233,060.29",
-      "Market Value": "233,060.29"
-    },
-    {
-      "Ticker": "RADL3 BZ",
-      "Name": "RAIA DROGASIL SA",
-      "Weight (%)": "2.18",
-      "Price": "3.488584356720669",
-      "Shares": "65,306.00",
-      "Market Value": "227,825.49"
-    },
-    {
-      "Ticker": "XP",
-      "Name": "XP INC - CLASS A",
-      "Weight (%)": "2.15",
-      "Price": "20.51",
-      "Shares": "10,930.00",
-      "Market Value": "224,174.30"
-    },
-    {
-      "Ticker": "PRIO3 BZ",
-      "Name": "PRIO SA",
-      "Weight (%)": "2.08",
-      "Price": "11.40129267015707",
-      "Shares": "19,100.00",
-      "Market Value": "217,764.69"
-    },
-    {
-      "Ticker": "ERO CN",
-      "Name": "ERO COPPER CORP",
-      "Weight (%)": "2.05",
-      "Price": "37.82980895099947",
-      "Shares": "5,653.00",
-      "Market Value": "213,851.91"
-    },
-    {
-      "Ticker": "EQTL3 BZ",
-      "Name": "EQUATORIAL SA - ORD",
-      "Weight (%)": "1.81",
-      "Price": "7.643764919354838",
-      "Shares": "24,800.00",
-      "Market Value": "189,565.37"
-    },
-    {
-      "Ticker": "RENT3 BZ",
-      "Name": "LOCALIZA RENT A CAR",
-      "Weight (%)": "1.67",
-      "Price": "7.26021625",
-      "Shares": "24,000.00",
-      "Market Value": "174,245.19"
-    },
-    {
-      "Ticker": "VBBR3 BZ",
-      "Name": "VIBRA ENERGIA SA",
-      "Weight (%)": "1.29",
-      "Price": "7.148139893617021",
-      "Shares": "18,800.00",
-      "Market Value": "134,385.03"
-    },
-    {
-      "Ticker": "DIRR3 BZ",
-      "Name": "DIRECIONAL ENGENHARIA SA",
-      "Weight (%)": "1.26",
-      "Price": "1.882606134094151",
-      "Shares": "70,100.00",
-      "Market Value": "131,970.69"
-    },
-    {
-      "Ticker": "JBSS32 BZ",
-      "Name": "JBS NV",
-      "Weight (%)": "1.26",
-      "Price": "11.4454765638613",
-      "Shares": "11,478.00",
-      "Market Value": "131,371.18"
-    },
-    {
-      "Ticker": "AUGO",
-      "Name": "AURA MINERALS INC",
-      "Weight (%)": "1.04",
-      "Price": "83.57000000000001",
-      "Shares": "1,303.00",
-      "Market Value": "108,891.71"
-    },
-    {
-      "Ticker": "WPM",
-      "Name": "WHEATON PRECIOUS METALS CORP",
-      "Weight (%)": "0.97",
-      "Price": "142.92",
-      "Shares": "713.00",
-      "Market Value": "101,901.96"
-    },
-    {
-      "Ticker": "MULT3 BZ",
-      "Name": "MULTIPLAN EMPREENDIMENTOS",
-      "Weight (%)": "0.95",
-      "Price": "5.974392814371257",
-      "Shares": "16,700.00",
-      "Market Value": "99,772.36"
-    },
-    {
-      "Ticker": "VIVA3 BZ",
-      "Name": "VIVARA PARTICIPACOES SA",
-      "Weight (%)": "0.73",
-      "Price": "4.280047191011236",
-      "Shares": "17,800.00",
-      "Market Value": "76,184.84"
-    },
-    {
       "Ticker": "",
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.67",
-      "Price": "1.0",
-      "Shares": "70,282.83",
-      "Market Value": "70,282.83"
+      "Identifier": "",
+      "Weight": "2.23%",
+      "Market Value": "233,060.29",
+      "Shares Held": "233,060.29",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "MELI",
+      "Name": "RAIA DROGASIL SA",
+      "Ticker": "RADL3 BZ",
+      "Identifier": "B7FQV64",
+      "Weight": "2.18%",
+      "Market Value": "227,825.49",
+      "Shares Held": "65,306.00",
+      "Asset Category": "Equity",
+      "Price": "3.488584356720669"
+    },
+    {
+      "Name": "XP INC - CLASS A",
+      "Ticker": "XP",
+      "Identifier": "BK4Y052",
+      "Weight": "2.15%",
+      "Market Value": "224,174.30",
+      "Shares Held": "10,930.00",
+      "Asset Category": "Equity",
+      "Price": "20.51"
+    },
+    {
+      "Name": "PRIO SA",
+      "Ticker": "PRIO3 BZ",
+      "Identifier": "BYY0144",
+      "Weight": "2.08%",
+      "Market Value": "217,764.69",
+      "Shares Held": "19,100.00",
+      "Asset Category": "Equity",
+      "Price": "11.40129267015707"
+    },
+    {
+      "Name": "ERO COPPER CORP",
+      "Ticker": "ERO CN",
+      "Identifier": "BF02Z72",
+      "Weight": "2.05%",
+      "Market Value": "213,851.91",
+      "Shares Held": "5,653.00",
+      "Asset Category": "Equity",
+      "Price": "37.82980895099947"
+    },
+    {
+      "Name": "EQUATORIAL SA - ORD",
+      "Ticker": "EQTL3 BZ",
+      "Identifier": "B128R96",
+      "Weight": "1.81%",
+      "Market Value": "189,565.37",
+      "Shares Held": "24,800.00",
+      "Asset Category": "Equity",
+      "Price": "7.643764919354838"
+    },
+    {
+      "Name": "LOCALIZA RENT A CAR",
+      "Ticker": "RENT3 BZ",
+      "Identifier": "B08K3S0",
+      "Weight": "1.67%",
+      "Market Value": "174,245.19",
+      "Shares Held": "24,000.00",
+      "Asset Category": "Equity",
+      "Price": "7.26021625"
+    },
+    {
+      "Name": "VIBRA ENERGIA SA",
+      "Ticker": "VBBR3 BZ",
+      "Identifier": "BPBLV81",
+      "Weight": "1.29%",
+      "Market Value": "134,385.03",
+      "Shares Held": "18,800.00",
+      "Asset Category": "Equity",
+      "Price": "7.148139893617021"
+    },
+    {
+      "Name": "DIRECIONAL ENGENHARIA SA",
+      "Ticker": "DIRR3 BZ",
+      "Identifier": "B59VLC7",
+      "Weight": "1.26%",
+      "Market Value": "131,970.69",
+      "Shares Held": "70,100.00",
+      "Asset Category": "Equity",
+      "Price": "1.882606134094151"
+    },
+    {
+      "Name": "JBS NV",
+      "Ticker": "JBSS32 BZ",
+      "Identifier": "BSJQ811",
+      "Weight": "1.26%",
+      "Market Value": "131,371.18",
+      "Shares Held": "11,478.00",
+      "Asset Category": "Equity",
+      "Price": "11.4454765638613"
+    },
+    {
+      "Name": "AURA MINERALS INC",
+      "Ticker": "AUGO",
+      "Identifier": "BJ1JSK4",
+      "Weight": "1.04%",
+      "Market Value": "108,891.71",
+      "Shares Held": "1,303.00",
+      "Asset Category": "Equity",
+      "Price": "83.57000000000001"
+    },
+    {
+      "Name": "WHEATON PRECIOUS METALS CORP",
+      "Ticker": "WPM",
+      "Identifier": "BDG1S92",
+      "Weight": "0.97%",
+      "Market Value": "101,901.96",
+      "Shares Held": "713.00",
+      "Asset Category": "Equity",
+      "Price": "142.92"
+    },
+    {
+      "Name": "MULTIPLAN EMPREENDIMENTOS",
+      "Ticker": "MULT3 BZ",
+      "Identifier": "B23DZG0",
+      "Weight": "0.95%",
+      "Market Value": "99,772.36",
+      "Shares Held": "16,700.00",
+      "Asset Category": "Equity",
+      "Price": "5.974392814371257"
+    },
+    {
+      "Name": "VIVARA PARTICIPACOES SA",
+      "Ticker": "VIVA3 BZ",
+      "Identifier": "BKTPCJ8",
+      "Weight": "0.73%",
+      "Market Value": "76,184.84",
+      "Shares Held": "17,800.00",
+      "Asset Category": "Equity",
+      "Price": "4.280047191011236"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.67%",
+      "Market Value": "70,282.83",
+      "Shares Held": "70,282.83",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "MERCADOLIBRE INC",
-      "Weight (%)": "0.50",
-      "Price": "1752.61",
-      "Shares": "30.00",
-      "Market Value": "52,578.30"
+      "Ticker": "MELI",
+      "Identifier": "B23X1H3",
+      "Weight": "0.50%",
+      "Market Value": "52,578.30",
+      "Shares Held": "30.00",
+      "Asset Category": "Equity",
+      "Price": "1752.61"
     }
   ]
 }

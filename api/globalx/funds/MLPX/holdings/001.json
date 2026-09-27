@@ -4,261 +4,324 @@
   "pageSize": 250,
   "totalRows": 31,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.06",
-      "Price": "1.0",
-      "Shares": "2,148,880.50",
-      "Market Value": "2,148,880.50"
-    },
-    {
-      "Ticker": "WMB",
-      "Name": "WILLIAMS COS INC",
-      "Weight (%)": "8.99",
-      "Price": "69.26",
-      "Shares": "4,491,343.00",
-      "Market Value": "311,070,416.18"
-    },
-    {
-      "Ticker": "TRP",
-      "Name": "TC ENERGY CORP",
-      "Weight (%)": "8.96",
-      "Price": "58.77999999999999",
-      "Shares": "5,273,957.00",
-      "Market Value": "310,003,192.46"
-    },
-    {
-      "Ticker": "ENB",
-      "Name": "ENBRIDGE INC",
-      "Weight (%)": "8.85",
-      "Price": "46.74",
-      "Shares": "6,545,870.00",
-      "Market Value": "305,953,963.80"
-    },
-    {
-      "Ticker": "TRGP",
-      "Name": "TARGA RESOURCES CORP",
-      "Weight (%)": "7.91",
-      "Price": "277.84",
-      "Shares": "984,154.00",
-      "Market Value": "273,437,347.36"
-    },
-    {
-      "Ticker": "KMI",
-      "Name": "KINDER MORGAN INC",
-      "Weight (%)": "7.09",
-      "Price": "30.75",
-      "Shares": "7,976,661.00",
-      "Market Value": "245,282,325.75"
-    },
-    {
-      "Ticker": "OKE",
-      "Name": "FALCON TOPCO INC",
-      "Weight (%)": "6.36",
-      "Price": "88.63000000000001",
-      "Shares": "2,482,141.00",
-      "Market Value": "219,992,156.83"
-    },
-    {
-      "Ticker": "LNG",
-      "Name": "CHENIERE ENERGY INC",
-      "Weight (%)": "4.67",
-      "Price": "268.54",
-      "Shares": "601,513.00",
-      "Market Value": "161,530,301.02"
-    },
-    {
-      "Ticker": "MPLX",
-      "Name": "MPLX LP",
-      "Weight (%)": "4.60",
-      "Price": "56.8",
-      "Shares": "2,802,728.00",
-      "Market Value": "159,194,950.40"
-    },
-    {
-      "Ticker": "EPD",
-      "Name": "ENTERPRISE PRODUCTS PARTNERS",
-      "Weight (%)": "4.59",
-      "Price": "36.75",
-      "Shares": "4,321,385.00",
-      "Market Value": "158,810,898.75"
-    },
-    {
-      "Ticker": "ET",
-      "Name": "ENERGY TRANSFER LP",
-      "Weight (%)": "4.53",
-      "Price": "20.19",
-      "Shares": "7,766,267.00",
-      "Market Value": "156,800,930.73"
-    },
-    {
-      "Ticker": "PBA",
-      "Name": "PEMBINA PIPELINE CORP",
-      "Weight (%)": "4.38",
-      "Price": "44.66",
-      "Shares": "3,389,998.00",
-      "Market Value": "151,397,310.68"
-    },
-    {
-      "Ticker": "PAA",
-      "Name": "PLAINS ALL AMER PIPELINE LP",
-      "Weight (%)": "3.89",
-      "Price": "24.42",
-      "Shares": "5,514,943.00",
-      "Market Value": "134,674,908.06"
-    },
-    {
-      "Ticker": "DTM",
-      "Name": "DT MIDSTREAM INC",
-      "Weight (%)": "3.85",
-      "Price": "122.28",
-      "Shares": "1,089,169.00",
-      "Market Value": "133,183,585.32"
-    },
-    {
-      "Ticker": "WES",
-      "Name": "WESTERN MIDSTREAM PARTNERS L",
-      "Weight (%)": "3.61",
-      "Price": "45.59999999999999",
-      "Shares": "2,736,931.00",
-      "Market Value": "124,804,053.60"
-    },
-    {
-      "Ticker": "SOBO",
-      "Name": "SOUTH BOW CORP",
-      "Weight (%)": "2.20",
-      "Price": "33.99",
-      "Shares": "2,234,852.00",
-      "Market Value": "75,962,619.48"
-    },
-    {
-      "Ticker": "AM",
-      "Name": "ANTERO MIDSTREAM CORP",
-      "Weight (%)": "2.14",
-      "Price": "20.93",
-      "Shares": "3,533,952.00",
-      "Market Value": "73,965,615.36"
-    },
-    {
-      "Ticker": "VG",
-      "Name": "VENTURE GLOBAL INC-CL A",
-      "Weight (%)": "2.04",
-      "Price": "12.62",
-      "Shares": "5,594,927.00",
-      "Market Value": "70,607,978.74"
-    },
-    {
-      "Ticker": "KGS",
-      "Name": "KODIAK GAS SERVICES INC",
-      "Weight (%)": "1.65",
-      "Price": "52.91",
-      "Shares": "1,077,613.00",
-      "Market Value": "57,016,503.83"
-    },
-    {
-      "Ticker": "AROC",
-      "Name": "ARCHROCK INC",
-      "Weight (%)": "1.61",
-      "Price": "30.43",
-      "Shares": "1,830,287.00",
-      "Market Value": "55,695,633.41"
-    },
-    {
-      "Ticker": "PAGP",
-      "Name": "PLAINS GP HOLDINGS LP",
-      "Weight (%)": "1.59",
-      "Price": "26.58",
-      "Shares": "2,071,404.00",
-      "Market Value": "55,057,918.32"
-    },
-    {
-      "Ticker": "HESM",
-      "Name": "HESS MIDSTREAM LP - CLASS A",
-      "Weight (%)": "1.52",
-      "Price": "38.25",
-      "Shares": "1,370,750.00",
-      "Market Value": "52,431,187.50"
-    },
-    {
-      "Ticker": "KNTK",
-      "Name": "KINETIK HOLDINGS INC",
-      "Weight (%)": "1.01",
-      "Price": "51.21",
-      "Shares": "680,876.00",
-      "Market Value": "34,867,659.96"
-    },
-    {
-      "Ticker": "CQP",
-      "Name": "CHENIERE ENERGY PARTNERS LP",
-      "Weight (%)": "0.88",
-      "Price": "63.43",
-      "Shares": "478,553.00",
-      "Market Value": "30,354,616.79"
-    },
-    {
-      "Ticker": "USAC",
-      "Name": "USA COMPRESSION PARTNERS LP",
-      "Weight (%)": "0.76",
-      "Price": "25.54",
-      "Shares": "1,026,911.00",
-      "Market Value": "26,227,306.94"
-    },
-    {
-      "Ticker": "NGL",
-      "Name": "NGL ENERGY PARTNERS LP",
-      "Weight (%)": "0.61",
-      "Price": "15.1",
-      "Shares": "1,390,249.00",
-      "Market Value": "20,992,759.90"
-    },
-    {
-      "Ticker": "GEL",
-      "Name": "GENESIS ENERGY L.P.",
-      "Weight (%)": "0.53",
-      "Price": "14.17",
-      "Shares": "1,298,177.00",
-      "Market Value": "18,395,168.09"
-    },
-    {
-      "Ticker": "DKL",
-      "Name": "DELEK LOGISTICS PARTNERS LP",
-      "Weight (%)": "0.37",
-      "Price": "53.89",
-      "Shares": "236,642.00",
-      "Market Value": "12,752,637.38"
-    },
-    {
-      "Ticker": "EE",
-      "Name": "EXCELERATE ENERGY INC-A",
-      "Weight (%)": "0.33",
-      "Price": "33.09",
-      "Shares": "341,921.00",
-      "Market Value": "11,314,165.89"
-    },
-    {
-      "Ticker": "NEXT",
-      "Name": "NEXTDECADE CORP",
-      "Weight (%)": "0.27",
-      "Price": "6.56",
-      "Shares": "1,411,881.00",
-      "Market Value": "9,261,939.36"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.06%",
+      "Market Value": "2,148,880.50",
+      "Shares Held": "2,148,880.50",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "WILLIAMS COS INC",
+      "Ticker": "WMB",
+      "Identifier": "2967181",
+      "Weight": "8.99%",
+      "Market Value": "311,070,416.18",
+      "Shares Held": "4,491,343.00",
+      "Asset Category": "Equity",
+      "Price": "69.26"
+    },
+    {
+      "Name": "TC ENERGY CORP",
+      "Ticker": "TRP",
+      "Identifier": "BJMY6F9",
+      "Weight": "8.96%",
+      "Market Value": "310,003,192.46",
+      "Shares Held": "5,273,957.00",
+      "Asset Category": "Equity",
+      "Price": "58.77999999999999"
+    },
+    {
+      "Name": "ENBRIDGE INC",
+      "Ticker": "ENB",
+      "Identifier": "2478906",
+      "Weight": "8.85%",
+      "Market Value": "305,953,963.80",
+      "Shares Held": "6,545,870.00",
+      "Asset Category": "Equity",
+      "Price": "46.74"
+    },
+    {
+      "Name": "TARGA RESOURCES CORP",
+      "Ticker": "TRGP",
+      "Identifier": "B55PZY3",
+      "Weight": "7.91%",
+      "Market Value": "273,437,347.36",
+      "Shares Held": "984,154.00",
+      "Asset Category": "Equity",
+      "Price": "277.84"
+    },
+    {
+      "Name": "KINDER MORGAN INC",
+      "Ticker": "KMI",
+      "Identifier": "B3NQ4P8",
+      "Weight": "7.09%",
+      "Market Value": "245,282,325.75",
+      "Shares Held": "7,976,661.00",
+      "Asset Category": "Equity",
+      "Price": "30.75"
+    },
+    {
+      "Name": "FALCON TOPCO INC",
+      "Ticker": "OKE",
+      "Identifier": "BWJJFW8",
+      "Weight": "6.36%",
+      "Market Value": "219,992,156.83",
+      "Shares Held": "2,482,141.00",
+      "Asset Category": "Equity",
+      "Price": "88.63000000000001"
+    },
+    {
+      "Name": "CHENIERE ENERGY INC",
+      "Ticker": "LNG",
+      "Identifier": "2654364",
+      "Weight": "4.67%",
+      "Market Value": "161,530,301.02",
+      "Shares Held": "601,513.00",
+      "Asset Category": "Equity",
+      "Price": "268.54"
+    },
+    {
+      "Name": "MPLX LP",
+      "Ticker": "MPLX",
+      "Identifier": "B847R56",
+      "Weight": "4.60%",
+      "Market Value": "159,194,950.40",
+      "Shares Held": "2,802,728.00",
+      "Asset Category": "Equity",
+      "Price": "56.8"
+    },
+    {
+      "Name": "ENTERPRISE PRODUCTS PARTNERS",
+      "Ticker": "EPD",
+      "Identifier": "2285388",
+      "Weight": "4.59%",
+      "Market Value": "158,810,898.75",
+      "Shares Held": "4,321,385.00",
+      "Asset Category": "Equity",
+      "Price": "36.75"
+    },
+    {
+      "Name": "ENERGY TRANSFER LP",
+      "Ticker": "ET",
+      "Identifier": "B0WHXD2",
+      "Weight": "4.53%",
+      "Market Value": "156,800,930.73",
+      "Shares Held": "7,766,267.00",
+      "Asset Category": "Equity",
+      "Price": "20.19"
+    },
+    {
+      "Name": "PEMBINA PIPELINE CORP",
+      "Ticker": "PBA",
+      "Identifier": "B4PPQG5",
+      "Weight": "4.38%",
+      "Market Value": "151,397,310.68",
+      "Shares Held": "3,389,998.00",
+      "Asset Category": "Equity",
+      "Price": "44.66"
+    },
+    {
+      "Name": "PLAINS ALL AMER PIPELINE LP",
+      "Ticker": "PAA",
+      "Identifier": "2311960",
+      "Weight": "3.89%",
+      "Market Value": "134,674,908.06",
+      "Shares Held": "5,514,943.00",
+      "Asset Category": "Equity",
+      "Price": "24.42"
+    },
+    {
+      "Name": "DT MIDSTREAM INC",
+      "Ticker": "DTM",
+      "Identifier": "BN7L880",
+      "Weight": "3.85%",
+      "Market Value": "133,183,585.32",
+      "Shares Held": "1,089,169.00",
+      "Asset Category": "Equity",
+      "Price": "122.28"
+    },
+    {
+      "Name": "WESTERN MIDSTREAM PARTNERS L",
+      "Ticker": "WES",
+      "Identifier": "BJ552C8",
+      "Weight": "3.61%",
+      "Market Value": "124,804,053.60",
+      "Shares Held": "2,736,931.00",
+      "Asset Category": "Equity",
+      "Price": "45.59999999999999"
+    },
+    {
+      "Name": "SOUTH BOW CORP",
+      "Ticker": "SOBO",
+      "Identifier": "BRBQCF4",
+      "Weight": "2.20%",
+      "Market Value": "75,962,619.48",
+      "Shares Held": "2,234,852.00",
+      "Asset Category": "Equity",
+      "Price": "33.99"
+    },
+    {
+      "Name": "ANTERO MIDSTREAM CORP",
+      "Ticker": "AM",
+      "Identifier": "BJBT0Q4",
+      "Weight": "2.14%",
+      "Market Value": "73,965,615.36",
+      "Shares Held": "3,533,952.00",
+      "Asset Category": "Equity",
+      "Price": "20.93"
+    },
+    {
+      "Name": "VENTURE GLOBAL INC-CL A",
+      "Ticker": "VG",
+      "Identifier": "BSZBFJ7",
+      "Weight": "2.04%",
+      "Market Value": "70,607,978.74",
+      "Shares Held": "5,594,927.00",
+      "Asset Category": "Equity",
+      "Price": "12.62"
+    },
+    {
+      "Name": "KODIAK GAS SERVICES INC",
+      "Ticker": "KGS",
+      "Identifier": "BQLSDK5",
+      "Weight": "1.65%",
+      "Market Value": "57,016,503.83",
+      "Shares Held": "1,077,613.00",
+      "Asset Category": "Equity",
+      "Price": "52.91"
+    },
+    {
+      "Name": "ARCHROCK INC",
+      "Ticker": "AROC",
+      "Identifier": "BYRGSX7",
+      "Weight": "1.61%",
+      "Market Value": "55,695,633.41",
+      "Shares Held": "1,830,287.00",
+      "Asset Category": "Equity",
+      "Price": "30.43"
+    },
+    {
+      "Name": "PLAINS GP HOLDINGS LP",
+      "Ticker": "PAGP",
+      "Identifier": "BDGHN95",
+      "Weight": "1.59%",
+      "Market Value": "55,057,918.32",
+      "Shares Held": "2,071,404.00",
+      "Asset Category": "Equity",
+      "Price": "26.58"
+    },
+    {
+      "Name": "HESS MIDSTREAM LP - CLASS A",
+      "Ticker": "HESM",
+      "Identifier": "BKPK695",
+      "Weight": "1.52%",
+      "Market Value": "52,431,187.50",
+      "Shares Held": "1,370,750.00",
+      "Asset Category": "Equity",
+      "Price": "38.25"
+    },
+    {
+      "Name": "KINETIK HOLDINGS INC",
+      "Ticker": "KNTK",
+      "Identifier": "BLPNQJ1",
+      "Weight": "1.01%",
+      "Market Value": "34,867,659.96",
+      "Shares Held": "680,876.00",
+      "Asset Category": "Equity",
+      "Price": "51.21"
+    },
+    {
+      "Name": "CHENIERE ENERGY PARTNERS LP",
+      "Ticker": "CQP",
+      "Identifier": "B1VNH36",
+      "Weight": "0.88%",
+      "Market Value": "30,354,616.79",
+      "Shares Held": "478,553.00",
+      "Asset Category": "Equity",
+      "Price": "63.43"
+    },
+    {
+      "Name": "USA COMPRESSION PARTNERS LP",
+      "Ticker": "USAC",
+      "Identifier": "B83VQY1",
+      "Weight": "0.76%",
+      "Market Value": "26,227,306.94",
+      "Shares Held": "1,026,911.00",
+      "Asset Category": "Equity",
+      "Price": "25.54"
+    },
+    {
+      "Name": "NGL ENERGY PARTNERS LP",
+      "Ticker": "NGL",
+      "Identifier": "B45GFM7",
+      "Weight": "0.61%",
+      "Market Value": "20,992,759.90",
+      "Shares Held": "1,390,249.00",
+      "Asset Category": "Equity",
+      "Price": "15.1"
+    },
+    {
+      "Name": "GENESIS ENERGY L.P.",
+      "Ticker": "GEL",
+      "Identifier": "2372257",
+      "Weight": "0.53%",
+      "Market Value": "18,395,168.09",
+      "Shares Held": "1,298,177.00",
+      "Asset Category": "Equity",
+      "Price": "14.17"
+    },
+    {
+      "Name": "DELEK LOGISTICS PARTNERS LP",
+      "Ticker": "DKL",
+      "Identifier": "B927XT1",
+      "Weight": "0.37%",
+      "Market Value": "12,752,637.38",
+      "Shares Held": "236,642.00",
+      "Asset Category": "Equity",
+      "Price": "53.89"
+    },
+    {
+      "Name": "EXCELERATE ENERGY INC-A",
+      "Ticker": "EE",
+      "Identifier": "BN2QTD2",
+      "Weight": "0.33%",
+      "Market Value": "11,314,165.89",
+      "Shares Held": "341,921.00",
+      "Asset Category": "Equity",
+      "Price": "33.09"
+    },
+    {
+      "Name": "NEXTDECADE CORP",
+      "Ticker": "NEXT",
+      "Identifier": "BYX38K9",
+      "Weight": "0.27%",
+      "Market Value": "9,261,939.36",
+      "Shares Held": "1,411,881.00",
+      "Asset Category": "Equity",
+      "Price": "6.56"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.17",
-      "Price": "1.0",
-      "Shares": "5,917,757.90",
-      "Market Value": "5,917,757.90"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.17%",
+      "Market Value": "5,917,757.90",
+      "Shares Held": "5,917,757.90",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     }
   ]
 }

@@ -4,301 +4,374 @@
   "pageSize": 250,
   "totalRows": 36,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "EURO",
-      "Weight (%)": "0.00",
-      "Price": "1.140147102333666",
-      "Shares": "4,326.24",
-      "Market Value": "4,932.55"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "4,932.55",
+      "Shares Held": "4,326.24",
+      "Asset Category": "Equity",
+      "Price": "1.140147102333666"
     },
     {
-      "Ticker": "FFGRP GA",
       "Name": "FF GROUP",
-      "Weight (%)": "0.00",
-      "Price": "0.00001139797487144145",
-      "Shares": "452,712.00",
-      "Market Value": "5.16"
+      "Ticker": "FFGRP GA",
+      "Identifier": "B681D63",
+      "Weight": "0.00%",
+      "Market Value": "5.16",
+      "Shares Held": "452,712.00",
+      "Asset Category": "Equity",
+      "Price": "0.00001139797487144145"
     },
     {
-      "Ticker": "FLLIY",
       "Name": "FOLLI FOLLIE GROU-UNSPON ADR",
-      "Weight (%)": "0.00",
-      "Price": "9.984871406959152e-6",
-      "Shares": "198,300.00",
-      "Market Value": "1.98"
+      "Ticker": "FLLIY",
+      "Identifier": "B9N6VK4",
+      "Weight": "0.00%",
+      "Market Value": "1.98",
+      "Shares Held": "198,300.00",
+      "Asset Category": "Equity",
+      "Price": "9.984871406959152e-6"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "-0.01",
-      "Price": "1.0",
-      "Shares": "-30,853.71",
-      "Market Value": "-30,853.71"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.01%",
+      "Market Value": "-30,853.71",
+      "Shares Held": "-30,853.71",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.01",
-      "Price": "1.0",
-      "Shares": "-47,246.09",
-      "Market Value": "-47,246.09"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.01%",
+      "Market Value": "-47,246.09",
+      "Shares Held": "-47,246.09",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "ETE GA",
       "Name": "NATIONAL BANK OF GREECE",
-      "Weight (%)": "15.29",
-      "Price": "19.87846034526297",
-      "Shares": "2,609,663.00",
-      "Market Value": "51,876,082.46"
+      "Ticker": "ETE GA",
+      "Identifier": "BG087C6",
+      "Weight": "15.29%",
+      "Market Value": "51,876,082.46",
+      "Shares Held": "2,609,663.00",
+      "Asset Category": "Equity",
+      "Price": "19.87846034526297"
     },
     {
-      "Ticker": "EUROB GA",
       "Name": "EUROBANK SA",
-      "Weight (%)": "11.90",
-      "Price": "5.360970492991928",
-      "Shares": "7,530,245.00",
-      "Market Value": "40,369,421.25"
+      "Ticker": "EUROB GA",
+      "Identifier": "BW9DW63",
+      "Weight": "11.90%",
+      "Market Value": "40,369,421.25",
+      "Shares Held": "7,530,245.00",
+      "Asset Category": "Equity",
+      "Price": "5.360970492991928"
     },
     {
-      "Ticker": "TPEIR GA",
       "Name": "PIRAEUS BANK SA",
-      "Weight (%)": "11.34",
-      "Price": "11.72070962768405",
-      "Shares": "3,281,890.00",
-      "Market Value": "38,466,079.72"
+      "Ticker": "TPEIR GA",
+      "Identifier": "BVLKBV3",
+      "Weight": "11.34%",
+      "Market Value": "38,466,079.72",
+      "Shares Held": "3,281,890.00",
+      "Asset Category": "Equity",
+      "Price": "11.72070962768405"
     },
     {
-      "Ticker": "ALPHA GA",
       "Name": "ALPHA BANK SA",
-      "Weight (%)": "7.01",
-      "Price": "5.234414192413944",
-      "Shares": "4,545,076.00",
-      "Market Value": "23,790,810.32"
+      "Ticker": "ALPHA GA",
+      "Identifier": "BTJZ707",
+      "Weight": "7.01%",
+      "Market Value": "23,790,810.32",
+      "Shares Held": "4,545,076.00",
+      "Asset Category": "Equity",
+      "Price": "5.234414192413944"
     },
     {
-      "Ticker": "MOH GA",
       "Name": "MOTOR OIL (HELLAS) SA",
-      "Weight (%)": "4.92",
-      "Price": "75.99078760264369",
-      "Shares": "219,692.00",
-      "Market Value": "16,694,568.11"
+      "Ticker": "MOH GA",
+      "Identifier": "5996234",
+      "Weight": "4.92%",
+      "Market Value": "16,694,568.11",
+      "Shares Held": "219,692.00",
+      "Asset Category": "Equity",
+      "Price": "75.99078760264369"
     },
     {
-      "Ticker": "PPC GA",
       "Name": "PUBLIC POWER CORP",
-      "Weight (%)": "4.50",
-      "Price": "26.1777717044558",
-      "Shares": "583,060.00",
-      "Market Value": "15,263,211.57"
+      "Ticker": "PPC GA",
+      "Identifier": "7268298",
+      "Weight": "4.50%",
+      "Market Value": "15,263,211.57",
+      "Shares Held": "583,060.00",
+      "Asset Category": "Equity",
+      "Price": "26.1777717044558"
     },
     {
-      "Ticker": "MTLN GA",
       "Name": "METLEN ENERGY & METALS",
-      "Weight (%)": "4.37",
-      "Price": "55.06909288196057",
-      "Shares": "269,105.00",
-      "Market Value": "14,819,368.24"
+      "Ticker": "MTLN GA",
+      "Identifier": "BSY6B51",
+      "Weight": "4.37%",
+      "Market Value": "14,819,368.24",
+      "Shares Held": "269,105.00",
+      "Asset Category": "Equity",
+      "Price": "55.06909288196057"
     },
     {
-      "Ticker": "GEKTERNA GA",
       "Name": "GEK TERNA SA",
-      "Weight (%)": "4.34",
-      "Price": "49.9156291440116",
-      "Shares": "295,004.00",
-      "Market Value": "14,725,310.26"
+      "Ticker": "GEKTERNA GA",
+      "Identifier": "4421704",
+      "Weight": "4.34%",
+      "Market Value": "14,725,310.26",
+      "Shares Held": "295,004.00",
+      "Asset Category": "Equity",
+      "Price": "49.9156291440116"
     },
     {
-      "Ticker": "OPTIMA GA",
       "Name": "OPTIMA BANK SA",
-      "Weight (%)": "3.77",
-      "Price": "16.55493227989509",
-      "Shares": "772,075.00",
-      "Market Value": "12,781,649.34"
+      "Ticker": "OPTIMA GA",
+      "Identifier": "BL571C1",
+      "Weight": "3.77%",
+      "Market Value": "12,781,649.34",
+      "Shares Held": "772,075.00",
+      "Asset Category": "Equity",
+      "Price": "16.55493227989509"
     },
     {
-      "Ticker": "HTO GA",
       "Name": "HELLENIC TELECOMMUN ORGANIZA",
-      "Weight (%)": "3.73",
-      "Price": "22.9169517031122",
-      "Shares": "553,017.00",
-      "Market Value": "12,673,463.88"
+      "Ticker": "HTO GA",
+      "Identifier": "5051605",
+      "Weight": "3.73%",
+      "Market Value": "12,673,463.88",
+      "Shares Held": "553,017.00",
+      "Asset Category": "Equity",
+      "Price": "22.9169517031122"
     },
     {
-      "Ticker": "BELA GA",
       "Name": "JUMBO SA",
-      "Weight (%)": "3.46",
-      "Price": "27.97920372201637",
-      "Shares": "419,665.00",
-      "Market Value": "11,741,892.53"
+      "Ticker": "BELA GA",
+      "Identifier": "7243530",
+      "Weight": "3.46%",
+      "Market Value": "11,741,892.53",
+      "Shares Held": "419,665.00",
+      "Asset Category": "Equity",
+      "Price": "27.97920372201637"
     },
     {
-      "Ticker": "ELPE GA",
       "Name": "HELLENIQ ENERGY HOLDINGS S.A",
-      "Weight (%)": "2.54",
-      "Price": "19.59912436247723",
-      "Shares": "439,200.00",
-      "Market Value": "8,607,935.42"
+      "Ticker": "ELPE GA",
+      "Identifier": "5475658",
+      "Weight": "2.54%",
+      "Market Value": "8,607,935.42",
+      "Shares Held": "439,200.00",
+      "Asset Category": "Equity",
+      "Price": "19.59912436247723"
     },
     {
-      "Ticker": "ALWN GA",
       "Name": "ALLWYN AG",
-      "Weight (%)": "2.46",
-      "Price": "13.49933871607778",
-      "Shares": "617,405.00",
-      "Market Value": "8,334,559.22"
+      "Ticker": "ALWN GA",
+      "Identifier": "7107250",
+      "Weight": "2.46%",
+      "Market Value": "8,334,559.22",
+      "Shares Held": "617,405.00",
+      "Asset Category": "Equity",
+      "Price": "13.49933871607778"
     },
     {
-      "Ticker": "TITC GA",
       "Name": "TITAN SA",
-      "Weight (%)": "2.44",
-      "Price": "55.52515166777471",
-      "Shares": "148,911.00",
-      "Market Value": "8,268,305.86"
+      "Ticker": "TITC GA",
+      "Identifier": "BJ8PD99",
+      "Weight": "2.44%",
+      "Market Value": "8,268,305.86",
+      "Shares Held": "148,911.00",
+      "Asset Category": "Equity",
+      "Price": "55.52515166777471"
     },
     {
-      "Ticker": "CENER GA",
       "Name": "CENERGY HOLDINGS SA",
-      "Weight (%)": "1.96",
-      "Price": "26.77064807202502",
-      "Shares": "248,136.00",
-      "Market Value": "6,642,761.53"
+      "Ticker": "CENER GA",
+      "Identifier": "BDDW9C8",
+      "Weight": "1.96%",
+      "Market Value": "6,642,761.53",
+      "Shares Held": "248,136.00",
+      "Asset Category": "Equity",
+      "Price": "26.77064807202502"
     },
     {
-      "Ticker": "ADMIE GA",
       "Name": "HOLDING CO ADMIE IPTO SA",
-      "Weight (%)": "1.76",
-      "Price": "4.95963880009181",
-      "Shares": "1,202,492.00",
-      "Market Value": "5,963,925.98"
+      "Ticker": "ADMIE GA",
+      "Identifier": "BYW5KK0",
+      "Weight": "1.76%",
+      "Market Value": "5,963,925.98",
+      "Shares Held": "1,202,492.00",
+      "Asset Category": "Equity",
+      "Price": "4.95963880009181"
     },
     {
-      "Ticker": "AKTR GA",
       "Name": "AKTOR HOLDINGS TECHNICAL AND ENERGY PROJECTS",
-      "Weight (%)": "1.51",
-      "Price": "11.39006703652847",
-      "Shares": "450,799.00",
-      "Market Value": "5,134,630.83"
+      "Ticker": "AKTR GA",
+      "Identifier": "BYXD0G9",
+      "Weight": "1.51%",
+      "Market Value": "5,134,630.83",
+      "Shares Held": "450,799.00",
+      "Asset Category": "Equity",
+      "Price": "11.39006703652847"
     },
     {
-      "Ticker": "TEN",
       "Name": "TSAKOS ENERGY NAVIGATION LTD",
-      "Weight (%)": "1.48",
-      "Price": "46.23",
-      "Shares": "108,414.00",
-      "Market Value": "5,011,979.22"
+      "Ticker": "TEN",
+      "Identifier": "BMX5PY4",
+      "Weight": "1.48%",
+      "Market Value": "5,011,979.22",
+      "Shares Held": "108,414.00",
+      "Asset Category": "Equity",
+      "Price": "46.23"
     },
     {
-      "Ticker": "AIA GA",
       "Name": "ATHENS INTERNATIONAL AIRPORT",
-      "Weight (%)": "1.30",
-      "Price": "13.81857983012277",
-      "Shares": "320,349.00",
-      "Market Value": "4,426,768.23"
+      "Ticker": "AIA GA",
+      "Identifier": "BPYS8N3",
+      "Weight": "1.30%",
+      "Market Value": "4,426,768.23",
+      "Shares Held": "320,349.00",
+      "Asset Category": "Equity",
+      "Price": "13.81857983012277"
     },
     {
-      "Ticker": "CREDIA GA",
       "Name": "CREDIABANK SA",
-      "Weight (%)": "1.26",
-      "Price": "1.08541980156432",
-      "Shares": "3,928,225.00",
-      "Market Value": "4,263,773.20"
+      "Ticker": "CREDIA GA",
+      "Identifier": "BP38NQ2",
+      "Weight": "1.26%",
+      "Market Value": "4,263,773.20",
+      "Shares Held": "3,928,225.00",
+      "Asset Category": "Equity",
+      "Price": "1.08541980156432"
     },
     {
-      "Ticker": "BYLOT GA",
       "Name": "BALLYS INTRALOT SA",
-      "Weight (%)": "1.20",
-      "Price": "1.279244767120373",
-      "Shares": "3,177,457.00",
-      "Market Value": "4,064,745.24"
+      "Ticker": "BYLOT GA",
+      "Identifier": "5799284",
+      "Weight": "1.20%",
+      "Market Value": "4,064,745.24",
+      "Shares Held": "3,177,457.00",
+      "Asset Category": "Equity",
+      "Price": "1.279244767120373"
     },
     {
-      "Ticker": "EYDAP GA",
       "Name": "ATHENS WATER SUPPLY & SEWAGE",
-      "Weight (%)": "1.08",
-      "Price": "13.86418570592787",
-      "Shares": "264,935.00",
-      "Market Value": "3,673,108.04"
+      "Ticker": "EYDAP GA",
+      "Identifier": "5860191",
+      "Weight": "1.08%",
+      "Market Value": "3,673,108.04",
+      "Shares Held": "264,935.00",
+      "Asset Category": "Equity",
+      "Price": "13.86418570592787"
     },
     {
-      "Ticker": "VIO GA",
       "Name": "VIOHALCO SA",
-      "Weight (%)": "1.02",
-      "Price": "19.33689059543933",
-      "Shares": "178,658.00",
-      "Market Value": "3,454,690.20"
+      "Ticker": "VIO GA",
+      "Identifier": "BJVX2Q0",
+      "Weight": "1.02%",
+      "Market Value": "3,454,690.20",
+      "Shares Held": "178,658.00",
+      "Asset Category": "Equity",
+      "Price": "19.33689059543933"
     },
     {
-      "Ticker": "PPA GA",
       "Name": "PIRAEUS PORT AUTHORITY SA",
-      "Weight (%)": "0.87",
-      "Price": "54.32799749017293",
-      "Shares": "54,187.00",
-      "Market Value": "2,943,871.20"
+      "Ticker": "PPA GA",
+      "Identifier": "7648629",
+      "Weight": "0.87%",
+      "Market Value": "2,943,871.20",
+      "Shares Held": "54,187.00",
+      "Asset Category": "Equity",
+      "Price": "54.32799749017293"
     },
     {
-      "Ticker": "AEGN GA",
       "Name": "AEGEAN AIRLINES",
-      "Weight (%)": "0.86",
-      "Price": "12.79244765377729",
-      "Shares": "228,431.00",
-      "Market Value": "2,922,191.61"
+      "Ticker": "AEGN GA",
+      "Identifier": "B1ZBHG9",
+      "Weight": "0.86%",
+      "Market Value": "2,922,191.61",
+      "Shares Held": "228,431.00",
+      "Asset Category": "Equity",
+      "Price": "12.79244765377729"
     },
     {
-      "Ticker": "LAMDA GA",
       "Name": "LAMDA DEVELOPMENT SA",
-      "Weight (%)": "0.80",
-      "Price": "7.08031194131225",
-      "Shares": "384,271.00",
-      "Market Value": "2,720,758.55"
+      "Ticker": "LAMDA GA",
+      "Identifier": "4248947",
+      "Weight": "0.80%",
+      "Market Value": "2,720,758.55",
+      "Shares Held": "384,271.00",
+      "Asset Category": "Equity",
+      "Price": "7.08031194131225"
     },
     {
-      "Ticker": "SAR GA",
       "Name": "SARANTIS SA",
-      "Weight (%)": "0.67",
-      "Price": "13.56774754355153",
-      "Shares": "168,536.00",
-      "Market Value": "2,286,653.90"
+      "Ticker": "SAR GA",
+      "Identifier": "7124958",
+      "Weight": "0.67%",
+      "Market Value": "2,286,653.90",
+      "Shares Held": "168,536.00",
+      "Asset Category": "Equity",
+      "Price": "13.56774754355153"
     },
     {
-      "Ticker": "OTOEL GA",
       "Name": "AUTOHELLAS SA",
-      "Weight (%)": "0.64",
-      "Price": "12.38199479326885",
-      "Shares": "175,542.00",
-      "Market Value": "2,173,560.13"
+      "Ticker": "OTOEL GA",
+      "Identifier": "BDZTGG0",
+      "Weight": "0.64%",
+      "Market Value": "2,173,560.13",
+      "Shares Held": "175,542.00",
+      "Asset Category": "Equity",
+      "Price": "12.38199479326885"
     },
     {
-      "Ticker": "KRI GA",
       "Name": "KRI-KRI MILK INDUSTRY SA",
-      "Weight (%)": "0.57",
-      "Price": "35.28754500156288",
-      "Shares": "54,387.00",
-      "Market Value": "1,919,183.71"
+      "Ticker": "KRI GA",
+      "Identifier": "BCZQM00",
+      "Weight": "0.57%",
+      "Market Value": "1,919,183.71",
+      "Shares Held": "54,387.00",
+      "Asset Category": "Equity",
+      "Price": "35.28754500156288"
     },
     {
-      "Ticker": "CCEC",
       "Name": "CAPITAL CLEAN ENERGY CARRIER",
-      "Weight (%)": "0.56",
-      "Price": "21.15",
-      "Shares": "90,499.00",
-      "Market Value": "1,914,053.85"
+      "Ticker": "CCEC",
+      "Identifier": "BS55DQ2",
+      "Weight": "0.56%",
+      "Market Value": "1,914,053.85",
+      "Shares Held": "90,499.00",
+      "Asset Category": "Equity",
+      "Price": "21.15"
     },
     {
-      "Ticker": "EXAE GA",
       "Name": "EURONEXT ATHENS HOLDING SA",
-      "Weight (%)": "0.44",
-      "Price": "12.13116251015535",
-      "Shares": "121,857.00",
-      "Market Value": "1,478,267.07"
+      "Ticker": "EXAE GA",
+      "Identifier": "4108278",
+      "Weight": "0.44%",
+      "Market Value": "1,478,267.07",
+      "Shares Held": "121,857.00",
+      "Asset Category": "Equity",
+      "Price": "12.13116251015535"
     }
   ]
 }

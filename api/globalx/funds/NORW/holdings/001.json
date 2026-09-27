@@ -4,509 +4,634 @@
   "pageSize": 250,
   "totalRows": 62,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "PUBLI NO",
       "Name": "PPI PUBLIC PROPERTY INVEST A",
-      "Weight (%)": "0.01",
-      "Price": "1.797164964407304",
-      "Shares": "3,231.00",
-      "Market Value": "5,806.64"
+      "Ticker": "PUBLI NO",
+      "Identifier": "BTJ0PM0",
+      "Weight": "0.01%",
+      "Market Value": "5,806.64",
+      "Shares Held": "3,231.00",
+      "Asset Category": "Equity",
+      "Price": "1.797164964407304"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.00",
-      "Price": "1.0",
-      "Shares": "292.27",
-      "Market Value": "292.27"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "292.27",
+      "Shares Held": "292.27",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "NORWEGIAN KRONE",
-      "Weight (%)": "0.00",
-      "Price": "0.1111111111111111",
-      "Shares": "0.54",
-      "Market Value": "0.06"
-    },
-    {
-      "Ticker": "EQNR NO",
-      "Name": "EQUINOR ASA",
-      "Weight (%)": "12.30",
-      "Price": "42.60762450913865",
-      "Shares": "269,679.00",
-      "Market Value": "11,490,381.57"
-    },
-    {
-      "Ticker": "DNB NO",
-      "Name": "DNB BANK ASA",
-      "Weight (%)": "11.57",
-      "Price": "33.38492149831198",
-      "Shares": "323,751.00",
-      "Market Value": "10,808,401.72"
-    },
-    {
-      "Ticker": "KOG NO",
-      "Name": "KONGSBERG GRUPPEN ASA",
-      "Weight (%)": "6.04",
-      "Price": "32.92168074826995",
-      "Shares": "171,382.00",
-      "Market Value": "5,642,183.49"
-    },
-    {
-      "Ticker": "AKRBP NO",
-      "Name": "AKER BP ASA",
-      "Weight (%)": "5.09",
-      "Price": "36.70130447528602",
-      "Shares": "129,623.00",
-      "Market Value": "4,757,333.19"
-    },
-    {
-      "Ticker": "NHY NO",
-      "Name": "NORSK HYDRO ASA",
-      "Weight (%)": "4.88",
-      "Price": "8.673130990476047",
-      "Shares": "526,252.00",
-      "Market Value": "4,564,252.53"
-    },
-    {
-      "Ticker": "MOWI NO",
-      "Name": "MOWI ASA",
-      "Weight (%)": "4.12",
-      "Price": "21.64597877822912",
-      "Shares": "177,742.00",
-      "Market Value": "3,847,399.56"
-    },
-    {
-      "Ticker": "TEL NO",
-      "Name": "TELENOR ASA",
-      "Weight (%)": "3.66",
-      "Price": "13.52873673166386",
-      "Shares": "252,575.00",
-      "Market Value": "3,417,020.68"
-    },
-    {
-      "Ticker": "STB NO",
-      "Name": "STOREBRAND ASA",
-      "Weight (%)": "3.52",
-      "Price": "20.4562921943228",
-      "Shares": "160,537.00",
-      "Market Value": "3,283,991.78"
-    },
-    {
-      "Ticker": "SUBC NO",
-      "Name": "SUBSEA 7 SA",
-      "Weight (%)": "3.37",
-      "Price": "34.1955929021055",
-      "Shares": "92,140.00",
-      "Market Value": "3,150,781.93"
-    },
-    {
-      "Ticker": "YAR NO",
-      "Name": "YARA INTERNATIONAL ASA",
-      "Weight (%)": "3.18",
-      "Price": "45.59763323509547",
-      "Shares": "65,148.00",
-      "Market Value": "2,970,594.61"
-    },
-    {
-      "Ticker": "ORK NO",
-      "Name": "ORKLA ASA",
-      "Weight (%)": "3.07",
-      "Price": "9.828074509266555",
-      "Shares": "291,910.00",
-      "Market Value": "2,868,913.23"
-    },
-    {
-      "Ticker": "FRO NO",
-      "Name": "FRONTLINE PLC",
-      "Weight (%)": "3.04",
-      "Price": "48.02964743264713",
-      "Shares": "59,166.00",
-      "Market Value": "2,841,722.12"
-    },
-    {
-      "Ticker": "GJF NO",
-      "Name": "GJENSIDIGE FORSIKRING ASA",
-      "Weight (%)": "2.39",
-      "Price": "27.31015027288969",
-      "Shares": "81,718.00",
-      "Market Value": "2,231,730.86"
-    },
-    {
-      "Ticker": "VAR NO",
-      "Name": "VAR ENERGI ASA",
-      "Weight (%)": "2.21",
-      "Price": "5.37991007742248",
-      "Shares": "383,997.00",
-      "Market Value": "2,065,869.33"
-    },
-    {
-      "Ticker": "SB1NO NO",
-      "Name": "SPAREBANK 1 SOR-NORGE ASA",
-      "Weight (%)": "2.17",
-      "Price": "24.214859451694",
-      "Shares": "83,530.00",
-      "Market Value": "2,022,667.21"
-    },
-    {
-      "Ticker": "SALM NO",
-      "Name": "SALMAR ASA",
-      "Weight (%)": "1.81",
-      "Price": "61.11619991336366",
-      "Shares": "27,702.00",
-      "Market Value": "1,693,040.97"
-    },
-    {
-      "Ticker": "NOD NO",
-      "Name": "NORDIC SEMICONDUCTOR ASA",
-      "Weight (%)": "1.53",
-      "Price": "19.43505682978289",
-      "Shares": "73,465.00",
-      "Market Value": "1,427,796.45"
-    },
-    {
-      "Ticker": "AKER NO",
-      "Name": "AKER ASA-A SHARES",
-      "Weight (%)": "1.49",
-      "Price": "152.2377685225778",
-      "Shares": "9,124.00",
-      "Market Value": "1,389,017.40"
-    },
-    {
-      "Ticker": "VEND NO",
-      "Name": "VEND MARKETPLACES ASA CL",
-      "Weight (%)": "1.47",
-      "Price": "21.9197118985883",
-      "Shares": "62,478.00",
-      "Market Value": "1,369,499.76"
-    },
-    {
-      "Ticker": "TGS NO",
-      "Name": "TGS ASA",
-      "Weight (%)": "1.30",
-      "Price": "15.1184948289973",
-      "Shares": "80,642.00",
-      "Market Value": "1,219,185.66"
-    },
-    {
-      "Ticker": "MING NO",
-      "Name": "SPAREBANK 1 SMN",
-      "Weight (%)": "1.24",
-      "Price": "23.20415225811604",
-      "Shares": "50,086.00",
-      "Market Value": "1,162,203.17"
-    },
-    {
-      "Ticker": "KMAR NO",
-      "Name": "KONGSBERG MARITIME ASA",
-      "Weight (%)": "1.17",
-      "Price": "6.401145452848024",
-      "Shares": "171,382.00",
-      "Market Value": "1,097,041.11"
-    },
-    {
-      "Ticker": "BAKKA NO",
-      "Name": "BAKKAFROST P/F",
-      "Weight (%)": "1.05",
-      "Price": "47.37689905943954",
-      "Shares": "20,626.00",
-      "Market Value": "977,195.92"
-    },
-    {
-      "Ticker": "BWLPG NO",
-      "Name": "BW LPG LTD",
-      "Weight (%)": "1.02",
-      "Price": "24.29908497232213",
-      "Shares": "39,201.00",
-      "Market Value": "952,548.43"
-    },
-    {
-      "Ticker": "PROT NO",
-      "Name": "PROTECTOR FORSIKRING ASA",
-      "Weight (%)": "1.02",
-      "Price": "45.06069489272831",
-      "Shares": "21,068.00",
-      "Market Value": "949,338.72"
-    },
-    {
-      "Ticker": "TOM NO",
-      "Name": "TOMRA SYSTEMS ASA",
-      "Weight (%)": "0.94",
-      "Price": "9.680679681213416",
-      "Shares": "90,719.00",
-      "Market Value": "878,221.58"
-    },
-    {
-      "Ticker": "KIT NO",
-      "Name": "KITRON ASA",
-      "Weight (%)": "0.94",
-      "Price": "10.30710753813764",
-      "Shares": "85,021.00",
-      "Market Value": "876,320.59"
-    },
-    {
-      "Ticker": "HAUTO NO",
-      "Name": "HOEGH AUTOLINERS ASA",
-      "Weight (%)": "0.89",
-      "Price": "19.37188763418375",
-      "Shares": "43,038.00",
-      "Market Value": "833,727.30"
-    },
-    {
-      "Ticker": "WAWI NO",
-      "Name": "WALLENIUS WILHELMSEN ASA",
-      "Weight (%)": "0.84",
-      "Price": "18.85600571401133",
-      "Shares": "41,652.00",
-      "Market Value": "785,390.35"
-    },
-    {
-      "Ticker": "DOFG NO",
-      "Name": "DOF GROUP ASA",
-      "Weight (%)": "0.82",
-      "Price": "13.79194164971833",
-      "Shares": "55,561.00",
-      "Market Value": "766,294.07"
-    },
-    {
-      "Ticker": "AUTO NO",
-      "Name": "AUTOSTORE HOLDINGS LTD",
-      "Weight (%)": "0.74",
-      "Price": "1.656085832988307",
-      "Shares": "420,258.00",
-      "Market Value": "695,983.32"
-    },
-    {
-      "Ticker": "NONG NO",
-      "Name": "SPAREBANK 1 NORD-NORGE",
-      "Weight (%)": "0.73",
-      "Price": "18.47699070939083",
-      "Shares": "36,919.00",
-      "Market Value": "682,152.02"
-    },
-    {
-      "Ticker": "SCATC NO",
-      "Name": "SCATEC ASA",
-      "Weight (%)": "0.64",
-      "Price": "10.35448445686343",
-      "Shares": "57,260.00",
-      "Market Value": "592,897.78"
-    },
-    {
-      "Ticker": "ATEA NO",
-      "Name": "ATEA ASA",
-      "Weight (%)": "0.61",
-      "Price": "17.60315016153081",
-      "Shares": "32,192.00",
-      "Market Value": "566,680.61"
-    },
-    {
-      "Ticker": "EPR NO",
-      "Name": "EUROPRIS ASA",
-      "Weight (%)": "0.59",
-      "Price": "8.559426427768107",
-      "Shares": "64,909.00",
-      "Market Value": "555,583.81"
-    },
-    {
-      "Ticker": "CADLR NO",
-      "Name": "CADELER A/S",
-      "Weight (%)": "0.59",
-      "Price": "5.827358576161036",
-      "Shares": "94,786.00",
-      "Market Value": "552,352.01"
-    },
-    {
-      "Ticker": "BNOR NO",
-      "Name": "BLUENORD ASA",
-      "Weight (%)": "0.59",
-      "Price": "60.01073839432005",
-      "Shares": "9,155.00",
-      "Market Value": "549,398.31"
-    },
-    {
-      "Ticker": "AKSO NO",
-      "Name": "AKER SOLUTIONS ASA",
-      "Weight (%)": "0.57",
-      "Price": "4.41131570671963",
-      "Shares": "120,840.00",
-      "Market Value": "533,063.39"
-    },
-    {
-      "Ticker": "ODL NO",
-      "Name": "ODFJELL DRILLING LTD",
-      "Weight (%)": "0.56",
-      "Price": "10.73876370602862",
-      "Shares": "49,066.00",
-      "Market Value": "526,908.18"
-    },
-    {
-      "Ticker": "LSG NO",
-      "Name": "LEROY SEAFOOD GROUP ASA",
-      "Weight (%)": "0.53",
-      "Price": "4.516597743331325",
-      "Shares": "109,542.00",
-      "Market Value": "494,757.15"
-    },
-    {
-      "Ticker": "MPCC NO",
-      "Name": "MPC CONTAINER SHIPS ASA",
-      "Weight (%)": "0.53",
-      "Price": "2.985797465588814",
-      "Shares": "164,772.00",
-      "Market Value": "491,975.82"
-    },
-    {
-      "Ticker": "ELK NO",
-      "Name": "ELKEM ASA",
-      "Weight (%)": "0.49",
-      "Price": "3.579587948812157",
-      "Shares": "127,921.00",
-      "Market Value": "457,904.47"
-    },
-    {
-      "Ticker": "SPOL NO",
-      "Name": "SPAREBANK 1 OESTLANDET",
-      "Weight (%)": "0.46",
-      "Price": "21.87233516907715",
-      "Shares": "19,429.00",
-      "Market Value": "424,957.60"
-    },
-    {
-      "Ticker": "WWI NO",
-      "Name": "WILH WILHELMSEN HOLDING-A",
-      "Weight (%)": "0.41",
-      "Price": "96.22774619795563",
-      "Shares": "4,011.00",
-      "Market Value": "385,969.49"
-    },
-    {
-      "Ticker": "DNO NO",
-      "Name": "DNO ASA",
-      "Weight (%)": "0.39",
-      "Price": "2.029836917472889",
-      "Shares": "179,541.00",
-      "Market Value": "364,438.95"
-    },
-    {
-      "Ticker": "SNI NO",
-      "Name": "STOLT-NIELSEN LTD",
-      "Weight (%)": "0.34",
-      "Price": "37.69095561918397",
-      "Shares": "8,382.00",
-      "Market Value": "315,925.59"
-    },
-    {
-      "Ticker": "SATS NO",
-      "Name": "SATS ASA",
-      "Weight (%)": "0.33",
-      "Price": "4.463956708212199",
-      "Shares": "69,482.00",
-      "Market Value": "310,164.64"
-    },
-    {
-      "Ticker": "NORCO NO",
-      "Name": "NORCONSULT AS",
-      "Weight (%)": "0.32",
-      "Price": "4.032300546887567",
-      "Shares": "74,604.00",
-      "Market Value": "300,825.75"
-    },
-    {
-      "Ticker": "AUSS NO",
-      "Name": "AUSTEVOLL SEAFOOD ASA",
-      "Weight (%)": "0.31",
-      "Price": "8.843687784854064",
-      "Shares": "33,131.00",
-      "Market Value": "293,000.22"
-    },
-    {
-      "Ticker": "NAS NO",
-      "Name": "NORWEGIAN AIR SHUTTLE AS",
-      "Weight (%)": "0.30",
-      "Price": "1.296547818246045",
-      "Shares": "215,148.00",
-      "Market Value": "278,949.67"
-    },
-    {
-      "Ticker": "LINK NO",
-      "Name": "LINK MOBILITY GROUP HOLDING",
-      "Weight (%)": "0.28",
-      "Price": "2.554141298550163",
-      "Shares": "103,115.00",
-      "Market Value": "263,370.28"
-    },
-    {
-      "Ticker": "NORBT NO",
-      "Name": "NORBIT ASA",
-      "Weight (%)": "0.25",
-      "Price": "17.01357096283417",
-      "Shares": "13,803.00",
-      "Market Value": "234,838.32"
-    },
-    {
-      "Ticker": "ELO NO",
-      "Name": "ELOPAK ASA",
-      "Weight (%)": "0.24",
-      "Price": "3.742775041322314",
-      "Shares": "60,500.00",
-      "Market Value": "226,437.89"
-    },
-    {
-      "Ticker": "B2I NO",
-      "Name": "B2 IMPACT ASA",
-      "Weight (%)": "0.21",
-      "Price": "2.553088415801074",
-      "Shares": "75,767.00",
-      "Market Value": "193,439.85"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.06",
+      "Shares Held": "0.54",
+      "Asset Category": "Equity",
+      "Price": "0.1111111111111111"
+    },
+    {
+      "Name": "EQUINOR ASA",
+      "Ticker": "EQNR NO",
+      "Identifier": "7133608",
+      "Weight": "12.30%",
+      "Market Value": "11,490,381.57",
+      "Shares Held": "269,679.00",
+      "Asset Category": "Equity",
+      "Price": "42.60762450913865"
+    },
+    {
+      "Name": "DNB BANK ASA",
+      "Ticker": "DNB NO",
+      "Identifier": "BNG7113",
+      "Weight": "11.57%",
+      "Market Value": "10,808,401.72",
+      "Shares Held": "323,751.00",
+      "Asset Category": "Equity",
+      "Price": "33.38492149831198"
+    },
+    {
+      "Name": "KONGSBERG GRUPPEN ASA",
+      "Ticker": "KOG NO",
+      "Identifier": "BSTRB82",
+      "Weight": "6.04%",
+      "Market Value": "5,642,183.49",
+      "Shares Held": "171,382.00",
+      "Asset Category": "Equity",
+      "Price": "32.92168074826995"
+    },
+    {
+      "Name": "AKER BP ASA",
+      "Ticker": "AKRBP NO",
+      "Identifier": "B1L95G3",
+      "Weight": "5.09%",
+      "Market Value": "4,757,333.19",
+      "Shares Held": "129,623.00",
+      "Asset Category": "Equity",
+      "Price": "36.70130447528602"
+    },
+    {
+      "Name": "NORSK HYDRO ASA",
+      "Ticker": "NHY NO",
+      "Identifier": "B11HK39",
+      "Weight": "4.88%",
+      "Market Value": "4,564,252.53",
+      "Shares Held": "526,252.00",
+      "Asset Category": "Equity",
+      "Price": "8.673130990476047"
+    },
+    {
+      "Name": "MOWI ASA",
+      "Ticker": "MOWI NO",
+      "Identifier": "B02L486",
+      "Weight": "4.12%",
+      "Market Value": "3,847,399.56",
+      "Shares Held": "177,742.00",
+      "Asset Category": "Equity",
+      "Price": "21.64597877822912"
+    },
+    {
+      "Name": "TELENOR ASA",
+      "Ticker": "TEL NO",
+      "Identifier": "4732495",
+      "Weight": "3.66%",
+      "Market Value": "3,417,020.68",
+      "Shares Held": "252,575.00",
+      "Asset Category": "Equity",
+      "Price": "13.52873673166386"
+    },
+    {
+      "Name": "STOREBRAND ASA",
+      "Ticker": "STB NO",
+      "Identifier": "4852832",
+      "Weight": "3.52%",
+      "Market Value": "3,283,991.78",
+      "Shares Held": "160,537.00",
+      "Asset Category": "Equity",
+      "Price": "20.4562921943228"
+    },
+    {
+      "Name": "SUBSEA 7 SA",
+      "Ticker": "SUBC NO",
+      "Identifier": "5258246",
+      "Weight": "3.37%",
+      "Market Value": "3,150,781.93",
+      "Shares Held": "92,140.00",
+      "Asset Category": "Equity",
+      "Price": "34.1955929021055"
+    },
+    {
+      "Name": "YARA INTERNATIONAL ASA",
+      "Ticker": "YAR NO",
+      "Identifier": "7751259",
+      "Weight": "3.18%",
+      "Market Value": "2,970,594.61",
+      "Shares Held": "65,148.00",
+      "Asset Category": "Equity",
+      "Price": "45.59763323509547"
+    },
+    {
+      "Name": "ORKLA ASA",
+      "Ticker": "ORK NO",
+      "Identifier": "B1VQF42",
+      "Weight": "3.07%",
+      "Market Value": "2,868,913.23",
+      "Shares Held": "291,910.00",
+      "Asset Category": "Equity",
+      "Price": "9.828074509266555"
+    },
+    {
+      "Name": "FRONTLINE PLC",
+      "Ticker": "FRO NO",
+      "Identifier": "BMHDM54",
+      "Weight": "3.04%",
+      "Market Value": "2,841,722.12",
+      "Shares Held": "59,166.00",
+      "Asset Category": "Equity",
+      "Price": "48.02964743264713"
+    },
+    {
+      "Name": "GJENSIDIGE FORSIKRING ASA",
+      "Ticker": "GJF NO",
+      "Identifier": "B4PH0C5",
+      "Weight": "2.39%",
+      "Market Value": "2,231,730.86",
+      "Shares Held": "81,718.00",
+      "Asset Category": "Equity",
+      "Price": "27.31015027288969"
+    },
+    {
+      "Name": "VAR ENERGI ASA",
+      "Ticker": "VAR NO",
+      "Identifier": "BPLF0Y2",
+      "Weight": "2.21%",
+      "Market Value": "2,065,869.33",
+      "Shares Held": "383,997.00",
+      "Asset Category": "Equity",
+      "Price": "5.37991007742248"
+    },
+    {
+      "Name": "SPAREBANK 1 SOR-NORGE ASA",
+      "Ticker": "SB1NO NO",
+      "Identifier": "B40JTQ3",
+      "Weight": "2.17%",
+      "Market Value": "2,022,667.21",
+      "Shares Held": "83,530.00",
+      "Asset Category": "Equity",
+      "Price": "24.214859451694"
+    },
+    {
+      "Name": "SALMAR ASA",
+      "Ticker": "SALM NO",
+      "Identifier": "B1W5NW2",
+      "Weight": "1.81%",
+      "Market Value": "1,693,040.97",
+      "Shares Held": "27,702.00",
+      "Asset Category": "Equity",
+      "Price": "61.11619991336366"
+    },
+    {
+      "Name": "NORDIC SEMICONDUCTOR ASA",
+      "Ticker": "NOD NO",
+      "Identifier": "B00ZG06",
+      "Weight": "1.53%",
+      "Market Value": "1,427,796.45",
+      "Shares Held": "73,465.00",
+      "Asset Category": "Equity",
+      "Price": "19.43505682978289"
+    },
+    {
+      "Name": "AKER ASA-A SHARES",
+      "Ticker": "AKER NO",
+      "Identifier": "B02R4D9",
+      "Weight": "1.49%",
+      "Market Value": "1,389,017.40",
+      "Shares Held": "9,124.00",
+      "Asset Category": "Equity",
+      "Price": "152.2377685225778"
+    },
+    {
+      "Name": "VEND MARKETPLACES ASA CL",
+      "Ticker": "VEND NO",
+      "Identifier": "BWVFKQ3",
+      "Weight": "1.47%",
+      "Market Value": "1,369,499.76",
+      "Shares Held": "62,478.00",
+      "Asset Category": "Equity",
+      "Price": "21.9197118985883"
+    },
+    {
+      "Name": "TGS ASA",
+      "Ticker": "TGS NO",
+      "Identifier": "B15SLC4",
+      "Weight": "1.30%",
+      "Market Value": "1,219,185.66",
+      "Shares Held": "80,642.00",
+      "Asset Category": "Equity",
+      "Price": "15.1184948289973"
+    },
+    {
+      "Name": "SPAREBANK 1 SMN",
+      "Ticker": "MING NO",
+      "Identifier": "B0LGG75",
+      "Weight": "1.24%",
+      "Market Value": "1,162,203.17",
+      "Shares Held": "50,086.00",
+      "Asset Category": "Equity",
+      "Price": "23.20415225811604"
+    },
+    {
+      "Name": "KONGSBERG MARITIME ASA",
+      "Ticker": "KMAR NO",
+      "Identifier": "BVMZHV9",
+      "Weight": "1.17%",
+      "Market Value": "1,097,041.11",
+      "Shares Held": "171,382.00",
+      "Asset Category": "Equity",
+      "Price": "6.401145452848024"
+    },
+    {
+      "Name": "BAKKAFROST P/F",
+      "Ticker": "BAKKA NO",
+      "Identifier": "B6632T7",
+      "Weight": "1.05%",
+      "Market Value": "977,195.92",
+      "Shares Held": "20,626.00",
+      "Asset Category": "Equity",
+      "Price": "47.37689905943954"
+    },
+    {
+      "Name": "BW LPG LTD",
+      "Ticker": "BWLPG NO",
+      "Identifier": "BT5GCN2",
+      "Weight": "1.02%",
+      "Market Value": "952,548.43",
+      "Shares Held": "39,201.00",
+      "Asset Category": "Equity",
+      "Price": "24.29908497232213"
+    },
+    {
+      "Name": "PROTECTOR FORSIKRING ASA",
+      "Ticker": "PROT NO",
+      "Identifier": "B182K93",
+      "Weight": "1.02%",
+      "Market Value": "949,338.72",
+      "Shares Held": "21,068.00",
+      "Asset Category": "Equity",
+      "Price": "45.06069489272831"
+    },
+    {
+      "Name": "TOMRA SYSTEMS ASA",
+      "Ticker": "TOM NO",
+      "Identifier": "BPLXRG7",
+      "Weight": "0.94%",
+      "Market Value": "878,221.58",
+      "Shares Held": "90,719.00",
+      "Asset Category": "Equity",
+      "Price": "9.680679681213416"
+    },
+    {
+      "Name": "KITRON ASA",
+      "Ticker": "KIT NO",
+      "Identifier": "5399684",
+      "Weight": "0.94%",
+      "Market Value": "876,320.59",
+      "Shares Held": "85,021.00",
+      "Asset Category": "Equity",
+      "Price": "10.30710753813764"
+    },
+    {
+      "Name": "HOEGH AUTOLINERS ASA",
+      "Ticker": "HAUTO NO",
+      "Identifier": "BMFDP24",
+      "Weight": "0.89%",
+      "Market Value": "833,727.30",
+      "Shares Held": "43,038.00",
+      "Asset Category": "Equity",
+      "Price": "19.37188763418375"
+    },
+    {
+      "Name": "WALLENIUS WILHELMSEN ASA",
+      "Ticker": "WAWI NO",
+      "Identifier": "B55WMQ5",
+      "Weight": "0.84%",
+      "Market Value": "785,390.35",
+      "Shares Held": "41,652.00",
+      "Asset Category": "Equity",
+      "Price": "18.85600571401133"
+    },
+    {
+      "Name": "DOF GROUP ASA",
+      "Ticker": "DOFG NO",
+      "Identifier": "BQWSKZ8",
+      "Weight": "0.82%",
+      "Market Value": "766,294.07",
+      "Shares Held": "55,561.00",
+      "Asset Category": "Equity",
+      "Price": "13.79194164971833"
+    },
+    {
+      "Name": "AUTOSTORE HOLDINGS LTD",
+      "Ticker": "AUTO NO",
+      "Identifier": "BN49G27",
+      "Weight": "0.74%",
+      "Market Value": "695,983.32",
+      "Shares Held": "420,258.00",
+      "Asset Category": "Equity",
+      "Price": "1.656085832988307"
+    },
+    {
+      "Name": "SPAREBANK 1 NORD-NORGE",
+      "Ticker": "NONG NO",
+      "Identifier": "B06T259",
+      "Weight": "0.73%",
+      "Market Value": "682,152.02",
+      "Shares Held": "36,919.00",
+      "Asset Category": "Equity",
+      "Price": "18.47699070939083"
+    },
+    {
+      "Name": "SCATEC ASA",
+      "Ticker": "SCATC NO",
+      "Identifier": "BQSSWW3",
+      "Weight": "0.64%",
+      "Market Value": "592,897.78",
+      "Shares Held": "57,260.00",
+      "Asset Category": "Equity",
+      "Price": "10.35448445686343"
+    },
+    {
+      "Name": "ATEA ASA",
+      "Ticker": "ATEA NO",
+      "Identifier": "B12TR11",
+      "Weight": "0.61%",
+      "Market Value": "566,680.61",
+      "Shares Held": "32,192.00",
+      "Asset Category": "Equity",
+      "Price": "17.60315016153081"
+    },
+    {
+      "Name": "EUROPRIS ASA",
+      "Ticker": "EPR NO",
+      "Identifier": "BZ07696",
+      "Weight": "0.59%",
+      "Market Value": "555,583.81",
+      "Shares Held": "64,909.00",
+      "Asset Category": "Equity",
+      "Price": "8.559426427768107"
+    },
+    {
+      "Name": "CADELER A/S",
+      "Ticker": "CADLR NO",
+      "Identifier": "BMYDHR4",
+      "Weight": "0.59%",
+      "Market Value": "552,352.01",
+      "Shares Held": "94,786.00",
+      "Asset Category": "Equity",
+      "Price": "5.827358576161036"
+    },
+    {
+      "Name": "BLUENORD ASA",
+      "Ticker": "BNOR NO",
+      "Identifier": "B23D2M5",
+      "Weight": "0.59%",
+      "Market Value": "549,398.31",
+      "Shares Held": "9,155.00",
+      "Asset Category": "Equity",
+      "Price": "60.01073839432005"
+    },
+    {
+      "Name": "AKER SOLUTIONS ASA",
+      "Ticker": "AKSO NO",
+      "Identifier": "BQN1C50",
+      "Weight": "0.57%",
+      "Market Value": "533,063.39",
+      "Shares Held": "120,840.00",
+      "Asset Category": "Equity",
+      "Price": "4.41131570671963"
+    },
+    {
+      "Name": "ODFJELL DRILLING LTD",
+      "Ticker": "ODL NO",
+      "Identifier": "BDX87W2",
+      "Weight": "0.56%",
+      "Market Value": "526,908.18",
+      "Shares Held": "49,066.00",
+      "Asset Category": "Equity",
+      "Price": "10.73876370602862"
+    },
+    {
+      "Name": "LEROY SEAFOOD GROUP ASA",
+      "Ticker": "LSG NO",
+      "Identifier": "4691916",
+      "Weight": "0.53%",
+      "Market Value": "494,757.15",
+      "Shares Held": "109,542.00",
+      "Asset Category": "Equity",
+      "Price": "4.516597743331325"
+    },
+    {
+      "Name": "MPC CONTAINER SHIPS ASA",
+      "Ticker": "MPCC NO",
+      "Identifier": "BF20GN7",
+      "Weight": "0.53%",
+      "Market Value": "491,975.82",
+      "Shares Held": "164,772.00",
+      "Asset Category": "Equity",
+      "Price": "2.985797465588814"
+    },
+    {
+      "Name": "ELKEM ASA",
+      "Ticker": "ELK NO",
+      "Identifier": "BG0T3J8",
+      "Weight": "0.49%",
+      "Market Value": "457,904.47",
+      "Shares Held": "127,921.00",
+      "Asset Category": "Equity",
+      "Price": "3.579587948812157"
+    },
+    {
+      "Name": "SPAREBANK 1 OESTLANDET",
+      "Ticker": "SPOL NO",
+      "Identifier": "BZ12WQ9",
+      "Weight": "0.46%",
+      "Market Value": "424,957.60",
+      "Shares Held": "19,429.00",
+      "Asset Category": "Equity",
+      "Price": "21.87233516907715"
+    },
+    {
+      "Name": "WILH WILHELMSEN HOLDING-A",
+      "Ticker": "WWI NO",
+      "Identifier": "B682WX6",
+      "Weight": "0.41%",
+      "Market Value": "385,969.49",
+      "Shares Held": "4,011.00",
+      "Asset Category": "Equity",
+      "Price": "96.22774619795563"
+    },
+    {
+      "Name": "DNO ASA",
+      "Ticker": "DNO NO",
+      "Identifier": "B15GGN4",
+      "Weight": "0.39%",
+      "Market Value": "364,438.95",
+      "Shares Held": "179,541.00",
+      "Asset Category": "Equity",
+      "Price": "2.029836917472889"
+    },
+    {
+      "Name": "STOLT-NIELSEN LTD",
+      "Ticker": "SNI NO",
+      "Identifier": "B4PKZG3",
+      "Weight": "0.34%",
+      "Market Value": "315,925.59",
+      "Shares Held": "8,382.00",
+      "Asset Category": "Equity",
+      "Price": "37.69095561918397"
+    },
+    {
+      "Name": "SATS ASA",
+      "Ticker": "SATS NO",
+      "Identifier": "BKV4GX5",
+      "Weight": "0.33%",
+      "Market Value": "310,164.64",
+      "Shares Held": "69,482.00",
+      "Asset Category": "Equity",
+      "Price": "4.463956708212199"
+    },
+    {
+      "Name": "NORCONSULT AS",
+      "Ticker": "NORCO NO",
+      "Identifier": "BMTQPF2",
+      "Weight": "0.32%",
+      "Market Value": "300,825.75",
+      "Shares Held": "74,604.00",
+      "Asset Category": "Equity",
+      "Price": "4.032300546887567"
+    },
+    {
+      "Name": "AUSTEVOLL SEAFOOD ASA",
+      "Ticker": "AUSS NO",
+      "Identifier": "B16MKT5",
+      "Weight": "0.31%",
+      "Market Value": "293,000.22",
+      "Shares Held": "33,131.00",
+      "Asset Category": "Equity",
+      "Price": "8.843687784854064"
+    },
+    {
+      "Name": "NORWEGIAN AIR SHUTTLE AS",
+      "Ticker": "NAS NO",
+      "Identifier": "7742123",
+      "Weight": "0.30%",
+      "Market Value": "278,949.67",
+      "Shares Held": "215,148.00",
+      "Asset Category": "Equity",
+      "Price": "1.296547818246045"
+    },
+    {
+      "Name": "LINK MOBILITY GROUP HOLDING",
+      "Ticker": "LINK NO",
+      "Identifier": "BM99YX2",
+      "Weight": "0.28%",
+      "Market Value": "263,370.28",
+      "Shares Held": "103,115.00",
+      "Asset Category": "Equity",
+      "Price": "2.554141298550163"
+    },
+    {
+      "Name": "NORBIT ASA",
+      "Ticker": "NORBT NO",
+      "Identifier": "BKBD1K4",
+      "Weight": "0.25%",
+      "Market Value": "234,838.32",
+      "Shares Held": "13,803.00",
+      "Asset Category": "Equity",
+      "Price": "17.01357096283417"
+    },
+    {
+      "Name": "ELOPAK ASA",
+      "Ticker": "ELO NO",
+      "Identifier": "BMCQVP1",
+      "Weight": "0.24%",
+      "Market Value": "226,437.89",
+      "Shares Held": "60,500.00",
+      "Asset Category": "Equity",
+      "Price": "3.742775041322314"
+    },
+    {
+      "Name": "B2 IMPACT ASA",
+      "Ticker": "B2I NO",
+      "Identifier": "BTC0J36",
+      "Weight": "0.21%",
+      "Market Value": "193,439.85",
+      "Shares Held": "75,767.00",
+      "Asset Category": "Equity",
+      "Price": "2.553088415801074"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.20",
-      "Price": "1.0",
-      "Shares": "181,783.97",
-      "Market Value": "181,783.97"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.20%",
+      "Market Value": "181,783.97",
+      "Shares Held": "181,783.97",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "ENTRA NO",
       "Name": "ENTRA ASA",
-      "Weight (%)": "0.18",
-      "Price": "10.38080503298314",
-      "Shares": "16,372.00",
-      "Market Value": "169,954.54"
+      "Ticker": "ENTRA NO",
+      "Identifier": "BRJ2VC4",
+      "Weight": "0.18%",
+      "Market Value": "169,954.54",
+      "Shares Held": "16,372.00",
+      "Asset Category": "Equity",
+      "Price": "10.38080503298314"
     },
     {
-      "Ticker": "PLSV NO",
       "Name": "PARATUS ENERGY SERVICES LTD",
-      "Weight (%)": "0.17",
-      "Price": "5.085120427903401",
-      "Shares": "31,222.00",
-      "Market Value": "158,767.63"
+      "Ticker": "PLSV NO",
+      "Identifier": "BLCCJ92",
+      "Weight": "0.17%",
+      "Market Value": "158,767.63",
+      "Shares Held": "31,222.00",
+      "Asset Category": "Equity",
+      "Price": "5.085120427903401"
     },
     {
-      "Ticker": "BWO NO",
       "Name": "BW OFFSHORE LTD",
-      "Weight (%)": "0.16",
-      "Price": "4.258656782843315",
-      "Shares": "35,951.00",
-      "Market Value": "153,102.97"
+      "Ticker": "BWO NO",
+      "Identifier": "BYYNFR4",
+      "Weight": "0.16%",
+      "Market Value": "153,102.97",
+      "Shares Held": "35,951.00",
+      "Asset Category": "Equity",
+      "Price": "4.258656782843315"
     },
     {
-      "Ticker": "BWE NO",
       "Name": "BW ENERGY LTD",
-      "Weight (%)": "0.14",
-      "Price": "6.10635606478925",
-      "Shares": "21,732.00",
-      "Market Value": "132,703.33"
+      "Ticker": "BWE NO",
+      "Identifier": "BKM1QH9",
+      "Weight": "0.14%",
+      "Market Value": "132,703.33",
+      "Shares Held": "21,732.00",
+      "Asset Category": "Equity",
+      "Price": "6.10635606478925"
     }
   ]
 }

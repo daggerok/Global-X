@@ -4,357 +4,444 @@
   "pageSize": 250,
   "totalRows": 43,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.02",
-      "Price": "1.0",
-      "Shares": "7,355.32",
-      "Market Value": "7,355.32"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.02%",
+      "Market Value": "7,355.32",
+      "Shares Held": "7,355.32",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.01",
-      "Price": "1.0",
-      "Shares": "3,787.02",
-      "Market Value": "3,787.02"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.01%",
+      "Market Value": "3,787.02",
+      "Shares Held": "3,787.02",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "HONG KONG DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.1281407035175879",
-      "Shares": "3.98",
-      "Market Value": "0.51"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.51",
+      "Shares Held": "3.98",
+      "Asset Category": "Equity",
+      "Price": "0.1281407035175879"
+    },
+    {
       "Name": "TAIWAN DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.03333333333333333",
-      "Shares": "0.90",
-      "Market Value": "0.03"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.03",
+      "Shares Held": "0.90",
+      "Asset Category": "Equity",
+      "Price": "0.03333333333333333"
     },
     {
-      "Ticker": "IQV",
       "Name": "IQVIA HOLDINGS INC",
-      "Weight (%)": "6.21",
-      "Price": "270.37",
-      "Shares": "7,078.00",
-      "Market Value": "1,913,678.86"
+      "Ticker": "IQV",
+      "Identifier": "BDR73G1",
+      "Weight": "6.21%",
+      "Market Value": "1,913,678.86",
+      "Shares Held": "7,078.00",
+      "Asset Category": "Equity",
+      "Price": "270.37"
     },
     {
-      "Ticker": "VEEV",
       "Name": "VEEVA SYSTEMS INC-CLASS A",
-      "Weight (%)": "5.94",
-      "Price": "280.68",
-      "Shares": "6,519.00",
-      "Market Value": "1,829,752.92"
+      "Ticker": "VEEV",
+      "Identifier": "BFH3N85",
+      "Weight": "5.94%",
+      "Market Value": "1,829,752.92",
+      "Shares Held": "6,519.00",
+      "Asset Category": "Equity",
+      "Price": "280.68"
     },
     {
-      "Ticker": "TEM",
       "Name": "TEMPUS AI INC-CL A",
-      "Weight (%)": "5.62",
-      "Price": "85.00999999999999",
-      "Shares": "20,338.00",
-      "Market Value": "1,728,933.38"
+      "Ticker": "TEM",
+      "Identifier": "BSLSJJ0",
+      "Weight": "5.62%",
+      "Market Value": "1,728,933.38",
+      "Shares Held": "20,338.00",
+      "Asset Category": "Equity",
+      "Price": "85.00999999999999"
     },
     {
-      "Ticker": "OSCR",
       "Name": "OSCAR HEALTH INC - CLASS A",
-      "Weight (%)": "5.46",
-      "Price": "29.6",
-      "Shares": "56,767.00",
-      "Market Value": "1,680,303.20"
+      "Ticker": "OSCR",
+      "Identifier": "BKY83Q6",
+      "Weight": "5.46%",
+      "Market Value": "1,680,303.20",
+      "Shares Held": "56,767.00",
+      "Asset Category": "Equity",
+      "Price": "29.6"
     },
     {
-      "Ticker": "DXCM",
       "Name": "DEXCOM INC",
-      "Weight (%)": "5.12",
-      "Price": "86.62",
-      "Shares": "18,201.00",
-      "Market Value": "1,576,570.62"
+      "Ticker": "DXCM",
+      "Identifier": "B0796X4",
+      "Weight": "5.12%",
+      "Market Value": "1,576,570.62",
+      "Shares Held": "18,201.00",
+      "Asset Category": "Equity",
+      "Price": "86.62"
     },
     {
-      "Ticker": "PME AU",
       "Name": "PRO MEDICUS LTD",
-      "Weight (%)": "4.17",
-      "Price": "113.0943597641468",
-      "Shares": "11,363.00",
-      "Market Value": "1,285,091.21"
+      "Ticker": "PME AU",
+      "Identifier": "6292782",
+      "Weight": "4.17%",
+      "Market Value": "1,285,091.21",
+      "Shares Held": "11,363.00",
+      "Asset Category": "Equity",
+      "Price": "113.0943597641468"
     },
     {
-      "Ticker": "GEHC",
       "Name": "GE HEALTHCARE TECHNOLOGY",
-      "Weight (%)": "3.96",
-      "Price": "66.63000000000001",
-      "Shares": "18,295.00",
-      "Market Value": "1,218,995.85"
+      "Ticker": "GEHC",
+      "Identifier": "BL6JPG8",
+      "Weight": "3.96%",
+      "Market Value": "1,218,995.85",
+      "Shares Held": "18,295.00",
+      "Asset Category": "Equity",
+      "Price": "66.63000000000001"
     },
     {
-      "Ticker": "RMD",
       "Name": "RESMED INC",
-      "Weight (%)": "3.93",
-      "Price": "222.0",
-      "Shares": "5,455.00",
-      "Market Value": "1,211,010.00"
+      "Ticker": "RMD",
+      "Identifier": "2732903",
+      "Weight": "3.93%",
+      "Market Value": "1,211,010.00",
+      "Shares Held": "5,455.00",
+      "Asset Category": "Equity",
+      "Price": "222.0"
     },
     {
-      "Ticker": "HIMS",
       "Name": "HIMS & HERS HEALTH INC",
-      "Weight (%)": "3.90",
-      "Price": "29.42",
-      "Shares": "40,811.00",
-      "Market Value": "1,200,659.62"
+      "Ticker": "HIMS",
+      "Identifier": "BN46048",
+      "Weight": "3.90%",
+      "Market Value": "1,200,659.62",
+      "Shares Held": "40,811.00",
+      "Asset Category": "Equity",
+      "Price": "29.42"
     },
     {
-      "Ticker": "WAY",
       "Name": "WAYSTAR HOLDING CORP",
-      "Weight (%)": "3.45",
-      "Price": "24.7",
-      "Shares": "43,013.00",
-      "Market Value": "1,062,421.10"
+      "Ticker": "WAY",
+      "Identifier": "BSWYNW8",
+      "Weight": "3.45%",
+      "Market Value": "1,062,421.10",
+      "Shares Held": "43,013.00",
+      "Asset Category": "Equity",
+      "Price": "24.7"
     },
     {
-      "Ticker": "PHIA NA",
       "Name": "KONINKLIJKE PHILIPS NV",
-      "Weight (%)": "3.44",
-      "Price": "24.9350116605027",
-      "Shares": "42,451.00",
-      "Market Value": "1,058,516.18"
+      "Ticker": "PHIA NA",
+      "Identifier": "5986622",
+      "Weight": "3.44%",
+      "Market Value": "1,058,516.18",
+      "Shares Held": "42,451.00",
+      "Asset Category": "Equity",
+      "Price": "24.9350116605027"
     },
     {
-      "Ticker": "DEMANT DC",
       "Name": "DEMANT A/S",
-      "Weight (%)": "3.33",
-      "Price": "46.8524803652968",
-      "Shares": "21,900.00",
-      "Market Value": "1,026,069.32"
+      "Ticker": "DEMANT DC",
+      "Identifier": "BZ01RF1",
+      "Weight": "3.33%",
+      "Market Value": "1,026,069.32",
+      "Shares Held": "21,900.00",
+      "Asset Category": "Equity",
+      "Price": "46.8524803652968"
     },
     {
-      "Ticker": "ISRG",
       "Name": "INTUITIVE SURGICAL INC",
-      "Weight (%)": "3.22",
-      "Price": "405.18",
-      "Shares": "2,444.00",
-      "Market Value": "990,259.92"
+      "Ticker": "ISRG",
+      "Identifier": "2871301",
+      "Weight": "3.22%",
+      "Market Value": "990,259.92",
+      "Shares Held": "2,444.00",
+      "Asset Category": "Equity",
+      "Price": "405.18"
     },
     {
-      "Ticker": "IRTC",
       "Name": "IRHYTHM HOLDINGS INC",
-      "Weight (%)": "3.02",
-      "Price": "110.38",
-      "Shares": "8,427.00",
-      "Market Value": "930,172.26"
+      "Ticker": "IRTC",
+      "Identifier": "BYT4ST5",
+      "Weight": "3.02%",
+      "Market Value": "930,172.26",
+      "Shares Held": "8,427.00",
+      "Asset Category": "Equity",
+      "Price": "110.38"
     },
     {
-      "Ticker": "PODD",
       "Name": "INSULET CORP",
-      "Weight (%)": "2.82",
-      "Price": "136.13",
-      "Shares": "6,387.00",
-      "Market Value": "869,462.31"
+      "Ticker": "PODD",
+      "Identifier": "B1XGNW4",
+      "Weight": "2.82%",
+      "Market Value": "869,462.31",
+      "Shares Held": "6,387.00",
+      "Asset Category": "Equity",
+      "Price": "136.13"
     },
     {
-      "Ticker": "DOCS",
       "Name": "DOXIMITY INC-CLASS A",
-      "Weight (%)": "2.81",
-      "Price": "26.35",
-      "Shares": "32,877.00",
-      "Market Value": "866,308.95"
+      "Ticker": "DOCS",
+      "Identifier": "BMD22Y4",
+      "Weight": "2.81%",
+      "Market Value": "866,308.95",
+      "Shares Held": "32,877.00",
+      "Asset Category": "Equity",
+      "Price": "26.35"
     },
     {
-      "Ticker": "HTFL",
       "Name": "HEARTFLOW INC",
-      "Weight (%)": "2.81",
-      "Price": "49.17",
-      "Shares": "17,608.00",
-      "Market Value": "865,785.36"
+      "Ticker": "HTFL",
+      "Identifier": "BV6KV30",
+      "Weight": "2.81%",
+      "Market Value": "865,785.36",
+      "Shares Held": "17,608.00",
+      "Asset Category": "Equity",
+      "Price": "49.17"
     },
     {
-      "Ticker": "TMDX",
       "Name": "TRANSMEDICS GROUP INC",
-      "Weight (%)": "2.76",
-      "Price": "85.29",
-      "Shares": "9,960.00",
-      "Market Value": "849,488.40"
+      "Ticker": "TMDX",
+      "Identifier": "BK6TM04",
+      "Weight": "2.76%",
+      "Market Value": "849,488.40",
+      "Shares Held": "9,960.00",
+      "Asset Category": "Equity",
+      "Price": "85.29"
     },
     {
-      "Ticker": "HNGE",
       "Name": "HINGE HEALTH INC-A",
-      "Weight (%)": "2.68",
-      "Price": "95.57",
-      "Shares": "8,644.00",
-      "Market Value": "826,107.08"
+      "Ticker": "HNGE",
+      "Identifier": "BV99FG5",
+      "Weight": "2.68%",
+      "Market Value": "826,107.08",
+      "Shares Held": "8,644.00",
+      "Asset Category": "Equity",
+      "Price": "95.57"
     },
     {
-      "Ticker": "241 HK",
       "Name": "ALIBABA HEALTH INFORMATION T",
-      "Weight (%)": "1.89",
-      "Price": "0.3601501794110369",
-      "Shares": "1,616,400.00",
-      "Market Value": "582,146.75"
+      "Ticker": "241 HK",
+      "Identifier": "BRXVS60",
+      "Weight": "1.89%",
+      "Market Value": "582,146.75",
+      "Shares Held": "1,616,400.00",
+      "Asset Category": "Equity",
+      "Price": "0.3601501794110369"
     },
     {
-      "Ticker": "PRVA",
       "Name": "PRIVIA HEALTH GROUP INC",
-      "Weight (%)": "1.88",
-      "Price": "19.71",
-      "Shares": "29,393.00",
-      "Market Value": "579,336.03"
+      "Ticker": "PRVA",
+      "Identifier": "BMDP209",
+      "Weight": "1.88%",
+      "Market Value": "579,336.03",
+      "Shares Held": "29,393.00",
+      "Asset Category": "Equity",
+      "Price": "19.71"
     },
     {
-      "Ticker": "NRIX",
       "Name": "NURIX THERAPEUTICS INC",
-      "Weight (%)": "1.88",
-      "Price": "23.01",
-      "Shares": "25,126.00",
-      "Market Value": "578,149.26"
+      "Ticker": "NRIX",
+      "Identifier": "BMVLGP2",
+      "Weight": "1.88%",
+      "Market Value": "578,149.26",
+      "Shares Held": "25,126.00",
+      "Asset Category": "Equity",
+      "Price": "23.01"
     },
     {
-      "Ticker": "LFST",
       "Name": "LIFESTANCE HEALTH GROUP INC",
-      "Weight (%)": "1.69",
-      "Price": "11.84",
-      "Shares": "43,905.00",
-      "Market Value": "519,835.20"
+      "Ticker": "LFST",
+      "Identifier": "BN0TRB7",
+      "Weight": "1.69%",
+      "Market Value": "519,835.20",
+      "Shares Held": "43,905.00",
+      "Asset Category": "Equity",
+      "Price": "11.84"
     },
     {
-      "Ticker": "RXRX",
       "Name": "RECURSION PHARMACEUTICALS-A",
-      "Weight (%)": "1.63",
-      "Price": "3.74",
-      "Shares": "133,971.00",
-      "Market Value": "501,051.54"
+      "Ticker": "RXRX",
+      "Identifier": "BM9FJ13",
+      "Weight": "1.63%",
+      "Market Value": "501,051.54",
+      "Shares Held": "133,971.00",
+      "Asset Category": "Equity",
+      "Price": "3.74"
     },
     {
-      "Ticker": "BFLY",
       "Name": "BUTTERFLY NETWORK INC",
-      "Weight (%)": "1.58",
-      "Price": "9.39",
-      "Shares": "51,753.00",
-      "Market Value": "485,960.67"
+      "Ticker": "BFLY",
+      "Identifier": "BMHYQY4",
+      "Weight": "1.58%",
+      "Market Value": "485,960.67",
+      "Shares Held": "51,753.00",
+      "Asset Category": "Equity",
+      "Price": "9.39"
     },
     {
-      "Ticker": "INSP",
       "Name": "INSPIRE MEDICAL SYSTEMS INC",
-      "Weight (%)": "1.54",
-      "Price": "70.5",
-      "Shares": "6,725.00",
-      "Market Value": "474,112.50"
+      "Ticker": "INSP",
+      "Identifier": "BDT5KT5",
+      "Weight": "1.54%",
+      "Market Value": "474,112.50",
+      "Shares Held": "6,725.00",
+      "Asset Category": "Equity",
+      "Price": "70.5"
     },
     {
-      "Ticker": "SDGR",
       "Name": "SCHRODINGER INC",
-      "Weight (%)": "1.52",
-      "Price": "28.85",
-      "Shares": "16,208.00",
-      "Market Value": "467,600.80"
+      "Ticker": "SDGR",
+      "Identifier": "BKV28S8",
+      "Weight": "1.52%",
+      "Market Value": "467,600.80",
+      "Shares Held": "16,208.00",
+      "Asset Category": "Equity",
+      "Price": "28.85"
     },
     {
-      "Ticker": "4DX AU",
       "Name": "4DMEDICAL LTD",
-      "Weight (%)": "1.47",
-      "Price": "2.809797765099253",
-      "Shares": "160,902.00",
-      "Market Value": "452,102.08"
+      "Ticker": "4DX AU",
+      "Identifier": "BMX3786",
+      "Weight": "1.47%",
+      "Market Value": "452,102.08",
+      "Shares Held": "160,902.00",
+      "Asset Category": "Equity",
+      "Price": "2.809797765099253"
     },
     {
-      "Ticker": "CLOV",
       "Name": "CLOVER HEALTH INVESTMENTS CO",
-      "Weight (%)": "1.39",
-      "Price": "4.49",
-      "Shares": "95,445.00",
-      "Market Value": "428,548.05"
+      "Ticker": "CLOV",
+      "Identifier": "BNQS7K7",
+      "Weight": "1.39%",
+      "Market Value": "428,548.05",
+      "Shares Held": "95,445.00",
+      "Asset Category": "Equity",
+      "Price": "4.49"
     },
     {
-      "Ticker": "ALHC",
       "Name": "ALIGNMENT HEALTHCARE INC",
-      "Weight (%)": "1.29",
-      "Price": "8.21",
-      "Shares": "48,414.00",
-      "Market Value": "397,478.94"
+      "Ticker": "ALHC",
+      "Identifier": "BNNLSZ1",
+      "Weight": "1.29%",
+      "Market Value": "397,478.94",
+      "Shares Held": "48,414.00",
+      "Asset Category": "Equity",
+      "Price": "8.21"
     },
     {
-      "Ticker": "ASTH",
       "Name": "ASTRANA HEALTH INC",
-      "Weight (%)": "1.17",
-      "Price": "36.37",
-      "Shares": "9,894.00",
-      "Market Value": "359,844.78"
+      "Ticker": "ASTH",
+      "Identifier": "BX3SQS1",
+      "Weight": "1.17%",
+      "Market Value": "359,844.78",
+      "Shares Held": "9,894.00",
+      "Asset Category": "Equity",
+      "Price": "36.37"
     },
     {
-      "Ticker": "NVCR",
       "Name": "NOVOCURE LTD",
-      "Weight (%)": "1.09",
-      "Price": "15.84",
-      "Shares": "21,130.00",
-      "Market Value": "334,699.20"
+      "Ticker": "NVCR",
+      "Identifier": "BYSS4X4",
+      "Weight": "1.09%",
+      "Market Value": "334,699.20",
+      "Shares Held": "21,130.00",
+      "Asset Category": "Equity",
+      "Price": "15.84"
     },
     {
-      "Ticker": "OMCL",
       "Name": "OMNICELL INC",
-      "Weight (%)": "1.08",
-      "Price": "33.66",
-      "Shares": "9,841.00",
-      "Market Value": "331,248.06"
+      "Ticker": "OMCL",
+      "Identifier": "2789523",
+      "Weight": "1.08%",
+      "Market Value": "331,248.06",
+      "Shares Held": "9,841.00",
+      "Asset Category": "Equity",
+      "Price": "33.66"
     },
     {
-      "Ticker": "TNDM",
       "Name": "TANDEM DIABETES CARE INC",
-      "Weight (%)": "0.97",
-      "Price": "15.72",
-      "Shares": "18,919.00",
-      "Market Value": "297,406.68"
+      "Ticker": "TNDM",
+      "Identifier": "BF3W461",
+      "Weight": "0.97%",
+      "Market Value": "297,406.68",
+      "Shares Held": "18,919.00",
+      "Asset Category": "Equity",
+      "Price": "15.72"
     },
     {
-      "Ticker": "TDOC",
       "Name": "TELADOC HEALTH INC",
-      "Weight (%)": "0.84",
-      "Price": "6.09",
-      "Shares": "42,417.00",
-      "Market Value": "258,319.53"
+      "Ticker": "TDOC",
+      "Identifier": "BYQRFY1",
+      "Weight": "0.84%",
+      "Market Value": "258,319.53",
+      "Shares Held": "42,417.00",
+      "Asset Category": "Equity",
+      "Price": "6.09"
     },
     {
-      "Ticker": "PRCT",
       "Name": "PROCEPT BIOROBOTICS CORP",
-      "Weight (%)": "0.81",
-      "Price": "17.2",
-      "Shares": "14,530.00",
-      "Market Value": "249,916.00"
+      "Ticker": "PRCT",
+      "Identifier": "BMYRFV6",
+      "Weight": "0.81%",
+      "Market Value": "249,916.00",
+      "Shares Held": "14,530.00",
+      "Asset Category": "Equity",
+      "Price": "17.2"
     },
     {
-      "Ticker": "KMTS",
       "Name": "KESTRA MEDICAL TECHNOLOGIES",
-      "Weight (%)": "0.60",
-      "Price": "27.14",
-      "Shares": "6,796.00",
-      "Market Value": "184,443.44"
+      "Ticker": "KMTS",
+      "Identifier": "BSJQPL0",
+      "Weight": "0.60%",
+      "Market Value": "184,443.44",
+      "Shares Held": "6,796.00",
+      "Asset Category": "Equity",
+      "Price": "27.14"
     },
     {
-      "Ticker": "XVIVO SS",
       "Name": "XVIVO PERFUSION AB",
-      "Weight (%)": "0.54",
-      "Price": "23.85120172910663",
-      "Shares": "6,940.00",
-      "Market Value": "165,527.34"
+      "Ticker": "XVIVO SS",
+      "Identifier": "B898BV8",
+      "Weight": "0.54%",
+      "Market Value": "165,527.34",
+      "Shares Held": "6,940.00",
+      "Asset Category": "Equity",
+      "Price": "23.85120172910663"
     },
     {
-      "Ticker": "458870 KS",
       "Name": "SEERS CO LTD",
-      "Weight (%)": "0.47",
-      "Price": "18.42928105411283",
-      "Shares": "7,817.00",
-      "Market Value": "144,061.69"
+      "Ticker": "458870 KS",
+      "Identifier": "BNTD378",
+      "Weight": "0.47%",
+      "Market Value": "144,061.69",
+      "Shares Held": "7,817.00",
+      "Asset Category": "Equity",
+      "Price": "18.42928105411283"
     }
   ]
 }

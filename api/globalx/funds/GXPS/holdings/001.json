@@ -4,269 +4,334 @@
   "pageSize": 250,
   "totalRows": 32,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "VDC",
       "Name": "VANGUARD CONSUMER STAPLE ETF",
-      "Weight (%)": "0.12",
-      "Price": "222.17",
-      "Shares": "398.00",
-      "Market Value": "88,423.66"
+      "Ticker": "VDC",
+      "Identifier": "2354028",
+      "Weight": "0.12%",
+      "Market Value": "88,423.66",
+      "Shares Held": "398.00",
+      "Asset Category": "Fund",
+      "Price": "222.17"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.06",
-      "Price": "1.0",
-      "Shares": "45,217.88",
-      "Market Value": "45,217.88"
-    },
-    {
-      "Ticker": "WMT",
-      "Name": "WALMART INC",
-      "Weight (%)": "16.36",
-      "Price": "107.98",
-      "Shares": "111,002.00",
-      "Market Value": "11,985,995.96"
-    },
-    {
-      "Ticker": "COST",
-      "Name": "COSTCO WHOLESALE CORP",
-      "Weight (%)": "14.17",
-      "Price": "922.765",
-      "Shares": "11,246.00",
-      "Market Value": "10,377,415.19"
-    },
-    {
-      "Ticker": "PG",
-      "Name": "PROCTER & GAMBLE CO/THE",
-      "Weight (%)": "11.79",
-      "Price": "146.23",
-      "Shares": "59,061.00",
-      "Market Value": "8,636,490.03"
-    },
-    {
-      "Ticker": "KO",
-      "Name": "COCA-COLA CO/THE",
-      "Weight (%)": "11.77",
-      "Price": "87.81",
-      "Shares": "98,214.00",
-      "Market Value": "8,624,171.34"
-    },
-    {
-      "Ticker": "PM",
-      "Name": "PHILIP MORRIS INTERNATIONAL",
-      "Weight (%)": "10.28",
-      "Price": "190.48",
-      "Shares": "39,527.00",
-      "Market Value": "7,529,102.96"
-    },
-    {
-      "Ticker": "PEP",
-      "Name": "PEPSICO INC",
-      "Weight (%)": "6.08",
-      "Price": "128.63",
-      "Shares": "34,612.00",
-      "Market Value": "4,452,141.56"
-    },
-    {
-      "Ticker": "MO",
-      "Name": "ALTRIA GROUP INC",
-      "Weight (%)": "3.97",
-      "Price": "68.82000000000001",
-      "Shares": "42,280.00",
-      "Market Value": "2,909,709.60"
-    },
-    {
-      "Ticker": "MDLZ",
-      "Name": "MONDELEZ INTERNATIONAL INC-A",
-      "Weight (%)": "2.66",
-      "Price": "60.25",
-      "Shares": "32,351.00",
-      "Market Value": "1,949,147.75"
-    },
-    {
-      "Ticker": "TGT",
-      "Name": "TARGET CORP",
-      "Weight (%)": "2.46",
-      "Price": "157.45",
-      "Shares": "11,434.00",
-      "Market Value": "1,800,283.30"
-    },
-    {
-      "Ticker": "CL",
-      "Name": "COLGATE-PALMOLIVE CO",
-      "Weight (%)": "2.26",
-      "Price": "86.06",
-      "Shares": "19,230.00",
-      "Market Value": "1,654,933.80"
-    },
-    {
-      "Ticker": "MNST",
-      "Name": "MONSTER BEVERAGE CORP",
-      "Weight (%)": "2.10",
-      "Price": "43.11",
-      "Shares": "35,758.00",
-      "Market Value": "1,541,527.38"
-    },
-    {
-      "Ticker": "KDP",
-      "Name": "KEURIG DR PEPPER INC",
-      "Weight (%)": "1.49",
-      "Price": "31.72",
-      "Shares": "34,504.00",
-      "Market Value": "1,094,466.88"
-    },
-    {
-      "Ticker": "ADM",
-      "Name": "ARCHER-DANIELS-MIDLAND CO",
-      "Weight (%)": "1.34",
-      "Price": "81.12",
-      "Shares": "12,118.00",
-      "Market Value": "983,012.16"
-    },
-    {
-      "Ticker": "SYY",
-      "Name": "SYSCO CORP",
-      "Weight (%)": "1.29",
-      "Price": "78.46",
-      "Shares": "12,032.00",
-      "Market Value": "944,030.72"
-    },
-    {
-      "Ticker": "KVUE",
-      "Name": "KENVUE INC",
-      "Weight (%)": "1.17",
-      "Price": "17.8",
-      "Shares": "48,269.00",
-      "Market Value": "859,188.20"
-    },
-    {
-      "Ticker": "KMB",
-      "Name": "KIMBERLY-CLARK CORP",
-      "Weight (%)": "1.12",
-      "Price": "98.43",
-      "Shares": "8,367.00",
-      "Market Value": "823,563.81"
-    },
-    {
-      "Ticker": "KR",
-      "Name": "KROGER CO",
-      "Weight (%)": "1.11",
-      "Price": "58.74",
-      "Shares": "13,874.00",
-      "Market Value": "814,958.76"
-    },
-    {
-      "Ticker": "DG",
-      "Name": "DOLLAR GENERAL CORP",
-      "Weight (%)": "0.94",
-      "Price": "124.84",
-      "Shares": "5,542.00",
-      "Market Value": "691,863.28"
-    },
-    {
-      "Ticker": "HSY",
-      "Name": "HERSHEY CO/THE",
-      "Weight (%)": "0.84",
-      "Price": "166.37",
-      "Shares": "3,710.00",
-      "Market Value": "617,232.70"
-    },
-    {
-      "Ticker": "EL",
-      "Name": "ESTEE LAUDER COMPANIES-CL A",
-      "Weight (%)": "0.81",
-      "Price": "94.47",
-      "Shares": "6,250.00",
-      "Market Value": "590,437.50"
-    },
-    {
-      "Ticker": "CHD",
-      "Name": "CHURCH & DWIGHT CO INC",
-      "Weight (%)": "0.79",
-      "Price": "96.38",
-      "Shares": "5,990.00",
-      "Market Value": "577,316.20"
-    },
-    {
-      "Ticker": "CASY",
-      "Name": "CASEY'S GENERAL STORES INC",
-      "Weight (%)": "0.75",
-      "Price": "598.46",
-      "Shares": "921.00",
-      "Market Value": "551,181.66"
-    },
-    {
-      "Ticker": "DLTR",
-      "Name": "DOLLAR TREE INC",
-      "Weight (%)": "0.73",
-      "Price": "114.07",
-      "Shares": "4,699.00",
-      "Market Value": "536,014.93"
-    },
-    {
-      "Ticker": "KHC",
-      "Name": "KRAFT HEINZ CO/THE",
-      "Weight (%)": "0.69",
-      "Price": "23.63",
-      "Shares": "21,474.00",
-      "Market Value": "507,430.62"
-    },
-    {
-      "Ticker": "GIS",
-      "Name": "GENERAL MILLS INC",
-      "Weight (%)": "0.62",
-      "Price": "33.64",
-      "Shares": "13,566.00",
-      "Market Value": "456,360.24"
-    },
-    {
-      "Ticker": "STZ",
-      "Name": "CONSTELLATION BRANDS INC-A",
-      "Weight (%)": "0.59",
-      "Price": "113.63",
-      "Shares": "3,795.00",
-      "Market Value": "431,225.85"
-    },
-    {
-      "Ticker": "TSN",
-      "Name": "TYSON FOODS INC-CL A",
-      "Weight (%)": "0.49",
-      "Price": "50.92",
-      "Shares": "7,043.00",
-      "Market Value": "358,629.56"
-    },
-    {
-      "Ticker": "BG",
-      "Name": "BUNGE GLOBAL SA",
-      "Weight (%)": "0.48",
-      "Price": "109.0",
-      "Shares": "3,202.00",
-      "Market Value": "349,018.00"
-    },
-    {
-      "Ticker": "MKC",
-      "Name": "MCCORMICK & CO-NON VTG SHRS",
-      "Weight (%)": "0.42",
-      "Price": "47.94",
-      "Shares": "6,440.00",
-      "Market Value": "308,733.60"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.06%",
+      "Market Value": "45,217.88",
+      "Shares Held": "45,217.88",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "WALMART INC",
+      "Ticker": "WMT",
+      "Identifier": "2936921",
+      "Weight": "16.36%",
+      "Market Value": "11,985,995.96",
+      "Shares Held": "111,002.00",
+      "Asset Category": "Equity",
+      "Price": "107.98"
+    },
+    {
+      "Name": "COSTCO WHOLESALE CORP",
+      "Ticker": "COST",
+      "Identifier": "2701271",
+      "Weight": "14.17%",
+      "Market Value": "10,377,415.19",
+      "Shares Held": "11,246.00",
+      "Asset Category": "Equity",
+      "Price": "922.765"
+    },
+    {
+      "Name": "PROCTER & GAMBLE CO/THE",
+      "Ticker": "PG",
+      "Identifier": "2704407",
+      "Weight": "11.79%",
+      "Market Value": "8,636,490.03",
+      "Shares Held": "59,061.00",
+      "Asset Category": "Equity",
+      "Price": "146.23"
+    },
+    {
+      "Name": "COCA-COLA CO/THE",
+      "Ticker": "KO",
+      "Identifier": "2206657",
+      "Weight": "11.77%",
+      "Market Value": "8,624,171.34",
+      "Shares Held": "98,214.00",
+      "Asset Category": "Equity",
+      "Price": "87.81"
+    },
+    {
+      "Name": "PHILIP MORRIS INTERNATIONAL",
+      "Ticker": "PM",
+      "Identifier": "B2PKRQ3",
+      "Weight": "10.28%",
+      "Market Value": "7,529,102.96",
+      "Shares Held": "39,527.00",
+      "Asset Category": "Equity",
+      "Price": "190.48"
+    },
+    {
+      "Name": "PEPSICO INC",
+      "Ticker": "PEP",
+      "Identifier": "2681511",
+      "Weight": "6.08%",
+      "Market Value": "4,452,141.56",
+      "Shares Held": "34,612.00",
+      "Asset Category": "Equity",
+      "Price": "128.63"
+    },
+    {
+      "Name": "ALTRIA GROUP INC",
+      "Ticker": "MO",
+      "Identifier": "2692632",
+      "Weight": "3.97%",
+      "Market Value": "2,909,709.60",
+      "Shares Held": "42,280.00",
+      "Asset Category": "Equity",
+      "Price": "68.82000000000001"
+    },
+    {
+      "Name": "MONDELEZ INTERNATIONAL INC-A",
+      "Ticker": "MDLZ",
+      "Identifier": "B8CKK03",
+      "Weight": "2.66%",
+      "Market Value": "1,949,147.75",
+      "Shares Held": "32,351.00",
+      "Asset Category": "Equity",
+      "Price": "60.25"
+    },
+    {
+      "Name": "TARGET CORP",
+      "Ticker": "TGT",
+      "Identifier": "2259101",
+      "Weight": "2.46%",
+      "Market Value": "1,800,283.30",
+      "Shares Held": "11,434.00",
+      "Asset Category": "Equity",
+      "Price": "157.45"
+    },
+    {
+      "Name": "COLGATE-PALMOLIVE CO",
+      "Ticker": "CL",
+      "Identifier": "2209106",
+      "Weight": "2.26%",
+      "Market Value": "1,654,933.80",
+      "Shares Held": "19,230.00",
+      "Asset Category": "Equity",
+      "Price": "86.06"
+    },
+    {
+      "Name": "MONSTER BEVERAGE CORP",
+      "Ticker": "MNST",
+      "Identifier": "BZ07BW4",
+      "Weight": "2.10%",
+      "Market Value": "1,541,527.38",
+      "Shares Held": "35,758.00",
+      "Asset Category": "Equity",
+      "Price": "43.11"
+    },
+    {
+      "Name": "KEURIG DR PEPPER INC",
+      "Ticker": "KDP",
+      "Identifier": "BD3W133",
+      "Weight": "1.49%",
+      "Market Value": "1,094,466.88",
+      "Shares Held": "34,504.00",
+      "Asset Category": "Equity",
+      "Price": "31.72"
+    },
+    {
+      "Name": "ARCHER-DANIELS-MIDLAND CO",
+      "Ticker": "ADM",
+      "Identifier": "2047317",
+      "Weight": "1.34%",
+      "Market Value": "983,012.16",
+      "Shares Held": "12,118.00",
+      "Asset Category": "Equity",
+      "Price": "81.12"
+    },
+    {
+      "Name": "SYSCO CORP",
+      "Ticker": "SYY",
+      "Identifier": "2868165",
+      "Weight": "1.29%",
+      "Market Value": "944,030.72",
+      "Shares Held": "12,032.00",
+      "Asset Category": "Equity",
+      "Price": "78.46"
+    },
+    {
+      "Name": "KENVUE INC",
+      "Ticker": "KVUE",
+      "Identifier": "BQ84ZQ6",
+      "Weight": "1.17%",
+      "Market Value": "859,188.20",
+      "Shares Held": "48,269.00",
+      "Asset Category": "Equity",
+      "Price": "17.8"
+    },
+    {
+      "Name": "KIMBERLY-CLARK CORP",
+      "Ticker": "KMB",
+      "Identifier": "2491839",
+      "Weight": "1.12%",
+      "Market Value": "823,563.81",
+      "Shares Held": "8,367.00",
+      "Asset Category": "Equity",
+      "Price": "98.43"
+    },
+    {
+      "Name": "KROGER CO",
+      "Ticker": "KR",
+      "Identifier": "2497406",
+      "Weight": "1.11%",
+      "Market Value": "814,958.76",
+      "Shares Held": "13,874.00",
+      "Asset Category": "Equity",
+      "Price": "58.74"
+    },
+    {
+      "Name": "DOLLAR GENERAL CORP",
+      "Ticker": "DG",
+      "Identifier": "B5B1S13",
+      "Weight": "0.94%",
+      "Market Value": "691,863.28",
+      "Shares Held": "5,542.00",
+      "Asset Category": "Equity",
+      "Price": "124.84"
+    },
+    {
+      "Name": "HERSHEY CO/THE",
+      "Ticker": "HSY",
+      "Identifier": "2422806",
+      "Weight": "0.84%",
+      "Market Value": "617,232.70",
+      "Shares Held": "3,710.00",
+      "Asset Category": "Equity",
+      "Price": "166.37"
+    },
+    {
+      "Name": "ESTEE LAUDER COMPANIES-CL A",
+      "Ticker": "EL",
+      "Identifier": "2320524",
+      "Weight": "0.81%",
+      "Market Value": "590,437.50",
+      "Shares Held": "6,250.00",
+      "Asset Category": "Equity",
+      "Price": "94.47"
+    },
+    {
+      "Name": "CHURCH & DWIGHT CO INC",
+      "Ticker": "CHD",
+      "Identifier": "2195841",
+      "Weight": "0.79%",
+      "Market Value": "577,316.20",
+      "Shares Held": "5,990.00",
+      "Asset Category": "Equity",
+      "Price": "96.38"
+    },
+    {
+      "Name": "CASEY'S GENERAL STORES INC",
+      "Ticker": "CASY",
+      "Identifier": "2179414",
+      "Weight": "0.75%",
+      "Market Value": "551,181.66",
+      "Shares Held": "921.00",
+      "Asset Category": "Equity",
+      "Price": "598.46"
+    },
+    {
+      "Name": "DOLLAR TREE INC",
+      "Ticker": "DLTR",
+      "Identifier": "2272476",
+      "Weight": "0.73%",
+      "Market Value": "536,014.93",
+      "Shares Held": "4,699.00",
+      "Asset Category": "Equity",
+      "Price": "114.07"
+    },
+    {
+      "Name": "KRAFT HEINZ CO/THE",
+      "Ticker": "KHC",
+      "Identifier": "BYRY499",
+      "Weight": "0.69%",
+      "Market Value": "507,430.62",
+      "Shares Held": "21,474.00",
+      "Asset Category": "Equity",
+      "Price": "23.63"
+    },
+    {
+      "Name": "GENERAL MILLS INC",
+      "Ticker": "GIS",
+      "Identifier": "2367026",
+      "Weight": "0.62%",
+      "Market Value": "456,360.24",
+      "Shares Held": "13,566.00",
+      "Asset Category": "Equity",
+      "Price": "33.64"
+    },
+    {
+      "Name": "CONSTELLATION BRANDS INC-A",
+      "Ticker": "STZ",
+      "Identifier": "2170473",
+      "Weight": "0.59%",
+      "Market Value": "431,225.85",
+      "Shares Held": "3,795.00",
+      "Asset Category": "Equity",
+      "Price": "113.63"
+    },
+    {
+      "Name": "TYSON FOODS INC-CL A",
+      "Ticker": "TSN",
+      "Identifier": "2909730",
+      "Weight": "0.49%",
+      "Market Value": "358,629.56",
+      "Shares Held": "7,043.00",
+      "Asset Category": "Equity",
+      "Price": "50.92"
+    },
+    {
+      "Name": "BUNGE GLOBAL SA",
+      "Ticker": "BG",
+      "Identifier": "BQ6BPG9",
+      "Weight": "0.48%",
+      "Market Value": "349,018.00",
+      "Shares Held": "3,202.00",
+      "Asset Category": "Equity",
+      "Price": "109.0"
+    },
+    {
+      "Name": "MCCORMICK & CO-NON VTG SHRS",
+      "Ticker": "MKC",
+      "Identifier": "2550161",
+      "Weight": "0.42%",
+      "Market Value": "308,733.60",
+      "Shares Held": "6,440.00",
+      "Asset Category": "Equity",
+      "Price": "47.94"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.23",
-      "Price": "1.0",
-      "Shares": "167,160.23",
-      "Market Value": "167,160.23"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.23%",
+      "Market Value": "167,160.23",
+      "Shares Held": "167,160.23",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     }
   ]
 }

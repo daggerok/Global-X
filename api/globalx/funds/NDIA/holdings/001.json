@@ -4,277 +4,344 @@
   "pageSize": 250,
   "totalRows": 33,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "INDIA RUPEE",
-      "Weight (%)": "0.02",
-      "Price": "0.01043596339105375",
-      "Shares": "1,067,236.40",
-      "Market Value": "11,137.64"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.02%",
+      "Market Value": "11,137.64",
+      "Shares Held": "1,067,236.40",
+      "Asset Category": "Equity",
+      "Price": "0.01043596339105375"
     },
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.36",
-      "Price": "1.0",
-      "Shares": "-178,700.53",
-      "Market Value": "-178,700.53"
-    },
-    {
-      "Ticker": "HDFCB IN",
-      "Name": "HDFC BANK LIMITED",
-      "Weight (%)": "7.97",
-      "Price": "7.676693887184329",
-      "Shares": "508,440.00",
-      "Market Value": "3,903,138.24"
-    },
-    {
-      "Ticker": "IBN",
-      "Name": "ICICI BANK LTD-SPON ADR",
-      "Weight (%)": "7.96",
-      "Price": "27.92",
-      "Shares": "139,651.00",
-      "Market Value": "3,899,055.92"
-    },
-    {
-      "Ticker": "RIGD LI",
-      "Name": "RELIANCE INDS-SPONS GDR 144A",
-      "Weight (%)": "6.62",
-      "Price": "50.7",
-      "Shares": "64,007.00",
-      "Market Value": "3,245,154.90"
-    },
-    {
-      "Ticker": "AXSB IN",
-      "Name": "AXIS BANK LTD",
-      "Weight (%)": "5.97",
-      "Price": "12.75692036516548",
-      "Shares": "229,485.00",
-      "Market Value": "2,927,521.87"
-    },
-    {
-      "Ticker": "BHARTI IN",
-      "Name": "BHARTI AIRTEL LTD",
-      "Weight (%)": "5.68",
-      "Price": "18.6323671303369",
-      "Shares": "149,244.00",
-      "Market Value": "2,780,769.00"
-    },
-    {
-      "Ticker": "LT IN",
-      "Name": "LARSEN & TOUBRO LTD",
-      "Weight (%)": "4.27",
-      "Price": "40.45187716480582",
-      "Shares": "51,679.00",
-      "Market Value": "2,090,512.56"
-    },
-    {
-      "Ticker": "APHS IN",
-      "Name": "APOLLO HOSPITALS ENTERPRISE",
-      "Weight (%)": "4.21",
-      "Price": "92.76526892833071",
-      "Shares": "22,255.00",
-      "Market Value": "2,064,491.06"
-    },
-    {
-      "Ticker": "TTAN IN",
-      "Name": "TITAN CO LTD",
-      "Weight (%)": "3.94",
-      "Price": "50.96923989745487",
-      "Shares": "37,837.00",
-      "Market Value": "1,928,523.13"
-    },
-    {
-      "Ticker": "UTCEM IN",
-      "Name": "ULTRATECH CEMENT LTD",
-      "Weight (%)": "3.93",
-      "Price": "116.4131597704621",
-      "Shares": "16,555.00",
-      "Market Value": "1,927,219.86"
-    },
-    {
-      "Ticker": "UNITDSPR IN",
-      "Name": "UNITED SPIRITS LTD",
-      "Weight (%)": "3.71",
-      "Price": "14.85872319018405",
-      "Shares": "122,250.00",
-      "Market Value": "1,816,478.91"
-    },
-    {
-      "Ticker": "NTPC IN",
-      "Name": "NTPC LTD",
-      "Weight (%)": "3.54",
-      "Price": "3.408385291845164",
-      "Shares": "508,643.00",
-      "Market Value": "1,733,651.32"
-    },
-    {
-      "Ticker": "INFY",
-      "Name": "INFOSYS LTD-SP ADR",
-      "Weight (%)": "3.27",
-      "Price": "10.5",
-      "Shares": "152,705.00",
-      "Market Value": "1,603,402.50"
-    },
-    {
-      "Ticker": "SAIL IN",
-      "Name": "STEEL AUTHORITY OF INDIA",
-      "Weight (%)": "2.83",
-      "Price": "1.930653028465236",
-      "Shares": "718,912.00",
-      "Market Value": "1,387,969.63"
-    },
-    {
-      "Ticker": "ETERNAL IN",
-      "Name": "ETERNAL LTD",
-      "Weight (%)": "2.73",
-      "Price": "3.496047368833817",
-      "Shares": "382,530.00",
-      "Market Value": "1,337,343.00"
-    },
-    {
-      "Ticker": "PEPL IN",
-      "Name": "PRESTIGE ESTATES PROJECTS",
-      "Weight (%)": "2.60",
-      "Price": "15.42226515664282",
-      "Shares": "82,736.00",
-      "Market Value": "1,275,976.53"
-    },
-    {
-      "Ticker": "SBILIFE IN",
-      "Name": "SBI LIFE INSURANCE CO LTD",
-      "Weight (%)": "2.39",
-      "Price": "18.17944643883942",
-      "Shares": "64,347.00",
-      "Market Value": "1,169,792.84"
-    },
-    {
-      "Ticker": "DMART IN",
-      "Name": "AVENUE SUPERMARTS LTD",
-      "Weight (%)": "2.34",
-      "Price": "40.01356674113376",
-      "Shares": "28,648.00",
-      "Market Value": "1,146,308.66"
-    },
-    {
-      "Ticker": "TCS IN",
-      "Name": "TATA CONSULTANCY SVCS LTD",
-      "Weight (%)": "2.27",
-      "Price": "21.72767346779084",
-      "Shares": "51,119.00",
-      "Market Value": "1,110,696.94"
-    },
-    {
-      "Ticker": "INDIGO IN",
-      "Name": "INTERGLOBE AVIATION LTD",
-      "Weight (%)": "2.25",
-      "Price": "51.55365385513473",
-      "Shares": "21,413.00",
-      "Market Value": "1,103,918.39"
-    },
-    {
-      "Ticker": "SHFL IN",
-      "Name": "SHRIRAM FINANCE LTD",
-      "Weight (%)": "2.20",
-      "Price": "10.37439013578236",
-      "Shares": "103,769.00",
-      "Market Value": "1,076,540.09"
-    },
-    {
-      "Ticker": "HNAL IN",
-      "Name": "HINDUSTAN AERONAUTICS LTD",
-      "Weight (%)": "2.19",
-      "Price": "50.09261914764505",
-      "Shares": "21,423.00",
-      "Market Value": "1,073,134.18"
-    },
-    {
-      "Ticker": "EIM IN",
-      "Name": "EICHER MOTORS LTD",
-      "Weight (%)": "2.08",
-      "Price": "76.80868262571515",
-      "Shares": "13,284.00",
-      "Market Value": "1,020,326.54"
-    },
-    {
-      "Ticker": "BPCL IN",
-      "Name": "BHARAT PETROLEUM CORP LTD",
-      "Weight (%)": "2.08",
-      "Price": "3.219494377584905",
-      "Shares": "316,501.00",
-      "Market Value": "1,018,973.19"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.36%",
+      "Market Value": "-178,700.53",
+      "Shares Held": "-178,700.53",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "HDFC BANK LIMITED",
+      "Ticker": "HDFCB IN",
+      "Identifier": "BK1N461",
+      "Weight": "7.97%",
+      "Market Value": "3,903,138.24",
+      "Shares Held": "508,440.00",
+      "Asset Category": "Equity",
+      "Price": "7.676693887184329"
+    },
+    {
+      "Name": "ICICI BANK LTD-SPON ADR",
+      "Ticker": "IBN",
+      "Identifier": "2569286",
+      "Weight": "7.96%",
+      "Market Value": "3,899,055.92",
+      "Shares Held": "139,651.00",
+      "Asset Category": "Equity",
+      "Price": "27.92"
+    },
+    {
+      "Name": "RELIANCE INDS-SPONS GDR 144A",
+      "Ticker": "RIGD LI",
+      "Identifier": "B16CYP9",
+      "Weight": "6.62%",
+      "Market Value": "3,245,154.90",
+      "Shares Held": "64,007.00",
+      "Asset Category": "Equity",
+      "Price": "50.7"
+    },
+    {
+      "Name": "AXIS BANK LTD",
+      "Ticker": "AXSB IN",
+      "Identifier": "BPFJHC7",
+      "Weight": "5.97%",
+      "Market Value": "2,927,521.87",
+      "Shares Held": "229,485.00",
+      "Asset Category": "Equity",
+      "Price": "12.75692036516548"
+    },
+    {
+      "Name": "BHARTI AIRTEL LTD",
+      "Ticker": "BHARTI IN",
+      "Identifier": "6442327",
+      "Weight": "5.68%",
+      "Market Value": "2,780,769.00",
+      "Shares Held": "149,244.00",
+      "Asset Category": "Equity",
+      "Price": "18.6323671303369"
+    },
+    {
+      "Name": "LARSEN & TOUBRO LTD",
+      "Ticker": "LT IN",
+      "Identifier": "B0166K8",
+      "Weight": "4.27%",
+      "Market Value": "2,090,512.56",
+      "Shares Held": "51,679.00",
+      "Asset Category": "Equity",
+      "Price": "40.45187716480582"
+    },
+    {
+      "Name": "APOLLO HOSPITALS ENTERPRISE",
+      "Ticker": "APHS IN",
+      "Identifier": "6273583",
+      "Weight": "4.21%",
+      "Market Value": "2,064,491.06",
+      "Shares Held": "22,255.00",
+      "Asset Category": "Equity",
+      "Price": "92.76526892833071"
+    },
+    {
+      "Name": "TITAN CO LTD",
+      "Ticker": "TTAN IN",
+      "Identifier": "6139340",
+      "Weight": "3.94%",
+      "Market Value": "1,928,523.13",
+      "Shares Held": "37,837.00",
+      "Asset Category": "Equity",
+      "Price": "50.96923989745487"
+    },
+    {
+      "Name": "ULTRATECH CEMENT LTD",
+      "Ticker": "UTCEM IN",
+      "Identifier": "B01GZF6",
+      "Weight": "3.93%",
+      "Market Value": "1,927,219.86",
+      "Shares Held": "16,555.00",
+      "Asset Category": "Equity",
+      "Price": "116.4131597704621"
+    },
+    {
+      "Name": "UNITED SPIRITS LTD",
+      "Ticker": "UNITDSPR IN",
+      "Identifier": "BYWFSB7",
+      "Weight": "3.71%",
+      "Market Value": "1,816,478.91",
+      "Shares Held": "122,250.00",
+      "Asset Category": "Equity",
+      "Price": "14.85872319018405"
+    },
+    {
+      "Name": "NTPC LTD",
+      "Ticker": "NTPC IN",
+      "Identifier": "B037HF1",
+      "Weight": "3.54%",
+      "Market Value": "1,733,651.32",
+      "Shares Held": "508,643.00",
+      "Asset Category": "Equity",
+      "Price": "3.408385291845164"
+    },
+    {
+      "Name": "INFOSYS LTD-SP ADR",
+      "Ticker": "INFY",
+      "Identifier": "2398822",
+      "Weight": "3.27%",
+      "Market Value": "1,603,402.50",
+      "Shares Held": "152,705.00",
+      "Asset Category": "Equity",
+      "Price": "10.5"
+    },
+    {
+      "Name": "STEEL AUTHORITY OF INDIA",
+      "Ticker": "SAIL IN",
+      "Identifier": "6121499",
+      "Weight": "2.83%",
+      "Market Value": "1,387,969.63",
+      "Shares Held": "718,912.00",
+      "Asset Category": "Equity",
+      "Price": "1.930653028465236"
+    },
+    {
+      "Name": "ETERNAL LTD",
+      "Ticker": "ETERNAL IN",
+      "Identifier": "BL6P210",
+      "Weight": "2.73%",
+      "Market Value": "1,337,343.00",
+      "Shares Held": "382,530.00",
+      "Asset Category": "Equity",
+      "Price": "3.496047368833817"
+    },
+    {
+      "Name": "PRESTIGE ESTATES PROJECTS",
+      "Ticker": "PEPL IN",
+      "Identifier": "B4T3LF9",
+      "Weight": "2.60%",
+      "Market Value": "1,275,976.53",
+      "Shares Held": "82,736.00",
+      "Asset Category": "Equity",
+      "Price": "15.42226515664282"
+    },
+    {
+      "Name": "SBI LIFE INSURANCE CO LTD",
+      "Ticker": "SBILIFE IN",
+      "Identifier": "BZ60N32",
+      "Weight": "2.39%",
+      "Market Value": "1,169,792.84",
+      "Shares Held": "64,347.00",
+      "Asset Category": "Equity",
+      "Price": "18.17944643883942"
+    },
+    {
+      "Name": "AVENUE SUPERMARTS LTD",
+      "Ticker": "DMART IN",
+      "Identifier": "BYW1G33",
+      "Weight": "2.34%",
+      "Market Value": "1,146,308.66",
+      "Shares Held": "28,648.00",
+      "Asset Category": "Equity",
+      "Price": "40.01356674113376"
+    },
+    {
+      "Name": "TATA CONSULTANCY SVCS LTD",
+      "Ticker": "TCS IN",
+      "Identifier": "B01NPJ1",
+      "Weight": "2.27%",
+      "Market Value": "1,110,696.94",
+      "Shares Held": "51,119.00",
+      "Asset Category": "Equity",
+      "Price": "21.72767346779084"
+    },
+    {
+      "Name": "INTERGLOBE AVIATION LTD",
+      "Ticker": "INDIGO IN",
+      "Identifier": "BYYZ7D0",
+      "Weight": "2.25%",
+      "Market Value": "1,103,918.39",
+      "Shares Held": "21,413.00",
+      "Asset Category": "Equity",
+      "Price": "51.55365385513473"
+    },
+    {
+      "Name": "SHRIRAM FINANCE LTD",
+      "Ticker": "SHFL IN",
+      "Identifier": "BS4DBX0",
+      "Weight": "2.20%",
+      "Market Value": "1,076,540.09",
+      "Shares Held": "103,769.00",
+      "Asset Category": "Equity",
+      "Price": "10.37439013578236"
+    },
+    {
+      "Name": "HINDUSTAN AERONAUTICS LTD",
+      "Ticker": "HNAL IN",
+      "Identifier": "BR56KD4",
+      "Weight": "2.19%",
+      "Market Value": "1,073,134.18",
+      "Shares Held": "21,423.00",
+      "Asset Category": "Equity",
+      "Price": "50.09261914764505"
+    },
+    {
+      "Name": "EICHER MOTORS LTD",
+      "Ticker": "EIM IN",
+      "Identifier": "BMW4CV8",
+      "Weight": "2.08%",
+      "Market Value": "1,020,326.54",
+      "Shares Held": "13,284.00",
+      "Asset Category": "Equity",
+      "Price": "76.80868262571515"
+    },
+    {
+      "Name": "BHARAT PETROLEUM CORP LTD",
+      "Ticker": "BPCL IN",
+      "Identifier": "6099723",
+      "Weight": "2.08%",
+      "Market Value": "1,018,973.19",
+      "Shares Held": "316,501.00",
+      "Asset Category": "Equity",
+      "Price": "3.219494377584905"
+    },
+    {
       "Name": "CASH",
-      "Weight (%)": "1.92",
-      "Price": "1.0",
-      "Shares": "942,604.06",
-      "Market Value": "942,604.06"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "1.92%",
+      "Market Value": "942,604.06",
+      "Shares Held": "942,604.06",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "ADSEZ IN",
       "Name": "ADANI PORTS AND SPECIAL ECON",
-      "Weight (%)": "1.92",
-      "Price": "18.659500585794",
-      "Shares": "50,359.00",
-      "Market Value": "939,673.79"
+      "Ticker": "ADSEZ IN",
+      "Identifier": "B28XXH2",
+      "Weight": "1.92%",
+      "Market Value": "939,673.79",
+      "Shares Held": "50,359.00",
+      "Asset Category": "Equity",
+      "Price": "18.659500585794"
     },
     {
-      "Ticker": "IIB IN",
       "Name": "INDUSIND BANK LTD",
-      "Weight (%)": "1.85",
-      "Price": "9.519684883416296",
-      "Shares": "95,425.00",
-      "Market Value": "908,415.93"
+      "Ticker": "IIB IN",
+      "Identifier": "6100454",
+      "Weight": "1.85%",
+      "Market Value": "908,415.93",
+      "Shares Held": "95,425.00",
+      "Asset Category": "Equity",
+      "Price": "9.519684883416296"
     },
     {
-      "Ticker": "MSIL IN",
       "Name": "MARUTI SUZUKI INDIA LTD",
-      "Weight (%)": "1.76",
-      "Price": "125.9098849402855",
-      "Shares": "6,866.00",
-      "Market Value": "864,497.27"
+      "Ticker": "MSIL IN",
+      "Identifier": "6633712",
+      "Weight": "1.76%",
+      "Market Value": "864,497.27",
+      "Shares Held": "6,866.00",
+      "Asset Category": "Equity",
+      "Price": "125.9098849402855"
     },
     {
-      "Ticker": "CDSL IN",
       "Name": "CENTRAL DEPOSITORY SERVICES",
-      "Weight (%)": "1.54",
-      "Price": "13.75459832024831",
-      "Shares": "54,770.00",
-      "Market Value": "753,339.35"
+      "Ticker": "CDSL IN",
+      "Identifier": "BF47216",
+      "Weight": "1.54%",
+      "Market Value": "753,339.35",
+      "Shares Held": "54,770.00",
+      "Asset Category": "Equity",
+      "Price": "13.75459832024831"
     },
     {
-      "Ticker": "NYKAA IN",
       "Name": "FSN E-COMMERCE VENTURES LTD",
-      "Weight (%)": "1.52",
-      "Price": "3.482480612545401",
-      "Shares": "213,927.00",
-      "Market Value": "744,996.63"
+      "Ticker": "NYKAA IN",
+      "Identifier": "BP4DCB4",
+      "Weight": "1.52%",
+      "Market Value": "744,996.63",
+      "Shares Held": "213,927.00",
+      "Asset Category": "Equity",
+      "Price": "3.482480612545401"
     },
     {
-      "Ticker": "GODIGIT IN",
       "Name": "GO DIGIT GENERAL INSURANCE L",
-      "Weight (%)": "1.52",
-      "Price": "2.64760365270164",
-      "Shares": "281,107.00",
-      "Market Value": "744,259.92"
+      "Ticker": "GODIGIT IN",
+      "Identifier": "BQ0K6B4",
+      "Weight": "1.52%",
+      "Market Value": "744,259.92",
+      "Shares Held": "281,107.00",
+      "Asset Category": "Equity",
+      "Price": "2.64760365270164"
     },
     {
-      "Ticker": "SOIL IN",
       "Name": "SOLAR INDUSTRIES INDIA LTD",
-      "Weight (%)": "1.27",
-      "Price": "206.0580765423953",
-      "Shares": "3,031.00",
-      "Market Value": "624,562.03"
+      "Ticker": "SOIL IN",
+      "Identifier": "BYZ9NH7",
+      "Weight": "1.27%",
+      "Market Value": "624,562.03",
+      "Shares Held": "3,031.00",
+      "Asset Category": "Equity",
+      "Price": "206.0580765423953"
     }
   ]
 }

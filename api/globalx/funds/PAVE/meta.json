@@ -278,7 +278,7 @@
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
     "source": "https://assets.globalxetfs.com/funds/holdings/pave_full-holdings_20260925.csv",
-    "sourceKind": "official Global X daily holdings CSV (download_holdings_csv)"
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
     "pages": [
@@ -290,7 +290,7 @@
     "totalRows": 2402,
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
-    "source": "https://query1.finance.yahoo.com/v8/finance/chart/PAVE?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/PAVE",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
   "navKind": "official (fund page Fund Details)",
@@ -300,9 +300,9 @@
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/pave/",
     "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/pave_full-holdings_20260925.csv",
-    "holdingsSource": "official Global X daily holdings CSV (download_holdings_csv)",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
-    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/PAVE?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/PAVE",
     "returnsSource": "Global X fund page performance tables (NAV Performance)",
     "distributionsSource": "Global X fund page Distribution History table",
     "distributionInfoSource": "Global X fund page Distribution Information block",

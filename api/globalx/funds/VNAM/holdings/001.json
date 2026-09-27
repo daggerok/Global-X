@@ -4,605 +4,754 @@
   "pageSize": 250,
   "totalRows": 74,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "VIETNAMESE DONG",
-      "Weight (%)": "0.13",
-      "Price": "0.00003849707431816161",
-      "Shares": "1,189,439,998.00",
-      "Market Value": "45,789.96"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.13%",
+      "Market Value": "45,789.96",
+      "Shares Held": "1,189,439,998.00",
+      "Asset Category": "Equity",
+      "Price": "0.00003849707431816161"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.12",
-      "Price": "1.0",
-      "Shares": "42,172.57",
-      "Market Value": "42,172.57"
-    },
-    {
-      "Ticker": "VTP VN",
-      "Name": "VIETTEL POST JSC",
-      "Weight (%)": "0.01",
-      "Price": "2.032647357723577",
-      "Shares": "1,968.00",
-      "Market Value": "4,000.25"
-    },
-    {
-      "Ticker": "2679304D VN",
-      "Name": "HO CHI MINH CITY INFRASTRUCT",
-      "Weight (%)": "0.01",
-      "Price": "0.01000923300617957",
-      "Shares": "275,100.00",
-      "Market Value": "2,753.54"
-    },
-    {
       "Ticker": "",
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.01",
-      "Price": "1.0",
-      "Shares": "-3,246.60",
-      "Market Value": "-3,246.60"
+      "Identifier": "",
+      "Weight": "0.12%",
+      "Market Value": "42,172.57",
+      "Shares Held": "42,172.57",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "VIETTEL POST JSC",
+      "Ticker": "VTP VN",
+      "Identifier": "BG5QPH6",
+      "Weight": "0.01%",
+      "Market Value": "4,000.25",
+      "Shares Held": "1,968.00",
+      "Asset Category": "Equity",
+      "Price": "2.032647357723577"
     },
     {
-      "Ticker": "VIC VN",
-      "Name": "VINGROUP JSC",
-      "Weight (%)": "24.75",
-      "Price": "8.931321224321254",
-      "Shares": "968,700.00",
-      "Market Value": "8,651,770.87"
-    },
-    {
-      "Ticker": "HPG VN",
-      "Name": "HOA PHAT GROUP JSC",
-      "Weight (%)": "5.47",
-      "Price": "0.7949645828146115",
-      "Shares": "2,405,753.00",
-      "Market Value": "1,912,488.43"
-    },
-    {
-      "Ticker": "FPT VN",
-      "Name": "FPT CORP",
-      "Weight (%)": "3.89",
-      "Price": "2.490760701921492",
-      "Shares": "545,930.00",
-      "Market Value": "1,359,780.99"
-    },
-    {
-      "Ticker": "VCB VN",
-      "Name": "BANK FOR FOREIGN TRADE JSC",
-      "Weight (%)": "3.22",
-      "Price": "2.232830302032918",
-      "Shares": "504,349.00",
-      "Market Value": "1,126,125.73"
-    },
-    {
-      "Ticker": "MSN VN",
-      "Name": "MASAN GROUP CORP",
-      "Weight (%)": "3.21",
-      "Price": "2.698644912567256",
-      "Shares": "416,320.00",
-      "Market Value": "1,123,499.85"
-    },
-    {
-      "Ticker": "VNM VN",
-      "Name": "VIETNAM DAIRY PRODUCTS JSC",
-      "Weight (%)": "2.92",
-      "Price": "2.302125039512305",
-      "Shares": "442,900.00",
-      "Market Value": "1,019,611.18"
-    },
-    {
-      "Ticker": "STB VN",
-      "Name": "SAIGON TREASURE COMMERCIAL JOINT STOCK BANK",
-      "Weight (%)": "2.91",
-      "Price": "2.945026180133218",
-      "Shares": "345,300.00",
-      "Market Value": "1,016,917.54"
-    },
-    {
-      "Ticker": "SSI VN",
-      "Name": "SSI SECURITIES CORP",
-      "Weight (%)": "2.65",
-      "Price": "0.7968894331399599",
-      "Shares": "1,162,862.00",
-      "Market Value": "926,672.44"
-    },
-    {
-      "Ticker": "VPB VN",
-      "Name": "VIETNAM PROSPERITY JSC BANK",
-      "Weight (%)": "2.42",
-      "Price": "0.8854327048706252",
-      "Shares": "954,004.63",
-      "Market Value": "844,706.90"
-    },
-    {
-      "Ticker": "VIX VN",
-      "Name": "VIX SECURITIES JSC",
-      "Weight (%)": "2.25",
-      "Price": "0.4869879913250434",
-      "Shares": "1,618,913.00",
-      "Market Value": "788,391.19"
-    },
-    {
-      "Ticker": "VJC VN",
-      "Name": "VIETJET AVIATION JSC",
-      "Weight (%)": "2.16",
-      "Price": "5.112411473855324",
-      "Shares": "147,640.00",
-      "Market Value": "754,796.43"
-    },
-    {
-      "Ticker": "MCH VN",
-      "Name": "MASAN CONSUMER CORP",
-      "Weight (%)": "1.76",
-      "Price": "5.42808746690203",
-      "Shares": "113,300.00",
-      "Market Value": "615,002.31"
-    },
-    {
-      "Ticker": "VRE VN",
-      "Name": "VINCOM RETAIL JSC",
-      "Weight (%)": "1.62",
-      "Price": "0.9431783166666666",
-      "Shares": "600,000.00",
-      "Market Value": "565,906.99"
-    },
-    {
-      "Ticker": "HDB VN",
-      "Name": "HDBANK",
-      "Weight (%)": "1.42",
-      "Price": "1.070218673271592",
-      "Shares": "464,300.00",
-      "Market Value": "496,902.53"
-    },
-    {
-      "Ticker": "SHB VN",
-      "Name": "SAIGON - HANOI COMMERICIAL",
-      "Weight (%)": "1.30",
-      "Price": "0.4465660647483073",
-      "Shares": "1,019,795.00",
-      "Market Value": "455,405.84"
-    },
-    {
-      "Ticker": "HCM VN",
-      "Name": "HO CHI MINH CITY SECURITIES",
-      "Weight (%)": "1.27",
-      "Price": "0.958577148395434",
-      "Shares": "464,300.00",
-      "Market Value": "445,067.37"
-    },
-    {
-      "Ticker": "CTG VN",
-      "Name": "VIETNAM JS COMMERCIAL BANK F",
-      "Weight (%)": "1.27",
-      "Price": "1.160686783864386",
-      "Shares": "382,260.00",
-      "Market Value": "443,684.13"
-    },
-    {
-      "Ticker": "VND VN",
-      "Name": "VNDIRECT SECURITIES CORP",
-      "Weight (%)": "1.18",
-      "Price": "0.5524330093182275",
-      "Shares": "745,850.00",
-      "Market Value": "412,032.16"
-    },
-    {
-      "Ticker": "GEX VN",
-      "Name": "GELEX GROUP JSC",
-      "Weight (%)": "1.14",
-      "Price": "0.923929789488785",
-      "Shares": "432,186.00",
-      "Market Value": "399,309.52"
-    },
-    {
-      "Ticker": "NVL VN",
-      "Name": "NOVALAND INVESTMENT GROUP",
-      "Weight (%)": "1.05",
-      "Price": "0.4561903267305729",
-      "Shares": "806,077.00",
-      "Market Value": "367,724.53"
-    },
-    {
-      "Ticker": "FRT VN",
-      "Name": "FPT DIGITAL RETAIL JSC",
-      "Weight (%)": "1.03",
-      "Price": "5.462734893202701",
-      "Shares": "65,732.00",
-      "Market Value": "359,076.49"
-    },
-    {
-      "Ticker": "BID VN",
-      "Name": "BANK FOR INVESTMENT AND DEVE",
-      "Weight (%)": "1.01",
-      "Price": "1.376270422557195",
-      "Shares": "256,273.00",
-      "Market Value": "352,700.95"
-    },
-    {
-      "Ticker": "VCI VN",
-      "Name": "VIETCAP SECURITIES JSC",
-      "Weight (%)": "1.00",
-      "Price": "0.7622420630597259",
-      "Shares": "458,930.00",
-      "Market Value": "349,815.75"
-    },
-    {
-      "Ticker": "BSR VN",
-      "Name": "PETROVIETNAM REFINING N PETR",
-      "Weight (%)": "0.99",
-      "Price": "1.170311047297297",
-      "Shares": "296,000.00",
-      "Market Value": "346,412.07"
-    },
-    {
-      "Ticker": "KBC VN",
-      "Name": "KINH BAC CITY DEVELOPMENT HO",
-      "Weight (%)": "0.94",
-      "Price": "0.9989990906335253",
-      "Shares": "329,900.00",
-      "Market Value": "329,569.80"
-    },
-    {
-      "Ticker": "DMX VN",
-      "Name": "DIEN MAY XANH INVESTMENT JSC",
-      "Weight (%)": "0.91",
-      "Price": "2.964274720149254",
-      "Shares": "107,200.00",
-      "Market Value": "317,770.25"
-    },
-    {
-      "Ticker": "VPX VN",
-      "Name": "VP BANK SECURITIES LTD CO",
-      "Weight (%)": "0.81",
-      "Price": "0.9797505521049",
-      "Shares": "289,800.00",
-      "Market Value": "283,931.71"
-    },
-    {
-      "Ticker": "VPI VN",
-      "Name": "VAN PHU REAL ESTALE DEVELOPM",
-      "Weight (%)": "0.80",
-      "Price": "2.394518044769301",
-      "Shares": "117,330.40",
-      "Market Value": "280,949.76"
-    },
-    {
-      "Ticker": "TCX VN",
-      "Name": "TECHCOM SECURITIES JSC",
-      "Weight (%)": "0.79",
-      "Price": "1.152987388377982",
-      "Shares": "240,096.00",
-      "Market Value": "276,827.66"
-    },
-    {
-      "Ticker": "VCK VN",
-      "Name": "VPS SECURITIES JSC",
-      "Weight (%)": "0.79",
-      "Price": "1.097166600286761",
-      "Shares": "251,080.00",
-      "Market Value": "275,476.59"
-    },
-    {
-      "Ticker": "ACB VN",
-      "Name": "ASIA COMMERCIAL BANK",
-      "Weight (%)": "0.78",
-      "Price": "0.8238373823261465",
-      "Shares": "329,300.00",
-      "Market Value": "271,289.65"
-    },
-    {
-      "Ticker": "PVS VN",
-      "Name": "PETROVIETNAM TECHNICAL SERVI",
-      "Weight (%)": "0.77",
-      "Price": "1.216507532790193",
-      "Shares": "220,569.00",
-      "Market Value": "268,323.85"
-    },
-    {
-      "Ticker": "EIB VN",
-      "Name": "VIETNAM EXPORT-IMPORT COMMER",
-      "Weight (%)": "0.77",
-      "Price": "0.6429011388470165",
-      "Shares": "415,947.00",
-      "Market Value": "267,412.80"
-    },
-    {
-      "Ticker": "SSB VN",
-      "Name": "SOUTHEAST ASIA COMMERCIAL JO",
-      "Weight (%)": "0.75",
-      "Price": "0.7487680893726726",
-      "Shares": "349,100.00",
-      "Market Value": "261,394.94"
-    },
-    {
-      "Ticker": "GMD VN",
-      "Name": "GEMADEPT GROUP CORP",
-      "Weight (%)": "0.74",
-      "Price": "2.979673580533024",
-      "Shares": "86,300.00",
-      "Market Value": "257,145.83"
-    },
-    {
-      "Ticker": "SBT VN",
-      "Name": "THANH THANH CONG-BIEN HOA JS",
-      "Weight (%)": "0.73",
-      "Price": "0.8758084354020397",
-      "Shares": "292,695.00",
-      "Market Value": "256,344.75"
-    },
-    {
-      "Ticker": "GAS VN",
-      "Name": "PETROVIETNAM GAS JSC",
-      "Weight (%)": "0.73",
-      "Price": "3.099014455626715",
-      "Shares": "81,975.00",
-      "Market Value": "254,041.71"
-    },
-    {
-      "Ticker": "POW VN",
-      "Name": "PETROVIETNAM POWER CORP",
-      "Weight (%)": "0.72",
-      "Price": "0.4792885828049968",
-      "Shares": "526,653.00",
-      "Market Value": "252,418.77"
-    },
-    {
-      "Ticker": "NAB VN",
-      "Name": "NAM A COMMERCIAL JSB",
-      "Weight (%)": "0.71",
-      "Price": "0.4773637214991495",
-      "Shares": "523,230.00",
-      "Market Value": "249,771.02"
-    },
-    {
-      "Ticker": "KDH VN",
-      "Name": "KHANG DIEN HOUSE TRADING AND",
-      "Weight (%)": "0.71",
-      "Price": "0.6044040562875622",
-      "Shares": "410,819.00",
-      "Market Value": "248,300.67"
-    },
-    {
-      "Ticker": "HAG VN",
-      "Name": "HAGL JSC",
-      "Weight (%)": "0.71",
-      "Price": "0.5370341796875",
-      "Shares": "460,800.00",
-      "Market Value": "247,465.35"
-    },
-    {
-      "Ticker": "PVD VN",
-      "Name": "PETROVIETNAM DRILLING AND WE",
-      "Weight (%)": "0.71",
-      "Price": "0.6929473289219077",
-      "Shares": "357,103.00",
-      "Market Value": "247,453.57"
-    },
-    {
-      "Ticker": "KDC VN",
-      "Name": "KIDO GROUP CORP",
-      "Weight (%)": "0.66",
-      "Price": "1.959501080522409",
-      "Shares": "117,073.00",
-      "Market Value": "229,404.67"
-    },
-    {
-      "Ticker": "IDC VN",
-      "Name": "IDICO CORP JSC",
-      "Weight (%)": "0.63",
-      "Price": "1.285802302278977",
-      "Shares": "171,656.00",
-      "Market Value": "220,715.68"
-    },
-    {
-      "Ticker": "PVT VN",
-      "Name": "PETROVIETNAM TRANSPORTATION",
-      "Weight (%)": "0.62",
-      "Price": "0.8892824324936852",
-      "Shares": "242,681.00",
-      "Market Value": "215,811.95"
-    },
-    {
-      "Ticker": "HUT VN",
-      "Name": "TASCO JSC",
-      "Weight (%)": "0.60",
-      "Price": "0.4889128351159884",
-      "Shares": "431,940.00",
-      "Market Value": "211,181.01"
-    },
-    {
-      "Ticker": "TPB VN",
-      "Name": "TIEN PHONG COMMERCIAL JOINT",
-      "Weight (%)": "0.60",
-      "Price": "0.5620572740744697",
-      "Shares": "374,515.00",
-      "Market Value": "210,498.88"
-    },
-    {
-      "Ticker": "DGC VN",
-      "Name": "DUC GIANG CHEMICALS JSC",
-      "Weight (%)": "0.59",
-      "Price": "1.383969800914716",
-      "Shares": "148,680.00",
-      "Market Value": "205,768.63"
-    },
-    {
-      "Ticker": "GEE VN",
-      "Name": "GELEX ELECTRIC EQUIPMENT JSC",
-      "Weight (%)": "0.59",
-      "Price": "2.844933748271092",
-      "Shares": "72,300.00",
-      "Market Value": "205,688.71"
-    },
-    {
-      "Ticker": "SIP VN",
-      "Name": "SAIGON VRG INVESTMENT CORP",
-      "Weight (%)": "0.58",
-      "Price": "1.924853674398439",
-      "Shares": "106,099.00",
-      "Market Value": "204,225.05"
-    },
-    {
-      "Ticker": "SAB VN",
-      "Name": "SAIGON BEER ALCOHOL BEVERAGE",
-      "Weight (%)": "0.58",
-      "Price": "1.690021576763486",
-      "Shares": "120,500.00",
-      "Market Value": "203,647.60"
-    },
-    {
-      "Ticker": "DPM VN",
-      "Name": "PETROVIETNAM FERT & CHEMICAL",
-      "Weight (%)": "0.58",
-      "Price": "0.8700338872541029",
-      "Shares": "233,126.00",
-      "Market Value": "202,827.52"
-    },
-    {
-      "Ticker": "DXG VN",
-      "Name": "BLUEMARQ GROUP JSC",
-      "Weight (%)": "0.57",
-      "Price": "0.3888204478638894",
-      "Shares": "511,584.00",
-      "Market Value": "198,914.32"
-    },
-    {
-      "Ticker": "MSB VN",
-      "Name": "VIETNAM MARITIME COMMERCIAL",
-      "Weight (%)": "0.57",
-      "Price": "0.5408838939021056",
-      "Shares": "365,700.00",
-      "Market Value": "197,801.24"
-    },
-    {
-      "Ticker": "SHS VN",
-      "Name": "SAIGON - HANOI SECURITIES",
-      "Weight (%)": "0.56",
-      "Price": "0.5274099096052229",
-      "Shares": "369,601.00",
-      "Market Value": "194,931.23"
-    },
-    {
-      "Ticker": "TCH VN",
-      "Name": "HOANG HUY INVESTMENT FINANCI",
-      "Weight (%)": "0.54",
-      "Price": "0.4350169372466923",
-      "Shares": "432,774.00",
-      "Market Value": "188,264.02"
-    },
-    {
-      "Ticker": "PC1 VN",
-      "Name": "PC1 GROUP JSC",
-      "Weight (%)": "0.53",
-      "Price": "0.8084385395129671",
-      "Shares": "228,773.00",
-      "Market Value": "184,948.91"
-    },
-    {
-      "Ticker": "MBS VN",
-      "Name": "MB SECURITIES JSC",
-      "Weight (%)": "0.52",
-      "Price": "0.6236525990735975",
-      "Shares": "291,450.00",
-      "Market Value": "181,763.55"
-    },
-    {
-      "Ticker": "PDR VN",
-      "Name": "PHAT DAT REAL ESTATE DEVELOP",
-      "Weight (%)": "0.51",
-      "Price": "0.4350169307670883",
-      "Shares": "409,314.00",
-      "Market Value": "178,058.52"
-    },
-    {
-      "Ticker": "BMP VN",
-      "Name": "BINH MINH PLASTICS JSC",
-      "Weight (%)": "0.48",
-      "Price": "5.582075747508306",
-      "Shares": "30,100.00",
-      "Market Value": "168,020.48"
-    },
-    {
-      "Ticker": "VCG VN",
-      "Name": "VIETNAM CONSTRUCTION & IMPOR",
-      "Weight (%)": "0.47",
-      "Price": "0.5408839036629856",
-      "Shares": "302,895.00",
-      "Market Value": "163,831.03"
-    },
-    {
-      "Ticker": "VHC VN",
-      "Name": "VINH HOAN CORP",
-      "Weight (%)": "0.47",
-      "Price": "1.907529983602717",
-      "Shares": "85,380.00",
-      "Market Value": "162,864.91"
-    },
-    {
-      "Ticker": "DCM VN",
-      "Name": "PETROVIETNAM CA MAU FERTILIZ",
-      "Weight (%)": "0.47",
-      "Price": "1.320449635036496",
-      "Shares": "123,300.00",
-      "Market Value": "162,811.44"
-    },
-    {
-      "Ticker": "HSG VN",
-      "Name": "HOA SEN GROUP",
-      "Weight (%)": "0.44",
-      "Price": "0.3849707476651864",
-      "Shares": "400,139.00",
-      "Market Value": "154,041.81"
-    },
-    {
-      "Ticker": "DIG VN",
-      "Name": "DEVELOPMENT INVESTMENT CONST",
-      "Weight (%)": "0.41",
-      "Price": "0.3707268358457536",
-      "Shares": "387,873.00",
-      "Market Value": "143,794.93"
-    },
-    {
-      "Ticker": "TAL VN",
-      "Name": "TASECO LAND INVESTMENT JSC",
-      "Weight (%)": "0.40",
-      "Price": "0.8854326862867877",
-      "Shares": "159,700.00",
-      "Market Value": "141,403.60"
-    },
-    {
-      "Ticker": "FTS VN",
-      "Name": "FPT SECURITIES JSC",
-      "Weight (%)": "0.38",
-      "Price": "0.7737912068885914",
-      "Shares": "173,272.00",
-      "Market Value": "134,076.35"
-    },
-    {
-      "Ticker": "CII VN",
       "Name": "HO CHI MINH CITY INFRASTRUCT",
-      "Weight (%)": "0.37",
-      "Price": "0.485063140060241",
-      "Shares": "265,600.00",
-      "Market Value": "128,832.77"
+      "Ticker": "2679304D VN",
+      "Identifier": "BVBPR43",
+      "Weight": "0.01%",
+      "Market Value": "2,753.54",
+      "Shares Held": "275,100.00",
+      "Asset Category": "Equity",
+      "Price": "0.01000923300617957"
     },
     {
-      "Ticker": "VHM VN",
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.01%",
+      "Market Value": "-3,246.60",
+      "Shares Held": "-3,246.60",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "VINGROUP JSC",
+      "Ticker": "VIC VN",
+      "Identifier": "B27Y417",
+      "Weight": "24.75%",
+      "Market Value": "8,651,770.87",
+      "Shares Held": "968,700.00",
+      "Asset Category": "Equity",
+      "Price": "8.931321224321254"
+    },
+    {
+      "Name": "HOA PHAT GROUP JSC",
+      "Ticker": "HPG VN",
+      "Identifier": "B29CC15",
+      "Weight": "5.47%",
+      "Market Value": "1,912,488.43",
+      "Shares Held": "2,405,753.00",
+      "Asset Category": "Equity",
+      "Price": "0.7949645828146115"
+    },
+    {
+      "Name": "FPT CORP",
+      "Ticker": "FPT VN",
+      "Identifier": "B1HMWH6",
+      "Weight": "3.89%",
+      "Market Value": "1,359,780.99",
+      "Shares Held": "545,930.00",
+      "Asset Category": "Equity",
+      "Price": "2.490760701921492"
+    },
+    {
+      "Name": "BANK FOR FOREIGN TRADE JSC",
+      "Ticker": "VCB VN",
+      "Identifier": "B622TR5",
+      "Weight": "3.22%",
+      "Market Value": "1,126,125.73",
+      "Shares Held": "504,349.00",
+      "Asset Category": "Equity",
+      "Price": "2.232830302032918"
+    },
+    {
+      "Name": "MASAN GROUP CORP",
+      "Ticker": "MSN VN",
+      "Identifier": "B59R0P1",
+      "Weight": "3.21%",
+      "Market Value": "1,123,499.85",
+      "Shares Held": "416,320.00",
+      "Asset Category": "Equity",
+      "Price": "2.698644912567256"
+    },
+    {
+      "Name": "VIETNAM DAIRY PRODUCTS JSC",
+      "Ticker": "VNM VN",
+      "Identifier": "B16GLK5",
+      "Weight": "2.92%",
+      "Market Value": "1,019,611.18",
+      "Shares Held": "442,900.00",
+      "Asset Category": "Equity",
+      "Price": "2.302125039512305"
+    },
+    {
+      "Name": "SAIGON TREASURE COMMERCIAL JOINT STOCK BANK",
+      "Ticker": "STB VN",
+      "Identifier": "B19HJ45",
+      "Weight": "2.91%",
+      "Market Value": "1,016,917.54",
+      "Shares Held": "345,300.00",
+      "Asset Category": "Equity",
+      "Price": "2.945026180133218"
+    },
+    {
+      "Name": "SSI SECURITIES CORP",
+      "Ticker": "SSI VN",
+      "Identifier": "B1LB8G0",
+      "Weight": "2.65%",
+      "Market Value": "926,672.44",
+      "Shares Held": "1,162,862.00",
+      "Asset Category": "Equity",
+      "Price": "0.7968894331399599"
+    },
+    {
+      "Name": "VIETNAM PROSPERITY JSC BANK",
+      "Ticker": "VPB VN",
+      "Identifier": "BF47045",
+      "Weight": "2.42%",
+      "Market Value": "844,706.90",
+      "Shares Held": "954,004.63",
+      "Asset Category": "Equity",
+      "Price": "0.8854327048706252"
+    },
+    {
+      "Name": "VIX SECURITIES JSC",
+      "Ticker": "VIX VN",
+      "Identifier": "B5N90B9",
+      "Weight": "2.25%",
+      "Market Value": "788,391.19",
+      "Shares Held": "1,618,913.00",
+      "Asset Category": "Equity",
+      "Price": "0.4869879913250434"
+    },
+    {
+      "Name": "VIETJET AVIATION JSC",
+      "Ticker": "VJC VN",
+      "Identifier": "BYP2451",
+      "Weight": "2.16%",
+      "Market Value": "754,796.43",
+      "Shares Held": "147,640.00",
+      "Asset Category": "Equity",
+      "Price": "5.112411473855324"
+    },
+    {
+      "Name": "MASAN CONSUMER CORP",
+      "Ticker": "MCH VN",
+      "Identifier": "BD6VW56",
+      "Weight": "1.76%",
+      "Market Value": "615,002.31",
+      "Shares Held": "113,300.00",
+      "Asset Category": "Equity",
+      "Price": "5.42808746690203"
+    },
+    {
+      "Name": "VINCOM RETAIL JSC",
+      "Ticker": "VRE VN",
+      "Identifier": "BZ0WW59",
+      "Weight": "1.62%",
+      "Market Value": "565,906.99",
+      "Shares Held": "600,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.9431783166666666"
+    },
+    {
+      "Name": "HDBANK",
+      "Ticker": "HDB VN",
+      "Identifier": "BYX3359",
+      "Weight": "1.42%",
+      "Market Value": "496,902.53",
+      "Shares Held": "464,300.00",
+      "Asset Category": "Equity",
+      "Price": "1.070218673271592"
+    },
+    {
+      "Name": "SAIGON - HANOI COMMERICIAL",
+      "Ticker": "SHB VN",
+      "Identifier": "B3V86Y9",
+      "Weight": "1.30%",
+      "Market Value": "455,405.84",
+      "Shares Held": "1,019,795.00",
+      "Asset Category": "Equity",
+      "Price": "0.4465660647483073"
+    },
+    {
+      "Name": "HO CHI MINH CITY SECURITIES",
+      "Ticker": "HCM VN",
+      "Identifier": "B4JZQK5",
+      "Weight": "1.27%",
+      "Market Value": "445,067.37",
+      "Shares Held": "464,300.00",
+      "Asset Category": "Equity",
+      "Price": "0.958577148395434"
+    },
+    {
+      "Name": "VIETNAM JS COMMERCIAL BANK F",
+      "Ticker": "CTG VN",
+      "Identifier": "B3PL622",
+      "Weight": "1.27%",
+      "Market Value": "443,684.13",
+      "Shares Held": "382,260.00",
+      "Asset Category": "Equity",
+      "Price": "1.160686783864386"
+    },
+    {
+      "Name": "VNDIRECT SECURITIES CORP",
+      "Ticker": "VND VN",
+      "Identifier": "B4XXQS3",
+      "Weight": "1.18%",
+      "Market Value": "412,032.16",
+      "Shares Held": "745,850.00",
+      "Asset Category": "Equity",
+      "Price": "0.5524330093182275"
+    },
+    {
+      "Name": "GELEX GROUP JSC",
+      "Ticker": "GEX VN",
+      "Identifier": "BYV0WY4",
+      "Weight": "1.14%",
+      "Market Value": "399,309.52",
+      "Shares Held": "432,186.00",
+      "Asset Category": "Equity",
+      "Price": "0.923929789488785"
+    },
+    {
+      "Name": "NOVALAND INVESTMENT GROUP",
+      "Ticker": "NVL VN",
+      "Identifier": "BYZCMP7",
+      "Weight": "1.05%",
+      "Market Value": "367,724.53",
+      "Shares Held": "806,077.00",
+      "Asset Category": "Equity",
+      "Price": "0.4561903267305729"
+    },
+    {
+      "Name": "FPT DIGITAL RETAIL JSC",
+      "Ticker": "FRT VN",
+      "Identifier": "BFM5DX1",
+      "Weight": "1.03%",
+      "Market Value": "359,076.49",
+      "Shares Held": "65,732.00",
+      "Asset Category": "Equity",
+      "Price": "5.462734893202701"
+    },
+    {
+      "Name": "BANK FOR INVESTMENT AND DEVE",
+      "Ticker": "BID VN",
+      "Identifier": "BJ4WY68",
+      "Weight": "1.01%",
+      "Market Value": "352,700.95",
+      "Shares Held": "256,273.00",
+      "Asset Category": "Equity",
+      "Price": "1.376270422557195"
+    },
+    {
+      "Name": "VIETCAP SECURITIES JSC",
+      "Ticker": "VCI VN",
+      "Identifier": "BYVTMH4",
+      "Weight": "1.00%",
+      "Market Value": "349,815.75",
+      "Shares Held": "458,930.00",
+      "Asset Category": "Equity",
+      "Price": "0.7622420630597259"
+    },
+    {
+      "Name": "PETROVIETNAM REFINING N PETR",
+      "Ticker": "BSR VN",
+      "Identifier": "BFXQ3V1",
+      "Weight": "0.99%",
+      "Market Value": "346,412.07",
+      "Shares Held": "296,000.00",
+      "Asset Category": "Equity",
+      "Price": "1.170311047297297"
+    },
+    {
+      "Name": "KINH BAC CITY DEVELOPMENT HO",
+      "Ticker": "KBC VN",
+      "Identifier": "B2B3VJ7",
+      "Weight": "0.94%",
+      "Market Value": "329,569.80",
+      "Shares Held": "329,900.00",
+      "Asset Category": "Equity",
+      "Price": "0.9989990906335253"
+    },
+    {
+      "Name": "DIEN MAY XANH INVESTMENT JSC",
+      "Ticker": "DMX VN",
+      "Identifier": "BVJ1V30",
+      "Weight": "0.91%",
+      "Market Value": "317,770.25",
+      "Shares Held": "107,200.00",
+      "Asset Category": "Equity",
+      "Price": "2.964274720149254"
+    },
+    {
+      "Name": "VP BANK SECURITIES LTD CO",
+      "Ticker": "VPX VN",
+      "Identifier": "BNGB8W5",
+      "Weight": "0.81%",
+      "Market Value": "283,931.71",
+      "Shares Held": "289,800.00",
+      "Asset Category": "Equity",
+      "Price": "0.9797505521049"
+    },
+    {
+      "Name": "VAN PHU REAL ESTALE DEVELOPM",
+      "Ticker": "VPI VN",
+      "Identifier": "BF2RZ53",
+      "Weight": "0.80%",
+      "Market Value": "280,949.76",
+      "Shares Held": "117,330.40",
+      "Asset Category": "Equity",
+      "Price": "2.394518044769301"
+    },
+    {
+      "Name": "TECHCOM SECURITIES JSC",
+      "Ticker": "TCX VN",
+      "Identifier": "BTLN3S9",
+      "Weight": "0.79%",
+      "Market Value": "276,827.66",
+      "Shares Held": "240,096.00",
+      "Asset Category": "Equity",
+      "Price": "1.152987388377982"
+    },
+    {
+      "Name": "VPS SECURITIES JSC",
+      "Ticker": "VCK VN",
+      "Identifier": "BQ71R84",
+      "Weight": "0.79%",
+      "Market Value": "275,476.59",
+      "Shares Held": "251,080.00",
+      "Asset Category": "Equity",
+      "Price": "1.097166600286761"
+    },
+    {
+      "Name": "ASIA COMMERCIAL BANK",
+      "Ticker": "ACB VN",
+      "Identifier": "B1GJZD5",
+      "Weight": "0.78%",
+      "Market Value": "271,289.65",
+      "Shares Held": "329,300.00",
+      "Asset Category": "Equity",
+      "Price": "0.8238373823261465"
+    },
+    {
+      "Name": "PETROVIETNAM TECHNICAL SERVI",
+      "Ticker": "PVS VN",
+      "Identifier": "B2QMMQ3",
+      "Weight": "0.77%",
+      "Market Value": "268,323.85",
+      "Shares Held": "220,569.00",
+      "Asset Category": "Equity",
+      "Price": "1.216507532790193"
+    },
+    {
+      "Name": "VIETNAM EXPORT-IMPORT COMMER",
+      "Ticker": "EIB VN",
+      "Identifier": "B58P9L5",
+      "Weight": "0.77%",
+      "Market Value": "267,412.80",
+      "Shares Held": "415,947.00",
+      "Asset Category": "Equity",
+      "Price": "0.6429011388470165"
+    },
+    {
+      "Name": "SOUTHEAST ASIA COMMERCIAL JO",
+      "Ticker": "SSB VN",
+      "Identifier": "BMXLWV8",
+      "Weight": "0.75%",
+      "Market Value": "261,394.94",
+      "Shares Held": "349,100.00",
+      "Asset Category": "Equity",
+      "Price": "0.7487680893726726"
+    },
+    {
+      "Name": "GEMADEPT GROUP CORP",
+      "Ticker": "GMD VN",
+      "Identifier": "B16GK97",
+      "Weight": "0.74%",
+      "Market Value": "257,145.83",
+      "Shares Held": "86,300.00",
+      "Asset Category": "Equity",
+      "Price": "2.979673580533024"
+    },
+    {
+      "Name": "THANH THANH CONG-BIEN HOA JS",
+      "Ticker": "SBT VN",
+      "Identifier": "B2PXTH7",
+      "Weight": "0.73%",
+      "Market Value": "256,344.75",
+      "Shares Held": "292,695.00",
+      "Asset Category": "Equity",
+      "Price": "0.8758084354020397"
+    },
+    {
+      "Name": "PETROVIETNAM GAS JSC",
+      "Ticker": "GAS VN",
+      "Identifier": "B83C9P6",
+      "Weight": "0.73%",
+      "Market Value": "254,041.71",
+      "Shares Held": "81,975.00",
+      "Asset Category": "Equity",
+      "Price": "3.099014455626715"
+    },
+    {
+      "Name": "PETROVIETNAM POWER CORP",
+      "Ticker": "POW VN",
+      "Identifier": "BFX2T66",
+      "Weight": "0.72%",
+      "Market Value": "252,418.77",
+      "Shares Held": "526,653.00",
+      "Asset Category": "Equity",
+      "Price": "0.4792885828049968"
+    },
+    {
+      "Name": "NAM A COMMERCIAL JSB",
+      "Ticker": "NAB VN",
+      "Identifier": "BKSB0V5",
+      "Weight": "0.71%",
+      "Market Value": "249,771.02",
+      "Shares Held": "523,230.00",
+      "Asset Category": "Equity",
+      "Price": "0.4773637214991495"
+    },
+    {
+      "Name": "KHANG DIEN HOUSE TRADING AND",
+      "Ticker": "KDH VN",
+      "Identifier": "B3M16J2",
+      "Weight": "0.71%",
+      "Market Value": "248,300.67",
+      "Shares Held": "410,819.00",
+      "Asset Category": "Equity",
+      "Price": "0.6044040562875622"
+    },
+    {
+      "Name": "HAGL JSC",
+      "Ticker": "HAG VN",
+      "Identifier": "B3KLW63",
+      "Weight": "0.71%",
+      "Market Value": "247,465.35",
+      "Shares Held": "460,800.00",
+      "Asset Category": "Equity",
+      "Price": "0.5370341796875"
+    },
+    {
+      "Name": "PETROVIETNAM DRILLING AND WE",
+      "Ticker": "PVD VN",
+      "Identifier": "B1HMTK8",
+      "Weight": "0.71%",
+      "Market Value": "247,453.57",
+      "Shares Held": "357,103.00",
+      "Asset Category": "Equity",
+      "Price": "0.6929473289219077"
+    },
+    {
+      "Name": "KIDO GROUP CORP",
+      "Ticker": "KDC VN",
+      "Identifier": "B16GKS6",
+      "Weight": "0.66%",
+      "Market Value": "229,404.67",
+      "Shares Held": "117,073.00",
+      "Asset Category": "Equity",
+      "Price": "1.959501080522409"
+    },
+    {
+      "Name": "IDICO CORP JSC",
+      "Ticker": "IDC VN",
+      "Identifier": "BFMT742",
+      "Weight": "0.63%",
+      "Market Value": "220,715.68",
+      "Shares Held": "171,656.00",
+      "Asset Category": "Equity",
+      "Price": "1.285802302278977"
+    },
+    {
+      "Name": "PETROVIETNAM TRANSPORTATION",
+      "Ticker": "PVT VN",
+      "Identifier": "B1LB990",
+      "Weight": "0.62%",
+      "Market Value": "215,811.95",
+      "Shares Held": "242,681.00",
+      "Asset Category": "Equity",
+      "Price": "0.8892824324936852"
+    },
+    {
+      "Name": "TASCO JSC",
+      "Ticker": "HUT VN",
+      "Identifier": "B2QXYW6",
+      "Weight": "0.60%",
+      "Market Value": "211,181.01",
+      "Shares Held": "431,940.00",
+      "Asset Category": "Equity",
+      "Price": "0.4889128351159884"
+    },
+    {
+      "Name": "TIEN PHONG COMMERCIAL JOINT",
+      "Ticker": "TPB VN",
+      "Identifier": "BD9H3S1",
+      "Weight": "0.60%",
+      "Market Value": "210,498.88",
+      "Shares Held": "374,515.00",
+      "Asset Category": "Equity",
+      "Price": "0.5620572740744697"
+    },
+    {
+      "Name": "DUC GIANG CHEMICALS JSC",
+      "Ticker": "DGC VN",
+      "Identifier": "BP0RTK8",
+      "Weight": "0.59%",
+      "Market Value": "205,768.63",
+      "Shares Held": "148,680.00",
+      "Asset Category": "Equity",
+      "Price": "1.383969800914716"
+    },
+    {
+      "Name": "GELEX ELECTRIC EQUIPMENT JSC",
+      "Ticker": "GEE VN",
+      "Identifier": "BPJJB10",
+      "Weight": "0.59%",
+      "Market Value": "205,688.71",
+      "Shares Held": "72,300.00",
+      "Asset Category": "Equity",
+      "Price": "2.844933748271092"
+    },
+    {
+      "Name": "SAIGON VRG INVESTMENT CORP",
+      "Ticker": "SIP VN",
+      "Identifier": "BKBDP80",
+      "Weight": "0.58%",
+      "Market Value": "204,225.05",
+      "Shares Held": "106,099.00",
+      "Asset Category": "Equity",
+      "Price": "1.924853674398439"
+    },
+    {
+      "Name": "SAIGON BEER ALCOHOL BEVERAGE",
+      "Ticker": "SAB VN",
+      "Identifier": "BDSFBV5",
+      "Weight": "0.58%",
+      "Market Value": "203,647.60",
+      "Shares Held": "120,500.00",
+      "Asset Category": "Equity",
+      "Price": "1.690021576763486"
+    },
+    {
+      "Name": "PETROVIETNAM FERT & CHEMICAL",
+      "Ticker": "DPM VN",
+      "Identifier": "B291F68",
+      "Weight": "0.58%",
+      "Market Value": "202,827.52",
+      "Shares Held": "233,126.00",
+      "Asset Category": "Equity",
+      "Price": "0.8700338872541029"
+    },
+    {
+      "Name": "BLUEMARQ GROUP JSC",
+      "Ticker": "DXG VN",
+      "Identifier": "B56QVW5",
+      "Weight": "0.57%",
+      "Market Value": "198,914.32",
+      "Shares Held": "511,584.00",
+      "Asset Category": "Equity",
+      "Price": "0.3888204478638894"
+    },
+    {
+      "Name": "VIETNAM MARITIME COMMERCIAL",
+      "Ticker": "MSB VN",
+      "Identifier": "BL6N429",
+      "Weight": "0.57%",
+      "Market Value": "197,801.24",
+      "Shares Held": "365,700.00",
+      "Asset Category": "Equity",
+      "Price": "0.5408838939021056"
+    },
+    {
+      "Name": "SAIGON - HANOI SECURITIES",
+      "Ticker": "SHS VN",
+      "Identifier": "B5ZWC43",
+      "Weight": "0.56%",
+      "Market Value": "194,931.23",
+      "Shares Held": "369,601.00",
+      "Asset Category": "Equity",
+      "Price": "0.5274099096052229"
+    },
+    {
+      "Name": "HOANG HUY INVESTMENT FINANCI",
+      "Ticker": "TCH VN",
+      "Identifier": "BYQ4467",
+      "Weight": "0.54%",
+      "Market Value": "188,264.02",
+      "Shares Held": "432,774.00",
+      "Asset Category": "Equity",
+      "Price": "0.4350169372466923"
+    },
+    {
+      "Name": "PC1 GROUP JSC",
+      "Ticker": "PC1 VN",
+      "Identifier": "BYX2RS7",
+      "Weight": "0.53%",
+      "Market Value": "184,948.91",
+      "Shares Held": "228,773.00",
+      "Asset Category": "Equity",
+      "Price": "0.8084385395129671"
+    },
+    {
+      "Name": "MB SECURITIES JSC",
+      "Ticker": "MBS VN",
+      "Identifier": "BYYW9D5",
+      "Weight": "0.52%",
+      "Market Value": "181,763.55",
+      "Shares Held": "291,450.00",
+      "Asset Category": "Equity",
+      "Price": "0.6236525990735975"
+    },
+    {
+      "Name": "PHAT DAT REAL ESTATE DEVELOP",
+      "Ticker": "PDR VN",
+      "Identifier": "B4V9BD3",
+      "Weight": "0.51%",
+      "Market Value": "178,058.52",
+      "Shares Held": "409,314.00",
+      "Asset Category": "Equity",
+      "Price": "0.4350169307670883"
+    },
+    {
+      "Name": "BINH MINH PLASTICS JSC",
+      "Ticker": "BMP VN",
+      "Identifier": "B1CBVC6",
+      "Weight": "0.48%",
+      "Market Value": "168,020.48",
+      "Shares Held": "30,100.00",
+      "Asset Category": "Equity",
+      "Price": "5.582075747508306"
+    },
+    {
+      "Name": "VIETNAM CONSTRUCTION & IMPOR",
+      "Ticker": "VCG VN",
+      "Identifier": "B3D0PX5",
+      "Weight": "0.47%",
+      "Market Value": "163,831.03",
+      "Shares Held": "302,895.00",
+      "Asset Category": "Equity",
+      "Price": "0.5408839036629856"
+    },
+    {
+      "Name": "VINH HOAN CORP",
+      "Ticker": "VHC VN",
+      "Identifier": "B2N7VQ4",
+      "Weight": "0.47%",
+      "Market Value": "162,864.91",
+      "Shares Held": "85,380.00",
+      "Asset Category": "Equity",
+      "Price": "1.907529983602717"
+    },
+    {
+      "Name": "PETROVIETNAM CA MAU FERTILIZ",
+      "Ticker": "DCM VN",
+      "Identifier": "BWG92M0",
+      "Weight": "0.47%",
+      "Market Value": "162,811.44",
+      "Shares Held": "123,300.00",
+      "Asset Category": "Equity",
+      "Price": "1.320449635036496"
+    },
+    {
+      "Name": "HOA SEN GROUP",
+      "Ticker": "HSG VN",
+      "Identifier": "B3FQWF2",
+      "Weight": "0.44%",
+      "Market Value": "154,041.81",
+      "Shares Held": "400,139.00",
+      "Asset Category": "Equity",
+      "Price": "0.3849707476651864"
+    },
+    {
+      "Name": "DEVELOPMENT INVESTMENT CONST",
+      "Ticker": "DIG VN",
+      "Identifier": "B3XZ1Y3",
+      "Weight": "0.41%",
+      "Market Value": "143,794.93",
+      "Shares Held": "387,873.00",
+      "Asset Category": "Equity",
+      "Price": "0.3707268358457536"
+    },
+    {
+      "Name": "TASECO LAND INVESTMENT JSC",
+      "Ticker": "TAL VN",
+      "Identifier": "BQB9HR3",
+      "Weight": "0.40%",
+      "Market Value": "141,403.60",
+      "Shares Held": "159,700.00",
+      "Asset Category": "Equity",
+      "Price": "0.8854326862867877"
+    },
+    {
+      "Name": "FPT SECURITIES JSC",
+      "Ticker": "FTS VN",
+      "Identifier": "BZ6T4X6",
+      "Weight": "0.38%",
+      "Market Value": "134,076.35",
+      "Shares Held": "173,272.00",
+      "Asset Category": "Equity",
+      "Price": "0.7737912068885914"
+    },
+    {
+      "Name": "HO CHI MINH CITY INFRASTRUCT",
+      "Ticker": "CII VN",
+      "Identifier": "B16GKN1",
+      "Weight": "0.37%",
+      "Market Value": "128,832.77",
+      "Shares Held": "265,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.485063140060241"
+    },
+    {
       "Name": "VINHOMES JSC",
-      "Weight (%)": "0.28",
-      "Price": "2.660147922437673",
-      "Shares": "36,100.00",
-      "Market Value": "96,031.34"
+      "Ticker": "VHM VN",
+      "Identifier": "BFZBXH0",
+      "Weight": "0.28%",
+      "Market Value": "96,031.34",
+      "Shares Held": "36,100.00",
+      "Asset Category": "Equity",
+      "Price": "2.660147922437673"
     }
   ]
 }

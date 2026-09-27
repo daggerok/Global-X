@@ -1,286 +1,446 @@
 {
   "ticker": "CLIP",
   "name": "1-3 Month T-Bill ETF",
-  "category": "Other",
+  "category": "Fixed Income / Core",
   "fundPage": "https://www.globalxetfs.com/funds/clip/",
   "dataFile": "./funds/CLIP/meta.json",
-  "cusip": null,
-  "isin": null,
+  "cusip": "37960A438",
+  "isin": "US37960A4388",
   "ter": "0.07%",
   "terValue": 0.07,
   "terGross": "0.07%",
   "terGrossValue": 0.07,
   "nav": {
-    "display": "—",
-    "value": null,
+    "display": "$100.31",
+    "value": 100.31,
     "asOfDate": "Sep 25 2026",
-    "dailyChangeText": null,
-    "kind": "derived (Net Assets / Shares Outstanding)"
+    "dailyChangeText": "$0.03 (0.03%)",
+    "kind": "official (fund page Fund Details)"
   },
-  "navValue": null,
+  "navValue": 100.31,
   "aum": {
     "display": "$2.38B",
-    "value": 2379327665,
+    "value": 2379327665.03,
     "asOfDate": "Sep 25 2026",
-    "source": "GLOBALX fund page Fund Details \"Net Assets\""
+    "source": "Global X fund page Fund Details \"Net Assets\""
   },
-  "aumValue": 2379327665,
+  "aumValue": 2379327665.03,
   "asOfDate": "Sep 25 2026",
   "inceptionDate": "Jun 20 2023",
-  "inceptionDateFundPage": null,
-  "exchange": "PCX",
+  "inceptionDateFundPage": "Jun 20 2023",
+  "exchange": "NYSE Arca",
   "closePrice": "$100.31",
   "closePriceValue": 100.31,
   "premiumDiscount": {
-    "display": "—",
-    "value": null,
-    "derivedValue": null,
-    "kind": "derived (Market Price - NAV) / NAV"
+    "display": "0.00%",
+    "value": 0.0008,
+    "derivedValue": 0,
+    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
   },
-  "premiumDiscountValue": null,
-  "premiumDiscountDerivedValue": null,
-  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
+  "premiumDiscountValue": 0.0008,
+  "premiumDiscountDerivedValue": 0,
+  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
-    "display": null,
-    "value": null,
-    "asOfDate": null,
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Sep 25 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
-  "bidAskSpreadValue": null,
+  "bidAskSpreadValue": 0.01,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 2379327665,
+  "totalNetAssets": 2379327665.03,
   "sharesOutstanding": {
-    "display": null,
-    "value": null,
+    "display": "23,719,931",
+    "value": 23719931,
     "asOfDate": "Sep 25 2026"
   },
   "netAssetsAsOf": "Sep 25 2026",
-  "secYieldAsOf": null,
+  "secYieldAsOf": "Sep 25 2026",
   "distributions": {
-    "frequency": "01 - Monthly",
-    "paymentsPerYear": null,
+    "frequency": "Monthly",
+    "paymentsPerYear": 12,
     "headers": [
-      "Ex-Date",
-      "Dividend"
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
     ],
     "rows": [
       {
-        "Ex-Date": "Sep 1 2026",
-        "Dividend": "$0.3100"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-30",
+        "Record Date": "2026-12-30",
+        "Payable Date": "2027-01-05",
+        "Amount ($)": ""
       },
       {
-        "Ex-Date": "Aug 3 2026",
-        "Dividend": "$0.3070"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-01",
+        "Record Date": "2026-12-01",
+        "Payable Date": "2026-12-04",
+        "Amount ($)": ""
       },
       {
-        "Ex-Date": "Jul 1 2026",
-        "Dividend": "$0.3030"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-11-02",
+        "Record Date": "2026-11-02",
+        "Payable Date": "2026-11-05",
+        "Amount ($)": ""
       },
       {
-        "Ex-Date": "Jun 1 2026",
-        "Dividend": "$0.3040"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-10-01",
+        "Record Date": "2026-10-01",
+        "Payable Date": "2026-10-06",
+        "Amount ($)": ""
       },
       {
-        "Ex-Date": "May 1 2026",
-        "Dividend": "$0.3040"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-09-01",
+        "Record Date": "2026-09-01",
+        "Payable Date": "2026-09-04",
+        "Amount ($)": "$0.310000"
       },
       {
-        "Ex-Date": "Apr 1 2026",
-        "Dividend": "$0.3080"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-08-03",
+        "Record Date": "2026-08-03",
+        "Payable Date": "2026-08-06",
+        "Amount ($)": "$0.307000"
       },
       {
-        "Ex-Date": "Mar 2 2026",
-        "Dividend": "$0.3030"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-07-01",
+        "Record Date": "2026-07-01",
+        "Payable Date": "2026-07-07",
+        "Amount ($)": "$0.303000"
       },
       {
-        "Ex-Date": "Feb 2 2026",
-        "Dividend": "$0.3080"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-06-01",
+        "Record Date": "2026-06-01",
+        "Payable Date": "2026-06-04",
+        "Amount ($)": "$0.304000"
       },
       {
-        "Ex-Date": "Dec 30 2025",
-        "Dividend": "$0.3140"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-05-01",
+        "Record Date": "2026-05-01",
+        "Payable Date": "2026-05-06",
+        "Amount ($)": "$0.304000"
       },
       {
-        "Ex-Date": "Dec 1 2025",
-        "Dividend": "$0.3260"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-04-01",
+        "Record Date": "2026-04-01",
+        "Payable Date": "2026-04-07",
+        "Amount ($)": "$0.308000"
       },
       {
-        "Ex-Date": "Nov 3 2025",
-        "Dividend": "$0.3350"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-03-02",
+        "Record Date": "2026-03-02",
+        "Payable Date": "2026-03-05",
+        "Amount ($)": "$0.303000"
       },
       {
-        "Ex-Date": "Oct 1 2025",
-        "Dividend": "$0.3480"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-02-02",
+        "Record Date": "2026-02-02",
+        "Payable Date": "2026-02-05",
+        "Amount ($)": "$0.308000"
       },
       {
-        "Ex-Date": "Sep 2 2025",
-        "Dividend": "$0.3550"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.314000"
       },
       {
-        "Ex-Date": "Aug 1 2025",
-        "Dividend": "$0.3540"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-01",
+        "Record Date": "2025-12-01",
+        "Payable Date": "2025-12-08",
+        "Amount ($)": "$0.326000"
       },
       {
-        "Ex-Date": "Jul 1 2025",
-        "Dividend": "$0.3520"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-11-03",
+        "Record Date": "2025-11-03",
+        "Payable Date": "2025-11-10",
+        "Amount ($)": "$0.335000"
       },
       {
-        "Ex-Date": "Jun 2 2025",
-        "Dividend": "$0.3500"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-10-01",
+        "Record Date": "2025-10-01",
+        "Payable Date": "2025-10-08",
+        "Amount ($)": "$0.348000"
       },
       {
-        "Ex-Date": "May 1 2025",
-        "Dividend": "$0.3500"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-09-02",
+        "Record Date": "2025-09-02",
+        "Payable Date": "2025-09-09",
+        "Amount ($)": "$0.355000"
       },
       {
-        "Ex-Date": "Apr 1 2025",
-        "Dividend": "$0.3520"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-08-01",
+        "Record Date": "2025-08-01",
+        "Payable Date": "2025-08-08",
+        "Amount ($)": "$0.354000"
       },
       {
-        "Ex-Date": "Mar 3 2025",
-        "Dividend": "$0.3520"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-07-01",
+        "Record Date": "2025-07-01",
+        "Payable Date": "2025-07-09",
+        "Amount ($)": "$0.352000"
       },
       {
-        "Ex-Date": "Feb 3 2025",
-        "Dividend": "$0.3580"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-06-02",
+        "Record Date": "2025-06-02",
+        "Payable Date": "2025-06-09",
+        "Amount ($)": "$0.350000"
       },
       {
-        "Ex-Date": "Dec 30 2024",
-        "Dividend": "$0.3750"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-05-01",
+        "Record Date": "2025-05-01",
+        "Payable Date": "2025-05-08",
+        "Amount ($)": "$0.350000"
       },
       {
-        "Ex-Date": "Dec 4 2024",
-        "Dividend": "$0.3810"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-04-01",
+        "Record Date": "2025-04-01",
+        "Payable Date": "2025-04-08",
+        "Amount ($)": "$0.352000"
       },
       {
-        "Ex-Date": "Nov 5 2024",
-        "Dividend": "$0.4010"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-03-03",
+        "Record Date": "2025-03-03",
+        "Payable Date": "2025-03-10",
+        "Amount ($)": "$0.352000"
       },
       {
-        "Ex-Date": "Oct 3 2024",
-        "Dividend": "$0.4180"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-02-03",
+        "Record Date": "2025-02-03",
+        "Payable Date": "2025-02-10",
+        "Amount ($)": "$0.358000"
       },
       {
-        "Ex-Date": "Sep 5 2024",
-        "Dividend": "$0.4390"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-12-30",
+        "Record Date": "2024-12-30",
+        "Payable Date": "2025-01-07",
+        "Amount ($)": "$0.375000"
       },
       {
-        "Ex-Date": "Aug 5 2024",
-        "Dividend": "$0.4420"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-12-04",
+        "Record Date": "2024-12-04",
+        "Payable Date": "2024-12-11",
+        "Amount ($)": "$0.381000"
       },
       {
-        "Ex-Date": "Jul 3 2024",
-        "Dividend": "$0.4380"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-11-05",
+        "Record Date": "2024-11-05",
+        "Payable Date": "2024-11-13",
+        "Amount ($)": "$0.401000"
       },
       {
-        "Ex-Date": "Jun 5 2024",
-        "Dividend": "$0.4440"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-10-03",
+        "Record Date": "2024-10-03",
+        "Payable Date": "2024-10-10",
+        "Amount ($)": "$0.418000"
       },
       {
-        "Ex-Date": "May 3 2024",
-        "Dividend": "$0.4440"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-09-05",
+        "Record Date": "2024-09-05",
+        "Payable Date": "2024-09-12",
+        "Amount ($)": "$0.439000"
       },
       {
-        "Ex-Date": "Apr 3 2024",
-        "Dividend": "$0.4440"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-08-05",
+        "Record Date": "2024-08-05",
+        "Payable Date": "2024-08-12",
+        "Amount ($)": "$0.442000"
       },
       {
-        "Ex-Date": "Mar 5 2024",
-        "Dividend": "$0.4440"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-07-03",
+        "Record Date": "2024-07-03",
+        "Payable Date": "2024-07-11",
+        "Amount ($)": "$0.438000"
       },
       {
-        "Ex-Date": "Feb 5 2024",
-        "Dividend": "$0.4480"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-06-05",
+        "Record Date": "2024-06-05",
+        "Payable Date": "2024-06-12",
+        "Amount ($)": "$0.111000"
       },
       {
-        "Ex-Date": "Dec 28 2023",
-        "Dividend": "$0.4440"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-05-03",
+        "Record Date": "2024-05-06",
+        "Payable Date": "2024-05-13",
+        "Amount ($)": "$0.111000"
       },
       {
-        "Ex-Date": "Dec 5 2023",
-        "Dividend": "$0.4480"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-04-03",
+        "Record Date": "2024-04-04",
+        "Payable Date": "2024-04-11",
+        "Amount ($)": "$0.111000"
       },
       {
-        "Ex-Date": "Nov 3 2023",
-        "Dividend": "$0.4480"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-03-05",
+        "Record Date": "2024-03-06",
+        "Payable Date": "2024-03-13",
+        "Amount ($)": "$0.111000"
       },
       {
-        "Ex-Date": "Oct 4 2023",
-        "Dividend": "$0.4360"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-02-05",
+        "Record Date": "2024-02-06",
+        "Payable Date": "2024-02-13",
+        "Amount ($)": "$0.111900"
       },
       {
-        "Ex-Date": "Sep 6 2023",
-        "Dividend": "$0.4880"
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-12-28",
+        "Record Date": "2023-12-29",
+        "Payable Date": "2024-01-08",
+        "Amount ($)": "$0.111000"
       },
       {
-        "Ex-Date": "Aug 3 2023",
-        "Dividend": "$0.4360"
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-12-05",
+        "Record Date": "2023-12-06",
+        "Payable Date": "2023-12-13",
+        "Amount ($)": "$0.111900"
       },
       {
-        "Ex-Date": "Jul 6 2023",
-        "Dividend": "$0.0520"
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-11-03",
+        "Record Date": "2023-11-06",
+        "Payable Date": "2023-11-13",
+        "Amount ($)": "$0.111900"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-10-04",
+        "Record Date": "2023-10-05",
+        "Payable Date": "2023-10-13",
+        "Amount ($)": "$0.108500"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-09-06",
+        "Record Date": "2023-09-07",
+        "Payable Date": "2023-09-14",
+        "Amount ($)": "$0.122100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-08-03",
+        "Record Date": "2023-08-04",
+        "Payable Date": "2023-08-11",
+        "Amount ($)": "$0.109000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-07-06",
+        "Record Date": "2023-07-07",
+        "Payable Date": "2023-07-14",
+        "Amount ($)": "$0.013000"
       }
     ],
-    "fallback": true,
-    "source": "Yahoo Finance dividend history (GLOBALX published no distribution rows)"
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
   },
   "returns": {
-    "derivedFrom": "official GLOBALX fund page performance tables (NAV Performance series)",
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
     "monthEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Aug 31 2026",
+      "raw": "2026-08-31",
+      "mo1": 0.29,
+      "mo3": 0.93,
       "mo6": null,
-      "ytd": null,
-      "yr1": null,
-      "yr3": null,
+      "ytd": 2.42,
+      "yr1": 3.8,
+      "yr3": 4.6,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null,
-      "sinceInceptionCumulative": null,
-      "market": {},
-      "benchmarkName": null,
-      "benchmark": {}
+      "sinceInception": 4.64,
+      "sinceInceptionCumulative": 15.62,
+      "market": {
+        "ONE_YEAR": 3.81,
+        "SINCE_INCEPTION": 4.64,
+        "THREE_YEAR": 4.56
+      },
+      "benchmarkName": "Index",
+      "benchmark": {
+        "ONE_YEAR": 3.85,
+        "SINCE_INCEPTION": 4.69,
+        "THREE_YEAR": 4.65
+      }
     },
     "quarterEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Jun 30 2026",
+      "raw": "2026-06-30",
+      "mo1": 0.3,
+      "mo3": 0.91,
       "mo6": null,
-      "ytd": null,
-      "yr1": null,
-      "yr3": null,
+      "ytd": 1.79,
+      "yr1": 3.93,
+      "yr3": 4.68,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null,
-      "sinceInceptionCumulative": null,
-      "market": {}
+      "sinceInception": 4.69,
+      "sinceInceptionCumulative": 14.9,
+      "market": {
+        "ONE_YEAR": 3.9,
+        "SINCE_INCEPTION": 4.69,
+        "THREE_YEAR": 4.64
+      }
     }
   },
   "metrics": {
-    "ytd": null,
-    "tr1y": null,
-    "tr3y": null,
+    "ytd": 2.42,
+    "tr1y": 3.8,
+    "tr3y": 14.44,
     "tr5y": null,
     "tr10y": null,
-    "cagr3y": null,
+    "cagr3y": 4.6,
     "cagr5y": null,
     "cagr10y": null,
-    "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "distributionYield": null,
-    "distributionYieldText": "—",
+    "siAnn": 4.64,
+    "dividendYield": 3.82,
+    "dividendYieldText": "3.82%",
+    "distributionYield": 3.82,
+    "distributionYieldText": "3.82%",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": null,
-    "secYieldText": "—",
-    "returnsBasis": "official GLOBALX fund page NAV Performance (monthly series)"
+    "secYield": 3.63,
+    "secYieldText": "3.63%",
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)"
   },
-  "distributionFrequency": "00 - —",
-  "providerCategory": "Other",
+  "distributionFrequency": "01 - Monthly",
+  "providerCategory": "Fixed Income / Core",
   "holdings": {
     "pages": [
       "./holdings/001.json"
@@ -289,8 +449,8 @@
     "totalRows": 24,
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
-    "source": "https://assets.globalxetfs.com/funds/holdings/clip_full-holdings_20260927.csv",
-    "sourceKind": "official GLOBALX daily holdings CSV (download_holdings_csv)"
+    "source": "https://assets.globalxetfs.com/funds/holdings/clip_full-holdings_20260925.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
     "pages": [
@@ -300,36 +460,36 @@
     "totalRows": 819,
     "asOfDate": "Sep 25 2026",
     "asOf": "2026-09-25",
-    "source": "https://query1.finance.yahoo.com/v8/finance/chart/CLIP?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/CLIP",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
-  "navKind": "derived (Net Assets / Shares Outstanding)",
+  "navKind": "official (fund page Fund Details)",
   "source": {
-    "provider": "GLOBALX Investment Management LLC (GLOBALX ETFs)",
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
     "site": "https://www.globalxetfs.com",
-    "lineup": "https://www.globalxetfs.com/explore/",
+    "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/clip/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/clip_full-holdings_20260927.csv",
-    "holdingsSource": "official GLOBALX daily holdings CSV (download_holdings_csv)",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/clip_full-holdings_20260925.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
-    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CLIP?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
-    "returnsSource": "GLOBALX fund page performance tables (NAV Performance)",
-    "distributionsSource": "GLOBALX fund page Distribution History table",
-    "distributionInfoSource": "GLOBALX fund page Distribution Information block",
-    "documentsSource": "GLOBALX fund page Documents table",
-    "registrant": "GLOBALX ETF Trust (Investment Company Act file 811-22209)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CLIP",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
-    "exchangeSource": "GLOBALX fund page Fund Details \"Primary Exchange\"",
-    "navSource": "GLOBALX fund page Fund Details \"Net Asset Value\" (derived (Net Assets / Shares Outstanding))",
-    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
-    "bidAskSpreadSource": "GLOBALX fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
   },
   "identifiers": {
-    "cusip": null,
-    "isin": null,
+    "cusip": "37960A438",
+    "isin": "US37960A4388",
     "underlyingExposure": null,
     "indexName": null,
-    "benchmarkIndexName": null
+    "benchmarkIndexName": "Index"
   },
   "expenseRatio": {
     "display": "0.07%",
@@ -340,24 +500,24 @@
   "marketPrice": {
     "display": "$100.31",
     "value": 100.31,
-    "asOfDate": "",
-    "dailyChangeText": null,
-    "source": "Yahoo Finance daily close"
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.04 (0.04%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldKind": "official GLOBALX Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": null,
-    "distributionRateText": "—",
+    "dividendYield": 3.82,
+    "dividendYieldText": "3.82%",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": 3.82,
+    "distributionRateText": "3.82%",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "official GLOBALX 30-Day SEC Yield",
+    "secYield": 3.63,
+    "secYieldText": "3.63%",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": null
+    "distributionInfoAsOfDate": "Sep 25 2026"
   },
   "navIndex": null,
   "documents": {

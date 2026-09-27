@@ -4,37 +4,44 @@
   "pageSize": 250,
   "totalRows": 3,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.04",
-      "Price": "1.0",
-      "Shares": "22,255.05",
-      "Market Value": "22,255.05"
-    },
-    {
       "Ticker": "",
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.02",
-      "Price": "1.0",
-      "Shares": "-8,801.61",
-      "Market Value": "-8,801.61"
+      "Identifier": "",
+      "Weight": "0.04%",
+      "Market Value": "22,255.05",
+      "Shares Held": "22,255.05",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "HYLB",
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.02%",
+      "Market Value": "-8,801.61",
+      "Shares Held": "-8,801.61",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "XTRACKERS USD HIGH YIELD COR",
-      "Weight (%)": "99.97",
-      "Price": "35.51",
-      "Shares": "1,438,258.00",
-      "Market Value": "51,072,541.58"
+      "Ticker": "HYLB",
+      "Identifier": "BZCGC26",
+      "Weight": "99.97%",
+      "Market Value": "51,072,541.58",
+      "Shares Held": "1,438,258.00",
+      "Asset Category": "Equity",
+      "Price": "35.51"
     }
   ]
 }

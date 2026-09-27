@@ -4,21 +4,24 @@
   "pageSize": 250,
   "totalRows": 501,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "SO",
       "Name": "SOUTHERN CO/THE",
-      "Weight (%)": "0.14",
-      "Price": "82.88000000000001",
-      "Shares": "78.00",
-      "Market Value": "6,464.64"
+      "Ticker": "SO",
+      "Identifier": "2829601",
+      "Weight": "0.14%",
+      "Market Value": "6,464.64",
+      "Shares Held": "78.00",
+      "Asset Category": "Equity",
+      "Price": "82.88000000000001"
     }
   ]
 }

@@ -4,205 +4,254 @@
   "pageSize": 250,
   "totalRows": 24,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.06",
-      "Price": "1.0",
-      "Shares": "882.44",
-      "Market Value": "882.44"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.06%",
+      "Market Value": "882.44",
+      "Shares Held": "882.44",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "CASH",
-      "Weight (%)": "0.04",
-      "Price": "1.0",
-      "Shares": "560.77",
-      "Market Value": "560.77"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.04%",
+      "Market Value": "560.77",
+      "Shares Held": "560.77",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "XOM",
       "Name": "EXXONMOBIL HOLDINGS CORP",
-      "Weight (%)": "28.78",
-      "Price": "160.59",
-      "Shares": "2,607.00",
-      "Market Value": "418,658.13"
+      "Ticker": "XOM",
+      "Identifier": "BVSRPD7",
+      "Weight": "28.78%",
+      "Market Value": "418,658.13",
+      "Shares Held": "2,607.00",
+      "Asset Category": "Equity",
+      "Price": "160.59"
     },
     {
-      "Ticker": "CVX",
       "Name": "CHEVRON CORP",
-      "Weight (%)": "16.27",
-      "Price": "204.45",
-      "Shares": "1,158.00",
-      "Market Value": "236,753.10"
+      "Ticker": "CVX",
+      "Identifier": "2838555",
+      "Weight": "16.27%",
+      "Market Value": "236,753.10",
+      "Shares Held": "1,158.00",
+      "Asset Category": "Equity",
+      "Price": "204.45"
     },
     {
-      "Ticker": "COP",
       "Name": "CONOCOPHILLIPS",
-      "Weight (%)": "6.71",
-      "Price": "127.3",
-      "Shares": "767.00",
-      "Market Value": "97,639.10"
+      "Ticker": "COP",
+      "Identifier": "2685717",
+      "Weight": "6.71%",
+      "Market Value": "97,639.10",
+      "Shares Held": "767.00",
+      "Asset Category": "Equity",
+      "Price": "127.3"
     },
     {
-      "Ticker": "MPC",
       "Name": "MARATHON PETROLEUM CORP",
-      "Weight (%)": "4.98",
-      "Price": "393.52",
-      "Shares": "184.00",
-      "Market Value": "72,407.68"
+      "Ticker": "MPC",
+      "Identifier": "B3K3L40",
+      "Weight": "4.98%",
+      "Market Value": "72,407.68",
+      "Shares Held": "184.00",
+      "Asset Category": "Equity",
+      "Price": "393.52"
     },
     {
-      "Ticker": "VLO",
       "Name": "VALERO ENERGY CORP",
-      "Weight (%)": "4.98",
-      "Price": "387.18",
-      "Shares": "187.00",
-      "Market Value": "72,402.66"
+      "Ticker": "VLO",
+      "Identifier": "2041364",
+      "Weight": "4.98%",
+      "Market Value": "72,402.66",
+      "Shares Held": "187.00",
+      "Asset Category": "Equity",
+      "Price": "387.18"
     },
     {
-      "Ticker": "PSX",
       "Name": "PHILLIPS 66",
-      "Weight (%)": "4.43",
-      "Price": "255.75",
-      "Shares": "252.00",
-      "Market Value": "64,449.00"
+      "Ticker": "PSX",
+      "Identifier": "B78C4Y8",
+      "Weight": "4.43%",
+      "Market Value": "64,449.00",
+      "Shares Held": "252.00",
+      "Asset Category": "Equity",
+      "Price": "255.75"
     },
     {
-      "Ticker": "WMB",
       "Name": "WILLIAMS COS INC",
-      "Weight (%)": "3.67",
-      "Price": "69.25999999999999",
-      "Shares": "770.00",
-      "Market Value": "53,330.20"
+      "Ticker": "WMB",
+      "Identifier": "2967181",
+      "Weight": "3.67%",
+      "Market Value": "53,330.20",
+      "Shares Held": "770.00",
+      "Asset Category": "Equity",
+      "Price": "69.25999999999999"
     },
     {
-      "Ticker": "SLB",
       "Name": "SLB LTD",
-      "Weight (%)": "3.33",
-      "Price": "51.54",
-      "Shares": "941.00",
-      "Market Value": "48,499.14"
+      "Ticker": "SLB",
+      "Identifier": "2779201",
+      "Weight": "3.33%",
+      "Market Value": "48,499.14",
+      "Shares Held": "941.00",
+      "Asset Category": "Equity",
+      "Price": "51.54"
     },
     {
-      "Ticker": "EOG",
       "Name": "EOG RESOURCES INC",
-      "Weight (%)": "3.21",
-      "Price": "140.35",
-      "Shares": "333.00",
-      "Market Value": "46,736.55"
+      "Ticker": "EOG",
+      "Identifier": "2318024",
+      "Weight": "3.21%",
+      "Market Value": "46,736.55",
+      "Shares Held": "333.00",
+      "Asset Category": "Equity",
+      "Price": "140.35"
     },
     {
-      "Ticker": "KMI",
       "Name": "KINDER MORGAN INC",
-      "Weight (%)": "2.50",
-      "Price": "30.75",
-      "Shares": "1,184.00",
-      "Market Value": "36,408.00"
+      "Ticker": "KMI",
+      "Identifier": "B3NQ4P8",
+      "Weight": "2.50%",
+      "Market Value": "36,408.00",
+      "Shares Held": "1,184.00",
+      "Asset Category": "Equity",
+      "Price": "30.75"
     },
     {
-      "Ticker": "TRGP",
       "Name": "TARGA RESOURCES CORP",
-      "Weight (%)": "2.50",
-      "Price": "277.84",
-      "Shares": "131.00",
-      "Market Value": "36,397.04"
+      "Ticker": "TRGP",
+      "Identifier": "B55PZY3",
+      "Weight": "2.50%",
+      "Market Value": "36,397.04",
+      "Shares Held": "131.00",
+      "Asset Category": "Equity",
+      "Price": "277.84"
     },
     {
-      "Ticker": "BKR",
       "Name": "BAKER HUGHES CO",
-      "Weight (%)": "2.48",
-      "Price": "57.83",
-      "Shares": "625.00",
-      "Market Value": "36,143.75"
+      "Ticker": "BKR",
+      "Identifier": "BDHLTQ5",
+      "Weight": "2.48%",
+      "Market Value": "36,143.75",
+      "Shares Held": "625.00",
+      "Asset Category": "Equity",
+      "Price": "57.83"
     },
     {
-      "Ticker": "OKE",
       "Name": "FALCON TOPCO INC",
-      "Weight (%)": "2.41",
-      "Price": "88.63000000000001",
-      "Shares": "396.00",
-      "Market Value": "35,097.48"
+      "Ticker": "OKE",
+      "Identifier": "BWJJFW8",
+      "Weight": "2.41%",
+      "Market Value": "35,097.48",
+      "Shares Held": "396.00",
+      "Asset Category": "Equity",
+      "Price": "88.63000000000001"
     },
     {
-      "Ticker": "LNG",
       "Name": "CHENIERE ENERGY INC",
-      "Weight (%)": "2.38",
-      "Price": "268.54",
-      "Shares": "129.00",
-      "Market Value": "34,641.66"
+      "Ticker": "LNG",
+      "Identifier": "2654364",
+      "Weight": "2.38%",
+      "Market Value": "34,641.66",
+      "Shares Held": "129.00",
+      "Asset Category": "Equity",
+      "Price": "268.54"
     },
     {
-      "Ticker": "DVN",
       "Name": "DEVON ENERGY CORP",
-      "Weight (%)": "2.29",
-      "Price": "47.05",
-      "Shares": "708.00",
-      "Market Value": "33,311.40"
+      "Ticker": "DVN",
+      "Identifier": "2480677",
+      "Weight": "2.29%",
+      "Market Value": "33,311.40",
+      "Shares Held": "708.00",
+      "Asset Category": "Equity",
+      "Price": "47.05"
     },
     {
-      "Ticker": "OXY",
       "Name": "OCCIDENTAL PETROLEUM CORP",
-      "Weight (%)": "1.82",
-      "Price": "56.86",
-      "Shares": "466.00",
-      "Market Value": "26,496.76"
+      "Ticker": "OXY",
+      "Identifier": "2655408",
+      "Weight": "1.82%",
+      "Market Value": "26,496.76",
+      "Shares Held": "466.00",
+      "Asset Category": "Equity",
+      "Price": "56.86"
     },
     {
-      "Ticker": "FANG",
       "Name": "DIAMONDBACK ENERGY INC",
-      "Weight (%)": "1.64",
-      "Price": "186.67",
-      "Shares": "128.00",
-      "Market Value": "23,893.76"
+      "Ticker": "FANG",
+      "Identifier": "B7Y8YR3",
+      "Weight": "1.64%",
+      "Market Value": "23,893.76",
+      "Shares Held": "128.00",
+      "Asset Category": "Equity",
+      "Price": "186.67"
     },
     {
-      "Ticker": "EQT",
       "Name": "EQT CORP",
-      "Weight (%)": "1.34",
-      "Price": "50.81",
-      "Shares": "384.00",
-      "Market Value": "19,511.04"
+      "Ticker": "EQT",
+      "Identifier": "2319414",
+      "Weight": "1.34%",
+      "Market Value": "19,511.04",
+      "Shares Held": "384.00",
+      "Asset Category": "Equity",
+      "Price": "50.81"
     },
     {
-      "Ticker": "FTI",
       "Name": "TECHNIPFMC PLC",
-      "Weight (%)": "1.22",
-      "Price": "70.99",
-      "Shares": "249.00",
-      "Market Value": "17,676.51"
+      "Ticker": "FTI",
+      "Identifier": "BDSFG98",
+      "Weight": "1.22%",
+      "Market Value": "17,676.51",
+      "Shares Held": "249.00",
+      "Asset Category": "Equity",
+      "Price": "70.99"
     },
     {
-      "Ticker": "HAL",
       "Name": "HALLIBURTON CO",
-      "Weight (%)": "1.19",
-      "Price": "32.76",
-      "Shares": "527.00",
-      "Market Value": "17,264.52"
+      "Ticker": "HAL",
+      "Identifier": "2405302",
+      "Weight": "1.19%",
+      "Market Value": "17,264.52",
+      "Shares Held": "527.00",
+      "Asset Category": "Equity",
+      "Price": "32.76"
     },
     {
-      "Ticker": "EXE",
       "Name": "EXPAND ENERGY CORP",
-      "Weight (%)": "0.90",
-      "Price": "86.84",
-      "Shares": "151.00",
-      "Market Value": "13,112.84"
+      "Ticker": "EXE",
+      "Identifier": "BMZ5LZ5",
+      "Weight": "0.90%",
+      "Market Value": "13,112.84",
+      "Shares Held": "151.00",
+      "Asset Category": "Equity",
+      "Price": "86.84"
     },
     {
-      "Ticker": "TPL",
       "Name": "TEXAS PACIFIC LAND CORP",
-      "Weight (%)": "0.87",
-      "Price": "341.07",
-      "Shares": "37.00",
-      "Market Value": "12,619.59"
+      "Ticker": "TPL",
+      "Identifier": "BM99VY2",
+      "Weight": "0.87%",
+      "Market Value": "12,619.59",
+      "Shares Held": "37.00",
+      "Asset Category": "Equity",
+      "Price": "341.07"
     }
   ]
 }

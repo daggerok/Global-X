@@ -4,669 +4,834 @@
   "pageSize": 250,
   "totalRows": 82,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "IRE AU",
       "Name": "IRESS LTD",
-      "Weight (%)": "0.12",
-      "Price": "3.715957521730267",
-      "Shares": "53,957.00",
-      "Market Value": "200,501.92"
+      "Ticker": "IRE AU",
+      "Identifier": "6297497",
+      "Weight": "0.12%",
+      "Market Value": "200,501.92",
+      "Shares Held": "53,957.00",
+      "Asset Category": "Equity",
+      "Price": "3.715957521730267"
     },
     {
-      "Ticker": "CSHR",
       "Name": "COINSHARES PLC",
-      "Weight (%)": "0.12",
-      "Price": "5.529999999999999",
-      "Shares": "35,635.00",
-      "Market Value": "197,061.55"
+      "Ticker": "CSHR",
+      "Identifier": "BS6SC52",
+      "Weight": "0.12%",
+      "Market Value": "197,061.55",
+      "Shares Held": "35,635.00",
+      "Asset Category": "Equity",
+      "Price": "5.529999999999999"
     },
     {
-      "Ticker": "PRTH",
       "Name": "PRIORITY TECHNOLOGY HOLDINGS",
-      "Weight (%)": "0.11",
-      "Price": "7.779999999999999",
-      "Shares": "23,536.00",
-      "Market Value": "183,110.08"
+      "Ticker": "PRTH",
+      "Identifier": "BZ9NRB4",
+      "Weight": "0.11%",
+      "Market Value": "183,110.08",
+      "Shares Held": "23,536.00",
+      "Asset Category": "Equity",
+      "Price": "7.779999999999999"
     },
     {
-      "Ticker": "7722 TT",
       "Name": "LINE PAY TAIWAN LTD",
-      "Weight (%)": "0.10",
-      "Price": "8.168522962962962",
-      "Shares": "20,250.00",
-      "Market Value": "165,412.59"
+      "Ticker": "7722 TT",
+      "Identifier": "BQXRSH2",
+      "Weight": "0.10%",
+      "Market Value": "165,412.59",
+      "Shares Held": "20,250.00",
+      "Asset Category": "Equity",
+      "Price": "8.168522962962962"
     },
     {
-      "Ticker": "HYQ GR",
       "Name": "HYPOPORT SE",
-      "Weight (%)": "0.10",
-      "Price": "83.23072149344097",
-      "Shares": "1,982.00",
-      "Market Value": "164,963.29"
+      "Ticker": "HYQ GR",
+      "Identifier": "B28XLF6",
+      "Weight": "0.10%",
+      "Market Value": "164,963.29",
+      "Shares Held": "1,982.00",
+      "Asset Category": "Equity",
+      "Price": "83.23072149344097"
     },
     {
-      "Ticker": "9959 HK",
       "Name": "LINKLOGIS INC-CLASS B",
-      "Weight (%)": "0.10",
-      "Price": "0.2893950202877167",
-      "Shares": "542,200.00",
-      "Market Value": "156,909.98"
+      "Ticker": "9959 HK",
+      "Identifier": "BKSCMF6",
+      "Weight": "0.10%",
+      "Market Value": "156,909.98",
+      "Shares Held": "542,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.2893950202877167"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.07",
-      "Price": "1.0",
-      "Shares": "120,481.90",
-      "Market Value": "120,481.90"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.07%",
+      "Market Value": "120,481.90",
+      "Shares Held": "120,481.90",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "060250 KS",
       "Name": "NHN KCP CORP",
-      "Weight (%)": "0.07",
-      "Price": "9.770093828010673",
-      "Shares": "11,617.00",
-      "Market Value": "113,499.18"
+      "Ticker": "060250 KS",
+      "Identifier": "6434562",
+      "Weight": "0.07%",
+      "Market Value": "113,499.18",
+      "Shares Held": "11,617.00",
+      "Asset Category": "Equity",
+      "Price": "9.770093828010673"
     },
     {
-      "Ticker": "CD",
       "Name": "CHAINCE DIGITAL HOLDINGS INC",
-      "Weight (%)": "0.07",
-      "Price": "5.33",
-      "Shares": "20,087.00",
-      "Market Value": "107,063.71"
+      "Ticker": "CD",
+      "Identifier": "BQMRYT7",
+      "Weight": "0.07%",
+      "Market Value": "107,063.71",
+      "Shares Held": "20,087.00",
+      "Asset Category": "Equity",
+      "Price": "5.33"
     },
     {
-      "Ticker": "PSFE",
       "Name": "PAYSAFE LTD",
-      "Weight (%)": "0.07",
-      "Price": "6.430000000000001",
-      "Shares": "16,549.00",
-      "Market Value": "106,410.07"
+      "Ticker": "PSFE",
+      "Identifier": "BPCPXY2",
+      "Weight": "0.07%",
+      "Market Value": "106,410.07",
+      "Shares Held": "16,549.00",
+      "Asset Category": "Equity",
+      "Price": "6.430000000000001"
     },
     {
-      "Ticker": "TREE",
       "Name": "LENDINGTREE INC",
-      "Weight (%)": "0.06",
-      "Price": "24.62",
-      "Shares": "3,930.00",
-      "Market Value": "96,756.60"
+      "Ticker": "TREE",
+      "Identifier": "BV8TD84",
+      "Weight": "0.06%",
+      "Market Value": "96,756.60",
+      "Shares Held": "3,930.00",
+      "Asset Category": "Equity",
+      "Price": "24.62"
     },
     {
-      "Ticker": "RPAY",
       "Name": "REPAY HOLDINGS CORP",
-      "Weight (%)": "0.06",
-      "Price": "3.79",
-      "Shares": "23,496.00",
-      "Market Value": "89,049.84"
+      "Ticker": "RPAY",
+      "Identifier": "BK5TLP3",
+      "Weight": "0.06%",
+      "Market Value": "89,049.84",
+      "Shares Held": "23,496.00",
+      "Asset Category": "Equity",
+      "Price": "3.79"
     },
     {
-      "Ticker": "BLND",
       "Name": "BLEND LABS INC-A",
-      "Weight (%)": "0.05",
-      "Price": "1.11",
-      "Shares": "73,627.00",
-      "Market Value": "81,725.97"
+      "Ticker": "BLND",
+      "Identifier": "BP8K987",
+      "Weight": "0.05%",
+      "Market Value": "81,725.97",
+      "Shares Held": "73,627.00",
+      "Asset Category": "Equity",
+      "Price": "1.11"
     },
     {
-      "Ticker": "BKKT",
       "Name": "BAKKT INC",
-      "Weight (%)": "0.05",
-      "Price": "8.5",
-      "Shares": "8,801.00",
-      "Market Value": "74,808.50"
+      "Ticker": "BKKT",
+      "Identifier": "BMDLW29",
+      "Weight": "0.05%",
+      "Market Value": "74,808.50",
+      "Shares Held": "8,801.00",
+      "Asset Category": "Equity",
+      "Price": "8.5"
     },
     {
-      "Ticker": "6763 TT",
       "Name": "GREEN WORLD FIN TECH SERVICE",
-      "Weight (%)": "0.04",
-      "Price": "1.300680260707635",
-      "Shares": "53,700.00",
-      "Market Value": "69,846.53"
+      "Ticker": "6763 TT",
+      "Identifier": "BK7KCS4",
+      "Weight": "0.04%",
+      "Market Value": "69,846.53",
+      "Shares Held": "53,700.00",
+      "Asset Category": "Equity",
+      "Price": "1.300680260707635"
     },
     {
-      "Ticker": "GEMI",
       "Name": "GEMINI SPACE STATION INC-A",
-      "Weight (%)": "0.04",
-      "Price": "5.540000000000001",
-      "Shares": "12,249.00",
-      "Market Value": "67,859.46"
+      "Ticker": "GEMI",
+      "Identifier": "BT6CC06",
+      "Weight": "0.04%",
+      "Market Value": "67,859.46",
+      "Shares Held": "12,249.00",
+      "Asset Category": "Equity",
+      "Price": "5.540000000000001"
     },
     {
-      "Ticker": "9923 HK",
       "Name": "YEAHKA LTD",
-      "Weight (%)": "0.04",
-      "Price": "0.4901867370007535",
-      "Shares": "132,700.00",
-      "Market Value": "65,047.78"
+      "Ticker": "9923 HK",
+      "Identifier": "BL58D39",
+      "Weight": "0.04%",
+      "Market Value": "65,047.78",
+      "Shares Held": "132,700.00",
+      "Asset Category": "Equity",
+      "Price": "0.4901867370007535"
     },
     {
-      "Ticker": "2598 HK",
       "Name": "LIANLIAN DIGITECH CO LTD-H",
-      "Weight (%)": "0.03",
-      "Price": "0.4105074380165289",
-      "Shares": "133,100.00",
-      "Market Value": "54,638.54"
+      "Ticker": "2598 HK",
+      "Identifier": "BQB5TJ7",
+      "Weight": "0.03%",
+      "Market Value": "54,638.54",
+      "Shares Held": "133,100.00",
+      "Asset Category": "Equity",
+      "Price": "0.4105074380165289"
     },
     {
-      "Ticker": "ABTC",
       "Name": "AMERICAN BITCOIN CORP-A",
-      "Weight (%)": "0.02",
-      "Price": "9.1",
-      "Shares": "3,744.00",
-      "Market Value": "34,070.40"
+      "Ticker": "ABTC",
+      "Identifier": "BTCL713",
+      "Weight": "0.02%",
+      "Market Value": "34,070.40",
+      "Shares Held": "3,744.00",
+      "Asset Category": "Equity",
+      "Price": "9.1"
     },
     {
-      "Ticker": "EXOD",
       "Name": "EXODUS MOVEMENT INC - A",
-      "Weight (%)": "0.01",
-      "Price": "7.92",
-      "Shares": "3,027.00",
-      "Market Value": "23,973.84"
+      "Ticker": "EXOD",
+      "Identifier": "BNZJKK2",
+      "Weight": "0.01%",
+      "Market Value": "23,973.84",
+      "Shares Held": "3,027.00",
+      "Asset Category": "Equity",
+      "Price": "7.92"
     },
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.01",
-      "Price": "1.0",
-      "Shares": "12,543.75",
-      "Market Value": "12,543.75"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.01%",
+      "Market Value": "12,543.75",
+      "Shares Held": "12,543.75",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "BRITISH STERLING POUND",
-      "Weight (%)": "0.00",
-      "Price": "1.333333333333333",
-      "Shares": "0.06",
-      "Market Value": "0.08"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.08",
+      "Shares Held": "0.06",
+      "Asset Category": "Equity",
+      "Price": "1.333333333333333"
     },
     {
-      "Ticker": "HOOD",
       "Name": "ROBINHOOD MARKETS INC - A",
-      "Weight (%)": "8.71",
-      "Price": "119.4",
-      "Shares": "117,896.00",
-      "Market Value": "14,076,782.40"
+      "Ticker": "HOOD",
+      "Identifier": "BP0TQN6",
+      "Weight": "8.71%",
+      "Market Value": "14,076,782.40",
+      "Shares Held": "117,896.00",
+      "Asset Category": "Equity",
+      "Price": "119.4"
     },
     {
-      "Ticker": "PYPL",
       "Name": "PAYPAL HOLDINGS INC",
-      "Weight (%)": "6.78",
-      "Price": "55.04",
-      "Shares": "199,029.00",
-      "Market Value": "10,954,556.16"
+      "Ticker": "PYPL",
+      "Identifier": "BYW36M8",
+      "Weight": "6.78%",
+      "Market Value": "10,954,556.16",
+      "Shares Held": "199,029.00",
+      "Asset Category": "Equity",
+      "Price": "55.04"
     },
     {
-      "Ticker": "XYZ",
       "Name": "BLOCK INC",
-      "Weight (%)": "6.66",
-      "Price": "76.42",
-      "Shares": "140,697.00",
-      "Market Value": "10,752,064.74"
+      "Ticker": "XYZ",
+      "Identifier": "BYNZGK1",
+      "Weight": "6.66%",
+      "Market Value": "10,752,064.74",
+      "Shares Held": "140,697.00",
+      "Asset Category": "Equity",
+      "Price": "76.42"
     },
     {
-      "Ticker": "COIN",
       "Name": "COINBASE GLOBAL INC -CLASS A",
-      "Weight (%)": "5.58",
-      "Price": "195.11",
-      "Shares": "46,172.00",
-      "Market Value": "9,008,618.92"
+      "Ticker": "COIN",
+      "Identifier": "BMC9P69",
+      "Weight": "5.58%",
+      "Market Value": "9,008,618.92",
+      "Shares Held": "46,172.00",
+      "Asset Category": "Equity",
+      "Price": "195.11"
     },
     {
-      "Ticker": "GPN",
       "Name": "GLOBAL PAYMENTS INC",
-      "Weight (%)": "4.32",
-      "Price": "86.49000000000001",
-      "Shares": "80,610.00",
-      "Market Value": "6,971,958.90"
+      "Ticker": "GPN",
+      "Identifier": "2712013",
+      "Weight": "4.32%",
+      "Market Value": "6,971,958.90",
+      "Shares Held": "80,610.00",
+      "Asset Category": "Equity",
+      "Price": "86.49000000000001"
     },
     {
-      "Ticker": "FISV",
       "Name": "FISERV INC",
-      "Weight (%)": "4.27",
-      "Price": "46.48",
-      "Shares": "148,452.00",
-      "Market Value": "6,900,048.96"
+      "Ticker": "FISV",
+      "Identifier": "2342034",
+      "Weight": "4.27%",
+      "Market Value": "6,900,048.96",
+      "Shares Held": "148,452.00",
+      "Asset Category": "Equity",
+      "Price": "46.48"
     },
     {
-      "Ticker": "ADYEN NA",
       "Name": "ADYEN NV",
-      "Weight (%)": "4.08",
-      "Price": "998.1985675348274",
-      "Shares": "6,604.00",
-      "Market Value": "6,592,103.34"
+      "Ticker": "ADYEN NA",
+      "Identifier": "BZ1HM42",
+      "Weight": "4.08%",
+      "Market Value": "6,592,103.34",
+      "Shares Held": "6,604.00",
+      "Asset Category": "Equity",
+      "Price": "998.1985675348274"
     },
     {
-      "Ticker": "SOFI",
       "Name": "SOFI TECHNOLOGIES INC",
-      "Weight (%)": "3.77",
-      "Price": "16.58",
-      "Shares": "367,276.00",
-      "Market Value": "6,089,436.08"
+      "Ticker": "SOFI",
+      "Identifier": "BM8J4C2",
+      "Weight": "3.77%",
+      "Market Value": "6,089,436.08",
+      "Shares Held": "367,276.00",
+      "Asset Category": "Equity",
+      "Price": "16.58"
     },
     {
-      "Ticker": "AFRM",
       "Name": "AFFIRM HOLDINGS INC",
-      "Weight (%)": "3.73",
-      "Price": "71.52",
-      "Shares": "84,215.00",
-      "Market Value": "6,023,056.80"
+      "Ticker": "AFRM",
+      "Identifier": "BMF9NM8",
+      "Weight": "3.73%",
+      "Market Value": "6,023,056.80",
+      "Shares Held": "84,215.00",
+      "Asset Category": "Equity",
+      "Price": "71.52"
     },
     {
-      "Ticker": "INTU",
       "Name": "INTUIT INC",
-      "Weight (%)": "3.47",
-      "Price": "275.79",
-      "Shares": "20,309.00",
-      "Market Value": "5,601,019.11"
+      "Ticker": "INTU",
+      "Identifier": "2459020",
+      "Weight": "3.47%",
+      "Market Value": "5,601,019.11",
+      "Shares Held": "20,309.00",
+      "Asset Category": "Equity",
+      "Price": "275.79"
     },
     {
-      "Ticker": "CRCL",
       "Name": "CIRCLE INTERNET GROUP INC",
-      "Weight (%)": "3.44",
-      "Price": "89.0",
-      "Shares": "62,348.00",
-      "Market Value": "5,548,972.00"
+      "Ticker": "CRCL",
+      "Identifier": "BL6K237",
+      "Weight": "3.44%",
+      "Market Value": "5,548,972.00",
+      "Shares Held": "62,348.00",
+      "Asset Category": "Equity",
+      "Price": "89.0"
     },
     {
-      "Ticker": "SSNC",
       "Name": "SS&C TECHNOLOGIES HOLDINGS",
-      "Weight (%)": "3.38",
-      "Price": "78.61",
-      "Shares": "69,425.00",
-      "Market Value": "5,457,499.25"
+      "Ticker": "SSNC",
+      "Identifier": "B58YSC6",
+      "Weight": "3.38%",
+      "Market Value": "5,457,499.25",
+      "Shares Held": "69,425.00",
+      "Asset Category": "Equity",
+      "Price": "78.61"
     },
     {
-      "Ticker": "FIS",
       "Name": "FIDELITY NATIONAL INFO SERVICES",
-      "Weight (%)": "3.08",
-      "Price": "35.41",
-      "Shares": "140,572.00",
-      "Market Value": "4,977,654.52"
+      "Ticker": "FIS",
+      "Identifier": "2769796",
+      "Weight": "3.08%",
+      "Market Value": "4,977,654.52",
+      "Shares Held": "140,572.00",
+      "Asset Category": "Equity",
+      "Price": "35.41"
     },
     {
-      "Ticker": "TOST",
       "Name": "TOAST INC-CLASS A",
-      "Weight (%)": "2.85",
-      "Price": "30.6",
-      "Shares": "150,634.00",
-      "Market Value": "4,609,400.40"
+      "Ticker": "TOST",
+      "Identifier": "BP6D7B7",
+      "Weight": "2.85%",
+      "Market Value": "4,609,400.40",
+      "Shares Held": "150,634.00",
+      "Asset Category": "Equity",
+      "Price": "30.6"
     },
     {
-      "Ticker": "GWRE",
       "Name": "GUIDEWIRE SOFTWARE INC",
-      "Weight (%)": "2.21",
-      "Price": "145.56",
-      "Shares": "24,487.00",
-      "Market Value": "3,564,327.72"
+      "Ticker": "GWRE",
+      "Identifier": "B7JYSG3",
+      "Weight": "2.21%",
+      "Market Value": "3,564,327.72",
+      "Shares Held": "24,487.00",
+      "Asset Category": "Equity",
+      "Price": "145.56"
     },
     {
-      "Ticker": "WISE LN",
       "Name": "WISE GROUP PLC-CL A",
-      "Weight (%)": "2.10",
-      "Price": "11.48874172834831",
-      "Shares": "295,739.00",
-      "Market Value": "3,397,668.99"
+      "Ticker": "WISE LN",
+      "Identifier": "BQKY081",
+      "Weight": "2.10%",
+      "Market Value": "3,397,668.99",
+      "Shares Held": "295,739.00",
+      "Asset Category": "Equity",
+      "Price": "11.48874172834831"
     },
     {
-      "Ticker": "HUT CN",
       "Name": "HUT 8 CORP",
-      "Weight (%)": "1.92",
-      "Price": "96.90882090204897",
-      "Shares": "32,016.00",
-      "Market Value": "3,102,632.81"
+      "Ticker": "HUT CN",
+      "Identifier": "BQQ8805",
+      "Weight": "1.92%",
+      "Market Value": "3,102,632.81",
+      "Shares Held": "32,016.00",
+      "Asset Category": "Equity",
+      "Price": "96.90882090204897"
     },
     {
-      "Ticker": "JKHY",
       "Name": "JACK HENRY & ASSOCIATES INC",
-      "Weight (%)": "1.90",
-      "Price": "147.79",
-      "Shares": "20,746.00",
-      "Market Value": "3,066,051.34"
+      "Ticker": "JKHY",
+      "Identifier": "2469193",
+      "Weight": "1.90%",
+      "Market Value": "3,066,051.34",
+      "Shares Held": "20,746.00",
+      "Asset Category": "Equity",
+      "Price": "147.79"
     },
     {
-      "Ticker": "PAYP",
       "Name": "PAYPAY CORP",
-      "Weight (%)": "1.85",
-      "Price": "16.51",
-      "Shares": "180,803.00",
-      "Market Value": "2,985,057.53"
+      "Ticker": "PAYP",
+      "Identifier": "BVCHTQ4",
+      "Weight": "1.85%",
+      "Market Value": "2,985,057.53",
+      "Shares Held": "180,803.00",
+      "Asset Category": "Equity",
+      "Price": "16.51"
     },
     {
-      "Ticker": "RIOT",
       "Name": "RIOT PLATFORMS INC",
-      "Weight (%)": "1.55",
-      "Price": "23.0",
-      "Shares": "108,987.00",
-      "Market Value": "2,506,701.00"
+      "Ticker": "RIOT",
+      "Identifier": "BD9F675",
+      "Weight": "1.55%",
+      "Market Value": "2,506,701.00",
+      "Shares Held": "108,987.00",
+      "Asset Category": "Equity",
+      "Price": "23.0"
     },
     {
-      "Ticker": "HQY",
       "Name": "HEALTHEQUITY INC",
-      "Weight (%)": "1.34",
-      "Price": "88.25",
-      "Shares": "24,561.00",
-      "Market Value": "2,167,508.25"
+      "Ticker": "HQY",
+      "Identifier": "BP8XZL1",
+      "Weight": "1.34%",
+      "Market Value": "2,167,508.25",
+      "Shares Held": "24,561.00",
+      "Asset Category": "Equity",
+      "Price": "88.25"
     },
     {
-      "Ticker": "CIFR",
       "Name": "CIPHER DIGITAL INC",
-      "Weight (%)": "1.28",
-      "Price": "17.73",
-      "Shares": "116,459.00",
-      "Market Value": "2,064,818.07"
+      "Ticker": "CIFR",
+      "Identifier": "BMZ8604",
+      "Weight": "1.28%",
+      "Market Value": "2,064,818.07",
+      "Shares Held": "116,459.00",
+      "Asset Category": "Equity",
+      "Price": "17.73"
     },
     {
-      "Ticker": "XRO AU",
       "Name": "XERO LTD",
-      "Weight (%)": "1.23",
-      "Price": "40.29249989819603",
-      "Shares": "49,114.00",
-      "Market Value": "1,978,925.84"
+      "Ticker": "XRO AU",
+      "Identifier": "B8P4LP4",
+      "Weight": "1.23%",
+      "Market Value": "1,978,925.84",
+      "Shares Held": "49,114.00",
+      "Asset Category": "Equity",
+      "Price": "40.29249989819603"
     },
     {
-      "Ticker": "TEMN SW",
       "Name": "TEMENOS AG - REG",
-      "Weight (%)": "1.04",
-      "Price": "81.0598744931454",
-      "Shares": "20,716.00",
-      "Market Value": "1,679,236.36"
+      "Ticker": "TEMN SW",
+      "Identifier": "7147892",
+      "Weight": "1.04%",
+      "Market Value": "1,679,236.36",
+      "Shares Held": "20,716.00",
+      "Asset Category": "Equity",
+      "Price": "81.0598744931454"
     },
     {
-      "Ticker": "BLSH",
       "Name": "BULLISH",
-      "Weight (%)": "1.01",
-      "Price": "37.58000000000001",
-      "Shares": "43,398.00",
-      "Market Value": "1,630,896.84"
+      "Ticker": "BLSH",
+      "Identifier": "BV6KVT6",
+      "Weight": "1.01%",
+      "Market Value": "1,630,896.84",
+      "Shares Held": "43,398.00",
+      "Asset Category": "Equity",
+      "Price": "37.58000000000001"
     },
     {
-      "Ticker": "NEXI IM",
       "Name": "NEXI SPA",
-      "Weight (%)": "0.99",
-      "Price": "4.750991928877111",
-      "Shares": "338,119.00",
-      "Market Value": "1,606,400.64"
+      "Ticker": "NEXI IM",
+      "Identifier": "BJ1F880",
+      "Weight": "0.99%",
+      "Market Value": "1,606,400.64",
+      "Shares Held": "338,119.00",
+      "Asset Category": "Equity",
+      "Price": "4.750991928877111"
     },
     {
-      "Ticker": "CORZ",
       "Name": "CORE SCIENTIFIC INC",
-      "Weight (%)": "0.97",
-      "Price": "17.34",
-      "Shares": "90,649.00",
-      "Market Value": "1,571,853.66"
+      "Ticker": "CORZ",
+      "Identifier": "BN70TG2",
+      "Weight": "0.97%",
+      "Market Value": "1,571,853.66",
+      "Shares Held": "90,649.00",
+      "Asset Category": "Equity",
+      "Price": "17.34"
     },
     {
-      "Ticker": "ACIW",
       "Name": "ACI WORLDWIDE INC",
-      "Weight (%)": "0.90",
-      "Price": "49.51",
-      "Shares": "29,241.00",
-      "Market Value": "1,447,721.91"
+      "Ticker": "ACIW",
+      "Identifier": "2889155",
+      "Weight": "0.90%",
+      "Market Value": "1,447,721.91",
+      "Shares Held": "29,241.00",
+      "Asset Category": "Equity",
+      "Price": "49.51"
     },
     {
-      "Ticker": "KLAR",
       "Name": "KLARNA GROUP PLC",
-      "Weight (%)": "0.86",
-      "Price": "12.8",
-      "Shares": "108,721.00",
-      "Market Value": "1,391,628.80"
+      "Ticker": "KLAR",
+      "Identifier": "BMHVL51",
+      "Weight": "0.86%",
+      "Market Value": "1,391,628.80",
+      "Shares Held": "108,721.00",
+      "Asset Category": "Equity",
+      "Price": "12.8"
     },
     {
-      "Ticker": "MARA",
       "Name": "MARA HOLDINGS INC",
-      "Weight (%)": "0.85",
-      "Price": "12.55",
-      "Shares": "109,508.00",
-      "Market Value": "1,374,325.40"
+      "Ticker": "MARA",
+      "Identifier": "BLR7B52",
+      "Weight": "0.85%",
+      "Market Value": "1,374,325.40",
+      "Shares Held": "109,508.00",
+      "Asset Category": "Equity",
+      "Price": "12.55"
     },
     {
-      "Ticker": "GLXY",
       "Name": "GALAXY DIGITAL INC-A",
-      "Weight (%)": "0.83",
-      "Price": "24.24",
-      "Shares": "55,158.00",
-      "Market Value": "1,337,029.92"
+      "Ticker": "GLXY",
+      "Identifier": "BV97X10",
+      "Weight": "0.83%",
+      "Market Value": "1,337,029.92",
+      "Shares Held": "55,158.00",
+      "Asset Category": "Equity",
+      "Price": "24.24"
     },
     {
-      "Ticker": "VIRT",
       "Name": "VIRTU FINANCIAL INC-CLASS A",
-      "Weight (%)": "0.82",
-      "Price": "53.4",
-      "Shares": "24,895.00",
-      "Market Value": "1,329,393.00"
+      "Ticker": "VIRT",
+      "Identifier": "BWTVWD4",
+      "Weight": "0.82%",
+      "Market Value": "1,329,393.00",
+      "Shares Held": "24,895.00",
+      "Asset Category": "Equity",
+      "Price": "53.4"
     },
     {
-      "Ticker": "BILL",
       "Name": "BILL HOLDINGS INC",
-      "Weight (%)": "0.78",
-      "Price": "44.25",
-      "Shares": "28,500.00",
-      "Market Value": "1,261,125.00"
+      "Ticker": "BILL",
+      "Identifier": "BKDS4H5",
+      "Weight": "0.78%",
+      "Market Value": "1,261,125.00",
+      "Shares Held": "28,500.00",
+      "Asset Category": "Equity",
+      "Price": "44.25"
     },
     {
-      "Ticker": "377300 KS",
       "Name": "KAKAOPAY CORP",
-      "Weight (%)": "0.72",
-      "Price": "29.90619820051414",
-      "Shares": "38,900.00",
-      "Market Value": "1,163,351.11"
+      "Ticker": "377300 KS",
+      "Identifier": "BP8ZCS3",
+      "Weight": "0.72%",
+      "Market Value": "1,163,351.11",
+      "Shares Held": "38,900.00",
+      "Asset Category": "Equity",
+      "Price": "29.90619820051414"
     },
     {
-      "Ticker": "SEZL",
       "Name": "SEZZLE INC",
-      "Weight (%)": "0.67",
-      "Price": "111.38",
-      "Shares": "9,736.00",
-      "Market Value": "1,084,395.68"
+      "Ticker": "SEZL",
+      "Identifier": "BQC4R22",
+      "Weight": "0.67%",
+      "Market Value": "1,084,395.68",
+      "Shares Held": "9,736.00",
+      "Asset Category": "Equity",
+      "Price": "111.38"
     },
     {
-      "Ticker": "HUB AU",
       "Name": "HUB24 LTD",
-      "Weight (%)": "0.66",
-      "Price": "45.30798907751577",
-      "Shares": "23,621.00",
-      "Market Value": "1,070,220.01"
+      "Ticker": "HUB AU",
+      "Identifier": "BD4T5X1",
+      "Weight": "0.66%",
+      "Market Value": "1,070,220.01",
+      "Shares Held": "23,621.00",
+      "Asset Category": "Equity",
+      "Price": "45.30798907751577"
     },
     {
-      "Ticker": "LMND",
       "Name": "LEMONADE INC",
-      "Weight (%)": "0.61",
-      "Price": "44.93",
-      "Shares": "21,997.00",
-      "Market Value": "988,325.21"
+      "Ticker": "LMND",
+      "Identifier": "BMGNTQ5",
+      "Weight": "0.61%",
+      "Market Value": "988,325.21",
+      "Shares Held": "21,997.00",
+      "Asset Category": "Equity",
+      "Price": "44.93"
     },
     {
-      "Ticker": "FOUR",
       "Name": "SHIFT4 PAYMENTS INC-CLASS A",
-      "Weight (%)": "0.56",
-      "Price": "38.45",
-      "Shares": "23,396.00",
-      "Market Value": "899,576.20"
+      "Ticker": "FOUR",
+      "Identifier": "BLF0L75",
+      "Weight": "0.56%",
+      "Market Value": "899,576.20",
+      "Shares Held": "23,396.00",
+      "Asset Category": "Equity",
+      "Price": "38.45"
     },
     {
-      "Ticker": "BULL",
       "Name": "WEBULL CORP",
-      "Weight (%)": "0.54",
-      "Price": "7.19",
-      "Shares": "120,372.00",
-      "Market Value": "865,474.68"
+      "Ticker": "BULL",
+      "Identifier": "BQH7NB7",
+      "Weight": "0.54%",
+      "Market Value": "865,474.68",
+      "Shares Held": "120,372.00",
+      "Asset Category": "Equity",
+      "Price": "7.19"
     },
     {
-      "Ticker": "PAYO",
       "Name": "PAYONEER GLOBAL INC",
-      "Weight (%)": "0.44",
-      "Price": "7.170000000000001",
-      "Shares": "99,112.00",
-      "Market Value": "710,633.04"
+      "Ticker": "PAYO",
+      "Identifier": "BLSPX60",
+      "Weight": "0.44%",
+      "Market Value": "710,633.04",
+      "Shares Held": "99,112.00",
+      "Asset Category": "Equity",
+      "Price": "7.170000000000001"
     },
     {
-      "Ticker": "PURR",
       "Name": "HYPERLIQUID STRATEGIES",
-      "Weight (%)": "0.43",
-      "Price": "12.85",
-      "Shares": "53,597.00",
-      "Market Value": "688,721.45"
+      "Ticker": "PURR",
+      "Identifier": "BVLJ392",
+      "Weight": "0.43%",
+      "Market Value": "688,721.45",
+      "Shares Held": "53,597.00",
+      "Asset Category": "Equity",
+      "Price": "12.85"
     },
     {
-      "Ticker": "STNE",
       "Name": "STONECO LTD-A",
-      "Weight (%)": "0.42",
-      "Price": "9.299999999999999",
-      "Shares": "73,194.00",
-      "Market Value": "680,704.20"
+      "Ticker": "STNE",
+      "Identifier": "BGKG6M3",
+      "Weight": "0.42%",
+      "Market Value": "680,704.20",
+      "Shares Held": "73,194.00",
+      "Asset Category": "Equity",
+      "Price": "9.299999999999999"
     },
     {
-      "Ticker": "UPST",
       "Name": "UPSTART HOLDINGS INC",
-      "Weight (%)": "0.42",
-      "Price": "23.81",
-      "Shares": "28,243.00",
-      "Market Value": "672,465.83"
+      "Ticker": "UPST",
+      "Identifier": "BL53QN5",
+      "Weight": "0.42%",
+      "Market Value": "672,465.83",
+      "Shares Held": "28,243.00",
+      "Asset Category": "Equity",
+      "Price": "23.81"
     },
     {
-      "Ticker": "DLO",
       "Name": "DLOCAL LTD",
-      "Weight (%)": "0.42",
-      "Price": "14.08",
-      "Shares": "47,714.00",
-      "Market Value": "671,813.12"
+      "Ticker": "DLO",
+      "Identifier": "BKVF490",
+      "Weight": "0.42%",
+      "Market Value": "671,813.12",
+      "Shares Held": "47,714.00",
+      "Asset Category": "Equity",
+      "Price": "14.08"
     },
     {
-      "Ticker": "NCNO",
       "Name": "NCINO INC",
-      "Weight (%)": "0.40",
-      "Price": "19.41",
-      "Shares": "33,029.00",
-      "Market Value": "641,092.89"
+      "Ticker": "NCNO",
+      "Identifier": "BMC8TD1",
+      "Weight": "0.40%",
+      "Market Value": "641,092.89",
+      "Shares Held": "33,029.00",
+      "Asset Category": "Equity",
+      "Price": "19.41"
     },
     {
-      "Ticker": "KEEL",
       "Name": "KEEL INFRASTRUCTURE CORP",
-      "Weight (%)": "0.38",
-      "Price": "3.8",
-      "Shares": "162,600.00",
-      "Market Value": "617,880.00"
+      "Ticker": "KEEL",
+      "Identifier": "BWFJDH3",
+      "Weight": "0.38%",
+      "Market Value": "617,880.00",
+      "Shares Held": "162,600.00",
+      "Asset Category": "Equity",
+      "Price": "3.8"
     },
     {
-      "Ticker": "FLYW",
       "Name": "FLYWIRE CORP-VOTING",
-      "Weight (%)": "0.37",
-      "Price": "17.4",
-      "Shares": "34,304.00",
-      "Market Value": "596,889.60"
+      "Ticker": "FLYW",
+      "Identifier": "BMBP1Q0",
+      "Weight": "0.37%",
+      "Market Value": "596,889.60",
+      "Shares Held": "34,304.00",
+      "Asset Category": "Equity",
+      "Price": "17.4"
     },
     {
-      "Ticker": "PAY",
       "Name": "PAYMENTUS HOLDINGS INC-A",
-      "Weight (%)": "0.34",
-      "Price": "30.17",
-      "Shares": "18,106.00",
-      "Market Value": "546,258.02"
+      "Ticker": "PAY",
+      "Identifier": "BMBP1P9",
+      "Weight": "0.34%",
+      "Market Value": "546,258.02",
+      "Shares Held": "18,106.00",
+      "Asset Category": "Equity",
+      "Price": "30.17"
     },
     {
-      "Ticker": "ZIP AU",
       "Name": "ZIP CO LTD",
-      "Weight (%)": "0.32",
-      "Price": "1.394362149335382",
-      "Shares": "367,053.00",
-      "Market Value": "511,804.81"
+      "Ticker": "ZIP AU",
+      "Identifier": "BPP1Y77",
+      "Weight": "0.32%",
+      "Market Value": "511,804.81",
+      "Shares Held": "367,053.00",
+      "Asset Category": "Equity",
+      "Price": "1.394362149335382"
     },
     {
-      "Ticker": "HAPN",
       "Name": "HAPPEN INC",
-      "Weight (%)": "0.31",
-      "Price": "15.03",
-      "Shares": "33,111.00",
-      "Market Value": "497,658.33"
+      "Ticker": "HAPN",
+      "Identifier": "BK95GR4",
+      "Weight": "0.31%",
+      "Market Value": "497,658.33",
+      "Shares Held": "33,111.00",
+      "Asset Category": "Equity",
+      "Price": "15.03"
     },
     {
-      "Ticker": "NYAX IT",
       "Name": "NAYAX LTD",
-      "Weight (%)": "0.29",
-      "Price": "44.61137238176477",
-      "Shares": "10,551.00",
-      "Market Value": "470,694.59"
+      "Ticker": "NYAX IT",
+      "Identifier": "BMXT7N9",
+      "Weight": "0.29%",
+      "Market Value": "470,694.59",
+      "Shares Held": "10,551.00",
+      "Asset Category": "Equity",
+      "Price": "44.61137238176477"
     },
     {
-      "Ticker": "PAGS",
       "Name": "PAGSEGURO DIGITAL LTD-CL A",
-      "Weight (%)": "0.28",
-      "Price": "9.05",
-      "Shares": "49,020.00",
-      "Market Value": "443,631.00"
+      "Ticker": "PAGS",
+      "Identifier": "BFWK4R7",
+      "Weight": "0.28%",
+      "Market Value": "443,631.00",
+      "Shares Held": "49,020.00",
+      "Asset Category": "Equity",
+      "Price": "9.05"
     },
     {
-      "Ticker": "279570 KS",
       "Name": "K BANK CO LTD",
-      "Weight (%)": "0.27",
-      "Price": "3.935994094042411",
-      "Shares": "110,397.00",
-      "Market Value": "434,521.94"
+      "Ticker": "279570 KS",
+      "Identifier": "BS2C731",
+      "Weight": "0.27%",
+      "Market Value": "434,521.94",
+      "Shares Held": "110,397.00",
+      "Asset Category": "Equity",
+      "Price": "3.935994094042411"
     },
     {
-      "Ticker": "PGY",
       "Name": "PAGAYA TECHNOLOGIES LTD -A",
-      "Weight (%)": "0.22",
-      "Price": "17.62",
-      "Shares": "20,517.00",
-      "Market Value": "361,509.54"
+      "Ticker": "PGY",
+      "Identifier": "BQ5J6B6",
+      "Weight": "0.22%",
+      "Market Value": "361,509.54",
+      "Shares Held": "20,517.00",
+      "Asset Category": "Equity",
+      "Price": "17.62"
     },
     {
-      "Ticker": "ETOR",
       "Name": "ETORO GROUP LTD-A",
-      "Weight (%)": "0.22",
-      "Price": "26.39",
-      "Shares": "13,574.00",
-      "Market Value": "358,217.86"
+      "Ticker": "ETOR",
+      "Identifier": "BS491D8",
+      "Weight": "0.22%",
+      "Market Value": "358,217.86",
+      "Shares Held": "13,574.00",
+      "Asset Category": "Equity",
+      "Price": "26.39"
     },
     {
-      "Ticker": "863 HK",
       "Name": "OSL GROUP LTD",
-      "Weight (%)": "0.20",
-      "Price": "1.255744856921887",
-      "Shares": "258,600.00",
-      "Market Value": "324,735.62"
+      "Ticker": "863 HK",
+      "Identifier": "BKPSJS9",
+      "Weight": "0.20%",
+      "Market Value": "324,735.62",
+      "Shares Held": "258,600.00",
+      "Asset Category": "Equity",
+      "Price": "1.255744856921887"
     },
     {
-      "Ticker": "LU",
       "Name": "LUFAX HOLDING LTD-ADR",
-      "Weight (%)": "0.18",
-      "Price": "1.23",
-      "Shares": "240,927.00",
-      "Market Value": "296,340.21"
+      "Ticker": "LU",
+      "Identifier": "BR0V7R7",
+      "Weight": "0.18%",
+      "Market Value": "296,340.21",
+      "Shares Held": "240,927.00",
+      "Asset Category": "Equity",
+      "Price": "1.23"
     },
     {
-      "Ticker": "VERX",
       "Name": "VERTEX INC - CLASS A",
-      "Weight (%)": "0.16",
-      "Price": "11.37",
-      "Shares": "22,408.00",
-      "Market Value": "254,778.96"
+      "Ticker": "VERX",
+      "Identifier": "BMX6DM1",
+      "Weight": "0.16%",
+      "Market Value": "254,778.96",
+      "Shares Held": "22,408.00",
+      "Asset Category": "Equity",
+      "Price": "11.37"
     },
     {
-      "Ticker": "MITK",
       "Name": "MITEK SYSTEMS INC",
-      "Weight (%)": "0.14",
-      "Price": "17.66",
-      "Shares": "13,053.00",
-      "Market Value": "230,515.98"
+      "Ticker": "MITK",
+      "Identifier": "2597072",
+      "Weight": "0.14%",
+      "Market Value": "230,515.98",
+      "Shares Held": "13,053.00",
+      "Asset Category": "Equity",
+      "Price": "17.66"
     },
     {
-      "Ticker": "BTGO",
       "Name": "BITGO HOLDINGS INC-CL A",
-      "Weight (%)": "0.14",
-      "Price": "7.48",
-      "Shares": "29,446.00",
-      "Market Value": "220,256.08"
+      "Ticker": "BTGO",
+      "Identifier": "BTY39L1",
+      "Weight": "0.14%",
+      "Market Value": "220,256.08",
+      "Shares Held": "29,446.00",
+      "Asset Category": "Equity",
+      "Price": "7.48"
     }
   ]
 }

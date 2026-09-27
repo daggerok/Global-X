@@ -4,237 +4,294 @@
   "pageSize": 250,
   "totalRows": 28,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.09",
-      "Price": "1.0",
-      "Shares": "1,939,943.68",
-      "Market Value": "1,939,943.68"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.09%",
+      "Market Value": "1,939,943.68",
+      "Shares Held": "1,939,943.68",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "TAIWAN DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.03703703703703703",
-      "Shares": "-0.81",
-      "Market Value": "-0.03"
-    },
-    {
-      "Ticker": "DLR",
-      "Name": "DIGITAL REALTY TRUST INC",
-      "Weight (%)": "12.31",
-      "Price": "178.61",
-      "Shares": "1,430,054.00",
-      "Market Value": "255,421,944.94"
-    },
-    {
-      "Ticker": "AMT",
-      "Name": "AMERICAN TOWER CORP",
-      "Weight (%)": "12.16",
-      "Price": "169.03",
-      "Shares": "1,493,210.00",
-      "Market Value": "252,397,286.30"
-    },
-    {
-      "Ticker": "EQIX",
-      "Name": "EQUINIX INC",
-      "Weight (%)": "11.96",
-      "Price": "1008.08",
-      "Shares": "246,232.00",
-      "Market Value": "248,221,554.56"
-    },
-    {
-      "Ticker": "CCI",
-      "Name": "CROWN CASTLE INC",
-      "Weight (%)": "7.77",
-      "Price": "67.84",
-      "Shares": "2,376,404.00",
-      "Market Value": "161,215,247.36"
-    },
-    {
-      "Ticker": "GDS",
-      "Name": "GDS HOLDINGS LTD - ADR",
-      "Weight (%)": "4.48",
-      "Price": "32.77",
-      "Shares": "2,835,813.00",
-      "Market Value": "92,929,592.01"
-    },
-    {
-      "Ticker": "KDCREIT SP",
-      "Name": "KEPPEL DC REIT",
-      "Weight (%)": "4.22",
-      "Price": "1.65949119377711",
-      "Shares": "52,728,168.00",
-      "Market Value": "87,501,930.46"
-    },
-    {
-      "Ticker": "APLD",
-      "Name": "APPLIED DIGITAL CORP",
-      "Weight (%)": "4.13",
-      "Price": "26.25",
-      "Shares": "3,269,218.00",
-      "Market Value": "85,816,972.50"
-    },
-    {
-      "Ticker": "SBAC",
-      "Name": "SBA COMMUNICATIONS CORP",
-      "Weight (%)": "4.04",
-      "Price": "166.15",
-      "Shares": "504,652.00",
-      "Market Value": "83,847,929.80"
-    },
-    {
-      "Ticker": "NXT AU",
-      "Name": "NEXTDC LTD",
-      "Weight (%)": "3.71",
-      "Price": "7.87445823622154",
-      "Shares": "9,768,381.00",
-      "Market Value": "76,920,708.22"
-    },
-    {
-      "Ticker": "SMCI",
-      "Name": "SUPER MICRO COMPUTER INC",
-      "Weight (%)": "3.27",
-      "Price": "43.26",
-      "Shares": "1,568,577.00",
-      "Market Value": "67,856,641.02"
-    },
-    {
-      "Ticker": "UNIT",
-      "Name": "UNITI GROUP INC",
-      "Weight (%)": "3.18",
-      "Price": "8.91",
-      "Shares": "7,411,422.00",
-      "Market Value": "66,035,770.02"
-    },
-    {
-      "Ticker": "VNET",
-      "Name": "VNET GROUP INCORPORATION",
-      "Weight (%)": "2.82",
-      "Price": "6.640000000000001",
-      "Shares": "8,805,142.00",
-      "Market Value": "58,466,142.88"
-    },
-    {
-      "Ticker": "HPE",
-      "Name": "HEWLETT PACKARD ENTERPRISE",
-      "Weight (%)": "2.70",
-      "Price": "62.94",
-      "Shares": "890,129.00",
-      "Market Value": "56,024,719.26"
-    },
-    {
-      "Ticker": "MRVL",
-      "Name": "MARVELL TECHNOLOGY INC",
-      "Weight (%)": "2.58",
-      "Price": "261.9350000244569",
-      "Shares": "204,441.00",
-      "Market Value": "53,550,253.34"
-    },
-    {
-      "Ticker": "MU",
-      "Name": "MICRON TECHNOLOGY INC",
-      "Weight (%)": "2.43",
-      "Price": "1082.28",
-      "Shares": "46,598.00",
-      "Market Value": "50,432,083.44"
-    },
-    {
-      "Ticker": "INTC",
-      "Name": "INTEL CORP",
-      "Weight (%)": "2.43",
-      "Price": "123.0",
-      "Shares": "409,638.00",
-      "Market Value": "50,385,474.00"
-    },
-    {
-      "Ticker": "AMD",
-      "Name": "ADVANCED MICRO DEVICES",
-      "Weight (%)": "2.42",
-      "Price": "630.63",
-      "Shares": "79,794.00",
-      "Market Value": "50,320,490.22"
-    },
-    {
-      "Ticker": "788 HK",
-      "Name": "CHINA TOWER CORP LTD-H",
-      "Weight (%)": "2.20",
-      "Price": "1.131445253925854",
-      "Shares": "40,300,150.00",
-      "Market Value": "45,597,413.45"
-    },
-    {
-      "Ticker": "NVDA",
-      "Name": "NVIDIA CORP",
-      "Weight (%)": "2.14",
-      "Price": "225.07",
-      "Shares": "197,548.00",
-      "Market Value": "44,462,128.36"
-    },
-    {
-      "Ticker": "2330 TT",
-      "Name": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "Weight (%)": "2.06",
-      "Price": "77.75805462811421",
-      "Shares": "549,900.00",
-      "Market Value": "42,759,154.24"
-    },
-    {
-      "Ticker": "000660 KS",
-      "Name": "SK HYNIX INC",
-      "Weight (%)": "1.99",
-      "Price": "1369.873091923856",
-      "Shares": "30,101.00",
-      "Market Value": "41,234,549.94"
-    },
-    {
-      "Ticker": "MCHP",
-      "Name": "MICROCHIP TECHNOLOGY INC",
-      "Weight (%)": "1.84",
-      "Price": "78.69",
-      "Shares": "486,535.00",
-      "Market Value": "38,285,439.15"
-    },
-    {
-      "Ticker": "AVGO",
-      "Name": "BROADCOM INC",
-      "Weight (%)": "1.81",
-      "Price": "352.81",
-      "Shares": "106,472.00",
-      "Market Value": "37,564,386.32"
-    },
-    {
-      "Ticker": "1686 HK",
-      "Name": "SUNEVISION HOLDINGS",
-      "Weight (%)": "0.67",
-      "Price": "0.719025490816316",
-      "Shares": "19,284,200.00",
-      "Market Value": "13,865,831.37"
-    },
-    {
-      "Ticker": "WYFI",
-      "Name": "WHITEFIBER INC",
-      "Weight (%)": "0.29",
-      "Price": "19.62",
-      "Shares": "312,139.00",
-      "Market Value": "6,124,167.18"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-0.03",
+      "Shares Held": "-0.81",
+      "Asset Category": "Equity",
+      "Price": "0.03703703703703703"
+    },
+    {
+      "Name": "DIGITAL REALTY TRUST INC",
+      "Ticker": "DLR",
+      "Identifier": "B03GQS4",
+      "Weight": "12.31%",
+      "Market Value": "255,421,944.94",
+      "Shares Held": "1,430,054.00",
+      "Asset Category": "Fund",
+      "Price": "178.61"
+    },
+    {
+      "Name": "AMERICAN TOWER CORP",
+      "Ticker": "AMT",
+      "Identifier": "B7FBFL2",
+      "Weight": "12.16%",
+      "Market Value": "252,397,286.30",
+      "Shares Held": "1,493,210.00",
+      "Asset Category": "Equity",
+      "Price": "169.03"
+    },
+    {
+      "Name": "EQUINIX INC",
+      "Ticker": "EQIX",
+      "Identifier": "BVLZX12",
+      "Weight": "11.96%",
+      "Market Value": "248,221,554.56",
+      "Shares Held": "246,232.00",
+      "Asset Category": "Equity",
+      "Price": "1008.08"
+    },
+    {
+      "Name": "CROWN CASTLE INC",
+      "Ticker": "CCI",
+      "Identifier": "BTGQCX1",
+      "Weight": "7.77%",
+      "Market Value": "161,215,247.36",
+      "Shares Held": "2,376,404.00",
+      "Asset Category": "Equity",
+      "Price": "67.84"
+    },
+    {
+      "Name": "GDS HOLDINGS LTD - ADR",
+      "Ticker": "GDS",
+      "Identifier": "BD6FLL7",
+      "Weight": "4.48%",
+      "Market Value": "92,929,592.01",
+      "Shares Held": "2,835,813.00",
+      "Asset Category": "Equity",
+      "Price": "32.77"
+    },
+    {
+      "Name": "KEPPEL DC REIT",
+      "Ticker": "KDCREIT SP",
+      "Identifier": "BT9Q186",
+      "Weight": "4.22%",
+      "Market Value": "87,501,930.46",
+      "Shares Held": "52,728,168.00",
+      "Asset Category": "Equity",
+      "Price": "1.65949119377711"
+    },
+    {
+      "Name": "APPLIED DIGITAL CORP",
+      "Ticker": "APLD",
+      "Identifier": "BMCNFN8",
+      "Weight": "4.13%",
+      "Market Value": "85,816,972.50",
+      "Shares Held": "3,269,218.00",
+      "Asset Category": "Equity",
+      "Price": "26.25"
+    },
+    {
+      "Name": "SBA COMMUNICATIONS CORP",
+      "Ticker": "SBAC",
+      "Identifier": "BZ6TS23",
+      "Weight": "4.04%",
+      "Market Value": "83,847,929.80",
+      "Shares Held": "504,652.00",
+      "Asset Category": "Equity",
+      "Price": "166.15"
+    },
+    {
+      "Name": "NEXTDC LTD",
+      "Ticker": "NXT AU",
+      "Identifier": "B5LMKP4",
+      "Weight": "3.71%",
+      "Market Value": "76,920,708.22",
+      "Shares Held": "9,768,381.00",
+      "Asset Category": "Equity",
+      "Price": "7.87445823622154"
+    },
+    {
+      "Name": "SUPER MICRO COMPUTER INC",
+      "Ticker": "SMCI",
+      "Identifier": "BRC3N73",
+      "Weight": "3.27%",
+      "Market Value": "67,856,641.02",
+      "Shares Held": "1,568,577.00",
+      "Asset Category": "Equity",
+      "Price": "43.26"
+    },
+    {
+      "Name": "UNITI GROUP INC",
+      "Ticker": "UNIT",
+      "Identifier": "BSNMCG8",
+      "Weight": "3.18%",
+      "Market Value": "66,035,770.02",
+      "Shares Held": "7,411,422.00",
+      "Asset Category": "Equity",
+      "Price": "8.91"
+    },
+    {
+      "Name": "VNET GROUP INCORPORATION",
+      "Ticker": "VNET",
+      "Identifier": "B3Q0VS9",
+      "Weight": "2.82%",
+      "Market Value": "58,466,142.88",
+      "Shares Held": "8,805,142.00",
+      "Asset Category": "Equity",
+      "Price": "6.640000000000001"
+    },
+    {
+      "Name": "HEWLETT PACKARD ENTERPRISE",
+      "Ticker": "HPE",
+      "Identifier": "BYVYWS0",
+      "Weight": "2.70%",
+      "Market Value": "56,024,719.26",
+      "Shares Held": "890,129.00",
+      "Asset Category": "Equity",
+      "Price": "62.94"
+    },
+    {
+      "Name": "MARVELL TECHNOLOGY INC",
+      "Ticker": "MRVL",
+      "Identifier": "BNKJSM5",
+      "Weight": "2.58%",
+      "Market Value": "53,550,253.34",
+      "Shares Held": "204,441.00",
+      "Asset Category": "Equity",
+      "Price": "261.9350000244569"
+    },
+    {
+      "Name": "MICRON TECHNOLOGY INC",
+      "Ticker": "MU",
+      "Identifier": "2588184",
+      "Weight": "2.43%",
+      "Market Value": "50,432,083.44",
+      "Shares Held": "46,598.00",
+      "Asset Category": "Equity",
+      "Price": "1082.28"
+    },
+    {
+      "Name": "INTEL CORP",
+      "Ticker": "INTC",
+      "Identifier": "2463247",
+      "Weight": "2.43%",
+      "Market Value": "50,385,474.00",
+      "Shares Held": "409,638.00",
+      "Asset Category": "Equity",
+      "Price": "123.0"
+    },
+    {
+      "Name": "ADVANCED MICRO DEVICES",
+      "Ticker": "AMD",
+      "Identifier": "2007849",
+      "Weight": "2.42%",
+      "Market Value": "50,320,490.22",
+      "Shares Held": "79,794.00",
+      "Asset Category": "Equity",
+      "Price": "630.63"
+    },
+    {
+      "Name": "CHINA TOWER CORP LTD-H",
+      "Ticker": "788 HK",
+      "Identifier": "BTVMCY5",
+      "Weight": "2.20%",
+      "Market Value": "45,597,413.45",
+      "Shares Held": "40,300,150.00",
+      "Asset Category": "Equity",
+      "Price": "1.131445253925854"
+    },
+    {
+      "Name": "NVIDIA CORP",
+      "Ticker": "NVDA",
+      "Identifier": "2379504",
+      "Weight": "2.14%",
+      "Market Value": "44,462,128.36",
+      "Shares Held": "197,548.00",
+      "Asset Category": "Equity",
+      "Price": "225.07"
+    },
+    {
+      "Name": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "Ticker": "2330 TT",
+      "Identifier": "6889106",
+      "Weight": "2.06%",
+      "Market Value": "42,759,154.24",
+      "Shares Held": "549,900.00",
+      "Asset Category": "Equity",
+      "Price": "77.75805462811421"
+    },
+    {
+      "Name": "SK HYNIX INC",
+      "Ticker": "000660 KS",
+      "Identifier": "6450267",
+      "Weight": "1.99%",
+      "Market Value": "41,234,549.94",
+      "Shares Held": "30,101.00",
+      "Asset Category": "Equity",
+      "Price": "1369.873091923856"
+    },
+    {
+      "Name": "MICROCHIP TECHNOLOGY INC",
+      "Ticker": "MCHP",
+      "Identifier": "2592174",
+      "Weight": "1.84%",
+      "Market Value": "38,285,439.15",
+      "Shares Held": "486,535.00",
+      "Asset Category": "Equity",
+      "Price": "78.69"
+    },
+    {
+      "Name": "BROADCOM INC",
+      "Ticker": "AVGO",
+      "Identifier": "BDZ78H9",
+      "Weight": "1.81%",
+      "Market Value": "37,564,386.32",
+      "Shares Held": "106,472.00",
+      "Asset Category": "Equity",
+      "Price": "352.81"
+    },
+    {
+      "Name": "SUNEVISION HOLDINGS",
+      "Ticker": "1686 HK",
+      "Identifier": "6222217",
+      "Weight": "0.67%",
+      "Market Value": "13,865,831.37",
+      "Shares Held": "19,284,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.719025490816316"
+    },
+    {
+      "Name": "WHITEFIBER INC",
+      "Ticker": "WYFI",
+      "Identifier": "BQTYCT7",
+      "Weight": "0.29%",
+      "Market Value": "6,124,167.18",
+      "Shares Held": "312,139.00",
+      "Asset Category": "Equity",
+      "Price": "19.62"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.29",
-      "Price": "1.0",
-      "Shares": "6,093,006.98",
-      "Market Value": "6,093,006.98"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.29%",
+      "Market Value": "6,093,006.98",
+      "Shares Held": "6,093,006.98",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     }
   ]
 }

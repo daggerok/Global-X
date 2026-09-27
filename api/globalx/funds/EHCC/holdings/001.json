@@ -4,61 +4,74 @@
   "pageSize": 250,
   "totalRows": 6,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "2ETHA 10/30/2026 P10",
-      "Weight (%)": "-0.07",
-      "Price": "1.513846153846154",
-      "Shares": "-650.00",
-      "Market Value": "-984.00"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.07%",
+      "Market Value": "-984.00",
+      "Shares Held": "-650.00",
+      "Asset Category": "Equity",
+      "Price": "1.513846153846154"
     },
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.63",
-      "Price": "1.0",
-      "Shares": "-9,043.13",
-      "Market Value": "-9,043.13"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.63%",
+      "Market Value": "-9,043.13",
+      "Shares Held": "-9,043.13",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "4ETHA 10/02/2026 C20.31",
-      "Weight (%)": "-1.14",
-      "Price": "44.41872972972973",
-      "Shares": "-370.00",
-      "Market Value": "-16,434.93"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-1.14%",
+      "Market Value": "-16,434.93",
+      "Shares Held": "-370.00",
+      "Asset Category": "Equity",
+      "Price": "44.41872972972973"
     },
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "50.99",
-      "Price": "1.0",
-      "Shares": "733,091.39",
-      "Market Value": "733,091.39"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "50.99%",
+      "Market Value": "733,091.39",
+      "Shares Held": "733,091.39",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "2ETHA 10/30/2026 C10",
-      "Weight (%)": "49.05",
-      "Price": "1037.029205882353",
-      "Shares": "680.00",
-      "Market Value": "705,179.86"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "49.05%",
+      "Market Value": "705,179.86",
+      "Shares Held": "680.00",
+      "Asset Category": "Equity",
+      "Price": "1037.029205882353"
     },
     {
-      "Ticker": "",
       "Name": "4ETHA 10/30/2026 C10",
-      "Weight (%)": "1.80",
-      "Price": "1037.0292",
-      "Shares": "25.00",
-      "Market Value": "25,925.73"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "1.80%",
+      "Market Value": "25,925.73",
+      "Shares Held": "25.00",
+      "Asset Category": "Equity",
+      "Price": "1037.0292"
     }
   ]
 }

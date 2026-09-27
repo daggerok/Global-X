@@ -4,317 +4,394 @@
   "pageSize": 250,
   "totalRows": 38,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.01",
-      "Price": "1.0",
-      "Shares": "3,601.09",
-      "Market Value": "3,601.09"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.01%",
+      "Market Value": "3,601.09",
+      "Shares Held": "3,601.09",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.02",
-      "Price": "1.0",
-      "Shares": "-7,451.37",
-      "Market Value": "-7,451.37"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.02%",
+      "Market Value": "-7,451.37",
+      "Shares Held": "-7,451.37",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "SPCX",
       "Name": "SPACE EXPLORATION TECHN-CL A",
-      "Weight (%)": "21.61",
-      "Price": "148.68",
-      "Shares": "61,560.00",
-      "Market Value": "9,152,740.80"
+      "Ticker": "SPCX",
+      "Identifier": "BXCVG25",
+      "Weight": "21.61%",
+      "Market Value": "9,152,740.80",
+      "Shares Held": "61,560.00",
+      "Asset Category": "Equity",
+      "Price": "148.68"
     },
     {
-      "Ticker": "RKLB",
       "Name": "ROCKET LAB CORP",
-      "Weight (%)": "10.62",
-      "Price": "73.95",
-      "Shares": "60,810.00",
-      "Market Value": "4,496,899.50"
+      "Ticker": "RKLB",
+      "Identifier": "BT6C8Z3",
+      "Weight": "10.62%",
+      "Market Value": "4,496,899.50",
+      "Shares Held": "60,810.00",
+      "Asset Category": "Equity",
+      "Price": "73.95"
     },
     {
-      "Ticker": "ASTS",
       "Name": "AST SPACEMOBILE INC",
-      "Weight (%)": "9.72",
-      "Price": "61.81",
-      "Shares": "66,594.00",
-      "Market Value": "4,116,175.14"
+      "Ticker": "ASTS",
+      "Identifier": "BNLZ3X8",
+      "Weight": "9.72%",
+      "Market Value": "4,116,175.14",
+      "Shares Held": "66,594.00",
+      "Asset Category": "Equity",
+      "Price": "61.81"
     },
     {
-      "Ticker": "MDA CN",
       "Name": "MDA SPACE LTD",
-      "Weight (%)": "4.68",
-      "Price": "31.53427181224061",
-      "Shares": "62,889.00",
-      "Market Value": "1,983,158.82"
+      "Ticker": "MDA CN",
+      "Identifier": "BMZ0WL3",
+      "Weight": "4.68%",
+      "Market Value": "1,983,158.82",
+      "Shares Held": "62,889.00",
+      "Asset Category": "Equity",
+      "Price": "31.53427181224061"
     },
     {
-      "Ticker": "IRDM",
       "Name": "IRIDIUM COMMUNICATIONS INC",
-      "Weight (%)": "4.55",
-      "Price": "48.75",
-      "Shares": "39,563.00",
-      "Market Value": "1,928,696.25"
+      "Ticker": "IRDM",
+      "Identifier": "B2QH310",
+      "Weight": "4.55%",
+      "Market Value": "1,928,696.25",
+      "Shares Held": "39,563.00",
+      "Asset Category": "Equity",
+      "Price": "48.75"
     },
     {
-      "Ticker": "RDW",
       "Name": "REDWIRE CORP",
-      "Weight (%)": "4.50",
-      "Price": "11.62",
-      "Shares": "164,187.00",
-      "Market Value": "1,907,852.94"
+      "Ticker": "RDW",
+      "Identifier": "BL5FDV8",
+      "Weight": "4.50%",
+      "Market Value": "1,907,852.94",
+      "Shares Held": "164,187.00",
+      "Asset Category": "Equity",
+      "Price": "11.62"
     },
     {
-      "Ticker": "GSAT",
       "Name": "GLOBALSTAR INC",
-      "Weight (%)": "4.46",
-      "Price": "82.88000000000001",
-      "Shares": "22,791.00",
-      "Market Value": "1,888,918.08"
+      "Ticker": "GSAT",
+      "Identifier": "BRJMM32",
+      "Weight": "4.46%",
+      "Market Value": "1,888,918.08",
+      "Shares Held": "22,791.00",
+      "Asset Category": "Equity",
+      "Price": "82.88000000000001"
     },
     {
-      "Ticker": "VSAT",
       "Name": "VIASAT INC",
-      "Weight (%)": "4.46",
-      "Price": "73.02",
-      "Shares": "25,852.00",
-      "Market Value": "1,887,713.04"
+      "Ticker": "VSAT",
+      "Identifier": "2946243",
+      "Weight": "4.46%",
+      "Market Value": "1,887,713.04",
+      "Shares Held": "25,852.00",
+      "Asset Category": "Equity",
+      "Price": "73.02"
     },
     {
-      "Ticker": "FLY",
       "Name": "FIREFLY AEROSPACE INC",
-      "Weight (%)": "4.41",
-      "Price": "24.36",
-      "Shares": "76,701.00",
-      "Market Value": "1,868,436.36"
+      "Ticker": "FLY",
+      "Identifier": "BPK4SR9",
+      "Weight": "4.41%",
+      "Market Value": "1,868,436.36",
+      "Shares Held": "76,701.00",
+      "Asset Category": "Equity",
+      "Price": "24.36"
     },
     {
-      "Ticker": "LUNR",
       "Name": "INTUITIVE MACHINES INC",
-      "Weight (%)": "4.13",
-      "Price": "15.61",
-      "Shares": "112,152.00",
-      "Market Value": "1,750,692.72"
+      "Ticker": "LUNR",
+      "Identifier": "BNHTR54",
+      "Weight": "4.13%",
+      "Market Value": "1,750,692.72",
+      "Shares Held": "112,152.00",
+      "Asset Category": "Equity",
+      "Price": "15.61"
     },
     {
-      "Ticker": "PL",
       "Name": "PLANET LABS PBC",
-      "Weight (%)": "3.57",
-      "Price": "17.43",
-      "Shares": "86,757.00",
-      "Market Value": "1,512,174.51"
+      "Ticker": "PL",
+      "Identifier": "BM8JV32",
+      "Weight": "3.57%",
+      "Market Value": "1,512,174.51",
+      "Shares Held": "86,757.00",
+      "Asset Category": "Equity",
+      "Price": "17.43"
     },
     {
-      "Ticker": "SESG FP",
       "Name": "SES",
-      "Weight (%)": "2.63",
-      "Price": "5.094176143768434",
-      "Shares": "218,685.00",
-      "Market Value": "1,114,019.91"
+      "Ticker": "SESG FP",
+      "Identifier": "B00ZQQ2",
+      "Weight": "2.63%",
+      "Market Value": "1,114,019.91",
+      "Shares Held": "218,685.00",
+      "Asset Category": "Equity",
+      "Price": "5.094176143768434"
     },
     {
-      "Ticker": "AVIO IM",
       "Name": "AVIO SPA",
-      "Weight (%)": "2.09",
-      "Price": "33.04145567732797",
-      "Shares": "26,826.00",
-      "Market Value": "886,370.09"
+      "Ticker": "AVIO IM",
+      "Identifier": "BYWZZF0",
+      "Weight": "2.09%",
+      "Market Value": "886,370.09",
+      "Shares Held": "26,826.00",
+      "Asset Category": "Equity",
+      "Price": "33.04145567732797"
     },
     {
-      "Ticker": "ETL FP",
       "Name": "EUTELSAT COMMUNICATIONS",
-      "Weight (%)": "1.97",
-      "Price": "1.946800745584493",
-      "Shares": "427,584.00",
-      "Market Value": "832,420.85"
+      "Ticker": "ETL FP",
+      "Identifier": "B0M7KJ7",
+      "Weight": "1.97%",
+      "Market Value": "832,420.85",
+      "Shares Held": "427,584.00",
+      "Asset Category": "Equity",
+      "Price": "1.946800745584493"
     },
     {
-      "Ticker": "BKSY",
       "Name": "BLACKSKY TECHNOLOGY INC",
-      "Weight (%)": "1.50",
-      "Price": "23.25",
-      "Shares": "27,349.00",
-      "Market Value": "635,864.25"
+      "Ticker": "BKSY",
+      "Identifier": "BSQNQM2",
+      "Weight": "1.50%",
+      "Market Value": "635,864.25",
+      "Shares Held": "27,349.00",
+      "Asset Category": "Equity",
+      "Price": "23.25"
     },
     {
-      "Ticker": "YSS",
       "Name": "YORK SPACE SYSTEMS INC",
-      "Weight (%)": "1.47",
-      "Price": "9.569999999999999",
-      "Shares": "65,019.00",
-      "Market Value": "622,231.83"
+      "Ticker": "YSS",
+      "Identifier": "BV4MN09",
+      "Weight": "1.47%",
+      "Market Value": "622,231.83",
+      "Shares Held": "65,019.00",
+      "Asset Category": "Equity",
+      "Price": "9.569999999999999"
     },
     {
-      "Ticker": "SATL",
       "Name": "SATELLOGIC INC-A",
-      "Weight (%)": "1.22",
-      "Price": "6.17",
-      "Shares": "83,429.00",
-      "Market Value": "514,756.93"
+      "Ticker": "SATL",
+      "Identifier": "BT8QHD4",
+      "Weight": "1.22%",
+      "Market Value": "514,756.93",
+      "Shares Held": "83,429.00",
+      "Asset Category": "Equity",
+      "Price": "6.17"
     },
     {
-      "Ticker": "186A JP",
       "Name": "ASTROSCALE HOLDINGS INC",
-      "Weight (%)": "1.20",
-      "Price": "7.851620863885637",
-      "Shares": "64,916.00",
-      "Market Value": "509,695.82"
+      "Ticker": "186A JP",
+      "Identifier": "BSMRM19",
+      "Weight": "1.20%",
+      "Market Value": "509,695.82",
+      "Shares Held": "64,916.00",
+      "Asset Category": "Equity",
+      "Price": "7.851620863885637"
     },
     {
-      "Ticker": "GILT",
       "Name": "GILAT SATELLITE NETWORKS LTD",
-      "Weight (%)": "1.15",
-      "Price": "10.14",
-      "Shares": "48,157.00",
-      "Market Value": "488,311.98"
+      "Ticker": "GILT",
+      "Identifier": "2598075",
+      "Weight": "1.15%",
+      "Market Value": "488,311.98",
+      "Shares Held": "48,157.00",
+      "Asset Category": "Equity",
+      "Price": "10.14"
     },
     {
-      "Ticker": "FTC LN",
       "Name": "FILTRONIC PLC",
-      "Weight (%)": "0.97",
-      "Price": "3.178807970538961",
-      "Shares": "129,527.00",
-      "Market Value": "411,741.46"
+      "Ticker": "FTC LN",
+      "Identifier": "0336299",
+      "Weight": "0.97%",
+      "Market Value": "411,741.46",
+      "Shares Held": "129,527.00",
+      "Asset Category": "Equity",
+      "Price": "3.178807970538961"
     },
     {
-      "Ticker": "290A JP",
       "Name": "SYNSPECTIVE INC",
-      "Weight (%)": "0.93",
-      "Price": "9.365953026841805",
-      "Shares": "42,024.00",
-      "Market Value": "393,594.81"
+      "Ticker": "290A JP",
+      "Identifier": "BM9WB85",
+      "Weight": "0.93%",
+      "Market Value": "393,594.81",
+      "Shares Held": "42,024.00",
+      "Asset Category": "Equity",
+      "Price": "9.365953026841805"
     },
     {
-      "Ticker": "OHB GR",
       "Name": "OHB SE",
-      "Weight (%)": "0.89",
-      "Price": "204.0862884927066",
-      "Shares": "1,851.00",
-      "Market Value": "377,763.72"
+      "Ticker": "OHB GR",
+      "Identifier": "7058228",
+      "Weight": "0.89%",
+      "Market Value": "377,763.72",
+      "Shares Held": "1,851.00",
+      "Asset Category": "Equity",
+      "Price": "204.0862884927066"
     },
     {
-      "Ticker": "SPCE",
       "Name": "VIRGIN GALACTIC HOLDINGS INC",
-      "Weight (%)": "0.85",
-      "Price": "3.19",
-      "Shares": "112,301.00",
-      "Market Value": "358,240.19"
+      "Ticker": "SPCE",
+      "Identifier": "BSNTQK1",
+      "Weight": "0.85%",
+      "Market Value": "358,240.19",
+      "Shares Held": "112,301.00",
+      "Asset Category": "Equity",
+      "Price": "3.19"
     },
     {
-      "Ticker": "464A JP",
       "Name": "QPS HOLDINGS INC",
-      "Weight (%)": "0.76",
-      "Price": "11.12843205332963",
-      "Shares": "28,802.00",
-      "Market Value": "320,521.10"
+      "Ticker": "464A JP",
+      "Identifier": "BN6NH91",
+      "Weight": "0.76%",
+      "Market Value": "320,521.10",
+      "Shares Held": "28,802.00",
+      "Asset Category": "Equity",
+      "Price": "11.12843205332963"
     },
     {
-      "Ticker": "SPIR",
       "Name": "SPIRE GLOBAL INC",
-      "Weight (%)": "0.70",
-      "Price": "12.08",
-      "Shares": "24,567.00",
-      "Market Value": "296,769.36"
+      "Ticker": "SPIR",
+      "Identifier": "BRC45W5",
+      "Weight": "0.70%",
+      "Market Value": "296,769.36",
+      "Shares Held": "24,567.00",
+      "Asset Category": "Equity",
+      "Price": "12.08"
     },
     {
-      "Ticker": "189300 KS",
       "Name": "INTELLIAN TECHNOLOGIES INC",
-      "Weight (%)": "0.65",
-      "Price": "51.27827797365003",
-      "Shares": "5,389.00",
-      "Market Value": "276,338.64"
+      "Ticker": "189300 KS",
+      "Identifier": "BYX4V69",
+      "Weight": "0.65%",
+      "Market Value": "276,338.64",
+      "Shares Held": "5,389.00",
+      "Asset Category": "Equity",
+      "Price": "51.27827797365003"
     },
     {
-      "Ticker": "CRI PW",
       "Name": "CREOTECH INSTRUMENTS SA",
-      "Weight (%)": "0.62",
-      "Price": "189.3747016534867",
-      "Shares": "1,391.00",
-      "Market Value": "263,420.21"
+      "Ticker": "CRI PW",
+      "Identifier": "BLR7GY6",
+      "Weight": "0.62%",
+      "Market Value": "263,420.21",
+      "Shares Held": "1,391.00",
+      "Asset Category": "Equity",
+      "Price": "189.3747016534867"
     },
     {
-      "Ticker": "099320 KS",
       "Name": "SATREC INITIATIVE CO LTD",
-      "Weight (%)": "0.60",
-      "Price": "57.31101809954751",
-      "Shares": "4,420.00",
-      "Market Value": "253,314.70"
+      "Ticker": "099320 KS",
+      "Identifier": "B39WTL1",
+      "Weight": "0.60%",
+      "Market Value": "253,314.70",
+      "Shares Held": "4,420.00",
+      "Asset Category": "Equity",
+      "Price": "57.31101809954751"
     },
     {
-      "Ticker": "OVZON SS",
       "Name": "OVZON AB",
-      "Weight (%)": "0.56",
-      "Price": "3.634180722148562",
-      "Shares": "64,862.00",
-      "Market Value": "235,720.23"
+      "Ticker": "OVZON SS",
+      "Identifier": "BD21M27",
+      "Weight": "0.56%",
+      "Market Value": "235,720.23",
+      "Shares Held": "64,862.00",
+      "Asset Category": "Equity",
+      "Price": "3.634180722148562"
     },
     {
-      "Ticker": "ADDV SP",
       "Name": "ADDVALUE TECHNOLOGIES LTD",
-      "Weight (%)": "0.54",
-      "Price": "0.1268101739997783",
-      "Shares": "1,804,600.00",
-      "Market Value": "228,841.64"
+      "Ticker": "ADDV SP",
+      "Identifier": "6260336",
+      "Weight": "0.54%",
+      "Market Value": "228,841.64",
+      "Shares Held": "1,804,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.1268101739997783"
     },
     {
-      "Ticker": "9348 JP",
       "Name": "ISPACE INC/JAPAN",
-      "Weight (%)": "0.52",
-      "Price": "2.63417428455498",
-      "Shares": "83,794.00",
-      "Market Value": "220,728.00"
+      "Ticker": "9348 JP",
+      "Identifier": "BMF7MM5",
+      "Weight": "0.52%",
+      "Market Value": "220,728.00",
+      "Shares Held": "83,794.00",
+      "Asset Category": "Equity",
+      "Price": "2.63417428455498"
     },
     {
-      "Ticker": "TSAT",
       "Name": "TELESAT CORP",
-      "Weight (%)": "0.47",
-      "Price": "48.21",
-      "Shares": "4,090.00",
-      "Market Value": "197,178.90"
+      "Ticker": "TSAT",
+      "Identifier": "BLD1BD6",
+      "Weight": "0.47%",
+      "Market Value": "197,178.90",
+      "Shares Held": "4,090.00",
+      "Asset Category": "Equity",
+      "Price": "48.21"
     },
     {
-      "Ticker": "SIDU",
       "Name": "SIDUS SPACE INC-CL A",
-      "Weight (%)": "0.38",
-      "Price": "2.12",
-      "Shares": "75,237.00",
-      "Market Value": "159,502.44"
+      "Ticker": "SIDU",
+      "Identifier": "BR1G3H3",
+      "Weight": "0.38%",
+      "Market Value": "159,502.44",
+      "Shares Held": "75,237.00",
+      "Asset Category": "Equity",
+      "Price": "2.12"
     },
     {
-      "Ticker": "402A JP",
       "Name": "AXELSPACE HOLDINGS CORP",
-      "Weight (%)": "0.26",
-      "Price": "3.493144142977401",
-      "Shares": "30,886.00",
-      "Market Value": "107,889.25"
+      "Ticker": "402A JP",
+      "Identifier": "BVQYZN0",
+      "Weight": "0.26%",
+      "Market Value": "107,889.25",
+      "Shares Held": "30,886.00",
+      "Asset Category": "Equity",
+      "Price": "3.493144142977401"
     },
     {
-      "Ticker": "462350 KS",
       "Name": "INNOSPACE CO LTD",
-      "Weight (%)": "0.22",
-      "Price": "4.855619077535207",
-      "Shares": "19,101.00",
-      "Market Value": "92,747.18"
+      "Ticker": "462350 KS",
+      "Identifier": "BNNW5V9",
+      "Weight": "0.22%",
+      "Market Value": "92,747.18",
+      "Shares Held": "19,101.00",
+      "Asset Category": "Equity",
+      "Price": "4.855619077535207"
     },
     {
-      "Ticker": "1045 HK",
       "Name": "APT SATELLITE HOLDINGS LTD",
-      "Weight (%)": "0.17",
-      "Price": "0.2549735862823787",
-      "Shares": "274,100.00",
-      "Market Value": "69,888.26"
+      "Ticker": "1045 HK",
+      "Identifier": "6039644",
+      "Weight": "0.17%",
+      "Market Value": "69,888.26",
+      "Shares Held": "274,100.00",
+      "Asset Category": "Equity",
+      "Price": "0.2549735862823787"
     }
   ]
 }

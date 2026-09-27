@@ -4,61 +4,74 @@
   "pageSize": 250,
   "totalRows": 6,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "CASH",
-      "Weight (%)": "0.01",
-      "Price": "1.0",
-      "Shares": "60.45",
-      "Market Value": "60.45"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.01%",
+      "Market Value": "60.45",
+      "Shares Held": "60.45",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "-0.01",
-      "Price": "1.0",
-      "Shares": "-45.61",
-      "Market Value": "-45.61"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.01%",
+      "Market Value": "-45.61",
+      "Shares Held": "-45.61",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "S 0 11/15/33",
-      "Weight (%)": "25.13",
-      "Price": "0.6943910403772473",
-      "Shares": "339,300.00",
-      "Market Value": "235,606.88"
+      "Ticker": "",
+      "Identifier": "B2RGL56",
+      "Weight": "25.13%",
+      "Market Value": "235,606.88",
+      "Shares Held": "339,300.00",
+      "Asset Category": "Equity",
+      "Price": "0.6943910403772473"
     },
     {
-      "Ticker": "",
       "Name": "S 0 08/15/33",
-      "Weight (%)": "25.08",
-      "Price": "0.7032889055023923",
-      "Shares": "334,400.00",
-      "Market Value": "235,179.81"
+      "Ticker": "",
+      "Identifier": "B4X15F7",
+      "Weight": "25.08%",
+      "Market Value": "235,179.81",
+      "Shares Held": "334,400.00",
+      "Asset Category": "Equity",
+      "Price": "0.7032889055023923"
     },
     {
-      "Ticker": "",
       "Name": "S 0 05/15/33",
-      "Weight (%)": "24.94",
-      "Price": "0.7134652532031727",
-      "Shares": "327,800.00",
-      "Market Value": "233,873.91"
+      "Ticker": "",
+      "Identifier": "B2RGJF2",
+      "Weight": "24.94%",
+      "Market Value": "233,873.91",
+      "Shares Held": "327,800.00",
+      "Asset Category": "Equity",
+      "Price": "0.7134652532031727"
     },
     {
-      "Ticker": "",
       "Name": "S 0 02/15/33",
-      "Weight (%)": "24.84",
-      "Price": "0.7227626124728515",
-      "Shares": "322,300.00",
-      "Market Value": "232,946.39"
+      "Ticker": "",
+      "Identifier": "B4LR7M8",
+      "Weight": "24.84%",
+      "Market Value": "232,946.39",
+      "Shares Held": "322,300.00",
+      "Asset Category": "Equity",
+      "Price": "0.7227626124728515"
     }
   ]
 }

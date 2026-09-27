@@ -4,285 +4,354 @@
   "pageSize": 250,
   "totalRows": 34,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "SINGAPORE DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.7827789461915124",
-      "Shares": "11,806.13",
-      "Market Value": "9,241.59"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "9,241.59",
+      "Shares Held": "11,806.13",
+      "Asset Category": "Equity",
+      "Price": "0.7827789461915124"
     },
     {
-      "Ticker": "",
       "Name": "BRITISH STERLING POUND",
-      "Weight (%)": "0.00",
-      "Price": "1.0",
-      "Shares": "0.01",
-      "Market Value": "0.01"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.01",
+      "Shares Held": "0.01",
+      "Asset Category": "Equity",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "CANADIAN DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.7073640107939213",
-      "Shares": "-1,408.20",
-      "Market Value": "-996.11"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-996.11",
+      "Shares Held": "-1,408.20",
+      "Asset Category": "Equity",
+      "Price": "0.7073640107939213"
     },
     {
-      "Ticker": "APLE",
       "Name": "APPLE HOSPITALITY REIT INC",
-      "Weight (%)": "5.28",
-      "Price": "16.19",
-      "Shares": "701,127.00",
-      "Market Value": "11,351,246.13"
+      "Ticker": "APLE",
+      "Identifier": "BXRTX56",
+      "Weight": "5.28%",
+      "Market Value": "11,351,246.13",
+      "Shares Held": "701,127.00",
+      "Asset Category": "Equity",
+      "Price": "16.19"
     },
     {
-      "Ticker": "LTC",
       "Name": "LTC PROPERTIES INC",
-      "Weight (%)": "4.73",
-      "Price": "42.94",
-      "Shares": "236,544.00",
-      "Market Value": "10,157,199.36"
+      "Ticker": "LTC",
+      "Identifier": "2498788",
+      "Weight": "4.73%",
+      "Market Value": "10,157,199.36",
+      "Shares Held": "236,544.00",
+      "Asset Category": "Equity",
+      "Price": "42.94"
     },
     {
-      "Ticker": "SBRA",
       "Name": "SABRA HEALTH CARE REIT INC",
-      "Weight (%)": "4.24",
-      "Price": "19.85",
-      "Shares": "458,980.00",
-      "Market Value": "9,110,753.00"
+      "Ticker": "SBRA",
+      "Identifier": "B5NLBP6",
+      "Weight": "4.24%",
+      "Market Value": "9,110,753.00",
+      "Shares Held": "458,980.00",
+      "Asset Category": "Equity",
+      "Price": "19.85"
     },
     {
-      "Ticker": "OHI",
       "Name": "OMEGA HEALTHCARE INVESTORS",
-      "Weight (%)": "4.24",
-      "Price": "46.28",
-      "Shares": "196,677.00",
-      "Market Value": "9,102,211.56"
+      "Ticker": "OHI",
+      "Identifier": "2043274",
+      "Weight": "4.24%",
+      "Market Value": "9,102,211.56",
+      "Shares Held": "196,677.00",
+      "Asset Category": "Equity",
+      "Price": "46.28"
     },
     {
-      "Ticker": "HR",
       "Name": "HEALTHCARE REALTY TRUST INC",
-      "Weight (%)": "4.22",
-      "Price": "18.05",
-      "Shares": "502,912.00",
-      "Market Value": "9,077,561.60"
+      "Ticker": "HR",
+      "Identifier": "BPQWHP8",
+      "Weight": "4.22%",
+      "Market Value": "9,077,561.60",
+      "Shares Held": "502,912.00",
+      "Asset Category": "Fund",
+      "Price": "18.05"
     },
     {
-      "Ticker": "EPR",
       "Name": "EPR PROPERTIES",
-      "Weight (%)": "4.22",
-      "Price": "56.83000000000001",
-      "Shares": "159,461.00",
-      "Market Value": "9,062,168.63"
+      "Ticker": "EPR",
+      "Identifier": "B8XXZP1",
+      "Weight": "4.22%",
+      "Market Value": "9,062,168.63",
+      "Shares Held": "159,461.00",
+      "Asset Category": "Equity",
+      "Price": "56.83000000000001"
     },
     {
-      "Ticker": "BNL",
       "Name": "BROADSTONE NET LEASE INC",
-      "Weight (%)": "4.08",
-      "Price": "18.91",
-      "Shares": "463,829.00",
-      "Market Value": "8,771,006.39"
+      "Ticker": "BNL",
+      "Identifier": "BN93088",
+      "Weight": "4.08%",
+      "Market Value": "8,771,006.39",
+      "Shares Held": "463,829.00",
+      "Asset Category": "Equity",
+      "Price": "18.91"
     },
     {
-      "Ticker": "GTY",
       "Name": "GETTY REALTY CORP",
-      "Weight (%)": "3.94",
-      "Price": "28.66",
-      "Shares": "295,045.00",
-      "Market Value": "8,455,989.70"
+      "Ticker": "GTY",
+      "Identifier": "2698146",
+      "Weight": "3.94%",
+      "Market Value": "8,455,989.70",
+      "Shares Held": "295,045.00",
+      "Asset Category": "Equity",
+      "Price": "28.66"
     },
     {
-      "Ticker": "KRC",
       "Name": "KILROY REALTY CORP",
-      "Weight (%)": "3.85",
-      "Price": "34.23",
-      "Shares": "241,495.00",
-      "Market Value": "8,266,373.85"
+      "Ticker": "KRC",
+      "Identifier": "2495529",
+      "Weight": "3.85%",
+      "Market Value": "8,266,373.85",
+      "Shares Held": "241,495.00",
+      "Asset Category": "Equity",
+      "Price": "34.23"
     },
     {
-      "Ticker": "EFC",
       "Name": "ELLINGTON FINANCIAL INC",
-      "Weight (%)": "3.57",
-      "Price": "12.36",
-      "Shares": "621,428.00",
-      "Market Value": "7,680,850.08"
+      "Ticker": "EFC",
+      "Identifier": "BJ7MB31",
+      "Weight": "3.57%",
+      "Market Value": "7,680,850.08",
+      "Shares Held": "621,428.00",
+      "Asset Category": "Equity",
+      "Price": "12.36"
     },
     {
-      "Ticker": "MINT SP",
       "Name": "MAPLETREE INDUSTRIAL TRUST",
-      "Weight (%)": "3.52",
-      "Price": "1.455968687897599",
-      "Shares": "5,203,100.00",
-      "Market Value": "7,575,550.68"
+      "Ticker": "MINT SP",
+      "Identifier": "B4LR5Q8",
+      "Weight": "3.52%",
+      "Market Value": "7,575,550.68",
+      "Shares Held": "5,203,100.00",
+      "Asset Category": "Fund",
+      "Price": "1.455968687897599"
     },
     {
-      "Ticker": "LMP LN",
       "Name": "LONDONMETRIC PROPERTY PLC",
-      "Weight (%)": "3.51",
-      "Price": "2.366887416969002",
-      "Shares": "3,184,654.00",
-      "Market Value": "7,537,717.48"
+      "Ticker": "LMP LN",
+      "Identifier": "B4WFW71",
+      "Weight": "3.51%",
+      "Market Value": "7,537,717.48",
+      "Shares Held": "3,184,654.00",
+      "Asset Category": "Equity",
+      "Price": "2.366887416969002"
     },
     {
-      "Ticker": "NLY",
       "Name": "ANNALY CAPITAL MANAGEMENT IN",
-      "Weight (%)": "3.45",
-      "Price": "20.61",
-      "Shares": "359,917.00",
-      "Market Value": "7,417,889.37"
+      "Ticker": "NLY",
+      "Identifier": "BPMQ7X2",
+      "Weight": "3.45%",
+      "Market Value": "7,417,889.37",
+      "Shares Held": "359,917.00",
+      "Asset Category": "Equity",
+      "Price": "20.61"
     },
     {
-      "Ticker": "PHP LN",
       "Name": "PRIMARY HEALTH PROPERTIES",
-      "Weight (%)": "3.44",
-      "Price": "1.215894039200956",
-      "Shares": "6,075,209.00",
-      "Market Value": "7,386,810.41"
+      "Ticker": "PHP LN",
+      "Identifier": "BYRJ5J1",
+      "Weight": "3.44%",
+      "Market Value": "7,386,810.41",
+      "Shares Held": "6,075,209.00",
+      "Asset Category": "Equity",
+      "Price": "1.215894039200956"
     },
     {
-      "Ticker": "GLPI",
       "Name": "GAMING AND LEISURE PROPERTIE",
-      "Weight (%)": "3.42",
-      "Price": "38.79",
-      "Shares": "189,272.00",
-      "Market Value": "7,341,860.88"
+      "Ticker": "GLPI",
+      "Identifier": "BFPK4S5",
+      "Weight": "3.42%",
+      "Market Value": "7,341,860.88",
+      "Shares Held": "189,272.00",
+      "Asset Category": "Equity",
+      "Price": "38.79"
     },
     {
-      "Ticker": "VICI",
       "Name": "VICI PROPERTIES INC",
-      "Weight (%)": "3.29",
-      "Price": "23.51",
-      "Shares": "301,147.00",
-      "Market Value": "7,079,965.97"
+      "Ticker": "VICI",
+      "Identifier": "BYWH073",
+      "Weight": "3.29%",
+      "Market Value": "7,079,965.97",
+      "Shares Held": "301,147.00",
+      "Asset Category": "Equity",
+      "Price": "23.51"
     },
     {
-      "Ticker": "LADR",
       "Name": "LADDER CAPITAL CORP-REIT",
-      "Weight (%)": "3.28",
-      "Price": "9.08",
-      "Shares": "776,393.00",
-      "Market Value": "7,049,648.44"
+      "Ticker": "LADR",
+      "Identifier": "BJ367P1",
+      "Weight": "3.28%",
+      "Market Value": "7,049,648.44",
+      "Shares Held": "776,393.00",
+      "Asset Category": "Equity",
+      "Price": "9.08"
     },
     {
-      "Ticker": "AGNC",
       "Name": "AGNC INVESTMENT CORP",
-      "Weight (%)": "3.26",
-      "Price": "9.620000000000001",
-      "Shares": "728,994.00",
-      "Market Value": "7,012,922.28"
+      "Ticker": "AGNC",
+      "Identifier": "BYYHJL8",
+      "Weight": "3.26%",
+      "Market Value": "7,012,922.28",
+      "Shares Held": "728,994.00",
+      "Asset Category": "Equity",
+      "Price": "9.620000000000001"
     },
     {
-      "Ticker": "GFC FP",
       "Name": "GECINA SA",
-      "Weight (%)": "3.21",
-      "Price": "72.68436173913044",
-      "Shares": "94,875.00",
-      "Market Value": "6,895,928.82"
+      "Ticker": "GFC FP",
+      "Identifier": "7742468",
+      "Weight": "3.21%",
+      "Market Value": "6,895,928.82",
+      "Shares Held": "94,875.00",
+      "Asset Category": "Equity",
+      "Price": "72.68436173913044"
     },
     {
-      "Ticker": "STWD",
       "Name": "STARWOOD PROPERTY TRUST INC",
-      "Weight (%)": "3.17",
-      "Price": "14.36",
-      "Shares": "475,159.00",
-      "Market Value": "6,823,283.24"
+      "Ticker": "STWD",
+      "Identifier": "B3PQ520",
+      "Weight": "3.17%",
+      "Market Value": "6,823,283.24",
+      "Shares Held": "475,159.00",
+      "Asset Category": "Fund",
+      "Price": "14.36"
     },
     {
-      "Ticker": "DX",
       "Name": "DYNEX CAPITAL INC",
-      "Weight (%)": "3.12",
-      "Price": "11.34",
-      "Shares": "590,872.00",
-      "Market Value": "6,700,488.48"
+      "Ticker": "DX",
+      "Identifier": "BJN4K01",
+      "Weight": "3.12%",
+      "Market Value": "6,700,488.48",
+      "Shares Held": "590,872.00",
+      "Asset Category": "Equity",
+      "Price": "11.34"
     },
     {
-      "Ticker": "RITM",
       "Name": "RITHM CAPITAL CORP",
-      "Weight (%)": "3.10",
-      "Price": "9.129999999999999",
-      "Shares": "729,611.00",
-      "Market Value": "6,661,348.43"
+      "Ticker": "RITM",
+      "Identifier": "BRJ9GW0",
+      "Weight": "3.10%",
+      "Market Value": "6,661,348.43",
+      "Shares Held": "729,611.00",
+      "Asset Category": "Equity",
+      "Price": "9.129999999999999"
     },
     {
-      "Ticker": "ARR",
       "Name": "ARMOUR RESIDENTIAL REIT INC",
-      "Weight (%)": "3.09",
-      "Price": "14.1",
-      "Shares": "470,522.00",
-      "Market Value": "6,634,360.20"
+      "Ticker": "ARR",
+      "Identifier": "BRJ8H91",
+      "Weight": "3.09%",
+      "Market Value": "6,634,360.20",
+      "Shares Held": "470,522.00",
+      "Asset Category": "Equity",
+      "Price": "14.1"
     },
     {
-      "Ticker": "TRTX",
       "Name": "TPG RE FINANCE TRUST INC",
-      "Weight (%)": "2.82",
-      "Price": "6.319999999999999",
-      "Shares": "958,165.00",
-      "Market Value": "6,055,602.80"
+      "Ticker": "TRTX",
+      "Identifier": "BF2F1Q0",
+      "Weight": "2.82%",
+      "Market Value": "6,055,602.80",
+      "Shares Held": "958,165.00",
+      "Asset Category": "Fund",
+      "Price": "6.319999999999999"
     },
     {
-      "Ticker": "ORC",
       "Name": "ORCHID ISLAND CAPITAL INC",
-      "Weight (%)": "2.81",
-      "Price": "5.71",
-      "Shares": "1,058,674.00",
-      "Market Value": "6,045,028.54"
+      "Ticker": "ORC",
+      "Identifier": "BMYSHK2",
+      "Weight": "2.81%",
+      "Market Value": "6,045,028.54",
+      "Shares Held": "1,058,674.00",
+      "Asset Category": "Equity",
+      "Price": "5.71"
     },
     {
-      "Ticker": "IVR",
       "Name": "INVESCO MORTGAGE CAPITAL",
-      "Weight (%)": "2.76",
-      "Price": "6.29",
-      "Shares": "942,410.00",
-      "Market Value": "5,927,758.90"
+      "Ticker": "IVR",
+      "Identifier": "BNBV530",
+      "Weight": "2.76%",
+      "Market Value": "5,927,758.90",
+      "Shares Held": "942,410.00",
+      "Asset Category": "Equity",
+      "Price": "6.29"
     },
     {
-      "Ticker": "BXMT",
       "Name": "BLACKSTONE MORTGAGE TRU-CL A",
-      "Weight (%)": "2.63",
-      "Price": "12.5",
-      "Shares": "451,404.00",
-      "Market Value": "5,642,550.00"
+      "Ticker": "BXMT",
+      "Identifier": "B94QHZ0",
+      "Weight": "2.63%",
+      "Market Value": "5,642,550.00",
+      "Shares Held": "451,404.00",
+      "Asset Category": "Equity",
+      "Price": "12.5"
     },
     {
-      "Ticker": "ARI",
       "Name": "APOLLO COMMERCIAL REAL ESTAT",
-      "Weight (%)": "2.52",
-      "Price": "6.24",
-      "Shares": "866,410.00",
-      "Market Value": "5,406,398.40"
+      "Ticker": "ARI",
+      "Identifier": "B4JTYX6",
+      "Weight": "2.52%",
+      "Market Value": "5,406,398.40",
+      "Shares Held": "866,410.00",
+      "Asset Category": "Equity",
+      "Price": "6.24"
     },
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.57",
-      "Price": "1.0",
-      "Shares": "1,234,793.32",
-      "Market Value": "1,234,793.32"
-    },
-    {
-      "Ticker": "DJEZ6 Index",
-      "Name": "DJ US REAL ESTATE DEC26",
-      "Weight (%)": "0.43",
-      "Price": "36760.0",
-      "Shares": "25.00",
-      "Market Value": "919,000.00"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.57%",
+      "Market Value": "1,234,793.32",
+      "Shares Held": "1,234,793.32",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "DJ US REAL ESTATE DEC26",
+      "Ticker": "DJEZ6 Index",
+      "Identifier": "",
+      "Weight": "0.43%",
+      "Market Value": "919,000.00",
+      "Shares Held": "25.00",
+      "Asset Category": "Equity",
+      "Price": "36760.0"
+    },
+    {
       "Name": "CASH",
-      "Weight (%)": "0.24",
-      "Price": "1.0",
-      "Shares": "511,537.36",
-      "Market Value": "511,537.36"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.24%",
+      "Market Value": "511,537.36",
+      "Shares Held": "511,537.36",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     }
   ]
 }

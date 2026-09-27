@@ -4,61 +4,74 @@
   "pageSize": 250,
   "totalRows": 506,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "CME",
       "Name": "CME GROUP INC",
-      "Weight (%)": "0.14",
-      "Price": "264.48",
-      "Shares": "378.00",
-      "Market Value": "99,973.44"
+      "Ticker": "CME",
+      "Identifier": "2965839",
+      "Weight": "0.14%",
+      "Market Value": "99,973.44",
+      "Shares Held": "378.00",
+      "Asset Category": "Equity",
+      "Price": "264.48"
     },
     {
-      "Ticker": "SO",
       "Name": "SOUTHERN CO/THE",
-      "Weight (%)": "0.14",
-      "Price": "82.88",
-      "Shares": "1,199.00",
-      "Market Value": "99,373.12"
+      "Ticker": "SO",
+      "Identifier": "2829601",
+      "Weight": "0.14%",
+      "Market Value": "99,373.12",
+      "Shares Held": "1,199.00",
+      "Asset Category": "Equity",
+      "Price": "82.88"
     },
     {
-      "Ticker": "SYK",
       "Name": "STRYKER CORP",
-      "Weight (%)": "0.14",
-      "Price": "272.36",
-      "Shares": "363.00",
-      "Market Value": "98,866.68"
+      "Ticker": "SYK",
+      "Identifier": "2853688",
+      "Weight": "0.14%",
+      "Market Value": "98,866.68",
+      "Shares Held": "363.00",
+      "Asset Category": "Equity",
+      "Price": "272.36"
     },
     {
-      "Ticker": "DDOG",
       "Name": "DATADOG INC - CLASS A",
-      "Weight (%)": "0.14",
-      "Price": "268.13",
-      "Shares": "363.00",
-      "Market Value": "97,331.19"
+      "Ticker": "DDOG",
+      "Identifier": "BKT9Y49",
+      "Weight": "0.14%",
+      "Market Value": "97,331.19",
+      "Shares Held": "363.00",
+      "Asset Category": "Equity",
+      "Price": "268.13"
     },
     {
-      "Ticker": "HWM",
       "Name": "HOWMET AEROSPACE INC",
-      "Weight (%)": "0.14",
-      "Price": "232.48",
-      "Shares": "417.00",
-      "Market Value": "96,944.16"
+      "Ticker": "HWM",
+      "Identifier": "BKLJ8V2",
+      "Weight": "0.14%",
+      "Market Value": "96,944.16",
+      "Shares Held": "417.00",
+      "Asset Category": "Equity",
+      "Price": "232.48"
     },
     {
-      "Ticker": "USB",
       "Name": "US BANCORP",
-      "Weight (%)": "0.14",
-      "Price": "59.33",
-      "Shares": "1,607.00",
-      "Market Value": "95,343.31"
+      "Ticker": "USB",
+      "Identifier": "2736035",
+      "Weight": "0.14%",
+      "Market Value": "95,343.31",
+      "Shares Held": "1,607.00",
+      "Asset Category": "Equity",
+      "Price": "59.33"
     }
   ]
 }

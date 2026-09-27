@@ -4,381 +4,474 @@
   "pageSize": 250,
   "totalRows": 46,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "",
       "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Weight (%)": "0.08",
-      "Price": "1.0",
-      "Shares": "19,196.26",
-      "Market Value": "19,196.26"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.08%",
+      "Market Value": "19,196.26",
+      "Shares Held": "19,196.26",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "BRITISH STERLING POUND",
-      "Weight (%)": "0.00",
-      "Price": "1.0",
-      "Shares": "0.01",
-      "Market Value": "0.01"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.01",
+      "Shares Held": "0.01",
+      "Asset Category": "Equity",
+      "Price": "1.0"
     },
     {
-      "Ticker": "",
       "Name": "DANISH KRONE",
-      "Weight (%)": "0.00",
-      "Price": "0.0",
-      "Shares": "-0.01",
-      "Market Value": "0.00"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.00",
+      "Shares Held": "-0.01",
+      "Asset Category": "Equity",
+      "Price": "0.0"
     },
     {
-      "Ticker": "",
       "Name": "HONG KONG DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.0",
-      "Shares": "0.02",
-      "Market Value": "0.00"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "0.00",
+      "Shares Held": "0.02",
+      "Asset Category": "Equity",
+      "Price": "0.0"
     },
     {
-      "Ticker": "",
       "Name": "TAIWAN DOLLAR",
-      "Weight (%)": "0.00",
-      "Price": "0.03448275862068965",
-      "Shares": "-1.45",
-      "Market Value": "-0.05"
-    },
-    {
       "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-0.05",
+      "Shares Held": "-1.45",
+      "Asset Category": "Equity",
+      "Price": "0.03448275862068965"
+    },
+    {
       "Name": "CASH",
-      "Weight (%)": "-0.03",
-      "Price": "1.0",
-      "Shares": "-6,370.46",
-      "Market Value": "-6,370.46"
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.03%",
+      "Market Value": "-6,370.46",
+      "Shares Held": "-6,370.46",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
-      "Ticker": "BE",
       "Name": "BLOOM ENERGY CORP- A",
-      "Weight (%)": "6.83",
-      "Price": "288.7",
-      "Shares": "5,889.00",
-      "Market Value": "1,700,154.30"
+      "Ticker": "BE",
+      "Identifier": "BDD1BB8",
+      "Weight": "6.83%",
+      "Market Value": "1,700,154.30",
+      "Shares Held": "5,889.00",
+      "Asset Category": "Equity",
+      "Price": "288.7"
     },
     {
-      "Ticker": "ETN",
       "Name": "EATON CORP PLC",
-      "Weight (%)": "6.58",
-      "Price": "439.98",
-      "Shares": "3,721.00",
-      "Market Value": "1,637,165.58"
+      "Ticker": "ETN",
+      "Identifier": "B8KQN82",
+      "Weight": "6.58%",
+      "Market Value": "1,637,165.58",
+      "Shares Held": "3,721.00",
+      "Asset Category": "Equity",
+      "Price": "439.98"
     },
     {
-      "Ticker": "GEV",
       "Name": "GE VERNOVA INC",
-      "Weight (%)": "6.34",
-      "Price": "957.63",
-      "Shares": "1,648.00",
-      "Market Value": "1,578,174.24"
+      "Ticker": "GEV",
+      "Identifier": "BP6H4Y1",
+      "Weight": "6.34%",
+      "Market Value": "1,578,174.24",
+      "Shares Held": "1,648.00",
+      "Asset Category": "Equity",
+      "Price": "957.63"
     },
     {
-      "Ticker": "TT",
       "Name": "TRANE TECHNOLOGIES PLC",
-      "Weight (%)": "6.32",
-      "Price": "454.44",
-      "Shares": "3,461.00",
-      "Market Value": "1,572,816.84"
+      "Ticker": "TT",
+      "Identifier": "BK9ZQ96",
+      "Weight": "6.32%",
+      "Market Value": "1,572,816.84",
+      "Shares Held": "3,461.00",
+      "Asset Category": "Equity",
+      "Price": "454.44"
     },
     {
-      "Ticker": "ENR GR",
       "Name": "SIEMENS ENERGY AG",
-      "Weight (%)": "6.08",
-      "Price": "162.5849408983451",
-      "Shares": "9,306.00",
-      "Market Value": "1,513,015.46"
+      "Ticker": "ENR GR",
+      "Identifier": "BMTVQK9",
+      "Weight": "6.08%",
+      "Market Value": "1,513,015.46",
+      "Shares Held": "9,306.00",
+      "Asset Category": "Equity",
+      "Price": "162.5849408983451"
     },
     {
-      "Ticker": "SU FP",
       "Name": "SCHNEIDER ELECTRIC SE",
-      "Weight (%)": "6.08",
-      "Price": "331.7827346491228",
-      "Shares": "4,560.00",
-      "Market Value": "1,512,929.27"
+      "Ticker": "SU FP",
+      "Identifier": "4834108",
+      "Weight": "6.08%",
+      "Market Value": "1,512,929.27",
+      "Shares Held": "4,560.00",
+      "Asset Category": "Equity",
+      "Price": "331.7827346491228"
     },
     {
-      "Ticker": "CARR",
       "Name": "CARRIER GLOBAL CORP",
-      "Weight (%)": "4.57",
-      "Price": "56.37",
-      "Shares": "20,157.00",
-      "Market Value": "1,136,250.09"
+      "Ticker": "CARR",
+      "Identifier": "BK4N0D7",
+      "Weight": "4.57%",
+      "Market Value": "1,136,250.09",
+      "Shares Held": "20,157.00",
+      "Asset Category": "Equity",
+      "Price": "56.37"
     },
     {
-      "Ticker": "NXT",
       "Name": "NEXTPOWER INC",
-      "Weight (%)": "4.56",
-      "Price": "80.85",
-      "Shares": "14,034.00",
-      "Market Value": "1,134,648.90"
+      "Ticker": "NXT",
+      "Identifier": "BR1GTS6",
+      "Weight": "4.56%",
+      "Market Value": "1,134,648.90",
+      "Shares Held": "14,034.00",
+      "Asset Category": "Equity",
+      "Price": "80.85"
     },
     {
-      "Ticker": "NDX1 GR",
       "Name": "NORDEX SE",
-      "Weight (%)": "4.54",
-      "Price": "45.3550416046951",
-      "Shares": "24,877.00",
-      "Market Value": "1,128,297.37"
+      "Ticker": "NDX1 GR",
+      "Identifier": "B06CF71",
+      "Weight": "4.54%",
+      "Market Value": "1,128,297.37",
+      "Shares Held": "24,877.00",
+      "Asset Category": "Equity",
+      "Price": "45.3550416046951"
     },
     {
-      "Ticker": "PRY IM",
       "Name": "PRYSMIAN SPA",
-      "Weight (%)": "4.46",
-      "Price": "139.5539751006036",
-      "Shares": "7,952.00",
-      "Market Value": "1,109,733.21"
+      "Ticker": "PRY IM",
+      "Identifier": "B1W4V69",
+      "Weight": "4.46%",
+      "Market Value": "1,109,733.21",
+      "Shares Held": "7,952.00",
+      "Asset Category": "Equity",
+      "Price": "139.5539751006036"
     },
     {
-      "Ticker": "373220 KS",
       "Name": "LG ENERGY SOLUTION",
-      "Weight (%)": "4.37",
-      "Price": "258.5984915536521",
-      "Shares": "4,203.00",
-      "Market Value": "1,086,889.46"
+      "Ticker": "373220 KS",
+      "Identifier": "BNSP8W5",
+      "Weight": "4.37%",
+      "Market Value": "1,086,889.46",
+      "Shares Held": "4,203.00",
+      "Asset Category": "Equity",
+      "Price": "258.5984915536521"
     },
     {
-      "Ticker": "VWS DC",
       "Name": "VESTAS WIND SYSTEMS A/S",
-      "Weight (%)": "4.22",
-      "Price": "30.2741450135392",
-      "Shares": "34,714.00",
-      "Market Value": "1,050,936.67"
+      "Ticker": "VWS DC",
+      "Identifier": "BN4MYF5",
+      "Weight": "4.22%",
+      "Market Value": "1,050,936.67",
+      "Shares Held": "34,714.00",
+      "Asset Category": "Equity",
+      "Price": "30.2741450135392"
     },
     {
-      "Ticker": "006400 KS",
       "Name": "SAMSUNG SDI CO LTD",
-      "Weight (%)": "4.20",
-      "Price": "383.299614678899",
-      "Shares": "2,725.00",
-      "Market Value": "1,044,491.45"
+      "Ticker": "006400 KS",
+      "Identifier": "6771645",
+      "Weight": "4.20%",
+      "Market Value": "1,044,491.45",
+      "Shares Held": "2,725.00",
+      "Asset Category": "Equity",
+      "Price": "383.299614678899"
     },
     {
-      "Ticker": "3750 HK",
       "Name": "CONTEMPORARY AMPEREX TECHN-H",
-      "Weight (%)": "3.99",
-      "Price": "62.39203459119496",
-      "Shares": "15,900.00",
-      "Market Value": "992,033.35"
+      "Ticker": "3750 HK",
+      "Identifier": "BT9QPW8",
+      "Weight": "3.99%",
+      "Market Value": "992,033.35",
+      "Shares Held": "15,900.00",
+      "Asset Category": "Equity",
+      "Price": "62.39203459119496"
     },
     {
-      "Ticker": "FSLR",
       "Name": "FIRST SOLAR INC",
-      "Weight (%)": "3.94",
-      "Price": "177.71",
-      "Shares": "5,511.00",
-      "Market Value": "979,359.81"
+      "Ticker": "FSLR",
+      "Identifier": "B1HMF22",
+      "Weight": "3.94%",
+      "Market Value": "979,359.81",
+      "Shares Held": "5,511.00",
+      "Asset Category": "Equity",
+      "Price": "177.71"
     },
     {
-      "Ticker": "NIBEB SS",
       "Name": "NIBE INDUSTRIER AB-B SHS",
-      "Weight (%)": "3.48",
-      "Price": "4.607802063809848",
-      "Shares": "187,808.00",
-      "Market Value": "865,382.09"
+      "Ticker": "NIBEB SS",
+      "Identifier": "BN7BZM3",
+      "Weight": "3.48%",
+      "Market Value": "865,382.09",
+      "Shares Held": "187,808.00",
+      "Asset Category": "Equity",
+      "Price": "4.607802063809848"
     },
     {
-      "Ticker": "ENPH",
       "Name": "ENPHASE ENERGY INC",
-      "Weight (%)": "1.81",
-      "Price": "32.4",
-      "Shares": "13,892.00",
-      "Market Value": "450,100.80"
+      "Ticker": "ENPH",
+      "Identifier": "B65SQW4",
+      "Weight": "1.81%",
+      "Market Value": "450,100.80",
+      "Shares Held": "13,892.00",
+      "Asset Category": "Equity",
+      "Price": "32.4"
     },
     {
-      "Ticker": "JMAT LN",
       "Name": "JOHNSON MATTHEY PLC",
-      "Weight (%)": "1.67",
-      "Price": "31.41721874292613",
-      "Shares": "13,253.00",
-      "Market Value": "416,372.40"
+      "Ticker": "JMAT LN",
+      "Identifier": "BTQHVY8",
+      "Weight": "1.67%",
+      "Market Value": "416,372.40",
+      "Shares Held": "13,253.00",
+      "Asset Category": "Equity",
+      "Price": "31.41721874292613"
     },
     {
-      "Ticker": "257 HK",
       "Name": "EB ENVIRONMENT",
-      "Weight (%)": "1.52",
-      "Price": "0.5851643687064291",
-      "Shares": "645,500.00",
-      "Market Value": "377,723.60"
+      "Ticker": "257 HK",
+      "Identifier": "6630940",
+      "Weight": "1.52%",
+      "Market Value": "377,723.60",
+      "Shares Held": "645,500.00",
+      "Asset Category": "Equity",
+      "Price": "0.5851643687064291"
     },
     {
-      "Ticker": "QS",
       "Name": "QUANTUMSCAPE CORP",
-      "Weight (%)": "1.22",
-      "Price": "4.909999999999999",
-      "Shares": "61,735.00",
-      "Market Value": "303,118.85"
+      "Ticker": "QS",
+      "Identifier": "BMC73Z8",
+      "Weight": "1.22%",
+      "Market Value": "303,118.85",
+      "Shares Held": "61,735.00",
+      "Asset Category": "Equity",
+      "Price": "4.909999999999999"
     },
     {
-      "Ticker": "PLUG",
       "Name": "PLUG POWER INC",
-      "Weight (%)": "1.17",
-      "Price": "1.98",
-      "Shares": "146,889.00",
-      "Market Value": "290,840.22"
+      "Ticker": "PLUG",
+      "Identifier": "2508386",
+      "Weight": "1.17%",
+      "Market Value": "290,840.22",
+      "Shares Held": "146,889.00",
+      "Asset Category": "Equity",
+      "Price": "1.98"
     },
     {
-      "Ticker": "1513 TT",
       "Name": "CHUNG-HSIN ELECTRIC & MACHIN",
-      "Weight (%)": "1.11",
-      "Price": "5.215287735849056",
-      "Shares": "53,000.00",
-      "Market Value": "276,410.25"
+      "Ticker": "1513 TT",
+      "Identifier": "6194811",
+      "Weight": "1.11%",
+      "Market Value": "276,410.25",
+      "Shares Held": "53,000.00",
+      "Asset Category": "Equity",
+      "Price": "5.215287735849056"
     },
     {
-      "Ticker": "336260 KS",
       "Name": "DOOSAN FUEL CELL CO LTD",
-      "Weight (%)": "0.96",
-      "Price": "34.72503206997084",
-      "Shares": "6,860.00",
-      "Market Value": "238,213.72"
+      "Ticker": "336260 KS",
+      "Identifier": "BH4G7R8",
+      "Weight": "0.96%",
+      "Market Value": "238,213.72",
+      "Shares Held": "6,860.00",
+      "Asset Category": "Equity",
+      "Price": "34.72503206997084"
     },
     {
-      "Ticker": "968 HK",
       "Name": "XINYI SOLAR HOLDINGS LTD",
-      "Weight (%)": "0.94",
-      "Price": "0.244774638359871",
-      "Shares": "960,900.00",
-      "Market Value": "235,203.95"
+      "Ticker": "968 HK",
+      "Identifier": "BGQYNN1",
+      "Weight": "0.94%",
+      "Market Value": "235,203.95",
+      "Shares Held": "960,900.00",
+      "Asset Category": "Equity",
+      "Price": "0.244774638359871"
     },
     {
-      "Ticker": "6121 TT",
       "Name": "SIMPLO TECHNOLOGY CO LTD",
-      "Weight (%)": "0.94",
-      "Price": "11.81294099879178",
-      "Shares": "19,864.00",
-      "Market Value": "234,652.26"
+      "Ticker": "6121 TT",
+      "Identifier": "6421928",
+      "Weight": "0.94%",
+      "Market Value": "234,652.26",
+      "Shares Held": "19,864.00",
+      "Asset Category": "Equity",
+      "Price": "11.81294099879178"
     },
     {
-      "Ticker": "S92 GR",
       "Name": "SMA SOLAR TECHNOLOGY AG",
-      "Weight (%)": "0.94",
-      "Price": "64.36128979143798",
-      "Shares": "3,644.00",
-      "Market Value": "234,532.54"
+      "Ticker": "S92 GR",
+      "Identifier": "B3B20H2",
+      "Weight": "0.94%",
+      "Market Value": "234,532.54",
+      "Shares Held": "3,644.00",
+      "Asset Category": "Equity",
+      "Price": "64.36128979143798"
     },
     {
-      "Ticker": "SEDG",
       "Name": "SOLAREDGE TECHNOLOGIES INC",
-      "Weight (%)": "0.85",
-      "Price": "32.68",
-      "Shares": "6,468.00",
-      "Market Value": "211,374.24"
+      "Ticker": "SEDG",
+      "Identifier": "BWC52Q6",
+      "Weight": "0.85%",
+      "Market Value": "211,374.24",
+      "Shares Held": "6,468.00",
+      "Asset Category": "Equity",
+      "Price": "32.68"
     },
     {
-      "Ticker": "3211 TT",
       "Name": "DYNAPACK INTERNATIONAL TECH",
-      "Weight (%)": "0.78",
-      "Price": "11.89148404907976",
-      "Shares": "16,300.00",
-      "Market Value": "193,831.19"
+      "Ticker": "3211 TT",
+      "Identifier": "6732028",
+      "Weight": "0.78%",
+      "Market Value": "193,831.19",
+      "Shares Held": "16,300.00",
+      "Asset Category": "Equity",
+      "Price": "11.89148404907976"
     },
     {
-      "Ticker": "LAND SW",
       "Name": "LANDIS + GYR GROUP AG",
-      "Weight (%)": "0.71",
-      "Price": "58.48623971024037",
-      "Shares": "3,037.00",
-      "Market Value": "177,622.71"
+      "Ticker": "LAND SW",
+      "Identifier": "BF41XY8",
+      "Weight": "0.71%",
+      "Market Value": "177,622.71",
+      "Shares Held": "3,037.00",
+      "Asset Category": "Equity",
+      "Price": "58.48623971024037"
     },
     {
-      "Ticker": "112610 KS",
       "Name": "CS WIND CORP",
-      "Weight (%)": "0.65",
-      "Price": "36.85856237265112",
-      "Shares": "4,417.00",
-      "Market Value": "162,804.27"
+      "Ticker": "112610 KS",
+      "Identifier": "BSPBZK8",
+      "Weight": "0.65%",
+      "Market Value": "162,804.27",
+      "Shares Held": "4,417.00",
+      "Asset Category": "Equity",
+      "Price": "36.85856237265112"
     },
     {
-      "Ticker": "AMPX",
       "Name": "AMPRIUS TECHNOLOGIES INC",
-      "Weight (%)": "0.60",
-      "Price": "9.75",
-      "Shares": "15,358.00",
-      "Market Value": "149,740.50"
+      "Ticker": "AMPX",
+      "Identifier": "BPSKN52",
+      "Weight": "0.60%",
+      "Market Value": "149,740.50",
+      "Shares Held": "15,358.00",
+      "Asset Category": "Equity",
+      "Price": "9.75"
     },
     {
-      "Ticker": "SHLS",
       "Name": "SHOALS TECHNOLOGIES GROUP -A",
-      "Weight (%)": "0.53",
-      "Price": "7.470000000000001",
-      "Shares": "17,758.00",
-      "Market Value": "132,652.26"
+      "Ticker": "SHLS",
+      "Identifier": "BMDJ085",
+      "Weight": "0.53%",
+      "Market Value": "132,652.26",
+      "Shares Held": "17,758.00",
+      "Asset Category": "Equity",
+      "Price": "7.470000000000001"
     },
     {
-      "Ticker": "CWR LN",
       "Name": "CERES POWER HOLDINGS PLC",
-      "Weight (%)": "0.50",
-      "Price": "5.533774722838137",
-      "Shares": "22,550.00",
-      "Market Value": "124,786.62"
+      "Ticker": "CWR LN",
+      "Identifier": "BG5KQW0",
+      "Weight": "0.50%",
+      "Market Value": "124,786.62",
+      "Shares Held": "22,550.00",
+      "Asset Category": "Equity",
+      "Price": "5.533774722838137"
     },
     {
-      "Ticker": "EOSE",
       "Name": "EOS ENERGY ENTERPRISES INC",
-      "Weight (%)": "0.49",
-      "Price": "3.165000130599451",
-      "Shares": "38,285.00",
-      "Market Value": "121,172.03"
+      "Ticker": "EOSE",
+      "Identifier": "BN7KCQ3",
+      "Weight": "0.49%",
+      "Market Value": "121,172.03",
+      "Shares Held": "38,285.00",
+      "Asset Category": "Equity",
+      "Price": "3.165000130599451"
     },
     {
-      "Ticker": "FLNC",
       "Name": "FLUENCE ENERGY INC",
-      "Weight (%)": "0.48",
-      "Price": "7.850000000000001",
-      "Shares": "15,106.00",
-      "Market Value": "118,582.10"
+      "Ticker": "FLNC",
+      "Identifier": "BMXC0N9",
+      "Weight": "0.48%",
+      "Market Value": "118,582.10",
+      "Shares Held": "15,106.00",
+      "Asset Category": "Equity",
+      "Price": "7.850000000000001"
     },
     {
-      "Ticker": "1072 HK",
       "Name": "DONGFANG ELECTRIC CORP LTD-H",
-      "Weight (%)": "0.40",
-      "Price": "2.317709744779582",
-      "Shares": "43,100.00",
-      "Market Value": "99,893.29"
+      "Ticker": "1072 HK",
+      "Identifier": "6278566",
+      "Weight": "0.40%",
+      "Market Value": "99,893.29",
+      "Shares Held": "43,100.00",
+      "Asset Category": "Equity",
+      "Price": "2.317709744779582"
     },
     {
-      "Ticker": "2208 HK",
       "Name": "GOLDWIND SCIENCE&TECHNOLOG-H",
-      "Weight (%)": "0.29",
-      "Price": "1.10913501529052",
-      "Shares": "65,400.00",
-      "Market Value": "72,537.43"
+      "Ticker": "2208 HK",
+      "Identifier": "B59GZJ7",
+      "Weight": "0.29%",
+      "Market Value": "72,537.43",
+      "Shares Held": "65,400.00",
+      "Asset Category": "Equity",
+      "Price": "1.10913501529052"
     },
     {
-      "Ticker": "AMRC",
       "Name": "AMERESCO INC-CL A",
-      "Weight (%)": "0.29",
-      "Price": "21.48",
-      "Shares": "3,352.00",
-      "Market Value": "72,000.96"
+      "Ticker": "AMRC",
+      "Identifier": "B3SWPT2",
+      "Weight": "0.29%",
+      "Market Value": "72,000.96",
+      "Shares Held": "3,352.00",
+      "Asset Category": "Equity",
+      "Price": "21.48"
     },
     {
-      "Ticker": "6865 HK",
       "Name": "FLAT GLASS GROUP CO LTD-H",
-      "Weight (%)": "0.27",
-      "Price": "0.705639406779661",
-      "Shares": "94,400.00",
-      "Market Value": "66,612.36"
+      "Ticker": "6865 HK",
+      "Identifier": "BYQ9774",
+      "Weight": "0.27%",
+      "Market Value": "66,612.36",
+      "Shares Held": "94,400.00",
+      "Asset Category": "Equity",
+      "Price": "0.705639406779661"
     },
     {
-      "Ticker": "CSIQ",
       "Name": "CANADIAN SOLAR INC",
-      "Weight (%)": "0.26",
-      "Price": "10.8",
-      "Shares": "5,863.00",
-      "Market Value": "63,320.40"
+      "Ticker": "CSIQ",
+      "Identifier": "B1GKCH1",
+      "Weight": "0.26%",
+      "Market Value": "63,320.40",
+      "Shares Held": "5,863.00",
+      "Asset Category": "Equity",
+      "Price": "10.8"
     }
   ]
 }

@@ -4,85 +4,104 @@
   "pageSize": 250,
   "totalRows": 509,
   "headers": [
-    "Ticker",
     "Name",
-    "Weight (%)",
-    "Price",
-    "Shares",
-    "Market Value"
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
   ],
   "rows": [
     {
-      "Ticker": "HOOD",
       "Name": "ROBINHOOD MARKETS INC - A",
-      "Weight (%)": "0.14",
-      "Price": "119.4",
-      "Shares": "708.00",
-      "Market Value": "84,535.20"
+      "Ticker": "HOOD",
+      "Identifier": "BP0TQN6",
+      "Weight": "0.14%",
+      "Market Value": "84,535.20",
+      "Shares Held": "708.00",
+      "Asset Category": "Equity",
+      "Price": "119.4"
     },
     {
-      "Ticker": "GD",
       "Name": "GENERAL DYNAMICS CORP",
-      "Weight (%)": "0.14",
-      "Price": "336.72",
-      "Shares": "251.00",
-      "Market Value": "84,516.72"
+      "Ticker": "GD",
+      "Identifier": "2365161",
+      "Weight": "0.14%",
+      "Market Value": "84,516.72",
+      "Shares Held": "251.00",
+      "Asset Category": "Equity",
+      "Price": "336.72"
     },
     {
-      "Ticker": "PWR",
       "Name": "QUANTA SERVICES INC",
-      "Weight (%)": "0.14",
-      "Price": "649.13",
-      "Shares": "130.00",
-      "Market Value": "84,386.90"
+      "Ticker": "PWR",
+      "Identifier": "2150204",
+      "Weight": "0.14%",
+      "Market Value": "84,386.90",
+      "Shares Held": "130.00",
+      "Asset Category": "Equity",
+      "Price": "649.13"
     },
     {
-      "Ticker": "USB",
       "Name": "US BANCORP",
-      "Weight (%)": "0.14",
-      "Price": "59.33",
-      "Shares": "1,421.00",
-      "Market Value": "84,307.93"
+      "Ticker": "USB",
+      "Identifier": "2736035",
+      "Weight": "0.14%",
+      "Market Value": "84,307.93",
+      "Shares Held": "1,421.00",
+      "Asset Category": "Equity",
+      "Price": "59.33"
     },
     {
-      "Ticker": "ADBE",
       "Name": "ADOBE INC",
-      "Weight (%)": "0.14",
-      "Price": "235.47",
-      "Shares": "358.00",
-      "Market Value": "84,298.26"
+      "Ticker": "ADBE",
+      "Identifier": "2008154",
+      "Weight": "0.14%",
+      "Market Value": "84,298.26",
+      "Shares Held": "358.00",
+      "Asset Category": "Equity",
+      "Price": "235.47"
     },
     {
-      "Ticker": "PNC",
       "Name": "PNC FINANCIAL SERVICES GROUP",
-      "Weight (%)": "0.14",
-      "Price": "225.64",
-      "Shares": "368.00",
-      "Market Value": "83,035.52"
+      "Ticker": "PNC",
+      "Identifier": "2692665",
+      "Weight": "0.14%",
+      "Market Value": "83,035.52",
+      "Shares Held": "368.00",
+      "Asset Category": "Equity",
+      "Price": "225.64"
     },
     {
-      "Ticker": "APP",
       "Name": "APPLOVIN CORP-CLASS A",
-      "Weight (%)": "0.14",
-      "Price": "310.75",
-      "Shares": "266.00",
-      "Market Value": "82,659.50"
+      "Ticker": "APP",
+      "Identifier": "BMV3LG4",
+      "Weight": "0.14%",
+      "Market Value": "82,659.50",
+      "Shares Held": "266.00",
+      "Asset Category": "Equity",
+      "Price": "310.75"
     },
     {
-      "Ticker": "DDOG",
       "Name": "DATADOG INC - CLASS A",
-      "Weight (%)": "0.14",
-      "Price": "268.13",
-      "Shares": "308.00",
-      "Market Value": "82,584.04"
+      "Ticker": "DDOG",
+      "Identifier": "BKT9Y49",
+      "Weight": "0.14%",
+      "Market Value": "82,584.04",
+      "Shares Held": "308.00",
+      "Asset Category": "Equity",
+      "Price": "268.13"
     },
     {
-      "Ticker": "BX",
       "Name": "BLACKSTONE INC",
-      "Weight (%)": "0.14",
-      "Price": "118.42",
-      "Shares": "690.00",
-      "Market Value": "81,709.80"
+      "Ticker": "BX",
+      "Identifier": "BKF2SL7",
+      "Weight": "0.14%",
+      "Market Value": "81,709.80",
+      "Shares Held": "690.00",
+      "Asset Category": "Equity",
+      "Price": "118.42"
     }
   ]
 }
