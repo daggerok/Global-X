@@ -1,0 +1,814 @@
+{
+  "ticker": "QYLD",
+  "name": "Nasdaq 100 Covered Call ETF",
+  "category": "Other",
+  "fundPage": "https://www.globalxetfs.com/funds/qyld/",
+  "dataFile": "./funds/QYLD/meta.json",
+  "cusip": null,
+  "isin": null,
+  "ter": "0.60%",
+  "terValue": 0.6,
+  "terGross": "0.60%",
+  "terGrossValue": 0.6,
+  "nav": {
+    "display": "—",
+    "value": null,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": null,
+    "kind": "derived (Net Assets / Shares Outstanding)"
+  },
+  "navValue": null,
+  "aum": {
+    "display": "$8.51B",
+    "value": 8506818950,
+    "asOfDate": "Sep 25 2026",
+    "source": "GLOBALX fund page Fund Details \"Net Assets\""
+  },
+  "aumValue": 8506818950,
+  "asOfDate": "Sep 25 2026",
+  "inceptionDate": "Dec 11 2013",
+  "inceptionDateFundPage": null,
+  "exchange": "NGM",
+  "closePrice": "$18.55",
+  "closePriceValue": 18.55,
+  "premiumDiscount": {
+    "display": "—",
+    "value": null,
+    "derivedValue": null,
+    "kind": "derived (Market Price - NAV) / NAV"
+  },
+  "premiumDiscountValue": null,
+  "premiumDiscountDerivedValue": null,
+  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
+  "bidAskSpread": {
+    "display": null,
+    "value": null,
+    "asOfDate": null,
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+  },
+  "bidAskSpreadValue": null,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 8506818950,
+  "sharesOutstanding": {
+    "display": null,
+    "value": null,
+    "asOfDate": "Sep 25 2026"
+  },
+  "netAssetsAsOf": "Sep 25 2026",
+  "secYieldAsOf": null,
+  "distributions": {
+    "frequency": "01 - Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Dividend"
+    ],
+    "rows": [
+      {
+        "Ex-Date": "Sep 21 2026",
+        "Dividend": "$0.1770"
+      },
+      {
+        "Ex-Date": "Aug 24 2026",
+        "Dividend": "$0.1830"
+      },
+      {
+        "Ex-Date": "Jul 20 2026",
+        "Dividend": "$0.1780"
+      },
+      {
+        "Ex-Date": "Jun 22 2026",
+        "Dividend": "$0.1850"
+      },
+      {
+        "Ex-Date": "May 18 2026",
+        "Dividend": "$0.1790"
+      },
+      {
+        "Ex-Date": "Apr 20 2026",
+        "Dividend": "$0.1790"
+      },
+      {
+        "Ex-Date": "Mar 23 2026",
+        "Dividend": "$0.1720"
+      },
+      {
+        "Ex-Date": "Feb 23 2026",
+        "Dividend": "$0.1770"
+      },
+      {
+        "Ex-Date": "Jan 20 2026",
+        "Dividend": "$0.1790"
+      },
+      {
+        "Ex-Date": "Dec 22 2025",
+        "Dividend": "$0.1780"
+      },
+      {
+        "Ex-Date": "Nov 24 2025",
+        "Dividend": "$0.1730"
+      },
+      {
+        "Ex-Date": "Oct 20 2025",
+        "Dividend": "$0.1730"
+      },
+      {
+        "Ex-Date": "Sep 22 2025",
+        "Dividend": "$0.1700"
+      },
+      {
+        "Ex-Date": "Aug 18 2025",
+        "Dividend": "$0.1680"
+      },
+      {
+        "Ex-Date": "Jul 21 2025",
+        "Dividend": "$0.1650"
+      },
+      {
+        "Ex-Date": "Jun 23 2025",
+        "Dividend": "$0.1660"
+      },
+      {
+        "Ex-Date": "May 19 2025",
+        "Dividend": "$0.1650"
+      },
+      {
+        "Ex-Date": "Apr 21 2025",
+        "Dividend": "$0.1600"
+      },
+      {
+        "Ex-Date": "Mar 24 2025",
+        "Dividend": "$0.1700"
+      },
+      {
+        "Ex-Date": "Feb 24 2025",
+        "Dividend": "$0.1650"
+      },
+      {
+        "Ex-Date": "Jan 21 2025",
+        "Dividend": "$0.1880"
+      },
+      {
+        "Ex-Date": "Dec 30 2024",
+        "Dividend": "$0.3390"
+      },
+      {
+        "Ex-Date": "Nov 18 2024",
+        "Dividend": "$0.1800"
+      },
+      {
+        "Ex-Date": "Oct 21 2024",
+        "Dividend": "$0.1830"
+      },
+      {
+        "Ex-Date": "Sep 23 2024",
+        "Dividend": "$0.1810"
+      },
+      {
+        "Ex-Date": "Aug 19 2024",
+        "Dividend": "$0.1790"
+      },
+      {
+        "Ex-Date": "Jul 22 2024",
+        "Dividend": "$0.1770"
+      },
+      {
+        "Ex-Date": "Jun 24 2024",
+        "Dividend": "$0.1690"
+      },
+      {
+        "Ex-Date": "May 20 2024",
+        "Dividend": "$0.1630"
+      },
+      {
+        "Ex-Date": "Apr 22 2024",
+        "Dividend": "$0.1720"
+      },
+      {
+        "Ex-Date": "Mar 18 2024",
+        "Dividend": "$0.1780"
+      },
+      {
+        "Ex-Date": "Feb 20 2024",
+        "Dividend": "$0.1770"
+      },
+      {
+        "Ex-Date": "Jan 22 2024",
+        "Dividend": "$0.1790"
+      },
+      {
+        "Ex-Date": "Dec 28 2023",
+        "Dividend": "$0.1660"
+      },
+      {
+        "Ex-Date": "Nov 20 2023",
+        "Dividend": "$0.1610"
+      },
+      {
+        "Ex-Date": "Oct 23 2023",
+        "Dividend": "$0.1670"
+      },
+      {
+        "Ex-Date": "Sep 18 2023",
+        "Dividend": "$0.1720"
+      },
+      {
+        "Ex-Date": "Aug 21 2023",
+        "Dividend": "$0.1730"
+      },
+      {
+        "Ex-Date": "Jul 24 2023",
+        "Dividend": "$0.1800"
+      },
+      {
+        "Ex-Date": "Jun 20 2023",
+        "Dividend": "$0.1770"
+      },
+      {
+        "Ex-Date": "May 22 2023",
+        "Dividend": "$0.1680"
+      },
+      {
+        "Ex-Date": "Apr 24 2023",
+        "Dividend": "$0.1730"
+      },
+      {
+        "Ex-Date": "Mar 20 2023",
+        "Dividend": "$0.1690"
+      },
+      {
+        "Ex-Date": "Feb 21 2023",
+        "Dividend": "$0.1670"
+      },
+      {
+        "Ex-Date": "Jan 23 2023",
+        "Dividend": "$0.1700"
+      },
+      {
+        "Ex-Date": "Dec 29 2022",
+        "Dividend": "$0.1610"
+      },
+      {
+        "Ex-Date": "Nov 21 2022",
+        "Dividend": "$0.1650"
+      },
+      {
+        "Ex-Date": "Oct 24 2022",
+        "Dividend": "$0.1630"
+      },
+      {
+        "Ex-Date": "Sep 19 2022",
+        "Dividend": "$0.1650"
+      },
+      {
+        "Ex-Date": "Aug 22 2022",
+        "Dividend": "$0.1810"
+      },
+      {
+        "Ex-Date": "Jul 18 2022",
+        "Dividend": "$0.1810"
+      },
+      {
+        "Ex-Date": "Jun 21 2022",
+        "Dividend": "$0.1740"
+      },
+      {
+        "Ex-Date": "May 23 2022",
+        "Dividend": "$0.1790"
+      },
+      {
+        "Ex-Date": "Apr 18 2022",
+        "Dividend": "$0.2050"
+      },
+      {
+        "Ex-Date": "Mar 21 2022",
+        "Dividend": "$0.2100"
+      },
+      {
+        "Ex-Date": "Feb 22 2022",
+        "Dividend": "$0.2020"
+      },
+      {
+        "Ex-Date": "Jan 24 2022",
+        "Dividend": "$0.2030"
+      },
+      {
+        "Ex-Date": "Dec 30 2021",
+        "Dividend": "$0.4990"
+      },
+      {
+        "Ex-Date": "Nov 22 2021",
+        "Dividend": "$0.2250"
+      },
+      {
+        "Ex-Date": "Oct 18 2021",
+        "Dividend": "$0.1970"
+      },
+      {
+        "Ex-Date": "Sep 20 2021",
+        "Dividend": "$0.1900"
+      },
+      {
+        "Ex-Date": "Aug 23 2021",
+        "Dividend": "$0.1880"
+      },
+      {
+        "Ex-Date": "Jul 19 2021",
+        "Dividend": "$0.2230"
+      },
+      {
+        "Ex-Date": "Jun 21 2021",
+        "Dividend": "$0.1940"
+      },
+      {
+        "Ex-Date": "May 24 2021",
+        "Dividend": "$0.2210"
+      },
+      {
+        "Ex-Date": "Apr 19 2021",
+        "Dividend": "$0.2280"
+      },
+      {
+        "Ex-Date": "Mar 22 2021",
+        "Dividend": "$0.2240"
+      },
+      {
+        "Ex-Date": "Feb 22 2021",
+        "Dividend": "$0.2330"
+      },
+      {
+        "Ex-Date": "Jan 19 2021",
+        "Dividend": "$0.2290"
+      },
+      {
+        "Ex-Date": "Dec 30 2020",
+        "Dividend": "$0.2300"
+      },
+      {
+        "Ex-Date": "Nov 23 2020",
+        "Dividend": "$0.2230"
+      },
+      {
+        "Ex-Date": "Oct 19 2020",
+        "Dividend": "$0.2170"
+      },
+      {
+        "Ex-Date": "Sep 21 2020",
+        "Dividend": "$0.2120"
+      },
+      {
+        "Ex-Date": "Aug 24 2020",
+        "Dividend": "$0.2200"
+      },
+      {
+        "Ex-Date": "Jul 20 2020",
+        "Dividend": "$0.2140"
+      },
+      {
+        "Ex-Date": "Jun 22 2020",
+        "Dividend": "$0.2090"
+      },
+      {
+        "Ex-Date": "May 18 2020",
+        "Dividend": "$0.2040"
+      },
+      {
+        "Ex-Date": "Apr 20 2020",
+        "Dividend": "$0.1990"
+      },
+      {
+        "Ex-Date": "Mar 23 2020",
+        "Dividend": "$0.1810"
+      },
+      {
+        "Ex-Date": "Feb 24 2020",
+        "Dividend": "$0.2380"
+      },
+      {
+        "Ex-Date": "Jan 21 2020",
+        "Dividend": "$0.1990"
+      },
+      {
+        "Ex-Date": "Dec 30 2019",
+        "Dividend": "$0.1650"
+      },
+      {
+        "Ex-Date": "Nov 20 2019",
+        "Dividend": "$0.1950"
+      },
+      {
+        "Ex-Date": "Oct 23 2019",
+        "Dividend": "$0.1770"
+      },
+      {
+        "Ex-Date": "Sep 25 2019",
+        "Dividend": "$0.1750"
+      },
+      {
+        "Ex-Date": "Aug 21 2019",
+        "Dividend": "$0.2270"
+      },
+      {
+        "Ex-Date": "Jul 24 2019",
+        "Dividend": "$0.1710"
+      },
+      {
+        "Ex-Date": "Jun 26 2019",
+        "Dividend": "$0.2150"
+      },
+      {
+        "Ex-Date": "May 22 2019",
+        "Dividend": "$0.2110"
+      },
+      {
+        "Ex-Date": "Apr 24 2019",
+        "Dividend": "$0.1790"
+      },
+      {
+        "Ex-Date": "Mar 20 2019",
+        "Dividend": "$0.2040"
+      },
+      {
+        "Ex-Date": "Feb 20 2019",
+        "Dividend": "$0.1850"
+      },
+      {
+        "Ex-Date": "Jan 23 2019",
+        "Dividend": "$0.2170"
+      },
+      {
+        "Ex-Date": "Dec 28 2018",
+        "Dividend": "$0.1720"
+      },
+      {
+        "Ex-Date": "Nov 21 2018",
+        "Dividend": "$0.2250"
+      },
+      {
+        "Ex-Date": "Oct 24 2018",
+        "Dividend": "$0.2470"
+      },
+      {
+        "Ex-Date": "Sep 26 2018",
+        "Dividend": "$0.2010"
+      },
+      {
+        "Ex-Date": "Aug 22 2018",
+        "Dividend": "$0.2260"
+      },
+      {
+        "Ex-Date": "Jul 25 2018",
+        "Dividend": "$0.1810"
+      },
+      {
+        "Ex-Date": "Jun 20 2018",
+        "Dividend": "$0.2000"
+      },
+      {
+        "Ex-Date": "May 23 2018",
+        "Dividend": "$0.2160"
+      },
+      {
+        "Ex-Date": "Apr 25 2018",
+        "Dividend": "$0.2340"
+      },
+      {
+        "Ex-Date": "Mar 21 2018",
+        "Dividend": "$0.2490"
+      },
+      {
+        "Ex-Date": "Feb 21 2018",
+        "Dividend": "$0.2490"
+      },
+      {
+        "Ex-Date": "Jan 24 2018",
+        "Dividend": "$0.2500"
+      },
+      {
+        "Ex-Date": "Dec 20 2017",
+        "Dividend": "$0.2470"
+      },
+      {
+        "Ex-Date": "Nov 22 2017",
+        "Dividend": "$0.1320"
+      },
+      {
+        "Ex-Date": "Sep 20 2017",
+        "Dividend": "$0.1540"
+      },
+      {
+        "Ex-Date": "Aug 23 2017",
+        "Dividend": "$0.2030"
+      },
+      {
+        "Ex-Date": "Jul 26 2017",
+        "Dividend": "$0.1590"
+      },
+      {
+        "Ex-Date": "Jun 21 2017",
+        "Dividend": "$0.2210"
+      },
+      {
+        "Ex-Date": "May 24 2017",
+        "Dividend": "$0.1260"
+      },
+      {
+        "Ex-Date": "Apr 26 2017",
+        "Dividend": "$0.1450"
+      },
+      {
+        "Ex-Date": "Mar 22 2017",
+        "Dividend": "$0.1230"
+      },
+      {
+        "Ex-Date": "Feb 22 2017",
+        "Dividend": "$0.1000"
+      },
+      {
+        "Ex-Date": "Jan 25 2017",
+        "Dividend": "$0.1280"
+      },
+      {
+        "Ex-Date": "Dec 21 2016",
+        "Dividend": "$0.1460"
+      },
+      {
+        "Ex-Date": "Nov 23 2016",
+        "Dividend": "$0.1620"
+      },
+      {
+        "Ex-Date": "Oct 26 2016",
+        "Dividend": "$0.1490"
+      },
+      {
+        "Ex-Date": "Sep 21 2016",
+        "Dividend": "$0.1940"
+      },
+      {
+        "Ex-Date": "Aug 24 2016",
+        "Dividend": "$0.1300"
+      },
+      {
+        "Ex-Date": "Jul 20 2016",
+        "Dividend": "$0.1410"
+      },
+      {
+        "Ex-Date": "Jun 22 2016",
+        "Dividend": "$0.2020"
+      },
+      {
+        "Ex-Date": "May 25 2016",
+        "Dividend": "$0.1710"
+      },
+      {
+        "Ex-Date": "Apr 20 2016",
+        "Dividend": "$0.1560"
+      },
+      {
+        "Ex-Date": "Feb 24 2016",
+        "Dividend": "$0.2200"
+      },
+      {
+        "Ex-Date": "Dec 23 2015",
+        "Dividend": "$0.2150"
+      },
+      {
+        "Ex-Date": "Nov 25 2015",
+        "Dividend": "$0.1810"
+      },
+      {
+        "Ex-Date": "Oct 21 2015",
+        "Dividend": "$0.2140"
+      },
+      {
+        "Ex-Date": "Sep 23 2015",
+        "Dividend": "$0.2220"
+      },
+      {
+        "Ex-Date": "Aug 26 2015",
+        "Dividend": "$0.2040"
+      },
+      {
+        "Ex-Date": "Jul 22 2015",
+        "Dividend": "$0.1520"
+      },
+      {
+        "Ex-Date": "Jun 24 2015",
+        "Dividend": "$0.1500"
+      },
+      {
+        "Ex-Date": "May 20 2015",
+        "Dividend": "$0.1690"
+      },
+      {
+        "Ex-Date": "Apr 22 2015",
+        "Dividend": "$0.1530"
+      },
+      {
+        "Ex-Date": "Mar 25 2015",
+        "Dividend": "$0.1600"
+      },
+      {
+        "Ex-Date": "Jan 21 2015",
+        "Dividend": "$0.2300"
+      },
+      {
+        "Ex-Date": "Dec 24 2014",
+        "Dividend": "$0.1440"
+      },
+      {
+        "Ex-Date": "Oct 22 2014",
+        "Dividend": "$0.2410"
+      },
+      {
+        "Ex-Date": "Sep 24 2014",
+        "Dividend": "$0.1950"
+      },
+      {
+        "Ex-Date": "Aug 20 2014",
+        "Dividend": "$0.2220"
+      },
+      {
+        "Ex-Date": "Jul 23 2014",
+        "Dividend": "$0.2090"
+      },
+      {
+        "Ex-Date": "Jun 25 2014",
+        "Dividend": "$0.2130"
+      },
+      {
+        "Ex-Date": "May 21 2014",
+        "Dividend": "$0.2450"
+      },
+      {
+        "Ex-Date": "Apr 23 2014",
+        "Dividend": "$0.2630"
+      },
+      {
+        "Ex-Date": "Mar 26 2014",
+        "Dividend": "$0.1930"
+      },
+      {
+        "Ex-Date": "Feb 26 2014",
+        "Dividend": "$0.1930"
+      },
+      {
+        "Ex-Date": "Jan 22 2014",
+        "Dividend": "$0.2570"
+      }
+    ],
+    "fallback": true,
+    "source": "Yahoo Finance dividend history (GLOBALX published no distribution rows)"
+  },
+  "returns": {
+    "derivedFrom": "official GLOBALX fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "returnsBasis": "official GLOBALX fund page NAV Performance (monthly series)"
+  },
+  "distributionFrequency": "00 - —",
+  "providerCategory": "Other",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 104,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://assets.globalxetfs.com/funds/holdings/qyld_full-holdings_20260927.csv",
+    "sourceKind": "official GLOBALX daily holdings CSV (download_holdings_csv)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json",
+      "./history/002.json",
+      "./history/003.json",
+      "./history/004.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 3215,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/QYLD?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "derived (Net Assets / Shares Outstanding)",
+  "source": {
+    "provider": "GLOBALX Investment Management LLC (GLOBALX ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore/",
+    "fundPage": "https://www.globalxetfs.com/funds/qyld/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/qyld_full-holdings_20260927.csv",
+    "holdingsSource": "official GLOBALX daily holdings CSV (download_holdings_csv)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/QYLD?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true",
+    "returnsSource": "GLOBALX fund page performance tables (NAV Performance)",
+    "distributionsSource": "GLOBALX fund page Distribution History table",
+    "distributionInfoSource": "GLOBALX fund page Distribution Information block",
+    "documentsSource": "GLOBALX fund page Documents table",
+    "registrant": "GLOBALX ETF Trust (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "GLOBALX fund page Fund Details \"Primary Exchange\"",
+    "navSource": "GLOBALX fund page Fund Details \"Net Asset Value\" (derived (Net Assets / Shares Outstanding))",
+    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
+    "bidAskSpreadSource": "GLOBALX fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+  },
+  "identifiers": {
+    "cusip": null,
+    "isin": null,
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.60%",
+    "value": 0.6,
+    "managementFeeDisplay": "0.60%",
+    "managementFeeValue": 0.6
+  },
+  "marketPrice": {
+    "display": "$18.55",
+    "value": 18.55,
+    "asOfDate": "",
+    "dailyChangeText": null,
+    "source": "Yahoo Finance daily close"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official GLOBALX Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "official GLOBALX 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": null
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": null,
+    "summaryProspectus": null,
+    "sai": null,
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}
