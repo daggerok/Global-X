@@ -1,4 +1,3 @@
-/// <reference types="bun" />
 /**
  * @file Global X Watchlist Application
  * Client-side static feed viewer for api/globalx/** with multi-ETF Watchlist
@@ -11,7 +10,7 @@
  * `!`, no interfaces or enums.
  */
 
-
+/// <reference types="bun" />
 
 // =========================================================================
 // 1. Types, constants & column tooltips
@@ -138,8 +137,8 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   '#': 'Row index in current table view.',
   Use: 'Use / Multi-ETF Selection — Check this box to include this ETF\'s underlying holdings in the combined Watchlist tab.',
   Ticker: 'Ticker Symbol — Unique stock market identifier. For holdings: the StockTicker column exactly as published in the Global X daily holdings CSV, which carries the option contract code for option positions (SPXW 261001P07075000, RUT 261016C03050000), the CUSIP for Treasury bills and bonds, and the literal label Cash&Other for cash balances. "—" when the position has no exchange ticker — option, Treasury and cash rows key on the CUSIP instead.',
-  'Fund Name': 'Fund Name — Official fund name as published in the Global X ETF lineup table on globalxfunds.com and in the fund page heading.',
-  Category: 'Category — the Global X "Explore Our ETFs" asset-class group the fund belongs to on globalxfunds.com: Equity High Income, Boosted High Income, High Income Alternatives, Hedged Equity Income or Enhanced Fixed Income. The tab shows that provider label verbatim.',
+  'Fund Name': 'Fund Name — Official fund name as published in the Global X ETF lineup table on www.globalxetfs.com and in the fund page heading.',
+  Category: 'Category — the Global X "Explore Our ETFs" asset-class group the fund belongs to on www.globalxetfs.com: Equity High Income, Boosted High Income, High Income Alternatives, Hedged Equity Income or Enhanced Fixed Income. The tab shows that provider label verbatim.',
   Name: 'Security Name — Full name of the company or instrument as published in the SecurityName column of the Global X daily holdings CSV.',
   Identifier: 'CUSIP — Committee on Uniform Security Identification Procedures identifier, as published in the Cusip column of the Global X daily holdings CSV. Options and Treasury bills carry their own code here, so positions with no exchange ticker are still identified in the Watchlist by this.',
   SEDOL: 'SEDOL — Stock Exchange Daily Official List identifier. Not published by Global X; shown as "—" (data limitation).',
@@ -172,9 +171,9 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   '10Y': '10-year annualized NAV Performance from the official Global X fund page performance table; "—" for a fund younger than 10 years.',
   'SI Ann.': 'Since-inception annualized NAV Performance ("Inception (Annualized)") from the official Global X fund page performance table.',
   'Return As Of': 'As-of date of the monthly performance table on the fund page ("Data as of: MM/DD/YYYY").',
-  Inception: 'Inception Date — fund launch date from the Fund Details panel of the official Global X fund page.',
-  Exchange: 'Primary Exchange — the listing exchange from the Fund Details panel of the official Global X fund page.',
-  Close: 'Market Price — the most recent closing market price from the Fund Details panel of the official Global X fund page, with the Yahoo Finance daily close as the fallback.',
+  Inception: 'Inception Date — fund launch date from the Key Information panel of the official Global X fund page.',
+  Exchange: 'Primary Exchange — the listing exchange from the Trading Details panel of the official Global X fund page.',
+  Close: 'Market Price — the most recent closing market price from the ETF Prices panel of the official Global X fund page, with the Yahoo Finance daily close as the fallback.'
   'Prem/Disc': 'Premium / Discount — (Market Price - Net Asset Value) / Net Asset Value, computed from the two official fund page figures when Global X does not print a premium/discount value.',
   Holdings: 'Rows in the fund\'s latest Global X daily holdings CSV.',
   History: 'Rows in the fund\'s daily price history (Yahoo Finance chart feed).',
@@ -182,7 +181,7 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   Frequency: 'Distribution frequency — the declared schedule published by Global X ("Monthly" on every fund today). Codes: 00 — / None / Unknown / Other (irregular schedule), 01 Monthly, 04 Quarterly, 06 Semi-annually, 12 Annually, 99 Irregular. The Overview tab shows the raw label.',
   'Ex-Date': 'Ex-dividend date of the latest distribution, from the official Global X fund page Distribution History table. "—" if the fund has never made a distribution.',
   Dividend: 'Latest distribution amount per share, from the official Global X fund page Distribution History table. "—" if the fund has never made a distribution.',
-  'Declaration Date': 'Declaration date of the distribution, from the official Global X fund page Distribution History table.',
+  'Declaration Date': 'Declaration Date — Global X does not publish this field in its Distribution History data; shown as "—".',
   'Record Date': 'Record date of the distribution, from the official Global X fund page Distribution History table.',
   'Payable Date': 'Payable date of the distribution, from the official Global X fund page Distribution History table.',
   Coupon: 'Bond annual coupon rate (%). Global X does not publish a coupon column; shown as "—" (data limitation).',
@@ -1662,7 +1661,7 @@ function renderSubtitle(text?: string): void {
   }
   el.subtitle.innerHTML = `
     <span class="block sm:inline">${escapeHtml(base)}${selectionItem}</span>
-    <span class="block sm:inline">·${generated ? ` updated ${escapeHtml(generated)}` : ''}${countsText ? ` · ${escapeHtml(countsText)}.` : '.'} Data: <a href="./api/globalx/index.json" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">api/globalx/index.json</a> generated from <a href="https://globalxfunds.com/#explore-etfs" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">the official Global X ETF lineup and daily holdings downloads</a> + SEC EDGAR N-PORT-P (Global X ETF Trust, CIK 0001848758 — holdings fallback only) + Yahoo Finance (daily price history only)</span>
+    <span class="block sm:inline">·${generated ? ` updated ${escapeHtml(generated)}` : ''}${countsText ? ` · ${escapeHtml(countsText)}.` : '.'} Data: <a href="./api/globalx/index.json" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">api/globalx/index.json</a> generated from <a href="https://www.globalxetfs.com/explore" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">the official Global X ETF lineup and daily holdings downloads</a> + SEC EDGAR N-PORT-P (Global X Funds, CIK 0001432353 — holdings fallback only) + Yahoo Finance (daily price history only)</span>
   `;
   el.subtitle.querySelectorAll('a[data-activate-fund]').forEach((link: any) => {
     link.addEventListener('click', () => activateFund(link.dataset.activateFund || ''));

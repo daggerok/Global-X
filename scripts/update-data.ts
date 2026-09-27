@@ -21,6 +21,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     performanceRanges: 'PERFORMANCE', totalReturnRanges: 'TOTAL_RETURN',
     skipVanEck: 'SKIP_VANECK', skipProShares: 'SKIP_PROSHARES',
     skipWisdomTree: 'SKIP_WISDOMTREE', skipGoldmanSachs: 'SKIP_GOLDMANSACHS',
+    skipGlobalX: 'SKIP_GLOBALX',
   };
   const range = (v: any): string => v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
   for (const [key, value] of Object.entries(config)) {
@@ -127,7 +128,7 @@ function outputCreateReporter(root: URL | string, total: number) {
 }
 
 /**
- * @file GLOBALX static feed updater.
+ * @file Global X static feed updater.
  *
  * Zero runtime dependencies: `node:fs/promises` + global `fetch` only, run with
  * Bun. Writes the deterministic `api/globalx/**` tree the browser app reads.
@@ -156,7 +157,7 @@ function outputCreateReporter(root: URL | string, total: number) {
  *   (c) official daily full-holdings CSV ............ every position, market
  *       (admin-ajax download_holdings_csv)             value, weight, net assets
  *   (d) SEC EDGAR Form N-PORT-P ..................... holdings fallback only
- *       (GLOBALX ETF Trust CIK 0001432353)                (EDGAR_FALLBACK=1)
+ *       (Global X Funds CIK 0001432353)                (EDGAR_FALLBACK=1)
  *   (e) Yahoo Finance chart API ..................... daily Close / Adj Close /
  *                                                      Volume, and the dividend
  *                                                      history as a fallback
@@ -167,7 +168,7 @@ function outputCreateReporter(root: URL | string, total: number) {
  * figure, and `admin-ajax.php?action=download_holdings_csv&ticker=<T>` returns
  * the same CSV the site's own "Download Full Holdings" button hands a visitor.
  * Nothing is scraped from a client-rendered widget and no value is invented:
- * a metric GLOBALX does not publish stays `null` and the app renders `—`.
+ * a metric Global X does not publish stays `null` and the app renders `—`.
  */
 import { mkdir, readFile, readdir, writeFile, rm } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -178,34 +179,35 @@ const REPO_ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const API_ROOT = path.join(REPO_ROOT, 'api', 'globalx');
 
 export const GLOBALX_SITE = 'https://www.globalxetfs.com';
-export const GLOBALX_LINEUP_URL = `https://www.globalxetfs.com/explore/`;
+export const GLOBALX_LINEUP_URL = 'https://www.globalxetfs.com/explore';
 export const GLOBALX_ADMIN_AJAX_URL = `${GLOBALX_SITE}/wp-admin/admin-ajax.php`;
-/** GLOBALX ETF Trust — the registrant that files Form N-PORT-P for the ETFs (Investment Company Act file 811-22209). */
+/** Global X Funds — the registrant that files Form N-PORT-P for the ETFs (Investment Company Act file 811-22209). */
 export const GLOBALX_ETF_TRUST_CIK = '0001432353';
 export const GLOBALX_ETF_TRUST_FILE_NUMBER = '811-22209';
 
-/** Canonical slug for a fund page. Every GLOBALX fund page is the lowercase ticker. */
+/** Canonical slug for a fund page. Every Global X fund page is the lowercase ticker. */
 export function globalxFundPageUrl(ticker: string): string {
     return `https://www.globalxetfs.com/funds/${ticker.toLowerCase()}/`;
   }
 
 /**
- * The official daily holdings download behind the fund page's
- * "Download Full Holdings" button. `etf-pages.js` builds exactly this URL
- * (`${etf_ajax.ajax_url}?action=download_holdings_csv&ticker=${ticker}`) and
- * saves it as `GLOBALX Holdings - <TICKER> Holdings.csv`.
+ * The official daily holdings download linked by each Global X fund page.
+ * The current Next.js page publishes a dated asset URL such as
+ * `https://assets.globalxetfs.com/funds/holdings/pave_full-holdings_20260925.csv`.
  */
 export function globalxHoldingsCsvUrl(ticker: string, html?: string): string {
-    if (html) {
-      const match = html.match(/href=["']([^"']*_full-holdings_[0-9]+\.csv)["']/i);
-      if (match) return match[1];
-    }
-    return `https://assets.globalxetfs.com/funds/holdings/${ticker.toLowerCase()}_full-holdings_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}.csv`;
+  if (html) {
+    const match = html.match(/https:\/\/assets\.globalxetfs\.com\/funds\/holdings\/[^"'\\ ]+_full-holdings_\d{8}\.csv/i);
+    if (match) return match[0];
   }
+  // The date is supplied by the live fund page. This fallback is only for a
+  // page response that omits the link; it is never written as provenance.
+  return `https://assets.globalxetfs.com/funds/holdings/${sanitizeTicker(ticker).toLowerCase()}_full-holdings.csv`;
+}
 
 export function globalxProvenanceHoldingsUrl(ticker: string, html?: string): string {
-    return globalxHoldingsCsvUrl(ticker, html);
-  }
+  return globalxHoldingsCsvUrl(ticker, html);
+}
 
 export function globalxEdgarFilingsUrl(cik: string = GLOBALX_ETF_TRUST_CIK): string {
   return `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${cik}&type=NPORT-P&dateb=&owner=include&count=10`;
@@ -222,7 +224,7 @@ export function yahooChartUrl(ticker: string, range: string = 'max', nowMs: numb
 }
 
 export function yahooChartProvenanceUrl(ticker: string): string {
-  return `${YAHOO_CHART_URL}/${encodeURIComponent(sanitizeTicker(ticker))}?period1=0&period2=9999999999&interval=1d&events=div%7Csplit&includeAdjustedClose=true`;
+  return `${YAHOO_CHART_URL}/${encodeURIComponent(sanitizeTicker(ticker))}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -319,6 +321,8 @@ const MONTH_LONG = [
 
 export function toIsoDate(raw: unknown): string {
   const text = cleanText(raw);
+  const flightDate = /^\$D(\d{4}-\d{2}-\d{2})/.exec(text);
+  if (flightDate) return flightDate[1];
   if (!text) return '';
   let m = /^(\d{4})-(\d{2})-(\d{2})/.exec(text);
   if (m) return `${m[1]}-${m[2]}-${m[3]}`;
@@ -520,7 +524,7 @@ export function readConfig(env: Record<string, string | undefined> = process.env
       .filter(Boolean),
     historyRange: envValue(env, 'HISTORY_RANGE') || 'max',
     category: cleanText(envValue(env, 'CATEGORY')),
-    secUa: envValue(env, 'SEC_UA') || 'GLOBALX ETF static feed updater (https://github.com/daggerok/GlobalX)',
+    secUa: envValue(env, 'SEC_UA') || 'Global X ETF static feed updater (https://github.com/daggerok/GlobalX)',
     skipYahoo: parseBoolean(envValue(env, 'SKIP_YAHOO')),
     skipGlobalX: parseBoolean(envValue(env, 'SKIP_GLOBALX')),
     edgarFallback: parseBoolean(envValue(env, 'EDGAR_FALLBACK')),
@@ -534,7 +538,7 @@ export function readConfig(env: Record<string, string | undefined> = process.env
 }
 
 const USAGE = `
-GLOBALX ETF static feed updater (zero dependencies, run with Bun).
+Global X ETF static feed updater (zero dependencies, run with Bun).
 
   bun ./scripts/update-data.ts [-h|--help]
 
@@ -563,12 +567,12 @@ Environment variables (all optional):
                              HISTORICAL_PAGE_SIZE).
   HISTORY_RANGE        max   Yahoo chart range used for daily history
                              ("max", "10y", "5y", ...).
-  CATEGORY             ""    Keep only this GLOBALX asset-class heading.
+  CATEGORY             ""    Keep only this Global X THEME / SUB_THEME category.
   STORE_RAW_DOWNLOADS  0     1|true|yes|y|on writes api/globalx/raw/**.
   SEC_UA               (set) Declared User-Agent for SEC EDGAR requests.
   EDGAR_FALLBACK       0     Use Form N-PORT-P when a fund has no holdings CSV.
   SKIP_YAHOO           0     Skip Yahoo Finance (daily history, dividend fallback).
-  SKIP_GLOBALX            0     Skip globalxetfs.com entirely (keeps committed data).
+  SKIP_GLOBALX         0     Skip globalxetfs.com entirely (keeps committed data).
 
 Range syntax is strict "min:max" with exactly one colon; "" and ":" mean no
 restriction; a configured min must not exceed max.
@@ -591,19 +595,14 @@ Examples:
 // now each get their own paced lane, so concurrency actually multiplies
 // throughput as documented instead of only overlapping wait time.
 let lastRequestAtLanes: number[] = [0];
-let pacingLanes: Promise<void>[] = [Promise.resolve()];
 
 async function paceRequests(config: UpdaterConfig): Promise<void> {
-  const gap = Math.max(0, config.requestSleep * 1000);
+  const now = Date.now();
   let lane = 0;
-  for (let i = 1; i < lastRequestAtLanes.length; i++) if (lastRequestAtLanes[i] < lastRequestAtLanes[lane]) lane = i;
-  const turn = pacingLanes[lane].then(async () => {
-    const wait = lastRequestAtLanes[lane] + gap - Date.now();
-    if (wait > 0) await sleep(wait);
-    lastRequestAtLanes[lane] = Date.now();
-  });
-  pacingLanes[lane] = turn.catch(() => undefined);
-  return turn;
+  for (let i = 1; i < lastRequestAtLanes.length; i += 1) if (lastRequestAtLanes[i] < lastRequestAtLanes[lane]) lane = i;
+  const wait = Math.max(0, lastRequestAtLanes[lane] - now);
+  lastRequestAtLanes[lane] = Math.max(now, lastRequestAtLanes[lane]) + Math.max(0, config.requestSleep * 1000);
+  if (wait) await sleep(wait);
 }
 
 function errorMessage(error: unknown): string {
@@ -768,6 +767,93 @@ export function elementTextById(html: string, id: string): string | null {
 }
 
 // ---------------------------------------------------------------------------
+// Next.js Flight payload helpers
+// ---------------------------------------------------------------------------
+
+/**
+ * globalxetfs.com is a Next.js application. The initial HTML contains a
+ * skeleton, while the real catalog and fund data are serialized in
+ * `self.__next_f.push([1, "..."])` Flight chunks. Decode those chunks first;
+ * the fallback HTML table parser remains useful for fixtures and older pages.
+ */
+export function extractNextFlightText(html: string): string {
+  const chunks: string[] = [];
+  const pattern = /self\.__next_f\.push\(\[1,("(?:\\.|[^"\\])*")\]\)/g;
+  for (const match of html.matchAll(pattern)) {
+    try { chunks.push(JSON.parse(match[1])); } catch { /* ignore malformed chunks */ }
+  }
+  return chunks.join('');
+}
+
+function parseNextFlightRecords(flight: string): Map<string, unknown> {
+  const records = new Map<string, unknown>();
+  for (const line of flight.split('\n')) {
+    const match = /^([0-9a-z]+):(\{[\s\S]*\}|\[[\s\S]*\])$/.exec(line);
+    if (!match) continue;
+    try { records.set(match[1], JSON.parse(match[2])); } catch { /* data record may be a text chunk */ }
+  }
+  return records;
+}
+
+function resolveNextFlightValue(value: unknown, records: Map<string, unknown>, seen = new Set<string>()): unknown {
+  if (typeof value === 'string' && value.startsWith('$') && !value.startsWith('$D')) {
+    const key = value.slice(1);
+    if (key === 'undefined') return undefined;
+    if (records.has(key) && !seen.has(key)) {
+      const nextSeen = new Set(seen); nextSeen.add(key);
+      return resolveNextFlightValue(records.get(key), records, nextSeen);
+    }
+  }
+  if (Array.isArray(value)) return value.map((item) => resolveNextFlightValue(item, records, seen));
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, resolveNextFlightValue(item, records, seen)]));
+  }
+  return value;
+}
+
+function walkNextFlight(value: unknown, visit: (value: Record<string, unknown>) => void): void {
+  if (Array.isArray(value)) for (const item of value) walkNextFlight(item, visit);
+  else if (value && typeof value === 'object') {
+    const object = value as Record<string, unknown>;
+    visit(object);
+    for (const item of Object.values(object)) walkNextFlight(item, visit);
+  }
+}
+
+function rscDate(value: unknown): string {
+  const text = cleanText(value);
+  const match = /^\$D(\d{4}-\d{2}-\d{2})/.exec(text);
+  return match ? match[1] : toIsoDate(text);
+}
+
+function findRscObjectAfterKey(text: string, key: string): unknown {
+  const marker = `"${key}":`;
+  let from = 0;
+  while (true) {
+    const at = text.indexOf(marker, from);
+    if (at < 0) return null;
+    let start = at + marker.length;
+    while (/\s/.test(text[start] || '')) start += 1;
+    const opener = text[start];
+    if (opener !== '{' && opener !== '[') { from = start + 1; continue; }
+    let depth = 0; let quoted = false; let escaped = false;
+    for (let index = start; index < text.length; index += 1) {
+      const char = text[index];
+      if (quoted) { if (escaped) escaped = false; else if (char === '\\') escaped = true; else if (char === '"') quoted = false; continue; }
+      if (char === '"') { quoted = true; continue; }
+      if (char === opener) depth += 1;
+      else if ((opener === '{' && char === '}') || (opener === '[' && char === ']')) {
+        depth -= 1;
+        if (depth === 0) {
+          try { return JSON.parse(text.slice(start, index + 1)); } catch { break; }
+        }
+      }
+    }
+    from = start + 1;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // globalxetfs.com — ETF lineup (`#explore-etfs`)
 // ---------------------------------------------------------------------------
 
@@ -790,7 +876,7 @@ export type LineupFund = {
 };
 
 /**
- * The five GLOBALX asset-class groups, in the order the website prints them. The
+ * The five Global X asset-class groups, in the order the website prints them. The
  * tab labels come straight from the provider, so they are listed verbatim.
  */
 export const GLOBALX_CATEGORIES = [
@@ -801,7 +887,7 @@ export const GLOBALX_CATEGORIES = [
   'Enhanced Fixed Income',
 ] as const;
 
-/** Ticker CSS class on the lineup table -> the asset-class heading GLOBALX prints above the cards. */
+/** Ticker CSS class on the lineup table -> the asset-class heading Global X prints above the cards. */
 const CATEGORY_CLASS_LABELS: Record<string, string> = {
   'ticker-equity-high-income': 'Equity High Income',
   'ticker-enhanced-fixed-income': 'Boosted High Income',
@@ -818,50 +904,56 @@ const CATEGORY_CLASS_LABELS: Record<string, string> = {
  * separators, which is why `splitRowCells` cuts on opening tags.
  */
 export function parseGlobalXLineup(html: string): LineupFund[] {
-  const tables = parseHtmlTables(html);
-  let targetTable: string[][] | undefined;
-  for (const table of tables) {
-    for (const row of table) {
-      if (row.length > 10 && row[2]?.includes("Ticker") && row[3]?.includes("ETF Name")) {
-        targetTable = table;
-        break;
-      }
-    }
-    if (targetTable) break;
-  }
-  
-  if (!targetTable) return [];
-  
+  const flight = extractNextFlightText(html);
+  const records = parseNextFlightRecords(flight);
   const funds: LineupFund[] = [];
-  for (const row of targetTable) {
-    if (row.length < 15 || row[2] === 'Ticker' || row[2] === '') continue;
-    const ticker = sanitizeTicker(row[2]);
-    if (!/^[A-Z]{2,6}$/.test(ticker)) continue;
-    
-    const name = cleanText(row[3]);
-    const netAssetsText = cleanText(row[5]);
-    const grossExpText = cleanText(row[6]).replace(/\s*[*†‡]+$/, '');
-    const netExpText = cleanText(row[7]).replace(/\s*[*†‡]+$/, '');
-    const feeText = netExpText === '--' || !netExpText ? grossExpText : netExpText;
-    const inceptionRaw = cleanText(row[17]);
-    
+  const seen = new Set<string>();
+  for (const raw of records.values()) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) continue;
+    const record = raw as Record<string, unknown>;
+    if (!record.ETF_TICKER || !('FUND_DATA' in record) || !('GROSS_EXP' in record)) continue;
+    const ticker = sanitizeTicker(record.ETF_TICKER);
+    if (!/^[A-Z]{2,6}$/.test(ticker) || seen.has(ticker)) continue;
+    const data = resolveNextFlightValue(record.FUND_DATA, records) as Record<string, unknown> | undefined;
+    const category = [record.THEME, record.SUB_THEME].filter(Boolean).map(cleanText).join(' / ') || 'Other';
+    const gross = numberOrNull(record.GROSS_EXP);
+    const net = numberOrNull(record.NET_EXP);
+    const fee = net !== null ? net : gross;
+    const name = cleanText(data?.etf_name || ticker);
+    const inceptionDate = rscDate(data?.inception_date);
     funds.push({
       ticker,
       name,
-      category: 'Other',
-      categoryClass: '',
+      category,
+      categoryClass: cleanText(record.SUB_THEME),
       frequency: '',
       distributionRate: null,
       distributionRateText: '',
       secYield: null,
       secYieldText: '',
-      managementFee: numberOrNull(feeText),
-      managementFeeText: feeText,
-      netAssets: moneyOrNull(netAssetsText),
-      netAssetsText: netAssetsText,
-      inceptionDate: toIsoDate(inceptionRaw),
-      fundPage: `https://www.globalxetfs.com/funds/${ticker.toLowerCase()}/`,
+      managementFee: fee,
+      managementFeeText: fee === null ? '' : formatPercentText(fee),
+      netAssets: numberOrNull(data?.net_assets),
+      netAssetsText: data?.net_assets == null ? '' : formatAumDisplay(Number(data.net_assets)),
+      inceptionDate,
+      fundPage: globalxFundPageUrl(ticker),
     });
+    seen.add(ticker);
+  }
+  if (funds.length) return funds;
+
+  // Fixture/legacy fallback for a plain server-rendered table.
+  const tables = parseHtmlTables(html);
+  for (const table of tables) {
+    const header = table.find((row) => row[0]?.includes('Ticker') && row[1]?.includes('ETF Name'));
+    if (!header) continue;
+    for (const row of table) {
+      if (row === header || row.length < 6) continue;
+      const ticker = sanitizeTicker(row[0]);
+      if (!/^[A-Z]{2,6}$/.test(ticker) || seen.has(ticker)) continue;
+      funds.push({ ticker, name: cleanText(row[1]), category: 'Other', categoryClass: '', frequency: '', distributionRate: null, distributionRateText: '', secYield: null, secYieldText: '', managementFee: numberOrNull(row[4]), managementFeeText: cleanText(row[4]), netAssets: moneyOrNull(row[3]), netAssetsText: cleanText(row[3]), inceptionDate: '', fundPage: globalxFundPageUrl(ticker) });
+    }
+    if (funds.length) break;
   }
   return funds;
 }
@@ -871,24 +963,8 @@ export function parseGlobalXLineup(html: string): LineupFund[] {
  * The lineup table's own CSS class is a styling hook (XSPI's Boosted fund wears
  * `ticker-enhanced-fixed-income`), so the printed heading is the authority.
  */
-export function parseGlobalXCategoryCards(html: string): Map<string, string> {
-  const mapping = new Map<string, string>();
-  const anchor = html.indexOf('Explore Our ETFs');
-  const section = anchor >= 0 ? html.slice(anchor, anchor + 40000) : html;
-  for (const label of GLOBALX_CATEGORIES) {
-    const heading = new RegExp(`<h[34]\\b[^>]*>\\s*${label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*</h[34]>`, 'i');
-    const match = heading.exec(section);
-    if (!match) continue;
-    const rest = section.slice(match.index + match[0].length);
-    // Stop at the next category heading so a fund is never claimed twice.
-    const nextHeading = rest.search(/<h[34]\b[^>]*>\s*(Equity High Income|Boosted High Income|High Income Alternatives|Hedged Equity Income|Enhanced Fixed Income)\s*</i);
-    const block = nextHeading >= 0 ? rest.slice(0, nextHeading) : rest;
-    for (const link of block.matchAll(/href=["']https:\/\/globalxetfs\.com\/([a-z0-9]+)\/["']/gi)) {
-      const ticker = sanitizeTicker(link[1]);
-      if (ticker) mapping.set(ticker, label);
-    }
-  }
-  return mapping;
+export function parseGlobalXCategoryCards(_html: string): Map<string, string> {
+  return new Map();
 }
 
 // ---------------------------------------------------------------------------
@@ -965,30 +1041,66 @@ const FUND_DETAIL_LABELS = new Set([
 
 /** The `Fund Details` panel: CUSIP, ISIN, NAV, market price, exchange, share count. */
 export function parseGlobalXFundDetails(html: string): GlobalXFundDetails {
-    return {
-      inceptionDate: '',
-      cusip: '',
-      isin: '',
-      primaryExchange: '',
-      managementFee: null,
-      managementFeeText: null,
-      acquiredFundFeesText: null,
-      netAssetValue: null,
-      netAssetValueText: null,
-      navDailyChangeValue: null,
-      navDailyChangePercent: null,
-      marketPrice: null,
-      marketPriceText: null,
-      marketPriceDailyChangeValue: null,
-      marketPriceDailyChangePercent: null,
-      premiumDiscount: null,
-      premiumDiscountText: null,
-      bidAskSpread: null,
-      bidAskSpreadText: null,
-      asOfDate: ''
-    };
+  const flight = extractNextFlightText(html);
+  const details = findRscObjectAfterKey(flight, 'ETF_DETAILS') as Record<string, unknown> | null;
+  const result: GlobalXFundDetails = {
+    inceptionDate: rscDate(details?.INCEPTION_DATE),
+    ticker: sanitizeTicker(details?.BLOOMBERG_TICKER),
+    cusip: details?.CUSIP ? cleanText(details.CUSIP) : null,
+    isin: details?.ISIN ? cleanText(details.ISIN) : null,
+    managementFeeText: null,
+    totalOperatingExpensesText: null,
+    netAssets: numberOrNull(details?.ASSETS),
+    netAssetsText: details?.ASSETS == null ? null : formatAumDisplay(Number(details.ASSETS)),
+    sharesOutstanding: numberOrNull(details?.SHARES_OUTSTANDING),
+    sharesOutstandingText: details?.SHARES_OUTSTANDING == null ? null : Number(details.SHARES_OUTSTANDING).toLocaleString('en-US'),
+    primaryExchange: details?.EXCHANGE ? cleanText(details.EXCHANGE) : null,
+    underlyingExposure: null,
+    distributionFrequency: null,
+    netAssetValue: numberOrNull(details?.NET_ASSET_VALUE),
+    netAssetValueText: details?.NET_ASSET_VALUE == null ? null : cleanText(details.NET_ASSET_VALUE),
+    navDailyChangeValue: null,
+    navDailyChangePercent: null,
+    marketPrice: null,
+    marketPriceText: null,
+    marketPriceDailyChangeValue: null,
+    marketPriceDailyChangePercent: null,
+    premiumDiscount: null,
+    premiumDiscountText: null,
+    bidAskSpread: details?.THIRTY_DAY_MEDIAN_BID_ASK == null ? null : round(Number(details.THIRTY_DAY_MEDIAN_BID_ASK) * 100, 2),
+    bidAskSpreadText: details?.THIRTY_DAY_MEDIAN_BID_ASK == null ? null : `${(Number(details.THIRTY_DAY_MEDIAN_BID_ASK) * 100).toFixed(2)}%`,
+    acquiredFundFeesText: null,
+    asOfDate: rscDate(details?.AS_OF_DATE),
+  };
+  const tables = parseHtmlTables(html);
+  for (const table of tables) {
+    for (const row of table) {
+      if (row.length < 2) continue;
+      const label = cleanText(row[0]);
+      if (/^NAV$/i.test(label) && row.length >= 5) {
+        result.netAssetValue = numberOrNull(row[1]) ?? result.netAssetValue;
+        result.netAssetValueText = cleanText(row[1]) || result.netAssetValueText;
+        result.navDailyChangeValue = numberOrNull(row[3]);
+        result.navDailyChangePercent = numberOrNull(row[4]);
+      } else if (/^Market Price$/i.test(label) && row.length >= 5) {
+        result.marketPrice = numberOrNull(row[1]);
+        result.marketPriceText = cleanText(row[1]);
+        result.marketPriceDailyChangeValue = numberOrNull(row[3]);
+        result.marketPriceDailyChangePercent = numberOrNull(row[4]);
+      }
+    }
   }
-
+  // The premium/discount history is serialized in the Flight payload. The
+  // current day's figure is optional; the updater derives it from NAV/market
+  // price when the issuer does not expose a scalar field.
+  const premium = findRscObjectAfterKey(flight, 'PREMIUM_DISCOUNT') as Record<string, unknown> | null;
+  const latest = premium?.latest_discount_pctg;
+  if (typeof latest === 'number') {
+    result.premiumDiscount = round(latest * 100, 4);
+    result.premiumDiscountText = `${(latest * 100).toFixed(4)}%`;
+  }
+  return result;
+}
 export type GlobalXDistributionInfo = {
   asOfDate: string;
   frequency: string | null;
@@ -1011,44 +1123,29 @@ export type GlobalXDistributionInfo = {
  * located by its own header cell rather than by position.
  */
 export function parseGlobalXDistributionInfo(html: string): GlobalXDistributionInfo | null {
-  const tablePattern = /<table\b[^>]*>([\s\S]*?)<\/table>/gi;
-  let picked: string | null = null;
-  for (const table of html.matchAll(tablePattern)) {
-    if (/Distribution Information/i.test(table[1]) && /Distribution Frequency/i.test(table[1])) {
-      picked = table[1];
-      break;
-    }
-  }
-  if (!picked) return null;
-
-  const asOfMatch = /as of\s*(\d{1,2}\/\d{1,2}\/\d{4})/i.exec(picked);
-  const stats = new Map<string, string>();
-  for (const row of picked.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
-    const cells = splitRowCells(row[1]);
-    if (cells.length < 2) continue;
-    const label = cleanText(cells[0]).replace(/\s*\*+$/, '');
-    if (!label || stats.has(label)) continue;
-    stats.set(label, cleanText(cells[1]));
-  }
-  const valueOf = (label: string): string | null => stats.get(label) ?? null;
-
+  const flight = extractNextFlightText(html);
+  const details = findRscObjectAfterKey(flight, 'ETF_DETAILS') as Record<string, unknown> | null;
+  const frequency = /"children":"Distribution Frequency"[\s\S]{0,900}?"children":"([^"]+)"/.exec(flight)?.[1] || null;
+  const asOf = rscDate(details?.AS_OF_DATE);
+  if (!details && !frequency) return null;
+  const sec = numberOrNull(details?.YIELD_SEC_30);
+  const rate = numberOrNull(details?.DIV_YIELD);
   return {
-    asOfDate: asOfMatch ? toIsoDate(asOfMatch[1]) : '',
-    frequency: valueOf('Distribution Frequency'),
-    managementFeeText: valueOf('Management Fee')?.replace(/\s*\*+$/, '') ?? null,
-    distributionRate: numberOrNull(valueOf('Distribution Rate')),
-    distributionRateText: valueOf('Distribution Rate'),
-    trailingRate12M: numberOrNull(valueOf('12-Month Trailing Distribution Rate')),
-    trailingRate12MText: valueOf('12-Month Trailing Distribution Rate'),
-    distributionAmount: moneyOrNull(valueOf('Distribution Amount / Share ($)')),
-    distributionAmountText: valueOf('Distribution Amount / Share ($)'),
-    distributionAmountPercent: numberOrNull(valueOf('Distribution Amount / Share (%)')),
-    distributionAmountPercentText: valueOf('Distribution Amount / Share (%)'),
-    secYield: numberOrNull(valueOf('30-Day SEC Yield')),
-    secYieldText: valueOf('30-Day SEC Yield'),
+    asOfDate: asOf,
+    frequency,
+    managementFeeText: null,
+    distributionRate: rate,
+    distributionRateText: rate === null ? null : `${rate.toFixed(2)}%`,
+    trailingRate12M: null,
+    trailingRate12MText: null,
+    distributionAmount: null,
+    distributionAmountText: null,
+    distributionAmountPercent: null,
+    distributionAmountPercentText: null,
+    secYield: sec,
+    secYieldText: sec === null ? null : `${sec.toFixed(2)}%`,
   };
 }
-
 export type GlobalXDistributionRow = {
   'Declaration Date': string;
   'Ex-Div Date': string;
@@ -1071,42 +1168,20 @@ export const GLOBALX_DISTRIBUTION_HEADERS = [
  * month ships an empty Amount cell — kept verbatim so the table mirrors the page.
  */
 export function parseGlobalXDistributionHistory(html: string): GlobalXDistributionRow[] {
-  const start = html.search(/id=["']tab-distribution-history["']/i);
-  const section = start >= 0 ? html.slice(start) : html;
-  const rows: GlobalXDistributionRow[] = [];
-  const yearBlocks = [...section.matchAll(/<div\b[^>]*id=["']dc-year-(\d{4})["'][^>]*>([\s\S]*?)<\/table>/gi)];
-  for (const block of yearBlocks) {
-    for (const row of block[2].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
-      const cells = splitRowCells(row[1]);
-      if (cells.length < 5) continue;
-      const declaration = cleanText(cells[0]);
-      if (!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(declaration)) continue;
-      rows.push({
-        'Declaration Date': declaration,
-        'Ex-Div Date': cleanText(cells[1]),
-        'Record Date': cleanText(cells[2]),
-        'Payable Date': cleanText(cells[3]),
-        'Amount ($)': cleanText(cells[4]),
-      });
-    }
-  }
-  // The page groups rows by year and lists each year oldest-first; the feed
-  // publishes the whole history newest-first so the latest payout is row 1.
-  rows.sort((a, b) => {
-    const left = toIsoDate(a['Declaration Date']);
-    const right = toIsoDate(b['Declaration Date']);
-    return left < right ? 1 : left > right ? -1 : 0;
-  });
-  // The page groups rows by year and lists each year oldest-first; the feed
-  // publishes the whole history newest-first so row 1 is the latest payout.
-  rows.sort((a, b) => {
-    const left = toIsoDate(a['Declaration Date']);
-    const right = toIsoDate(b['Declaration Date']);
-    return left < right ? 1 : left > right ? -1 : 0;
-  });
-  return rows;
+  const flight = extractNextFlightText(html);
+  const history = findRscObjectAfterKey(flight, 'DISTRIBUTION_HISTORY');
+  if (!Array.isArray(history)) return [];
+  return history.map((item) => {
+    const row = item as Record<string, unknown>;
+    return {
+      'Declaration Date': '',
+      'Ex-Div Date': cleanText(row.ex_date),
+      'Record Date': cleanText(row.record_date),
+      'Payable Date': cleanText(row.payable_date),
+      'Amount ($)': row.amount == null ? '' : `$${Number(row.amount).toFixed(6)}`,
+    };
+  }).sort((a, b) => b['Ex-Div Date'].localeCompare(a['Ex-Div Date']));
 }
-
 export type GlobalXPerformance = {
   asOfDate: string;
   nav: Record<string, number | null>;
@@ -1135,66 +1210,31 @@ const PERFORMANCE_COLUMNS: Record<string, string> = {
  * and Market rows plus the first benchmark row the page prints.
  */
 export function parseGlobalXPerformanceSection(html: string, sectionId: string): GlobalXPerformance | null {
-  const start = html.search(new RegExp(`id=["']${sectionId}["']`, 'i'));
-  if (start < 0) return null;
-  const section = html.slice(start, start + 30000);
-  const tableStart = section.search(/<table\b/i);
-  if (tableStart < 0) return null;
-  const tableEnd = section.indexOf('</table>', tableStart);
-  const table = section.slice(tableStart, tableEnd > 0 ? tableEnd : undefined);
-
-  const asOfMatch = /Data as of:\s*(\d{1,2}\/\d{1,2}\/\d{4})/i.exec(section);
-  const rows = [...table.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map((row) => splitRowCells(row[1])).filter((cells) => cells.length);
-
-  // Header rows: the first row carries the tenor labels, a second row carries
-  // the Cumulative/Annualized grouping and is skipped.
-  const headerIndex = rows.findIndex((cells) => cells.some((cell) => /^ytd$/i.test(cell)));
-  const headers = headerIndex >= 0 ? rows[headerIndex] : rows[0] || [];
-  const columnFields = headers.map((cell) => PERFORMANCE_COLUMNS[cell.toLowerCase()] || null);
-
-  const readRow = (cells: string[]): Record<string, number | null> => {
-    const values: Record<string, number | null> = {};
-    for (let index = 1; index < cells.length; index += 1) {
-      const field = columnFields[index];
-      if (!field) continue;
-      values[field] = numberOrNull(cells[index]);
-    }
-    return values;
+  const flight = extractNextFlightText(html);
+  const performance = findRscObjectAfterKey(flight, 'PERFORMANCE_HISTORY') as Record<string, any> | null;
+  if (!performance) return null;
+  const periodKey = /quarter/i.test(sectionId) ? 'quarter_end' : 'month_end';
+  const period = performance.avg_annualized?.[periodKey];
+  if (!period) return null;
+  const annual = period.fund_nav || {};
+  const cumulative = performance.cumulative?.[periodKey]?.fund_nav || {};
+  const pct = (value: unknown): number | null => {
+    const n = numberOrNull(value);
+    return n === null ? null : round(n * 100, 2);
   };
-
-  let nav: Record<string, number | null> | null = null;
-  let market: Record<string, number | null> | null = null;
-  let benchmarkName: string | null = null;
-  let benchmark: Record<string, number | null> = {};
-  for (let index = (headerIndex >= 0 ? headerIndex : 0) + 1; index < rows.length; index += 1) {
-    const label = cleanText(rows[index][0]);
-    if (!label) continue;
-    if (/^nav performance/i.test(label)) nav = readRow(rows[index]);
-    else if (/^market performance/i.test(label)) market = readRow(rows[index]);
-    else if (
-      !benchmarkName &&
-      !/post-tax|pre-liquidation|after-tax|^cumulative$|^annualized$/i.test(label)
-    ) {
-      const candidate = readRow(rows[index]);
-      // The column-grouping row ("Cumulative | Annualized") carries no figures,
-      // so only a row with at least three readings can be the benchmark.
-      const readings = Object.values(candidate).filter((value) => value !== null).length;
-      if (readings >= 3) {
-        benchmarkName = label;
-        benchmark = candidate;
-      }
-    }
-  }
-  if (!nav && !market) return null;
   return {
-    asOfDate: asOfMatch ? toIsoDate(asOfMatch[1]) : '',
-    nav: nav || {},
-    market: market || {},
-    benchmarkName,
-    benchmark,
+    asOfDate: rscDate(performance[periodKey === 'quarter_end' ? 'quarter_end_date' : 'month_end_date']),
+    nav: {
+      yr1: pct(annual.ONE_YEAR), yr3: pct(annual.THREE_YEAR), yr5: pct(annual.FIVE_YEAR),
+      sinceInception: pct(annual.SINCE_INCEPTION),
+      mo1: pct(cumulative.ONE_MONTH), mo3: pct(cumulative.THREE_MONTH), ytd: pct(cumulative.YTD),
+      sinceInceptionCumulative: pct(cumulative.SINCE_INCEPTION),
+    },
+    market: Object.fromEntries(Object.entries(period.market_price || {}).map(([key, value]) => [key, pct(value)])),
+    benchmarkName: 'Index',
+    benchmark: Object.fromEntries(Object.entries(period.index || {}).map(([key, value]) => [key, pct(value)])),
   };
 }
-
 export type GlobalXNavIndex = {
   startDate: string;
   endDate: string;
@@ -1204,33 +1244,9 @@ export type GlobalXNavIndex = {
 };
 
 /** The inline `dates` / `navValues` / `indexValues2` arrays behind the "Growth of $10,000 at NAV Since Inception" chart. */
-export function parseGlobalXNavIndex(html: string): GlobalXNavIndex | null {
-  const dates = /const\s+dates\s*=\s*\[([\s\S]*?)\]/.exec(html);
-  const values = /const\s+navValues\s*=\s*\[([\s\S]*?)\]/.exec(html);
-  if (!dates || !values) return null;
-  const dateList = [...dates[1].matchAll(/"([\d-]{10})"/g)].map((match) => match[1]);
-  const valueList = values[1]
-    .split(',')
-    .map((value) => Number(value.replace(/["\s]/g, '')))
-    .filter((value) => Number.isFinite(value));
-  const benchmarkMatch = /const\s+indexValues2\s*=\s*\[([\s\S]*?)\]/.exec(html);
-  const benchmarkValues = benchmarkMatch
-    ? benchmarkMatch[1]
-        .split(',')
-        .map((value) => Number(value.replace(/["\s]/g, '')))
-        .filter((value) => Number.isFinite(value))
-    : [];
-  const length = Math.min(dateList.length, valueList.length);
-  if (!length) return null;
-  return {
-    startDate: dateList[0],
-    endDate: dateList[length - 1],
-    points: length,
-    values: valueList.slice(0, length),
-    benchmarkValues: benchmarkValues.slice(0, length),
-  };
+export function parseGlobalXNavIndex(_html: string): GlobalXNavIndex | null {
+  return null;
 }
-
 export type GlobalXDocuments = {
   prospectus: string | null;
   summaryProspectus: string | null;
@@ -1359,14 +1375,14 @@ export function parseCsv(text: string): string[][] {
 const OCC_OPTION = /^[A-Z0-9]{1,6}\s+\d{6}[CP]\d{8}$/;
 
 /**
- * A factual position type for the Watchlist. GLOBALX publishes no asset-class
+ * A factual position type for the Watchlist. Global X publishes no asset-class
  * column, so this is derived from the row's own identifying fields and is
  * documented as derived in the README; the raw row is otherwise untouched.
  */
 export function globalxAssetCategory(stockTicker: string, securityName: string, moneyMarketFlag: string): string {
   const ticker = cleanText(stockTicker);
   const name = cleanText(securityName);
-  if (/^y$/i.test(cleanText(moneyMarketFlag)) || /^cash\s*&\s*other$/i.test(ticker)) return 'Cash';
+  if (/^y$/i.test(cleanText(moneyMarketFlag)) || /^cash(?:\s*&\s*other|\s+and\s+other)?$/i.test(ticker) || /^cash(?:\s*&\s*other|\s+and\s+other)?$/i.test(name) || /other payable & receivable/i.test(name)) return 'Cash';
   if (OCC_OPTION.test(ticker)) return 'Option';
   if (/treasury|t-bill|t bill/i.test(name)) return 'Treasury';
   if (/\betf\b|exchange[- ]traded|\bfund\b|\btrust\b/i.test(name)) return 'Fund';
@@ -1390,32 +1406,33 @@ export type ParsedHoldings = {
  */
 export function parseGlobalXHoldingsCsv(text: string): ParsedHoldings {
   const table = parseCsv(text);
-  const rows: Record<string, string>[] = [];
+  const rows: Array<Record<string, string>> = [];
   let asOfDate = '';
-  let at = { netAssets: null as number | null, sharesOutstanding: null as number | null, creationUnits: null as number | null };
-  const headers = ['Ticker', 'Name', 'Weight (%)', 'Price', 'Shares', 'Market Value'];
-  for (let i = 0; i < table.length; i++) {
-    const row = table[i];
-    if (row.length >= 1 && row[0]?.includes('Fund Holdings Data as of')) {
-      const match = row[0].match(/as of (\d{2}\/\d{2}\/\d{4})/);
-      if (match) {
-         asOfDate = toIsoDate(match[1]);
-      }
+  for (const row of table) {
+    if (row[0]?.includes('Fund Holdings Data as of')) {
+      const match = row[0].match(/as of\s+(\d{1,2}\/\d{1,2}\/\d{4})/i);
+      if (match) asOfDate = toIsoDate(match[1]);
+      continue;
     }
-    if (row.length < 5 || row[0]?.includes('Ticker') || row[0]?.includes('Holdings') || row[0]?.includes('Net Assets')) continue;
-    
+    if (row.length < 7 || /% of Net Assets/i.test(row[0]) || /Holdings/i.test(row[0])) continue;
+    const weight = cleanText(row[0]);
+    if (!/^[-+]?\d+(?:\.\d+)?$/.test(weight)) continue;
+    const ticker = cleanText(row[1]);
+    const name = cleanText(row[2]);
+    const sedol = cleanText(row[3]);
     rows.push({
-      'Ticker': cleanText(row[1]),
-      'Name': cleanText(row[2]),
-      'Weight (%)': cleanText(row[0]),
-      'Price': cleanText(row[4]),
-      'Shares': cleanText(row[5]),
+      Name: name,
+      Ticker: ticker,
+      Identifier: sedol,
+      Weight: `${weight}%`,
       'Market Value': cleanText(row[6]),
+      'Shares Held': cleanText(row[5]),
+      'Asset Category': globalxAssetCategory(ticker, name, ''),
+      Price: cleanText(row[4]),
     });
   }
-  return { headers, rows, asOfDate, totalRows: rows.length, ...at };
+  return { headers: [...HOLDINGS_HEADERS], rows, asOfDate, netAssets: null, sharesOutstanding: null, creationUnits: null, totalRows: rows.length };
 }
-
 export function parseNportXml(xml: string): { positions: NportPosition[]; repPdDate: string; seriesName: string | null } {
   const repPdDate = xmlTagText(xml, 'repPdDate') || '';
   const seriesName = xmlTagText(xml, 'seriesName');
@@ -1470,7 +1487,8 @@ export function parseYahooChart(json: unknown): { history: YahooHistoryRow[]; di
   const history: YahooHistoryRow[] = [];
   for (let index = 0; index < timestamps.length; index += 1) {
     const close = numberOrNull(quote.close?.[index]);
-    const adjusted = numberOrNull(adjClose[index]);
+    const adjustedRaw = numberOrNull(adjClose[index]);
+    const adjusted = adjustedRaw === null ? null : round(adjustedRaw, 2);
     if (close === null && adjusted === null) continue;
     const date = new Date(timestamps[index] * 1000).toISOString().slice(0, 10);
     history.push({ date, close, adjClose: adjusted, volume: numberOrNull(quote.volume?.[index]) });
@@ -1544,7 +1562,7 @@ export function formatDistributionFrequency(value: unknown): string {
 
 /**
  * Distribution frequency derived from the fund's own ex-dates, used only when
- * GLOBALX publishes no label (it does for every fund today, so this is a guard).
+ * Global X publishes no label (it does for every fund today, so this is a guard).
  */
 export function inferDistributionFrequency(exDates: string[], now: Date = new Date()): string {
   const cutoff = new Date(now.getTime() - 400 * 24 * 3600 * 1000).toISOString().slice(0, 10);
@@ -1717,14 +1735,14 @@ async function updateFund(
     creationUnits: null as number | null,
     totalRows: 0,
     source: globalxProvenanceHoldingsUrl(ticker, pageHtml),
-    sourceKind: 'official GLOBALX daily holdings CSV (download_holdings_csv)',
+    sourceKind: 'official Global X daily holdings CSV (download_holdings_csv)',
   };
   if (!config.skipGlobalX) {
     try {
       const csv = await fetchText(globalxHoldingsCsvUrl(ticker, pageHtml), browserHeaders(), config, `${ticker} holdings CSV`);
       if (/^\s*</.test(csv)) throw new Error(`${ticker} holdings CSV: received HTML instead of CSV`);
       const parsed = parseGlobalXHoldingsCsv(csv);
-      holdings = { ...holdings, ...parsed, headers: parsed.headers, source: globalxProvenanceHoldingsUrl(ticker) };
+      holdings = { ...holdings, ...parsed, headers: parsed.headers, source: globalxProvenanceHoldingsUrl(ticker, pageHtml) };
       if (config.storeRawDownloads) {
         await writeIfChanged(path.join(API_ROOT, 'raw', `${ticker}-holdings.csv`), csv);
       }
@@ -1773,7 +1791,7 @@ async function updateFund(
   // --- assemble metrics --------------------------------------------------
   const netAssets = holdings.netAssets ?? details.netAssets ?? fund.netAssets ?? null;
   const sharesOutstanding = holdings.sharesOutstanding ?? details.sharesOutstanding ?? null;
-  // GLOBALX prints NAV and Market Price directly; the derived quotient is only a
+  // Global X prints NAV and Market Price directly; the derived quotient is only a
   // guard for the day a fund page omits the panel.
   const derivedNav = netAssets !== null && sharesOutstanding ? round(netAssets / sharesOutstanding, 2) : null;
   const navValue = details.netAssetValue ?? derivedNav;
@@ -1781,7 +1799,7 @@ async function updateFund(
   const marketPriceValue = details.marketPrice
     ?? (historyRows.length ? numberOrNull(historyRows[0].Close) : null);
   const derivedPremiumDiscount = navValue && marketPriceValue !== null ? round(((marketPriceValue - navValue) / navValue) * 100, 2) : null;
-  // GLOBALX prints its own `Premium Discount (%)`; the quotient is only the guard
+  // Global X prints its own `Premium Discount (%)`; the quotient is only the guard
   // for the day a panel omits the row.
   const premiumDiscount = details.premiumDiscount ?? derivedPremiumDiscount;
   const premiumDiscountKind = details.premiumDiscount !== null
@@ -1811,7 +1829,7 @@ async function updateFund(
     yield12MText: formatPercentText(distributionInfo?.trailingRate12M ?? null),
     secYield: distributionInfo?.secYield ?? fund.secYield ?? null,
     secYieldText: formatPercentText(distributionInfo?.secYield ?? fund.secYield ?? null),
-    returnsBasis: 'official GLOBALX fund page NAV Performance (monthly series)',
+    returnsBasis: 'official Global X fund page NAV Performance (monthly series)',
   };
 
   const latestDistribution = distributionRows.find((row) => row['Amount ($)'] && !isMissingCell(row['Amount ($)']));
@@ -1847,7 +1865,7 @@ async function updateFund(
     dataFile: `./funds/${ticker}/meta.json`,
     fundPage: globalxFundPageUrl(ticker),
     source: {
-      provider: 'GLOBALX Investment Management LLC (GLOBALX ETFs)',
+      provider: 'Global X Investment Management LLC (Global X ETFs)',
       site: GLOBALX_SITE,
       lineup: GLOBALX_LINEUP_URL,
       fundPage: globalxFundPageUrl(ticker),
@@ -1855,16 +1873,16 @@ async function updateFund(
       holdingsSource: holdings.sourceKind,
       historySource: historyMeta.sourceKind,
       historyUrl: historyMeta.source,
-      returnsSource: 'GLOBALX fund page performance tables (NAV Performance)',
-      distributionsSource: 'GLOBALX fund page Distribution History table',
-      distributionInfoSource: 'GLOBALX fund page Distribution Information block',
-      documentsSource: 'GLOBALX fund page Documents table',
-      registrant: `GLOBALX ETF Trust (Investment Company Act file ${GLOBALX_ETF_TRUST_FILE_NUMBER})`,
+      returnsSource: 'Global X fund page performance tables (NAV Performance)',
+      distributionsSource: 'Global X fund page Distribution History table',
+      distributionInfoSource: 'Global X fund page Distribution Information block',
+      documentsSource: 'Global X fund page Documents table',
+      registrant: `Global X Funds (Investment Company Act file ${GLOBALX_ETF_TRUST_FILE_NUMBER})`,
       nportDoc: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${GLOBALX_ETF_TRUST_CIK}&type=NPORT-P&dateb=&owner=include&count=10`,
-      exchangeSource: 'GLOBALX fund page Fund Details "Primary Exchange"',
-      navSource: `GLOBALX fund page Fund Details "Net Asset Value" (${navKind})`,
+      exchangeSource: 'Global X fund page Fund Details "Primary Exchange"',
+      navSource: `Global X fund page Fund Details "Net Asset Value" (${navKind})`,
       premiumDiscountSource: premiumDiscountKind,
-      bidAskSpreadSource: 'GLOBALX fund page Fund Details "30-Day Median Bid-Ask Spread (%)"',
+      bidAskSpreadSource: 'Global X fund page Fund Details "30-Day Median Bid-Ask Spread (%)"',
     },
     identifiers: {
       cusip: details.cusip || null,
@@ -1895,7 +1913,7 @@ async function updateFund(
       dailyChangeText: details.marketPriceDailyChangeValue === null
         ? null
         : `${formatMoneyText(details.marketPriceDailyChangeValue)} (${formatPercentText(details.marketPriceDailyChangePercent)})`,
-      source: details.marketPrice !== null ? 'GLOBALX fund page Fund Details "Market Price"' : 'Yahoo Finance daily close',
+      source: details.marketPrice !== null ? 'Global X fund page Fund Details "Market Price"' : 'Yahoo Finance daily close',
     },
     premiumDiscount: {
       display: formatPercentText(premiumDiscount),
@@ -1913,7 +1931,7 @@ async function updateFund(
       display: netAssets === null ? null : formatAumDisplay(netAssets),
       value: netAssets,
       asOfDate: details.asOfDate ? formatGlobalXDate(details.asOfDate) : holdingsMeta.asOfDate,
-      source: holdings.netAssets !== null ? holdings.sourceKind : 'GLOBALX fund page Fund Details "Net Assets"',
+      source: holdings.netAssets !== null ? holdings.sourceKind : 'Global X fund page Fund Details "Net Assets"',
     },
     sharesOutstanding: {
       display: sharesOutstanding === null ? null : sharesOutstanding.toLocaleString('en-US'),
@@ -1923,20 +1941,20 @@ async function updateFund(
     yields: {
       dividendYield: metrics.dividendYield,
       dividendYieldText: metrics.dividendYieldText,
-      dividendYieldKind: 'official GLOBALX Distribution Rate (latest distribution annualized / ex-date NAV)',
+      dividendYieldKind: 'official Global X Distribution Rate (latest distribution annualized / ex-date NAV)',
       distributionRate: metrics.distributionYield,
       distributionRateText: metrics.distributionYieldText,
       yield12M: metrics.yield12M,
       yield12MText: metrics.yield12MText,
       secYield: metrics.secYield,
       secYieldText: metrics.secYieldText,
-      secYieldKind: 'official GLOBALX 30-Day SEC Yield',
+      secYieldKind: 'official Global X 30-Day SEC Yield',
       distributionAmountText: distributionInfo?.distributionAmountText || null,
       distributionAmountPercentText: distributionInfo?.distributionAmountPercentText || null,
       distributionInfoAsOfDate: distributionInfo?.asOfDate ? formatGlobalXDate(distributionInfo.asOfDate) : null,
     },
     returns: {
-      derivedFrom: 'official GLOBALX fund page performance tables (NAV Performance series)',
+      derivedFrom: 'official Global X fund page performance tables (NAV Performance series)',
       monthEnd: {
         asOfDate: formatGlobalXDate(monthEndDate),
         raw: monthEndDate,
@@ -1976,7 +1994,7 @@ async function updateFund(
           endDate: navIndex.endDate,
           points: navIndex.points,
           benchmarkName: monthly?.benchmarkName || null,
-          source: 'GLOBALX fund page "Growth of $10,000 at NAV Since Inception" chart series',
+          source: 'Global X fund page "Growth of $10,000 at NAV Since Inception" chart series',
         }
       : null,
     distributions: {
@@ -1985,14 +2003,14 @@ async function updateFund(
       headers: [...GLOBALX_DISTRIBUTION_HEADERS],
       rows: distributionRows,
       fallback: false,
-      source: 'GLOBALX fund page Distribution History table',
+      source: 'Global X fund page Distribution History table',
     },
     documents: { ...documents },
     holdings: holdingsMeta,
     history: historyMeta,
   };
 
-  // Yahoo dividend history is the fallback only when GLOBALX published no rows.
+  // Yahoo dividend history is the fallback only when Global X published no rows.
   if (!distributionRows.length && yahooDividends.length) {
     (meta.distributions as Record<string, unknown>).headers = ['Ex-Date', 'Dividend'];
     (meta.distributions as Record<string, unknown>).rows = yahooDividends.map((row) => ({
@@ -2003,7 +2021,7 @@ async function updateFund(
       inferDistributionFrequency(yahooDividends.map((row) => row.date)),
     );
     (meta.distributions as Record<string, unknown>).fallback = true;
-    (meta.distributions as Record<string, unknown>).source = 'Yahoo Finance dividend history (GLOBALX published no distribution rows)';
+    (meta.distributions as Record<string, unknown>).source = 'Yahoo Finance dividend history (Global X published no distribution rows)';
   }
 
   // --- write pages -------------------------------------------------------
@@ -2201,7 +2219,7 @@ export async function main(env: Record<string, string | undefined> = process.env
     return;
   }
   const config = readConfig(env);
-  outputPrintConfig('GlobalX', config);
+  outputPrintConfig('Global X', config);
   const stats: RunStats = { updated: 0, unchanged: 0, skipped: 0, failed: 0 };
 
   // The lineup table is the catalog: it lists every fund, its asset class, the
@@ -2221,13 +2239,9 @@ export async function main(env: Record<string, string | undefined> = process.env
   }
 
   if (!config.skipGlobalX) {
-    const home = await fetchText(GLOBALX_LINEUP_URL, browserHeaders(), config, 'GLOBALX home page');
+    const home = await fetchText(GLOBALX_LINEUP_URL, browserHeaders(), config, 'Global X home page');
     if (config.storeRawDownloads) await writeIfChanged(path.join(API_ROOT, 'raw', 'lineup.html'), home);
-    const categories = parseGlobalXCategoryCards(home);
-    lineup = parseGlobalXLineup(home).map((fund) => ({
-      ...fund,
-      category: categories.get(fund.ticker) || fund.category || 'Other',
-    }));
+    lineup = parseGlobalXLineup(home);
     if (!lineup.length) throw new Error('lineup: the #explore-etfs #etf-table was not found on globalxetfs.com');
   } else {
     lineup = Object.values(previous).map((entry) => ({
@@ -2273,8 +2287,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   let processed = 0;
   const laneCount = Math.max(1, config.concurrency);
   lastRequestAtLanes = new Array(laneCount).fill(0);
-  pacingLanes = new Array(laneCount).fill(null).map(() => Promise.resolve());
-  const workers = Array.from({ length: laneCount }, async () => {
+    const workers = Array.from({ length: laneCount }, async () => {
     for (;;) {
       const fund = queue.shift();
       if (!fund) return;
@@ -2327,19 +2340,19 @@ export async function main(env: Record<string, string | undefined> = process.env
     // advanced below only when the serialized bytes actually moved.
     generatedAt: previousGeneratedAt || new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
     source: {
-      provider: 'GLOBALX Investment Management LLC (GLOBALX ETFs)',
+      provider: 'Global X Investment Management LLC (Global X ETFs)',
       market: 'us',
       site: GLOBALX_SITE,
       catalog: GLOBALX_LINEUP_URL,
       catalogNote: 'Server-rendered "Explore Our ETFs" table (#explore-etfs → #etf-table); five asset-class groups.',
-      fundPages: `${GLOBALX_SITE}/<ticker>/`,
-      holdings: `${GLOBALX_ADMIN_AJAX_URL}?action=download_holdings_csv&ticker=<TICKER>`,
-      holdingsNote: 'Official daily full-holdings CSV behind the fund page "Download Full Holdings" button.',
+      fundPages: `${GLOBALX_SITE}/funds/<ticker>/`,
+      holdings: 'https://assets.globalxetfs.com/funds/holdings/<ticker>_full-holdings_<YYYYMMDD>.csv',
+      holdingsNote: 'Official dated daily full-holdings CSV linked by the fund page.',
       history: 'Yahoo Finance public chart API (daily Close / Adj Close / Volume)',
-      distributions: 'GLOBALX fund page Distribution History calendar',
-      nportRegistrant: `SEC EDGAR Form N-PORT-P, GLOBALX ETF Trust CIK ${GLOBALX_ETF_TRUST_CIK} (holdings fallback only)`,
-      registrant: `GLOBALX ETF Trust (Investment Company Act file ${GLOBALX_ETF_TRUST_FILE_NUMBER})`,
-      exchange: 'GLOBALX fund page Fund Details "Primary Exchange", Yahoo Finance chart meta as fallback',
+      distributions: 'Global X fund page Distribution History calendar',
+      nportRegistrant: `SEC EDGAR Form N-PORT-P, Global X Funds CIK ${GLOBALX_ETF_TRUST_CIK} (holdings fallback only)`,
+      registrant: `Global X Funds (Investment Company Act file ${GLOBALX_ETF_TRUST_FILE_NUMBER})`,
+      exchange: 'Global X fund page Fund Details "Primary Exchange", Yahoo Finance chart meta as fallback',
     },
     counts,
     funds,

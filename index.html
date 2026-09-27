@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Global X ETF holdings to Watchlist from the static api/globalx JSON feed, generated from the globalxfunds.com ETF lineup table and the official per-fund pages (daily full-holdings CSV, NAV / market price / premium-discount, performance and distribution history), plus Yahoo Finance." />
+  <meta name="description" content="Global X ETF holdings to Watchlist from the static api/globalx JSON feed, generated from the www.globalxetfs.com ETF lineup table and the official per-fund pages (daily full-holdings CSV, NAV / market price / premium-discount, performance and distribution history), plus Yahoo Finance." />
   <title>Global X ETFs</title>
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
@@ -166,7 +166,7 @@
         <span id="app-subtitle" class="basis-full sm:basis-auto text-sm text-slate-500 dark:text-slate-400">
           Search Global X ETFs, select ETFs via the “Use” checkbox, then use the Watchlist tab. Data comes from
           <a href="./api/globalx/index.json" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">api/globalx/index.json</a> generated from
-          <a href="https://globalxfunds.com/#explore-etfs" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">globalxfunds.com ETF lineup and daily holdings downloads</a> + Yahoo Finance
+          <a href="https://www.globalxetfs.com/explore" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">www.globalxetfs.com ETF lineup and daily holdings downloads</a> + Yahoo Finance
         </span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
@@ -211,7 +211,7 @@
           <div
             id="dropzone"
             class="flex items-center gap-2 border border-dashed border-slate-300 dark:border-slate-600 hover:border-blue-500 bg-slate-50 dark:bg-slate-900/60 transition-all rounded-lg px-3.5 py-2 cursor-pointer text-sm text-slate-600 dark:text-slate-300"
-            title="Upload SEC Form N-PORT-P primary_doc.xml (Global X ETF Trust holdings from EDGAR, CIK 0001848758 — the fallback the feed uses when globalxfunds.com publishes no daily holdings CSV for a fund). Parsed in your browser; uploads live for this session only."
+            title="Upload SEC Form N-PORT-P primary_doc.xml (Global X Funds holdings from EDGAR, CIK 0001432353 — the fallback the feed uses when www.globalxetfs.com publishes no daily holdings CSV for a fund). Parsed in your browser; uploads live for this session only."
           >
             <input type="file" id="file-input" accept=".xml" class="hidden" />
             <svg class="w-4 h-4 text-blue-500 dark:text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
