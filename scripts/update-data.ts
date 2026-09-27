@@ -142,7 +142,7 @@ function outputCreateReporter(root: URL | string, total: number) {
  *                                                     management fee,
  *                                                     net assets, inception
  *   (b) official per-fund page ...................... Fund Details (CUSIP, ISIN,
- *       (`https://www.globalxetfs.com/<ticker>/`)            NAV, market price, daily
+ *       (`https://www.globalxetfs.com/funds/<ticker>/`)      NAV, market price, daily
  *                                                      change, exchange, net
  *                                                      assets, shares
  *                                                      outstanding), the
@@ -155,7 +155,7 @@ function outputCreateReporter(root: URL | string, total: number) {
  *                                                      daily index and the
  *                                                      document links
  *   (c) official daily full-holdings CSV ............ every position, market
- *       (admin-ajax download_holdings_csv)             value, weight, net assets
+ *       (assets.globalxetfs.com/funds/holdings/)       value, weight, net assets
  *   (d) SEC EDGAR Form N-PORT-P ..................... holdings fallback only
  *       (Global X Funds CIK 0001432353)                (EDGAR_FALLBACK=1)
  *   (e) Yahoo Finance chart API ..................... daily Close / Adj Close /
@@ -163,10 +163,10 @@ function outputCreateReporter(root: URL | string, total: number) {
  *                                                      history as a fallback
  *   (f) browser N-PORT dropzone ..................... user-supplied override
  *
- * The globalxetfs.com endpoints are the issuer's own public downloads: the ETF
- * lineup table is server-rendered, the per-fund page carries every headline
- * figure, and `admin-ajax.php?action=download_holdings_csv&ticker=<T>` returns
- * the same CSV the site's own "Download Full Holdings" button hands a visitor.
+ * The globalxetfs.com endpoints are the issuer's own public pages and downloads:
+ * the ETF lineup and fund pages carry the headline figures, and each fund page's
+ * "Full Holdings (.csv)" link points to the dated assets.globalxetfs.com file
+ * that the site hands to a visitor.
  * Nothing is scraped from a client-rendered widget and no value is invented:
  * a metric Global X does not publish stays `null` and the app renders `—`.
  */
@@ -180,7 +180,6 @@ const API_ROOT = path.join(REPO_ROOT, 'api', 'globalx');
 
 export const GLOBALX_SITE = 'https://www.globalxetfs.com';
 export const GLOBALX_LINEUP_URL = 'https://www.globalxetfs.com/explore';
-export const GLOBALX_ADMIN_AJAX_URL = `${GLOBALX_SITE}/wp-admin/admin-ajax.php`;
 /** Global X Funds — the registrant that files Form N-PORT-P for the ETFs (Investment Company Act file 811-22209). */
 export const GLOBALX_ETF_TRUST_CIK = '0001432353';
 export const GLOBALX_ETF_TRUST_FILE_NUMBER = '811-22209';
@@ -1313,7 +1312,7 @@ export const GLOBALX_HOLDINGS_CSV_HEADERS = [
   'Date',
   'Account',
   'StockTicker',
-  'Cusip',
+  'SEDOL',
   'SecurityName',
   'Shares',
   'Price',
@@ -1735,7 +1734,7 @@ async function updateFund(
     creationUnits: null as number | null,
     totalRows: 0,
     source: globalxProvenanceHoldingsUrl(ticker, pageHtml),
-    sourceKind: 'official Global X daily holdings CSV (download_holdings_csv)',
+    sourceKind: 'official Global X daily full-holdings CSV (assets.globalxetfs.com)',
   };
   if (!config.skipGlobalX) {
     try {
