@@ -57,103 +57,60 @@
   "netAssetsAsOf": "Sep 25 2026",
   "secYieldAsOf": "Sep 25 2026",
   "distributions": {
-    "frequency": "Semi-Annually",
-    "paymentsPerYear": 6,
+    "frequency": "00 - Unknown",
+    "paymentsPerYear": null,
     "headers": [
-      "Declaration Date",
-      "Ex-Div Date",
-      "Record Date",
-      "Payable Date",
-      "Amount ($)"
+      "Ex-Date",
+      "Dividend"
     ],
     "rows": [
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2026-12-30",
-        "Record Date": "2026-12-30",
-        "Payable Date": "2027-01-05",
-        "Amount ($)": ""
+        "Ex-Date": "Jun 29 2026",
+        "Dividend": "$0.1640"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2026-06-29",
-        "Record Date": "2026-06-29",
-        "Payable Date": "2026-07-02",
-        "Amount ($)": "$0.164200"
+        "Ex-Date": "Dec 30 2025",
+        "Dividend": "$0.3290"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2025-12-30",
-        "Record Date": "2025-12-30",
-        "Payable Date": "2026-01-07",
-        "Amount ($)": "$0.328885"
+        "Ex-Date": "Jun 27 2025",
+        "Dividend": "$0.1900"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2025-06-27",
-        "Record Date": "2025-06-27",
-        "Payable Date": "2025-07-07",
-        "Amount ($)": "$0.190078"
+        "Ex-Date": "Dec 30 2024",
+        "Dividend": "$0.2080"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2024-12-30",
-        "Record Date": "2024-12-30",
-        "Payable Date": "2025-01-07",
-        "Amount ($)": "$0.208442"
+        "Ex-Date": "Jun 27 2024",
+        "Dividend": "$0.1190"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2024-06-27",
-        "Record Date": "2024-06-27",
-        "Payable Date": "2024-07-05",
-        "Amount ($)": "$0.118695"
+        "Ex-Date": "Dec 28 2023",
+        "Dividend": "$0.2230"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2023-12-28",
-        "Record Date": "2023-12-29",
-        "Payable Date": "2024-01-08",
-        "Amount ($)": "$0.222636"
+        "Ex-Date": "Jun 29 2023",
+        "Dividend": "$0.1820"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2023-06-29",
-        "Record Date": "2023-06-30",
-        "Payable Date": "2023-07-10",
-        "Amount ($)": "$0.182302"
+        "Ex-Date": "Dec 29 2022",
+        "Dividend": "$0.3340"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2022-12-29",
-        "Record Date": "2022-12-30",
-        "Payable Date": "2023-01-09",
-        "Amount ($)": "$0.333748"
+        "Ex-Date": "Jun 29 2022",
+        "Dividend": "$0.1830"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2022-06-29",
-        "Record Date": "2022-06-30",
-        "Payable Date": "2022-07-08",
-        "Amount ($)": "$0.182453"
+        "Ex-Date": "Dec 30 2021",
+        "Dividend": "$0.1290"
       },
       {
-        "Declaration Date": "",
-        "Ex-Div Date": "2021-12-30",
-        "Record Date": "2021-12-31",
-        "Payable Date": "2022-01-07",
-        "Amount ($)": "$0.129144"
-      },
-      {
-        "Declaration Date": "",
-        "Ex-Div Date": "2021-06-29",
-        "Record Date": "2021-06-30",
-        "Payable Date": "2021-07-08",
-        "Amount ($)": "$0.087308"
+        "Ex-Date": "Jun 29 2021",
+        "Dividend": "$0.0870"
       }
     ],
-    "fallback": false,
-    "source": "Global X fund page Distribution History table"
+    "fallback": true,
+    "source": "Yahoo Finance dividend history (Global X published no distribution rows)"
   },
   "returns": {
     "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
@@ -225,7 +182,7 @@
     "secYieldText": "0.68%",
     "returnsBasis": "official Global X fund page NAV Performance (monthly series)"
   },
-  "distributionFrequency": "06 - Semi-annually",
+  "distributionFrequency": "00 - —",
   "providerCategory": "Equity / Core",
   "holdings": {
     "pages": [
