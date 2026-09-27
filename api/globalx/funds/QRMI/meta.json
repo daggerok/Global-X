@@ -1,0 +1,700 @@
+{
+  "ticker": "QRMI",
+  "name": "Nasdaq 100 Risk Managed Income ETF",
+  "category": "Equity / Structured",
+  "fundPage": "https://www.globalxetfs.com/funds/qrmi/",
+  "dataFile": "./funds/QRMI/meta.json",
+  "cusip": "37960A503",
+  "isin": "US37960A5039",
+  "ter": "0.60%",
+  "terValue": 0.6,
+  "terGross": "0.60%",
+  "terGrossValue": 0.6,
+  "nav": {
+    "display": "$15.22",
+    "value": 15.22,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.01 (0.07%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 15.22,
+  "aum": {
+    "display": "$14.46M",
+    "value": 14460070.81,
+    "asOfDate": "Sep 25 2026",
+    "source": "Global X fund page Fund Details \"Net Assets\""
+  },
+  "aumValue": 14460070.81,
+  "asOfDate": "Sep 25 2026",
+  "inceptionDate": "Aug 25 2021",
+  "inceptionDateFundPage": "Aug 25 2021",
+  "exchange": "Nasdaq",
+  "closePrice": "$15.26",
+  "closePriceValue": 15.26,
+  "premiumDiscount": {
+    "display": "0.26%",
+    "value": 0.2554,
+    "derivedValue": 0.26,
+    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+  },
+  "premiumDiscountValue": 0.2554,
+  "premiumDiscountDerivedValue": 0.26,
+  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "bidAskSpread": {
+    "display": "0.26%",
+    "value": 0.26,
+    "asOfDate": "Sep 25 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+  },
+  "bidAskSpreadValue": 0.26,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 14460070.81,
+  "sharesOutstanding": {
+    "display": "950,000",
+    "value": 950000,
+    "asOfDate": "Sep 25 2026"
+  },
+  "netAssetsAsOf": "Sep 25 2026",
+  "secYieldAsOf": "Sep 25 2026",
+  "distributions": {
+    "frequency": "Monthly",
+    "paymentsPerYear": 12,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-30",
+        "Record Date": "2026-12-30",
+        "Payable Date": "2027-01-05",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-21",
+        "Record Date": "2026-12-21",
+        "Payable Date": "2026-12-24",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-11-23",
+        "Record Date": "2026-11-23",
+        "Payable Date": "2026-11-27",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-10-19",
+        "Record Date": "2026-10-19",
+        "Payable Date": "2026-10-22",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-09-21",
+        "Record Date": "2026-09-21",
+        "Payable Date": "2026-09-24",
+        "Amount ($)": "$0.154200"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-08-24",
+        "Record Date": "2026-08-24",
+        "Payable Date": "2026-08-27",
+        "Amount ($)": "$0.153800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-07-20",
+        "Record Date": "2026-07-20",
+        "Payable Date": "2026-07-23",
+        "Amount ($)": "$0.149800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-06-22",
+        "Record Date": "2026-06-22",
+        "Payable Date": "2026-06-25",
+        "Amount ($)": "$0.160300"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-05-18",
+        "Record Date": "2026-05-18",
+        "Payable Date": "2026-05-21",
+        "Amount ($)": "$0.153600"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-04-20",
+        "Record Date": "2026-04-20",
+        "Payable Date": "2026-04-23",
+        "Amount ($)": "$0.156000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-03-23",
+        "Record Date": "2026-03-23",
+        "Payable Date": "2026-03-26",
+        "Amount ($)": "$0.151700"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-02-23",
+        "Record Date": "2026-02-23",
+        "Payable Date": "2026-02-26",
+        "Amount ($)": "$0.158100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-01-20",
+        "Record Date": "2026-01-20",
+        "Payable Date": "2026-01-23",
+        "Amount ($)": "$0.161700"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.000000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-22",
+        "Record Date": "2025-12-22",
+        "Payable Date": "2025-12-30",
+        "Amount ($)": "$0.162200"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-11-24",
+        "Record Date": "2025-11-24",
+        "Payable Date": "2025-12-02",
+        "Amount ($)": "$0.159500"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-10-20",
+        "Record Date": "2025-10-20",
+        "Payable Date": "2025-10-27",
+        "Amount ($)": "$0.160700"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-09-22",
+        "Record Date": "2025-09-22",
+        "Payable Date": "2025-09-29",
+        "Amount ($)": "$0.160900"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-08-18",
+        "Record Date": "2025-08-18",
+        "Payable Date": "2025-08-25",
+        "Amount ($)": "$0.159400"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-07-21",
+        "Record Date": "2025-07-21",
+        "Payable Date": "2025-07-28",
+        "Amount ($)": "$0.160400"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-06-23",
+        "Record Date": "2025-06-23",
+        "Payable Date": "2025-06-30",
+        "Amount ($)": "$0.161000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-05-19",
+        "Record Date": "2025-05-19",
+        "Payable Date": "2025-05-27",
+        "Amount ($)": "$0.162200"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-04-21",
+        "Record Date": "2025-04-21",
+        "Payable Date": "2025-04-28",
+        "Amount ($)": "$0.160700"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-03-24",
+        "Record Date": "2025-03-24",
+        "Payable Date": "2025-03-31",
+        "Amount ($)": "$0.167900"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-02-24",
+        "Record Date": "2025-02-24",
+        "Payable Date": "2025-03-03",
+        "Amount ($)": "$0.174200"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-01-21",
+        "Record Date": "2025-01-21",
+        "Payable Date": "2025-01-28",
+        "Amount ($)": "$0.178200"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-12-30",
+        "Record Date": "2024-12-30",
+        "Payable Date": "2025-01-07",
+        "Amount ($)": "$0.177200"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-11-18",
+        "Record Date": "2024-11-18",
+        "Payable Date": "2024-11-25",
+        "Amount ($)": "$0.168700"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-10-21",
+        "Record Date": "2024-10-21",
+        "Payable Date": "2024-10-28",
+        "Amount ($)": "$0.172100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-09-23",
+        "Record Date": "2024-09-23",
+        "Payable Date": "2024-09-30",
+        "Amount ($)": "$0.170800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-08-19",
+        "Record Date": "2024-08-19",
+        "Payable Date": "2024-08-26",
+        "Amount ($)": "$0.169700"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-07-22",
+        "Record Date": "2024-07-22",
+        "Payable Date": "2024-07-29",
+        "Amount ($)": "$0.168900"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-06-24",
+        "Record Date": "2024-06-24",
+        "Payable Date": "2024-07-01",
+        "Amount ($)": "$0.170100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-05-20",
+        "Record Date": "2024-05-21",
+        "Payable Date": "2024-05-29",
+        "Amount ($)": "$0.169800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-04-22",
+        "Record Date": "2024-04-23",
+        "Payable Date": "2024-04-30",
+        "Amount ($)": "$0.167100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-03-18",
+        "Record Date": "2024-03-19",
+        "Payable Date": "2024-03-26",
+        "Amount ($)": "$0.172900"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-02-20",
+        "Record Date": "2024-02-21",
+        "Payable Date": "2024-02-28",
+        "Amount ($)": "$0.173000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-01-22",
+        "Record Date": "2024-01-23",
+        "Payable Date": "2024-01-30",
+        "Amount ($)": "$0.175800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-12-28",
+        "Record Date": "2023-12-29",
+        "Payable Date": "2024-01-08",
+        "Amount ($)": "$0.172000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-11-20",
+        "Record Date": "2023-11-21",
+        "Payable Date": "2023-11-29",
+        "Amount ($)": "$0.169900"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-10-23",
+        "Record Date": "2023-10-24",
+        "Payable Date": "2023-10-31",
+        "Amount ($)": "$0.167400"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-09-18",
+        "Record Date": "2023-09-19",
+        "Payable Date": "2023-09-26",
+        "Amount ($)": "$0.173800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-08-21",
+        "Record Date": "2023-08-22",
+        "Payable Date": "2023-08-29",
+        "Amount ($)": "$0.174800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-07-24",
+        "Record Date": "2023-07-25",
+        "Payable Date": "2023-08-01",
+        "Amount ($)": "$0.183000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-06-20",
+        "Record Date": "2023-06-21",
+        "Payable Date": "2023-06-28",
+        "Amount ($)": "$0.182900"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-05-22",
+        "Record Date": "2023-05-23",
+        "Payable Date": "2023-05-31",
+        "Amount ($)": "$0.182500"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-04-24",
+        "Record Date": "2023-04-25",
+        "Payable Date": "2023-05-02",
+        "Amount ($)": "$0.181600"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-03-20",
+        "Record Date": "2023-03-21",
+        "Payable Date": "2023-03-28",
+        "Amount ($)": "$0.180500"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-02-21",
+        "Record Date": "2023-02-22",
+        "Payable Date": "2023-03-01",
+        "Amount ($)": "$0.180100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-01-23",
+        "Record Date": "2023-01-24",
+        "Payable Date": "2023-01-31",
+        "Amount ($)": "$0.182000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-12-29",
+        "Record Date": "2022-12-30",
+        "Payable Date": "2023-01-09",
+        "Amount ($)": "$0.186821"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-11-21",
+        "Record Date": "2022-11-22",
+        "Payable Date": "2022-11-30",
+        "Amount ($)": "$0.184000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-10-24",
+        "Record Date": "2022-10-25",
+        "Payable Date": "2022-11-01",
+        "Amount ($)": "$0.183800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-09-19",
+        "Record Date": "2022-09-20",
+        "Payable Date": "2022-09-27",
+        "Amount ($)": "$0.187000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-08-22",
+        "Record Date": "2022-08-23",
+        "Payable Date": "2022-08-30",
+        "Amount ($)": "$0.196100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-07-18",
+        "Record Date": "2022-07-19",
+        "Payable Date": "2022-07-26",
+        "Amount ($)": "$0.199800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-06-21",
+        "Record Date": "2022-06-22",
+        "Payable Date": "2022-06-29",
+        "Amount ($)": "$0.193100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-05-23",
+        "Record Date": "2022-05-24",
+        "Payable Date": "2022-06-01",
+        "Amount ($)": "$0.030600"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-04-18",
+        "Record Date": "2022-04-19",
+        "Payable Date": "2022-04-26",
+        "Amount ($)": "$0.041100"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-03-21",
+        "Record Date": "2022-03-22",
+        "Payable Date": "2022-03-29",
+        "Amount ($)": "$0.215800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-02-22",
+        "Record Date": "2022-02-23",
+        "Payable Date": "2022-03-02",
+        "Amount ($)": "$0.084181"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-01-24",
+        "Record Date": "2022-01-25",
+        "Payable Date": "2022-02-01",
+        "Amount ($)": "$0.140600"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-12-30",
+        "Record Date": "2021-12-31",
+        "Payable Date": "2022-01-07",
+        "Amount ($)": "$0.232800"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-11-22",
+        "Record Date": "2021-11-23",
+        "Payable Date": "2021-12-01",
+        "Amount ($)": "$0.242600"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-10-18",
+        "Record Date": "2021-10-19",
+        "Payable Date": "2021-10-26",
+        "Amount ($)": "$0.242200"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-09-20",
+        "Record Date": "2021-09-21",
+        "Payable Date": "2021-09-28",
+        "Amount ($)": "$0.066749"
+      }
+    ],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "raw": "2026-08-31",
+      "mo1": 2.03,
+      "mo3": 0.5,
+      "mo6": null,
+      "ytd": 2.97,
+      "yr1": 9.16,
+      "yr3": 7.44,
+      "yr5": 1.75,
+      "yr10": null,
+      "sinceInception": 1.78,
+      "sinceInceptionCumulative": 9.27,
+      "market": {
+        "FIVE_YEAR": 1.68,
+        "ONE_YEAR": 9.1,
+        "SINCE_INCEPTION": 1.77,
+        "THREE_YEAR": 7.37
+      },
+      "benchmarkName": "Index",
+      "benchmark": {
+        "FIVE_YEAR": 2.33,
+        "ONE_YEAR": 10.28,
+        "SINCE_INCEPTION": 2.35,
+        "TEN_YEAR": 2.66,
+        "THREE_YEAR": 8.51
+      }
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "raw": "2026-06-30",
+      "mo1": 1.22,
+      "mo3": 6.63,
+      "mo6": null,
+      "ytd": 3.72,
+      "yr1": 10.23,
+      "yr3": 7.43,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 2,
+      "sinceInceptionCumulative": 10.07,
+      "market": {
+        "ONE_YEAR": 10.03,
+        "SINCE_INCEPTION": 1.99,
+        "THREE_YEAR": 7.41
+      }
+    }
+  },
+  "metrics": {
+    "ytd": 2.97,
+    "tr1y": 9.16,
+    "tr3y": 24.02,
+    "tr5y": 9.06,
+    "tr10y": null,
+    "cagr3y": 7.44,
+    "cagr5y": 1.75,
+    "cagr10y": null,
+    "siAnn": 1.78,
+    "dividendYield": 13.09,
+    "dividendYieldText": "13.09%",
+    "distributionYield": 13.09,
+    "distributionYieldText": "13.09%",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 0.02,
+    "secYieldText": "0.02%",
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)"
+  },
+  "distributionFrequency": "01 - Monthly",
+  "providerCategory": "Equity / Structured",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 107,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://assets.globalxetfs.com/funds/holdings/qrmi_full-holdings_20260925.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json",
+      "./history/002.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1276,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/QRMI",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/qrmi/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/qrmi_full-holdings_20260925.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/QRMI",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+  },
+  "identifiers": {
+    "cusip": "37960A503",
+    "isin": "US37960A5039",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": "Index"
+  },
+  "expenseRatio": {
+    "display": "0.60%",
+    "value": 0.6,
+    "managementFeeDisplay": "0.60%",
+    "managementFeeValue": 0.6
+  },
+  "marketPrice": {
+    "display": "$15.26",
+    "value": 15.26,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.03 (0.20%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": 13.09,
+    "dividendYieldText": "13.09%",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": 13.09,
+    "distributionRateText": "13.09%",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 0.02,
+    "secYieldText": "0.02%",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Sep 25 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": null,
+    "summaryProspectus": null,
+    "sai": null,
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

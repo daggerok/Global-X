@@ -1,0 +1,266 @@
+{
+  "ticker": "GXLC",
+  "name": "U.S. 500 ETF",
+  "category": "Equity / Core",
+  "fundPage": "https://www.globalxetfs.com/funds/gxlc/",
+  "dataFile": "./funds/GXLC/meta.json",
+  "cusip": "37960A255",
+  "isin": "US37960A2556",
+  "ter": "0.02%",
+  "terValue": 0.02,
+  "terGross": "0.02%",
+  "terGrossValue": 0.02,
+  "nav": {
+    "display": "$93.12",
+    "value": 93.12,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.45 (0.49%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 93.12,
+  "aum": {
+    "display": "$4.66M",
+    "value": 4655935.78,
+    "asOfDate": "Sep 25 2026",
+    "source": "Global X fund page Fund Details \"Net Assets\""
+  },
+  "aumValue": 4655935.78,
+  "asOfDate": "Sep 25 2026",
+  "inceptionDate": "Sep 23 2025",
+  "inceptionDateFundPage": "Sep 23 2025",
+  "exchange": "NYSE Arca",
+  "closePrice": "$93.14",
+  "closePriceValue": 93.14,
+  "premiumDiscount": {
+    "display": "0.02%",
+    "value": 0.0244,
+    "derivedValue": 0.02,
+    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+  },
+  "premiumDiscountValue": 0.0244,
+  "premiumDiscountDerivedValue": 0.02,
+  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "bidAskSpread": {
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Sep 25 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+  },
+  "bidAskSpreadValue": 0.05,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 4655935.78,
+  "sharesOutstanding": {
+    "display": "50,000",
+    "value": 50000,
+    "asOfDate": "Sep 25 2026"
+  },
+  "netAssetsAsOf": "Sep 25 2026",
+  "secYieldAsOf": "Sep 25 2026",
+  "distributions": {
+    "frequency": "Quarterly",
+    "paymentsPerYear": 4,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-30",
+        "Record Date": "2026-12-30",
+        "Payable Date": "2027-01-05",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-11-04",
+        "Record Date": "2026-11-04",
+        "Payable Date": "2026-11-09",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-08-05",
+        "Record Date": "2026-08-05",
+        "Payable Date": "2026-08-10",
+        "Amount ($)": "$0.246494"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-05-06",
+        "Record Date": "2026-05-06",
+        "Payable Date": "2026-05-11",
+        "Amount ($)": "$0.227400"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-02-04",
+        "Record Date": "2026-02-04",
+        "Payable Date": "2026-02-09",
+        "Amount ($)": "$0.100000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.245177"
+      }
+    ],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": 0.88,
+    "dividendYieldText": "0.88%",
+    "distributionYield": 0.88,
+    "distributionYieldText": "0.88%",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 1.02,
+    "secYieldText": "1.02%",
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)"
+  },
+  "distributionFrequency": "04 - Quarterly",
+  "providerCategory": "Equity / Core",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json",
+      "./holdings/002.json",
+      "./holdings/003.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 501,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://assets.globalxetfs.com/funds/holdings/gxlc_full-holdings_20260925.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 253,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/GXLC",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/gxlc/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/gxlc_full-holdings_20260925.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GXLC",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+  },
+  "identifiers": {
+    "cusip": "37960A255",
+    "isin": "US37960A2556",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.02%",
+    "value": 0.02,
+    "managementFeeDisplay": "0.02%",
+    "managementFeeValue": 0.02
+  },
+  "marketPrice": {
+    "display": "$93.14",
+    "value": 93.14,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.45 (0.49%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": 0.88,
+    "dividendYieldText": "0.88%",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": 0.88,
+    "distributionRateText": "0.88%",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 1.02,
+    "secYieldText": "1.02%",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Sep 25 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": null,
+    "summaryProspectus": null,
+    "sai": null,
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

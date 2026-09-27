@@ -1,0 +1,47 @@
+{
+  "ticker": "RMHY",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 3,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "CASH",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.04%",
+      "Market Value": "22,255.05",
+      "Shares Held": "22,255.05",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.02%",
+      "Market Value": "-8,801.61",
+      "Shares Held": "-8,801.61",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "XTRACKERS USD HIGH YIELD COR",
+      "Ticker": "HYLB",
+      "Identifier": "BZCGC26",
+      "Weight": "99.97%",
+      "Market Value": "51,072,541.58",
+      "Shares Held": "1,438,258.00",
+      "Asset Category": "Equity",
+      "Price": "35.51"
+    }
+  ]
+}

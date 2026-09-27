@@ -1,0 +1,375 @@
+{
+  "ticker": "MILN",
+  "name": "Millennial Consumer ETF",
+  "category": "Equity / Thematic",
+  "fundPage": "https://www.globalxetfs.com/funds/miln/",
+  "dataFile": "./funds/MILN/meta.json",
+  "cusip": "37954Y764",
+  "isin": "US37954Y7647",
+  "ter": "0.50%",
+  "terValue": 0.5,
+  "terGross": "0.50%",
+  "terGrossValue": 0.5,
+  "nav": {
+    "display": "$42.86",
+    "value": 42.86,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.24 (0.56%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 42.86,
+  "aum": {
+    "display": "$88.72M",
+    "value": 88723241.51,
+    "asOfDate": "Sep 25 2026",
+    "source": "Global X fund page Fund Details \"Net Assets\""
+  },
+  "aumValue": 88723241.51,
+  "asOfDate": "Sep 25 2026",
+  "inceptionDate": "May 4 2016",
+  "inceptionDateFundPage": "May 4 2016",
+  "exchange": "Nasdaq",
+  "closePrice": "$42.88",
+  "closePriceValue": 42.88,
+  "premiumDiscount": {
+    "display": "0.04%",
+    "value": 0.0423,
+    "derivedValue": 0.05,
+    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+  },
+  "premiumDiscountValue": 0.0423,
+  "premiumDiscountDerivedValue": 0.05,
+  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "bidAskSpread": {
+    "display": "0.28%",
+    "value": 0.28,
+    "asOfDate": "Sep 25 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+  },
+  "bidAskSpreadValue": 0.28,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 88723241.51,
+  "sharesOutstanding": {
+    "display": "2,070,000",
+    "value": 2070000,
+    "asOfDate": "Sep 25 2026"
+  },
+  "netAssetsAsOf": "Sep 25 2026",
+  "secYieldAsOf": "Sep 25 2026",
+  "distributions": {
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 6,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-12-30",
+        "Record Date": "2026-12-30",
+        "Payable Date": "2027-01-05",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-06-29",
+        "Record Date": "2026-06-29",
+        "Payable Date": "2026-07-02",
+        "Amount ($)": "$0.039300"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.099339"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-06-27",
+        "Record Date": "2025-06-27",
+        "Payable Date": "2025-07-07",
+        "Amount ($)": "$0.018070"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-12-30",
+        "Record Date": "2024-12-30",
+        "Payable Date": "2025-01-07",
+        "Amount ($)": "$0.085152"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-06-27",
+        "Record Date": "2024-06-27",
+        "Payable Date": "2024-07-05",
+        "Amount ($)": "$0.015866"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-12-28",
+        "Record Date": "2023-12-29",
+        "Payable Date": "2024-01-08",
+        "Amount ($)": "$0.113799"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-06-29",
+        "Record Date": "2023-06-30",
+        "Payable Date": "2023-07-10",
+        "Amount ($)": "$0.004209"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-12-29",
+        "Record Date": "2022-12-30",
+        "Payable Date": "2023-01-09",
+        "Amount ($)": "$0.062366"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-06-29",
+        "Record Date": "2022-06-30",
+        "Payable Date": "2022-07-08",
+        "Amount ($)": "$0.000000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-12-30",
+        "Record Date": "2021-12-31",
+        "Payable Date": "2022-01-07",
+        "Amount ($)": "$0.065169"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-06-29",
+        "Record Date": "2021-06-30",
+        "Payable Date": "2021-07-08",
+        "Amount ($)": "$0.000000"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2020-12-30",
+        "Record Date": "2020-12-31",
+        "Payable Date": "2021-01-08",
+        "Amount ($)": "$0.057240"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2020-06-29",
+        "Record Date": "2020-06-30",
+        "Payable Date": "2020-07-08",
+        "Amount ($)": "$0.020436"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2019-12-30",
+        "Record Date": "2019-12-31",
+        "Payable Date": "2020-01-08",
+        "Amount ($)": "$0.090087"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2019-06-27",
+        "Record Date": "2019-06-28",
+        "Payable Date": "2019-07-08",
+        "Amount ($)": "$0.020835"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2018-12-28",
+        "Record Date": "2018-12-31",
+        "Payable Date": "2019-01-08",
+        "Amount ($)": "$0.085289"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2017-12-28",
+        "Record Date": "2017-12-29",
+        "Payable Date": "2018-01-09",
+        "Amount ($)": "$0.171743"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2016-12-28",
+        "Record Date": "2016-12-30",
+        "Payable Date": "2017-01-06",
+        "Amount ($)": "$0.049647"
+      }
+    ],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "raw": "2026-08-31",
+      "mo1": 2.45,
+      "mo3": 5.94,
+      "mo6": null,
+      "ytd": -1.77,
+      "yr1": -7.09,
+      "yr3": 13.11,
+      "yr5": 0.77,
+      "yr10": null,
+      "sinceInception": 11.89,
+      "sinceInceptionCumulative": 219.13,
+      "market": {
+        "FIVE_YEAR": 0.75,
+        "ONE_YEAR": -6.91,
+        "SINCE_INCEPTION": 11.86,
+        "TEN_YEAR": 11.58,
+        "THREE_YEAR": 13.12
+      },
+      "benchmarkName": "Index",
+      "benchmark": {
+        "FIVE_YEAR": 1.25,
+        "ONE_YEAR": -6.62,
+        "SINCE_INCEPTION": 12.42,
+        "TEN_YEAR": 12.11,
+        "THREE_YEAR": 13.66
+      }
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "raw": "2026-06-30",
+      "mo1": -0.09,
+      "mo3": 6.81,
+      "mo6": null,
+      "ytd": -7.36,
+      "yr1": -10.74,
+      "yr3": 11.14,
+      "yr5": 0.32,
+      "yr10": null,
+      "sinceInception": 11.45,
+      "sinceInceptionCumulative": 200.96,
+      "market": {
+        "FIVE_YEAR": 0.26,
+        "ONE_YEAR": -10.96,
+        "SINCE_INCEPTION": 11.39,
+        "TEN_YEAR": 11.43,
+        "THREE_YEAR": 11.11
+      }
+    }
+  },
+  "metrics": {
+    "ytd": -1.77,
+    "tr1y": -7.09,
+    "tr3y": 44.71,
+    "tr5y": 3.91,
+    "tr10y": null,
+    "cagr3y": 13.11,
+    "cagr5y": 0.77,
+    "cagr10y": null,
+    "siAnn": 11.89,
+    "dividendYield": 0.32,
+    "dividendYieldText": "0.32%",
+    "distributionYield": 0.32,
+    "distributionYieldText": "0.32%",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 0.42,
+    "secYieldText": "0.42%",
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)"
+  },
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Equity / Thematic",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 82,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://assets.globalxetfs.com/funds/holdings/miln_full-holdings_20260925.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json",
+      "./history/002.json",
+      "./history/003.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 2612,
+    "asOfDate": "Sep 25 2026",
+    "asOf": "2026-09-25",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/MILN",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/miln/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/miln_full-holdings_20260925.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MILN",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+  },
+  "identifiers": {
+    "cusip": "37954Y764",
+    "isin": "US37954Y7647",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": "Index"
+  },
+  "expenseRatio": {
+    "display": "0.50%",
+    "value": 0.5,
+    "managementFeeDisplay": "0.50%",
+    "managementFeeValue": 0.5
+  },
+  "marketPrice": {
+    "display": "$42.88",
+    "value": 42.88,
+    "asOfDate": "Sep 25 2026",
+    "dailyChangeText": "$0.29 (0.68%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": 0.32,
+    "dividendYieldText": "0.32%",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": 0.32,
+    "distributionRateText": "0.32%",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 0.42,
+    "secYieldText": "0.42%",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Sep 25 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": null,
+    "summaryProspectus": null,
+    "sai": null,
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

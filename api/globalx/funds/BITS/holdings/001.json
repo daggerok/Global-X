@@ -1,0 +1,47 @@
+{
+  "ticker": "BITS",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 3,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "CME BITCOIN FUT OCT26",
+      "Ticker": "BTCV6 Curncy",
+      "Identifier": "",
+      "Weight": "53.98%",
+      "Market Value": "14,773,500.00",
+      "Shares Held": "35.00",
+      "Asset Category": "Equity",
+      "Price": "422100.0"
+    },
+    {
+      "Name": "GLOBAL X BLOCKCHAIN ETF",
+      "Ticker": "BKCH",
+      "Identifier": "BMBX2Y9",
+      "Weight": "45.92%",
+      "Market Value": "12,568,187.40",
+      "Shares Held": "167,710.00",
+      "Asset Category": "Fund",
+      "Price": "74.94"
+    },
+    {
+      "Name": "GLOBAL X 1-3 MONTH T-BILL",
+      "Ticker": "CLIP",
+      "Identifier": "BS096K4",
+      "Weight": "25.32%",
+      "Market Value": "6,930,417.90",
+      "Shares Held": "69,090.00",
+      "Asset Category": "Treasury",
+      "Price": "100.31"
+    }
+  ]
+}
