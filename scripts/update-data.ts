@@ -1,15 +1,4 @@
 #!/usr/bin/env bun
-// Checked-in JSON is the runtime default; any nonblank environment value wins.
-import { readFileSync as readUpdaterConfig } from 'node:fs';
-try {
-  const updaterDefaults = JSON.parse(readUpdaterConfig(new URL('./update-data.config.json', import.meta.url), 'utf8')) as Record<string, unknown>;
-  for (const [key, value] of Object.entries(updaterDefaults)) {
-    const current = process.env[key];
-    if ((current === undefined || current.trim() === '') && value !== null && value !== undefined) process.env[key] = String(value);
-  }
-} catch (error) {
-  if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-}
 /// <reference types="bun" />
 import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
 import { createHash as outputCreateHash } from 'node:crypto';
@@ -547,17 +536,84 @@ export function readConfig(env: Record<string, string | undefined> = process.env
   };
 }
 
+// File defaults and explicit overrides, same mechanism as the sibling ETF
+// updaters: allowlisted scalar controls only, so GitHub Actions can resolve them
+// without interpolating user input into bash. Precedence: config file <
+// advanced JSON < nonblank inputs < environment.
+export const CONTROL_NAMES = [
+  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'MAX_RETRIES', 'TICKERS', 'CATEGORY',
+  'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD',
+  'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'STORE_RAW_DOWNLOADS',
+  'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GLOBALX', 'SEC_UA', 'VERBOSE',
+  ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => RETURN_PERIODS.map((period) => `${prefix}_${period}`)),
+] as const;
+export type ControlName = (typeof CONTROL_NAMES)[number];
+export const CONFIG_FILE_URL = new URL('./update-data.config.json', import.meta.url);
+// Existing environment aliases that keep working.
+const CONTROL_ALIASES: Partial<Record<ControlName, string>> = { HISTORY_PAGE_SIZE: 'HISTORICAL_PAGE_SIZE' };
+
+export function resolveControls(
+  file: unknown = {},
+  advanced: unknown = {},
+  inputs: unknown = {},
+  env: Record<string, string | undefined> = {},
+): Record<string, string> {
+  const result: Record<string, string> = {};
+  const known = new Set<string>(CONTROL_NAMES);
+  const apply = (value: unknown, skipEmpty = false): void => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Configuration must be a JSON object');
+    for (const [key, raw] of Object.entries(value)) {
+      if (!known.has(key)) throw new Error(`Unknown updater control: ${key}`);
+      if (skipEmpty && (raw === '' || raw === undefined || raw === null)) continue;
+      if (!['string', 'number', 'boolean'].includes(typeof raw)) throw new Error(`${key}: expected string, number or boolean`);
+      const text = String(raw);
+      if (/[\r\n\0]/.test(text)) throw new Error(`${key}: multiline/control characters are not allowed`);
+      result[key] = text;
+    }
+  };
+  apply(file);
+  apply(advanced);
+  apply(inputs, true);
+  for (const key of CONTROL_NAMES) {
+    const alias = CONTROL_ALIASES[key];
+    const value = env[key] ?? (alias ? env[alias] : undefined);
+    if (value !== undefined) apply({ [key]: value });
+  }
+  for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
+    const v = result[key]?.trim();
+    if (v === undefined || v === '') continue;
+    const min = ['MAX_FETCHES', 'MAX_RETRIES'].includes(key) ? 0 : 1;
+    if (!/^\d+$/.test(v) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
+  }
+  if (result.REQUEST_SLEEP?.trim() && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
+  for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GLOBALX', 'VERBOSE']) {
+    if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
+  }
+  readConfig(result); // validate every min:max filter before any request or write
+  return result;
+}
+
+export async function runtimeControls(env: Record<string, string | undefined> = process.env): Promise<Record<string, string>> {
+  let file: unknown = {};
+  try { file = JSON.parse(await readFile(CONFIG_FILE_URL, 'utf8')); }
+  catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+  return resolveControls(file, {}, {}, env);
+}
+
 const USAGE = `
 Global X ETF static feed updater (zero dependencies, run with Bun).
 
   bun ./scripts/update-data.ts [-h|--help]
 
-Environment variables (all optional):
+Defaults live in scripts/update-data.config.json. Precedence: config file <
+advanced JSON (workflow) < nonblank workflow inputs < environment variables.
+
+Controls (all optional):
 
   MAX_FETCHES          0     Funds to process. 0 = full pass. A positive value
                              resumes after the committed cursor in
                              api/globalx/update-state.json.
-  REQUEST_SLEEP        1.5   Minimum seconds between request starts.
+  REQUEST_SLEEP        2     Minimum seconds between request starts.
                              globalxetfs.com throttles bursts with an SSL reset,
                              so keep this at 1.5s or more.
   CONCURRENCY          2     Parallel fund workers (starts stay globally paced).
@@ -583,6 +639,7 @@ Environment variables (all optional):
   EDGAR_FALLBACK       0     Use Form N-PORT-P when a fund has no holdings CSV.
   SKIP_YAHOO           0     Skip Yahoo Finance (daily history, dividend fallback).
   SKIP_GLOBALX         0     Skip globalxetfs.com entirely (keeps committed data).
+  VERBOSE              0     1|true|yes|y|on prints per-fund retry and fallback notices.
 
 Range syntax is strict "min:max" with exactly one colon; "" and ":" mean no
 restriction; a configured min must not exceed max.
@@ -2228,7 +2285,9 @@ export async function main(env: Record<string, string | undefined> = process.env
     console.log(USAGE);
     return;
   }
-  const config = readConfig(env);
+  const controls = await runtimeControls(env);
+  if (controls.VERBOSE !== undefined && env === process.env) process.env.VERBOSE = controls.VERBOSE;
+  const config = readConfig(controls);
   outputPrintConfig('Global X', config);
   const stats: RunStats = { updated: 0, unchanged: 0, skipped: 0, failed: 0 };
 
