@@ -17,13 +17,15 @@ Run the updater with Bun:
 
 ```bash
 bun install --frozen-lockfile
-bun test scripts/update-data.test.ts
+bun test
 bun ./scripts/update-data.ts
 ```
 
-Run `bun ./scripts/update-data.ts -h` (or `--help`) to print every configuration variable with its default and usage examples.
+Run `bun ./scripts/update-data.ts -h` (or `--help`) to print every control with its default and usage examples.
 
-The **Update Global X ETF data** GitHub Actions workflow (`.github/workflows/update-data.yml`) exposes the same settings as manual inputs, runs weekly on Sunday at 00:00 UTC, and commits `api/globalx/**` and nothing else. All supplied filters use **AND** logic.
+Defaults live in `scripts/update-data.config.json`, a flat JSON object that lists every supported control as a string. Precedence: file defaults < `advanced` JSON < nonblank workflow inputs < protected Actions variable/env. A blank workflow input inherits the file value, and `advanced` may set a key to an empty string on purpose. Unknown keys, non-scalar values and values with line breaks are rejected, and the CLI and the workflow use the same `resolveControls`.
+
+The **Update Global X ETF data** GitHub Actions workflow (`.github/workflows/update-data.yml`) exposes the main controls as manual inputs plus an `advanced` JSON object for any other control, runs weekly on Sunday at 00:00 UTC, and commits `api/globalx` and nothing else. The protected `SEC_UA` repository variable wins over the file and inputs when it is nonblank. All supplied filters use **AND** logic.
 
 ### Data sources
 
@@ -35,10 +37,12 @@ The **Update Global X ETF data** GitHub Actions workflow (`.github/workflows/upd
 | NAV-basis performance | Official fund-page React Flight payload (`PERFORMANCE_HISTORY`) | Monthly and quarter-end annualized and cumulative NAV values are copied from the provider payload. The catalog stores published annualized values and the app renders the same return rows as the sibling applications. |
 | Distribution history and frequency | Official fund-page React Flight payload (`DISTRIBUTION_HISTORY`) | Ex-date, record date, payable date and amount are kept in newest-first order. Global X does not publish a declaration date in this payload, so that shared row stays blank. |
 | Daily price history (Date / Close / Adj Close / Volume) | [Yahoo Finance chart API](https://query1.finance.yahoo.com/v8/finance/chart/) | Used for the paginated history sheets and as the market-price fallback. Adjusted close is rounded to two decimals before writing. |
-| Holdings fallback | SEC EDGAR Form **N-PORT-P**, [Global X Funds CIK 0001432353](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10), file 811-22209 | Used only when the official holdings CSV is unavailable and `EDGAR_FALLBACK=1`; off by default. |
+| Holdings fallback | SEC EDGAR Form **N-PORT-P**, [Global X Funds CIK 0001432353](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10), file 811-22209 | Used only when the official holdings CSV is unavailable and `EDGAR_FALLBACK` is enabled; off by default. |
 | Dividend-history fallback | Yahoo Finance dividend events | Used only when Global X publishes no distribution-history rows; the feed marks those rows `distributions.fallback: true`. |
 
 The official Global X page was live-verified as a server-rendered Next.js shell with real catalog/fund values in React Flight payloads. No WAF proxy is used. Requests are bounded, retried, and paced by the configured per-worker lanes.
+
+### Metrics and caveats
 
 #### The daily holdings CSV
 
@@ -48,7 +52,7 @@ The CSV is parsed with a dependency-free RFC-4180 reader that tolerates the BOM,
 
 The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 years plus since inception, and cumulative monthly/quarterly readings. The feed keeps both readings and does not extrapolate a missing tenor; unavailable values remain `null` and the app renders `—`.
 
-### Known value limitations
+#### Known value limitations
 
 | Metric | Status | Reason |
 | --- | --- | --- |
@@ -68,16 +72,19 @@ The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 
 | `CATEGORY` | `""` | Substring match on the official `THEME / SUB_THEME` category. |
 | `AUM` / `TER` / `DIVIDEND_YIELD` / `SEC_YIELD` | `""` | Strict `min:max` ranges; `AUM` also accepts `nano`, `micro`, `small`, `mid` and `large`. |
 | `PERFORMANCE_YTD` … `PERFORMANCE_10Y` / `TOTAL_RETURN_YTD` … `TOTAL_RETURN_10Y` | `""` | `min:max` filters on official/derived return values. |
-| `CONCURRENCY` / `REQUEST_SLEEP` | `2` / `1.5` | Per-worker request lanes and the minimum spacing within each lane. |
+| `CONCURRENCY` / `REQUEST_SLEEP` | `2` / `2` | Per-worker request lanes and the minimum spacing within each lane. |
 | `HOLDINGS_PAGE_SIZE` / `HISTORY_PAGE_SIZE` | `250` / `1000` | Rows per generated JSON page. |
 | `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 408/425/429/5xx. |
 | `HISTORY_RANGE` | `max` | Yahoo chart range (`max`, `10y`, `5y`, …). |
-| `EDGAR_FALLBACK` | off | Use SEC N-PORT-P if a holdings CSV is unavailable. |
-| `SKIP_YAHOO` / `SKIP_GLOBALX` | off | Skip the Yahoo stage or the official Global X catalog/fund stages. |
-| `STORE_RAW_DOWNLOADS` | off | Keep raw catalog, fund pages and CSV samples under `api/globalx/raw`. |
-| `SEC_UA` | repo URL | Declared User-Agent contact string for SEC EDGAR. |
+| `EDGAR_FALLBACK` | `false` | Use SEC N-PORT-P if a holdings CSV is unavailable. |
+| `SKIP_YAHOO` / `SKIP_GLOBALX` | `false` | Skip the Yahoo stage or the official Global X catalog/fund stages. |
+| `STORE_RAW_DOWNLOADS` | `false` | Keep raw catalog, fund pages and CSV samples under `api/globalx/raw`. |
+| `SEC_UA` | `""` | Declared User-Agent for SEC EDGAR; blank falls back to a built-in repo URL descriptor, the protected `SEC_UA` variable wins in the workflow. |
+| `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 
 A bounded or partly failed run preserves previously published files. `TICKERS` combines with AUM/TER/yield/return filters using AND logic; it does not override them.
+
+Config keys, `CONTROL_NAMES`, `--help` and this table are kept in sync by `scripts/config-docs.test.ts`. `HISTORICAL_PAGE_SIZE` still works as an environment alias of `HISTORY_PAGE_SIZE`.
 
 ### Examples
 
@@ -88,64 +95,78 @@ AUM="1B:" TER=":0.70" bun ./scripts/update-data.ts
 CATEGORY="Fixed Income" bun ./scripts/update-data.ts
 ```
 
-## TypeScript
+## TypeScript and verification
 
 The browser app is intentionally build-free: `index.html` carries the markup, styles and bootstrap, and `app.tsx` is TypeScript compiled in the browser with Babel standalone — no build step, no bundler, no `tsconfig.json` needed. Bun runs TypeScript out of the box.
 
-Verification before every publish: `bun install --frozen-lockfile`, `bun test scripts/update-data.test.ts`, `bun build --target=bun scripts/update-data.ts --outfile=/dev/null`, and `git diff --check`.
+Verification before every publish: `bun install --frozen-lockfile`, `bun test` (updater tests plus the config, README and workflow parity checks in `scripts/config-docs.test.ts`), `bun build --target=bun scripts/update-data.ts --outfile=/dev/null`, and `git diff --check`.
 
 ## Brands table
 
 | Brand | Where to get the data |
 | --- | --- |
+| **AAM** | [aamlive.com](https://www.aamlive.com/ETF) \| [AAM](https://daggerok.github.io/AAM/) |
 | **abrdn (Aberdeen)** | [aberdeeninvestments.com](https://www.aberdeeninvestments.com/en-us/investor/funds/etfs) \| [aberdeen](https://daggerok.github.io/aberdeen/) |
 | **Amplify** | [amplifyetfs.com](https://amplifyetfs.com/) \| [Amplify](https://daggerok.github.io/Amplify/) |
+| **ARK Invest** | [ark-funds.com](https://www.ark-funds.com/our-etfs/) \| [ARK](https://daggerok.github.io/ARK/) |
 | **Capital Group** | [capitalgroup.com](https://www.capitalgroup.com/advisor/investments/exchange-traded-funds.html) \| [Capital-Group](https://daggerok.github.io/Capital-Group/) |
 | **Fidelity** | [fidelity.com](https://www.fidelity.com/etfs) \| [Fidelity](https://daggerok.github.io/Fidelity/) |
 | **First Trust** | [ftportfolios.com](https://www.ftportfolios.com/Retail/etf/etflist.aspx) \| [First-Trust](https://daggerok.github.io/First-Trust/) |
 | **Franklin Templeton** | [franklintempleton.com](https://www.franklintempleton.com/investments/options/exchange-traded-funds) \| [Franklin](https://daggerok.github.io/Franklin/) |
-| **Global X** | [globalxetfs.com/explore](https://www.globalxetfs.com/explore) \| [Global X](https://daggerok.github.io/Global-X/) |
+| **Global X** | [globalxetfs.com/explore](https://www.globalxetfs.com/explore) \| [Global-X](https://daggerok.github.io/Global-X/) |
 | **Goldman Sachs** | [am.gs.com](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100) \| [Goldman-Sachs](https://daggerok.github.io/Goldman-Sachs/) |
 | **Invesco** | [invesco.com](https://www.invesco.com/us/en/financial-products/etfs.html) \| [Invesco](https://daggerok.github.io/Invesco/) |
 | **iShares** | [ishares.com](https://www.ishares.com/) \| [iShares](https://daggerok.github.io/iShares/) |
 | **JPMorgan** | [am.jpmorgan.com](https://am.jpmorgan.com/us/en/asset-management/adv/products/fund-explorer/etf) \| [JPMorgan](https://daggerok.github.io/JPMorgan/) |
 | **NEOS** | [neosfunds.com](https://neosfunds.com/#explore-etfs) \| [Neos](https://daggerok.github.io/Neos/) |
 | **Northern Trust** | [etfs.ntam.northerntrust.com](https://etfs.ntam.northerntrust.com/us/en/individual/funds) \| [Northern-Trust](https://daggerok.github.io/Northern-Trust/) |
+| **Pacer ETFs** | [paceretfs.com](https://www.paceretfs.com/products/) \| [Pacer](https://daggerok.github.io/Pacer/) (deployment pending) |
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
+| **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
 | **Vanguard** | [investor.vanguard.com](https://investor.vanguard.com/etf/list) \| [Vanguard](https://daggerok.github.io/Vanguard/) |
 | **VictoryShares** | [vcm.com VictoryShares ETFs](https://www.vcm.com/products/victoryshares-etfs/victoryshares-etfs-list) \| [VictoryShares](https://daggerok.github.io/VictoryShares/) |
 | **WisdomTree** | [wisdomtree.com](https://www.wisdomtree.com/investments) \| [WisdomTree](https://daggerok.github.io/WisdomTree/) |
+| **Xtrackers** | [etf.dws.com](https://etf.dws.com/en-us/etf-products/) \| [Xtrackers](https://daggerok.github.io/Xtrackers/) |
 
 ## Sibling applications
 
 | Application | Data provider | Repository |
 | --- | --- | --- |
+| AAM | Official AAM catalog/detail HTML + full holdings XLS + SEC N-PORT holdings fallback + Yahoo market history/dividends | [AAM](https://github.com/daggerok/AAM) |
 | abrdn (Aberdeen) | Official Aberdeen gateway + SEC N-PORT holdings fallback + Yahoo history/dividends | [aberdeen](https://github.com/daggerok/aberdeen) |
 | Amplify | Amplify ETFs (Firestore data feed) | [Amplify](https://github.com/daggerok/Amplify) |
+| ARK Invest | ark-funds.com fund pages + overview/NAV-history/performance JSON + official daily holdings CSV + SEC EDGAR N-PORT-P holdings fallback + Yahoo Finance distributions/history fallback | [ARK](https://github.com/daggerok/ARK) |
 | Capital Group | Official Capital Group fund data + SEC N-PORT holdings fallback + Yahoo history fallback | [Capital-Group](https://github.com/daggerok/Capital-Group) |
 | Fidelity | SEC EDGAR N-PORT-P + Yahoo Finance | [Fidelity](https://github.com/daggerok/Fidelity) |
 | First Trust | ftportfolios.com official ETF list + fund summary, holdings, distribution and price-history export pages + SEC EDGAR N-PORT-P holdings fallback + Yahoo Finance history fallback | [First-Trust](https://github.com/daggerok/First-Trust) |
 | Franklin Templeton | franklintempleton.com ETF listings + product pages + SEC EDGAR N-PORT-P | [Franklin](https://github.com/daggerok/Franklin) |
-| Global X | globalxetfs.com Next.js catalog and fund pages + dated full-holdings CSV | [Global X](https://github.com/daggerok/Global-X) |
+| Global X | globalxetfs.com Next.js catalog and fund pages + dated full-holdings CSV | [Global-X](https://github.com/daggerok/Global-X) |
 | Goldman Sachs | am.gs.com fund finder + detail pages + SEC EDGAR N-PORT-P | [Goldman-Sachs](https://github.com/daggerok/Goldman-Sachs) |
 | Invesco | invesco.com CSV downloads + Yahoo Finance | [Invesco](https://github.com/daggerok/Invesco) |
 | iShares | iShares (BlackRock) product workbooks | [iShares](https://github.com/daggerok/iShares) |
 | JPMorgan | am.jpmorgan.com fund explorer + product-data JSON | [JPMorgan](https://github.com/daggerok/JPMorgan) |
 | NEOS | neosfunds.com lineup table + official fund pages + daily holdings CSV | [Neos](https://github.com/daggerok/Neos) |
 | Northern Trust | etfs.ntam.northerntrust.com funds list + per-fund CSV/JSON downloads | [Northern-Trust](https://github.com/daggerok/Northern-Trust) |
+| Pacer ETFs | paceretfs.com product catalog and fund pages (Cloudflare WAF; r.jina.ai proxy fallback) + SEC EDGAR N-PORT-P (Pacer Funds Trust) + Yahoo Finance history/dividends | [Pacer](https://github.com/daggerok/Pacer) |
 | ProShares | proshares.com ETF finder + fund pages + official data host | [ProShares](https://github.com/daggerok/ProShares) |
 | Schwab | schwabassetmanagement.com product pages + CSV exports | [Schwab](https://github.com/daggerok/Schwab) |
 | SPDR | SSGA / State Street public feeds | [SPDR](https://github.com/daggerok/SPDR) |
+| Sprott ETFs | sprottetfs.com fund pages + SEC EDGAR N-PORT-P (Sprott Funds Trust) + Yahoo Finance history/dividends | [Sprott](https://github.com/daggerok/Sprott) |
+| Tema ETFs | Tema official fund pages + dated daily holdings CSV; SEC EDGAR N-PORT-P holdings fallback only + Yahoo Finance price/history/dividend fallback | [Tema](https://github.com/daggerok/Tema) |
+| Themes ETFs | themesetfs.com catalog + daily holdings CSV + Yahoo Finance history/dividends + SEC N-PORT-P holdings fallback | [Themes](https://github.com/daggerok/Themes) |
 | VanEck | vaneck.com ETF finder + product pages | [VanEck](https://github.com/daggerok/VanEck) |
 | Vanguard | Vanguard product pages + SEC EDGAR N-PORT-P | [Vanguard](https://github.com/daggerok/Vanguard) |
 | VictoryShares | VCM VictoryShares catalog and product JSON + SEC EDGAR N-PORT-P holdings fallback + Yahoo Finance adjusted-market-price history | [VictoryShares](https://github.com/daggerok/VictoryShares) |
 | WisdomTree | WisdomTree product table + SEC EDGAR N-PORT-P + Yahoo Finance | [WisdomTree](https://github.com/daggerok/WisdomTree) |
+| Xtrackers | Official DWS catalog/US sitemap + PDP/XLSX + SEC N-PORT-P holdings fallback + Yahoo Finance daily prices/history/dividends | [Xtrackers](https://github.com/daggerok/Xtrackers) |
 
 ## License
 
-[MIT — same as all sibling ETF repositories.](./LICENSE)
+[MIT - same as all sibling ETF repositories.](./LICENSE)
 
 Global X® and the fund names/tickers referenced here are trademarks of Global X Investment Management LLC. This is an independent, unofficial tool; it is not affiliated with, endorsed by, or sponsored by Global X. All data is reproduced from Global X's own public pages and downloads, with public SEC EDGAR filings and Yahoo Finance as fallbacks, for research purposes. All other trademarks, including index names, are the property of their respective owners.
