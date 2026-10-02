@@ -81,6 +81,7 @@ The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 
 | `STORE_RAW_DOWNLOADS` | `false` | Keep raw catalog, fund pages and CSV samples under `api/globalx/raw`. |
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | Declared User-Agent for SEC EDGAR, redacted in config logs; the protected `SEC_UA` Actions variable wins in the workflow. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
+| `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 
 A bounded or partly failed run preserves previously published files. `TICKERS` combines with AUM/TER/yield/return filters using AND logic; it does not override them.
 
