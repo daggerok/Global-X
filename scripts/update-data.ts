@@ -42,7 +42,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
 }
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
@@ -508,22 +508,24 @@ function parseRanges(env: Record<string, string | undefined>, prefix: 'PERFORMAN
   return ranges;
 }
 
+const SEC_UA_DEFAULT = 'daggerok ETF feed daggerok@gmail.com';
+
 export function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
   return {
     concurrency: parsePositiveInt(envValue(env, 'CONCURRENCY'), 2),
-    requestSleep: parseNonNegativeFloat(envValue(env, 'REQUEST_SLEEP'), 1.5),
+    requestSleep: parseNonNegativeFloat(envValue(env, 'REQUEST_SLEEP'), 2),
     maxFetches: parseNonNegativeInt(envValue(env, 'MAX_FETCHES'), 0),
     holdingsPageSize: parsePositiveInt(envValue(env, 'HOLDINGS_PAGE_SIZE'), 250),
     historyPageSize: parsePositiveInt(envValue(env, 'HISTORY_PAGE_SIZE', ['HISTORICAL_PAGE_SIZE']), 1000),
     storeRawDownloads: parseBoolean(envValue(env, 'STORE_RAW_DOWNLOADS')),
-    maxRetries: parseNonNegativeInt(envValue(env, 'MAX_RETRIES'), 3),
+    maxRetries: parsePositiveInt(envValue(env, 'MAX_RETRIES'), 3),
     tickers: envValue(env, 'TICKERS')
       .split(/[\s,;]+/)
       .map(sanitizeTicker)
       .filter(Boolean),
     historyRange: envValue(env, 'HISTORY_RANGE') || 'max',
     category: cleanText(envValue(env, 'CATEGORY')),
-    secUa: envValue(env, 'SEC_UA') || 'Global X ETF static feed updater (https://github.com/daggerok/GlobalX)',
+    secUa: envValue(env, 'SEC_UA') || SEC_UA_DEFAULT,
     skipYahoo: parseBoolean(envValue(env, 'SKIP_YAHOO')),
     skipGlobalX: parseBoolean(envValue(env, 'SKIP_GLOBALX')),
     edgarFallback: parseBoolean(envValue(env, 'EDGAR_FALLBACK')),
@@ -582,7 +584,7 @@ export function resolveControls(
   for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
     const v = result[key]?.trim();
     if (v === undefined || v === '') continue;
-    const min = ['MAX_FETCHES', 'MAX_RETRIES'].includes(key) ? 0 : 1;
+    const min = key === 'MAX_FETCHES' ? 0 : 1;
     if (!/^\d+$/.test(v) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
   }
   if (result.REQUEST_SLEEP?.trim() && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
@@ -615,9 +617,9 @@ Controls (all optional):
                              api/globalx/update-state.json.
   REQUEST_SLEEP        2     Minimum seconds between request starts.
                              globalxetfs.com throttles bursts with an SSL reset,
-                             so keep this at 1.5s or more.
+                             so keep this at 2s or more.
   CONCURRENCY          2     Parallel fund workers (starts stay globally paced).
-  MAX_RETRIES          3     Retries for network errors and 408/425/429/5xx.
+  MAX_RETRIES          3     Retries (integer >= 1) for network errors and 408/425/429/5xx.
   TICKERS              ""    Space/comma separated tickers. ANDed with the other
                              filters, never overriding them.
   AUM                  ""    "min:max" dollars, K/M/B/T suffixes, or a preset:
@@ -635,7 +637,9 @@ Controls (all optional):
                              ("max", "10y", "5y", ...).
   CATEGORY             ""    Keep only this Global X THEME / SUB_THEME category.
   STORE_RAW_DOWNLOADS  0     1|true|yes|y|on writes api/globalx/raw/**.
-  SEC_UA               (set) Declared User-Agent for SEC EDGAR requests.
+  SEC_UA               "daggerok ETF feed daggerok@gmail.com"
+                             Declared User-Agent for SEC EDGAR requests; the
+                             protected Actions variable SEC_UA wins in the workflow.
   EDGAR_FALLBACK       0     Use Form N-PORT-P when a fund has no holdings CSV.
   SKIP_YAHOO           0     Skip Yahoo Finance (daily history, dividend fallback).
   SKIP_GLOBALX         0     Skip globalxetfs.com entirely (keeps committed data).
