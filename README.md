@@ -72,19 +72,19 @@ The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 
 | `CATEGORY` | `""` | Substring match on the official `THEME / SUB_THEME` category. |
 | `AUM` / `TER` / `DIVIDEND_YIELD` / `SEC_YIELD` | `""` | Strict `min:max` ranges; `AUM` also accepts `nano`, `micro`, `small`, `mid` and `large`. |
 | `PERFORMANCE_YTD` … `PERFORMANCE_10Y` / `TOTAL_RETURN_YTD` … `TOTAL_RETURN_10Y` | `""` | `min:max` filters on official/derived return values. |
-| `CONCURRENCY` / `REQUEST_SLEEP` | `2` / `2` | Per-worker request lanes and the minimum spacing within each lane. |
+| `CONCURRENCY` / `REQUEST_SLEEP` | `2` / `2` | Per-worker request lanes and the minimum seconds between request starts within each lane; keep `REQUEST_SLEEP` at 2 or more, globalxetfs.com resets bursts. |
 | `HOLDINGS_PAGE_SIZE` / `HISTORY_PAGE_SIZE` | `250` / `1000` | Rows per generated JSON page. |
-| `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 408/425/429/5xx. |
+| `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 408/425/429/5xx; integer >= 1. |
 | `HISTORY_RANGE` | `max` | Yahoo chart range (`max`, `10y`, `5y`, …). |
-| `EDGAR_FALLBACK` | `false` | Use SEC N-PORT-P if a holdings CSV is unavailable. |
+| `EDGAR_FALLBACK` | `false` | Use SEC N-PORT-P if a holdings CSV is unavailable; off by default because EDGAR can reject GitHub-hosted runners. |
 | `SKIP_YAHOO` / `SKIP_GLOBALX` | `false` | Skip the Yahoo stage or the official Global X catalog/fund stages. |
 | `STORE_RAW_DOWNLOADS` | `false` | Keep raw catalog, fund pages and CSV samples under `api/globalx/raw`. |
-| `SEC_UA` | `""` | Declared User-Agent for SEC EDGAR; blank falls back to a built-in repo URL descriptor, the protected `SEC_UA` variable wins in the workflow. |
+| `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | Declared User-Agent for SEC EDGAR, redacted in config logs; the protected `SEC_UA` Actions variable wins in the workflow. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 
 A bounded or partly failed run preserves previously published files. `TICKERS` combines with AUM/TER/yield/return filters using AND logic; it does not override them.
 
-Config keys, `CONTROL_NAMES`, `--help` and this table are kept in sync by `scripts/config-docs.test.ts`. `HISTORICAL_PAGE_SIZE` still works as an environment alias of `HISTORY_PAGE_SIZE`.
+Config keys, `CONTROL_NAMES`, `--help` and this table are kept in sync by `scripts/update-data.test.ts`. `HISTORICAL_PAGE_SIZE` still works as an environment alias of `HISTORY_PAGE_SIZE`.
 
 ### Examples
 
@@ -99,7 +99,7 @@ CATEGORY="Fixed Income" bun ./scripts/update-data.ts
 
 The browser app is intentionally build-free: `index.html` carries the markup, styles and bootstrap, and `app.tsx` is TypeScript compiled in the browser with Babel standalone — no build step, no bundler, no `tsconfig.json` needed. Bun runs TypeScript out of the box.
 
-Verification before every publish: `bun install --frozen-lockfile`, `bun test` (updater tests plus the config, README and workflow parity checks in `scripts/config-docs.test.ts`), `bun build --target=bun scripts/update-data.ts --outfile=/dev/null`, and `git diff --check`.
+Verification before every publish: `bun install --frozen-lockfile`, `bun test` (updater tests plus the config, README and workflow parity checks), `bun build --target=bun scripts/update-data.ts --outfile=/dev/null`, and `git diff --check`.
 
 ## Brands table
 
@@ -124,7 +124,7 @@ Verification before every publish: `bun install --frozen-lockfile`, `bun test` (
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
-| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) |
 | **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
 | **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
