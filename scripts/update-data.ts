@@ -1707,7 +1707,7 @@ export function inferDistributionFrequency(exDates: string[], now: Date = new Da
 // Deterministic writes
 // ---------------------------------------------------------------------------
 
-function stableStringify(value: unknown): string {
+export function stableStringify(value: unknown): string {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
 
@@ -1810,6 +1810,35 @@ function passesReturnFilters(entry: CatalogEntry, config: UpdaterConfig): boolea
 // ---------------------------------------------------------------------------
 
 type RunStats = { updated: number; unchanged: number; skipped: number; failed: number };
+
+// --- metrics contract (STANDARD.md section 9a) -----------------------------
+export const OFFICIAL_RETURNS_BASIS = 'official Global X fund page NAV Performance (monthly series)';
+export const NO_RETURNS_BASIS = 'none: Global X has published no NAV performance for this fund in the feed yet, all returns are null';
+const NULL_METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'secYield'];
+
+/**
+ * Guarantees `metrics` on a catalog row: every number key present (null when
+ * unknown), non-empty `returnsBasis` and `performanceAsOf` (ISO date of the
+ * performance table, or null) as the last two keys. Rows the updater just
+ * built already satisfy it; this covers placeholders and preserved rows.
+ */
+export function withMetricsContract<T extends Record<string, any>>(entry: T): T {
+  const old: Record<string, any> = entry.metrics && typeof entry.metrics === 'object' ? entry.metrics : {};
+  const { returnsBasis, performanceAsOf, ...rest } = old;
+  const metrics: Record<string, any> = { ...rest };
+  for (const key of NULL_METRIC_KEYS) if (!(key in metrics)) metrics[key] = null;
+  const monthEnd = (entry.returns as any)?.monthEnd;
+  const hasReturns = ['ytd', 'tr1y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn'].some((key) => typeof metrics[key] === 'number');
+  const basis = typeof returnsBasis === 'string' && returnsBasis.trim() && returnsBasis.trim() !== '-'
+    ? returnsBasis
+    : (hasReturns ? OFFICIAL_RETURNS_BASIS : NO_RETURNS_BASIS);
+  const asOf = typeof performanceAsOf === 'string' && toIsoDate(performanceAsOf)
+    ? toIsoDate(performanceAsOf)
+    : (toIsoDate(monthEnd?.asOfDate) || null);
+  metrics.returnsBasis = basis;
+  metrics.performanceAsOf = asOf;
+  return { ...entry, metrics };
+}
 
 function readNumber(entry: CatalogEntry, key: string): number | null {
   const value = (entry as any)[key];
@@ -1945,7 +1974,9 @@ async function updateFund(
     yield12MText: formatPercentText(distributionInfo?.trailingRate12M ?? null),
     secYield: distributionInfo?.secYield ?? fund.secYield ?? null,
     secYieldText: formatPercentText(distributionInfo?.secYield ?? fund.secYield ?? null),
-    returnsBasis: 'official Global X fund page NAV Performance (monthly series)',
+    returnsBasis: OFFICIAL_RETURNS_BASIS,
+    // The month-end date printed on the Global X performance table, not the NAV date.
+    performanceAsOf: toIsoDate(monthEndDate) || null,
   };
 
   const latestDistribution = distributionRows.find((row) => row['Amount ($)'] && !isMissingCell(row['Amount ($)']));
@@ -2443,12 +2474,13 @@ export async function main(env: Record<string, string | undefined> = process.env
         dataFile: `./funds/${fund.ticker}/meta.json`,
         holdings: 0,
         history: 0,
+        metrics: withMetricsContract({}).metrics,
       };
     }
   }
   for (const [ticker, entry] of byTicker) previous[ticker] = entry;
 
-  const funds = Object.values(previous).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
+  const funds = Object.values(previous).map((fund) => withMetricsContract(fund)).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
   const counts = {
     funds: funds.length,
     holdings: funds.reduce((sum, fund) => sum + Number(fund.holdings || 0), 0),
