@@ -22,6 +22,9 @@ import {
   resolveControls,
   runtimeControls,
   sanitizeTicker,
+  withMetricsContract,
+  NO_RETURNS_BASIS,
+  OFFICIAL_RETURNS_BASIS,
 } from "./update-data.ts";
 
 function flightHtml(chunks: string[]): string {
@@ -402,5 +405,44 @@ describe('installSystemCa', () => {
       expect(await (await globalThis.fetch('https://example.invalid/')).text()).toBe('ok');
       expect(calls.length).toBe(1);
     } finally { restore(); }
+  });
+});
+
+describe('metrics contract (returnsBasis, performanceAsOf)', () => {
+  test('a row without metrics gets null numbers, a non-empty basis and null performanceAsOf', () => {
+    const row = withMetricsContract({ ticker: 'NEW', holdings: 0 });
+    expect(row.metrics.ytd).toBeNull();
+    expect(row.metrics.tr10y).toBeNull();
+    expect(row.metrics.returnsBasis).toBe(NO_RETURNS_BASIS);
+    expect(row.metrics.performanceAsOf).toBeNull();
+    expect(Object.keys(row.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+  });
+
+  test('performanceAsOf is the performance table date (ISO), never the NAV date, and sits last', () => {
+    const row = withMetricsContract({
+      nav: { asOfDate: 'Sep 25 2026' },
+      returns: { monthEnd: { asOfDate: 'Aug 31 2026' } },
+      metrics: { ytd: 6.6, returnsBasis: '-', dividendYieldText: '0.89%' },
+    });
+    expect(row.metrics.performanceAsOf).toBe('2026-08-31');
+    expect(row.metrics.returnsBasis).toBe(OFFICIAL_RETURNS_BASIS);
+    expect(Object.keys(row.metrics)).toEqual([
+      'ytd', 'dividendYieldText', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn',
+      'dividendYield', 'secYield', 'returnsBasis', 'performanceAsOf',
+    ]);
+  });
+
+  test('already compliant metrics are kept and the function is idempotent', () => {
+    const once = withMetricsContract({ metrics: { ytd: 1, returnsBasis: 'custom', performanceAsOf: '2026-07-31' } });
+    expect(once.metrics.returnsBasis).toBe('custom');
+    expect(once.metrics.performanceAsOf).toBe('2026-07-31');
+    expect(withMetricsContract(once)).toEqual(once);
+  });
+
+  test('the performance parser exposes an ISO table date', () => {
+    const html = flightHtml([
+      '1:{"PERFORMANCE_HISTORY":{"month_end_date":"$D2026-08-31T00:00:00.000Z","avg_annualized":{"month_end":{"fund_nav":{"ONE_YEAR":0.1}}},"cumulative":{"month_end":{"fund_nav":{}}}}}',
+    ]);
+    expect(parseGlobalXPerformanceSection(html, 'monthly-performance')?.asOfDate).toBe('2026-08-31');
   });
 });

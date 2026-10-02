@@ -52,6 +52,15 @@ The CSV is parsed with a dependency-free RFC-4180 reader that tolerates the BOM,
 
 The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 years plus since inception, and cumulative monthly/quarterly readings. The feed keeps both readings and does not extrapolate a missing tenor; unavailable values remain `null` and the app renders `—`.
 
+#### Returns provenance fields
+
+Every `funds[].metrics` object in `api/globalx/index.json` (and in each `meta.json`) ends with two mandatory fields:
+
+- `returnsBasis` - non-empty text saying how the returns were computed. Global X returns are the official NAV total returns from the fund page `NAV Performance` table (monthly series), so the label is `official Global X fund page NAV Performance (monthly series)`. A fund with no published performance yet carries an explicit `none: ...` label with every return `null`, never an empty string or `-`
+- `performanceAsOf` - ISO `YYYY-MM-DD` month-end date of that performance table (for example `2026-08-31`). It is not the NAV date (`asOfDate`), which is newer. `null` only when the table date is unknown
+
+Unavailable numeric values are `null`, never `0`.
+
 #### Known value limitations
 
 | Metric | Status | Reason |
