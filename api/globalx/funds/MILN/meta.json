@@ -57,80 +57,145 @@
   "netAssetsAsOf": "Oct 02 2026",
   "secYieldAsOf": "Oct 02 2026",
   "distributions": {
-    "frequency": "00 - Unknown",
-    "paymentsPerYear": null,
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 2,
     "headers": [
-      "Ex-Date",
-      "Dividend"
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
     ],
     "rows": [
       {
-        "Ex-Date": "Jun 29 2026",
-        "Dividend": "$0.0390"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-06-29",
+        "Record Date": "2026-06-29",
+        "Payable Date": "2026-07-02",
+        "Amount ($)": "$0.039300"
       },
       {
-        "Ex-Date": "Dec 30 2025",
-        "Dividend": "$0.0990"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.099339"
       },
       {
-        "Ex-Date": "Jun 27 2025",
-        "Dividend": "$0.0180"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-06-27",
+        "Record Date": "2025-06-27",
+        "Payable Date": "2025-07-07",
+        "Amount ($)": "$0.018070"
       },
       {
-        "Ex-Date": "Dec 30 2024",
-        "Dividend": "$0.0850"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-12-30",
+        "Record Date": "2024-12-30",
+        "Payable Date": "2025-01-07",
+        "Amount ($)": "$0.085152"
       },
       {
-        "Ex-Date": "Jun 27 2024",
-        "Dividend": "$0.0160"
+        "Declaration Date": "",
+        "Ex-Div Date": "2024-06-27",
+        "Record Date": "2024-06-27",
+        "Payable Date": "2024-07-05",
+        "Amount ($)": "$0.015866"
       },
       {
-        "Ex-Date": "Dec 28 2023",
-        "Dividend": "$0.1140"
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-12-28",
+        "Record Date": "2023-12-29",
+        "Payable Date": "2024-01-08",
+        "Amount ($)": "$0.113799"
       },
       {
-        "Ex-Date": "Jun 29 2023",
-        "Dividend": "$0.0040"
+        "Declaration Date": "",
+        "Ex-Div Date": "2023-06-29",
+        "Record Date": "2023-06-30",
+        "Payable Date": "2023-07-10",
+        "Amount ($)": "$0.004209"
       },
       {
-        "Ex-Date": "Dec 29 2022",
-        "Dividend": "$0.0620"
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-12-29",
+        "Record Date": "2022-12-30",
+        "Payable Date": "2023-01-09",
+        "Amount ($)": "$0.062366"
       },
       {
-        "Ex-Date": "Dec 30 2021",
-        "Dividend": "$0.0650"
+        "Declaration Date": "",
+        "Ex-Div Date": "2022-06-29",
+        "Record Date": "2022-06-30",
+        "Payable Date": "2022-07-08",
+        "Amount ($)": "$0.000000"
       },
       {
-        "Ex-Date": "Dec 30 2020",
-        "Dividend": "$0.0570"
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-12-30",
+        "Record Date": "2021-12-31",
+        "Payable Date": "2022-01-07",
+        "Amount ($)": "$0.065169"
       },
       {
-        "Ex-Date": "Jun 29 2020",
-        "Dividend": "$0.0200"
+        "Declaration Date": "",
+        "Ex-Div Date": "2021-06-29",
+        "Record Date": "2021-06-30",
+        "Payable Date": "2021-07-08",
+        "Amount ($)": "$0.000000"
       },
       {
-        "Ex-Date": "Dec 30 2019",
-        "Dividend": "$0.0900"
+        "Declaration Date": "",
+        "Ex-Div Date": "2020-12-30",
+        "Record Date": "2020-12-31",
+        "Payable Date": "2021-01-08",
+        "Amount ($)": "$0.057240"
       },
       {
-        "Ex-Date": "Jun 27 2019",
-        "Dividend": "$0.0210"
+        "Declaration Date": "",
+        "Ex-Div Date": "2020-06-29",
+        "Record Date": "2020-06-30",
+        "Payable Date": "2020-07-08",
+        "Amount ($)": "$0.020436"
       },
       {
-        "Ex-Date": "Dec 28 2018",
-        "Dividend": "$0.0850"
+        "Declaration Date": "",
+        "Ex-Div Date": "2019-12-30",
+        "Record Date": "2019-12-31",
+        "Payable Date": "2020-01-08",
+        "Amount ($)": "$0.090087"
       },
       {
-        "Ex-Date": "Dec 28 2017",
-        "Dividend": "$0.1720"
+        "Declaration Date": "",
+        "Ex-Div Date": "2019-06-27",
+        "Record Date": "2019-06-28",
+        "Payable Date": "2019-07-08",
+        "Amount ($)": "$0.020835"
       },
       {
-        "Ex-Date": "Dec 28 2016",
-        "Dividend": "$0.0500"
+        "Declaration Date": "",
+        "Ex-Div Date": "2018-12-28",
+        "Record Date": "2018-12-31",
+        "Payable Date": "2019-01-08",
+        "Amount ($)": "$0.085289"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2017-12-28",
+        "Record Date": "2017-12-29",
+        "Payable Date": "2018-01-09",
+        "Amount ($)": "$0.171743"
+      },
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2016-12-28",
+        "Record Date": "2016-12-30",
+        "Payable Date": "2017-01-06",
+        "Amount ($)": "$0.049647"
       }
     ],
-    "fallback": true,
-    "source": "Yahoo Finance dividend history (Global X published no distribution rows)"
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
   },
   "returns": {
     "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
@@ -206,7 +271,7 @@
     "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
     "performanceAsOf": "2026-09-30"
   },
-  "distributionFrequency": "00 - None",
+  "distributionFrequency": "06 - Semi-annually",
   "providerCategory": "Equity / Thematic",
   "holdings": {
     "pages": [

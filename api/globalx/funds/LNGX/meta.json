@@ -57,24 +57,33 @@
   "netAssetsAsOf": "Oct 02 2026",
   "secYieldAsOf": "Oct 02 2026",
   "distributions": {
-    "frequency": "00 - Unknown",
-    "paymentsPerYear": null,
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 2,
     "headers": [
-      "Ex-Date",
-      "Dividend"
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
     ],
     "rows": [
       {
-        "Ex-Date": "Jun 29 2026",
-        "Dividend": "$0.2560"
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-06-29",
+        "Record Date": "2026-06-29",
+        "Payable Date": "2026-07-02",
+        "Amount ($)": "$0.256100"
       },
       {
-        "Ex-Date": "Dec 30 2025",
-        "Dividend": "$0.0950"
+        "Declaration Date": "",
+        "Ex-Div Date": "2025-12-30",
+        "Record Date": "2025-12-30",
+        "Payable Date": "2026-01-07",
+        "Amount ($)": "$0.094915"
       }
     ],
-    "fallback": true,
-    "source": "Yahoo Finance dividend history (Global X published no distribution rows)"
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
   },
   "returns": {
     "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
@@ -132,7 +141,7 @@
     "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
     "performanceAsOf": null
   },
-  "distributionFrequency": "00 - None",
+  "distributionFrequency": "06 - Semi-annually",
   "providerCategory": "Alternatives & Specialty Equity / Commodities",
   "holdings": {
     "pages": [
