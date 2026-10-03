@@ -18,6 +18,7 @@ import {
   parseGlobalXLineup,
   parseGlobalXPerformanceSection,
   parseYahooChart,
+  yahooChartUrl,
   paymentsPerYear,
   formatGlobalXDate,
   horizonValue,
@@ -496,5 +497,47 @@ describe('data contract: tenors, cadence, placeholders, zero yields', () => {
   test('display dates are zero padded', () => {
     expect(formatGlobalXDate('2026-01-06')).toBe('Jan 06 2026');
     expect(formatGlobalXDate('2026-12-30')).toBe('Dec 30 2026');
+  });
+});
+
+describe('controls: HISTORY_RANGE window, strict values, brand aliases', () => {
+  const NOW = Date.parse('2026-10-02T00:00:00Z');
+  test('max asks for everything, Ny sends an explicit period1/period2 window', () => {
+    const all = new URL(yahooChartUrl('SIL', 'max', NOW));
+    expect(all.searchParams.get('period1')).toBe('0');
+    expect(all.searchParams.get('period2')).toBe(String(NOW / 1000));
+    const five = new URL(yahooChartUrl('SIL', '5y', NOW));
+    const p1 = Number(five.searchParams.get('period1'));
+    expect(p1).toBeGreaterThan(0);
+    expect(five.searchParams.has('range')).toBe(false);
+    expect(Math.round((NOW / 1000 - p1) / 86_400 / 365.25)).toBe(5);
+    expect(five.searchParams.get('interval')).toBe('1d');
+  });
+
+  test('HISTORY_RANGE other than max or Ny is an error, not a silent full history', () => {
+    for (const bad of ['6mo', 'ytd', '0y', '-1y', 'abc', '5']) {
+      expect(() => resolveControls(file(), {}, {}, { HISTORY_RANGE: bad })).toThrow();
+      expect(() => yahooChartUrl('SIL', bad, NOW)).toThrow();
+    }
+    expect(readConfig(resolveControls(file(), {}, {}, { HISTORY_RANGE: '10Y' })).historyRange).toBe('10y');
+    expect(readConfig(resolveControls(file())).historyRange).toBe('max');
+  });
+
+  test('a token that is not a ticker is an error', () => {
+    expect(() => readConfig({ TICKERS: 'PAVE, ???' })).toThrow();
+    expect(readConfig({ TICKERS: 'pave;aiq' }).tickers).toEqual(['PAVE', 'AIQ']);
+  });
+
+  test('GLOBALX_<NAME> works through resolveControls and beats the plain name', () => {
+    expect(resolveControls(file(), {}, {}, { GLOBALX_CONCURRENCY: '7' }).CONCURRENCY).toBe('7');
+    expect(resolveControls(file(), {}, {}, { GLOBALX_CONCURRENCY: '7', CONCURRENCY: '3' }).CONCURRENCY).toBe('7');
+    expect(resolveControls(file(), {}, {}, { GLOBALX_TICKERS: '' }).TICKERS).toBe('');
+    expect(() => resolveControls(file(), {}, {}, { GLOBALX_CONCURRENCY: '0' })).toThrow();
+  });
+
+  test('every return filter default is ":" like the sibling repos', () => {
+    for (const [key, value] of Object.entries(file())) {
+      if (/^(PERFORMANCE|TOTAL_RETURN)_/.test(key)) expect(value).toBe(':');
+    }
   });
 });

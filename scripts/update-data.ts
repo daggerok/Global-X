@@ -250,12 +250,26 @@ export function globalxEdgarFilingsUrl(cik: string = GLOBALX_ETF_TRUST_CIK): str
 
 export const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 
+/** `max` or `<N>y`; anything else is rejected instead of silently falling back to the full history. */
+export function parseHistoryRange(raw: string): { years: number | null } {
+  const text = cleanText(raw).toLowerCase() || 'max';
+  if (text === 'max') return { years: null };
+  const match = /^(\d+)y$/.exec(text);
+  if (!match || Number(match[1]) < 1) throw new Error(`HISTORY_RANGE: expected "max" or "<N>y" (N >= 1), received "${raw}"`);
+  return { years: Number(match[1]) };
+}
+
+/**
+ * Daily bars for the requested window. Yahoo ignores `range` when `period1=0`,
+ * so a bounded range is an explicit period1/period2 pair.
+ */
 export function yahooChartUrl(ticker: string, range: string = 'max', nowMs: number = Date.now()): string {
   const clean = sanitizeTicker(ticker);
   const period2 = Math.floor(nowMs / 1000);
-  const base = `${YAHOO_CHART_URL}/${encodeURIComponent(clean)}?period1=0&period2=${period2}` +
+  const { years } = parseHistoryRange(range);
+  const period1 = years === null ? 0 : Math.floor(period2 - years * 365.25 * 86_400);
+  return `${YAHOO_CHART_URL}/${encodeURIComponent(clean)}?period1=${period1}&period2=${period2}` +
     '&interval=1d&events=div%7Csplit&includeAdjustedClose=true';
-  return range && range !== 'max' ? `${base}&range=${encodeURIComponent(range)}` : base;
 }
 
 export function yahooChartProvenanceUrl(ticker: string): string {
@@ -571,9 +585,13 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     maxRetries: parsePositiveInt(envValue(env, 'MAX_RETRIES'), 3),
     tickers: envValue(env, 'TICKERS')
       .split(/[\s,;]+/)
-      .map(sanitizeTicker)
-      .filter(Boolean),
-    historyRange: envValue(env, 'HISTORY_RANGE') || 'max',
+      .filter(Boolean)
+      .map((token) => {
+        const ticker = sanitizeTicker(token);
+        if (!/^[A-Z]{1,6}$/.test(ticker)) throw new Error(`TICKERS: "${token}" is not a ticker`);
+        return ticker;
+      }),
+    historyRange: (parseHistoryRange(envValue(env, 'HISTORY_RANGE')), (envValue(env, 'HISTORY_RANGE') || 'max').toLowerCase()),
     category: cleanText(envValue(env, 'CATEGORY')),
     secUa: envValue(env, 'SEC_UA') || SEC_UA_DEFAULT,
     skipYahoo: parseBoolean(envValue(env, 'SKIP_YAHOO')),
@@ -628,7 +646,8 @@ export function resolveControls(
   apply(inputs, true);
   for (const key of CONTROL_NAMES) {
     const alias = CONTROL_ALIASES[key];
-    const value = env[key] ?? (alias ? env[alias] : undefined);
+    // GLOBALX_<NAME> beats <NAME>, which beats the legacy alias; an explicitly empty value wins like any other.
+    const value = env[`GLOBALX_${key}`] ?? env[key] ?? (alias ? env[alias] : undefined);
     if (value !== undefined) apply({ [key]: value });
   }
   for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
@@ -646,6 +665,7 @@ export function resolveControls(
   for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GLOBALX', 'VERBOSE']) {
     if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
   }
+  parseHistoryRange(result.HISTORY_RANGE ?? 'max');
   readConfig(result); // validate every min:max filter before any request or write
   return result;
 }
@@ -673,7 +693,8 @@ Controls (all optional):
   REQUEST_SLEEP        2     Minimum seconds between request starts.
                              globalxetfs.com throttles bursts with an SSL reset,
                              so keep this at 2s or more.
-  CONCURRENCY          2     Parallel fund workers (starts stay globally paced).
+  CONCURRENCY          2     Parallel fund workers; every worker has its own paced request lane
+                             (REQUEST_SLEEP apart), so CONCURRENCY multiplies throughput.
   MAX_RETRIES          3     Retries (integer >= 1) for network errors and 408/425/429/5xx.
   TICKERS              ""    Space/comma separated tickers. ANDed with the other
                              filters, never overriding them.
@@ -688,8 +709,9 @@ Controls (all optional):
   HOLDINGS_PAGE_SIZE   250   Rows per holdings page file.
   HISTORY_PAGE_SIZE    1000  Rows per history page file (alias
                              HISTORICAL_PAGE_SIZE).
-  HISTORY_RANGE        max   Yahoo chart range used for daily history
-                             ("max", "10y", "5y", ...).
+  HISTORY_RANGE        max   Yahoo daily history window: "max" or "<N>y" (N years,
+                             sent as an explicit period1/period2). Anything else
+                             is an error.
   CATEGORY             ""    Keep only this Global X THEME / SUB_THEME category.
   STORE_RAW_DOWNLOADS  0     1|true|yes|y|on writes api/globalx/raw/**.
   SEC_UA               "daggerok ETF feed daggerok@gmail.com"
