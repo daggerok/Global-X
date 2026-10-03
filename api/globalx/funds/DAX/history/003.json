@@ -2,7 +2,7 @@
   "ticker": "DAX",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2998,
+  "totalRows": 3003,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-16",
+      "Close": "27.25",
+      "Adj Close": "22.15",
+      "Volume": "1300"
+    },
+    {
+      "Date": "2018-10-15",
+      "Close": "26.85",
+      "Adj Close": "21.83",
+      "Volume": "300"
+    },
+    {
+      "Date": "2018-10-12",
+      "Close": "26.49",
+      "Adj Close": "21.53",
+      "Volume": "500"
+    },
+    {
+      "Date": "2018-10-11",
+      "Close": "26.67",
+      "Adj Close": "21.68",
+      "Volume": "1600"
+    },
+    {
+      "Date": "2018-10-10",
+      "Close": "26.93",
+      "Adj Close": "21.89",
+      "Volume": "2400"
+    },
     {
       "Date": "2018-10-09",
       "Close": "27.49",
@@ -5979,24 +6009,6 @@
       "Close": "25.51",
       "Adj Close": "19.50",
       "Volume": "3800"
-    },
-    {
-      "Date": "2014-10-27",
-      "Close": "25.03",
-      "Adj Close": "19.13",
-      "Volume": "300"
-    },
-    {
-      "Date": "2014-10-24",
-      "Close": "25.19",
-      "Adj Close": "19.25",
-      "Volume": "15200"
-    },
-    {
-      "Date": "2014-10-23",
-      "Close": "25.25",
-      "Adj Close": "19.30",
-      "Volume": "7400"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "BOTZ",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2523,
+  "totalRows": 2528,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-06",
+      "Close": "19.18",
+      "Adj Close": "18.98",
+      "Volume": "404900"
+    },
+    {
+      "Date": "2022-10-05",
+      "Close": "19.33",
+      "Adj Close": "19.12",
+      "Volume": "481600"
+    },
+    {
+      "Date": "2022-10-04",
+      "Close": "19.53",
+      "Adj Close": "19.32",
+      "Volume": "423400"
+    },
+    {
+      "Date": "2022-10-03",
+      "Close": "18.62",
+      "Adj Close": "18.42",
+      "Volume": "463400"
+    },
+    {
+      "Date": "2022-09-30",
+      "Close": "18.08",
+      "Adj Close": "17.89",
+      "Volume": "420600"
+    },
     {
       "Date": "2022-09-29",
       "Close": "18.20",
@@ -5979,36 +6009,6 @@
       "Close": "21.11",
       "Adj Close": "20.27",
       "Volume": "744900"
-    },
-    {
-      "Date": "2018-10-16",
-      "Close": "21.10",
-      "Adj Close": "20.26",
-      "Volume": "1177600"
-    },
-    {
-      "Date": "2018-10-15",
-      "Close": "20.45",
-      "Adj Close": "19.64",
-      "Volume": "1049900"
-    },
-    {
-      "Date": "2018-10-12",
-      "Close": "20.58",
-      "Adj Close": "19.76",
-      "Volume": "1018100"
-    },
-    {
-      "Date": "2018-10-11",
-      "Close": "20.07",
-      "Adj Close": "19.27",
-      "Volume": "1992900"
-    },
-    {
-      "Date": "2018-10-10",
-      "Close": "20.45",
-      "Adj Close": "19.64",
-      "Volume": "2997300"
     }
   ]
 }

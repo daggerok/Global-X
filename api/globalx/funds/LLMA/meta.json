@@ -1,0 +1,223 @@
+{
+  "ticker": "LLMA",
+  "name": "LLM ETF",
+  "category": "Equity / Thematic",
+  "fundPage": "https://www.globalxetfs.com/funds/llma/",
+  "dataFile": "./funds/LLMA/meta.json",
+  "cusip": "37966B745",
+  "isin": "US37966B7459",
+  "ter": "0.75%",
+  "terValue": 0.75,
+  "terGross": "0.75%",
+  "terGrossValue": 0.75,
+  "nav": {
+    "display": "$25.38",
+    "value": 25.38,
+    "asOfDate": "Oct 02 2026",
+    "dailyChangeText": "$0.21 (0.83%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 25.38,
+  "aum": {
+    "display": "$1.02M",
+    "value": 1015075.21,
+    "asOfDate": "Oct 02 2026",
+    "source": "Global X fund page Fund Details \"Net Assets\""
+  },
+  "aumValue": 1015075.21,
+  "asOfDate": "Oct 02 2026",
+  "inceptionDate": "Sep 30 2026",
+  "inceptionDateFundPage": "Sep 30 2026",
+  "exchange": "Cboe BZX",
+  "closePrice": "$25.39",
+  "closePriceValue": 25.39,
+  "premiumDiscount": {
+    "display": "0.03%",
+    "value": 0.0332,
+    "derivedValue": 0.04,
+    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+  },
+  "premiumDiscountValue": 0.0332,
+  "premiumDiscountDerivedValue": 0.04,
+  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "bidAskSpread": {
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Oct 02 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+  },
+  "bidAskSpreadValue": 0,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 1015075.21,
+  "sharesOutstanding": {
+    "display": "40,000",
+    "value": 40000,
+    "asOfDate": "Oct 02 2026"
+  },
+  "netAssetsAsOf": "Oct 02 2026",
+  "secYieldAsOf": "Oct 02 2026",
+  "distributions": {
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 2,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 0,
+    "secYieldText": "0.00%",
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
+    "performanceAsOf": null
+  },
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Equity / Thematic",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 14,
+    "asOfDate": "Oct 02 2026",
+    "asOf": "2026-10-02",
+    "source": "https://assets.globalxetfs.com/funds/holdings/llma_full-holdings_20261002.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 2,
+    "asOfDate": "Oct 02 2026",
+    "asOf": "2026-10-02",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/LLMA",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/llma/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/llma_full-holdings_20261002.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LLMA",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+  },
+  "identifiers": {
+    "cusip": "37966B745",
+    "isin": "US37966B7459",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.75%",
+    "value": 0.75,
+    "gross": 0.75,
+    "managementFeeDisplay": "0.75%",
+    "managementFeeValue": 0.75
+  },
+  "marketPrice": {
+    "display": "$25.39",
+    "value": 25.39,
+    "asOfDate": "Oct 02 2026",
+    "dailyChangeText": "$0.18 (0.71%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": 0,
+    "secYieldText": "0.00%",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Oct 02 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": null,
+    "summaryProspectus": null,
+    "sai": null,
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

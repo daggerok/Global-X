@@ -11,51 +11,51 @@
   "terGross": "0.02%",
   "terGrossValue": 0.02,
   "nav": {
-    "display": "$93.12",
-    "value": 93.12,
-    "asOfDate": "Sep 25 2026",
-    "dailyChangeText": "$0.45 (0.49%)",
+    "display": "$92.89",
+    "value": 92.89,
+    "asOfDate": "Oct 02 2026",
+    "dailyChangeText": "$0.70 (0.76%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 93.12,
+  "navValue": 92.89,
   "aum": {
-    "display": "$4.66M",
-    "value": 4655935.78,
-    "asOfDate": "Sep 25 2026",
+    "display": "$4.64M",
+    "value": 4644352.47,
+    "asOfDate": "Oct 02 2026",
     "source": "Global X fund page Fund Details \"Net Assets\""
   },
-  "aumValue": 4655935.78,
-  "asOfDate": "Sep 25 2026",
+  "aumValue": 4644352.47,
+  "asOfDate": "Oct 02 2026",
   "inceptionDate": "Sep 23 2025",
   "inceptionDateFundPage": "Sep 23 2025",
   "exchange": "NYSE Arca",
-  "closePrice": "$93.14",
-  "closePriceValue": 93.14,
+  "closePrice": "$92.90",
+  "closePriceValue": 92.9,
   "premiumDiscount": {
     "display": "0.02%",
-    "value": 0.0244,
-    "derivedValue": 0.02,
+    "value": 0.0164,
+    "derivedValue": 0.01,
     "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
   },
-  "premiumDiscountValue": 0.0244,
-  "premiumDiscountDerivedValue": 0.02,
+  "premiumDiscountValue": 0.0164,
+  "premiumDiscountDerivedValue": 0.01,
   "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
     "display": "0.05%",
     "value": 0.05,
-    "asOfDate": "Sep 25 2026",
+    "asOfDate": "Oct 02 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
   "bidAskSpreadValue": 0.05,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 4655935.78,
+  "totalNetAssets": 4644352.47,
   "sharesOutstanding": {
     "display": "50,000",
     "value": 50000,
-    "asOfDate": "Sep 25 2026"
+    "asOfDate": "Oct 02 2026"
   },
-  "netAssetsAsOf": "Sep 25 2026",
-  "secYieldAsOf": "Sep 25 2026",
+  "netAssetsAsOf": "Oct 02 2026",
+  "secYieldAsOf": "Oct 02 2026",
   "distributions": {
     "frequency": "Quarterly",
     "paymentsPerYear": 4,
@@ -67,20 +67,6 @@
       "Amount ($)"
     ],
     "rows": [
-      {
-        "Declaration Date": "",
-        "Ex-Div Date": "2026-12-30",
-        "Record Date": "2026-12-30",
-        "Payable Date": "2027-01-05",
-        "Amount ($)": ""
-      },
-      {
-        "Declaration Date": "",
-        "Ex-Div Date": "2026-11-04",
-        "Record Date": "2026-11-04",
-        "Payable Date": "2026-11-09",
-        "Amount ($)": ""
-      },
       {
         "Declaration Date": "",
         "Ex-Div Date": "2026-08-05",
@@ -116,48 +102,59 @@
   "returns": {
     "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
     "monthEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Sep 30 2026",
+      "raw": "2026-09-30",
+      "mo1": -0.31,
+      "mo3": 2.26,
       "mo6": null,
-      "ytd": null,
-      "yr1": null,
+      "ytd": 12.78,
+      "yr1": 15.47,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null,
-      "sinceInceptionCumulative": null,
-      "market": {},
-      "benchmarkName": null,
-      "benchmark": {}
+      "sinceInception": 15.62,
+      "sinceInceptionCumulative": 15.94,
+      "market": {
+        "ONE_YEAR": 15.65,
+        "SINCE_INCEPTION": 15.83
+      },
+      "benchmarkName": "Index",
+      "benchmark": {
+        "FIVE_YEAR": 13.46,
+        "ONE_YEAR": 15.56,
+        "SINCE_INCEPTION": 15.71,
+        "THREE_YEAR": 23.25
+      }
     },
     "quarterEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Sep 30 2026",
+      "raw": "2026-09-30",
+      "mo1": -0.31,
+      "mo3": 2.26,
       "mo6": null,
-      "ytd": null,
-      "yr1": null,
+      "ytd": 12.78,
+      "yr1": 15.47,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null,
-      "sinceInceptionCumulative": null,
-      "market": {}
+      "sinceInception": 15.62,
+      "sinceInceptionCumulative": 15.94,
+      "market": {
+        "ONE_YEAR": 15.65,
+        "SINCE_INCEPTION": 15.83
+      }
     }
   },
   "metrics": {
-    "ytd": null,
-    "tr1y": null,
+    "ytd": 12.78,
+    "tr1y": 15.47,
     "tr3y": null,
     "tr5y": null,
     "tr10y": null,
     "cagr3y": null,
     "cagr5y": null,
     "cagr10y": null,
-    "siAnn": null,
+    "siAnn": 15.62,
     "dividendYield": 0.88,
     "dividendYieldText": "0.88%",
     "distributionYield": 0.88,
@@ -167,7 +164,7 @@
     "secYield": 1.02,
     "secYieldText": "1.02%",
     "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
-    "performanceAsOf": null
+    "performanceAsOf": "2026-09-30"
   },
   "distributionFrequency": "04 - Quarterly",
   "providerCategory": "Equity / Core",
@@ -178,10 +175,10 @@
       "./holdings/003.json"
     ],
     "pageSize": 250,
-    "totalRows": 501,
-    "asOfDate": "Sep 25 2026",
-    "asOf": "2026-09-25",
-    "source": "https://assets.globalxetfs.com/funds/holdings/gxlc_full-holdings_20260925.csv",
+    "totalRows": 502,
+    "asOfDate": "Oct 02 2026",
+    "asOf": "2026-10-02",
+    "source": "https://assets.globalxetfs.com/funds/holdings/gxlc_full-holdings_20261002.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -189,9 +186,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 253,
-    "asOfDate": "Sep 25 2026",
-    "asOf": "2026-09-25",
+    "totalRows": 258,
+    "asOfDate": "Oct 02 2026",
+    "asOf": "2026-10-02",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/GXLC",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -201,7 +198,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/gxlc/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/gxlc_full-holdings_20260925.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/gxlc_full-holdings_20261002.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GXLC",
@@ -221,19 +218,20 @@
     "isin": "US37960A2556",
     "underlyingExposure": null,
     "indexName": null,
-    "benchmarkIndexName": null
+    "benchmarkIndexName": "Index"
   },
   "expenseRatio": {
     "display": "0.02%",
     "value": 0.02,
+    "gross": 0.02,
     "managementFeeDisplay": "0.02%",
     "managementFeeValue": 0.02
   },
   "marketPrice": {
-    "display": "$93.14",
-    "value": 93.14,
-    "asOfDate": "Sep 25 2026",
-    "dailyChangeText": "$0.45 (0.49%)",
+    "display": "$92.90",
+    "value": 92.9,
+    "asOfDate": "Oct 02 2026",
+    "dailyChangeText": "$0.68 (0.74%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
@@ -249,7 +247,7 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Sep 25 2026"
+    "distributionInfoAsOfDate": "Oct 02 2026"
   },
   "navIndex": null,
   "documents": {

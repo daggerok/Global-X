@@ -2,7 +2,7 @@
   "ticker": "PAVE",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2406,
+  "totalRows": 2407,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-16",
+      "Close": "16.02",
+      "Adj Close": "15.12",
+      "Volume": "13100"
+    },
     {
       "Date": "2018-10-15",
       "Close": "15.79",

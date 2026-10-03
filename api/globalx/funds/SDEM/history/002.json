@@ -2,7 +2,7 @@
   "ticker": "SDEM",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2900,
+  "totalRows": 2905,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-06",
+      "Close": "22.56",
+      "Adj Close": "17.41",
+      "Volume": "3300"
+    },
+    {
+      "Date": "2022-10-05",
+      "Close": "22.80",
+      "Adj Close": "17.59",
+      "Volume": "4000"
+    },
+    {
+      "Date": "2022-10-04",
+      "Close": "22.92",
+      "Adj Close": "17.57",
+      "Volume": "10600"
+    },
+    {
+      "Date": "2022-10-03",
+      "Close": "22.35",
+      "Adj Close": "17.13",
+      "Volume": "8167"
+    },
+    {
+      "Date": "2022-09-30",
+      "Close": "21.69",
+      "Adj Close": "16.63",
+      "Volume": "6600"
+    },
     {
       "Date": "2022-09-29",
       "Close": "21.65",
@@ -5473,7 +5503,7 @@
     {
       "Date": "2019-02-20",
       "Close": "42.27",
-      "Adj Close": "24.92",
+      "Adj Close": "24.93",
       "Volume": "1400"
     },
     {
@@ -5515,7 +5545,7 @@
     {
       "Date": "2019-02-08",
       "Close": "42.27",
-      "Adj Close": "24.92",
+      "Adj Close": "24.93",
       "Volume": "2967"
     },
     {
@@ -5979,36 +6009,6 @@
       "Close": "39.43",
       "Adj Close": "22.74",
       "Volume": "900"
-    },
-    {
-      "Date": "2018-10-16",
-      "Close": "39.81",
-      "Adj Close": "22.96",
-      "Volume": "1833"
-    },
-    {
-      "Date": "2018-10-15",
-      "Close": "38.97",
-      "Adj Close": "22.47",
-      "Volume": "1233"
-    },
-    {
-      "Date": "2018-10-12",
-      "Close": "38.78",
-      "Adj Close": "22.36",
-      "Volume": "3267"
-    },
-    {
-      "Date": "2018-10-11",
-      "Close": "38.22",
-      "Adj Close": "22.04",
-      "Volume": "1233"
-    },
-    {
-      "Date": "2018-10-10",
-      "Close": "38.67",
-      "Adj Close": "22.30",
-      "Volume": "3100"
     }
   ]
 }

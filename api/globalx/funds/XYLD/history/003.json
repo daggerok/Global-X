@@ -2,7 +2,7 @@
   "ticker": "XYLD",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 3335,
+  "totalRows": 3340,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-16",
+      "Close": "50.32",
+      "Adj Close": "22.98",
+      "Volume": "10000"
+    },
+    {
+      "Date": "2018-10-15",
+      "Close": "49.62",
+      "Adj Close": "22.66",
+      "Volume": "6800"
+    },
+    {
+      "Date": "2018-10-12",
+      "Close": "49.71",
+      "Adj Close": "22.70",
+      "Volume": "15100"
+    },
+    {
+      "Date": "2018-10-11",
+      "Close": "49.00",
+      "Adj Close": "22.37",
+      "Volume": "11600"
+    },
+    {
+      "Date": "2018-10-10",
+      "Close": "50.10",
+      "Adj Close": "22.88",
+      "Volume": "51300"
+    },
     {
       "Date": "2018-10-09",
       "Close": "51.68",
@@ -5979,36 +6009,6 @@
       "Close": "45.56",
       "Adj Close": "17.08",
       "Volume": "8500"
-    },
-    {
-      "Date": "2014-10-27",
-      "Close": "45.26",
-      "Adj Close": "16.96",
-      "Volume": "8600"
-    },
-    {
-      "Date": "2014-10-24",
-      "Close": "45.27",
-      "Adj Close": "16.97",
-      "Volume": "1200"
-    },
-    {
-      "Date": "2014-10-23",
-      "Close": "45.15",
-      "Adj Close": "16.92",
-      "Volume": "900"
-    },
-    {
-      "Date": "2014-10-22",
-      "Close": "45.11",
-      "Adj Close": "16.81",
-      "Volume": "1700"
-    },
-    {
-      "Date": "2014-10-21",
-      "Close": "45.15",
-      "Adj Close": "16.83",
-      "Volume": "2000"
     }
   ]
 }

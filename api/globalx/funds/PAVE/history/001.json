@@ -2,7 +2,7 @@
   "ticker": "PAVE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2406,
+  "totalRows": 2407,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-02",
+      "Close": "53.88",
+      "Adj Close": "53.88",
+      "Volume": "1360600"
+    },
     {
       "Date": "2026-10-01",
       "Close": "53.04",
@@ -6003,12 +6009,6 @@
       "Close": "23.85",
       "Adj Close": "23.17",
       "Volume": "557400"
-    },
-    {
-      "Date": "2022-10-06",
-      "Close": "24.44",
-      "Adj Close": "23.74",
-      "Volume": "499500"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "ONOF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1432,
+  "totalRows": 1437,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-02",
+      "Close": "41.19",
+      "Adj Close": "41.19",
+      "Volume": "2100"
+    },
+    {
+      "Date": "2026-10-01",
+      "Close": "40.89",
+      "Adj Close": "40.89",
+      "Volume": "400"
+    },
+    {
+      "Date": "2026-09-30",
+      "Close": "40.87",
+      "Adj Close": "40.87",
+      "Volume": "1100"
+    },
+    {
+      "Date": "2026-09-29",
+      "Close": "40.84",
+      "Adj Close": "40.84",
+      "Volume": "19800"
+    },
+    {
+      "Date": "2026-09-28",
+      "Close": "40.96",
+      "Adj Close": "40.96",
+      "Volume": "19400"
+    },
     {
       "Date": "2026-09-25",
       "Close": "41.31",
@@ -5083,7 +5113,7 @@
     {
       "Date": "2023-05-12",
       "Close": "27.32",
-      "Adj Close": "26.20",
+      "Adj Close": "26.21",
       "Volume": "2800"
     },
     {
@@ -5979,36 +6009,6 @@
       "Close": "25.36",
       "Adj Close": "24.03",
       "Volume": "3100"
-    },
-    {
-      "Date": "2022-10-06",
-      "Close": "25.41",
-      "Adj Close": "24.07",
-      "Volume": "1000"
-    },
-    {
-      "Date": "2022-10-05",
-      "Close": "25.43",
-      "Adj Close": "24.10",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-04",
-      "Close": "25.46",
-      "Adj Close": "24.13",
-      "Volume": "2100"
-    },
-    {
-      "Date": "2022-10-03",
-      "Close": "25.37",
-      "Adj Close": "24.04",
-      "Volume": "30200"
-    },
-    {
-      "Date": "2022-09-30",
-      "Close": "25.39",
-      "Adj Close": "24.06",
-      "Volume": "2700"
     }
   ]
 }

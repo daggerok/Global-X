@@ -2,7 +2,7 @@
   "ticker": "IPAV",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 107,
+  "totalRows": 109,
   "headers": [
     "Name",
     "Ticker",
@@ -14,64 +14,944 @@
   ],
   "rows": [
     {
-      "Name": "VIOHALCO SA",
-      "Ticker": "VIO GA",
-      "Identifier": "BJVX2Q0",
-      "Weight": "0.13%",
-      "Market Value": "6,980.62",
-      "Shares Held": "361.00",
+      "Name": "FUJIKURA LTD",
+      "Ticker": "5803 JP",
+      "Identifier": "6356707",
+      "Weight": "3.82%",
+      "Market Value": "198,073.52",
+      "Shares Held": "5,579.00",
       "Asset Category": "Equity",
-      "Price": "19.33689750692521"
+      "Price": "35.50340921312063"
     },
     {
-      "Name": "BEIJING ENTERPRISES WATER GR",
-      "Ticker": "371 HK",
-      "Identifier": "B01YCG0",
-      "Weight": "0.13%",
-      "Market Value": "6,718.55",
-      "Shares Held": "34,000.00",
+      "Name": "CANADIAN NATL RAILWAY CO",
+      "Ticker": "CNR CN",
+      "Identifier": "2180632",
+      "Weight": "3.46%",
+      "Market Value": "179,011.05",
+      "Shares Held": "1,493.00",
       "Asset Category": "Equity",
-      "Price": "0.1976044117647059"
+      "Price": "119.9002344273275"
+    },
+    {
+      "Name": "CANADIAN PACIFIC KANSAS CITY",
+      "Ticker": "CP CN",
+      "Identifier": "BMBQR09",
+      "Weight": "3.28%",
+      "Market Value": "170,163.54",
+      "Shares Held": "1,977.00",
+      "Asset Category": "Equity",
+      "Price": "86.071593323217"
+    },
+    {
+      "Name": "ARCELORMITTAL",
+      "Ticker": "MT NA",
+      "Identifier": "BYPBS67",
+      "Weight": "3.23%",
+      "Market Value": "167,265.87",
+      "Shares Held": "2,589.00",
+      "Asset Category": "Equity",
+      "Price": "64.60636152954808"
+    },
+    {
+      "Name": "LARSEN & TOUBRO LTD",
+      "Ticker": "LT IN",
+      "Identifier": "B0166K8",
+      "Weight": "3.08%",
+      "Market Value": "159,366.25",
+      "Shares Held": "4,155.00",
+      "Asset Category": "Equity",
+      "Price": "38.35529482551143"
+    },
+    {
+      "Name": "NIPPON STEEL CORP",
+      "Ticker": "5401 JP",
+      "Identifier": "6642569",
+      "Weight": "3.00%",
+      "Market Value": "155,524.32",
+      "Shares Held": "38,167.00",
+      "Asset Category": "Equity",
+      "Price": "4.074837425000656"
+    },
+    {
+      "Name": "SHIN-ETSU CHEMICAL CO LTD",
+      "Ticker": "4063 JP",
+      "Identifier": "6804585",
+      "Weight": "2.85%",
+      "Market Value": "147,618.84",
+      "Shares Held": "3,860.00",
+      "Asset Category": "Equity",
+      "Price": "38.24322279792746"
+    },
+    {
+      "Name": "VINCI SA",
+      "Ticker": "DG FP",
+      "Identifier": "B1XH026",
+      "Weight": "2.81%",
+      "Market Value": "145,515.90",
+      "Shares Held": "1,208.00",
+      "Asset Category": "Equity",
+      "Price": "120.4601821192053"
+    },
+    {
+      "Name": "PRYSMIAN SPA",
+      "Ticker": "PRY IM",
+      "Identifier": "B1W4V69",
+      "Weight": "2.77%",
+      "Market Value": "143,620.35",
+      "Shares Held": "981.00",
+      "Asset Category": "Equity",
+      "Price": "146.4019877675841"
+    },
+    {
+      "Name": "HOLCIM LTD",
+      "Ticker": "HOLN SW",
+      "Identifier": "7110753",
+      "Weight": "2.73%",
+      "Market Value": "141,564.47",
+      "Shares Held": "1,814.00",
+      "Asset Category": "Equity",
+      "Price": "78.03995038588754"
+    },
+    {
+      "Name": "HEIDELBERG MATERIALS AG",
+      "Ticker": "HEI GR",
+      "Identifier": "5120679",
+      "Weight": "2.72%",
+      "Market Value": "140,934.81",
+      "Shares Held": "842.00",
+      "Asset Category": "Equity",
+      "Price": "167.3810095011876"
+    },
+    {
+      "Name": "DOOSAN ENERBILITY CO LTD",
+      "Ticker": "034020 KS",
+      "Identifier": "6294670",
+      "Weight": "2.69%",
+      "Market Value": "139,165.86",
+      "Shares Held": "2,317.00",
+      "Asset Category": "Equity",
+      "Price": "60.06295209322399"
+    },
+    {
+      "Name": "FERROVIAL NV",
+      "Ticker": "FER SM",
+      "Identifier": "BRS7CF0",
+      "Weight": "2.60%",
+      "Market Value": "134,603.63",
+      "Shares Held": "2,514.00",
+      "Asset Category": "Equity",
+      "Price": "53.54161893396977"
+    },
+    {
+      "Name": "POSCO HOLDINGS INC",
+      "Ticker": "005490 KS",
+      "Identifier": "6693233",
+      "Weight": "2.57%",
+      "Market Value": "133,129.42",
+      "Shares Held": "578.00",
+      "Asset Category": "Equity",
+      "Price": "230.3277162629758"
+    },
+    {
+      "Name": "TATA STEEL LTD",
+      "Ticker": "TATA IN",
+      "Identifier": "BPQWCZ3",
+      "Weight": "2.57%",
+      "Market Value": "132,921.79",
+      "Shares Held": "71,908.00",
+      "Asset Category": "Equity",
+      "Price": "1.848497941814541"
+    },
+    {
+      "Name": "WEG SA",
+      "Ticker": "WEGE3 BZ",
+      "Identifier": "2945422",
+      "Weight": "2.45%",
+      "Market Value": "126,856.14",
+      "Shares Held": "12,900.00",
+      "Asset Category": "Equity",
+      "Price": "9.833809302325582"
+    },
+    {
+      "Name": "CELLNEX TELECOM SA",
+      "Ticker": "CLNX SM",
+      "Identifier": "BX90C05",
+      "Weight": "2.35%",
+      "Market Value": "121,726.22",
+      "Shares Held": "4,769.00",
+      "Asset Category": "Equity",
+      "Price": "25.52447473264835"
+    },
+    {
+      "Name": "CEMEX SAB-SPONS ADR PART CER",
+      "Ticker": "CX",
+      "Identifier": "2488671",
+      "Weight": "2.31%",
+      "Market Value": "119,401.37",
+      "Shares Held": "12,529.00",
+      "Asset Category": "Equity",
+      "Price": "9.53"
+    },
+    {
+      "Name": "HINDALCO INDUSTRIES LTD",
+      "Ticker": "HNDL IN",
+      "Identifier": "B0GWF48",
+      "Weight": "2.30%",
+      "Market Value": "119,073.20",
+      "Shares Held": "12,174.00",
+      "Asset Category": "Equity",
+      "Price": "9.780942993264334"
+    },
+    {
+      "Name": "ULTRATECH CEMENT LTD",
+      "Ticker": "UTCEM IN",
+      "Identifier": "B01GZF6",
+      "Weight": "2.13%",
+      "Market Value": "110,554.09",
+      "Shares Held": "994.00",
+      "Asset Category": "Equity",
+      "Price": "111.2214185110664"
+    },
+    {
+      "Name": "LS ELECTRIC CO LTD",
+      "Ticker": "010120 KS",
+      "Identifier": "6378217",
+      "Weight": "1.96%",
+      "Market Value": "101,317.16",
+      "Shares Held": "653.00",
+      "Asset Category": "Equity",
+      "Price": "155.1564471669219"
+    },
+    {
+      "Name": "JSW STEEL LTD",
+      "Ticker": "JSTL IN",
+      "Identifier": "BZBYJJ7",
+      "Weight": "1.88%",
+      "Market Value": "97,173.22",
+      "Shares Held": "7,589.00",
+      "Asset Category": "Equity",
+      "Price": "12.80448280405851"
+    },
+    {
+      "Name": "ATKINSREALIS GROUP INC",
+      "Ticker": "ATRL CN",
+      "Identifier": "BRJNZ47",
+      "Weight": "1.65%",
+      "Market Value": "85,356.70",
+      "Shares Held": "1,406.00",
+      "Asset Category": "Equity",
+      "Price": "60.70889046941679"
+    },
+    {
+      "Name": "EIFFAGE",
+      "Ticker": "FGR FP",
+      "Identifier": "B13X013",
+      "Weight": "1.64%",
+      "Market Value": "85,129.03",
+      "Shares Held": "754.00",
+      "Asset Category": "Equity",
+      "Price": "112.9032228116711"
+    },
+    {
+      "Name": "BLUESCOPE STEEL LTD",
+      "Ticker": "BSL AU",
+      "Identifier": "6533232",
+      "Weight": "1.56%",
+      "Market Value": "80,833.34",
+      "Shares Held": "3,789.00",
+      "Asset Category": "Equity",
+      "Price": "21.33368698865136"
+    },
+    {
+      "Name": "NKT A/S",
+      "Ticker": "NKT DC",
+      "Identifier": "7106354",
+      "Weight": "1.21%",
+      "Market Value": "62,525.77",
+      "Shares Held": "464.00",
+      "Asset Category": "Equity",
+      "Price": "134.7538146551724"
+    },
+    {
+      "Name": "NEXANS SA",
+      "Ticker": "NEX FP",
+      "Identifier": "7130836",
+      "Weight": "1.08%",
+      "Market Value": "56,000.00",
+      "Shares Held": "364.00",
+      "Asset Category": "Equity",
+      "Price": "153.8461538461538"
+    },
+    {
+      "Name": "IMCD NV",
+      "Ticker": "IMCD NA",
+      "Identifier": "BNCBD46",
+      "Weight": "1.05%",
+      "Market Value": "54,451.32",
+      "Shares Held": "507.00",
+      "Asset Category": "Equity",
+      "Price": "107.3990532544379"
+    },
+    {
+      "Name": "GERDAU SA -SPON ADR",
+      "Ticker": "GGB",
+      "Identifier": "2297606",
+      "Weight": "1.03%",
+      "Market Value": "53,296.38",
+      "Shares Held": "10,638.00",
+      "Asset Category": "Equity",
+      "Price": "5.01"
+    },
+    {
+      "Name": "SSAB AB - B SHARES",
+      "Ticker": "SSABB SS",
+      "Identifier": "B17H3F6",
+      "Weight": "1.03%",
+      "Market Value": "53,146.52",
+      "Shares Held": "5,288.00",
+      "Asset Category": "Equity",
+      "Price": "10.05040090771558"
+    },
+    {
+      "Name": "SAIPEM SPA",
+      "Ticker": "SPM IM",
+      "Identifier": "BMY36H7",
+      "Weight": "1.02%",
+      "Market Value": "52,701.49",
+      "Shares Held": "10,811.00",
+      "Asset Category": "Equity",
+      "Price": "4.87480251595597"
+    },
+    {
+      "Name": "JFE HOLDINGS INC",
+      "Ticker": "5411 JP",
+      "Identifier": "6543792",
+      "Weight": "0.99%",
+      "Market Value": "51,131.96",
+      "Shares Held": "4,712.00",
+      "Asset Category": "Equity",
+      "Price": "10.85143463497453"
+    },
+    {
+      "Name": "POLYCAB INDIA LTD",
+      "Ticker": "POLYCAB IN",
+      "Identifier": "BHKDY38",
+      "Weight": "0.98%",
+      "Market Value": "50,697.55",
+      "Shares Held": "611.00",
+      "Asset Category": "Equity",
+      "Price": "82.97471358428805"
+    },
+    {
+      "Name": "GE VERNOVA T&D INDIA LTD",
+      "Ticker": "GVTD IN",
+      "Identifier": "6139890",
+      "Weight": "0.92%",
+      "Market Value": "47,393.03",
+      "Shares Held": "1,073.00",
+      "Asset Category": "Equity",
+      "Price": "44.16871388630009"
+    },
+    {
+      "Name": "TCC GROUP HOLDINGS CO LTD",
+      "Ticker": "1101 TT",
+      "Identifier": "6869937",
+      "Weight": "0.91%",
+      "Market Value": "47,029.53",
+      "Shares Held": "59,183.00",
+      "Asset Category": "Equity",
+      "Price": "0.7946459287295338"
+    },
+    {
+      "Name": "CHINA TOWER CORP LTD-H",
+      "Ticker": "788 HK",
+      "Identifier": "BTVMCY5",
+      "Weight": "0.86%",
+      "Market Value": "44,641.81",
+      "Shares Held": "39,540.00",
+      "Asset Category": "Equity",
+      "Price": "1.129029084471421"
+    },
+    {
+      "Name": "GAMUDA BHD",
+      "Ticker": "GAM MK",
+      "Identifier": "6359881",
+      "Weight": "0.86%",
+      "Market Value": "44,326.11",
+      "Shares Held": "35,500.00",
+      "Asset Category": "Equity",
+      "Price": "1.248622816901408"
+    },
+    {
+      "Name": "VOESTALPINE AG",
+      "Ticker": "VOE AV",
+      "Identifier": "4943402",
+      "Weight": "0.84%",
+      "Market Value": "43,490.19",
+      "Shares Held": "870.00",
+      "Asset Category": "Equity",
+      "Price": "49.98872413793104"
+    },
+    {
+      "Name": "INDUS TOWERS LTD",
+      "Ticker": "INDUSTOW IN",
+      "Identifier": "B92P9G4",
+      "Weight": "0.79%",
+      "Market Value": "41,092.95",
+      "Shares Held": "10,517.00",
+      "Asset Category": "Equity",
+      "Price": "3.90728820005705"
+    },
+    {
+      "Name": "AALBERTS NV",
+      "Ticker": "AALB NA",
+      "Identifier": "B1W8P14",
+      "Weight": "0.74%",
+      "Market Value": "38,120.53",
+      "Shares Held": "793.00",
+      "Asset Category": "Equity",
+      "Price": "48.07128625472888"
+    },
+    {
+      "Name": "AURIZON HOLDINGS LTD",
+      "Ticker": "AZJ AU",
+      "Identifier": "B87CVM3",
+      "Weight": "0.72%",
+      "Market Value": "37,422.39",
+      "Shares Held": "14,512.00",
+      "Asset Category": "Equity",
+      "Price": "2.578720369349504"
+    },
+    {
+      "Name": "JINDAL STEEL LTD",
+      "Ticker": "JINDALST IN",
+      "Identifier": "6726816",
+      "Weight": "0.71%",
+      "Market Value": "37,051.18",
+      "Shares Held": "3,242.00",
+      "Asset Category": "Equity",
+      "Price": "11.42849475632326"
+    },
+    {
+      "Name": "COMSYS HOLDINGS CORP",
+      "Ticker": "1721 JP",
+      "Identifier": "6687247",
+      "Weight": "0.61%",
+      "Market Value": "31,389.09",
+      "Shares Held": "902.00",
+      "Asset Category": "Equity",
+      "Price": "34.79943458980044"
+    },
+    {
+      "Name": "HITACHI CONSTRUCTION MACHINE",
+      "Ticker": "6305 JP",
+      "Identifier": "6429405",
+      "Weight": "0.59%",
+      "Market Value": "30,587.92",
+      "Shares Held": "869.00",
+      "Asset Category": "Equity",
+      "Price": "35.19898734177215"
+    },
+    {
+      "Name": "ACERINOX SA",
+      "Ticker": "ACX SM",
+      "Identifier": "B01ZVZ5",
+      "Weight": "0.58%",
+      "Market Value": "30,114.39",
+      "Shares Held": "1,546.00",
+      "Asset Category": "Equity",
+      "Price": "19.47890685640362"
+    },
+    {
+      "Name": "WELSPUN CORP LTD",
+      "Ticker": "WLCO IN",
+      "Identifier": "B07PYG1",
+      "Weight": "0.53%",
+      "Market Value": "27,277.25",
+      "Shares Held": "1,008.00",
+      "Asset Category": "Equity",
+      "Price": "27.06076388888889"
+    },
+    {
+      "Name": "BUZZI SPA",
+      "Ticker": "BZU IM",
+      "Identifier": "5782206",
+      "Weight": "0.52%",
+      "Market Value": "27,030.66",
+      "Shares Held": "633.00",
+      "Asset Category": "Equity",
+      "Price": "42.7024644549763"
+    },
+    {
+      "Name": "SIEMENS ENERGY INDIA LTD",
+      "Ticker": "ENRIN IN",
+      "Identifier": "BTWMYX7",
+      "Weight": "0.51%",
+      "Market Value": "26,521.21",
+      "Shares Held": "766.00",
+      "Asset Category": "Equity",
+      "Price": "34.62298955613577"
+    },
+    {
+      "Name": "AMBUJA CEMENTS LTD",
+      "Ticker": "ACEM IN",
+      "Identifier": "B09QQ11",
+      "Weight": "0.50%",
+      "Market Value": "26,092.55",
+      "Shares Held": "6,936.00",
+      "Asset Category": "Equity",
+      "Price": "3.761901672433679"
+    },
+    {
+      "Name": "DOWNER EDI LTD",
+      "Ticker": "DOW AU",
+      "Identifier": "6465573",
+      "Weight": "0.49%",
+      "Market Value": "25,657.36",
+      "Shares Held": "5,390.00",
+      "Asset Category": "Equity",
+      "Price": "4.760178107606679"
+    },
+    {
+      "Name": "GEK TERNA SA",
+      "Ticker": "GEKTERNA GA",
+      "Identifier": "4421704",
+      "Weight": "0.49%",
+      "Market Value": "25,221.48",
+      "Shares Held": "511.00",
+      "Asset Category": "Equity",
+      "Price": "49.35710371819961"
+    },
+    {
+      "Name": "INFRONEER HOLDINGS INC",
+      "Ticker": "5076 JP",
+      "Identifier": "BLGYFQ3",
+      "Weight": "0.48%",
+      "Market Value": "24,924.93",
+      "Shares Held": "1,458.00",
+      "Asset Category": "Equity",
+      "Price": "17.09528806584362"
+    },
+    {
+      "Name": "KEI INDUSTRIES LTD",
+      "Ticker": "KEII IN",
+      "Identifier": "B1L9PJ6",
+      "Weight": "0.48%",
+      "Market Value": "24,825.56",
+      "Shares Held": "531.00",
+      "Asset Category": "Equity",
+      "Price": "46.7524670433145"
+    },
+    {
+      "Name": "JGC HOLDINGS CORP",
+      "Ticker": "1963 JP",
+      "Identifier": "6473468",
+      "Weight": "0.47%",
+      "Market Value": "24,181.76",
+      "Shares Held": "1,698.00",
+      "Asset Category": "Equity",
+      "Price": "14.24131919905771"
+    },
+    {
+      "Name": "ASIA CEMENT CORP",
+      "Ticker": "1102 TT",
+      "Identifier": "6056331",
+      "Weight": "0.46%",
+      "Market Value": "24,037.62",
+      "Shares Held": "21,540.00",
+      "Asset Category": "Equity",
+      "Price": "1.115952646239554"
+    },
+    {
+      "Name": "EXEO GROUP INC",
+      "Ticker": "1951 JP",
+      "Identifier": "6499420",
+      "Weight": "0.45%",
+      "Market Value": "23,252.01",
+      "Shares Held": "1,454.00",
+      "Asset Category": "Equity",
+      "Price": "15.9917537826685"
+    },
+    {
+      "Name": "STRABAG SE-BR",
+      "Ticker": "STR AV",
+      "Identifier": "B28DT41",
+      "Weight": "0.45%",
+      "Market Value": "23,091.81",
+      "Shares Held": "198.00",
+      "Asset Category": "Equity",
+      "Price": "116.625303030303"
+    },
+    {
+      "Name": "STEEL AUTHORITY OF INDIA",
+      "Ticker": "SAIL IN",
+      "Identifier": "6121499",
+      "Weight": "0.44%",
+      "Market Value": "22,684.51",
+      "Shares Held": "12,518.00",
+      "Asset Category": "Equity",
+      "Price": "1.81215130212494"
+    },
+    {
+      "Name": "SACYR SA",
+      "Ticker": "SCYR SM",
+      "Identifier": "5504789",
+      "Weight": "0.43%",
+      "Market Value": "22,351.02",
+      "Shares Held": "4,974.00",
+      "Asset Category": "Equity",
+      "Price": "4.49357056694813"
+    },
+    {
+      "Name": "TAIHAN CABLE & SOLUTION CO LTD",
+      "Ticker": "001440 KS",
+      "Identifier": "6512479",
+      "Weight": "0.42%",
+      "Market Value": "21,695.98",
+      "Shares Held": "930.00",
+      "Asset Category": "Equity",
+      "Price": "23.32901075268817"
+    },
+    {
+      "Name": "EREGLI DEMIR VE CELIK FABRIK",
+      "Ticker": "EREGL TI",
+      "Identifier": "B03MS97",
+      "Weight": "0.41%",
+      "Market Value": "21,283.31",
+      "Shares Held": "28,254.00",
+      "Asset Category": "Equity",
+      "Price": "0.7532848446237701"
+    },
+    {
+      "Name": "TERNIUM SA-SPONSORED ADR",
+      "Ticker": "TX",
+      "Identifier": "B0XGGY0",
+      "Weight": "0.41%",
+      "Market Value": "21,115.53",
+      "Shares Held": "373.00",
+      "Asset Category": "Equity",
+      "Price": "56.61"
+    },
+    {
+      "Name": "ANHUI CONCH CEMENT CO LTD-H",
+      "Ticker": "914 HK",
+      "Identifier": "6080396",
+      "Weight": "0.40%",
+      "Market Value": "20,693.78",
+      "Shares Held": "10,207.00",
+      "Asset Category": "Equity",
+      "Price": "2.027410600568238"
+    },
+    {
+      "Name": "HELIOS TOWERS PLC",
+      "Ticker": "HTWS LN",
+      "Identifier": "BJVQC70",
+      "Weight": "0.39%",
+      "Market Value": "20,241.31",
+      "Shares Held": "7,126.00",
+      "Asset Category": "Equity",
+      "Price": "2.840486949200113"
+    },
+    {
+      "Name": "YAMATO KOGYO CO LTD",
+      "Ticker": "5444 JP",
+      "Identifier": "6985446",
+      "Weight": "0.38%",
+      "Market Value": "19,752.50",
+      "Shares Held": "259.00",
+      "Asset Category": "Equity",
+      "Price": "76.26447876447877"
+    },
+    {
+      "Name": "SHREE CEMENT LTD",
+      "Ticker": "SRCM IN",
+      "Identifier": "6100357",
+      "Weight": "0.37%",
+      "Market Value": "19,331.34",
+      "Shares Held": "85.00",
+      "Asset Category": "Equity",
+      "Price": "227.4275294117647"
+    },
+    {
+      "Name": "BUDIMEX",
+      "Ticker": "BDX PW",
+      "Identifier": "4149330",
+      "Weight": "0.37%",
+      "Market Value": "19,249.15",
+      "Shares Held": "111.00",
+      "Asset Category": "Equity",
+      "Price": "173.4157657657658"
+    },
+    {
+      "Name": "OUTOKUMPU OYJ",
+      "Ticker": "OUT1V FH",
+      "Identifier": "4665148",
+      "Weight": "0.37%",
+      "Market Value": "19,087.11",
+      "Shares Held": "3,361.00",
+      "Asset Category": "Equity",
+      "Price": "5.678997322225528"
+    },
+    {
+      "Name": "JK CEMENT LTD",
+      "Ticker": "JKCE IN",
+      "Identifier": "B0CJ800",
+      "Weight": "0.36%",
+      "Market Value": "18,616.08",
+      "Shares Held": "362.00",
+      "Asset Category": "Equity",
+      "Price": "51.42563535911603"
+    },
+    {
+      "Name": "PENTA-OCEAN CONSTRUCTION CO",
+      "Ticker": "1893 JP",
+      "Identifier": "6680804",
+      "Weight": "0.36%",
+      "Market Value": "18,480.67",
+      "Shares Held": "2,011.00",
+      "Asset Category": "Equity",
+      "Price": "9.189791148682247"
+    },
+    {
+      "Name": "SHAPIR ENGINEERING AND INDUS",
+      "Ticker": "SPEN IT",
+      "Identifier": "BTF8CZ0",
+      "Weight": "0.35%",
+      "Market Value": "18,003.14",
+      "Shares Held": "1,343.00",
+      "Asset Category": "Equity",
+      "Price": "13.40516753536858"
+    },
+    {
+      "Name": "SIGENERGY TECHNOLOGY CO LT-H",
+      "Ticker": "6656 HK",
+      "Identifier": "BT68VS5",
+      "Weight": "0.34%",
+      "Market Value": "17,550.16",
+      "Shares Held": "499.00",
+      "Asset Category": "Equity",
+      "Price": "35.17066132264529"
+    },
+    {
+      "Name": "MAIRE SPA",
+      "Ticker": "MAIRE IM",
+      "Identifier": "BBGTNT7",
+      "Weight": "0.33%",
+      "Market Value": "17,186.78",
+      "Shares Held": "1,220.00",
+      "Asset Category": "Equity",
+      "Price": "14.08752459016393"
+    },
+    {
+      "Name": "INFRASTRUTTURE WIRELESS ITAL",
+      "Ticker": "INW IM",
+      "Identifier": "BZ0P4R4",
+      "Weight": "0.32%",
+      "Market Value": "16,766.86",
+      "Shares Held": "2,287.00",
+      "Asset Category": "Equity",
+      "Price": "7.33137735024049"
+    },
+    {
+      "Name": "JINDAL STAINLESS LTD",
+      "Ticker": "JDSL IN",
+      "Identifier": "6743257",
+      "Weight": "0.32%",
+      "Market Value": "16,754.92",
+      "Shares Held": "2,202.00",
+      "Asset Category": "Equity",
+      "Price": "7.60895549500454"
+    },
+    {
+      "Name": "HYUNDAI STEEL CO",
+      "Ticker": "004020 KS",
+      "Identifier": "6461850",
+      "Weight": "0.31%",
+      "Market Value": "15,885.95",
+      "Shares Held": "715.00",
+      "Asset Category": "Equity",
+      "Price": "22.21811188811189"
+    },
+    {
+      "Name": "TITAN SA",
+      "Ticker": "TITC GA",
+      "Identifier": "BJ8PD99",
+      "Weight": "0.31%",
+      "Market Value": "15,861.40",
+      "Shares Held": "301.00",
+      "Asset Category": "Equity",
+      "Price": "52.69568106312292"
+    },
+    {
+      "Name": "SHIKUN & BINUI LTD",
+      "Ticker": "SKBN IT",
+      "Identifier": "6151292",
+      "Weight": "0.30%",
+      "Market Value": "15,440.20",
+      "Shares Held": "2,697.00",
+      "Asset Category": "Equity",
+      "Price": "5.724953652206155"
+    },
+    {
+      "Name": "KEPCO ENGINEERING & CONSTRUC",
+      "Ticker": "052690 KS",
+      "Identifier": "B4LW1M1",
+      "Weight": "0.29%",
+      "Market Value": "15,060.91",
+      "Shares Held": "160.00",
+      "Asset Category": "Equity",
+      "Price": "94.1306875"
+    },
+    {
+      "Name": "CENERGY HOLDINGS SA",
+      "Ticker": "CENER GA",
+      "Identifier": "BDDW9C8",
+      "Weight": "0.28%",
+      "Market Value": "14,384.62",
+      "Shares Held": "527.00",
+      "Asset Category": "Equity",
+      "Price": "27.29529411764706"
+    },
+    {
+      "Name": "CHINA RAILWAY GROUP LTD-H",
+      "Ticker": "390 HK",
+      "Identifier": "B297KM7",
+      "Weight": "0.27%",
+      "Market Value": "14,209.14",
+      "Shares Held": "34,900.00",
+      "Asset Category": "Equity",
+      "Price": "0.4071386819484241"
+    },
+    {
+      "Name": "ILJIN ELECTRIC CO LTD",
+      "Ticker": "103590 KS",
+      "Identifier": "B3BM8M3",
+      "Weight": "0.27%",
+      "Market Value": "14,108.65",
+      "Shares Held": "221.00",
+      "Asset Category": "Equity",
+      "Price": "63.84004524886878"
+    },
+    {
+      "Name": "SANY HEAVY INDUSTRY CO LTD-H",
+      "Ticker": "6031 HK",
+      "Identifier": "BMHH632",
+      "Weight": "0.24%",
+      "Market Value": "12,333.43",
+      "Shares Held": "5,700.00",
+      "Asset Category": "Equity",
+      "Price": "2.163759649122807"
+    },
+    {
+      "Name": "ENKA INSAAT VE SANAYI AS",
+      "Ticker": "ENKAI TI",
+      "Identifier": "B03MS64",
+      "Weight": "0.24%",
+      "Market Value": "12,280.86",
+      "Shares Held": "7,185.00",
+      "Asset Category": "Equity",
+      "Price": "1.709235908141963"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.11%",
-      "Market Value": "5,610.48",
-      "Shares Held": "5,610.48",
+      "Weight": "0.23%",
+      "Market Value": "11,892.76",
+      "Shares Held": "11,892.76",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
     {
-      "Name": "CASH",
+      "Name": "GAON CABLE CO LTD",
+      "Ticker": "000500 KS",
+      "Identifier": "6498535",
+      "Weight": "0.23%",
+      "Market Value": "11,695.61",
+      "Shares Held": "48.00",
+      "Asset Category": "Equity",
+      "Price": "243.6585416666667"
+    },
+    {
+      "Name": "DALMIA BHARAT LTD",
+      "Ticker": "DALBHARA IN",
+      "Identifier": "BFN2YR2",
+      "Weight": "0.22%",
+      "Market Value": "11,267.06",
+      "Shares Held": "645.00",
+      "Asset Category": "Equity",
+      "Price": "17.46831007751938"
+    },
+    {
+      "Name": "CHINA COMMUNICATIONS SERVI-H",
+      "Ticker": "552 HK",
+      "Identifier": "B1HVJ16",
+      "Weight": "0.21%",
+      "Market Value": "11,143.87",
+      "Shares Held": "21,700.00",
+      "Asset Category": "Equity",
+      "Price": "0.5135423963133641"
+    },
+    {
+      "Name": "DEME GROUP",
+      "Ticker": "DEME BB",
+      "Identifier": "BMYKVN9",
+      "Weight": "0.21%",
+      "Market Value": "10,889.24",
+      "Shares Held": "56.00",
+      "Asset Category": "Equity",
+      "Price": "194.4507142857143"
+    },
+    {
+      "Name": "RAIL VIKAS NIGAM LTD",
+      "Ticker": "RVNL IN",
+      "Identifier": "BJLJGN3",
+      "Weight": "0.19%",
+      "Market Value": "10,059.25",
+      "Shares Held": "4,917.00",
+      "Asset Category": "Equity",
+      "Price": "2.045810453528574"
+    },
+    {
+      "Name": "VICAT",
+      "Ticker": "VCT FP",
+      "Identifier": "5763201",
+      "Weight": "0.19%",
+      "Market Value": "9,881.80",
+      "Shares Held": "149.00",
+      "Asset Category": "Equity",
+      "Price": "66.32080536912751"
+    },
+    {
+      "Name": "GRENERGY RENOVABLES",
+      "Ticker": "GRE SM",
+      "Identifier": "BZ2JBQ2",
+      "Weight": "0.19%",
+      "Market Value": "9,629.60",
+      "Shares Held": "116.00",
+      "Asset Category": "Equity",
+      "Price": "83.01379310344828"
+    },
+    {
+      "Name": "ZOOMLION HEAVY INDUSTRY-H",
+      "Ticker": "1157 HK",
+      "Identifier": "B544N70",
+      "Weight": "0.16%",
+      "Market Value": "8,410.89",
+      "Shares Held": "11,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.725076724137931"
+    },
+    {
+      "Name": "AUSTRALIAN DOLLAR",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.10%",
-      "Market Value": "5,417.47",
-      "Shares Held": "5,417.47",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "REPT BATTERO ENERGY CO LTD-H",
-      "Ticker": "666 HK",
-      "Identifier": "BNDWG50",
-      "Weight": "0.10%",
-      "Market Value": "5,147.02",
-      "Shares Held": "4,700.00",
+      "Weight": "0.01%",
+      "Market Value": "612.32",
+      "Shares Held": "878.57",
       "Asset Category": "Equity",
-      "Price": "1.095110638297872"
-    },
-    {
-      "Name": "HUAXIN BUILDING MATERIALS GROUP",
-      "Ticker": "6655 HK",
-      "Identifier": "BLF99X4",
-      "Weight": "0.09%",
-      "Market Value": "4,656.84",
-      "Shares Held": "2,400.00",
-      "Asset Category": "Equity",
-      "Price": "1.94035"
+      "Price": "0.6969507267491492"
     },
     {
       "Name": "EURO",
@@ -114,974 +994,114 @@
       "Price": "1.0"
     },
     {
+      "Name": "CURRENCY CONTRACT - USD",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-3.64",
+      "Shares Held": "-878.57",
+      "Asset Category": "Equity",
+      "Price": "0.004143096167636045"
+    },
+    {
       "Name": "INDIA RUPEE",
       "Ticker": "",
       "Identifier": "",
       "Weight": "-0.00%",
-      "Market Value": "-196.87",
-      "Shares Held": "-18,864.16",
+      "Market Value": "-88.25",
+      "Shares Held": "-8,498.16",
       "Asset Category": "Equity",
-      "Price": "0.01043619222907355"
-    },
-    {
-      "Name": "ARCELORMITTAL",
-      "Ticker": "MT NA",
-      "Identifier": "BYPBS67",
-      "Weight": "3.46%",
-      "Market Value": "182,364.69",
-      "Shares Held": "2,589.00",
-      "Asset Category": "Equity",
-      "Price": "70.43827346465817"
-    },
-    {
-      "Name": "CANADIAN NATL RAILWAY CO",
-      "Ticker": "CNR CN",
-      "Identifier": "2180632",
-      "Weight": "3.42%",
-      "Market Value": "180,486.45",
-      "Shares Held": "1,493.00",
-      "Asset Category": "Equity",
-      "Price": "120.8884460817147"
-    },
-    {
-      "Name": "FUJIKURA LTD",
-      "Ticker": "5803 JP",
-      "Identifier": "6356707",
-      "Weight": "3.36%",
-      "Market Value": "176,991.66",
-      "Shares Held": "5,579.00",
-      "Asset Category": "Equity",
-      "Price": "31.72462089980283"
-    },
-    {
-      "Name": "CANADIAN PACIFIC KANSAS CITY",
-      "Ticker": "CP CN",
-      "Identifier": "BMBQR09",
-      "Weight": "3.26%",
-      "Market Value": "171,870.48",
-      "Shares Held": "1,977.00",
-      "Asset Category": "Equity",
-      "Price": "86.9349924127466"
-    },
-    {
-      "Name": "LARSEN & TOUBRO LTD",
-      "Ticker": "LT IN",
-      "Identifier": "B0166K8",
-      "Weight": "3.19%",
-      "Market Value": "168,077.55",
-      "Shares Held": "4,155.00",
-      "Asset Category": "Equity",
-      "Price": "40.45187725631769"
-    },
-    {
-      "Name": "NIPPON STEEL CORP",
-      "Ticker": "5401 JP",
-      "Identifier": "6642569",
-      "Weight": "3.16%",
-      "Market Value": "166,471.41",
-      "Shares Held": "38,167.00",
-      "Asset Category": "Equity",
-      "Price": "4.361658238792675"
-    },
-    {
-      "Name": "VINCI SA",
-      "Ticker": "DG FP",
-      "Identifier": "B1XH026",
-      "Weight": "2.91%",
-      "Market Value": "153,293.20",
-      "Shares Held": "1,208.00",
-      "Asset Category": "Equity",
-      "Price": "126.8983443708609"
-    },
-    {
-      "Name": "HOLCIM LTD",
-      "Ticker": "HOLN SW",
-      "Identifier": "7110753",
-      "Weight": "2.79%",
-      "Market Value": "147,283.49",
-      "Shares Held": "1,814.00",
-      "Asset Category": "Equity",
-      "Price": "81.19266262403528"
-    },
-    {
-      "Name": "SHIN-ETSU CHEMICAL CO LTD",
-      "Ticker": "4063 JP",
-      "Identifier": "6804585",
-      "Weight": "2.74%",
-      "Market Value": "144,634.87",
-      "Shares Held": "3,860.00",
-      "Asset Category": "Equity",
-      "Price": "37.47017357512954"
-    },
-    {
-      "Name": "TATA STEEL LTD",
-      "Ticker": "TATA IN",
-      "Identifier": "BPQWCZ3",
-      "Weight": "2.68%",
-      "Market Value": "141,058.17",
-      "Shares Held": "71,908.00",
-      "Asset Category": "Equity",
-      "Price": "1.961647799966624"
-    },
-    {
-      "Name": "DOOSAN ENERBILITY CO LTD",
-      "Ticker": "034020 KS",
-      "Identifier": "6294670",
-      "Weight": "2.64%",
-      "Market Value": "139,267.17",
-      "Shares Held": "2,317.00",
-      "Asset Category": "Equity",
-      "Price": "60.10667673716013"
-    },
-    {
-      "Name": "FERROVIAL NV",
-      "Ticker": "FER SM",
-      "Identifier": "BRS7CF0",
-      "Weight": "2.64%",
-      "Market Value": "139,188.95",
-      "Shares Held": "2,514.00",
-      "Asset Category": "Equity",
-      "Price": "55.36553301511536"
-    },
-    {
-      "Name": "HEIDELBERG MATERIALS AG",
-      "Ticker": "HEI GR",
-      "Identifier": "5120679",
-      "Weight": "2.62%",
-      "Market Value": "138,240.53",
-      "Shares Held": "842.00",
-      "Asset Category": "Equity",
-      "Price": "164.1811520190024"
-    },
-    {
-      "Name": "PRYSMIAN SPA",
-      "Ticker": "PRY IM",
-      "Identifier": "B1W4V69",
-      "Weight": "2.60%",
-      "Market Value": "136,902.45",
-      "Shares Held": "981.00",
-      "Asset Category": "Equity",
-      "Price": "139.5539755351682"
-    },
-    {
-      "Name": "POSCO HOLDINGS INC",
-      "Ticker": "005490 KS",
-      "Identifier": "6693233",
-      "Weight": "2.51%",
-      "Market Value": "132,460.55",
-      "Shares Held": "578.00",
-      "Asset Category": "Equity",
-      "Price": "229.1705017301038"
-    },
-    {
-      "Name": "CELLNEX TELECOM SA",
-      "Ticker": "CLNX SM",
-      "Identifier": "BX90C05",
-      "Weight": "2.47%",
-      "Market Value": "130,442.27",
-      "Shares Held": "4,769.00",
-      "Asset Category": "Equity",
-      "Price": "27.35212203816314"
-    },
-    {
-      "Name": "WEG SA",
-      "Ticker": "WEGE3 BZ",
-      "Identifier": "2945422",
-      "Weight": "2.40%",
-      "Market Value": "126,557.81",
-      "Shares Held": "12,900.00",
-      "Asset Category": "Equity",
-      "Price": "9.810682945736433"
-    },
-    {
-      "Name": "HINDALCO INDUSTRIES LTD",
-      "Ticker": "HNDL IN",
-      "Identifier": "B0GWF48",
-      "Weight": "2.35%",
-      "Market Value": "124,125.32",
-      "Shares Held": "12,174.00",
-      "Asset Category": "Equity",
-      "Price": "10.19593560046"
-    },
-    {
-      "Name": "CEMEX SAB-SPONS ADR PART CER",
-      "Ticker": "CX",
-      "Identifier": "2488671",
-      "Weight": "2.31%",
-      "Market Value": "121,656.59",
-      "Shares Held": "12,529.00",
-      "Asset Category": "Equity",
-      "Price": "9.709999999999999"
-    },
-    {
-      "Name": "ULTRATECH CEMENT LTD",
-      "Ticker": "UTCEM IN",
-      "Identifier": "B01GZF6",
-      "Weight": "2.19%",
-      "Market Value": "115,714.68",
-      "Shares Held": "994.00",
-      "Asset Category": "Equity",
-      "Price": "116.4131589537223"
-    },
-    {
-      "Name": "JSW STEEL LTD",
-      "Ticker": "JSTL IN",
-      "Identifier": "BZBYJJ7",
-      "Weight": "1.92%",
-      "Market Value": "101,136.51",
-      "Shares Held": "7,589.00",
-      "Asset Category": "Equity",
-      "Price": "13.32672420608776"
-    },
-    {
-      "Name": "LS ELECTRIC CO LTD",
-      "Ticker": "010120 KS",
-      "Identifier": "6378217",
-      "Weight": "1.87%",
-      "Market Value": "98,724.66",
-      "Shares Held": "653.00",
-      "Asset Category": "Equity",
-      "Price": "151.1863093415008"
-    },
-    {
-      "Name": "EIFFAGE",
-      "Ticker": "FGR FP",
-      "Identifier": "B13X013",
-      "Weight": "1.73%",
-      "Market Value": "91,168.08",
-      "Shares Held": "754.00",
-      "Asset Category": "Equity",
-      "Price": "120.9125729442971"
-    },
-    {
-      "Name": "ATKINSREALIS GROUP INC",
-      "Ticker": "ATRL CN",
-      "Identifier": "BRJNZ47",
-      "Weight": "1.63%",
-      "Market Value": "85,710.60",
-      "Shares Held": "1,406.00",
-      "Asset Category": "Equity",
-      "Price": "60.96059743954481"
-    },
-    {
-      "Name": "BLUESCOPE STEEL LTD",
-      "Ticker": "BSL AU",
-      "Identifier": "6533232",
-      "Weight": "1.53%",
-      "Market Value": "80,805.60",
-      "Shares Held": "3,789.00",
-      "Asset Category": "Equity",
-      "Price": "21.32636579572447"
-    },
-    {
-      "Name": "NKT A/S",
-      "Ticker": "NKT DC",
-      "Identifier": "7106354",
-      "Weight": "1.23%",
-      "Market Value": "64,963.89",
-      "Shares Held": "464.00",
-      "Asset Category": "Equity",
-      "Price": "140.0083836206896"
-    },
-    {
-      "Name": "NEXANS SA",
-      "Ticker": "NEX FP",
-      "Identifier": "7130836",
-      "Weight": "1.07%",
-      "Market Value": "56,275.82",
-      "Shares Held": "364.00",
-      "Asset Category": "Equity",
-      "Price": "154.6039010989011"
-    },
-    {
-      "Name": "SSAB AB - B SHARES",
-      "Ticker": "SSABB SS",
-      "Identifier": "B17H3F6",
-      "Weight": "1.06%",
-      "Market Value": "55,673.27",
-      "Shares Held": "5,288.00",
-      "Asset Category": "Equity",
-      "Price": "10.52822806354009"
-    },
-    {
-      "Name": "IMCD NV",
-      "Ticker": "IMCD NA",
-      "Identifier": "BNCBD46",
-      "Weight": "1.05%",
-      "Market Value": "55,435.42",
-      "Shares Held": "507.00",
-      "Asset Category": "Equity",
-      "Price": "109.3400788954635"
-    },
-    {
-      "Name": "JFE HOLDINGS INC",
-      "Ticker": "5411 JP",
-      "Identifier": "6543792",
-      "Weight": "1.05%",
-      "Market Value": "55,330.36",
-      "Shares Held": "4,712.00",
-      "Asset Category": "Equity",
-      "Price": "11.7424363327674"
-    },
-    {
-      "Name": "POLYCAB INDIA LTD",
-      "Ticker": "POLYCAB IN",
-      "Identifier": "BHKDY38",
-      "Weight": "1.02%",
-      "Market Value": "53,615.73",
-      "Shares Held": "611.00",
-      "Asset Category": "Equity",
-      "Price": "87.75078559738135"
-    },
-    {
-      "Name": "SAIPEM SPA",
-      "Ticker": "SPM IM",
-      "Identifier": "BMY36H7",
-      "Weight": "1.02%",
-      "Market Value": "53,606.33",
-      "Shares Held": "10,811.00",
-      "Asset Category": "Equity",
-      "Price": "4.958498751271853"
-    },
-    {
-      "Name": "GERDAU SA -SPON ADR",
-      "Ticker": "GGB",
-      "Identifier": "2297606",
-      "Weight": "0.98%",
-      "Market Value": "51,594.30",
-      "Shares Held": "10,638.00",
-      "Asset Category": "Equity",
-      "Price": "4.850000000000001"
-    },
-    {
-      "Name": "GE VERNOVA T&D INDIA LTD",
-      "Ticker": "GVTD IN",
-      "Identifier": "6139890",
-      "Weight": "0.91%",
-      "Market Value": "47,926.53",
-      "Shares Held": "1,073.00",
-      "Asset Category": "Equity",
-      "Price": "44.66591798695247"
-    },
-    {
-      "Name": "TCC GROUP HOLDINGS CO LTD",
-      "Ticker": "1101 TT",
-      "Identifier": "6869937",
-      "Weight": "0.89%",
-      "Market Value": "46,949.24",
-      "Shares Held": "59,183.00",
-      "Asset Category": "Equity",
-      "Price": "0.79328928915398"
-    },
-    {
-      "Name": "VOESTALPINE AG",
-      "Ticker": "VOE AV",
-      "Identifier": "4943402",
-      "Weight": "0.86%",
-      "Market Value": "45,430.29",
-      "Shares Held": "870.00",
-      "Asset Category": "Equity",
-      "Price": "52.21872413793103"
-    },
-    {
-      "Name": "CHINA TOWER CORP LTD-H",
-      "Ticker": "788 HK",
-      "Identifier": "BTVMCY5",
-      "Weight": "0.85%",
-      "Market Value": "44,737.35",
-      "Shares Held": "39,540.00",
-      "Asset Category": "Equity",
-      "Price": "1.131445371775417"
-    },
-    {
-      "Name": "GAMUDA BHD",
-      "Ticker": "GAM MK",
-      "Identifier": "6359881",
-      "Weight": "0.81%",
-      "Market Value": "42,523.32",
-      "Shares Held": "35,500.00",
-      "Asset Category": "Equity",
-      "Price": "1.19784"
-    },
-    {
-      "Name": "INDUS TOWERS LTD",
-      "Ticker": "INDUSTOW IN",
-      "Identifier": "B92P9G4",
-      "Weight": "0.78%",
-      "Market Value": "41,119.72",
-      "Shares Held": "10,517.00",
-      "Asset Category": "Equity",
-      "Price": "3.909833602738424"
-    },
-    {
-      "Name": "JINDAL STEEL LTD",
-      "Ticker": "JINDALST IN",
-      "Identifier": "6726816",
-      "Weight": "0.75%",
-      "Market Value": "39,409.13",
-      "Shares Held": "3,242.00",
-      "Asset Category": "Equity",
-      "Price": "12.15580814312153"
-    },
-    {
-      "Name": "AALBERTS NV",
-      "Ticker": "AALB NA",
-      "Identifier": "B1W8P14",
-      "Weight": "0.72%",
-      "Market Value": "38,100.31",
-      "Shares Held": "793.00",
-      "Asset Category": "Equity",
-      "Price": "48.04578814627995"
-    },
-    {
-      "Name": "AURIZON HOLDINGS LTD",
-      "Ticker": "AZJ AU",
-      "Identifier": "B87CVM3",
-      "Weight": "0.71%",
-      "Market Value": "37,615.66",
-      "Shares Held": "14,512.00",
-      "Asset Category": "Equity",
-      "Price": "2.592038313120177"
-    },
-    {
-      "Name": "COMSYS HOLDINGS CORP",
-      "Ticker": "1721 JP",
-      "Identifier": "6687247",
-      "Weight": "0.61%",
-      "Market Value": "32,099.30",
-      "Shares Held": "902.00",
-      "Asset Category": "Equity",
-      "Price": "35.58680709534368"
-    },
-    {
-      "Name": "HITACHI CONSTRUCTION MACHINE",
-      "Ticker": "6305 JP",
-      "Identifier": "6429405",
-      "Weight": "0.60%",
-      "Market Value": "31,770.90",
-      "Shares Held": "869.00",
-      "Asset Category": "Equity",
-      "Price": "36.56029919447641"
-    },
-    {
-      "Name": "ACERINOX SA",
-      "Ticker": "ACX SM",
-      "Identifier": "B01ZVZ5",
-      "Weight": "0.58%",
-      "Market Value": "30,705.66",
-      "Shares Held": "1,546.00",
-      "Asset Category": "Equity",
-      "Price": "19.86135834411384"
-    },
-    {
-      "Name": "WELSPUN CORP LTD",
-      "Ticker": "WLCO IN",
-      "Identifier": "B07PYG1",
-      "Weight": "0.56%",
-      "Market Value": "29,795.29",
-      "Shares Held": "1,008.00",
-      "Asset Category": "Equity",
-      "Price": "29.55881944444445"
-    },
-    {
-      "Name": "AMBUJA CEMENTS LTD",
-      "Ticker": "ACEM IN",
-      "Identifier": "B09QQ11",
-      "Weight": "0.53%",
-      "Market Value": "27,780.92",
-      "Shares Held": "6,936.00",
-      "Asset Category": "Equity",
-      "Price": "4.005322952710496"
-    },
-    {
-      "Name": "INFRONEER HOLDINGS INC",
-      "Ticker": "5076 JP",
-      "Identifier": "BLGYFQ3",
-      "Weight": "0.51%",
-      "Market Value": "26,875.11",
-      "Shares Held": "1,458.00",
-      "Asset Category": "Equity",
-      "Price": "18.43286008230453"
-    },
-    {
-      "Name": "BUZZI SPA",
-      "Ticker": "BZU IM",
-      "Identifier": "5782206",
-      "Weight": "0.51%",
-      "Market Value": "26,833.29",
-      "Shares Held": "633.00",
-      "Asset Category": "Equity",
-      "Price": "42.390663507109"
-    },
-    {
-      "Name": "SIEMENS ENERGY INDIA LTD",
-      "Ticker": "ENRIN IN",
-      "Identifier": "BTWMYX7",
-      "Weight": "0.50%",
-      "Market Value": "26,483.95",
-      "Shares Held": "766.00",
-      "Asset Category": "Equity",
-      "Price": "34.57434725848564"
-    },
-    {
-      "Name": "KEI INDUSTRIES LTD",
-      "Ticker": "KEII IN",
-      "Identifier": "B1L9PJ6",
-      "Weight": "0.49%",
-      "Market Value": "25,898.18",
-      "Shares Held": "531.00",
-      "Asset Category": "Equity",
-      "Price": "48.7724670433145"
-    },
-    {
-      "Name": "GEK TERNA SA",
-      "Ticker": "GEKTERNA GA",
-      "Identifier": "4421704",
-      "Weight": "0.48%",
-      "Market Value": "25,506.89",
-      "Shares Held": "511.00",
-      "Asset Category": "Equity",
-      "Price": "49.91563600782779"
-    },
-    {
-      "Name": "DOWNER EDI LTD",
-      "Ticker": "DOW AU",
-      "Identifier": "6465573",
-      "Weight": "0.48%",
-      "Market Value": "25,405.42",
-      "Shares Held": "5,390.00",
-      "Asset Category": "Equity",
-      "Price": "4.71343599257885"
-    },
-    {
-      "Name": "JGC HOLDINGS CORP",
-      "Ticker": "1963 JP",
-      "Identifier": "6473468",
-      "Weight": "0.47%",
-      "Market Value": "25,005.70",
-      "Shares Held": "1,698.00",
-      "Asset Category": "Equity",
-      "Price": "14.72656065959953"
-    },
-    {
-      "Name": "EXEO GROUP INC",
-      "Ticker": "1951 JP",
-      "Identifier": "6499420",
-      "Weight": "0.46%",
-      "Market Value": "24,201.72",
-      "Shares Held": "1,454.00",
-      "Asset Category": "Equity",
-      "Price": "16.64492434662999"
-    },
-    {
-      "Name": "STEEL AUTHORITY OF INDIA",
-      "Ticker": "SAIL IN",
-      "Identifier": "6121499",
-      "Weight": "0.46%",
-      "Market Value": "24,167.91",
-      "Shares Held": "12,518.00",
-      "Asset Category": "Equity",
-      "Price": "1.930652660169356"
-    },
-    {
-      "Name": "ASIA CEMENT CORP",
-      "Ticker": "1102 TT",
-      "Identifier": "6056331",
-      "Weight": "0.46%",
-      "Market Value": "24,159.29",
-      "Shares Held": "21,540.00",
-      "Asset Category": "Equity",
-      "Price": "1.121601207056639"
-    },
-    {
-      "Name": "STRABAG SE-BR",
-      "Ticker": "STR AV",
-      "Identifier": "B28DT41",
-      "Weight": "0.45%",
-      "Market Value": "23,793.95",
-      "Shares Held": "198.00",
-      "Asset Category": "Equity",
-      "Price": "120.1714646464647"
-    },
-    {
-      "Name": "SACYR SA",
-      "Ticker": "SCYR SM",
-      "Identifier": "5504789",
-      "Weight": "0.43%",
-      "Market Value": "22,922.55",
-      "Shares Held": "4,974.00",
-      "Asset Category": "Equity",
-      "Price": "4.608474065138721"
-    },
-    {
-      "Name": "EREGLI DEMIR VE CELIK FABRIK",
-      "Ticker": "EREGL TI",
-      "Identifier": "B03MS97",
-      "Weight": "0.41%",
-      "Market Value": "21,777.12",
-      "Shares Held": "28,254.00",
-      "Asset Category": "Equity",
-      "Price": "0.7707623699299214"
-    },
-    {
-      "Name": "TAIHAN CABLE & SOLUTION CO LTD",
-      "Ticker": "001440 KS",
-      "Identifier": "6512479",
-      "Weight": "0.40%",
-      "Market Value": "21,176.02",
-      "Shares Held": "930.00",
-      "Asset Category": "Equity",
-      "Price": "22.76991397849462"
-    },
-    {
-      "Name": "OUTOKUMPU OYJ",
-      "Ticker": "OUT1V FH",
-      "Identifier": "4665148",
-      "Weight": "0.40%",
-      "Market Value": "21,057.02",
-      "Shares Held": "3,361.00",
-      "Asset Category": "Equity",
-      "Price": "6.265105623326391"
-    },
-    {
-      "Name": "YAMATO KOGYO CO LTD",
-      "Ticker": "5444 JP",
-      "Identifier": "6985446",
-      "Weight": "0.39%",
-      "Market Value": "20,706.49",
-      "Shares Held": "259.00",
-      "Asset Category": "Equity",
-      "Price": "79.94783783783784"
-    },
-    {
-      "Name": "TERNIUM SA-SPONSORED ADR",
-      "Ticker": "TX",
-      "Identifier": "B0XGGY0",
-      "Weight": "0.39%",
-      "Market Value": "20,649.28",
-      "Shares Held": "373.00",
-      "Asset Category": "Equity",
-      "Price": "55.36"
-    },
-    {
-      "Name": "ANHUI CONCH CEMENT CO LTD-H",
-      "Ticker": "914 HK",
-      "Identifier": "6080396",
-      "Weight": "0.39%",
-      "Market Value": "20,416.73",
-      "Shares Held": "10,207.00",
-      "Asset Category": "Equity",
-      "Price": "2.000267463505438"
-    },
-    {
-      "Name": "BUDIMEX",
-      "Ticker": "BDX PW",
-      "Identifier": "4149330",
-      "Weight": "0.38%",
-      "Market Value": "20,008.60",
-      "Shares Held": "111.00",
-      "Asset Category": "Equity",
-      "Price": "180.2576576576576"
-    },
-    {
-      "Name": "HELIOS TOWERS PLC",
-      "Ticker": "HTWS LN",
-      "Identifier": "BJVQC70",
-      "Weight": "0.38%",
-      "Market Value": "19,990.55",
-      "Shares Held": "7,126.00",
-      "Asset Category": "Equity",
-      "Price": "2.805297502104968"
-    },
-    {
-      "Name": "SHREE CEMENT LTD",
-      "Ticker": "SRCM IN",
-      "Identifier": "6100357",
-      "Weight": "0.38%",
-      "Market Value": "19,976.52",
-      "Shares Held": "85.00",
-      "Asset Category": "Equity",
-      "Price": "235.0178823529412"
-    },
-    {
-      "Name": "PENTA-OCEAN CONSTRUCTION CO",
-      "Ticker": "1893 JP",
-      "Identifier": "6680804",
-      "Weight": "0.37%",
-      "Market Value": "19,429.92",
-      "Shares Held": "2,011.00",
-      "Asset Category": "Equity",
-      "Price": "9.661819990054699"
-    },
-    {
-      "Name": "SIGENERGY TECHNOLOGY CO LT-H",
-      "Ticker": "6656 HK",
-      "Identifier": "BT68VS5",
-      "Weight": "0.37%",
-      "Market Value": "19,402.85",
-      "Shares Held": "499.00",
-      "Asset Category": "Equity",
-      "Price": "38.88346693386773"
-    },
-    {
-      "Name": "JK CEMENT LTD",
-      "Ticker": "JKCE IN",
-      "Identifier": "B0CJ800",
-      "Weight": "0.36%",
-      "Market Value": "18,889.09",
-      "Shares Held": "362.00",
-      "Asset Category": "Equity",
-      "Price": "52.17980662983425"
-    },
-    {
-      "Name": "SHAPIR ENGINEERING AND INDUS",
-      "Ticker": "SPEN IT",
-      "Identifier": "BTF8CZ0",
-      "Weight": "0.35%",
-      "Market Value": "18,410.05",
-      "Shares Held": "1,343.00",
-      "Asset Category": "Equity",
-      "Price": "13.70815338793745"
-    },
-    {
-      "Name": "JINDAL STAINLESS LTD",
-      "Ticker": "JDSL IN",
-      "Identifier": "6743257",
-      "Weight": "0.33%",
-      "Market Value": "17,194.78",
-      "Shares Held": "2,202.00",
-      "Asset Category": "Equity",
-      "Price": "7.808710263396911"
-    },
-    {
-      "Name": "INFRASTRUTTURE WIRELESS ITAL",
-      "Ticker": "INW IM",
-      "Identifier": "BZ0P4R4",
-      "Weight": "0.32%",
-      "Market Value": "16,948.85",
-      "Shares Held": "2,287.00",
-      "Asset Category": "Equity",
-      "Price": "7.410953213817227"
-    },
-    {
-      "Name": "MAIRE SPA",
-      "Ticker": "MAIRE IM",
-      "Identifier": "BBGTNT7",
-      "Weight": "0.32%",
-      "Market Value": "16,816.94",
-      "Shares Held": "1,220.00",
-      "Asset Category": "Equity",
-      "Price": "13.78437704918033"
-    },
-    {
-      "Name": "HYUNDAI STEEL CO",
-      "Ticker": "004020 KS",
-      "Identifier": "6461850",
-      "Weight": "0.32%",
-      "Market Value": "16,806.51",
-      "Shares Held": "715.00",
-      "Asset Category": "Equity",
-      "Price": "23.50560839160839"
-    },
-    {
-      "Name": "TITAN SA",
-      "Ticker": "TITC GA",
-      "Identifier": "BJ8PD99",
-      "Weight": "0.32%",
-      "Market Value": "16,713.07",
-      "Shares Held": "301.00",
-      "Asset Category": "Equity",
-      "Price": "55.52514950166113"
-    },
-    {
-      "Name": "SHIKUN & BINUI LTD",
-      "Ticker": "SKBN IT",
-      "Identifier": "6151292",
-      "Weight": "0.30%",
-      "Market Value": "15,844.67",
-      "Shares Held": "2,697.00",
-      "Asset Category": "Equity",
-      "Price": "5.874923989618094"
-    },
-    {
-      "Name": "KEPCO ENGINEERING & CONSTRUC",
-      "Ticker": "052690 KS",
-      "Identifier": "B4LW1M1",
-      "Weight": "0.29%",
-      "Market Value": "15,349.64",
-      "Shares Held": "160.00",
-      "Asset Category": "Equity",
-      "Price": "95.93525"
-    },
-    {
-      "Name": "CHINA RAILWAY GROUP LTD-H",
-      "Ticker": "390 HK",
-      "Identifier": "B297KM7",
-      "Weight": "0.27%",
-      "Market Value": "14,215.48",
-      "Shares Held": "34,900.00",
-      "Asset Category": "Equity",
-      "Price": "0.4073203438395415"
-    },
-    {
-      "Name": "CENERGY HOLDINGS SA",
-      "Ticker": "CENER GA",
-      "Identifier": "BDDW9C8",
-      "Weight": "0.27%",
-      "Market Value": "14,108.13",
-      "Shares Held": "527.00",
-      "Asset Category": "Equity",
-      "Price": "26.77064516129032"
-    },
-    {
-      "Name": "ILJIN ELECTRIC CO LTD",
-      "Ticker": "103590 KS",
-      "Identifier": "B3BM8M3",
-      "Weight": "0.25%",
-      "Market Value": "13,283.58",
-      "Shares Held": "221.00",
-      "Asset Category": "Equity",
-      "Price": "60.10669683257918"
-    },
-    {
-      "Name": "ENKA INSAAT VE SANAYI AS",
-      "Ticker": "ENKAI TI",
-      "Identifier": "B03MS64",
-      "Weight": "0.24%",
-      "Market Value": "12,685.58",
-      "Shares Held": "7,185.00",
-      "Asset Category": "Equity",
-      "Price": "1.765564370215727"
-    },
-    {
-      "Name": "SANY HEAVY INDUSTRY CO LTD-H",
-      "Ticker": "6031 HK",
-      "Identifier": "BMHH632",
-      "Weight": "0.23%",
-      "Market Value": "12,062.80",
-      "Shares Held": "5,700.00",
-      "Asset Category": "Equity",
-      "Price": "2.116280701754386"
-    },
-    {
-      "Name": "DEME GROUP",
-      "Ticker": "DEME BB",
-      "Identifier": "BMYKVN9",
-      "Weight": "0.22%",
-      "Market Value": "11,454.37",
-      "Shares Held": "56.00",
-      "Asset Category": "Equity",
-      "Price": "204.5423214285715"
-    },
-    {
-      "Name": "DALMIA BHARAT LTD",
-      "Ticker": "DALBHARA IN",
-      "Identifier": "BFN2YR2",
-      "Weight": "0.22%",
-      "Market Value": "11,444.38",
-      "Shares Held": "645.00",
-      "Asset Category": "Equity",
-      "Price": "17.74322480620155"
-    },
-    {
-      "Name": "CHINA COMMUNICATIONS SERVI-H",
-      "Ticker": "552 HK",
-      "Identifier": "B1HVJ16",
-      "Weight": "0.21%",
-      "Market Value": "11,287.17",
-      "Shares Held": "21,700.00",
-      "Asset Category": "Equity",
-      "Price": "0.5201460829493088"
-    },
-    {
-      "Name": "GAON CABLE CO LTD",
-      "Ticker": "000500 KS",
-      "Identifier": "6498535",
-      "Weight": "0.21%",
-      "Market Value": "11,247.38",
-      "Shares Held": "48.00",
-      "Asset Category": "Equity",
-      "Price": "234.3204166666667"
-    },
-    {
-      "Name": "RAIL VIKAS NIGAM LTD",
-      "Ticker": "RVNL IN",
-      "Identifier": "BJLJGN3",
-      "Weight": "0.20%",
-      "Market Value": "10,621.92",
-      "Shares Held": "4,917.00",
-      "Asset Category": "Equity",
-      "Price": "2.160244051250763"
-    },
-    {
-      "Name": "VICAT",
-      "Ticker": "VCT FP",
-      "Identifier": "5763201",
-      "Weight": "0.19%",
-      "Market Value": "10,192.91",
-      "Shares Held": "149.00",
-      "Asset Category": "Equity",
-      "Price": "68.40879194630872"
-    },
-    {
-      "Name": "GRENERGY RENOVABLES",
-      "Ticker": "GRE SM",
-      "Identifier": "BZ2JBQ2",
-      "Weight": "0.19%",
-      "Market Value": "10,170.57",
-      "Shares Held": "116.00",
-      "Asset Category": "Equity",
-      "Price": "87.6773275862069"
-    },
-    {
-      "Name": "ZOOMLION HEAVY INDUSTRY-H",
-      "Ticker": "1157 HK",
-      "Identifier": "B544N70",
-      "Weight": "0.16%",
-      "Market Value": "8,318.51",
-      "Shares Held": "11,600.00",
-      "Asset Category": "Equity",
-      "Price": "0.7171129310344828"
+      "Price": "0.01038460090184228"
     },
     {
       "Name": "CHUANGXIN INDUSTRIES HOLDING",
       "Ticker": "2788 HK",
       "Identifier": "BMFPS09",
       "Weight": "0.15%",
-      "Market Value": "7,865.68",
+      "Market Value": "7,963.86",
       "Shares Held": "4,200.00",
       "Asset Category": "Equity",
-      "Price": "1.872780952380952"
+      "Price": "1.896157142857143"
     },
     {
       "Name": "CHINA ENERGY ENGINEERING C-H",
       "Ticker": "3996 HK",
       "Identifier": "BZ1JH10",
       "Weight": "0.15%",
-      "Market Value": "7,802.96",
+      "Market Value": "7,876.70",
       "Shares Held": "60,600.00",
       "Asset Category": "Equity",
-      "Price": "0.1287617161716172"
+      "Price": "0.1299785478547855"
     },
     {
       "Name": "POWERX INC",
       "Ticker": "485A JP",
       "Identifier": "BR1WW85",
-      "Weight": "0.14%",
-      "Market Value": "7,587.15",
+      "Weight": "0.15%",
+      "Market Value": "7,598.31",
       "Shares Held": "563.00",
       "Asset Category": "Equity",
-      "Price": "13.47628774422735"
+      "Price": "13.49611012433393"
     },
     {
       "Name": "NMDC ENERGY PJSC",
       "Ticker": "NMDCENR UH",
       "Identifier": "BQB80S2",
       "Weight": "0.14%",
-      "Market Value": "7,585.34",
+      "Market Value": "7,368.44",
       "Shares Held": "9,986.00",
       "Asset Category": "Equity",
-      "Price": "0.7595974364109754"
+      "Price": "0.7378770278389746"
+    },
+    {
+      "Name": "VIOHALCO SA",
+      "Ticker": "VIO GA",
+      "Identifier": "BJVX2Q0",
+      "Weight": "0.14%",
+      "Market Value": "7,190.68",
+      "Shares Held": "361.00",
+      "Asset Category": "Equity",
+      "Price": "19.9187811634349"
+    },
+    {
+      "Name": "BEIJING ENTERPRISES WATER GR",
+      "Ticker": "371 HK",
+      "Identifier": "B01YCG0",
+      "Weight": "0.13%",
+      "Market Value": "6,585.58",
+      "Shares Held": "34,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.1936935294117647"
+    },
+    {
+      "Name": "CASH",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.12%",
+      "Market Value": "6,413.00",
+      "Shares Held": "6,413.00",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "REPT BATTERO ENERGY CO LTD-H",
+      "Ticker": "666 HK",
+      "Identifier": "BNDWG50",
+      "Weight": "0.10%",
+      "Market Value": "4,971.04",
+      "Shares Held": "4,700.00",
+      "Asset Category": "Equity",
+      "Price": "1.057668085106383"
+    },
+    {
+      "Name": "HUAXIN BUILDING MATERIALS GROUP",
+      "Ticker": "6655 HK",
+      "Identifier": "BLF99X4",
+      "Weight": "0.09%",
+      "Market Value": "4,535.49",
+      "Shares Held": "2,400.00",
+      "Asset Category": "Equity",
+      "Price": "1.8897875"
     }
   ]
 }

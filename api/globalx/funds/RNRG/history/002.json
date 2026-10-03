@@ -2,7 +2,7 @@
   "ticker": "RNRG",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2850,
+  "totalRows": 2855,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-06",
+      "Close": "39.06",
+      "Adj Close": "37.02",
+      "Volume": "7800"
+    },
+    {
+      "Date": "2022-10-05",
+      "Close": "39.90",
+      "Adj Close": "37.81",
+      "Volume": "6700"
+    },
+    {
+      "Date": "2022-10-04",
+      "Close": "40.50",
+      "Adj Close": "38.38",
+      "Volume": "3700"
+    },
+    {
+      "Date": "2022-10-03",
+      "Close": "40.02",
+      "Adj Close": "37.93",
+      "Volume": "12033"
+    },
+    {
+      "Date": "2022-09-30",
+      "Close": "38.49",
+      "Adj Close": "36.48",
+      "Volume": "2500"
+    },
     {
       "Date": "2022-09-29",
       "Close": "38.43",
@@ -5979,36 +6009,6 @@
       "Close": "34.95",
       "Adj Close": "29.94",
       "Volume": "8100"
-    },
-    {
-      "Date": "2018-10-16",
-      "Close": "35.30",
-      "Adj Close": "30.25",
-      "Volume": "3567"
-    },
-    {
-      "Date": "2018-10-15",
-      "Close": "35.01",
-      "Adj Close": "30.00",
-      "Volume": "2900"
-    },
-    {
-      "Date": "2018-10-12",
-      "Close": "34.63",
-      "Adj Close": "29.67",
-      "Volume": "3500"
-    },
-    {
-      "Date": "2018-10-11",
-      "Close": "34.58",
-      "Adj Close": "29.63",
-      "Volume": "5300"
-    },
-    {
-      "Date": "2018-10-10",
-      "Close": "34.71",
-      "Adj Close": "29.74",
-      "Volume": "2733"
     }
   ]
 }
