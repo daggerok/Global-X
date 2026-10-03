@@ -170,7 +170,7 @@ function outputCreateReporter(root: URL | string, total: number) {
  * Nothing is scraped from a client-rendered widget and no value is invented:
  * a metric Global X does not publish stays `null` and the app renders `—`.
  */
-import { mkdir, readFile, readdir, writeFile, rm } from 'node:fs/promises';
+import { mkdir, readFile, readdir, writeFile, rm, rename, appendFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -212,7 +212,9 @@ export function installSystemCa(mode: string, reexec: () => never = reexecWithSy
 }
 
 const REPO_ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const API_ROOT = path.join(REPO_ROOT, 'api', 'globalx');
+let API_ROOT = path.join(REPO_ROOT, 'api', 'globalx');
+/** Test hook: the output directory is fixed for real runs (never a control). */
+export function setApiRootForTests(dir: string): void { API_ROOT = dir; }
 
 export const GLOBALX_SITE = 'https://www.globalxetfs.com';
 export const GLOBALX_LINEUP_URL = 'https://www.globalxetfs.com/explore';
@@ -250,12 +252,26 @@ export function globalxEdgarFilingsUrl(cik: string = GLOBALX_ETF_TRUST_CIK): str
 
 export const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 
+/** `max` or `<N>y`; anything else is rejected instead of silently falling back to the full history. */
+export function parseHistoryRange(raw: string): { years: number | null } {
+  const text = cleanText(raw).toLowerCase() || 'max';
+  if (text === 'max') return { years: null };
+  const match = /^(\d+)y$/.exec(text);
+  if (!match || Number(match[1]) < 1) throw new Error(`HISTORY_RANGE: expected "max" or "<N>y" (N >= 1), received "${raw}"`);
+  return { years: Number(match[1]) };
+}
+
+/**
+ * Daily bars for the requested window. Yahoo ignores `range` when `period1=0`,
+ * so a bounded range is an explicit period1/period2 pair.
+ */
 export function yahooChartUrl(ticker: string, range: string = 'max', nowMs: number = Date.now()): string {
   const clean = sanitizeTicker(ticker);
   const period2 = Math.floor(nowMs / 1000);
-  const base = `${YAHOO_CHART_URL}/${encodeURIComponent(clean)}?period1=0&period2=${period2}` +
+  const { years } = parseHistoryRange(range);
+  const period1 = years === null ? 0 : Math.floor(period2 - years * 365.25 * 86_400);
+  return `${YAHOO_CHART_URL}/${encodeURIComponent(clean)}?period1=${period1}&period2=${period2}` +
     '&interval=1d&events=div%7Csplit&includeAdjustedClose=true';
-  return range && range !== 'max' ? `${base}&range=${encodeURIComponent(range)}` : base;
 }
 
 export function yahooChartProvenanceUrl(ticker: string): string {
@@ -343,6 +359,20 @@ export function formatMoneyText(value: number | null): string {
   return value === null ? '—' : `$${value.toFixed(2)}`;
 }
 
+/**
+ * A return over `years` is only meaningful when the fund is at least that old at
+ * the performance date (siAnn needs one year). Unknown dates leave the value as
+ * published.
+ */
+export function horizonValue(value: number | null | undefined, inceptionIso: string, asOfIso: string | null, years: number): number | null {
+  if (value === null || value === undefined) return null;
+  if (!inceptionIso || !asOfIso) return value;
+  const start = Date.parse(`${inceptionIso}T00:00:00Z`);
+  const end = Date.parse(`${asOfIso}T00:00:00Z`);
+  if (!Number.isFinite(start) || !Number.isFinite(end)) return value;
+  return end - start >= years * 365 * 86_400_000 ? value : null;
+}
+
 export function formatPercentText(value: number | null, digits = 2): string {
   return value === null ? '—' : `${value.toFixed(digits)}%`;
 }
@@ -381,7 +411,7 @@ export function formatGlobalXDate(raw: unknown): string {
   const iso = toIsoDate(raw);
   if (!iso) return cleanText(raw);
   const [year, month, day] = iso.split('-');
-  return `${MONTH_SHORT[Number(month) - 1]} ${Number(day)} ${year}`;
+  return `${MONTH_SHORT[Number(month) - 1]} ${day.padStart(2, '0')} ${year}`;
 }
 
 /** Chronological comparator for the display dates this feed publishes (`Aug 29 2022`). */
@@ -557,9 +587,13 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     maxRetries: parsePositiveInt(envValue(env, 'MAX_RETRIES'), 3),
     tickers: envValue(env, 'TICKERS')
       .split(/[\s,;]+/)
-      .map(sanitizeTicker)
-      .filter(Boolean),
-    historyRange: envValue(env, 'HISTORY_RANGE') || 'max',
+      .filter(Boolean)
+      .map((token) => {
+        const ticker = sanitizeTicker(token);
+        if (!/^[A-Z]{1,6}$/.test(ticker)) throw new Error(`TICKERS: "${token}" is not a ticker`);
+        return ticker;
+      }),
+    historyRange: (parseHistoryRange(envValue(env, 'HISTORY_RANGE')), (envValue(env, 'HISTORY_RANGE') || 'max').toLowerCase()),
     category: cleanText(envValue(env, 'CATEGORY')),
     secUa: envValue(env, 'SEC_UA') || SEC_UA_DEFAULT,
     skipYahoo: parseBoolean(envValue(env, 'SKIP_YAHOO')),
@@ -614,7 +648,8 @@ export function resolveControls(
   apply(inputs, true);
   for (const key of CONTROL_NAMES) {
     const alias = CONTROL_ALIASES[key];
-    const value = env[key] ?? (alias ? env[alias] : undefined);
+    // GLOBALX_<NAME> beats <NAME>, which beats the legacy alias; an explicitly empty value wins like any other.
+    const value = env[`GLOBALX_${key}`] ?? env[key] ?? (alias ? env[alias] : undefined);
     if (value !== undefined) apply({ [key]: value });
   }
   for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
@@ -632,6 +667,7 @@ export function resolveControls(
   for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GLOBALX', 'VERBOSE']) {
     if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
   }
+  parseHistoryRange(result.HISTORY_RANGE ?? 'max');
   readConfig(result); // validate every min:max filter before any request or write
   return result;
 }
@@ -659,7 +695,8 @@ Controls (all optional):
   REQUEST_SLEEP        2     Minimum seconds between request starts.
                              globalxetfs.com throttles bursts with an SSL reset,
                              so keep this at 2s or more.
-  CONCURRENCY          2     Parallel fund workers (starts stay globally paced).
+  CONCURRENCY          2     Parallel fund workers; every worker has its own paced request lane
+                             (REQUEST_SLEEP apart), so CONCURRENCY multiplies throughput.
   MAX_RETRIES          3     Retries (integer >= 1) for network errors and 408/425/429/5xx.
   TICKERS              ""    Space/comma separated tickers. ANDed with the other
                              filters, never overriding them.
@@ -674,8 +711,9 @@ Controls (all optional):
   HOLDINGS_PAGE_SIZE   250   Rows per holdings page file.
   HISTORY_PAGE_SIZE    1000  Rows per history page file (alias
                              HISTORICAL_PAGE_SIZE).
-  HISTORY_RANGE        max   Yahoo chart range used for daily history
-                             ("max", "10y", "5y", ...).
+  HISTORY_RANGE        max   Yahoo daily history window: "max" or "<N>y" (N years,
+                             sent as an explicit period1/period2). Anything else
+                             is an error.
   CATEGORY             ""    Keep only this Global X THEME / SUB_THEME category.
   STORE_RAW_DOWNLOADS  0     1|true|yes|y|on writes api/globalx/raw/**.
   SEC_UA               "daggerok ETF feed daggerok@gmail.com"
@@ -726,29 +764,42 @@ function errorMessage(error: unknown): string {
 }
 
 const RETRY_STATUS = new Set([408, 425, 429, 500, 502, 503, 504]);
+/** One attempt (headers AND body) may take this long before it is aborted and retried. */
+let REQUEST_TIMEOUT_MS = 45_000;
+let RETRY_BASE_MS = 1500;
+export function setFetchTuningForTests(timeoutMs: number, retryBaseMs: number): void { REQUEST_TIMEOUT_MS = timeoutMs; RETRY_BASE_MS = retryBaseMs; }
 
-export async function fetchWithRetry(
+class NonRetryableError extends Error {}
+
+/**
+ * Every attempt is bounded by AbortSignal.timeout, which also covers reading
+ * the body (`read` runs inside the attempt), and is retried per MAX_RETRIES.
+ * 403 is retried (the WAF answers it while throttling); other 4xx are final.
+ */
+export async function fetchWithRetry<T = Response>(
   url: string,
   headers: Record<string, string>,
   config: UpdaterConfig,
   label: string = url,
-): Promise<Response> {
+  read: (response: Response) => Promise<T> = async (response) => response as unknown as T,
+): Promise<T> {
   let lastError: unknown = null;
   for (let attempt = 0; attempt <= config.maxRetries; attempt += 1) {
     await paceRequests(config);
     try {
-      const response = await fetch(url, { headers, redirect: 'follow' });
-      if (response.ok) return response;
+      const response = await fetch(url, { headers, redirect: 'follow', signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
+      if (response.ok) return await read(response);
       // globalxetfs.com answers 403 from its WAF while throttling, and the CSV
       // endpoint answers 200 with an HTML error page when the ticker is unknown.
       if (!RETRY_STATUS.has(response.status) && response.status !== 403) {
-        throw new Error(`${label}: HTTP ${response.status}`);
+        throw new NonRetryableError(`${label}: HTTP ${response.status}`);
       }
       lastError = new Error(`${label}: HTTP ${response.status}`);
     } catch (error) {
+      if (error instanceof NonRetryableError) throw error;
       lastError = error;
     }
-    if (attempt < config.maxRetries) await sleep(1500 * (attempt + 1));
+    if (attempt < config.maxRetries) await sleep(RETRY_BASE_MS * (attempt + 1));
   }
   throw new Error(`${label}: ${errorMessage(lastError)}`);
 }
@@ -775,13 +826,11 @@ function secHeaders(config: UpdaterConfig): Record<string, string> {
 }
 
 async function fetchText(url: string, headers: Record<string, string>, config: UpdaterConfig, label = url): Promise<string> {
-  const response = await fetchWithRetry(url, headers, config, label);
-  return await response.text();
+  return fetchWithRetry(url, headers, config, label, (response) => response.text());
 }
 
 async function fetchBytes(url: string, headers: Record<string, string>, config: UpdaterConfig, label = url): Promise<Uint8Array> {
-  const response = await fetchWithRetry(url, headers, config, label);
-  return new Uint8Array(await response.arrayBuffer());
+  return fetchWithRetry(url, headers, config, label, async (response) => new Uint8Array(await response.arrayBuffer()));
 }
 
 // ---------------------------------------------------------------------------
@@ -984,6 +1033,8 @@ export type LineupFund = {
   secYield: number | null;
   secYieldText: string;
   managementFee: number | null;
+  /** Gross expense ratio when the lineup prints one next to the net figure. */
+  grossExpense?: number | null;
   managementFeeText: string;
   netAssets: number | null;
   netAssetsText: string;
@@ -1048,6 +1099,7 @@ export function parseGlobalXLineup(html: string): LineupFund[] {
       secYield: null,
       secYieldText: '',
       managementFee: fee,
+      grossExpense: gross,
       managementFeeText: fee === null ? '' : formatPercentText(fee),
       netAssets: numberOrNull(data?.net_assets),
       netAssetsText: data?.net_assets == null ? '' : formatAumDisplay(Number(data.net_assets)),
@@ -1217,6 +1269,16 @@ export function parseGlobalXFundDetails(html: string): GlobalXFundDetails {
   }
   return result;
 }
+/**
+ * Global X prints a 0 distribution rate for funds that have not paid anything
+ * yet (monthly bond funds with a 4-6% SEC yield included), so a zero rate is
+ * "no usable rate", not a measured 0.00%: it is published as null.
+ */
+export function positiveYieldOrNull(value: unknown): number | null {
+  const n = numberOrNull(value);
+  return n !== null && n > 0 ? n : null;
+}
+
 export type GlobalXDistributionInfo = {
   asOfDate: string;
   frequency: string | null;
@@ -1245,7 +1307,7 @@ export function parseGlobalXDistributionInfo(html: string): GlobalXDistributionI
   const asOf = rscDate(details?.AS_OF_DATE);
   if (!details && !frequency) return null;
   const sec = numberOrNull(details?.YIELD_SEC_30);
-  const rate = numberOrNull(details?.DIV_YIELD);
+  const rate = positiveYieldOrNull(details?.DIV_YIELD);
   return {
     asOfDate: asOf,
     frequency,
@@ -1283,11 +1345,17 @@ export const GLOBALX_DISTRIBUTION_HEADERS = [
  * `<div id="dc-year-<YYYY>">` blocks, newest first, and a declared-but-unpaid
  * month ships an empty Amount cell — kept verbatim so the table mirrors the page.
  */
-export function parseGlobalXDistributionHistory(html: string): GlobalXDistributionRow[] {
+export function parseGlobalXDistributionHistory(html: string, now: Date = new Date()): GlobalXDistributionRow[] {
   const flight = extractNextFlightText(html);
   const history = findRscObjectAfterKey(flight, 'DISTRIBUTION_HISTORY');
   if (!Array.isArray(history)) return [];
-  return history.map((item) => {
+  const today = now.toISOString().slice(0, 10);
+  // The page lists the forward schedule with an empty amount (a scheduled date,
+  // not a paid distribution); those placeholder rows are not history.
+  return history.filter((item) => {
+    const row = item as Record<string, unknown>;
+    return !(row.amount == null && cleanText(row.ex_date) > today);
+  }).map((item) => {
     const row = item as Record<string, unknown>;
     return {
       'Declaration Date': '',
@@ -1341,7 +1409,7 @@ export function parseGlobalXPerformanceSection(html: string, sectionId: string):
   return {
     asOfDate: rscDate(performance[periodKey === 'quarter_end' ? 'quarter_end_date' : 'month_end_date']),
     nav: {
-      yr1: pct(annual.ONE_YEAR), yr3: pct(annual.THREE_YEAR), yr5: pct(annual.FIVE_YEAR),
+      yr1: pct(annual.ONE_YEAR), yr3: pct(annual.THREE_YEAR), yr5: pct(annual.FIVE_YEAR), yr10: pct(annual.TEN_YEAR),
       sinceInception: pct(annual.SINCE_INCEPTION),
       mo1: pct(cumulative.ONE_MONTH), mo3: pct(cumulative.THREE_MONTH), ytd: pct(cumulative.YTD),
       sinceInceptionCumulative: pct(cumulative.SINCE_INCEPTION),
@@ -1654,7 +1722,7 @@ export function paymentsPerYear(frequency: string | null | undefined): number | 
   if (!text) return null;
   if (text === 'monthly') return 12;
   if (text === 'quarterly') return 4;
-  if (text === 'semi-annually' || text === 'semiannually' || text === 'semi-annual' || text === 'semiannual') return 6;
+  if (text === 'semi-annually' || text === 'semiannually' || text === 'semi-annual' || text === 'semiannual') return 2;
   if (text === 'annually' || text === 'annual') return 1;
   if (text === 'weekly') return 52;
   if (text === 'bi-monthly') return 6;
@@ -1718,7 +1786,10 @@ export async function writeIfChanged(file: string, content: string): Promise<'wr
     if (current === content) return 'unchanged';
   }
   await mkdir(path.dirname(file), { recursive: true });
-  await writeFile(file, content, 'utf8');
+  // Temp file + rename: a crash never leaves a half-written JSON file behind.
+  const temp = `${file}.tmp-${process.pid}`;
+  await writeFile(temp, content, 'utf8');
+  await rename(temp, file);
   return 'written';
 }
 
@@ -1745,9 +1816,8 @@ function matchesRange(value: number | null, range: Range | undefined): boolean {
 }
 
 /**
- * AND filter. A young fund missing a requested 3Y/5Y/10Y metric PASSES the
- * filter (there is nothing to compare), while a fund missing AUM or TER under an
- * active filter FAILS it.
+ * Pre-fetch AND filter on what the lineup prints (ticker, category, AUM, TER).
+ * A fund missing AUM or TER under an active filter FAILS it.
  */
 function passesFilters(fund: LineupFund, config: UpdaterConfig): boolean {
   if (config.tickers.length && !config.tickers.includes(fund.ticker)) return false;
@@ -1760,47 +1830,34 @@ function passesFilters(fund: LineupFund, config: UpdaterConfig): boolean {
     if (fund.managementFee === null) return false;
     if (!matchesRange(fund.managementFee, config.terRange)) return false;
   }
-  if (config.dividendYieldRange) {
-    if (fund.distributionRate === null) return false;
-    if (!matchesRange(fund.distributionRate, config.dividendYieldRange)) return false;
-  }
-  if (config.secYieldRange) {
-    if (fund.secYield === null) return false;
-    if (!matchesRange(fund.secYield, config.secYieldRange)) return false;
-  }
   return true;
 }
 
-function passesReturnFilters(entry: CatalogEntry, config: UpdaterConfig): boolean {
-  const monthEnd = ((entry.returns as any)?.monthEnd || {}) as Record<string, number | null>;
-  const metrics = (entry.metrics || {}) as Record<string, number | null>;
+/**
+ * Filters that need the fund page (yields and returns), evaluated on the
+ * computed metrics BEFORE anything is written. A fund with no figure for a
+ * bounded range is excluded: there is nothing to compare, so it cannot match.
+ */
+export function passesDataFilters(metrics: Record<string, any>, monthEnd: Record<string, number | null | undefined>, config: UpdaterConfig): boolean {
+  if (config.dividendYieldRange && !matchesRange(metrics.dividendYield ?? null, config.dividendYieldRange)) return false;
+  if (config.secYieldRange && !matchesRange(metrics.secYield ?? null, config.secYieldRange)) return false;
   const published: Record<ReturnPeriod, number | null> = {
     YTD: monthEnd.ytd ?? null,
-    '1Y': metrics.tr1y ?? monthEnd.yr1 ?? null,
-    '3Y': metrics.cagr3y ?? monthEnd.yr3 ?? null,
-    '5Y': metrics.cagr5y ?? monthEnd.yr5 ?? null,
-    '10Y': metrics.cagr10y ?? monthEnd.yr10 ?? null,
+    '1Y': metrics.tr1y ?? null,
+    '3Y': metrics.cagr3y ?? null,
+    '5Y': metrics.cagr5y ?? null,
+    '10Y': metrics.cagr10y ?? null,
+  };
+  const total: Record<ReturnPeriod, number | null> = {
+    YTD: monthEnd.ytd ?? null,
+    '1Y': metrics.tr1y ?? null,
+    '3Y': metrics.tr3y ?? null,
+    '5Y': metrics.tr5y ?? null,
+    '10Y': metrics.tr10y ?? null,
   };
   for (const period of RETURN_PERIODS) {
-    const range = config.performanceRanges[period];
-    if (!range) continue;
-    const value = published[period];
-    if (value === null || value === undefined) continue; // young fund: nothing to filter
-    if (!matchesRange(value, range)) return false;
-  }
-  for (const period of RETURN_PERIODS) {
-    const range = config.totalReturnRanges[period];
-    if (!range) continue;
-    const derived: Record<ReturnPeriod, number | null> = {
-      YTD: monthEnd.ytd ?? null,
-      '1Y': metrics.tr1y ?? null,
-      '3Y': metrics.tr3y ?? null,
-      '5Y': metrics.tr5y ?? null,
-      '10Y': metrics.tr10y ?? null,
-    };
-    const value = derived[period];
-    if (value === null || value === undefined) continue;
-    if (!matchesRange(value, range)) return false;
+    if (config.performanceRanges[period] && !matchesRange(published[period], config.performanceRanges[period])) return false;
+    if (config.totalReturnRanges[period] && !matchesRange(total[period], config.totalReturnRanges[period])) return false;
   }
   return true;
 }
@@ -1845,17 +1902,109 @@ function readNumber(entry: CatalogEntry, key: string): number | null {
   return typeof value === 'number' ? value : null;
 }
 
+const MAX_NPORT_FILINGS_SCANNED = 25;
+
+async function readJsonIfExists(file: string): Promise<any | null> {
+  try { return JSON.parse(await readFile(file, 'utf8')); } catch { return null; }
+}
+
+/** The last published meta.json of a fund, or null. */
+async function readPreviousMeta(ticker: string): Promise<Record<string, any> | null> {
+  return readJsonIfExists(path.join(API_ROOT, 'funds', ticker, 'meta.json'));
+}
+
+/** The previously published history rows (all pages), or null when none were published. */
+async function readPreviousHistory(ticker: string, meta: Record<string, any> | null): Promise<Array<Record<string, string>> | null> {
+  const pages: unknown = meta?.history?.pages;
+  if (!Array.isArray(pages) || !pages.length) return null;
+  const rows: Array<Record<string, string>> = [];
+  for (const page of pages) {
+    const envelope = await readJsonIfExists(path.join(API_ROOT, 'funds', ticker, String(page)));
+    if (!envelope || !Array.isArray(envelope.rows)) return null;
+    rows.push(...envelope.rows);
+  }
+  return rows;
+}
+
+/** `Global X Silver Miners ETF` (N-PORT series name) vs `Silver Miners ETF` (catalog name). */
+export function sameSeries(seriesName: string | null | undefined, fundName: string): boolean {
+  const norm = (value: string) => cleanText(value).toLowerCase().replace(/^global x\s+/, '').replace(/[^a-z0-9]+/g, '');
+  const a = norm(String(seriesName ?? ''));
+  const b = norm(fundName);
+  return a.length > 3 && b.length > 3 && (a === b || a.includes(b) || b.includes(a));
+}
+
+async function writeHistoryPages(fundDir: string, ticker: string, historyRows: Array<Record<string, string>>, config: UpdaterConfig, manifest: { pages: string[] }): Promise<boolean> {
+  let changed = false;
+  const historyPages = splitPages(historyRows, config.historyPageSize);
+  for (let index = 0; index < historyPages.length; index += 1) {
+    const file = path.join(fundDir, 'history', pageFileName(index + 1));
+    const envelope = {
+      ticker,
+      page: index + 1,
+      pageSize: config.historyPageSize,
+      totalRows: historyRows.length,
+      headers: [...HISTORY_HEADERS],
+      rows: historyPages[index],
+    };
+    if (await writeIfChanged(file, stableStringify(envelope)) === 'written') changed = true;
+    manifest.pages.push(`./history/${pageFileName(index + 1)}`);
+  }
+  return changed;
+}
+
+function yahooHistoryRows(parsed: ReturnType<typeof parseYahooChart>): Array<Record<string, string>> {
+  return parsed.history.map((row) => ({
+    Date: row.date,
+    Close: row.close === null ? '' : row.close.toFixed(2),
+    'Adj Close': row.adjClose === null ? '' : row.adjClose.toFixed(2),
+    Volume: row.volume === null ? '' : String(row.volume),
+  }));
+}
+
+/**
+ * SKIP_GLOBALX keeps every published figure and only refreshes the Yahoo
+ * history (a fund is never rewritten from an empty page).
+ */
+async function updateHistoryOnly(fund: LineupFund, previousEntry: CatalogEntry | undefined, config: UpdaterConfig, stats: RunStats): Promise<CatalogEntry> {
+  const ticker = fund.ticker;
+  const previousMeta = await readPreviousMeta(ticker);
+  if (!previousEntry || !previousMeta) throw new Error(`${ticker}: SKIP_GLOBALX needs previously published data`);
+  if (config.skipYahoo) { stats.unchanged += 1; return previousEntry; }
+  const url = yahooChartUrl(ticker, config.historyRange);
+  const json = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`, (response) => response.json());
+  const rows = yahooHistoryRows(parseYahooChart(json));
+  if (!rows.length) throw new Error(`${ticker}: Yahoo returned no bars`);
+  const fundDir = path.join(API_ROOT, 'funds', ticker);
+  const manifest = {
+    ...previousMeta.history,
+    pages: [] as string[],
+    pageSize: config.historyPageSize,
+    totalRows: rows.length,
+    asOfDate: formatGlobalXDate(rows[0].Date),
+    asOf: rows[0].Date,
+  };
+  let changed = await writeHistoryPages(fundDir, ticker, rows, config, manifest);
+  if (await writeIfChanged(path.join(fundDir, 'meta.json'), stableStringify({ ...previousMeta, history: manifest })) === 'written') changed = true;
+  await prunePages(path.join(fundDir, 'history'), manifest.pages.length);
+  if (changed) stats.updated += 1; else stats.unchanged += 1;
+  return { ...previousEntry, history: rows.length };
+}
+
 async function updateFund(
   fund: LineupFund,
   config: UpdaterConfig,
   stats: RunStats,
-): Promise<CatalogEntry> {
+  previousEntry?: CatalogEntry,
+): Promise<CatalogEntry | null> {
   const ticker = fund.ticker;
+  if (config.skipGlobalX) return updateHistoryOnly(fund, previousEntry, config, stats);
   const fundDir = path.join(API_ROOT, 'funds', ticker);
   let changed = false;
+  const previousMeta = await readPreviousMeta(ticker);
 
   let pageHtml = '';
-  if (!config.skipGlobalX) {
+  {
     pageHtml = await fetchText(globalxFundPageUrl(ticker), browserHeaders(), config, `${ticker} fund page`);
     if (config.storeRawDownloads) {
       await writeIfChanged(path.join(API_ROOT, 'raw', `${ticker}-fund-page.html`), pageHtml);
@@ -1869,6 +2018,10 @@ async function updateFund(
   const quarterly = parseGlobalXPerformanceSection(pageHtml, 'quarterly-performance');
   const navIndex = parseGlobalXNavIndex(pageHtml);
   const documents = parseGlobalXDocuments(pageHtml);
+  // A 200 answer without the fund payload (bot wall, error page) must not overwrite a published fund with nulls.
+  if (details.netAssetValue === null && details.netAssets === null && !monthly) {
+    throw new Error(`${ticker}: the fund page carried no fund details, keeping the published data`);
+  }
 
   // --- holdings (official daily CSV) -------------------------------------
   let holdings = {
@@ -1882,7 +2035,7 @@ async function updateFund(
     source: globalxProvenanceHoldingsUrl(ticker, pageHtml),
     sourceKind: 'official Global X daily full-holdings CSV (assets.globalxetfs.com)',
   };
-  if (!config.skipGlobalX) {
+  {
     try {
       const csv = await fetchText(globalxHoldingsCsvUrl(ticker, pageHtml), browserHeaders(), config, `${ticker} holdings CSV`);
       if (/^\s*</.test(csv)) throw new Error(`${ticker} holdings CSV: received HTML instead of CSV`);
@@ -1897,40 +2050,52 @@ async function updateFund(
       const xml = await fetchText(globalxEdgarFilingsUrl(), secHeaders(config), config, `${ticker} EDGAR`);
       const filings = [...xml.matchAll(/href=["'](\/Archives\/[^"']+primary_doc\.xml)["']/gi)].map((match) => match[1]);
       if (!filings.length) throw new Error(`${ticker}: no N-PORT primary_doc.xml link on the EDGAR page`);
-      const nport = parseNportXml(await fetchText(`https://www.sec.gov${filings[0]}`, secHeaders(config), config, `${ticker} N-PORT`));
+      // The page lists the filings of every series of the trust: take the first one that is this fund's.
+      let chosen: { nport: ReturnType<typeof parseNportXml>; filing: string } | null = null;
+      for (const filing of filings.slice(0, MAX_NPORT_FILINGS_SCANNED)) {
+        const candidate = parseNportXml(await fetchText(`https://www.sec.gov${filing}`, secHeaders(config), config, `${ticker} N-PORT`));
+        if (sameSeries(candidate.seriesName, fund.name)) { chosen = { nport: candidate, filing }; break; }
+      }
+      if (!chosen) throw new Error(`${ticker}: no N-PORT filing of this series among the latest ${Math.min(filings.length, MAX_NPORT_FILINGS_SCANNED)} on the EDGAR page`);
+      const nport = chosen.nport;
+      // The fallback may never replace fresher published holdings.
+      const publishedAsOf = toIsoDate(previousMeta?.holdings?.asOf);
+      if (publishedAsOf && toIsoDate(nport.repPdDate) < publishedAsOf) {
+        throw new Error(`${ticker}: N-PORT report period ${nport.repPdDate} is older than the published holdings (${publishedAsOf}), keeping them`);
+      }
       holdings = {
         ...holdings,
         headers: [...HOLDINGS_HEADERS],
         rows: nportToHoldings(nport.positions, details.netAssets ?? null),
         asOfDate: nport.repPdDate,
         totalRows: nport.positions.length,
-        source: `https://www.sec.gov${filings[0]}`,
+        source: `https://www.sec.gov${chosen.filing}`,
         sourceKind: 'SEC EDGAR Form N-PORT-P (fallback)',
       };
     }
   }
 
   // --- daily history + dividend fallback (Yahoo) -------------------------
+  // A failed or skipped Yahoo read keeps the previously published history.
   let historyRows: Array<Record<string, string>> = [];
   let yahooDividends: YahooDistribution[] = [];
   let yahooExchange: string | null = null;
+  let historyKept = false;
   if (!config.skipYahoo) {
     try {
       const url = yahooChartUrl(ticker, config.historyRange);
-      const response = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`);
-      const json = await response.json();
+      const json = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`, (response) => response.json());
       const parsed = parseYahooChart(json);
       yahooDividends = parsed.dividends;
       yahooExchange = parseYahooExchangeName(json);
-      historyRows = parsed.history.map((row) => ({
-        Date: row.date,
-        Close: row.close === null ? '' : row.close.toFixed(2),
-        'Adj Close': row.adjClose === null ? '' : row.adjClose.toFixed(2),
-        Volume: row.volume === null ? '' : String(row.volume),
-      }));
+      historyRows = yahooHistoryRows(parsed);
     } catch (error) {
-      outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: Yahoo chart unavailable (${errorMessage(error)})`);
+      outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: Yahoo chart unavailable (${errorMessage(error)}), keeping the published history`);
     }
+  }
+  if (!historyRows.length) {
+    const kept = await readPreviousHistory(ticker, previousMeta);
+    if (kept) { historyRows = kept; historyKept = true; }
   }
 
   // --- assemble metrics --------------------------------------------------
@@ -1956,28 +2121,39 @@ async function updateFund(
   const monthEndDate = monthly?.asOfDate || '';
   const quarterEndDate = quarterly?.asOfDate || '';
 
+  const rateValue = positiveYieldOrNull(distributionInfo?.distributionRate ?? fund.distributionRate ?? null);
+  const performanceAsOfIso = toIsoDate(monthEndDate) || null;
+  const grossExpense = fund.grossExpense ?? numberOrNull(details.totalOperatingExpensesText) ?? fund.managementFee ?? null;
+  const inceptionIso = toIsoDate(fund.inceptionDate) || toIsoDate(details.inceptionDate);
+  const forHorizon = (value: number | null | undefined, years: number): number | null => horizonValue(value, inceptionIso, performanceAsOfIso, years);
   const metrics = {
     ytd: monthEndValues.ytd ?? null,
-    tr1y: monthEndValues.yr1 ?? null,
-    tr3y: cumulativeFromAnnualized(monthEndValues.yr3 ?? null, 3),
-    tr5y: cumulativeFromAnnualized(monthEndValues.yr5 ?? null, 5),
-    tr10y: cumulativeFromAnnualized(monthEndValues.yr10 ?? null, 10),
-    cagr3y: monthEndValues.yr3 ?? null,
-    cagr5y: monthEndValues.yr5 ?? null,
-    cagr10y: monthEndValues.yr10 ?? null,
-    siAnn: monthEndValues.sinceInception ?? null,
-    dividendYield: distributionInfo?.distributionRate ?? fund.distributionRate ?? null,
-    dividendYieldText: formatPercentText(distributionInfo?.distributionRate ?? fund.distributionRate ?? null),
-    distributionYield: distributionInfo?.distributionRate ?? fund.distributionRate ?? null,
-    distributionYieldText: formatPercentText(distributionInfo?.distributionRate ?? fund.distributionRate ?? null),
+    tr1y: forHorizon(monthEndValues.yr1, 1),
+    tr3y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr3, 3), 3),
+    tr5y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr5, 5), 5),
+    tr10y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr10, 10), 10),
+    cagr3y: forHorizon(monthEndValues.yr3, 3),
+    cagr5y: forHorizon(monthEndValues.yr5, 5),
+    cagr10y: forHorizon(monthEndValues.yr10, 10),
+    siAnn: forHorizon(monthEndValues.sinceInception, 1),
+    dividendYield: rateValue,
+    dividendYieldText: formatPercentText(rateValue),
+    distributionYield: rateValue,
+    distributionYieldText: formatPercentText(rateValue),
     yield12M: distributionInfo?.trailingRate12M ?? null,
     yield12MText: formatPercentText(distributionInfo?.trailingRate12M ?? null),
     secYield: distributionInfo?.secYield ?? fund.secYield ?? null,
     secYieldText: formatPercentText(distributionInfo?.secYield ?? fund.secYield ?? null),
     returnsBasis: OFFICIAL_RETURNS_BASIS,
     // The month-end date printed on the Global X performance table, not the NAV date.
-    performanceAsOf: toIsoDate(monthEndDate) || null,
+    performanceAsOf: performanceAsOfIso,
   };
+
+  // Yield and return filters decide BEFORE any file is written, so an excluded fund keeps its published state whole.
+  if (!passesDataFilters(metrics, monthEndValues, config)) {
+    stats.skipped += 1;
+    return null;
+  }
 
   const latestDistribution = distributionRows.find((row) => row['Amount ($)'] && !isMissingCell(row['Amount ($)']));
   const exDates = distributionRows.map((row) => row['Ex-Div Date']);
@@ -2000,7 +2176,7 @@ async function updateFund(
     totalRows: historyRows.length,
     asOfDate: historyRows.length ? formatGlobalXDate(historyRows[0].Date) : '',
     asOf: historyRows.length ? historyRows[0].Date : '',
-    source: config.skipYahoo ? '' : yahooChartProvenanceUrl(ticker),
+    source: historyKept ? String(previousMeta?.history?.source || yahooChartProvenanceUrl(ticker)) : (config.skipYahoo ? '' : yahooChartProvenanceUrl(ticker)),
     sourceKind: 'Yahoo Finance public chart API (daily Close / Adj Close / Volume)',
   };
 
@@ -2039,8 +2215,9 @@ async function updateFund(
       benchmarkIndexName: monthly?.benchmarkName || null,
     },
     expenseRatio: {
-      display: details.totalOperatingExpensesText || fund.managementFeeText || null,
-      value: numberOrNull(details.totalOperatingExpensesText) ?? fund.managementFee ?? null,
+      display: fund.managementFeeText || details.totalOperatingExpensesText || null,
+      value: fund.managementFee ?? numberOrNull(details.totalOperatingExpensesText) ?? null,
+      gross: grossExpense,
       managementFeeDisplay: details.managementFeeText || fund.managementFeeText || null,
       managementFeeValue: numberOrNull(details.managementFeeText) ?? fund.managementFee ?? null,
     },
@@ -2188,24 +2365,8 @@ async function updateFund(
     if (await writeIfChanged(file, stableStringify(envelope)) === 'written') changed = true;
     holdingsMeta.pages.push(`./holdings/${pageFileName(index + 1)}`);
   }
-  // Drop stale page files when a fund's row count shrinks.
-  await prunePages(path.join(fundDir, 'holdings'), holdingsPages.length);
 
-  const historyPages = splitPages(historyRows, config.historyPageSize);
-  for (let index = 0; index < historyPages.length; index += 1) {
-    const file = path.join(fundDir, 'history', pageFileName(index + 1));
-    const envelope = {
-      ticker,
-      page: index + 1,
-      pageSize: config.historyPageSize,
-      totalRows: historyRows.length,
-      headers: [...HISTORY_HEADERS],
-      rows: historyPages[index],
-    };
-    if (await writeIfChanged(file, stableStringify(envelope)) === 'written') changed = true;
-    historyMeta.pages.push(`./history/${pageFileName(index + 1)}`);
-  }
-  await prunePages(path.join(fundDir, 'history'), historyPages.length);
+  if (await writeHistoryPages(fundDir, ticker, historyRows, config, historyMeta)) changed = true;
 
   // --- catalog entry -----------------------------------------------------
   // The catalog row is built first: `meta.json` mirrors it (the sibling feeds
@@ -2226,10 +2387,12 @@ async function updateFund(
     dataFile: `./funds/${ticker}/meta.json`,
     cusip: details.cusip || null,
     isin: details.isin || null,
-    ter: details.totalOperatingExpensesText || fund.managementFeeText || '—',
-    terValue: numberOrNull(details.totalOperatingExpensesText) ?? fund.managementFee ?? null,
-    terGross: details.managementFeeText || fund.managementFeeText || null,
-    terGrossValue: numberOrNull(details.managementFeeText) ?? fund.managementFee ?? null,
+    ter: fund.managementFeeText || details.totalOperatingExpensesText || '—',
+    // terValue is the NET ratio (the lineup prints NET_EXP after waivers, GROSS_EXP otherwise);
+    // terGrossValue is the published GROSS ratio, never a copy of the net one.
+    terValue: fund.managementFee ?? numberOrNull(details.totalOperatingExpensesText) ?? null,
+    terGross: grossExpense === null ? null : formatPercentText(grossExpense),
+    terGrossValue: grossExpense,
     nav: formatMoneyText(navValue),
     navValue,
     aum: netAssets === null ? '—' : formatAumDisplay(netAssets),
@@ -2319,6 +2482,9 @@ async function updateFund(
     history: historyMeta,
   };
   if (await writeIfChanged(path.join(fundDir, 'meta.json'), stableStringify(metaWithCatalog)) === 'written') changed = true;
+  // Stale pages go only after the new meta.json (which lists the live pages) is in place.
+  await prunePages(path.join(fundDir, 'holdings'), holdingsPages.length);
+  await prunePages(path.join(fundDir, 'history'), historyMeta.pages.length);
 
   if (changed) stats.updated += 1; else stats.unchanged += 1;
 
@@ -2330,7 +2496,7 @@ function inferPaymentsFromRows(exDates: string[]): number | null {
   const code = inferDistributionFrequency(exDates);
   if (code === '01 - Monthly') return 12;
   if (code === '04 - Quarterly') return 4;
-  if (code === '06 - Semi-annually') return 6;
+  if (code === '06 - Semi-annually') return 2;
   if (code === '12 - Annually') return 1;
   return null;
 }
@@ -2356,11 +2522,34 @@ async function readCursor(): Promise<string | null> {
   }
 }
 
-// ---------------------------------------------------------------------------
-// Entry point
-// ---------------------------------------------------------------------------
+/** The run stops taking new funds after this long and still writes the index (the workflow allows 30 minutes). */
+export const SOFT_DEADLINE_MS = 25 * 60 * 1000;
 
-export async function main(env: Record<string, string | undefined> = process.env): Promise<void> {
+const isoNow = (): string => new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+
+/** Index row for a lineup fund that has no published data yet: no meta.json, so dataFile is null. */
+function placeholderRow(fund: LineupFund): CatalogEntry {
+  return {
+    ticker: fund.ticker,
+    name: fund.name,
+    category: fund.category,
+    fundPage: fund.fundPage,
+    dataFile: null,
+    holdings: 0,
+    history: 0,
+    metrics: withMetricsContract({}).metrics,
+  };
+}
+
+/** `dataFile` points at a file that exists, or is null. */
+function withDataFile<T extends CatalogEntry>(entry: T): T {
+  const exists = existsSync(path.join(API_ROOT, 'funds', entry.ticker, 'meta.json'));
+  return { ...entry, dataFile: exists ? `./funds/${entry.ticker}/meta.json` : null };
+}
+
+export type MainOptions = { apiRoot?: string; deadlineMs?: number };
+
+export async function main(env: Record<string, string | undefined> = process.env, options: MainOptions = {}): Promise<void> {
   if (process.argv.slice(2).some((arg) => arg === '-h' || arg === '--help')) {
     console.log(USAGE);
     return;
@@ -2369,6 +2558,9 @@ export async function main(env: Record<string, string | undefined> = process.env
   installSystemCa(controls.USE_SYSTEM_CA ?? 'auto');
   if (controls.VERBOSE !== undefined && env === process.env) process.env.VERBOSE = controls.VERBOSE;
   const config = readConfig(controls);
+  if (options.apiRoot) setApiRootForTests(options.apiRoot);
+  const startedAt = Date.now();
+  const deadlineAt = startedAt + (options.deadlineMs ?? SOFT_DEADLINE_MS);
   outputPrintConfig('Global X', config);
   const stats: RunStats = { updated: 0, unchanged: 0, skipped: 0, failed: 0 };
 
@@ -2376,15 +2568,14 @@ export async function main(env: Record<string, string | undefined> = process.env
   // declared distribution frequency and the headline figures.
   let lineup: LineupFund[] = [];
   const indexFile = path.join(API_ROOT, 'index.json');
-  let previous: Record<string, CatalogEntry> = {};
-  let previousGeneratedAt = '';
+  const previous: Record<string, CatalogEntry> = {};
+  let previousIndex: Record<string, any> | null = null;
   if (existsSync(indexFile)) {
     try {
-      const parsed = JSON.parse(await readFile(indexFile, 'utf8'));
-      previousGeneratedAt = String(parsed.generatedAt || '');
-      for (const fund of parsed.funds || []) previous[fund.ticker] = fund;
+      previousIndex = JSON.parse(await readFile(indexFile, 'utf8'));
+      for (const fund of previousIndex?.funds || []) previous[fund.ticker] = fund;
     } catch {
-      previous = {};
+      previousIndex = null;
     }
   }
 
@@ -2400,11 +2591,12 @@ export async function main(env: Record<string, string | undefined> = process.env
       category: String(entry.category || ''),
       categoryClass: '',
       frequency: String((entry as any).distributions?.frequency || ''),
-      distributionRate: readNumber(entry, 'dividendYield'),
+      distributionRate: readNumber((entry.metrics || {}) as CatalogEntry, 'dividendYield'),
       distributionRateText: '',
       secYield: null,
       secYieldText: '',
       managementFee: readNumber(entry, 'terValue'),
+      grossExpense: readNumber(entry, 'terGrossValue'),
       managementFeeText: String(entry.ter || ''),
       netAssets: readNumber(entry, 'aumValue'),
       netAssetsText: String(entry.aum || ''),
@@ -2413,89 +2605,82 @@ export async function main(env: Record<string, string | undefined> = process.env
     }));
   }
 
-  const filtered = lineup.filter((fund) => passesFilters(fund, config));
-  let candidates = filtered;
-  if (config.maxFetches > 0) {
-    const cursor = await readCursor();
-    if (cursor) {
-      const at = filtered.findIndex((fund) => fund.ticker === cursor);
-      candidates = at >= 0 ? filtered.slice(at + 1) : filtered;
-    }
-    candidates = candidates.slice(0, config.maxFetches);
+  // Strict: a requested ticker the provider does not list is an error, never a silently empty run.
+  if (config.tickers.length) {
+    const known = new Set(lineup.map((fund) => fund.ticker));
+    const missing = config.tickers.filter((ticker) => !known.has(ticker));
+    if (missing.length) throw new Error(`TICKERS: not in the Global X lineup: ${missing.join(', ')}`);
   }
+
+  const newFunds = previousIndex ? lineup.filter((fund) => !previous[fund.ticker]).map((fund) => fund.ticker) : [];
+  if (newFunds.length) {
+    console.log(`NEW FUNDS: ${newFunds.join(', ')}`);
+    if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### Global X data update\n\nNEW FUNDS: ${newFunds.join(', ')}\n`, 'utf8');
+  }
+
+  // MAX_FETCHES batches walk the filtered set in lineup order from the saved cursor and wrap around.
+  // A TICKERS run is an explicit selection: it never reads, moves or deletes the cursor.
+  const filtered = lineup.filter((fund) => passesFilters(fund, config));
+  const useCursor = config.tickers.length === 0;
+  // A cursor left by an interrupted (deadline) run resumes there; a finished pass clears it.
+  const cursor = useCursor ? await readCursor() : null;
+  const cursorAt = cursor ? filtered.findIndex((fund) => fund.ticker === cursor) : -1;
+  const ordered = cursorAt >= 0 ? filtered.slice(cursorAt + 1).concat(filtered.slice(0, cursorAt + 1)) : filtered;
+  const candidates = config.maxFetches > 0 ? ordered.slice(0, config.maxFetches) : ordered;
+  if (cursor && cursorAt < 0) console.log(`Cursor ${cursor} is not in the filtered set; starting from the top.`);
+  else if (cursor) console.log(`Resuming after cursor ${cursor}.`);
 
   outputPrintFilter(candidates.length, lineup.length, outputHasOutputFilters(config));
   const output = outputCreateReporter(API_ROOT, candidates.length);
-  if (config.maxFetches > 0) {
-    const cursor = await readCursor();
-    if (cursor) console.log(`Resuming after cursor ${cursor}.`);
-  }
 
   const byTicker = new Map<string, CatalogEntry>();
   const queue = candidates.slice();
-  const total = candidates.length;
-  let processed = 0;
+  const attempted: string[] = [];
   const laneCount = Math.max(1, config.concurrency);
   lastRequestAtLanes = new Array(laneCount).fill(0);
-    const workers = Array.from({ length: laneCount }, async () => {
+  let deadlineHit = false;
+  const workers = Array.from({ length: laneCount }, async () => {
     for (;;) {
+      if (Date.now() > deadlineAt) { deadlineHit = true; return; }
       const fund = queue.shift();
       if (!fund) return;
+      attempted.push(fund.ticker);
       const before = await output.before(fund.ticker);
       try {
-        const entry = await updateFund(fund, config, stats);
-        if (!passesReturnFilters(entry, config)) {
-          stats.skipped += 1;
-          processed += 1;
-          await output.result(fund.ticker, before, 'skipped', 'return filter');
+        const entry = await updateFund(fund, config, stats, previous[fund.ticker]);
+        if (!entry) {
+          await output.result(fund.ticker, before, 'skipped', 'yield/return filter');
           continue;
         }
         byTicker.set(fund.ticker, entry);
-        processed += 1;
         await output.result(fund.ticker, before);
       } catch (error) {
-        processed += 1;
         stats.failed += 1;
         await output.result(fund.ticker, before, 'failed', errorMessage(error));
       }
     }
   });
   await Promise.all(workers);
+  if (deadlineHit) console.log(`Soft deadline reached after ${Math.round((Date.now() - startedAt) / 1000)}s: ${queue.length} fund(s) left for the next run.`);
 
-  // Previously published entries are preserved so a bounded or failed run can
-  // never empty the site.
-  for (const fund of lineup) {
-    if (!previous[fund.ticker]) {
-      previous[fund.ticker] = {
-        ticker: fund.ticker,
-        name: fund.name,
-        category: fund.category,
-        fundPage: fund.fundPage,
-        dataFile: `./funds/${fund.ticker}/meta.json`,
-        holdings: 0,
-        history: 0,
-        metrics: withMetricsContract({}).metrics,
-      };
-    }
-  }
-  for (const [ticker, entry] of byTicker) previous[ticker] = entry;
-
-  const funds = Object.values(previous).map((fund) => withMetricsContract(fund)).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
+  // Every published row stays (a bounded, filtered or failed run never drops a fund), fresh rows replace
+  // their old ones, lineup funds without data get a placeholder row (dataFile null).
+  const rows: Record<string, CatalogEntry> = { ...previous };
+  for (const fund of lineup) if (!rows[fund.ticker]) rows[fund.ticker] = placeholderRow(fund);
+  for (const [ticker, entry] of byTicker) rows[ticker] = entry;
+  const funds = Object.values(rows).map((fund) => withMetricsContract(withDataFile(fund))).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
   const counts = {
     funds: funds.length,
     holdings: funds.reduce((sum, fund) => sum + Number(fund.holdings || 0), 0),
     history: funds.reduce((sum, fund) => sum + Number(fund.history || 0), 0),
   };
-  const index = {
-    // Kept from the previous file so an unchanged rerun produces an empty diff;
-    // advanced below only when the serialized bytes actually moved.
-    generatedAt: previousGeneratedAt || new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
+  const body = {
     source: {
       provider: 'Global X Investment Management LLC (Global X ETFs)',
       market: 'us',
       site: GLOBALX_SITE,
       catalog: GLOBALX_LINEUP_URL,
-      catalogNote: 'Server-rendered "Explore Our ETFs" table (#explore-etfs → #etf-table); five asset-class groups.',
+      catalogNote: 'Server-rendered "Explore Our ETFs" table (#explore-etfs -> #etf-table); five asset-class groups.',
       fundPages: `${GLOBALX_SITE}/funds/<ticker>/`,
       holdings: 'https://assets.globalxetfs.com/funds/holdings/<ticker>_full-holdings_<YYYYMMDD>.csv',
       holdingsNote: 'Official dated daily full-holdings CSV linked by the fund page.',
@@ -2508,29 +2693,29 @@ export async function main(env: Record<string, string | undefined> = process.env
     counts,
     funds,
   };
-  const serialized = stableStringify(index);
-  const indexResult = await writeIfChanged(indexFile, serialized);
-  if (indexResult === 'written' && previousGeneratedAt) {
-    await writeFile(
-      indexFile,
-      stableStringify({ ...index, generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z') }),
-      'utf8',
-    );
-  }
+  // generatedAt moves only when content moved: an identical rerun is a zero-byte diff.
+  const unchanged = previousIndex !== null && stableStringify({ source: previousIndex.source, counts: previousIndex.counts, funds: previousIndex.funds }) === stableStringify(body);
+  if (!unchanged) await writeIfChanged(indexFile, stableStringify({ generatedAt: isoNow(), ...body }));
 
-  if (config.maxFetches > 0 && candidates.length) {
-    await writeIfChanged(
-      path.join(API_ROOT, 'update-state.json'),
-      stableStringify({ cursor: candidates[candidates.length - 1].ticker, savedAt: new Date().toISOString() }),
-    );
-  } else if (config.maxFetches === 0 && existsSync(path.join(API_ROOT, 'update-state.json'))) {
-    await rm(path.join(API_ROOT, 'update-state.json'));
+  // Cursor bookkeeping: only a MAX_FETCHES run of the whole filter set moves it.
+  const stateFile = path.join(API_ROOT, 'update-state.json');
+  if (useCursor) {
+    const reachedEnd = attempted.length >= ordered.length;
+    const nextCursor = config.maxFetches > 0 && attempted.length && !reachedEnd ? attempted[attempted.length - 1] : null;
+    if (nextCursor === null) {
+      if (existsSync(stateFile)) await rm(stateFile);
+    } else if (nextCursor !== cursor) {
+      await writeIfChanged(stateFile, stableStringify({ cursor: nextCursor, savedAt: isoNow() }));
+    }
   }
 
   console.log(
     `Done. updated=${stats.updated} unchanged=${stats.unchanged} skipped=${stats.skipped} failed=${stats.failed} · ` +
       `funds=${counts.funds} holdings=${counts.holdings} history=${counts.history}`,
   );
+  if (attempted.length > 0 && stats.failed === attempted.length) {
+    throw new Error(`every selected fund failed (${stats.failed} of ${attempted.length})`);
+  }
 }
 
 if (import.meta.main) {

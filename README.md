@@ -50,7 +50,7 @@ The CSV is parsed with a dependency-free RFC-4180 reader that tolerates the BOM,
 
 #### Return arithmetic
 
-The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 years plus since inception, and cumulative monthly/quarterly readings. The feed keeps both readings and does not extrapolate a missing tenor; unavailable values remain `null` and the app renders `—`.
+The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 years (`TEN_YEAR`) plus since inception, and cumulative monthly/quarterly readings. The feed keeps both readings and does not extrapolate a missing tenor; unavailable values remain `null` and the app renders `—`. A horizon longer than the fund's age at the performance date is `null`, and `siAnn` needs at least one year of history.
 
 #### Returns provenance fields
 
@@ -59,7 +59,18 @@ Every `funds[].metrics` object in `api/globalx/index.json` (and in each `meta.js
 - `returnsBasis` - non-empty text saying how the returns were computed. Global X returns are the official NAV total returns from the fund page `NAV Performance` table (monthly series), so the label is `official Global X fund page NAV Performance (monthly series)`. A fund with no published performance yet carries an explicit `none: ...` label with every return `null`, never an empty string or `-`
 - `performanceAsOf` - ISO `YYYY-MM-DD` month-end date of that performance table (for example `2026-08-31`). It is not the NAV date (`asOfDate`), which is newer. `null` only when the table date is unknown
 
-Unavailable numeric values are `null`, never `0`.
+Unavailable numeric values are `null`, never `0`. Global X prints a distribution rate of 0 for funds that have not paid anything yet (including monthly bond funds with a positive SEC yield), so `dividendYield` and `distributionYield` publish `null` instead of 0; the 30-day SEC yield is published as the provider prints it.
+
+#### Publishing rules
+
+- Each fund is computed completely in memory and published as a whole: page files first, then `meta.json`, then the index row, and stale pages are removed only after the new `meta.json` is written. A fund page without fund details, or any other failure, keeps the previously published state of that fund
+- A failed or skipped Yahoo read keeps the published history instead of publishing an empty one; the EDGAR fallback only accepts a filing of the same series and never replaces fresher holdings
+- JSON is written through a temp file and a rename. `generatedAt` and `update-state.json` move only when content moved, so a rerun with identical upstream data is a zero-byte diff
+- A row without `funds/<T>/meta.json` has `dataFile: null` and a full `metrics` object (all numbers `null`, non-empty `returnsBasis`)
+- `terValue` is the net expense ratio (the lineup `NET_EXP`, else `GROSS_EXP`), `terGrossValue` is the published gross ratio (`GROSS_EXP`)
+- Scheduled future distribution rows with an empty amount are dropped; a distribution rate of 0 is `null`
+- Funds new in the lineup are printed as `NEW FUNDS: A, B` and appended to the workflow step summary
+- Every request attempt has a 45 second deadline that also covers reading the body; the run stops taking new funds after 25 minutes and still writes the index
 
 #### Known value limitations
 
@@ -76,17 +87,17 @@ Unavailable numeric values are `null`, never `0`.
 
 | Environment variable | Default | Meaning |
 | --- | ---: | --- |
-| `MAX_FETCHES` | `0` | Funds to process; `0` means a full pass. A positive value resumes after the saved cursor in `api/globalx/update-state.json`. |
-| `TICKERS` | `""` | Space/comma-separated ticker allowlist, combined with all other filters. |
+| `MAX_FETCHES` | `0` | Funds to process; `0` means a full pass. A positive value takes the next funds of the filtered set after the saved cursor in `api/globalx/update-state.json` and wraps around at the end. The cursor counts funds that pass the lineup filters (ticker, category, AUM, TER); yield and return filters are evaluated per fund after its page is read. A `TICKERS` run never reads, moves or deletes the cursor. |
+| `TICKERS` | `""` | Space/comma-separated ticker allowlist, combined with all other filters. A ticker the lineup does not list is an error. |
 | `CATEGORY` | `""` | Substring match on the official `THEME / SUB_THEME` category. |
-| `AUM` / `TER` / `DIVIDEND_YIELD` / `SEC_YIELD` | `""` | Strict `min:max` ranges; `AUM` also accepts `nano`, `micro`, `small`, `mid` and `large`. |
-| `PERFORMANCE_YTD` … `PERFORMANCE_10Y` / `TOTAL_RETURN_YTD` … `TOTAL_RETURN_10Y` | `""` | `min:max` filters on official/derived return values. |
+| `AUM` / `TER` / `DIVIDEND_YIELD` / `SEC_YIELD` | `:` | Strict `min:max` ranges; `AUM` also accepts `nano`, `micro`, `small`, `mid` and `large`. `DIVIDEND_YIELD` and `SEC_YIELD` use the fund-page values, so a fund without that figure is excluded. |
+| `PERFORMANCE_YTD` … `PERFORMANCE_10Y` / `TOTAL_RETURN_YTD` … `TOTAL_RETURN_10Y` | `:` | `min:max` filters on official/derived return values; a fund with no value for a bounded range is excluded, and an excluded fund keeps its published files. |
 | `CONCURRENCY` / `REQUEST_SLEEP` | `2` / `2` | Per-worker request lanes and the minimum seconds between request starts within each lane; keep `REQUEST_SLEEP` at 2 or more, globalxetfs.com resets bursts. |
 | `HOLDINGS_PAGE_SIZE` / `HISTORY_PAGE_SIZE` | `250` / `1000` | Rows per generated JSON page. |
 | `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 408/425/429/5xx; integer >= 1. |
-| `HISTORY_RANGE` | `max` | Yahoo chart range (`max`, `10y`, `5y`, …). |
+| `HISTORY_RANGE` | `max` | Yahoo daily history window: `max` or `<N>y`, sent as an explicit `period1`/`period2` (Yahoo ignores `range` when `period1=0`). Any other value is an error. |
 | `EDGAR_FALLBACK` | `false` | Use SEC N-PORT-P if a holdings CSV is unavailable; off by default because EDGAR can reject GitHub-hosted runners. |
-| `SKIP_YAHOO` / `SKIP_GLOBALX` | `false` | Skip the Yahoo stage or the official Global X catalog/fund stages. |
+| `SKIP_YAHOO` / `SKIP_GLOBALX` | `false` | `SKIP_YAHOO` keeps the published history. `SKIP_GLOBALX` keeps every published figure and only refreshes the Yahoo history of already published funds. |
 | `STORE_RAW_DOWNLOADS` | `false` | Keep raw catalog, fund pages and CSV samples under `api/globalx/raw`. |
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | Declared User-Agent for SEC EDGAR, redacted in config logs; the protected `SEC_UA` Actions variable wins in the workflow. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
@@ -94,7 +105,7 @@ Unavailable numeric values are `null`, never `0`.
 
 A bounded or partly failed run preserves previously published files. `TICKERS` combines with AUM/TER/yield/return filters using AND logic; it does not override them.
 
-Config keys, `CONTROL_NAMES`, `--help` and this table are kept in sync by `scripts/update-data.test.ts`. `HISTORICAL_PAGE_SIZE` still works as an environment alias of `HISTORY_PAGE_SIZE`.
+Config keys, `CONTROL_NAMES`, `--help` and this table are kept in sync by `scripts/update-data.test.ts`. `HISTORICAL_PAGE_SIZE` still works as an environment alias of `HISTORY_PAGE_SIZE`, and every control also accepts a `GLOBALX_<NAME>` environment variable that wins over the plain name (an explicitly empty value counts).
 
 ### Examples
 
