@@ -18,6 +18,10 @@ import {
   parseGlobalXLineup,
   parseGlobalXPerformanceSection,
   parseYahooChart,
+  paymentsPerYear,
+  formatGlobalXDate,
+  horizonValue,
+  positiveYieldOrNull,
   readConfig,
   resolveControls,
   runtimeControls,
@@ -444,5 +448,53 @@ describe('metrics contract (returnsBasis, performanceAsOf)', () => {
       '1:{"PERFORMANCE_HISTORY":{"month_end_date":"$D2026-08-31T00:00:00.000Z","avg_annualized":{"month_end":{"fund_nav":{"ONE_YEAR":0.1}}},"cumulative":{"month_end":{"fund_nav":{}}}}}',
     ]);
     expect(parseGlobalXPerformanceSection(html, 'monthly-performance')?.asOfDate).toBe('2026-08-31');
+  });
+});
+
+describe('data contract: tenors, cadence, placeholders, zero yields', () => {
+  test('the NAV series TEN_YEAR value becomes yr10 (annualized, percent)', () => {
+    const html = flightHtml([
+      '1:{"PERFORMANCE_HISTORY":{"month_end_date":"$D2026-08-31T00:00:00.000Z","avg_annualized":{"month_end":{"fund_nav":{"ONE_YEAR":0.22,"TEN_YEAR":0.0836}}},"cumulative":{"month_end":{"fund_nav":{}}}}}',
+    ]);
+    expect(parseGlobalXPerformanceSection(html, 'monthly-performance')?.nav.yr10).toBe(8.36);
+  });
+
+  test('semi-annual pays twice a year', () => {
+    expect(paymentsPerYear('Semi-Annually')).toBe(2);
+    expect(paymentsPerYear('semi-annual')).toBe(2);
+    expect(paymentsPerYear('Quarterly')).toBe(4);
+    expect(paymentsPerYear('Monthly')).toBe(12);
+  });
+
+  test('future scheduled rows without an amount are not distribution history', () => {
+    const html = flightHtml([
+      'p:{"DISTRIBUTION_HISTORY":[{"amount":null,"ex_date":"2026-12-30","record_date":"2026-12-30","payable_date":"2027-01-05"},{"amount":0.1079,"ex_date":"2026-06-29","record_date":"2026-06-29","payable_date":"2026-07-07"}]}',
+    ]);
+    const rows = parseGlobalXDistributionHistory(html, new Date('2026-10-02T00:00:00Z'));
+    expect(rows.map((row) => row['Ex-Div Date'])).toEqual(['2026-06-29']);
+    expect(parseGlobalXDistributionHistory(html, new Date('2027-02-01T00:00:00Z'))).toHaveLength(2);
+  });
+
+  test('a published 0 distribution rate is unavailable (null), a positive one is kept', () => {
+    expect(positiveYieldOrNull(0)).toBeNull();
+    expect(positiveYieldOrNull('0')).toBeNull();
+    expect(positiveYieldOrNull(4.2)).toBe(4.2);
+    const html = (rate: number) => flightHtml([`p:{"ETF_DETAILS":{"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","DIV_YIELD":${rate},"YIELD_SEC_30":4.6}}`, 'q:{"children":"Distribution Frequency"}', 'r:{"children":"Monthly"}']);
+    expect(parseGlobalXDistributionInfo(html(0))?.distributionRate).toBeNull();
+    expect(parseGlobalXDistributionInfo(html(0))?.secYield).toBe(4.6);
+    expect(parseGlobalXDistributionInfo(html(3.1))?.distributionRate).toBe(3.1);
+  });
+
+  test('returns longer than the fund age are null, siAnn needs one year', () => {
+    expect(horizonValue(5, '2026-01-06', '2026-08-31', 1)).toBeNull();
+    expect(horizonValue(5, '2025-08-30', '2026-08-31', 1)).toBe(5);
+    expect(horizonValue(7, '2022-11-21', '2026-08-31', 5)).toBeNull();
+    expect(horizonValue(7, '', '2026-08-31', 5)).toBe(7);
+    expect(horizonValue(null, '2010-01-01', '2026-08-31', 5)).toBeNull();
+  });
+
+  test('display dates are zero padded', () => {
+    expect(formatGlobalXDate('2026-01-06')).toBe('Jan 06 2026');
+    expect(formatGlobalXDate('2026-12-30')).toBe('Dec 30 2026');
   });
 });

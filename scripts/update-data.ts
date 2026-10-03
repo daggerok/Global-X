@@ -343,6 +343,20 @@ export function formatMoneyText(value: number | null): string {
   return value === null ? '—' : `$${value.toFixed(2)}`;
 }
 
+/**
+ * A return over `years` is only meaningful when the fund is at least that old at
+ * the performance date (siAnn needs one year). Unknown dates leave the value as
+ * published.
+ */
+export function horizonValue(value: number | null | undefined, inceptionIso: string, asOfIso: string | null, years: number): number | null {
+  if (value === null || value === undefined) return null;
+  if (!inceptionIso || !asOfIso) return value;
+  const start = Date.parse(`${inceptionIso}T00:00:00Z`);
+  const end = Date.parse(`${asOfIso}T00:00:00Z`);
+  if (!Number.isFinite(start) || !Number.isFinite(end)) return value;
+  return end - start >= years * 365 * 86_400_000 ? value : null;
+}
+
 export function formatPercentText(value: number | null, digits = 2): string {
   return value === null ? '—' : `${value.toFixed(digits)}%`;
 }
@@ -381,7 +395,7 @@ export function formatGlobalXDate(raw: unknown): string {
   const iso = toIsoDate(raw);
   if (!iso) return cleanText(raw);
   const [year, month, day] = iso.split('-');
-  return `${MONTH_SHORT[Number(month) - 1]} ${Number(day)} ${year}`;
+  return `${MONTH_SHORT[Number(month) - 1]} ${day.padStart(2, '0')} ${year}`;
 }
 
 /** Chronological comparator for the display dates this feed publishes (`Aug 29 2022`). */
@@ -1217,6 +1231,16 @@ export function parseGlobalXFundDetails(html: string): GlobalXFundDetails {
   }
   return result;
 }
+/**
+ * Global X prints a 0 distribution rate for funds that have not paid anything
+ * yet (monthly bond funds with a 4-6% SEC yield included), so a zero rate is
+ * "no usable rate", not a measured 0.00%: it is published as null.
+ */
+export function positiveYieldOrNull(value: unknown): number | null {
+  const n = numberOrNull(value);
+  return n !== null && n > 0 ? n : null;
+}
+
 export type GlobalXDistributionInfo = {
   asOfDate: string;
   frequency: string | null;
@@ -1245,7 +1269,7 @@ export function parseGlobalXDistributionInfo(html: string): GlobalXDistributionI
   const asOf = rscDate(details?.AS_OF_DATE);
   if (!details && !frequency) return null;
   const sec = numberOrNull(details?.YIELD_SEC_30);
-  const rate = numberOrNull(details?.DIV_YIELD);
+  const rate = positiveYieldOrNull(details?.DIV_YIELD);
   return {
     asOfDate: asOf,
     frequency,
@@ -1283,11 +1307,17 @@ export const GLOBALX_DISTRIBUTION_HEADERS = [
  * `<div id="dc-year-<YYYY>">` blocks, newest first, and a declared-but-unpaid
  * month ships an empty Amount cell — kept verbatim so the table mirrors the page.
  */
-export function parseGlobalXDistributionHistory(html: string): GlobalXDistributionRow[] {
+export function parseGlobalXDistributionHistory(html: string, now: Date = new Date()): GlobalXDistributionRow[] {
   const flight = extractNextFlightText(html);
   const history = findRscObjectAfterKey(flight, 'DISTRIBUTION_HISTORY');
   if (!Array.isArray(history)) return [];
-  return history.map((item) => {
+  const today = now.toISOString().slice(0, 10);
+  // The page lists the forward schedule with an empty amount (a scheduled date,
+  // not a paid distribution); those placeholder rows are not history.
+  return history.filter((item) => {
+    const row = item as Record<string, unknown>;
+    return !(row.amount == null && cleanText(row.ex_date) > today);
+  }).map((item) => {
     const row = item as Record<string, unknown>;
     return {
       'Declaration Date': '',
@@ -1341,7 +1371,7 @@ export function parseGlobalXPerformanceSection(html: string, sectionId: string):
   return {
     asOfDate: rscDate(performance[periodKey === 'quarter_end' ? 'quarter_end_date' : 'month_end_date']),
     nav: {
-      yr1: pct(annual.ONE_YEAR), yr3: pct(annual.THREE_YEAR), yr5: pct(annual.FIVE_YEAR),
+      yr1: pct(annual.ONE_YEAR), yr3: pct(annual.THREE_YEAR), yr5: pct(annual.FIVE_YEAR), yr10: pct(annual.TEN_YEAR),
       sinceInception: pct(annual.SINCE_INCEPTION),
       mo1: pct(cumulative.ONE_MONTH), mo3: pct(cumulative.THREE_MONTH), ytd: pct(cumulative.YTD),
       sinceInceptionCumulative: pct(cumulative.SINCE_INCEPTION),
@@ -1654,7 +1684,7 @@ export function paymentsPerYear(frequency: string | null | undefined): number | 
   if (!text) return null;
   if (text === 'monthly') return 12;
   if (text === 'quarterly') return 4;
-  if (text === 'semi-annually' || text === 'semiannually' || text === 'semi-annual' || text === 'semiannual') return 6;
+  if (text === 'semi-annually' || text === 'semiannually' || text === 'semi-annual' || text === 'semiannual') return 2;
   if (text === 'annually' || text === 'annual') return 1;
   if (text === 'weekly') return 52;
   if (text === 'bi-monthly') return 6;
@@ -1956,27 +1986,31 @@ async function updateFund(
   const monthEndDate = monthly?.asOfDate || '';
   const quarterEndDate = quarterly?.asOfDate || '';
 
+  const rateValue = positiveYieldOrNull(distributionInfo?.distributionRate ?? fund.distributionRate ?? null);
+  const performanceAsOfIso = toIsoDate(monthEndDate) || null;
+  const inceptionIso = toIsoDate(fund.inceptionDate) || toIsoDate(details.inceptionDate);
+  const forHorizon = (value: number | null | undefined, years: number): number | null => horizonValue(value, inceptionIso, performanceAsOfIso, years);
   const metrics = {
     ytd: monthEndValues.ytd ?? null,
-    tr1y: monthEndValues.yr1 ?? null,
-    tr3y: cumulativeFromAnnualized(monthEndValues.yr3 ?? null, 3),
-    tr5y: cumulativeFromAnnualized(monthEndValues.yr5 ?? null, 5),
-    tr10y: cumulativeFromAnnualized(monthEndValues.yr10 ?? null, 10),
-    cagr3y: monthEndValues.yr3 ?? null,
-    cagr5y: monthEndValues.yr5 ?? null,
-    cagr10y: monthEndValues.yr10 ?? null,
-    siAnn: monthEndValues.sinceInception ?? null,
-    dividendYield: distributionInfo?.distributionRate ?? fund.distributionRate ?? null,
-    dividendYieldText: formatPercentText(distributionInfo?.distributionRate ?? fund.distributionRate ?? null),
-    distributionYield: distributionInfo?.distributionRate ?? fund.distributionRate ?? null,
-    distributionYieldText: formatPercentText(distributionInfo?.distributionRate ?? fund.distributionRate ?? null),
+    tr1y: forHorizon(monthEndValues.yr1, 1),
+    tr3y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr3, 3), 3),
+    tr5y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr5, 5), 5),
+    tr10y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr10, 10), 10),
+    cagr3y: forHorizon(monthEndValues.yr3, 3),
+    cagr5y: forHorizon(monthEndValues.yr5, 5),
+    cagr10y: forHorizon(monthEndValues.yr10, 10),
+    siAnn: forHorizon(monthEndValues.sinceInception, 1),
+    dividendYield: rateValue,
+    dividendYieldText: formatPercentText(rateValue),
+    distributionYield: rateValue,
+    distributionYieldText: formatPercentText(rateValue),
     yield12M: distributionInfo?.trailingRate12M ?? null,
     yield12MText: formatPercentText(distributionInfo?.trailingRate12M ?? null),
     secYield: distributionInfo?.secYield ?? fund.secYield ?? null,
     secYieldText: formatPercentText(distributionInfo?.secYield ?? fund.secYield ?? null),
     returnsBasis: OFFICIAL_RETURNS_BASIS,
     // The month-end date printed on the Global X performance table, not the NAV date.
-    performanceAsOf: toIsoDate(monthEndDate) || null,
+    performanceAsOf: performanceAsOfIso,
   };
 
   const latestDistribution = distributionRows.find((row) => row['Amount ($)'] && !isMissingCell(row['Amount ($)']));
@@ -2330,7 +2364,7 @@ function inferPaymentsFromRows(exDates: string[]): number | null {
   const code = inferDistributionFrequency(exDates);
   if (code === '01 - Monthly') return 12;
   if (code === '04 - Quarterly') return 4;
-  if (code === '06 - Semi-annually') return 6;
+  if (code === '06 - Semi-annually') return 2;
   if (code === '12 - Annually') return 1;
   return null;
 }
