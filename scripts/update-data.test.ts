@@ -23,6 +23,7 @@ import {
   parseGlobalXHoldingsCsv,
   parseGlobalXLineup,
   parseGlobalXPerformanceSection,
+  parseNportXml,
   parseYahooChart,
   passesDataFilters,
   paymentsPerYear,
@@ -162,6 +163,18 @@ describe("parsing", () => {
     '8e:{"etf_name":"U.S. Infrastructure Development ETF","inception_date":"$D2017-03-06T00:00:00.000Z","nav":53.46,"net_assets":13532865123.34}',
     '8d:{"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","ETF_TICKER":"PAVE","FUND_DATA":"$8e","THEME":"Equity","SUB_THEME":"Thematic","GROSS_EXP":0.47,"NET_EXP":"$undefined"}',
   ]);
+
+  test("N-PORT fallback: positions, report date and series are read (element text and value attributes)", () => {
+    const xml = `<edgarSubmission><repPdDate>2026-06-30</repPdDate><seriesName>Global X &amp; Co Test ETF</seriesName>
+      <invstOrSec><name>Acme Corp</name><cusip>000111222</cusip><balance>1500</balance><valUSD>3000.50</valUSD><pctVal>1.25</pctVal><assetCat>EC</assetCat>
+      <identifiers><ticker value="ACME"/></identifiers></invstOrSec>
+      <invstOrSec><name>No Numbers</name><cusip>N/A</cusip><assetCat>DBT</assetCat></invstOrSec></edgarSubmission>`;
+    const parsed = parseNportXml(xml);
+    expect(parsed).toMatchObject({ repPdDate: "2026-06-30", seriesName: "Global X & Co Test ETF" });
+    expect(parsed.positions).toHaveLength(2);
+    expect(parsed.positions[0]).toEqual({ name: "Acme Corp", ticker: "ACME", cusip: "000111222", balance: 1500, valueUsd: 3000.5, percent: 1.25, assetCategory: "EC" });
+    expect(parsed.positions[1]).toMatchObject({ balance: null, valueUsd: null, percent: null });
+  });
 
   test("catalog: Flight chunks decode and references resolve", () => {
     expect(extractNextFlightText(lineup)).toContain('"ETF_TICKER":"PAVE"');
