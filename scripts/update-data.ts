@@ -1871,6 +1871,10 @@ type RunStats = { updated: number; unchanged: number; skipped: number; failed: n
 // --- metrics contract (STANDARD.md section 9a) -----------------------------
 export const OFFICIAL_RETURNS_BASIS = 'official Global X fund page NAV Performance (monthly series)';
 export const NO_RETURNS_BASIS = 'none: Global X has published no NAV performance for this fund in the feed yet, all returns are null';
+export const DIVIDEND_YIELD_BASES = ['official-trailing-12m', 'official-distribution-rate', 'official-other', 'computed-trailing-12m', 'indicated'] as const;
+export type DividendYieldBasis = typeof DIVIDEND_YIELD_BASES[number];
+/** Global X publishes exactly one yield behind `dividendYield`: the official Distribution Rate (latest distribution annualized / ex-date NAV). */
+export const GLOBALX_DIVIDEND_YIELD_BASIS: DividendYieldBasis = 'official-distribution-rate';
 const NULL_METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'secYield'];
 
 /**
@@ -1881,7 +1885,7 @@ const NULL_METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cag
  */
 export function withMetricsContract<T extends Record<string, any>>(entry: T): T {
   const old: Record<string, any> = entry.metrics && typeof entry.metrics === 'object' ? entry.metrics : {};
-  const { returnsBasis, performanceAsOf, ...rest } = old;
+  const { returnsBasis, performanceAsOf, dividendYieldBasis, ...rest } = old;
   const metrics: Record<string, any> = { ...rest };
   for (const key of NULL_METRIC_KEYS) if (!(key in metrics)) metrics[key] = null;
   const monthEnd = (entry.returns as any)?.monthEnd;
@@ -1892,6 +1896,9 @@ export function withMetricsContract<T extends Record<string, any>>(entry: T): T 
   const asOf = typeof performanceAsOf === 'string' && toIsoDate(performanceAsOf)
     ? toIsoDate(performanceAsOf)
     : (toIsoDate(monthEnd?.asOfDate) || null);
+  // The code travels with the yield it describes: null exactly when dividendYield is null, else the one Global X definition.
+  void dividendYieldBasis;
+  metrics.dividendYieldBasis = typeof metrics.dividendYield === 'number' ? GLOBALX_DIVIDEND_YIELD_BASIS : null;
   metrics.returnsBasis = basis;
   metrics.performanceAsOf = asOf;
   return { ...entry, metrics };
@@ -2144,6 +2151,7 @@ async function updateFund(
     yield12MText: formatPercentText(distributionInfo?.trailingRate12M ?? null),
     secYield: distributionInfo?.secYield ?? fund.secYield ?? null,
     secYieldText: formatPercentText(distributionInfo?.secYield ?? fund.secYield ?? null),
+    dividendYieldBasis: rateValue === null ? null : GLOBALX_DIVIDEND_YIELD_BASIS,
     returnsBasis: OFFICIAL_RETURNS_BASIS,
     // The month-end date printed on the Global X performance table, not the NAV date.
     performanceAsOf: performanceAsOfIso,

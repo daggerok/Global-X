@@ -78,6 +78,15 @@ Every `funds[].metrics` object in `api/globalx/index.json` (and in each `meta.js
 
 Unavailable numeric values are `null`, never `0`. Global X prints a distribution rate of 0 for funds that have not paid anything yet (including monthly bond funds with a positive SEC yield), so `dividendYield` and `distributionYield` publish `null` instead of 0; the 30-day SEC yield is published as the provider prints it.
 
+#### Dividend yield basis
+
+Every `funds[].metrics` object also carries `dividendYieldBasis`, a short code for the definition behind `dividendYield`. It is `null` exactly when `dividendYield` is `null` and always travels with the yield it describes (a retained fund keeps both from the same published state).
+
+| Code | Meaning for Global X |
+| --- | --- |
+| `official-distribution-rate` | The only code Global X rows use: the official fund page Distribution Rate (latest distribution annualized over the ex-date NAV) |
+| `official-trailing-12m`, `official-other`, `computed-trailing-12m`, `indicated` | Part of the shared vocabulary, never produced by this feed |
+
 #### Publishing rules
 
 - Each fund is computed completely in memory and published as a whole: page files first, then `meta.json`, then the index row, and stale pages are removed only after the new `meta.json` is written. A fund page without fund details, or any other failure, keeps the previously published state of that fund
