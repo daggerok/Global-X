@@ -1899,7 +1899,7 @@ const NULL_METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cag
  * performance table, or null) as the last two keys. Rows the updater just
  * built already satisfy it; this covers placeholders and preserved rows.
  */
-export function withMetricsContract<T extends Record<string, any>>(entry: T): T {
+export function withMetricsContract<T extends Record<string, any>>(entry: T): T & { metrics: Record<string, any> } {
   const old: Record<string, any> = entry.metrics && typeof entry.metrics === 'object' ? entry.metrics : {};
   const { returnsBasis, performanceAsOf, dividendYieldBasis, ...rest } = old;
   const metrics: Record<string, any> = { ...rest };
