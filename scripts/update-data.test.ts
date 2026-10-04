@@ -230,13 +230,36 @@ describe("metrics", () => {
     expect(row.metrics.returnsBasis).toBe(NO_RETURNS_BASIS);
     expect(row.metrics.performanceAsOf).toBeNull();
     expect(Object.keys(row.metrics).slice(-2)).toEqual(["returnsBasis", "performanceAsOf"]);
+    expect(row.metrics.dividendYieldBasis).toBeNull();
   });
 
   test("performanceAsOf is the performance table date, never the NAV date, with a fixed key set", () => {
     const row = withMetricsContract({ nav: { asOfDate: "Sep 25 2026" }, returns: { monthEnd: { asOfDate: "Aug 31 2026" } }, metrics: { ytd: 6.6, returnsBasis: "-", dividendYieldText: "0.89%" } });
     expect(row.metrics.performanceAsOf).toBe("2026-08-31");
     expect(row.metrics.returnsBasis).toBe(OFFICIAL_RETURNS_BASIS);
-    expect(Object.keys(row.metrics)).toEqual(["ytd", "dividendYieldText", "tr1y", "tr3y", "tr5y", "tr10y", "cagr3y", "cagr5y", "cagr10y", "siAnn", "dividendYield", "secYield", "returnsBasis", "performanceAsOf"]);
+    expect(Object.keys(row.metrics)).toEqual(["ytd", "dividendYieldText", "tr1y", "tr3y", "tr5y", "tr10y", "cagr3y", "cagr5y", "cagr10y", "siAnn", "dividendYield", "secYield", "dividendYieldBasis", "returnsBasis", "performanceAsOf"]);
+  });
+
+  test("dividendYieldBasis is the official distribution rate code exactly when dividendYield is a number, same keys on every row", async () => {
+    expect(withMetricsContract({ metrics: { dividendYield: 2.5 } }).metrics.dividendYieldBasis).toBe("official-distribution-rate");
+    expect(withMetricsContract({ metrics: { dividendYield: null, dividendYieldBasis: "official-distribution-rate" } }).metrics.dividendYieldBasis).toBeNull();
+    const dir = fresh(); installMock(() => [{ ticker: "AAA", name: "Alpha Index ETF" }, { ticker: "BBB", name: "Beta Index ETF", divYield: 0 }, { ticker: "LLM", name: "LLM ETF", pageOk: false }]); quiet();
+    await run(dir);
+    const rows = Object.fromEntries(index(dir).funds.map((f: any) => [f.ticker, f]));
+    expect([rows.AAA.metrics.dividendYield, rows.AAA.metrics.dividendYieldBasis]).toEqual([2.5, "official-distribution-rate"]);
+    expect([rows.BBB.metrics.dividendYield, rows.BBB.metrics.dividendYieldBasis]).toEqual([null, null]);
+    expect(rows.LLM.dataFile).toBeNull();
+    expect(rows.LLM.metrics.dividendYieldBasis).toBeNull();
+    const meta = JSON.parse(readFileSync(join(dir, "funds", "AAA", "meta.json"), "utf8"));
+    expect(meta.metrics.dividendYieldBasis).toBe("official-distribution-rate");
+    const keys = Object.keys(rows.AAA.metrics);
+    expect(Object.keys(rows.BBB.metrics)).toEqual(keys);
+    expect(Object.keys(rows.LLM.metrics).slice(-3)).toEqual(["dividendYieldBasis", "returnsBasis", "performanceAsOf"]);
+    // a retained row (failed page) keeps the yield together with its code
+    installMock(() => [{ ticker: "AAA", name: "Alpha Index ETF", pageOk: false }, { ticker: "BBB", name: "Beta Index ETF", divYield: 0 }]);
+    await run(dir);
+    const kept = index(dir).funds.find((f: any) => f.ticker === "AAA");
+    expect([kept.metrics.dividendYield, kept.metrics.dividendYieldBasis]).toEqual([2.5, "official-distribution-rate"]);
   });
 
   test("compliant metrics are kept and the contract is idempotent", () => {
