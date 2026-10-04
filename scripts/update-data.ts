@@ -1617,6 +1617,22 @@ export function parseGlobalXHoldingsCsv(text: string): ParsedHoldings {
   }
   return { headers: [...HOLDINGS_HEADERS], rows, asOfDate, netAssets: null, sharesOutstanding: null, creationUnits: null, totalRows: rows.length };
 }
+export type NportPosition = { name: string; ticker: string; cusip: string; balance: number | null; valueUsd: number | null; percent: number | null; assetCategory: string };
+
+/** Text of the first <tag> element (an XML namespace prefix is tolerated), entities decoded; '' when absent. */
+function xmlTagText(xml: string, tag: string): string {
+  const escaped = tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = new RegExp(`<(?:[A-Za-z0-9_.-]+:)?${escaped}\\b[^>]*>([\\s\\S]*?)</(?:[A-Za-z0-9_.-]+:)?${escaped}\\s*>`, 'i').exec(xml);
+  return match ? cleanText(decodeHtmlEntities(match[1])) : '';
+}
+
+/** N-PORT carries a value either as the element text (<cusip>123</cusip>) or as an attribute (<ticker value="ABC"/>). */
+function xmlValue(xml: string, tag: string): string {
+  const escaped = tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const attribute = new RegExp(`<(?:[A-Za-z0-9_.-]+:)?${escaped}\\b[^>]*\\bvalue="([^"]*)"`, 'i').exec(xml);
+  return attribute ? cleanText(decodeHtmlEntities(attribute[1])) : xmlTagText(xml, tag);
+}
+
 export function parseNportXml(xml: string): { positions: NportPosition[]; repPdDate: string; seriesName: string | null } {
   const repPdDate = xmlTagText(xml, 'repPdDate') || '';
   const seriesName = xmlTagText(xml, 'seriesName');
