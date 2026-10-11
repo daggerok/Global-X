@@ -2,7 +2,7 @@
   "ticker": "ASEA",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 43,
+  "totalRows": 44,
   "headers": [
     "Name",
     "Ticker",
@@ -14,432 +14,442 @@
   ],
   "rows": [
     {
+      "Name": "CASH",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.02%",
+      "Market Value": "17,065.83",
+      "Shares Held": "17,065.83",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "THAILAND BAHT",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.01%",
+      "Market Value": "12,018.97",
+      "Shares Held": "403,056.00",
+      "Asset Category": "Equity",
+      "Price": "0.02981960323131277"
+    },
+    {
+      "Name": "INDONESIA RUPIAH",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "262.65",
+      "Shares Held": "4,696,116.05",
+      "Asset Category": "Equity",
+      "Price": "0.00005592919706488088"
+    },
+    {
       "Name": "DBS GROUP HOLDINGS LTD",
       "Ticker": "DBS SP",
       "Identifier": "6175203",
-      "Weight": "20.41%",
-      "Market Value": "20,431,739.30",
+      "Weight": "20.00%",
+      "Market Value": "19,360,662.11",
       "Shares Held": "338,165.00",
       "Asset Category": "Equity",
-      "Price": "60.41943814410126"
+      "Price": "57.2521168955983"
     },
     {
       "Name": "OVERSEA-CHINESE BANKING CORP",
       "Ticker": "OCBC SP",
       "Identifier": "B0F9V20",
-      "Weight": "13.33%",
-      "Market Value": "13,346,502.29",
+      "Weight": "12.59%",
+      "Market Value": "12,192,244.12",
       "Shares Held": "538,708.00",
       "Asset Category": "Equity",
-      "Price": "24.77502151443825"
+      "Price": "22.63237991639255"
     },
     {
       "Name": "UNITED OVERSEAS BANK LTD",
       "Ticker": "UOB SP",
       "Identifier": "6916781",
-      "Weight": "6.78%",
-      "Market Value": "6,790,929.82",
+      "Weight": "6.48%",
+      "Market Value": "6,277,775.72",
       "Shares Held": "201,302.00",
       "Asset Category": "Equity",
-      "Price": "33.73503402847463"
+      "Price": "31.1858586601226"
     },
     {
       "Name": "SINGAPORE TELECOMMUNICATIONS",
       "Ticker": "ST SP",
       "Identifier": "B02PY11",
-      "Weight": "4.08%",
-      "Market Value": "4,083,571.88",
+      "Weight": "4.20%",
+      "Market Value": "4,062,994.44",
       "Shares Held": "1,227,858.00",
       "Asset Category": "Equity",
-      "Price": "3.325768842976957"
+      "Price": "3.30901003210469"
     },
     {
       "Name": "DELTA ELECTRONICS THAI-NVDR",
       "Ticker": "DELTA-R TB",
       "Identifier": "6418931",
-      "Weight": "3.69%",
-      "Market Value": "3,695,714.90",
+      "Weight": "3.92%",
+      "Market Value": "3,798,511.41",
       "Shares Held": "475,310.00",
       "Asset Category": "Equity",
-      "Price": "7.775377963855168"
+      "Price": "7.991650522816689"
     },
     {
       "Name": "MALAYAN BANKING BHD",
       "Ticker": "MAY MK",
       "Identifier": "6556325",
-      "Weight": "3.11%",
-      "Market Value": "3,113,667.47",
+      "Weight": "3.15%",
+      "Market Value": "3,048,037.84",
       "Shares Held": "1,269,239.00",
       "Asset Category": "Equity",
-      "Price": "2.453176643642372"
-    },
-    {
-      "Name": "PUBLIC BANK BERHAD",
-      "Ticker": "PBK MK",
-      "Identifier": "B012W42",
-      "Weight": "2.80%",
-      "Market Value": "2,801,539.06",
-      "Shares Held": "2,455,555.00",
-      "Asset Category": "Equity",
-      "Price": "1.140898517850343"
+      "Price": "2.401468785626663"
     },
     {
       "Name": "BANK CENTRAL ASIA TBK PT",
       "Ticker": "BBCA IJ",
       "Identifier": "B01C1P6",
-      "Weight": "2.79%",
-      "Market Value": "2,790,183.96",
+      "Weight": "2.86%",
+      "Market Value": "2,766,230.20",
       "Shares Held": "8,175,239.00",
       "Asset Category": "Equity",
-      "Price": "0.3412969284445385"
+      "Price": "0.3383668905581843"
+    },
+    {
+      "Name": "PUBLIC BANK BERHAD",
+      "Ticker": "PBK MK",
+      "Identifier": "B012W42",
+      "Weight": "2.84%",
+      "Market Value": "2,747,095.80",
+      "Shares Held": "2,455,555.00",
+      "Asset Category": "Equity",
+      "Price": "1.118727049485758"
     },
     {
       "Name": "CIMB GROUP HOLDINGS BHD",
       "Ticker": "CIMB MK",
       "Identifier": "6075745",
-      "Weight": "2.63%",
-      "Market Value": "2,633,991.74",
+      "Weight": "2.58%",
+      "Market Value": "2,499,403.84",
       "Shares Held": "1,406,345.00",
       "Asset Category": "Equity",
-      "Price": "1.872934265774046"
+      "Price": "1.777233779762434"
+    },
+    {
+      "Name": "INTL CONTAINER TERM SVCS INC",
+      "Ticker": "ICT PM",
+      "Identifier": "6455819",
+      "Weight": "2.57%",
+      "Market Value": "2,486,388.19",
+      "Shares Held": "181,790.00",
+      "Asset Category": "Equity",
+      "Price": "13.67725501952803"
+    },
+    {
+      "Name": "TENAGA NASIONAL BHD",
+      "Ticker": "TNB MK",
+      "Identifier": "6904612",
+      "Weight": "2.56%",
+      "Market Value": "2,478,711.07",
+      "Shares Held": "786,144.00",
+      "Asset Category": "Equity",
+      "Price": "3.152998776305613"
     },
     {
       "Name": "PTT PCL-NVDR",
       "Ticker": "PTT-R TB",
       "Identifier": "6420408",
       "Weight": "2.50%",
-      "Market Value": "2,508,254.19",
+      "Market Value": "2,419,937.38",
       "Shares Held": "2,028,815.00",
       "Asset Category": "Equity",
-      "Price": "1.236314888247573"
-    },
-    {
-      "Name": "INTL CONTAINER TERM SVCS INC",
-      "Ticker": "ICT PM",
-      "Identifier": "6455819",
-      "Weight": "2.50%",
-      "Market Value": "2,499,630.67",
-      "Shares Held": "181,790.00",
-      "Asset Category": "Equity",
-      "Price": "13.75009995049233"
-    },
-    {
-      "Name": "TENAGA NASIONAL BHD",
-      "Ticker": "TNB MK",
-      "Identifier": "6904612",
-      "Weight": "2.49%",
-      "Market Value": "2,494,412.10",
-      "Shares Held": "786,144.00",
-      "Asset Category": "Equity",
-      "Price": "3.172970982415436"
+      "Price": "1.192783659426808"
     },
     {
       "Name": "SINGAPORE EXCHANGE LTD",
       "Ticker": "SGX SP",
       "Identifier": "6303866",
-      "Weight": "2.23%",
-      "Market Value": "2,228,924.80",
+      "Weight": "2.27%",
+      "Market Value": "2,195,388.46",
       "Shares Held": "135,700.00",
       "Asset Category": "Equity",
-      "Price": "16.42538540899042"
+      "Price": "16.17824952100221"
     },
     {
       "Name": "SINGAPORE TECH ENGINEERING",
       "Ticker": "STE SP",
       "Identifier": "6043214",
-      "Weight": "2.13%",
-      "Market Value": "2,136,656.23",
+      "Weight": "2.09%",
+      "Market Value": "2,024,066.80",
       "Shares Held": "248,900.00",
       "Asset Category": "Equity",
-      "Price": "8.584396263559663"
+      "Price": "8.132048212133387"
     },
     {
       "Name": "KASIKORNBANK PCL-NVDR",
       "Ticker": "KBANK-R TB",
       "Identifier": "6364766",
       "Weight": "2.06%",
-      "Market Value": "2,059,019.59",
+      "Market Value": "1,991,150.14",
       "Shares Held": "292,865.00",
       "Asset Category": "Equity",
-      "Price": "7.03060997387875"
+      "Price": "6.798866849913782"
     },
     {
       "Name": "KEPPEL LTD",
       "Ticker": "KEP SP",
       "Identifier": "B1VQ5C0",
-      "Weight": "2.03%",
-      "Market Value": "2,034,525.39",
+      "Weight": "2.00%",
+      "Market Value": "1,933,476.41",
       "Shares Held": "235,500.00",
       "Asset Category": "Equity",
-      "Price": "8.639173630573248"
+      "Price": "8.210090912951168"
     },
     {
       "Name": "BANK RAKYAT INDONESIA PERSER",
       "Ticker": "BBRI IJ",
       "Identifier": "6709099",
-      "Weight": "1.90%",
-      "Market Value": "1,901,832.19",
+      "Weight": "1.98%",
+      "Market Value": "1,913,432.35",
       "Shares Held": "11,036,184.00",
       "Asset Category": "Equity",
-      "Price": "0.1723269737075786"
+      "Price": "0.173378076153859"
     },
     {
       "Name": "CAPITALAND INTEGRATED COMMER",
       "Ticker": "CICT SP",
       "Identifier": "6420129",
-      "Weight": "1.84%",
-      "Market Value": "1,845,601.19",
+      "Weight": "1.90%",
+      "Market Value": "1,840,631.96",
       "Shares Held": "1,052,899.00",
       "Asset Category": "Equity",
-      "Price": "1.75287581239986"
+      "Price": "1.74815624290649"
     },
     {
       "Name": "BANK MANDIRI PERSERO TBK PT",
       "Ticker": "BMRI IJ",
       "Identifier": "6651048",
-      "Weight": "1.60%",
-      "Market Value": "1,606,265.60",
+      "Weight": "1.66%",
+      "Market Value": "1,609,620.96",
       "Shares Held": "7,123,768.00",
       "Asset Category": "Equity",
-      "Price": "0.2254797741869191"
+      "Price": "0.2259507833494858"
     },
     {
       "Name": "ADVANCED INFO SERVICE-NVDR",
       "Ticker": "ADVANC-R TB",
       "Identifier": "6412609",
-      "Weight": "1.54%",
-      "Market Value": "1,545,102.55",
+      "Weight": "1.55%",
+      "Market Value": "1,497,288.09",
       "Shares Held": "150,334.00",
       "Asset Category": "Equity",
-      "Price": "10.27779843548366"
+      "Price": "9.959743570981948"
     },
     {
       "Name": "SINGAPORE AIRLINES LTD",
       "Ticker": "SIA SP",
       "Identifier": "6811734",
-      "Weight": "1.34%",
-      "Market Value": "1,344,857.20",
+      "Weight": "1.37%",
+      "Market Value": "1,323,111.40",
       "Shares Held": "258,047.00",
       "Asset Category": "Equity",
-      "Price": "5.211675392467264"
-    },
-    {
-      "Name": "SCB X PCL-NVDR",
-      "Ticker": "SCB-R TB",
-      "Identifier": "BPH0728",
-      "Weight": "1.24%",
-      "Market Value": "1,244,675.44",
-      "Shares Held": "280,407.00",
-      "Asset Category": "Equity",
-      "Price": "4.43881729058119"
+      "Price": "5.127404697593849"
     },
     {
       "Name": "GULF DEVELOPMENT PCL-NVDR",
       "Ticker": "GULF-R TB",
       "Identifier": "BMY3G88",
-      "Weight": "1.22%",
-      "Market Value": "1,218,529.84",
+      "Weight": "1.29%",
+      "Market Value": "1,245,443.06",
       "Shares Held": "690,346.00",
       "Asset Category": "Equity",
-      "Price": "1.765100167162553"
+      "Price": "1.804085284770246"
+    },
+    {
+      "Name": "SCB X PCL-NVDR",
+      "Ticker": "SCB-R TB",
+      "Identifier": "BPH0728",
+      "Weight": "1.25%",
+      "Market Value": "1,208,254.41",
+      "Shares Held": "280,407.00",
+      "Asset Category": "Equity",
+      "Price": "4.308930982464774"
     },
     {
       "Name": "KRUNG THAI BANK - NVDR",
       "Ticker": "KTB-R TB",
       "Identifier": "6361466",
-      "Weight": "1.16%",
-      "Market Value": "1,160,430.48",
+      "Weight": "1.21%",
+      "Market Value": "1,168,510.51",
       "Shares Held": "933,000.00",
       "Asset Category": "Equity",
-      "Price": "1.243762572347267"
+      "Price": "1.252422840300107"
     },
     {
       "Name": "AIRPORTS OF THAILAND PC-NVDR",
       "Ticker": "AOT-R TB",
       "Identifier": "6741206",
-      "Weight": "1.14%",
-      "Market Value": "1,144,820.15",
+      "Weight": "1.15%",
+      "Market Value": "1,117,161.53",
       "Shares Held": "643,159.00",
       "Asset Category": "Equity",
-      "Price": "1.779995537650876"
+      "Price": "1.736991210571569"
     },
     {
       "Name": "PRESS METAL ALUMINIUM HOLDIN",
       "Ticker": "PMAH MK",
       "Identifier": "BF0J5S4",
-      "Weight": "1.09%",
-      "Market Value": "1,089,281.78",
+      "Weight": "1.13%",
+      "Market Value": "1,098,262.66",
       "Shares Held": "620,526.00",
       "Asset Category": "Equity",
-      "Price": "1.755416823791429"
+      "Price": "1.769889835397711"
     },
     {
       "Name": "CP ALL PCL-NVDR",
       "Ticker": "CPALL-R TB",
       "Identifier": "B08YDH1",
-      "Weight": "1.07%",
-      "Market Value": "1,069,401.39",
+      "Weight": "1.11%",
+      "Market Value": "1,070,437.78",
       "Shares Held": "834,817.00",
       "Asset Category": "Equity",
-      "Price": "1.281000973866129"
+      "Price": "1.282242431574824"
     },
     {
       "Name": "IHH HEALTHCARE BHD",
       "Ticker": "IHH MK",
       "Identifier": "B83X6P8",
-      "Weight": "0.98%",
-      "Market Value": "985,759.97",
+      "Weight": "1.03%",
+      "Market Value": "998,275.72",
       "Shares Held": "516,197.00",
       "Asset Category": "Equity",
-      "Price": "1.909658463726058"
+      "Price": "1.933904536446357"
     },
     {
       "Name": "BANGKOK DUSIT MED SERVI-NVDR",
       "Ticker": "BDMS-R TB",
       "Identifier": "B013SV4",
-      "Weight": "0.97%",
-      "Market Value": "975,405.01",
+      "Weight": "1.00%",
+      "Market Value": "971,238.53",
       "Shares Held": "1,714,236.00",
       "Asset Category": "Equity",
-      "Price": "0.5690027569132838"
+      "Price": "0.5665722397616197"
     },
     {
       "Name": "TELKOM INDONESIA PERSERO TBK",
       "Ticker": "TLKM IJ",
       "Identifier": "BD4T6W7",
-      "Weight": "0.91%",
-      "Market Value": "911,200.90",
+      "Weight": "0.97%",
+      "Market Value": "939,181.54",
       "Shares Held": "7,238,175.00",
       "Asset Category": "Equity",
-      "Price": "0.1258882107713616"
+      "Price": "0.1297539144881134"
     },
     {
       "Name": "PTT EXPLOR & PROD PCL-NVDR",
       "Ticker": "PTTEP-R TB",
       "Identifier": "B1359L2",
-      "Weight": "0.90%",
-      "Market Value": "900,269.90",
+      "Weight": "0.94%",
+      "Market Value": "907,314.60",
       "Shares Held": "206,985.00",
       "Asset Category": "Equity",
-      "Price": "4.349445128874073"
+      "Price": "4.38347996231611"
     },
     {
       "Name": "WILMAR INTERNATIONAL LTD",
       "Ticker": "WIL SP",
       "Identifier": "B17KC69",
-      "Weight": "0.79%",
-      "Market Value": "787,822.24",
+      "Weight": "0.83%",
+      "Market Value": "803,815.19",
       "Shares Held": "290,132.00",
       "Asset Category": "Equity",
-      "Price": "2.715392442060855"
+      "Price": "2.77051545503426"
+    },
+    {
+      "Name": "ASTRA INTERNATIONAL TBK PT",
+      "Ticker": "ASII IJ",
+      "Identifier": "B800MQ5",
+      "Weight": "0.78%",
+      "Market Value": "751,967.18",
+      "Shares Held": "2,789,455.00",
+      "Asset Category": "Equity",
+      "Price": "0.2695749456435039"
     },
     {
       "Name": "CAPITALAND INVESTMENT LTD/SI",
       "Ticker": "CLI SP",
       "Identifier": "BNHXFJ6",
-      "Weight": "0.74%",
-      "Market Value": "737,598.17",
+      "Weight": "0.75%",
+      "Market Value": "726,677.64",
       "Shares Held": "381,610.00",
       "Asset Category": "Equity",
-      "Price": "1.932858599093315"
+      "Price": "1.904241607924321"
     },
     {
       "Name": "TRUE CORP PCL/NEW-NVDR",
       "Ticker": "TRUE-R TB",
       "Identifier": "BQKRHP6",
       "Weight": "0.73%",
-      "Market Value": "727,634.17",
+      "Market Value": "705,755.18",
       "Shares Held": "1,893,400.00",
       "Asset Category": "Equity",
-      "Price": "0.3843002904827295"
-    },
-    {
-      "Name": "ASTRA INTERNATIONAL TBK PT",
-      "Ticker": "ASII IJ",
-      "Identifier": "B800MQ5",
-      "Weight": "0.72%",
-      "Market Value": "722,608.22",
-      "Shares Held": "2,789,455.00",
-      "Asset Category": "Equity",
-      "Price": "0.2590499649573124"
+      "Price": "0.3727448927854654"
     },
     {
       "Name": "BDO UNIBANK INC",
       "Ticker": "BDO PM",
       "Identifier": "B5VJH76",
-      "Weight": "0.67%",
-      "Market Value": "672,740.48",
+      "Weight": "0.71%",
+      "Market Value": "684,493.38",
       "Shares Held": "380,439.00",
       "Asset Category": "Equity",
-      "Price": "1.768326801405744"
+      "Price": "1.799219796077689"
     },
     {
       "Name": "HONG LEONG BANK BERHAD",
       "Ticker": "HLBK MK",
       "Identifier": "6436892",
-      "Weight": "0.57%",
-      "Market Value": "567,593.59",
+      "Weight": "0.56%",
+      "Market Value": "538,446.02",
       "Shares Held": "102,400.00",
       "Asset Category": "Equity",
-      "Price": "5.54290615234375"
+      "Price": "5.2582619140625"
     },
     {
       "Name": "BANK OF THE PHILIPPINE ISLAN",
       "Ticker": "BPI PM",
       "Identifier": "6074968",
-      "Weight": "0.47%",
-      "Market Value": "469,045.65",
+      "Weight": "0.48%",
+      "Market Value": "469,091.57",
       "Shares Held": "312,090.00",
       "Asset Category": "Equity",
-      "Price": "1.502917908295684"
+      "Price": "1.503065045339485"
     },
     {
       "Name": "BANK NEGARA INDONESIA PERSER",
       "Ticker": "BBNI IJ",
       "Identifier": "6727121",
-      "Weight": "0.38%",
-      "Market Value": "384,918.29",
+      "Weight": "0.40%",
+      "Market Value": "385,892.65",
       "Shares Held": "2,011,592.00",
       "Asset Category": "Equity",
-      "Price": "0.191350079936687"
+      "Price": "0.1918344525132333"
     },
     {
       "Name": "AMMAN MINERAL INTERNASIONAL",
       "Ticker": "AMMN IJ",
       "Identifier": "BRK2Z98",
-      "Weight": "0.28%",
-      "Market Value": "285,054.78",
+      "Weight": "0.31%",
+      "Market Value": "296,367.79",
       "Shares Held": "1,201,600.00",
       "Asset Category": "Equity",
-      "Price": "0.2372293442077231"
-    },
-    {
-      "Name": "INDONESIA RUPIAH",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.02%",
-      "Market Value": "21,241.74",
-      "Shares Held": "379,653,626.45",
-      "Asset Category": "Equity",
-      "Price": "0.00005595031502431208"
+      "Price": "0.2466442992676431"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.10%",
-      "Market Value": "104,921.26",
-      "Shares Held": "104,921.26",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "CASH",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.05%",
-      "Market Value": "49,592.35",
-      "Shares Held": "49,592.35",
+      "Weight": "0.24%",
+      "Market Value": "231,654.23",
+      "Shares Held": "231,654.23",
       "Asset Category": "Cash",
       "Price": "1.0"
     }

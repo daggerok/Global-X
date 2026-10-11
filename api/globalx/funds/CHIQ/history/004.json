@@ -2,7 +2,7 @@
   "ticker": "CHIQ",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 4235,
+  "totalRows": 4240,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-11-03",
+      "Close": "13.64",
+      "Adj Close": "11.15",
+      "Volume": "42000"
+    },
+    {
+      "Date": "2014-10-31",
+      "Close": "13.81",
+      "Adj Close": "11.29",
+      "Volume": "224200"
+    },
+    {
+      "Date": "2014-10-30",
+      "Close": "13.60",
+      "Adj Close": "11.11",
+      "Volume": "12300"
+    },
+    {
+      "Date": "2014-10-29",
+      "Close": "13.56",
+      "Adj Close": "11.08",
+      "Volume": "21900"
+    },
+    {
+      "Date": "2014-10-28",
+      "Close": "13.51",
+      "Adj Close": "11.04",
+      "Volume": "34000"
+    },
     {
       "Date": "2014-10-27",
       "Close": "13.24",
@@ -5979,36 +6009,6 @@
       "Close": "20.40",
       "Adj Close": "16.09",
       "Volume": "782300"
-    },
-    {
-      "Date": "2010-11-11",
-      "Close": "20.95",
-      "Adj Close": "16.52",
-      "Volume": "214900"
-    },
-    {
-      "Date": "2010-11-10",
-      "Close": "20.96",
-      "Adj Close": "16.53",
-      "Volume": "401800"
-    },
-    {
-      "Date": "2010-11-09",
-      "Close": "20.80",
-      "Adj Close": "16.40",
-      "Volume": "489200"
-    },
-    {
-      "Date": "2010-11-08",
-      "Close": "21.16",
-      "Adj Close": "16.69",
-      "Volume": "387900"
-    },
-    {
-      "Date": "2010-11-05",
-      "Close": "21.10",
-      "Adj Close": "16.64",
-      "Volume": "396700"
     }
   ]
 }

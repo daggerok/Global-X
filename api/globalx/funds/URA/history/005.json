@@ -1,0 +1,44 @@
+{
+  "ticker": "URA",
+  "page": 5,
+  "pageSize": 1000,
+  "totalRows": 4005,
+  "headers": [
+    "Date",
+    "Close",
+    "Adj Close",
+    "Volume"
+  ],
+  "rows": [
+    {
+      "Date": "2010-11-11",
+      "Close": "113.70",
+      "Adj Close": "73.49",
+      "Volume": "111767"
+    },
+    {
+      "Date": "2010-11-10",
+      "Close": "112.74",
+      "Adj Close": "72.87",
+      "Volume": "121967"
+    },
+    {
+      "Date": "2010-11-09",
+      "Close": "111.00",
+      "Adj Close": "71.74",
+      "Volume": "334967"
+    },
+    {
+      "Date": "2010-11-08",
+      "Close": "114.78",
+      "Adj Close": "74.19",
+      "Volume": "255017"
+    },
+    {
+      "Date": "2010-11-05",
+      "Close": "103.26",
+      "Adj Close": "66.74",
+      "Volume": "48233"
+    }
+  ]
+}

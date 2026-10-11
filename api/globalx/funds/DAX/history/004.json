@@ -2,7 +2,7 @@
   "ticker": "DAX",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3003,
+  "totalRows": 3008,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-11-03",
+      "Close": "26.05",
+      "Adj Close": "19.91",
+      "Volume": "200"
+    },
+    {
+      "Date": "2014-10-31",
+      "Close": "25.75",
+      "Adj Close": "19.68",
+      "Volume": "10100"
+    },
+    {
+      "Date": "2014-10-30",
+      "Close": "25.39",
+      "Adj Close": "19.41",
+      "Volume": "100"
+    },
+    {
+      "Date": "2014-10-29",
+      "Close": "25.67",
+      "Adj Close": "19.62",
+      "Volume": "13600"
+    },
+    {
+      "Date": "2014-10-28",
+      "Close": "25.51",
+      "Adj Close": "19.50",
+      "Volume": "3800"
+    },
     {
       "Date": "2014-10-27",
       "Close": "25.03",

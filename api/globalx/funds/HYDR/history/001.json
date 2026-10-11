@@ -2,7 +2,7 @@
   "ticker": "HYDR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1312,
+  "totalRows": 1317,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-09",
+      "Close": "42.66",
+      "Adj Close": "42.66",
+      "Volume": "29000"
+    },
+    {
+      "Date": "2026-10-08",
+      "Close": "42.24",
+      "Adj Close": "42.24",
+      "Volume": "36400"
+    },
+    {
+      "Date": "2026-10-07",
+      "Close": "43.50",
+      "Adj Close": "43.50",
+      "Volume": "21000"
+    },
+    {
+      "Date": "2026-10-06",
+      "Close": "45.05",
+      "Adj Close": "45.05",
+      "Volume": "40800"
+    },
+    {
+      "Date": "2026-10-05",
+      "Close": "44.66",
+      "Adj Close": "44.66",
+      "Volume": "17500"
+    },
     {
       "Date": "2026-10-02",
       "Close": "44.99",
@@ -5979,36 +6009,6 @@
       "Close": "50.10",
       "Adj Close": "47.55",
       "Volume": "8400"
-    },
-    {
-      "Date": "2022-10-13",
-      "Close": "51.95",
-      "Adj Close": "49.31",
-      "Volume": "9120"
-    },
-    {
-      "Date": "2022-10-12",
-      "Close": "50.50",
-      "Adj Close": "47.93",
-      "Volume": "6180"
-    },
-    {
-      "Date": "2022-10-11",
-      "Close": "52.60",
-      "Adj Close": "49.92",
-      "Volume": "6200"
-    },
-    {
-      "Date": "2022-10-10",
-      "Close": "53.55",
-      "Adj Close": "50.82",
-      "Volume": "10900"
-    },
-    {
-      "Date": "2022-10-07",
-      "Close": "54.25",
-      "Adj Close": "51.49",
-      "Volume": "9500"
     }
   ]
 }

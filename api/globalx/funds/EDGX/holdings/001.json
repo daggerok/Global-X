@@ -2,7 +2,7 @@
   "ticker": "EDGX",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 6,
+  "totalRows": 5,
   "headers": [
     "Name",
     "Ticker",
@@ -14,64 +14,54 @@
   ],
   "rows": [
     {
+      "Name": "4SPY 10/16/2026 C778.57",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.17%",
+      "Market Value": "-11,401.17",
+      "Shares Held": "-25.00",
+      "Asset Category": "Equity",
+      "Price": "456.0468"
+    },
+    {
       "Name": "BNY MELLON US LRG CAP COR",
       "Ticker": "BKLC",
       "Identifier": "BKY6348",
-      "Weight": "61.61%",
-      "Market Value": "4,138,421.49",
-      "Shares Held": "84,063.00",
+      "Weight": "81.71%",
+      "Market Value": "5,545,613.66",
+      "Shares Held": "111,313.00",
       "Asset Category": "Equity",
-      "Price": "49.23"
+      "Price": "49.82"
     },
     {
       "Name": "STE STR SPDR PT S&P 500 ETF",
       "Ticker": "SPYM",
       "Identifier": "B0Q4NL7",
-      "Weight": "23.00%",
-      "Market Value": "1,544,730.00",
-      "Shares Held": "17,050.00",
+      "Weight": "17.69%",
+      "Market Value": "1,200,484.00",
+      "Shares Held": "13,100.00",
       "Asset Category": "Fund",
-      "Price": "90.6"
-    },
-    {
-      "Name": "VANGUARD S&P 500 ETF",
-      "Ticker": "VOO",
-      "Identifier": "BF2GMJ3",
-      "Weight": "15.07%",
-      "Market Value": "1,012,489.74",
-      "Shares Held": "1,431.00",
-      "Asset Category": "Fund",
-      "Price": "707.54"
-    },
-    {
-      "Name": "CASH",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.48%",
-      "Market Value": "32,340.12",
-      "Shares Held": "32,340.12",
-      "Asset Category": "Cash",
-      "Price": "1.0"
+      "Price": "91.64"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "-0.01%",
-      "Market Value": "-1,005.74",
-      "Shares Held": "-1,005.74",
+      "Weight": "0.42%",
+      "Market Value": "28,865.31",
+      "Shares Held": "28,865.31",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
     {
-      "Name": "4SPY 10/09/2026 C769.64",
+      "Name": "CASH",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "-0.15%",
-      "Market Value": "-10,184.44",
-      "Shares Held": "-21.00",
-      "Asset Category": "Equity",
-      "Price": "484.9733333333334"
+      "Weight": "0.35%",
+      "Market Value": "23,499.69",
+      "Shares Held": "23,499.69",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "RYLG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1002,
+  "totalRows": 1007,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-09",
+      "Close": "23.56",
+      "Adj Close": "23.56",
+      "Volume": "200"
+    },
+    {
+      "Date": "2026-10-08",
+      "Close": "23.41",
+      "Adj Close": "23.41",
+      "Volume": "600"
+    },
+    {
+      "Date": "2026-10-07",
+      "Close": "23.42",
+      "Adj Close": "23.42",
+      "Volume": "2700"
+    },
+    {
+      "Date": "2026-10-06",
+      "Close": "23.67",
+      "Adj Close": "23.67",
+      "Volume": "2300"
+    },
+    {
+      "Date": "2026-10-05",
+      "Close": "23.77",
+      "Adj Close": "23.77",
+      "Volume": "600"
+    },
     {
       "Date": "2026-10-02",
       "Close": "23.64",
@@ -5979,36 +6009,6 @@
       "Close": "24.84",
       "Adj Close": "15.32",
       "Volume": "200"
-    },
-    {
-      "Date": "2022-10-13",
-      "Close": "25.44",
-      "Adj Close": "15.69",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-12",
-      "Close": "24.89",
-      "Adj Close": "15.35",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-11",
-      "Close": "24.94",
-      "Adj Close": "15.38",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-10",
-      "Close": "24.94",
-      "Adj Close": "15.38",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-07",
-      "Close": "25.03",
-      "Adj Close": "15.44",
-      "Volume": "300"
     }
   ]
 }

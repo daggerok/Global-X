@@ -2,7 +2,7 @@
   "ticker": "GOEX",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 4001,
+  "totalRows": 4006,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-11-03",
+      "Close": "19.70",
+      "Adj Close": "10.88",
+      "Volume": "30500"
+    },
+    {
+      "Date": "2014-10-31",
+      "Close": "19.08",
+      "Adj Close": "10.54",
+      "Volume": "39250"
+    },
+    {
+      "Date": "2014-10-30",
+      "Close": "20.28",
+      "Adj Close": "11.20",
+      "Volume": "54300"
+    },
+    {
+      "Date": "2014-10-29",
+      "Close": "21.74",
+      "Adj Close": "12.01",
+      "Volume": "30650"
+    },
+    {
+      "Date": "2014-10-28",
+      "Close": "22.56",
+      "Adj Close": "12.46",
+      "Volume": "8250"
+    },
     {
       "Date": "2014-10-27",
       "Close": "21.76",
@@ -5979,36 +6009,6 @@
       "Close": "132.72",
       "Adj Close": "68.04",
       "Volume": "9813"
-    },
-    {
-      "Date": "2010-11-11",
-      "Close": "137.04",
-      "Adj Close": "70.26",
-      "Volume": "8763"
-    },
-    {
-      "Date": "2010-11-10",
-      "Close": "136.56",
-      "Adj Close": "70.01",
-      "Volume": "19625"
-    },
-    {
-      "Date": "2010-11-09",
-      "Close": "131.68",
-      "Adj Close": "67.51",
-      "Volume": "44475"
-    },
-    {
-      "Date": "2010-11-08",
-      "Close": "138.64",
-      "Adj Close": "71.08",
-      "Volume": "35375"
-    },
-    {
-      "Date": "2010-11-05",
-      "Close": "134.40",
-      "Adj Close": "68.90",
-      "Volume": "22800"
     }
   ]
 }
