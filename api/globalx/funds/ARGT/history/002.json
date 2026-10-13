@@ -2,7 +2,7 @@
   "ticker": "ARGT",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3925,
+  "totalRows": 3926,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-14",
+      "Close": "28.16",
+      "Adj Close": "26.61",
+      "Volume": "3400"
+    },
     {
       "Date": "2022-10-13",
       "Close": "29.31",
@@ -6003,12 +6009,6 @@
       "Close": "24.24",
       "Adj Close": "21.76",
       "Volume": "97100"
-    },
-    {
-      "Date": "2018-10-24",
-      "Close": "23.68",
-      "Adj Close": "21.26",
-      "Volume": "25500"
     }
   ]
 }

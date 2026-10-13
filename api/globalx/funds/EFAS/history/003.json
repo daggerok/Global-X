@@ -2,7 +2,7 @@
   "ticker": "EFAS",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2467,
+  "totalRows": 2468,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-24",
+      "Close": "15.94",
+      "Adj Close": "9.92",
+      "Volume": "200"
+    },
     {
       "Date": "2018-10-23",
       "Close": "16.22",

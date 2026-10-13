@@ -41,12 +41,12 @@
   "premiumDiscountDerivedValue": 0.05,
   "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
-    "display": "0.09%",
-    "value": 0.09,
+    "display": "0.05%",
+    "value": 0.05,
     "asOfDate": "Oct 09 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
-  "bidAskSpreadValue": 0.09,
+  "bidAskSpreadValue": 0.05,
   "acquiredFundFeesText": null,
   "totalNetAssets": 334591763.08,
   "sharesOutstanding": {
@@ -687,9 +687,9 @@
       "./history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1581,
-    "asOfDate": "Oct 09 2026",
-    "asOf": "2026-10-09",
+    "totalRows": 1582,
+    "asOfDate": "Oct 12 2026",
+    "asOf": "2026-10-12",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/PFFV",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },

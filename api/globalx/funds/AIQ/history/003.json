@@ -2,7 +2,7 @@
   "ticker": "AIQ",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2112,
+  "totalRows": 2113,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-24",
+      "Close": "13.53",
+      "Adj Close": "13.15",
+      "Volume": "10700"
+    },
     {
       "Date": "2018-10-23",
       "Close": "14.34",

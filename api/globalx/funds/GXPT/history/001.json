@@ -2,7 +2,7 @@
   "ticker": "GXPT",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 307,
+  "totalRows": 308,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "35.47",
+      "Adj Close": "35.47",
+      "Volume": "37400"
+    },
     {
       "Date": "2026-10-09",
       "Close": "35.85",

@@ -29,24 +29,24 @@
   "inceptionDate": "Jan 24 2022",
   "inceptionDateFundPage": "Jan 24 2022",
   "exchange": "Nasdaq",
-  "closePrice": "$27.98",
-  "closePriceValue": 27.98,
+  "closePrice": "$27.79",
+  "closePriceValue": 27.79,
   "premiumDiscount": {
     "display": "0.66%",
     "value": 0.6558,
-    "derivedValue": 0.68,
+    "derivedValue": 0,
     "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
   },
   "premiumDiscountValue": 0.6558,
-  "premiumDiscountDerivedValue": 0.68,
+  "premiumDiscountDerivedValue": 0,
   "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
-    "display": "0.68%",
-    "value": 0.68,
+    "display": "0.69%",
+    "value": 0.69,
     "asOfDate": "Oct 09 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
-  "bidAskSpreadValue": 0.68,
+  "bidAskSpreadValue": 0.69,
   "acquiredFundFeesText": null,
   "totalNetAssets": 47247655.61,
   "sharesOutstanding": {
@@ -222,9 +222,9 @@
       "./history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1180,
-    "asOfDate": "Oct 09 2026",
-    "asOf": "2026-10-09",
+    "totalRows": 1181,
+    "asOfDate": "Oct 12 2026",
+    "asOf": "2026-10-12",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/EART",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -264,10 +264,10 @@
     "managementFeeValue": 0.59
   },
   "marketPrice": {
-    "display": "$27.98",
-    "value": 27.98,
+    "display": "$27.79",
+    "value": 27.79,
     "asOfDate": "Oct 09 2026",
-    "dailyChangeText": "$0.58 (2.12%)",
+    "dailyChangeText": "$0.45 (1.65%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {

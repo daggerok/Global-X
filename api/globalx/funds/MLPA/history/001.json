@@ -2,7 +2,7 @@
   "ticker": "MLPA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3640,
+  "totalRows": 3641,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "54.06",
+      "Adj Close": "54.06",
+      "Volume": "192800"
+    },
     {
       "Date": "2026-10-09",
       "Close": "53.97",
@@ -5497,7 +5503,7 @@
     {
       "Date": "2023-02-16",
       "Close": "43.06",
-      "Adj Close": "32.92",
+      "Adj Close": "32.93",
       "Volume": "66000"
     },
     {
@@ -6003,12 +6009,6 @@
       "Close": "41.60",
       "Adj Close": "30.69",
       "Volume": "125500"
-    },
-    {
-      "Date": "2022-10-14",
-      "Close": "40.96",
-      "Adj Close": "30.22",
-      "Volume": "91200"
     }
   ]
 }

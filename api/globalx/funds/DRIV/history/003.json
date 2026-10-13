@@ -2,7 +2,7 @@
   "ticker": "DRIV",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2133,
+  "totalRows": 2134,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-24",
+      "Close": "12.86",
+      "Adj Close": "11.51",
+      "Volume": "22200"
+    },
     {
       "Date": "2018-10-23",
       "Close": "13.33",

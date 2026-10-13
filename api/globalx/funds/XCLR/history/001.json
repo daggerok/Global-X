@@ -2,7 +2,7 @@
   "ticker": "XCLR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1393,
+  "totalRows": 1394,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "28.28",
+      "Adj Close": "28.28",
+      "Volume": "2100"
+    },
     {
       "Date": "2026-10-09",
       "Close": "28.22",
@@ -6003,12 +6009,6 @@
       "Close": "23.88",
       "Adj Close": "17.38",
       "Volume": "0"
-    },
-    {
-      "Date": "2022-10-14",
-      "Close": "23.61",
-      "Adj Close": "17.19",
-      "Volume": "100"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "IRVH",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1070,
+  "totalRows": 1071,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-14",
+      "Close": "22.25",
+      "Adj Close": "18.97",
+      "Volume": "100"
+    },
     {
       "Date": "2022-10-13",
       "Close": "22.17",

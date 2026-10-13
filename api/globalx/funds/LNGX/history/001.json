@@ -2,7 +2,7 @@
   "ticker": "LNGX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 237,
+  "totalRows": 238,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "44.34",
+      "Adj Close": "44.34",
+      "Volume": "11300"
+    },
     {
       "Date": "2026-10-09",
       "Close": "44.22",

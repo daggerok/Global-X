@@ -41,12 +41,12 @@
   "premiumDiscountDerivedValue": -0.55,
   "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
-    "display": "0.00%",
-    "value": 0,
+    "display": "0.23%",
+    "value": 0.23,
     "asOfDate": "Oct 09 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
-  "bidAskSpreadValue": 0,
+  "bidAskSpreadValue": 0.23,
   "acquiredFundFeesText": null,
   "totalNetAssets": 5598708.71,
   "sharesOutstanding": {
@@ -145,9 +145,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 21,
-    "asOfDate": "Oct 09 2026",
-    "asOf": "2026-10-09",
+    "totalRows": 22,
+    "asOfDate": "Oct 12 2026",
+    "asOf": "2026-10-12",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/MLCC",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },

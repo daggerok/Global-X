@@ -2,7 +2,7 @@
   "ticker": "NYSX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 137,
+  "totalRows": 138,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "132.27",
+      "Adj Close": "132.27",
+      "Volume": "825"
+    },
     {
       "Date": "2026-10-09",
       "Close": "133.28",

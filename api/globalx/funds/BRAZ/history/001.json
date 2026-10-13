@@ -2,7 +2,7 @@
   "ticker": "BRAZ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 789,
+  "totalRows": 790,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "37.88",
+      "Adj Close": "37.88",
+      "Volume": "900"
+    },
     {
       "Date": "2026-10-09",
       "Close": "37.85",
@@ -4171,7 +4177,7 @@
     {
       "Date": "2024-01-04",
       "Close": "28.01",
-      "Adj Close": "25.88",
+      "Adj Close": "25.89",
       "Volume": "700"
     },
     {

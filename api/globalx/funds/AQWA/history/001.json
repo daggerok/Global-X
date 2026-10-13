@@ -2,7 +2,7 @@
   "ticker": "AQWA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1382,
+  "totalRows": 1383,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "18.04",
+      "Adj Close": "18.04",
+      "Volume": "1200"
+    },
     {
       "Date": "2026-10-09",
       "Close": "18.02",
@@ -6003,12 +6009,6 @@
       "Close": "12.80",
       "Adj Close": "12.05",
       "Volume": "900"
-    },
-    {
-      "Date": "2022-10-14",
-      "Close": "12.30",
-      "Adj Close": "11.58",
-      "Volume": "2800"
     }
   ]
 }

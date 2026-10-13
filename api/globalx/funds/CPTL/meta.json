@@ -29,16 +29,16 @@
   "inceptionDate": "Jul 11 2016",
   "inceptionDateFundPage": "Jul 11 2016",
   "exchange": "Nasdaq",
-  "closePrice": "$49.68",
-  "closePriceValue": 49.68,
+  "closePrice": "$49.70",
+  "closePriceValue": 49.7,
   "premiumDiscount": {
     "display": "-0.06%",
     "value": -0.0583,
-    "derivedValue": -0.04,
+    "derivedValue": 0,
     "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
   },
   "premiumDiscountValue": -0.0583,
-  "premiumDiscountDerivedValue": -0.04,
+  "premiumDiscountDerivedValue": 0,
   "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
     "display": "0.27%",
@@ -292,9 +292,9 @@
       "./history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2577,
-    "asOfDate": "Oct 09 2026",
-    "asOf": "2026-10-09",
+    "totalRows": 2578,
+    "asOfDate": "Oct 12 2026",
+    "asOf": "2026-10-12",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/CPTL",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -334,8 +334,8 @@
     "managementFeeValue": 0.35
   },
   "marketPrice": {
-    "display": "$49.68",
-    "value": 49.68,
+    "display": "$49.70",
+    "value": 49.7,
     "asOfDate": "Oct 09 2026",
     "dailyChangeText": "$0.28 (0.57%)",
     "source": "Global X fund page Fund Details \"Market Price\""

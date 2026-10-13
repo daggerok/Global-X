@@ -2,7 +2,7 @@
   "ticker": "SRET",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2910,
+  "totalRows": 2911,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-24",
+      "Close": "43.71",
+      "Adj Close": "23.13",
+      "Volume": "9867"
+    },
     {
       "Date": "2018-10-23",
       "Close": "43.47",

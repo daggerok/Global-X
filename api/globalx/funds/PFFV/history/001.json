@@ -2,7 +2,7 @@
   "ticker": "PFFV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1581,
+  "totalRows": 1582,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "21.45",
+      "Adj Close": "21.45",
+      "Volume": "115700"
+    },
     {
       "Date": "2026-10-09",
       "Close": "21.53",
@@ -6003,12 +6009,6 @@
       "Close": "22.69",
       "Adj Close": "16.91",
       "Volume": "60100"
-    },
-    {
-      "Date": "2022-10-14",
-      "Close": "22.62",
-      "Adj Close": "16.86",
-      "Volume": "83800"
     }
   ]
 }

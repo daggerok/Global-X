@@ -2,7 +2,7 @@
   "ticker": "EDGQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 163,
+  "totalRows": 164,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "28.21",
+      "Adj Close": "28.21",
+      "Volume": "17100"
+    },
     {
       "Date": "2026-10-09",
       "Close": "28.37",

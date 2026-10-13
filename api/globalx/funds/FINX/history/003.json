@@ -2,7 +2,7 @@
   "ticker": "FINX",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2533,
+  "totalRows": 2534,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-24",
+      "Close": "24.80",
+      "Adj Close": "23.02",
+      "Volume": "255600"
+    },
     {
       "Date": "2018-10-23",
       "Close": "25.77",

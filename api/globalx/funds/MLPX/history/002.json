@@ -2,7 +2,7 @@
   "ticker": "MLPX",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3314,
+  "totalRows": 3315,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-14",
+      "Close": "38.75",
+      "Adj Close": "31.68",
+      "Volume": "146800"
+    },
     {
       "Date": "2022-10-13",
       "Close": "39.91",
@@ -6003,12 +6009,6 @@
       "Close": "37.26",
       "Adj Close": "23.48",
       "Volume": "84900"
-    },
-    {
-      "Date": "2018-10-24",
-      "Close": "36.93",
-      "Adj Close": "23.27",
-      "Volume": "79033"
     }
   ]
 }

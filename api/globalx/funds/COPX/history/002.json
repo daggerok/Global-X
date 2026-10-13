@@ -2,7 +2,7 @@
   "ticker": "COPX",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4145,
+  "totalRows": 4146,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-14",
+      "Close": "28.04",
+      "Adj Close": "25.78",
+      "Volume": "186500"
+    },
     {
       "Date": "2022-10-13",
       "Close": "28.98",
@@ -6003,12 +6009,6 @@
       "Close": "18.73",
       "Adj Close": "15.72",
       "Volume": "106800"
-    },
-    {
-      "Date": "2018-10-24",
-      "Close": "18.62",
-      "Adj Close": "15.63",
-      "Volume": "20500"
     }
   ]
 }

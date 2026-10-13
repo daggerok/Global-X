@@ -2,7 +2,7 @@
   "ticker": "HYDR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1317,
+  "totalRows": 1318,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-14",
+      "Close": "50.10",
+      "Adj Close": "47.55",
+      "Volume": "8400"
+    },
     {
       "Date": "2022-10-13",
       "Close": "51.95",
@@ -271,7 +277,7 @@
     {
       "Date": "2022-08-12",
       "Close": "82.40",
-      "Adj Close": "78.21",
+      "Adj Close": "78.20",
       "Volume": "30080"
     },
     {

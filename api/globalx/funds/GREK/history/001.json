@@ -2,7 +2,7 @@
   "ticker": "GREK",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3730,
+  "totalRows": 3731,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "80.86",
+      "Adj Close": "80.86",
+      "Volume": "84100"
+    },
     {
       "Date": "2026-10-09",
       "Close": "79.10",
@@ -4471,7 +4477,7 @@
     {
       "Date": "2023-10-23",
       "Close": "33.78",
-      "Adj Close": "30.32",
+      "Adj Close": "30.31",
       "Volume": "186500"
     },
     {
@@ -6003,12 +6009,6 @@
       "Close": "22.97",
       "Adj Close": "19.96",
       "Volume": "6300"
-    },
-    {
-      "Date": "2022-10-14",
-      "Close": "22.17",
-      "Adj Close": "19.27",
-      "Volume": "13200"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DRIV",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2133,
+  "totalRows": 2134,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-14",
+      "Close": "19.39",
+      "Adj Close": "18.31",
+      "Volume": "97500"
+    },
     {
       "Date": "2022-10-13",
       "Close": "20.12",
@@ -6003,12 +6009,6 @@
       "Close": "13.01",
       "Adj Close": "11.64",
       "Volume": "54200"
-    },
-    {
-      "Date": "2018-10-24",
-      "Close": "12.86",
-      "Adj Close": "11.51",
-      "Volume": "22200"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "HERO",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1744,
+  "totalRows": 1745,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "27.59",
+      "Adj Close": "27.59",
+      "Volume": "8100"
+    },
     {
       "Date": "2026-10-09",
       "Close": "27.63",
@@ -6003,12 +6009,6 @@
       "Close": "17.58",
       "Adj Close": "16.90",
       "Volume": "28500"
-    },
-    {
-      "Date": "2022-10-14",
-      "Close": "17.01",
-      "Adj Close": "16.35",
-      "Volume": "15200"
     }
   ]
 }

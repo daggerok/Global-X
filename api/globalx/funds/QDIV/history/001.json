@@ -2,7 +2,7 @@
   "ticker": "QDIV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2070,
+  "totalRows": 2071,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "39.23",
+      "Adj Close": "39.23",
+      "Volume": "2500"
+    },
     {
       "Date": "2026-10-09",
       "Close": "38.90",
@@ -6003,12 +6009,6 @@
       "Close": "29.18",
       "Adj Close": "25.78",
       "Volume": "1100"
-    },
-    {
-      "Date": "2022-10-14",
-      "Close": "28.66",
-      "Adj Close": "25.31",
-      "Volume": "3400"
     }
   ]
 }

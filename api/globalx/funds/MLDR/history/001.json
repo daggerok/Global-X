@@ -2,7 +2,7 @@
   "ticker": "MLDR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 523,
+  "totalRows": 524,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-12",
+      "Close": "46.69",
+      "Adj Close": "46.69",
+      "Volume": "100"
+    },
     {
       "Date": "2026-10-09",
       "Close": "46.69",

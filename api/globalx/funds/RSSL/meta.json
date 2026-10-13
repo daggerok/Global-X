@@ -41,12 +41,12 @@
   "premiumDiscountDerivedValue": 0.01,
   "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
   "bidAskSpread": {
-    "display": "0.09%",
-    "value": 0.09,
+    "display": "0.10%",
+    "value": 0.1,
     "asOfDate": "Oct 09 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
   },
-  "bidAskSpreadValue": 0.09,
+  "bidAskSpreadValue": 0.1,
   "acquiredFundFeesText": null,
   "totalNetAssets": 1419142363.2,
   "sharesOutstanding": {
@@ -232,9 +232,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 589,
-    "asOfDate": "Oct 09 2026",
-    "asOf": "2026-10-09",
+    "totalRows": 590,
+    "asOfDate": "Oct 12 2026",
+    "asOf": "2026-10-12",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/RSSL",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
