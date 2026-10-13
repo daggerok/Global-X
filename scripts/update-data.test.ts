@@ -15,6 +15,7 @@ import {
   globalxHoldingsCsvUrl,
   horizonValue,
   installSystemCa,
+  isGlobalXFundInLiquidation,
   isCertError,
   main,
   parseGlobalXDistributionHistory,
@@ -291,7 +292,7 @@ describe("metrics", () => {
 });
 
 // Offline pipeline helpers: main() against a mocked globalxetfs.com and Yahoo
-type MockFund = { ticker: string; name: string; net?: number | null; gross?: number | null; divYield?: number; pageOk?: boolean; yahooOk?: boolean; ten?: number };
+type MockFund = { ticker: string; name: string; net?: number | null; gross?: number | null; divYield?: number; pageOk?: boolean; yahooOk?: boolean; ten?: number; liquidation?: boolean; csvOk?: boolean };
 
 function lineupPage(funds: MockFund[]): string {
   const chunks: string[] = [];
@@ -308,6 +309,7 @@ function fundPage(fund: MockFund): string {
     `p:{"ETF_DETAILS":{"ASSETS":1000000000,"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","CUSIP":"37954Y673","DIV_YIELD":${fund.divYield ?? 2.5},"EXCHANGE":"Cboe BZX","INCEPTION_DATE":"$D2015-03-06T00:00:00.000Z","ISIN":"US37954Y6730","NET_ASSET_VALUE":"10.50","SHARES_OUTSTANDING":1000000,"YIELD_SEC_30":1.5},"PERFORMANCE_HISTORY":{"avg_annualized":{"month_end":{"fund_nav":{"FIVE_YEAR":0.1,"ONE_YEAR":0.2,"SINCE_INCEPTION":0.08,"THREE_YEAR":0.15${ten}}}},"cumulative":{"month_end":{"fund_nav":{"YTD":0.1}}},"month_end_date":"$D2026-08-31T00:00:00.000Z","quarter_end_date":"$D2026-06-30T00:00:00.000Z"},"DISTRIBUTION_HISTORY":[{"amount":null,"ex_date":"2999-12-30","record_date":"2999-12-30","payable_date":"2999-12-31"},{"amount":0.25,"ex_date":"2026-06-29","record_date":"2026-06-29","payable_date":"2026-07-07"}]}`,
     'q:{"children":"Distribution Frequency"}',
     'r:{"children":"Semi-Annually"}',
+    ...(fund.liquidation ? ['s:{"className":"block text-sea text-2xl mb-6","children":["In Liquidation",["$","sup",null,{"children":"^"}]]}'] : []),
   ]);
 }
 
@@ -334,7 +336,11 @@ function installMock(funds: () => MockFund[], hooks: { delayMs?: number; failYah
         if (!fund || fund.pageOk === false) return new Response('blocked', { status: 500 });
         return new Response(fundPage(fund));
       }
-      if (url.includes('assets.globalxetfs.com')) return new Response(HOLDINGS_CSV);
+      if (url.includes('assets.globalxetfs.com')) {
+        const fund = funds().find((f) => url.includes(`/holdings/${f.ticker.toLowerCase()}_full-holdings`));
+        if (fund?.csvOk === false) return new Response('<Error>NoSuchKey</Error>', { status: 404 });
+        return new Response(HOLDINGS_CSV);
+      }
       if (url.includes('finance.yahoo.com')) {
         const ticker = /chart\/([A-Z]+)\?/.exec(url)![1];
         if (hooks.failYahoo?.has(ticker)) return new Response('no', { status: 404 });
@@ -390,6 +396,22 @@ describe("pipeline", () => {
     expect(readdirSync(dir, { recursive: true } as any).some((name: any) => String(name).includes(".tmp-"))).toBe(false);
   });
 
+  test("console output: config with TICKERS=all, one catalog line, fund lines, two done lines from the reporter", async () => {
+    const dir = fresh(); installMock(() => THREE);
+    const lines: string[] = [];
+    console.log = (line: unknown) => { lines.push(...String(line).split("\n")); };
+    await run(dir);
+    expect(lines).toContain("              TICKERS=all");
+    expect(lines.filter((line) => line.startsWith("[ catalog  ] "))).toEqual(["[ catalog  ] 3 Global X ETFs (globalxetfs.com Explore Our ETFs table)"]);
+    expect(lines.some((line) => line === "")).toBe(false);
+    expect(lines.filter((line) => /^\[ +\d+\/3 +\] /.test(line))).toHaveLength(3);
+    expect(lines.at(-2)).toMatch(/^\[ done {5}\] 3 funds: 3 updated, 0 unchanged, 0 kept, 0 skipped, 0 failed in \d+\.\ds$/);
+    expect(lines.at(-1)).toBe("[ done     ] counts: 3 funds / 6 holdings rows / 6 history rows");
+    lines.length = 0;
+    await run(dir);
+    expect(lines.at(-2)).toMatch(/ 3 funds: 0 updated, 3 unchanged, /);
+  });
+
   test("a second identical run writes nothing, even generatedAt", async () => {
     const dir = fresh(); installMock(() => THREE); quiet();
     await run(dir);
@@ -430,6 +452,33 @@ describe("pipeline", () => {
     await run(dir);
     expect(readFileSync(join(dir, "funds", "AAA", "history", "001.json"), "utf8")).toBe(history);
     expect(index(dir).funds[0].history).toBe(2);
+  });
+
+  test("a fund in liquidation without a holdings CSV keeps its published holdings and still updates; any other fund still fails", async () => {
+    expect(isGlobalXFundInLiquidation('<span class="block text-sea text-2xl mb-6">In Liquidation<sup>^</sup></span>')).toBe(true);
+    expect(isGlobalXFundInLiquidation(fundPage({ ticker: "AAA", name: "Alpha Index ETF", liquidation: true }))).toBe(true);
+    expect(isGlobalXFundInLiquidation(fundPage({ ticker: "AAA", name: "Alpha Index ETF" }))).toBe(false);
+    expect(isGlobalXFundInLiquidation("<p>the fund is not in liquidation</p>")).toBe(false);
+    const dir = fresh(); installMock(() => THREE); quiet();
+    await run(dir);
+    const holdings = readFileSync(join(dir, "funds", "AAA", "holdings", "001.json"), "utf8");
+    const liquidating = () => [{ ...THREE[0], liquidation: true, csvOk: false }, { ...THREE[1], csvOk: false }, THREE[2]];
+    installMock(liquidating);
+    await run(dir);
+    expect(readFileSync(join(dir, "funds", "AAA", "holdings", "001.json"), "utf8")).toBe(holdings);
+    const meta = JSON.parse(readFileSync(join(dir, "funds", "AAA", "meta.json"), "utf8"));
+    expect(meta.holdings).toMatchObject({ totalRows: 2, asOf: "2026-09-25", pages: ["./holdings/001.json"] });
+    expect(meta.holdings.sourceKind).toMatch(/; kept: fund in liquidation, no current holdings CSV$/);
+    expect(index(dir).funds.find((f: any) => f.ticker === "AAA").holdings).toBe(2);
+    const once = snapshot(dir);
+    await new Promise((resolve) => setTimeout(resolve, 1100));
+    await run(dir);
+    expect(snapshot(dir)).toEqual(once);
+    const lines: string[] = [];
+    console.log = (line: unknown) => { lines.push(String(line)); };
+    await run(dir, { TICKERS: "AAA,BBB" });
+    expect(lines.some((line) => /AAA/.test(line) && /unchanged/.test(line))).toBe(true);
+    expect(lines.some((line) => /BBB/.test(line) && /failed/.test(line) && /HTTP 404/.test(line))).toBe(true);
   });
 
   test("filters exclude funds without a figure and write nothing for them", async () => {

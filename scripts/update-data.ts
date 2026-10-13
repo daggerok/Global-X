@@ -21,11 +21,12 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     performanceRanges: 'PERFORMANCE', totalReturnRanges: 'TOTAL_RETURN',
     skipVanEck: 'SKIP_VANECK', skipProShares: 'SKIP_PROSHARES',
     skipWisdomTree: 'SKIP_WISDOMTREE', skipGoldmanSachs: 'SKIP_GOLDMANSACHS',
-    skipGlobalX: 'SKIP_GLOBALX',
+    skipGlobalX: 'SKIP_GLOBALX', skipNorthernTrust: 'SKIP_NORTHERNTRUST',
   };
-  const range = (v: any): string => v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
+  const range = (v: any): string => typeof v === 'string' ? v : v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
   for (const [key, value] of Object.entries(config)) {
-    const name = aliases[key] ?? key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase();
+    if (['proxyGapMs', 'fetchTimeoutMs', 'retryDelayMs'].includes(key)) continue;
+    const name = aliases[key] ?? (/^[A-Z0-9_]+$/.test(key) ? key : key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase());
     if (name === 'PERFORMANCE' || name === 'TOTAL_RETURN') {
       for (const period of ['YTD', '1Y', '3Y', '5Y', '10Y']) values.set(`${name}_${period}`, range(value?.[period]));
     } else if (['AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD'].includes(name)) {
@@ -40,13 +41,18 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     return (ai < 0 ? first.length : ai) - (bi < 0 ? first.length : bi) || a.localeCompare(b);
   });
 }
+function outputConfigValue(key: string, value: string): string {
+  if (/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key)) return '<redacted>';
+  if (key === 'TICKERS' && ['', 'null', 'undefined'].includes(value)) return 'all';
+  return outputClean(value);
+}
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${outputConfigValue(key, value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
-    /^(TICKERS|CATEGORY|AUM|TER|DIVIDEND_YIELD|SEC_YIELD|PERFORMANCE_|TOTAL_RETURN_)/.test(name) &&
+    /^(CATEGORY|AUM|TER|DIVIDEND_YIELD|SEC_YIELD|PERFORMANCE_|TOTAL_RETURN_)/.test(name) &&
     !['', ':', 'null', 'all'].includes(value));
 }
 function outputPrintFilter(selected: number, total: number, deferred = false): void {
@@ -78,18 +84,29 @@ async function outputInspectFund(root: URL | string, ticker: string): Promise<{ 
 }
 const outputCount = (value: any): unknown => typeof value === 'number' ? value : Array.isArray(value) ? value.length : value?.totalRows ?? value?.rows?.length ?? null;
 const outputScalar = (value: any): any => value && typeof value === 'object' ? value.display ?? value.value ?? null : value;
+const outputUnits: Record<string, number> = { K: 1e3, M: 1e6, B: 1e9, T: 1e12, THOUSAND: 1e3, MILLION: 1e6, BILLION: 1e9, TRILLION: 1e12 };
 function outputMoney(value: any): string {
-  const raw = outputScalar(value);
+  const raw = value && typeof value === 'object' && typeof value.value === 'number' && Number.isFinite(value.value) ? value.value : outputScalar(value);
   if (raw === null || raw === undefined || raw === '—' || raw === '--') return 'null';
   const text = String(raw).replace(/[$,\s]/g, '');
-  const match = text.match(/^([+-]?[\d.]+)([KMBT])?$/i);
+  const match = text.match(/^([+-]?[\d.]+)(K|M|B|T|Thousand|Million|Billion|Trillion)?$/i);
   if (!match) return outputClean(raw);
-  const number = Number(match[1]) * ({ K: 1e3, M: 1e6, B: 1e9, T: 1e12 }[match[2]?.toUpperCase() as 'K' | 'M' | 'B' | 'T'] ?? 1);
+  const number = Number(match[1]) * (outputUnits[match[2]?.toUpperCase() ?? ''] ?? 1);
   if (!Number.isFinite(number)) return 'null';
   for (const [unit, scale] of [['T', 1e12], ['B', 1e9], ['M', 1e6], ['K', 1e3]] as const) {
     if (Math.abs(number) >= scale) return `$${(number / scale).toFixed(1)}${unit}`;
   }
   return `$${number.toFixed(2)}`;
+}
+/** Yields: rounded to 2 decimals without trailing zeros; placeholders are omitted like null. */
+function outputPercent(value: any): unknown {
+  const raw = outputScalar(value);
+  if (raw === null || raw === undefined) return null;
+  if (typeof raw === 'number') return Number.isFinite(raw) ? Number(raw.toFixed(2)) : null;
+  const text = String(raw).trim().replace(/%$/, '').trim();
+  if (['', '-', '—', '--', 'n/a'].includes(text.toLowerCase())) return null;
+  const number = Number(text.replace(/,/g, ''));
+  return Number.isFinite(number) ? Number(number.toFixed(2)) : outputClean(raw);
 }
 function outputFundLine(index: number, total: number, ticker: string, status: string, data: any = {}, reason?: unknown): string {
   const width = Math.max(2, String(total).length);
@@ -110,21 +127,34 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('divs', outputCount(data.worksheets?.Distributions ?? data.distributions)),
     field('netAssets', outputMoney(data.netAssets ?? data.aum)),
     field('total', outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)),
-    field('div', outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
-    field('sec', outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
+    field('div', outputPercent(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
+    field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
   return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
+  const tally = new Map<string, number>();
   return {
     before: (ticker: string) => outputInspectFund(root, ticker),
     async result(ticker: string, before: { digest: string }, status?: string, reason?: unknown, extra: any = {}) {
       const after = await outputInspectFund(root, ticker);
-      console.log(outputFundLine(++completed, total, ticker, status ?? (before.digest === after.digest ? 'unchanged' : 'updated'), { ...after.meta, ...extra }, reason));
+      const final = status ?? (before.digest === after.digest ? 'unchanged' : 'updated');
+      tally.set(final, (tally.get(final) ?? 0) + 1);
+      console.log(outputFundLine(++completed, total, ticker, final, { ...after.meta, ...extra }, reason));
+    },
+    /** First [ done ] line: the statuses of every fund line this reporter printed. */
+    summary(startedAt: number): string {
+      const order = ['updated', 'unchanged', 'kept', 'skipped', 'failed'];
+      const statuses = [...order, ...[...tally.keys()].filter(status => !order.includes(status))];
+      return `[ done     ] ${completed} fund${completed === 1 ? '' : 's'}: ${statuses.map(status => `${tally.get(status) ?? 0} ${status}`).join(', ')} in ${((Date.now() - startedAt) / 1000).toFixed(1)}s`;
     },
   };
+}
+/** Second [ done ] line: published totals. */
+function outputCounts(funds: number, holdings: number, history: number): string {
+  return `[ done     ] counts: ${funds.toLocaleString('en-US')} funds / ${holdings.toLocaleString('en-US')} holdings rows / ${history.toLocaleString('en-US')} history rows`;
 }
 
 /**
@@ -1207,6 +1237,18 @@ const FUND_DETAIL_LABELS = new Set([
   'daily change (%)',
 ]);
 
+/** Appended to the holdings source kind while a fund in liquidation keeps its last published holdings. */
+const LIQUIDATION_KEPT_NOTE = '; kept: fund in liquidation, no current holdings CSV';
+
+/**
+ * A fund being wound down carries an "In Liquidation" label under its name
+ * (BTRN, 2026-10). Its page still publishes current fund details, but the
+ * dated holdings CSV it links answers HTTP 404.
+ */
+export function isGlobalXFundInLiquidation(html: string): boolean {
+  return /(?:>|\\?")\s*In Liquidation\b/.test(html);
+}
+
 /** The `Fund Details` panel: CUSIP, ISIN, NAV, market price, exchange, share count. */
 export function parseGlobalXFundDetails(html: string): GlobalXFundDetails {
   const flight = extractNextFlightText(html);
@@ -1949,6 +1991,21 @@ async function readPreviousHistory(ticker: string, meta: Record<string, any> | n
   return rows;
 }
 
+/** The previously published holdings (headers and all page rows), or null when none were published. */
+async function readPreviousHoldings(ticker: string, meta: Record<string, any> | null): Promise<{ headers: string[]; rows: Array<Record<string, string>> } | null> {
+  const pages: unknown = meta?.holdings?.pages;
+  if (!Array.isArray(pages) || !pages.length) return null;
+  let headers: string[] = [];
+  const rows: Array<Record<string, string>> = [];
+  for (const page of pages) {
+    const envelope = await readJsonIfExists(path.join(API_ROOT, 'funds', ticker, String(page)));
+    if (!envelope || !Array.isArray(envelope.rows)) return null;
+    if (Array.isArray(envelope.headers)) headers = envelope.headers;
+    rows.push(...envelope.rows);
+  }
+  return { headers, rows };
+}
+
 /** `Global X Silver Miners ETF` (N-PORT series name) vs `Silver Miners ETF` (catalog name). */
 export function sameSeries(seriesName: string | null | undefined, fundName: string): boolean {
   const norm = (value: string) => cleanText(value).toLowerCase().replace(/^global x\s+/, '').replace(/[^a-z0-9]+/g, '');
@@ -2068,33 +2125,49 @@ async function updateFund(
         await writeIfChanged(path.join(API_ROOT, 'raw', `${ticker}-holdings.csv`), csv);
       }
     } catch (error) {
-      if (!config.edgarFallback) throw error;
-      outputNote(`[ ${'holdings'.padEnd(9)}] ${ticker}: holdings CSV unavailable (${errorMessage(error)}), trying EDGAR`);
-      const xml = await fetchText(globalxEdgarFilingsUrl(), secHeaders(config), config, `${ticker} EDGAR`);
-      const filings = [...xml.matchAll(/href=["'](\/Archives\/[^"']+primary_doc\.xml)["']/gi)].map((match) => match[1]);
-      if (!filings.length) throw new Error(`${ticker}: no N-PORT primary_doc.xml link on the EDGAR page`);
-      // The page lists the filings of every series of the trust: take the first one that is this fund's.
-      let chosen: { nport: ReturnType<typeof parseNportXml>; filing: string } | null = null;
-      for (const filing of filings.slice(0, MAX_NPORT_FILINGS_SCANNED)) {
-        const candidate = parseNportXml(await fetchText(`https://www.sec.gov${filing}`, secHeaders(config), config, `${ticker} N-PORT`));
-        if (sameSeries(candidate.seriesName, fund.name)) { chosen = { nport: candidate, filing }; break; }
+      // A fund in liquidation no longer publishes its holdings CSV: keep the
+      // last published holdings and still refresh the fund details.
+      const kept = isGlobalXFundInLiquidation(pageHtml) ? await readPreviousHoldings(ticker, previousMeta) : null;
+      if (kept && previousMeta?.holdings) {
+        outputNote(`[ ${'holdings'.padEnd(9)}] ${ticker}: fund in liquidation, holdings CSV unavailable (${errorMessage(error)}), keeping the published holdings`);
+        holdings = {
+          ...holdings,
+          headers: kept.headers.length ? kept.headers : holdings.headers,
+          rows: kept.rows,
+          asOfDate: toIsoDate(previousMeta.holdings.asOf) || '',
+          totalRows: kept.rows.length,
+          source: String(previousMeta.holdings.source || holdings.source),
+          sourceKind: `${String(previousMeta.holdings.sourceKind || holdings.sourceKind).replace(LIQUIDATION_KEPT_NOTE, '')}${LIQUIDATION_KEPT_NOTE}`,
+        };
+      } else {
+        if (!config.edgarFallback) throw error;
+        outputNote(`[ ${'holdings'.padEnd(9)}] ${ticker}: holdings CSV unavailable (${errorMessage(error)}), trying EDGAR`);
+        const xml = await fetchText(globalxEdgarFilingsUrl(), secHeaders(config), config, `${ticker} EDGAR`);
+        const filings = [...xml.matchAll(/href=["'](\/Archives\/[^"']+primary_doc\.xml)["']/gi)].map((match) => match[1]);
+        if (!filings.length) throw new Error(`${ticker}: no N-PORT primary_doc.xml link on the EDGAR page`);
+        // The page lists the filings of every series of the trust: take the first one that is this fund's.
+        let chosen: { nport: ReturnType<typeof parseNportXml>; filing: string } | null = null;
+        for (const filing of filings.slice(0, MAX_NPORT_FILINGS_SCANNED)) {
+          const candidate = parseNportXml(await fetchText(`https://www.sec.gov${filing}`, secHeaders(config), config, `${ticker} N-PORT`));
+          if (sameSeries(candidate.seriesName, fund.name)) { chosen = { nport: candidate, filing }; break; }
+        }
+        if (!chosen) throw new Error(`${ticker}: no N-PORT filing of this series among the latest ${Math.min(filings.length, MAX_NPORT_FILINGS_SCANNED)} on the EDGAR page`);
+        const nport = chosen.nport;
+        // The fallback may never replace fresher published holdings.
+        const publishedAsOf = toIsoDate(previousMeta?.holdings?.asOf);
+        if (publishedAsOf && toIsoDate(nport.repPdDate) < publishedAsOf) {
+          throw new Error(`${ticker}: N-PORT report period ${nport.repPdDate} is older than the published holdings (${publishedAsOf}), keeping them`);
+        }
+        holdings = {
+          ...holdings,
+          headers: [...HOLDINGS_HEADERS],
+          rows: nportToHoldings(nport.positions, details.netAssets ?? null),
+          asOfDate: nport.repPdDate,
+          totalRows: nport.positions.length,
+          source: `https://www.sec.gov${chosen.filing}`,
+          sourceKind: 'SEC EDGAR Form N-PORT-P (fallback)',
+        };
       }
-      if (!chosen) throw new Error(`${ticker}: no N-PORT filing of this series among the latest ${Math.min(filings.length, MAX_NPORT_FILINGS_SCANNED)} on the EDGAR page`);
-      const nport = chosen.nport;
-      // The fallback may never replace fresher published holdings.
-      const publishedAsOf = toIsoDate(previousMeta?.holdings?.asOf);
-      if (publishedAsOf && toIsoDate(nport.repPdDate) < publishedAsOf) {
-        throw new Error(`${ticker}: N-PORT report period ${nport.repPdDate} is older than the published holdings (${publishedAsOf}), keeping them`);
-      }
-      holdings = {
-        ...holdings,
-        headers: [...HOLDINGS_HEADERS],
-        rows: nportToHoldings(nport.positions, details.netAssets ?? null),
-        asOfDate: nport.repPdDate,
-        totalRows: nport.positions.length,
-        source: `https://www.sec.gov${chosen.filing}`,
-        sourceKind: 'SEC EDGAR Form N-PORT-P (fallback)',
-      };
     }
   }
 
@@ -2628,6 +2701,7 @@ export async function main(env: Record<string, string | undefined> = process.env
       fundPage: String(entry.fundPage || ''),
     }));
   }
+  console.log(`[ catalog  ] ${lineup.length} Global X ETFs (${config.skipGlobalX ? 'previous index, SKIP_GLOBALX' : 'globalxetfs.com Explore Our ETFs table'})`);
 
   // Strict: a requested ticker the provider does not list is an error, never a silently empty run.
   if (config.tickers.length) {
@@ -2733,10 +2807,8 @@ export async function main(env: Record<string, string | undefined> = process.env
     }
   }
 
-  console.log(
-    `Done. updated=${stats.updated} unchanged=${stats.unchanged} skipped=${stats.skipped} failed=${stats.failed} · ` +
-      `funds=${counts.funds} holdings=${counts.holdings} history=${counts.history}`,
-  );
+  console.log(output.summary(startedAt));
+  console.log(outputCounts(counts.funds, counts.holdings, counts.history));
   if (attempted.length > 0 && stats.failed === attempted.length) {
     throw new Error(`every selected fund failed (${stats.failed} of ${attempted.length})`);
   }
