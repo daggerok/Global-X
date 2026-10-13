@@ -2,7 +2,7 @@
   "ticker": "DRIV",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 77,
+  "totalRows": 78,
   "headers": [
     "Name",
     "Ticker",
@@ -14,732 +14,12 @@
   ],
   "rows": [
     {
-      "Name": "MICROSOFT CORP",
-      "Ticker": "MSFT",
-      "Identifier": "2588173",
-      "Weight": "4.31%",
-      "Market Value": "15,405,200.37",
-      "Shares Held": "28,791.00",
-      "Asset Category": "Equity",
-      "Price": "535.0699999999999"
-    },
-    {
-      "Name": "NVIDIA CORP",
-      "Ticker": "NVDA",
-      "Identifier": "2379504",
-      "Weight": "3.45%",
-      "Market Value": "12,330,907.68",
-      "Shares Held": "53,781.00",
-      "Asset Category": "Equity",
-      "Price": "229.28"
-    },
-    {
-      "Name": "INTEL CORP",
-      "Ticker": "INTC",
-      "Identifier": "2463247",
-      "Weight": "3.25%",
-      "Market Value": "11,618,454.30",
-      "Shares Held": "110,969.00",
-      "Asset Category": "Equity",
-      "Price": "104.7"
-    },
-    {
-      "Name": "TESLA INC",
-      "Ticker": "TSLA",
-      "Identifier": "B616C79",
-      "Weight": "3.10%",
-      "Market Value": "11,087,967.10",
-      "Shares Held": "28,973.00",
-      "Asset Category": "Equity",
-      "Price": "382.7"
-    },
-    {
-      "Name": "ALPHABET INC-CL A",
-      "Ticker": "GOOGL",
-      "Identifier": "BYVY8G0",
-      "Weight": "3.03%",
-      "Market Value": "10,810,731.72",
-      "Shares Held": "30,742.00",
-      "Asset Category": "Equity",
-      "Price": "351.66"
-    },
-    {
-      "Name": "QUALCOMM INC",
-      "Ticker": "QCOM",
-      "Identifier": "2714923",
-      "Weight": "2.66%",
-      "Market Value": "9,494,550.00",
-      "Shares Held": "54,100.00",
-      "Asset Category": "Equity",
-      "Price": "175.5"
-    },
-    {
-      "Name": "TOYOTA MOTOR CORP",
-      "Ticker": "7203 JP",
-      "Identifier": "6900643",
-      "Weight": "2.52%",
-      "Market Value": "8,999,777.13",
-      "Shares Held": "489,847.00",
-      "Asset Category": "Equity",
-      "Price": "18.37262886166497"
-    },
-    {
-      "Name": "BLOOM ENERGY CORP- A",
-      "Ticker": "BE",
-      "Identifier": "BDD1BB8",
-      "Weight": "1.97%",
-      "Market Value": "7,021,756.50",
-      "Shares Held": "25,033.00",
-      "Asset Category": "Equity",
-      "Price": "280.5"
-    },
-    {
-      "Name": "RIO TINTO PLC",
-      "Ticker": "RIO LN",
-      "Identifier": "0718875",
-      "Weight": "1.82%",
-      "Market Value": "6,496,165.34",
-      "Shares Held": "68,929.00",
-      "Asset Category": "Equity",
-      "Price": "94.24429978673707"
-    },
-    {
-      "Name": "GENERAL MOTORS CO",
-      "Ticker": "GM",
-      "Identifier": "B665KZ5",
-      "Weight": "1.81%",
-      "Market Value": "6,479,248.14",
-      "Shares Held": "78,318.00",
-      "Asset Category": "Equity",
-      "Price": "82.72999999999999"
-    },
-    {
-      "Name": "SAMSUNG SDI CO LTD",
-      "Ticker": "006400 KS",
-      "Identifier": "6771645",
-      "Weight": "1.80%",
-      "Market Value": "6,419,845.81",
-      "Shares Held": "15,147.00",
-      "Asset Category": "Equity",
-      "Price": "423.8361266257344"
-    },
-    {
-      "Name": "INFINEON TECHNOLOGIES AG",
-      "Ticker": "IFX GR",
-      "Identifier": "5889505",
-      "Weight": "1.69%",
-      "Market Value": "6,040,863.52",
-      "Shares Held": "91,668.00",
-      "Asset Category": "Equity",
-      "Price": "65.89937077278876"
-    },
-    {
-      "Name": "COHERENT CORP",
-      "Ticker": "COHR",
-      "Identifier": "BNG8Z81",
-      "Weight": "1.68%",
-      "Market Value": "6,014,808.80",
-      "Shares Held": "19,240.00",
-      "Asset Category": "Equity",
-      "Price": "312.62"
-    },
-    {
-      "Name": "WABTEC CORP",
-      "Ticker": "WAB",
-      "Identifier": "2955733",
-      "Weight": "1.65%",
-      "Market Value": "5,905,261.27",
-      "Shares Held": "20,689.00",
-      "Asset Category": "Equity",
-      "Price": "285.4299999999999"
-    },
-    {
-      "Name": "NEBIUS GROUP NV",
-      "Ticker": "NBIS",
-      "Identifier": "B5BSZB3",
-      "Weight": "1.64%",
-      "Market Value": "5,868,524.22",
-      "Shares Held": "26,546.00",
-      "Asset Category": "Equity",
-      "Price": "221.07"
-    },
-    {
-      "Name": "LG ENERGY SOLUTION",
-      "Ticker": "373220 KS",
-      "Identifier": "BNSP8W5",
-      "Weight": "1.64%",
-      "Market Value": "5,843,996.28",
-      "Shares Held": "19,565.00",
-      "Asset Category": "Equity",
-      "Price": "298.6964620495783"
-    },
-    {
-      "Name": "TOKAI CARBON CO LTD",
-      "Ticker": "5301 JP",
-      "Identifier": "6894003",
-      "Weight": "1.63%",
-      "Market Value": "5,835,713.66",
-      "Shares Held": "405,912.00",
-      "Asset Category": "Equity",
-      "Price": "14.37679511815369"
-    },
-    {
-      "Name": "SKYWORKS SOLUTIONS INC",
-      "Ticker": "SWKS",
-      "Identifier": "2961053",
-      "Weight": "1.62%",
-      "Market Value": "5,777,022.75",
-      "Shares Held": "75,665.00",
-      "Asset Category": "Equity",
-      "Price": "76.35"
-    },
-    {
-      "Name": "SKC CO LTD",
-      "Ticker": "011790 KS",
-      "Identifier": "6018085",
-      "Weight": "1.53%",
-      "Market Value": "5,477,953.07",
-      "Shares Held": "68,094.00",
-      "Asset Category": "Equity",
-      "Price": "80.44692733574178"
-    },
-    {
-      "Name": "NXP SEMICONDUCTORS NV",
-      "Ticker": "NXPI",
-      "Identifier": "B505PN7",
-      "Weight": "1.40%",
-      "Market Value": "5,015,223.36",
-      "Shares Held": "22,043.00",
-      "Asset Category": "Equity",
-      "Price": "227.52"
-    },
-    {
-      "Name": "FORD MOTOR CO",
-      "Ticker": "F",
-      "Identifier": "2615468",
-      "Weight": "1.37%",
-      "Market Value": "4,896,636.01",
-      "Shares Held": "402,353.00",
-      "Asset Category": "Equity",
-      "Price": "12.17"
-    },
-    {
-      "Name": "NEXTEER AUTOMOTIVE GROUP LTD",
-      "Ticker": "1316 HK",
-      "Identifier": "BBPD5F0",
-      "Weight": "1.36%",
-      "Market Value": "4,851,158.20",
-      "Shares Held": "8,376,600.00",
-      "Asset Category": "Equity",
-      "Price": "0.5791321299811379"
-    },
-    {
-      "Name": "ATI INC",
-      "Ticker": "ATI",
-      "Identifier": "2526117",
-      "Weight": "1.35%",
-      "Market Value": "4,820,555.52",
-      "Shares Held": "25,128.00",
-      "Asset Category": "Equity",
-      "Price": "191.84"
-    },
-    {
-      "Name": "ITT INC",
-      "Ticker": "ITT",
-      "Identifier": "BZBY209",
-      "Weight": "1.34%",
-      "Market Value": "4,770,455.30",
-      "Shares Held": "23,690.00",
-      "Asset Category": "Equity",
-      "Price": "201.37"
-    },
-    {
-      "Name": "BYD CO LTD-H",
-      "Ticker": "1211 HK",
-      "Identifier": "6536651",
-      "Weight": "1.28%",
-      "Market Value": "4,590,166.86",
-      "Shares Held": "476,500.00",
-      "Asset Category": "Equity",
-      "Price": "9.63308889821616"
-    },
-    {
-      "Name": "SITIME CORP",
-      "Ticker": "SITM",
-      "Identifier": "BKS48R6",
-      "Weight": "1.26%",
-      "Market Value": "4,507,043.20",
-      "Shares Held": "7,360.00",
-      "Asset Category": "Equity",
-      "Price": "612.37"
-    },
-    {
-      "Name": "DAUCH CORPORATION",
-      "Ticker": "DCH",
-      "Identifier": "2382416",
-      "Weight": "1.24%",
-      "Market Value": "4,418,324.82",
-      "Shares Held": "779,246.00",
-      "Asset Category": "Equity",
-      "Price": "5.670000000000001"
-    },
-    {
-      "Name": "HL MANDO CORPORATION",
-      "Ticker": "204320 KS",
-      "Identifier": "BQJZQJ8",
-      "Weight": "1.24%",
-      "Market Value": "4,417,452.59",
-      "Shares Held": "133,418.00",
-      "Asset Category": "Equity",
-      "Price": "33.10986965776732"
-    },
-    {
-      "Name": "DENSO CORP",
-      "Ticker": "6902 JP",
-      "Identifier": "6640381",
-      "Weight": "1.23%",
-      "Market Value": "4,376,371.54",
-      "Shares Held": "379,673.00",
-      "Asset Category": "Equity",
-      "Price": "11.52668622735881"
-    },
-    {
-      "Name": "ON SEMICONDUCTOR",
-      "Ticker": "ON",
-      "Identifier": "2583576",
-      "Weight": "1.21%",
-      "Market Value": "4,325,553.76",
-      "Shares Held": "55,792.00",
-      "Asset Category": "Equity",
-      "Price": "77.53"
-    },
-    {
-      "Name": "ERAMET",
-      "Ticker": "ERA FP",
-      "Identifier": "4017017",
-      "Weight": "1.17%",
-      "Market Value": "4,159,821.72",
-      "Shares Held": "81,983.00",
-      "Asset Category": "Equity",
-      "Price": "50.74005244989815"
-    },
-    {
-      "Name": "STMICROELECTRONICS NV",
-      "Ticker": "STMPA FP",
-      "Identifier": "5962332",
-      "Weight": "1.16%",
-      "Market Value": "4,148,913.68",
-      "Shares Held": "79,616.00",
-      "Asset Category": "Equity",
-      "Price": "52.11155647106109"
-    },
-    {
-      "Name": "RENAULT SA",
-      "Ticker": "RNO FP",
-      "Identifier": "4712798",
-      "Weight": "1.15%",
-      "Market Value": "4,107,977.68",
-      "Shares Held": "138,459.00",
-      "Asset Category": "Equity",
-      "Price": "29.66927162553536"
-    },
-    {
-      "Name": "VOLKSWAGEN AG",
-      "Ticker": "VOW3 GR",
-      "Identifier": "5497168",
-      "Weight": "1.15%",
-      "Market Value": "4,103,844.69",
-      "Shares Held": "53,904.00",
-      "Asset Category": "Equity",
-      "Price": "76.13247050311665"
-    },
-    {
-      "Name": "ADVANCED ENERGY SOLUTION HOL",
-      "Ticker": "6781 TT",
-      "Identifier": "BMXC4S2",
-      "Weight": "1.15%",
-      "Market Value": "4,095,269.41",
-      "Shares Held": "128,200.00",
-      "Asset Category": "Equity",
-      "Price": "31.94437917316693"
-    },
-    {
-      "Name": "AMBARELLA INC",
-      "Ticker": "AMBA",
-      "Identifier": "B7KH3G6",
-      "Weight": "1.15%",
-      "Market Value": "4,093,810.16",
-      "Shares Held": "60,712.00",
-      "Asset Category": "Equity",
-      "Price": "67.43"
-    },
-    {
-      "Name": "WNC CORP",
-      "Ticker": "6285 TT",
-      "Identifier": "6682598",
-      "Weight": "1.14%",
-      "Market Value": "4,059,914.50",
-      "Shares Held": "505,400.00",
-      "Asset Category": "Equity",
-      "Price": "8.033071824297586"
-    },
-    {
-      "Name": "HYSTER-YALE INC",
-      "Ticker": "HY",
-      "Identifier": "B7LG306",
-      "Weight": "1.11%",
-      "Market Value": "3,973,842.18",
-      "Shares Held": "122,877.00",
-      "Asset Category": "Equity",
-      "Price": "32.34"
-    },
-    {
-      "Name": "LI AUTO INC-CLASS A",
-      "Ticker": "2015 HK",
-      "Identifier": "BMW5M00",
-      "Weight": "1.10%",
-      "Market Value": "3,933,382.86",
-      "Shares Held": "691,200.00",
-      "Asset Category": "Equity",
-      "Price": "5.690658072916666"
-    },
-    {
-      "Name": "QUIMICA Y MINERA CHIL-SP ADR",
-      "Ticker": "SQM",
-      "Identifier": "2771122",
-      "Weight": "1.10%",
-      "Market Value": "3,924,137.91",
-      "Shares Held": "61,401.00",
-      "Asset Category": "Equity",
-      "Price": "63.91"
-    },
-    {
-      "Name": "GS YUASA CORP",
-      "Ticker": "6674 JP",
-      "Identifier": "6744250",
-      "Weight": "1.08%",
-      "Market Value": "3,872,202.41",
-      "Shares Held": "111,368.00",
-      "Asset Category": "Equity",
-      "Price": "34.76943475684218"
-    },
-    {
-      "Name": "NISSAN MOTOR CO LTD",
-      "Ticker": "7201 JP",
-      "Identifier": "6642860",
-      "Weight": "1.08%",
-      "Market Value": "3,861,130.73",
-      "Shares Held": "2,153,736.00",
-      "Asset Category": "Equity",
-      "Price": "1.792759525772889"
-    },
-    {
-      "Name": "BAIDU INC - SPON ADR",
-      "Ticker": "BIDU",
-      "Identifier": "B0FXT17",
-      "Weight": "1.07%",
-      "Market Value": "3,834,303.55",
-      "Shares Held": "44,935.00",
-      "Asset Category": "Equity",
-      "Price": "85.33"
-    },
-    {
-      "Name": "ENERSYS",
-      "Ticker": "ENS",
-      "Identifier": "B020GQ5",
-      "Weight": "1.07%",
-      "Market Value": "3,833,549.20",
-      "Shares Held": "21,320.00",
-      "Asset Category": "Equity",
-      "Price": "179.81"
-    },
-    {
-      "Name": "GEELY AUTOMOBILE HOLDINGS LT",
-      "Ticker": "175 HK",
-      "Identifier": "6531827",
-      "Weight": "1.04%",
-      "Market Value": "3,704,637.26",
-      "Shares Held": "1,921,600.00",
-      "Asset Category": "Equity",
-      "Price": "1.927891996253122"
-    },
-    {
-      "Name": "ALBEMARLE CORP",
-      "Ticker": "ALB",
-      "Identifier": "2046853",
-      "Weight": "1.03%",
-      "Market Value": "3,674,987.03",
-      "Shares Held": "36,289.00",
-      "Asset Category": "Equity",
-      "Price": "101.27"
-    },
-    {
-      "Name": "FORVIA",
-      "Ticker": "FRVIA FP",
-      "Identifier": "4400446",
-      "Weight": "1.02%",
-      "Market Value": "3,658,655.85",
-      "Shares Held": "386,178.00",
-      "Asset Category": "Equity",
-      "Price": "9.474014185168498"
-    },
-    {
-      "Name": "IGO LTD",
-      "Ticker": "IGO AU",
-      "Identifier": "6439567",
-      "Weight": "1.01%",
-      "Market Value": "3,602,928.72",
-      "Shares Held": "849,586.00",
-      "Asset Category": "Equity",
-      "Price": "4.240805192175954"
-    },
-    {
-      "Name": "BLACKBERRY LTD",
-      "Ticker": "BB",
-      "Identifier": "BCBHZ42",
-      "Weight": "1.00%",
-      "Market Value": "3,589,224.21",
-      "Shares Held": "402,831.00",
-      "Asset Category": "Equity",
-      "Price": "8.91"
-    },
-    {
-      "Name": "CABOT CORP",
-      "Ticker": "CBT",
-      "Identifier": "2162500",
-      "Weight": "0.98%",
-      "Market Value": "3,511,705.89",
-      "Shares Held": "46,879.00",
-      "Asset Category": "Equity",
-      "Price": "74.91"
-    },
-    {
-      "Name": "SOCIONEXT INC",
-      "Ticker": "6526 JP",
-      "Identifier": "BMTVX75",
-      "Weight": "0.98%",
-      "Market Value": "3,508,083.25",
-      "Shares Held": "263,443.00",
-      "Asset Category": "Equity",
-      "Price": "13.31628948197523"
-    },
-    {
-      "Name": "AMPRIUS TECHNOLOGIES INC",
-      "Ticker": "AMPX",
-      "Identifier": "BPSKN52",
-      "Weight": "0.97%",
-      "Market Value": "3,451,490.56",
-      "Shares Held": "365,624.00",
-      "Asset Category": "Equity",
-      "Price": "9.44"
-    },
-    {
-      "Name": "TIANQI LITHIUM CORP-H",
-      "Ticker": "9696 HK",
-      "Identifier": "BMZ3RS4",
-      "Weight": "0.95%",
-      "Market Value": "3,402,430.44",
-      "Shares Held": "972,400.00",
-      "Asset Category": "Equity",
-      "Price": "3.499002920608803"
-    },
-    {
-      "Name": "VISTEON CORP",
-      "Ticker": "VC",
-      "Identifier": "B4N0JJ6",
-      "Weight": "0.94%",
-      "Market Value": "3,365,087.70",
-      "Shares Held": "39,390.00",
-      "Asset Category": "Equity",
-      "Price": "85.43"
-    },
-    {
-      "Name": "STELLANTIS NV",
-      "Ticker": "STLAM IM",
-      "Identifier": "BMD8KX7",
-      "Weight": "0.94%",
-      "Market Value": "3,360,399.24",
-      "Shares Held": "749,798.00",
-      "Asset Category": "Equity",
-      "Price": "4.481739401812222"
-    },
-    {
-      "Name": "GENTHERM INC",
-      "Ticker": "THRM",
-      "Identifier": "B8JFD24",
-      "Weight": "0.93%",
-      "Market Value": "3,322,676.00",
-      "Shares Held": "111,950.00",
-      "Asset Category": "Equity",
-      "Price": "29.68"
-    },
-    {
-      "Name": "PLS GROUP LTD",
-      "Ticker": "PLS AU",
-      "Identifier": "B2368L5",
-      "Weight": "0.92%",
-      "Market Value": "3,288,997.62",
-      "Shares Held": "1,347,258.00",
-      "Asset Category": "Equity",
-      "Price": "2.441252989405148"
-    },
-    {
-      "Name": "REPT BATTERO ENERGY CO LTD-H",
-      "Ticker": "666 HK",
-      "Identifier": "BNDWG50",
-      "Weight": "0.92%",
-      "Market Value": "3,280,841.62",
-      "Shares Held": "2,992,200.00",
-      "Asset Category": "Equity",
-      "Price": "1.096464681505247"
-    },
-    {
-      "Name": "PLUG POWER INC",
-      "Ticker": "PLUG",
-      "Identifier": "2508386",
-      "Weight": "0.89%",
-      "Market Value": "3,184,513.92",
-      "Shares Held": "1,895,544.00",
-      "Asset Category": "Equity",
-      "Price": "1.68"
-    },
-    {
-      "Name": "SERES GROUP CO LTD-H",
-      "Ticker": "9927 HK",
-      "Identifier": "BRDWN24",
-      "Weight": "0.89%",
-      "Market Value": "3,183,036.33",
-      "Shares Held": "739,500.00",
-      "Asset Category": "Equity",
-      "Price": "4.304308762677485"
-    },
-    {
-      "Name": "NIO INC - ADR",
-      "Ticker": "NIO",
-      "Identifier": "BFZX9H8",
-      "Weight": "0.89%",
-      "Market Value": "3,165,095.90",
-      "Shares Held": "884,105.00",
-      "Asset Category": "Equity",
-      "Price": "3.58"
-    },
-    {
-      "Name": "XPENG INC - ADR",
-      "Ticker": "XPEV",
-      "Identifier": "BMXR2T4",
-      "Weight": "0.88%",
-      "Market Value": "3,156,476.40",
-      "Shares Held": "318,836.00",
-      "Asset Category": "Equity",
-      "Price": "9.9"
-    },
-    {
-      "Name": "GANFENG LITHIUM GROUP CO L-H",
-      "Ticker": "1772 HK",
-      "Identifier": "BZ9NS11",
-      "Weight": "0.88%",
-      "Market Value": "3,145,590.46",
-      "Shares Held": "822,333.00",
-      "Asset Category": "Equity",
-      "Price": "3.825202758493214"
-    },
-    {
-      "Name": "LITHIUM AMERICAS CORP",
-      "Ticker": "LAC CN",
-      "Identifier": "BRBS357",
-      "Weight": "0.87%",
-      "Market Value": "3,107,076.98",
-      "Shares Held": "1,331,891.00",
-      "Asset Category": "Equity",
-      "Price": "2.332831275231982"
-    },
-    {
-      "Name": "MOBILEYE GLOBAL INC-A",
-      "Ticker": "MBLY",
-      "Identifier": "BLFH8G4",
-      "Weight": "0.87%",
-      "Market Value": "3,105,170.80",
-      "Shares Held": "437,348.00",
-      "Asset Category": "Equity",
-      "Price": "7.1"
-    },
-    {
-      "Name": "ALLEGRO MICROSYSTEMS INC",
-      "Ticker": "ALGM",
-      "Identifier": "BN4LSB6",
-      "Weight": "0.85%",
-      "Market Value": "3,048,135.58",
-      "Shares Held": "85,694.00",
-      "Asset Category": "Equity",
-      "Price": "35.57"
-    },
-    {
-      "Name": "LITHIUM ARGENTINA AG",
-      "Ticker": "LAR CN",
-      "Identifier": "BS891B2",
-      "Weight": "0.85%",
-      "Market Value": "3,022,797.65",
-      "Shares Held": "575,319.00",
-      "Asset Category": "Equity",
-      "Price": "5.254124494410926"
-    },
-    {
-      "Name": "AEVA TECHNOLOGIES INC",
-      "Ticker": "AEVA",
-      "Identifier": "BSB8D21",
-      "Weight": "0.84%",
-      "Market Value": "3,018,846.34",
-      "Shares Held": "220,999.00",
-      "Asset Category": "Equity",
-      "Price": "13.66"
-    },
-    {
-      "Name": "BLACK SESAME INTERNATIONAL H",
-      "Ticker": "2533 HK",
-      "Identifier": "BR4V8Z8",
-      "Weight": "0.84%",
-      "Market Value": "2,990,453.11",
-      "Shares Held": "2,849,900.00",
-      "Asset Category": "Equity",
-      "Price": "1.04931861117934"
-    },
-    {
-      "Name": "QUANTUMSCAPE CORP",
-      "Ticker": "QS",
-      "Identifier": "BMC73Z8",
-      "Weight": "0.84%",
-      "Market Value": "2,989,114.10",
-      "Shares Held": "652,645.00",
-      "Asset Category": "Equity",
-      "Price": "4.58"
-    },
-    {
-      "Name": "ROBOSENSE TECHNOLOGY CO LTD",
-      "Ticker": "2498 HK",
-      "Identifier": "BNG5JM4",
-      "Weight": "0.83%",
-      "Market Value": "2,967,855.30",
-      "Shares Held": "1,433,328.00",
-      "Asset Category": "Equity",
-      "Price": "2.070604425504839"
-    },
-    {
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.16%",
-      "Market Value": "569,782.54",
-      "Shares Held": "569,782.54",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
       "Name": "CASH",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.10%",
-      "Market Value": "373,142.90",
-      "Shares Held": "373,142.90",
+      "Weight": "0.04%",
+      "Market Value": "128,115.10",
+      "Shares Held": "128,115.10",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
@@ -748,40 +28,770 @@
       "Ticker": "",
       "Identifier": "",
       "Weight": "-0.00%",
-      "Market Value": "-4,389.59",
+      "Market Value": "-4,380.61",
       "Shares Held": "-3,920.69",
       "Asset Category": "Equity",
-      "Price": "1.119596295550018"
+      "Price": "1.117305882382948"
+    },
+    {
+      "Name": "CANADIAN DOLLAR",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.00%",
+      "Market Value": "-8,381.71",
+      "Shares Held": "-11,962.80",
+      "Asset Category": "Equity",
+      "Price": "0.7006478416424248"
     },
     {
       "Name": "INDIE SEMICONDUCTOR INC-A",
       "Ticker": "INDI",
       "Identifier": "BP4W0C8",
-      "Weight": "0.75%",
-      "Market Value": "2,669,066.40",
+      "Weight": "0.68%",
+      "Market Value": "2,386,761.30",
       "Shares Held": "1,026,564.00",
       "Asset Category": "Equity",
-      "Price": "2.6"
+      "Price": "2.325"
     },
     {
       "Name": "LUCID GROUP INC",
       "Ticker": "LCID",
       "Identifier": "BVY4KF9",
-      "Weight": "0.74%",
-      "Market Value": "2,632,113.31",
+      "Weight": "0.68%",
+      "Market Value": "2,385,569.72",
       "Shares Held": "694,489.00",
       "Asset Category": "Equity",
-      "Price": "3.79"
+      "Price": "3.435000007199538"
     },
     {
       "Name": "LIONTOWN LTD",
       "Ticker": "LTR AU",
       "Identifier": "B1J89V5",
       "Weight": "0.62%",
-      "Market Value": "2,220,051.64",
+      "Market Value": "2,158,668.95",
       "Shares Held": "4,133,592.00",
       "Asset Category": "Equity",
-      "Price": "0.5370756572008074"
+      "Price": "0.5222259356995079"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.20%",
+      "Market Value": "695,833.73",
+      "Shares Held": "695,833.73",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "MICROSOFT CORP",
+      "Ticker": "MSFT",
+      "Identifier": "2588173",
+      "Weight": "4.45%",
+      "Market Value": "15,580,249.65",
+      "Shares Held": "28,791.00",
+      "Asset Category": "Equity",
+      "Price": "541.15"
+    },
+    {
+      "Name": "NVIDIA CORP",
+      "Ticker": "NVDA",
+      "Identifier": "2379504",
+      "Weight": "3.47%",
+      "Market Value": "12,171,715.92",
+      "Shares Held": "53,781.00",
+      "Asset Category": "Equity",
+      "Price": "226.32"
+    },
+    {
+      "Name": "INTEL CORP",
+      "Ticker": "INTC",
+      "Identifier": "2463247",
+      "Weight": "3.21%",
+      "Market Value": "11,246,708.15",
+      "Shares Held": "110,969.00",
+      "Asset Category": "Equity",
+      "Price": "101.35"
+    },
+    {
+      "Name": "TESLA INC",
+      "Ticker": "TSLA",
+      "Identifier": "B616C79",
+      "Weight": "3.12%",
+      "Market Value": "10,952,663.19",
+      "Shares Held": "28,973.00",
+      "Asset Category": "Equity",
+      "Price": "378.03"
+    },
+    {
+      "Name": "ALPHABET INC-CL A",
+      "Ticker": "GOOGL",
+      "Identifier": "BYVY8G0",
+      "Weight": "3.09%",
+      "Market Value": "10,843,318.24",
+      "Shares Held": "30,742.00",
+      "Asset Category": "Equity",
+      "Price": "352.72"
+    },
+    {
+      "Name": "QUALCOMM INC",
+      "Ticker": "QCOM",
+      "Identifier": "2714923",
+      "Weight": "2.69%",
+      "Market Value": "9,436,663.00",
+      "Shares Held": "54,100.00",
+      "Asset Category": "Equity",
+      "Price": "174.43"
+    },
+    {
+      "Name": "TOYOTA MOTOR CORP",
+      "Ticker": "7203 JP",
+      "Identifier": "6900643",
+      "Weight": "2.56%",
+      "Market Value": "8,983,898.00",
+      "Shares Held": "489,847.00",
+      "Asset Category": "Equity",
+      "Price": "18.34021235202012"
+    },
+    {
+      "Name": "BLOOM ENERGY CORP- A",
+      "Ticker": "BE",
+      "Identifier": "BDD1BB8",
+      "Weight": "1.87%",
+      "Market Value": "6,565,655.24",
+      "Shares Held": "25,033.00",
+      "Asset Category": "Equity",
+      "Price": "262.28"
+    },
+    {
+      "Name": "RIO TINTO PLC",
+      "Ticker": "RIO LN",
+      "Identifier": "0718875",
+      "Weight": "1.86%",
+      "Market Value": "6,509,647.25",
+      "Shares Held": "68,929.00",
+      "Asset Category": "Equity",
+      "Price": "94.43989104730954"
+    },
+    {
+      "Name": "GENERAL MOTORS CO",
+      "Ticker": "GM",
+      "Identifier": "B665KZ5",
+      "Weight": "1.84%",
+      "Market Value": "6,451,053.66",
+      "Shares Held": "78,318.00",
+      "Asset Category": "Equity",
+      "Price": "82.37"
+    },
+    {
+      "Name": "SAMSUNG SDI CO LTD",
+      "Ticker": "006400 KS",
+      "Identifier": "6771645",
+      "Weight": "1.82%",
+      "Market Value": "6,372,650.74",
+      "Shares Held": "15,166.00",
+      "Asset Category": "Equity",
+      "Price": "420.1932440986417"
+    },
+    {
+      "Name": "WABTEC CORP",
+      "Ticker": "WAB",
+      "Identifier": "2955733",
+      "Weight": "1.69%",
+      "Market Value": "5,912,295.53",
+      "Shares Held": "20,689.00",
+      "Asset Category": "Equity",
+      "Price": "285.77"
+    },
+    {
+      "Name": "INFINEON TECHNOLOGIES AG",
+      "Ticker": "IFX GR",
+      "Identifier": "5889505",
+      "Weight": "1.67%",
+      "Market Value": "5,868,596.64",
+      "Shares Held": "91,794.00",
+      "Asset Category": "Equity",
+      "Price": "63.93224655206222"
+    },
+    {
+      "Name": "LG ENERGY SOLUTION",
+      "Ticker": "373220 KS",
+      "Identifier": "BNSP8W5",
+      "Weight": "1.66%",
+      "Market Value": "5,832,424.54",
+      "Shares Held": "19,565.00",
+      "Asset Category": "Equity",
+      "Price": "298.105010989011"
+    },
+    {
+      "Name": "TOKAI CARBON CO LTD",
+      "Ticker": "5301 JP",
+      "Identifier": "6894003",
+      "Weight": "1.66%",
+      "Market Value": "5,825,417.18",
+      "Shares Held": "405,912.00",
+      "Asset Category": "Equity",
+      "Price": "14.35142883186503"
+    },
+    {
+      "Name": "SKYWORKS SOLUTIONS INC",
+      "Ticker": "SWKS",
+      "Identifier": "2961053",
+      "Weight": "1.61%",
+      "Market Value": "5,652,175.50",
+      "Shares Held": "75,665.00",
+      "Asset Category": "Equity",
+      "Price": "74.7"
+    },
+    {
+      "Name": "NEBIUS GROUP NV",
+      "Ticker": "NBIS",
+      "Identifier": "B5BSZB3",
+      "Weight": "1.59%",
+      "Market Value": "5,576,252.76",
+      "Shares Held": "26,546.00",
+      "Asset Category": "Equity",
+      "Price": "210.06"
+    },
+    {
+      "Name": "COHERENT CORP",
+      "Ticker": "COHR",
+      "Identifier": "BNG8Z81",
+      "Weight": "1.58%",
+      "Market Value": "5,541,504.80",
+      "Shares Held": "19,240.00",
+      "Asset Category": "Equity",
+      "Price": "288.02"
+    },
+    {
+      "Name": "NXP SEMICONDUCTORS NV",
+      "Ticker": "NXPI",
+      "Identifier": "B505PN7",
+      "Weight": "1.42%",
+      "Market Value": "4,964,304.03",
+      "Shares Held": "22,043.00",
+      "Asset Category": "Equity",
+      "Price": "225.21"
+    },
+    {
+      "Name": "SKC CO LTD",
+      "Ticker": "011790 KS",
+      "Identifier": "6018085",
+      "Weight": "1.41%",
+      "Market Value": "4,928,214.74",
+      "Shares Held": "68,183.00",
+      "Asset Category": "Equity",
+      "Price": "72.27923001334644"
+    },
+    {
+      "Name": "FORD MOTOR CO",
+      "Ticker": "F",
+      "Identifier": "2615468",
+      "Weight": "1.38%",
+      "Market Value": "4,828,236.00",
+      "Shares Held": "402,353.00",
+      "Asset Category": "Equity",
+      "Price": "12.0"
+    },
+    {
+      "Name": "ITT INC",
+      "Ticker": "ITT",
+      "Identifier": "BZBY209",
+      "Weight": "1.36%",
+      "Market Value": "4,783,011.00",
+      "Shares Held": "23,690.00",
+      "Asset Category": "Equity",
+      "Price": "201.9"
+    },
+    {
+      "Name": "ATI INC",
+      "Ticker": "ATI",
+      "Identifier": "2526117",
+      "Weight": "1.35%",
+      "Market Value": "4,723,561.44",
+      "Shares Held": "25,128.00",
+      "Asset Category": "Equity",
+      "Price": "187.98"
+    },
+    {
+      "Name": "NEXTEER AUTOMOTIVE GROUP LTD",
+      "Ticker": "1316 HK",
+      "Identifier": "BBPD5F0",
+      "Weight": "1.33%",
+      "Market Value": "4,664,667.12",
+      "Shares Held": "8,376,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.5568687916338372"
+    },
+    {
+      "Name": "BYD CO LTD-H",
+      "Ticker": "1211 HK",
+      "Identifier": "6536651",
+      "Weight": "1.29%",
+      "Market Value": "4,514,558.87",
+      "Shares Held": "476,500.00",
+      "Asset Category": "Equity",
+      "Price": "9.474415257082896"
+    },
+    {
+      "Name": "DENSO CORP",
+      "Ticker": "6902 JP",
+      "Identifier": "6640381",
+      "Weight": "1.25%",
+      "Market Value": "4,368,649.91",
+      "Shares Held": "379,673.00",
+      "Asset Category": "Equity",
+      "Price": "11.50634864738868"
+    },
+    {
+      "Name": "HL MANDO CORPORATION",
+      "Ticker": "204320 KS",
+      "Identifier": "BQJZQJ8",
+      "Weight": "1.22%",
+      "Market Value": "4,272,718.52",
+      "Shares Held": "133,595.00",
+      "Asset Category": "Equity",
+      "Price": "31.98262300235787"
+    },
+    {
+      "Name": "ON SEMICONDUCTOR",
+      "Ticker": "ON",
+      "Identifier": "2583576",
+      "Weight": "1.21%",
+      "Market Value": "4,240,192.00",
+      "Shares Held": "55,792.00",
+      "Asset Category": "Equity",
+      "Price": "76.0"
+    },
+    {
+      "Name": "DAUCH CORPORATION",
+      "Ticker": "DCH",
+      "Identifier": "2382416",
+      "Weight": "1.20%",
+      "Market Value": "4,200,135.94",
+      "Shares Held": "779,246.00",
+      "Asset Category": "Equity",
+      "Price": "5.390000000000001"
+    },
+    {
+      "Name": "SITIME CORP",
+      "Ticker": "SITM",
+      "Identifier": "BKS48R6",
+      "Weight": "1.20%",
+      "Market Value": "4,195,715.20",
+      "Shares Held": "7,360.00",
+      "Asset Category": "Equity",
+      "Price": "570.07"
+    },
+    {
+      "Name": "WNC CORP",
+      "Ticker": "6285 TT",
+      "Identifier": "6682598",
+      "Weight": "1.19%",
+      "Market Value": "4,165,884.10",
+      "Shares Held": "505,400.00",
+      "Asset Category": "Equity",
+      "Price": "8.242746537396123"
+    },
+    {
+      "Name": "RENAULT SA",
+      "Ticker": "RNO FP",
+      "Identifier": "4712798",
+      "Weight": "1.19%",
+      "Market Value": "4,152,176.58",
+      "Shares Held": "138,459.00",
+      "Asset Category": "Equity",
+      "Price": "29.98849175568219"
+    },
+    {
+      "Name": "VOLKSWAGEN AG",
+      "Ticker": "VOW3 GR",
+      "Identifier": "5497168",
+      "Weight": "1.18%",
+      "Market Value": "4,119,544.59",
+      "Shares Held": "53,904.00",
+      "Asset Category": "Equity",
+      "Price": "76.42372718165628"
+    },
+    {
+      "Name": "ADVANCED ENERGY SOLUTION HOL",
+      "Ticker": "6781 TT",
+      "Identifier": "BMXC4S2",
+      "Weight": "1.16%",
+      "Market Value": "4,070,477.83",
+      "Shares Held": "128,200.00",
+      "Asset Category": "Equity",
+      "Price": "31.75099711388456"
+    },
+    {
+      "Name": "STMICROELECTRONICS NV",
+      "Ticker": "STMPA FP",
+      "Identifier": "5962332",
+      "Weight": "1.16%",
+      "Market Value": "4,058,803.39",
+      "Shares Held": "79,725.00",
+      "Asset Category": "Equity",
+      "Price": "50.91004565694575"
+    },
+    {
+      "Name": "ERAMET",
+      "Ticker": "ERA FP",
+      "Identifier": "4017017",
+      "Weight": "1.14%",
+      "Market Value": "3,998,203.37",
+      "Shares Held": "82,225.00",
+      "Asset Category": "Equity",
+      "Price": "48.62515500152022"
+    },
+    {
+      "Name": "LI AUTO INC-CLASS A",
+      "Ticker": "2015 HK",
+      "Identifier": "BMW5M00",
+      "Weight": "1.13%",
+      "Market Value": "3,954,772.57",
+      "Shares Held": "691,200.00",
+      "Asset Category": "Equity",
+      "Price": "5.721603833912037"
+    },
+    {
+      "Name": "AMBARELLA INC",
+      "Ticker": "AMBA",
+      "Identifier": "B7KH3G6",
+      "Weight": "1.12%",
+      "Market Value": "3,934,744.72",
+      "Shares Held": "60,712.00",
+      "Asset Category": "Equity",
+      "Price": "64.81"
+    },
+    {
+      "Name": "HYSTER-YALE INC",
+      "Ticker": "HY",
+      "Identifier": "B7LG306",
+      "Weight": "1.12%",
+      "Market Value": "3,923,462.61",
+      "Shares Held": "122,877.00",
+      "Asset Category": "Equity",
+      "Price": "31.93"
+    },
+    {
+      "Name": "GS YUASA CORP",
+      "Ticker": "6674 JP",
+      "Identifier": "6744250",
+      "Weight": "1.10%",
+      "Market Value": "3,865,370.33",
+      "Shares Held": "111,368.00",
+      "Asset Category": "Equity",
+      "Price": "34.70808787084261"
+    },
+    {
+      "Name": "NISSAN MOTOR CO LTD",
+      "Ticker": "7201 JP",
+      "Identifier": "6642860",
+      "Weight": "1.10%",
+      "Market Value": "3,854,318.18",
+      "Shares Held": "2,153,736.00",
+      "Asset Category": "Equity",
+      "Price": "1.789596394358454"
+    },
+    {
+      "Name": "QUIMICA Y MINERA CHIL-SP ADR",
+      "Ticker": "SQM",
+      "Identifier": "2771122",
+      "Weight": "1.09%",
+      "Market Value": "3,835,720.47",
+      "Shares Held": "61,401.00",
+      "Asset Category": "Equity",
+      "Price": "62.47000000000001"
+    },
+    {
+      "Name": "ENERSYS",
+      "Ticker": "ENS",
+      "Identifier": "B020GQ5",
+      "Weight": "1.08%",
+      "Market Value": "3,800,290.00",
+      "Shares Held": "21,320.00",
+      "Asset Category": "Equity",
+      "Price": "178.25"
+    },
+    {
+      "Name": "BAIDU INC - SPON ADR",
+      "Ticker": "BIDU",
+      "Identifier": "B0FXT17",
+      "Weight": "1.08%",
+      "Market Value": "3,788,020.50",
+      "Shares Held": "44,935.00",
+      "Asset Category": "Equity",
+      "Price": "84.3"
+    },
+    {
+      "Name": "FORVIA",
+      "Ticker": "FRVIA FP",
+      "Identifier": "4400446",
+      "Weight": "1.06%",
+      "Market Value": "3,711,671.15",
+      "Shares Held": "388,536.00",
+      "Asset Category": "Equity",
+      "Price": "9.552965877035847"
+    },
+    {
+      "Name": "GEELY AUTOMOBILE HOLDINGS LT",
+      "Ticker": "175 HK",
+      "Identifier": "6531827",
+      "Weight": "1.06%",
+      "Market Value": "3,699,975.92",
+      "Shares Held": "1,921,600.00",
+      "Asset Category": "Equity",
+      "Price": "1.925466236469609"
+    },
+    {
+      "Name": "SERES GROUP CO LTD-H",
+      "Ticker": "9927 HK",
+      "Identifier": "BRDWN24",
+      "Weight": "1.05%",
+      "Market Value": "3,667,604.13",
+      "Shares Held": "739,500.00",
+      "Asset Category": "Equity",
+      "Price": "4.959572860040568"
+    },
+    {
+      "Name": "ALBEMARLE CORP",
+      "Ticker": "ALB",
+      "Identifier": "2046853",
+      "Weight": "1.02%",
+      "Market Value": "3,574,829.39",
+      "Shares Held": "36,289.00",
+      "Asset Category": "Equity",
+      "Price": "98.51"
+    },
+    {
+      "Name": "SOCIONEXT INC",
+      "Ticker": "6526 JP",
+      "Identifier": "BMTVX75",
+      "Weight": "1.00%",
+      "Market Value": "3,501,893.62",
+      "Shares Held": "263,443.00",
+      "Asset Category": "Equity",
+      "Price": "13.29279434260922"
+    },
+    {
+      "Name": "IGO LTD",
+      "Ticker": "IGO AU",
+      "Identifier": "6439567",
+      "Weight": "0.99%",
+      "Market Value": "3,484,334.29",
+      "Shares Held": "849,586.00",
+      "Asset Category": "Equity",
+      "Price": "4.101214344398331"
+    },
+    {
+      "Name": "CABOT CORP",
+      "Ticker": "CBT",
+      "Identifier": "2162500",
+      "Weight": "0.99%",
+      "Market Value": "3,481,234.54",
+      "Shares Held": "46,879.00",
+      "Asset Category": "Equity",
+      "Price": "74.26"
+    },
+    {
+      "Name": "GENTHERM INC",
+      "Ticker": "THRM",
+      "Identifier": "B8JFD24",
+      "Weight": "0.99%",
+      "Market Value": "3,461,494.00",
+      "Shares Held": "111,950.00",
+      "Asset Category": "Equity",
+      "Price": "30.92"
+    },
+    {
+      "Name": "BLACKBERRY LTD",
+      "Ticker": "BB",
+      "Identifier": "BCBHZ42",
+      "Weight": "0.97%",
+      "Market Value": "3,403,921.95",
+      "Shares Held": "402,831.00",
+      "Asset Category": "Equity",
+      "Price": "8.450000000000001"
+    },
+    {
+      "Name": "STELLANTIS NV",
+      "Ticker": "STLAM IM",
+      "Identifier": "BMD8KX7",
+      "Weight": "0.95%",
+      "Market Value": "3,345,696.72",
+      "Shares Held": "754,360.00",
+      "Asset Category": "Equity",
+      "Price": "4.435145978047617"
+    },
+    {
+      "Name": "VISTEON CORP",
+      "Ticker": "VC",
+      "Identifier": "B4N0JJ6",
+      "Weight": "0.95%",
+      "Market Value": "3,338,302.50",
+      "Shares Held": "39,390.00",
+      "Asset Category": "Equity",
+      "Price": "84.75"
+    },
+    {
+      "Name": "AMPRIUS TECHNOLOGIES INC",
+      "Ticker": "AMPX",
+      "Identifier": "BPSKN52",
+      "Weight": "0.93%",
+      "Market Value": "3,243,084.88",
+      "Shares Held": "365,624.00",
+      "Asset Category": "Equity",
+      "Price": "8.87"
+    },
+    {
+      "Name": "TIANQI LITHIUM CORP-H",
+      "Ticker": "9696 HK",
+      "Identifier": "BMZ3RS4",
+      "Weight": "0.92%",
+      "Market Value": "3,221,069.77",
+      "Shares Held": "975,200.00",
+      "Asset Category": "Equity",
+      "Price": "3.302983767432321"
+    },
+    {
+      "Name": "BLACK SESAME INTERNATIONAL H",
+      "Ticker": "2533 HK",
+      "Identifier": "BR4V8Z8",
+      "Weight": "0.91%",
+      "Market Value": "3,198,609.74",
+      "Shares Held": "2,854,000.00",
+      "Asset Category": "Equity",
+      "Price": "1.120746229852838"
+    },
+    {
+      "Name": "REPT BATTERO ENERGY CO LTD-H",
+      "Ticker": "666 HK",
+      "Identifier": "BNDWG50",
+      "Weight": "0.91%",
+      "Market Value": "3,172,381.35",
+      "Shares Held": "2,992,200.00",
+      "Asset Category": "Equity",
+      "Price": "1.060217014237016"
+    },
+    {
+      "Name": "PLS GROUP LTD",
+      "Ticker": "PLS AU",
+      "Identifier": "B2368L5",
+      "Weight": "0.90%",
+      "Market Value": "3,161,388.33",
+      "Shares Held": "1,347,258.00",
+      "Asset Category": "Equity",
+      "Price": "2.346535207065017"
+    },
+    {
+      "Name": "LITHIUM AMERICAS CORP",
+      "Ticker": "LAC CN",
+      "Identifier": "BRBS357",
+      "Weight": "0.89%",
+      "Market Value": "3,107,512.37",
+      "Shares Held": "1,331,891.00",
+      "Asset Category": "Equity",
+      "Price": "2.33315817135186"
+    },
+    {
+      "Name": "XPENG INC - ADR",
+      "Ticker": "XPEV",
+      "Identifier": "BMXR2T4",
+      "Weight": "0.88%",
+      "Market Value": "3,079,955.76",
+      "Shares Held": "318,836.00",
+      "Asset Category": "Equity",
+      "Price": "9.66"
+    },
+    {
+      "Name": "PLUG POWER INC",
+      "Ticker": "PLUG",
+      "Identifier": "2508386",
+      "Weight": "0.88%",
+      "Market Value": "3,070,781.28",
+      "Shares Held": "1,895,544.00",
+      "Asset Category": "Equity",
+      "Price": "1.62"
+    },
+    {
+      "Name": "NIO INC - ADR",
+      "Ticker": "NIO",
+      "Identifier": "BFZX9H8",
+      "Weight": "0.88%",
+      "Market Value": "3,067,844.35",
+      "Shares Held": "884,105.00",
+      "Asset Category": "Equity",
+      "Price": "3.47"
+    },
+    {
+      "Name": "LITHIUM ARGENTINA AG",
+      "Ticker": "LAR CN",
+      "Identifier": "BS891B2",
+      "Weight": "0.86%",
+      "Market Value": "3,023,221.23",
+      "Shares Held": "575,319.00",
+      "Asset Category": "Equity",
+      "Price": "5.25486074682046"
+    },
+    {
+      "Name": "MOBILEYE GLOBAL INC-A",
+      "Ticker": "MBLY",
+      "Identifier": "BLFH8G4",
+      "Weight": "0.85%",
+      "Market Value": "2,991,460.32",
+      "Shares Held": "437,348.00",
+      "Asset Category": "Equity",
+      "Price": "6.84"
+    },
+    {
+      "Name": "ROBOSENSE TECHNOLOGY CO LTD",
+      "Ticker": "2498 HK",
+      "Identifier": "BNG5JM4",
+      "Weight": "0.84%",
+      "Market Value": "2,948,613.80",
+      "Shares Held": "1,435,428.00",
+      "Asset Category": "Equity",
+      "Price": "2.054170463443656"
+    },
+    {
+      "Name": "GANFENG LITHIUM GROUP CO L-H",
+      "Ticker": "1772 HK",
+      "Identifier": "BZ9NS11",
+      "Weight": "0.84%",
+      "Market Value": "2,929,923.82",
+      "Shares Held": "822,333.00",
+      "Asset Category": "Equity",
+      "Price": "3.562940828107348"
+    },
+    {
+      "Name": "ALLEGRO MICROSYSTEMS INC",
+      "Ticker": "ALGM",
+      "Identifier": "BN4LSB6",
+      "Weight": "0.83%",
+      "Market Value": "2,895,600.26",
+      "Shares Held": "85,694.00",
+      "Asset Category": "Equity",
+      "Price": "33.79"
+    },
+    {
+      "Name": "QUANTUMSCAPE CORP",
+      "Ticker": "QS",
+      "Identifier": "BMC73Z8",
+      "Weight": "0.80%",
+      "Market Value": "2,786,794.15",
+      "Shares Held": "652,645.00",
+      "Asset Category": "Equity",
+      "Price": "4.27"
+    },
+    {
+      "Name": "AEVA TECHNOLOGIES INC",
+      "Ticker": "AEVA",
+      "Identifier": "BSB8D21",
+      "Weight": "0.77%",
+      "Market Value": "2,698,397.79",
+      "Shares Held": "220,999.00",
+      "Asset Category": "Equity",
+      "Price": "12.21"
     }
   ]
 }

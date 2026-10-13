@@ -2,7 +2,7 @@
   "ticker": "NORW",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4312,
+  "totalRows": 4313,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-11-12",
+      "Close": "19.01",
+      "Adj Close": "10.69",
+      "Volume": "14600"
+    },
     {
       "Date": "2010-11-11",
       "Close": "19.23",

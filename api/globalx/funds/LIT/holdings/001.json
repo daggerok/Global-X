@@ -2,7 +2,7 @@
   "ticker": "LIT",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 46,
+  "totalRows": 47,
   "headers": [
     "Name",
     "Ticker",
@@ -14,434 +14,94 @@
   ],
   "rows": [
     {
-      "Name": "RIO TINTO PLC-SPON ADR",
-      "Ticker": "RIO",
-      "Identifier": "2740434",
-      "Weight": "22.46%",
-      "Market Value": "325,644,270.98",
-      "Shares Held": "3,435,791.00",
-      "Asset Category": "Equity",
-      "Price": "94.78"
-    },
-    {
-      "Name": "PANASONIC HOLDINGS CORPORATION",
-      "Ticker": "6752 JP",
-      "Identifier": "6572707",
-      "Weight": "7.06%",
-      "Market Value": "102,337,962.93",
-      "Shares Held": "3,642,298.00",
-      "Asset Category": "Equity",
-      "Price": "28.09708676500385"
-    },
-    {
-      "Name": "SAMSUNG SDI CO LTD",
-      "Ticker": "006400 KS",
-      "Identifier": "6771645",
-      "Weight": "6.19%",
-      "Market Value": "89,732,465.55",
-      "Shares Held": "211,715.00",
-      "Asset Category": "Equity",
-      "Price": "423.8361266325012"
-    },
-    {
-      "Name": "TDK CORP",
-      "Ticker": "6762 JP",
-      "Identifier": "6869302",
-      "Weight": "6.11%",
-      "Market Value": "88,627,978.46",
-      "Shares Held": "4,296,206.00",
-      "Asset Category": "Equity",
-      "Price": "20.62935959309214"
-    },
-    {
-      "Name": "NAURA TECHNOLOGY GROUP CO-A",
-      "Ticker": "002371 C2",
-      "Identifier": "BD5LYF1",
-      "Weight": "6.04%",
-      "Market Value": "87,564,081.99",
-      "Shares Held": "986,710.00",
-      "Asset Category": "Equity",
-      "Price": "88.74348287744118"
-    },
-    {
-      "Name": "TESLA INC",
-      "Ticker": "TSLA",
-      "Identifier": "B616C79",
-      "Weight": "4.65%",
-      "Market Value": "67,420,259.00",
-      "Shares Held": "176,170.00",
-      "Asset Category": "Equity",
-      "Price": "382.7"
-    },
-    {
-      "Name": "LG ENERGY SOLUTION",
-      "Ticker": "373220 KS",
-      "Identifier": "BNSP8W5",
-      "Weight": "4.64%",
-      "Market Value": "67,329,468.16",
-      "Shares Held": "225,411.00",
-      "Asset Category": "Equity",
-      "Price": "298.6964618408152"
-    },
-    {
-      "Name": "ALBEMARLE CORP",
-      "Ticker": "ALB",
-      "Identifier": "2046853",
-      "Weight": "3.91%",
-      "Market Value": "56,727,200.66",
-      "Shares Held": "560,158.00",
-      "Asset Category": "Equity",
-      "Price": "101.27"
-    },
-    {
-      "Name": "EVE ENERGY CO LTD-A",
-      "Ticker": "300014 C2",
-      "Identifier": "BD5C7G6",
-      "Weight": "3.38%",
-      "Market Value": "48,957,082.73",
-      "Shares Held": "6,385,694.00",
-      "Asset Category": "Equity",
-      "Price": "7.66668160578944"
-    },
-    {
-      "Name": "CONTEMPORARY AMPEREX TECHN-A",
-      "Ticker": "300750 C2",
-      "Identifier": "BHQPSY7",
-      "Weight": "3.16%",
-      "Market Value": "45,809,214.92",
-      "Shares Held": "1,029,865.00",
-      "Asset Category": "Equity",
-      "Price": "44.48079594898361"
-    },
-    {
-      "Name": "BYD CO LTD-H",
-      "Ticker": "1211 HK",
-      "Identifier": "6536651",
-      "Weight": "3.15%",
-      "Market Value": "45,623,474.61",
-      "Shares Held": "4,736,121.00",
-      "Asset Category": "Equity",
-      "Price": "9.633088894899434"
-    },
-    {
-      "Name": "QUIMICA Y MINERA CHIL-SP ADR",
-      "Ticker": "SQM",
-      "Identifier": "2771122",
-      "Weight": "2.99%",
-      "Market Value": "43,316,088.97",
-      "Shares Held": "677,767.00",
-      "Asset Category": "Equity",
-      "Price": "63.91"
-    },
-    {
-      "Name": "GANFENG LITHIUM GROUP CO L-A",
-      "Ticker": "002460 C2",
-      "Identifier": "BD5CB19",
-      "Weight": "2.37%",
-      "Market Value": "34,390,560.22",
-      "Shares Held": "5,062,832.00",
-      "Asset Category": "Equity",
-      "Price": "6.792751610166009"
-    },
-    {
-      "Name": "PLS GROUP LTD",
-      "Ticker": "PLS AU",
-      "Identifier": "B2368L5",
-      "Weight": "2.35%",
-      "Market Value": "34,152,868.12",
-      "Shares Held": "13,989,893.00",
-      "Asset Category": "Equity",
-      "Price": "2.441252990283771"
-    },
-    {
-      "Name": "GUANGZHOU TINCI MATERIALS -A",
-      "Ticker": "002709 C2",
-      "Identifier": "BD5LR63",
-      "Weight": "2.20%",
-      "Market Value": "31,840,025.22",
-      "Shares Held": "5,973,485.00",
-      "Asset Category": "Equity",
-      "Price": "5.330226027185136"
-    },
-    {
-      "Name": "ENERSYS",
-      "Ticker": "ENS",
-      "Identifier": "B020GQ5",
-      "Weight": "2.15%",
-      "Market Value": "31,155,319.08",
-      "Shares Held": "173,268.00",
-      "Asset Category": "Equity",
-      "Price": "179.81"
-    },
-    {
-      "Name": "TIANQI LITHIUM CORP-A",
-      "Ticker": "002466 C2",
-      "Identifier": "BD5CKH8",
-      "Weight": "1.96%",
-      "Market Value": "28,361,758.83",
-      "Shares Held": "4,589,093.00",
-      "Asset Category": "Equity",
-      "Price": "6.180253664504074"
-    },
-    {
-      "Name": "MINERAL RESOURCES LTD",
-      "Ticker": "MIN AU",
-      "Identifier": "B17ZL56",
-      "Weight": "1.92%",
-      "Market Value": "27,880,624.29",
-      "Shares Held": "809,809.00",
-      "Asset Category": "Equity",
-      "Price": "34.42864217364836"
-    },
-    {
-      "Name": "WUXI LEAD INTELLIGENT EQUI-A",
-      "Ticker": "300450 C2",
-      "Identifier": "BD6QWJ5",
-      "Weight": "1.87%",
-      "Market Value": "27,070,589.98",
-      "Shares Held": "4,933,510.00",
-      "Asset Category": "Equity",
-      "Price": "5.487085255730707"
-    },
-    {
-      "Name": "ECOPRO BM CO LTD",
-      "Ticker": "247540 KS",
-      "Identifier": "BJ321P7",
-      "Weight": "1.67%",
-      "Market Value": "24,184,562.53",
-      "Shares Held": "252,079.00",
-      "Asset Category": "Equity",
-      "Price": "95.94040967315803"
-    },
-    {
-      "Name": "SUNWODA ELECTRONIC CO LTD-A",
-      "Ticker": "300207 C2",
-      "Identifier": "BD5CCV6",
-      "Weight": "1.34%",
-      "Market Value": "19,393,316.91",
-      "Shares Held": "6,283,491.00",
-      "Asset Category": "Equity",
-      "Price": "3.086392088410726"
-    },
-    {
-      "Name": "YUNNAN ENERGY NEW MATERIAL-A",
-      "Ticker": "002812 C2",
-      "Identifier": "BFCCR30",
-      "Weight": "1.26%",
-      "Market Value": "18,293,634.23",
-      "Shares Held": "2,559,159.00",
-      "Asset Category": "Equity",
-      "Price": "7.14829919907282"
-    },
-    {
-      "Name": "SINOMINE RESOURCE GROUP CO-A",
-      "Ticker": "002738 C2",
-      "Identifier": "BNR4M32",
-      "Weight": "1.19%",
-      "Market Value": "17,245,831.92",
-      "Shares Held": "2,806,756.00",
-      "Asset Category": "Equity",
-      "Price": "6.144400125981739"
-    },
-    {
-      "Name": "SHANGHAI PUTAILAI NEW ENERGY",
-      "Ticker": "603659 C1",
-      "Identifier": "BF2DZJ5",
-      "Weight": "1.04%",
-      "Market Value": "15,048,883.50",
-      "Shares Held": "4,511,228.00",
-      "Asset Category": "Equity",
-      "Price": "3.335872959646464"
-    },
-    {
-      "Name": "IGO LTD",
-      "Ticker": "IGO AU",
-      "Identifier": "6439567",
-      "Weight": "0.94%",
-      "Market Value": "13,613,684.41",
-      "Shares Held": "3,210,165.00",
-      "Asset Category": "Equity",
-      "Price": "4.240805195371578"
-    },
-    {
-      "Name": "L&F CO LTD",
-      "Ticker": "066970 KS",
-      "Identifier": "6578608",
-      "Weight": "0.81%",
-      "Market Value": "11,799,428.38",
-      "Shares Held": "136,323.00",
-      "Asset Category": "Equity",
-      "Price": "86.55493482391087"
-    },
-    {
       "Name": "JIANGXI SPECIAL ELECTRIC -A",
       "Ticker": "002176 C2",
       "Identifier": "BD5CC72",
-      "Weight": "0.57%",
-      "Market Value": "8,223,577.73",
-      "Shares Held": "6,438,340.00",
+      "Weight": "0.56%",
+      "Market Value": "7,880,547.38",
+      "Shares Held": "6,348,440.00",
       "Asset Category": "Equity",
-      "Price": "1.277282301027905"
+      "Price": "1.241336041610222"
+    },
+    {
+      "Name": "CHINESE YUAN RENMINBI",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.38%",
+      "Market Value": "5,325,619.21",
+      "Shares Held": "35,651,825.24",
+      "Asset Category": "Equity",
+      "Price": "0.1493785850836287"
     },
     {
       "Name": "AMG CRITICAL MATERIALS N.V.",
       "Ticker": "AMG NA",
       "Identifier": "B1Z95S1",
       "Weight": "0.36%",
-      "Market Value": "5,270,995.77",
-      "Shares Held": "164,040.00",
+      "Market Value": "5,100,006.46",
+      "Shares Held": "161,749.00",
       "Asset Category": "Equity",
-      "Price": "32.13238094367227"
+      "Price": "31.53037397449134"
     },
     {
       "Name": "LIONTOWN LTD",
       "Ticker": "LTR AU",
       "Identifier": "B1J89V5",
-      "Weight": "0.36%",
-      "Market Value": "5,223,133.82",
-      "Shares Held": "9,725,136.00",
+      "Weight": "0.35%",
+      "Market Value": "5,007,978.05",
+      "Shares Held": "9,589,677.00",
       "Asset Category": "Equity",
-      "Price": "0.537075658376397"
+      "Price": "0.5222259362854452"
     },
     {
       "Name": "LITHIUM AMERICAS CORP",
       "Ticker": "LAC CN",
       "Identifier": "BRBS357",
       "Weight": "0.25%",
-      "Market Value": "3,581,591.19",
-      "Shares Held": "1,535,298.00",
+      "Market Value": "3,532,226.48",
+      "Shares Held": "1,513,925.00",
       "Asset Category": "Equity",
-      "Price": "2.332831274449651"
+      "Price": "2.333158168337269"
     },
     {
       "Name": "LITHIUM ARGENTINA AG",
       "Ticker": "LAR CN",
       "Identifier": "BS891B2",
       "Weight": "0.24%",
-      "Market Value": "3,429,918.74",
-      "Shares Held": "652,805.00",
+      "Market Value": "3,382,548.61",
+      "Shares Held": "643,699.00",
       "Asset Category": "Equity",
-      "Price": "5.254124493531759"
+      "Price": "5.254860750133214"
     },
     {
       "Name": "LUCID GROUP INC",
       "Ticker": "LCID",
       "Identifier": "BVY4KF9",
-      "Weight": "0.23%",
-      "Market Value": "3,279,134.53",
-      "Shares Held": "865,207.00",
+      "Weight": "0.21%",
+      "Market Value": "2,930,546.21",
+      "Shares Held": "853,143.00",
       "Asset Category": "Equity",
-      "Price": "3.79"
-    },
-    {
-      "Name": "CASH",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.22%",
-      "Market Value": "3,161,093.18",
-      "Shares Held": "3,161,093.18",
-      "Asset Category": "Cash",
-      "Price": "1.0"
+      "Price": "3.435000005860682"
     },
     {
       "Name": "SIGMA LITHIUM CORP",
       "Ticker": "SGML",
       "Identifier": "BNM4ZD8",
-      "Weight": "0.17%",
-      "Market Value": "2,462,864.80",
-      "Shares Held": "263,408.00",
-      "Asset Category": "Equity",
-      "Price": "9.35"
-    },
-    {
-      "Name": "ELEVRA LITHIUM LTD",
-      "Ticker": "ELV AU",
-      "Identifier": "BVBM1M0",
       "Weight": "0.16%",
-      "Market Value": "2,370,871.09",
-      "Shares Held": "709,623.00",
+      "Market Value": "2,288,177.25",
+      "Shares Held": "259,725.00",
       "Asset Category": "Equity",
-      "Price": "3.341029095731114"
-    },
-    {
-      "Name": "ERAMET",
-      "Ticker": "ERA FP",
-      "Identifier": "4017017",
-      "Weight": "0.14%",
-      "Market Value": "2,061,619.07",
-      "Shares Held": "40,631.00",
-      "Asset Category": "Equity",
-      "Price": "50.74005242302675"
-    },
-    {
-      "Name": "PMET RESOURCES INC",
-      "Ticker": "PMET CN",
-      "Identifier": "BRJJYV5",
-      "Weight": "0.14%",
-      "Market Value": "2,019,576.42",
-      "Shares Held": "727,991.00",
-      "Asset Category": "Equity",
-      "Price": "2.774177730219192"
-    },
-    {
-      "Name": "EUROPEAN LITHIUM LTD",
-      "Ticker": "EUR AU",
-      "Identifier": "BDGJNV3",
-      "Weight": "0.12%",
-      "Market Value": "1,788,071.43",
-      "Shares Held": "6,836,107.00",
-      "Asset Category": "Equity",
-      "Price": "0.2615628207691892"
-    },
-    {
-      "Name": "STANDARD LITHIUM LTD",
-      "Ticker": "SLI CN",
-      "Identifier": "BDSFRL7",
-      "Weight": "0.11%",
-      "Market Value": "1,629,082.28",
-      "Shares Held": "1,033,526.00",
-      "Asset Category": "Equity",
-      "Price": "1.576237346714064"
-    },
-    {
-      "Name": "VULCAN ENERGY RESOURCES LTD",
-      "Ticker": "VUL AU",
-      "Identifier": "BKYBH63",
-      "Weight": "0.10%",
-      "Market Value": "1,497,177.94",
-      "Shares Held": "1,511,612.00",
-      "Asset Category": "Equity",
-      "Price": "0.990451213671233"
-    },
-    {
-      "Name": "CHINESE YUAN RENMINBI",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.08%",
-      "Market Value": "1,116,325.74",
-      "Shares Held": "7,472,572.88",
-      "Asset Category": "Equity",
-      "Price": "0.1493897427200469"
-    },
-    {
-      "Name": "IONEER LTD",
-      "Ticker": "INR AU",
-      "Identifier": "BGYBHZ4",
-      "Weight": "0.07%",
-      "Market Value": "937,743.40",
-      "Shares Held": "12,804,127.00",
-      "Asset Category": "Equity",
-      "Price": "0.07323758972400071"
+      "Price": "8.81"
     },
     {
       "Name": "ECOPRO BM CO LTD- RIGHTS",
       "Ticker": "2670686D KS",
       "Identifier": "BTFGMG5",
-      "Weight": "0.05%",
-      "Market Value": "693,465.70",
+      "Weight": "0.03%",
+      "Market Value": "463,098.57",
       "Shares Held": "23,689.00",
       "Asset Category": "Equity",
-      "Price": "29.27374308750897"
+      "Price": "19.54909747140023"
     },
     {
       "Name": "ESG MINERALS LTD",
@@ -464,14 +124,364 @@
       "Price": "0.0"
     },
     {
+      "Name": "CASH",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "-0.03%",
+      "Market Value": "-419,215.77",
+      "Shares Held": "-419,215.77",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "-0.16%",
-      "Market Value": "-2,342,887.13",
-      "Shares Held": "-2,342,887.13",
+      "Weight": "-0.24%",
+      "Market Value": "-3,323,015.46",
+      "Shares Held": "-3,323,015.46",
       "Asset Category": "Cash",
       "Price": "1.0"
+    },
+    {
+      "Name": "RIO TINTO PLC-SPON ADR",
+      "Ticker": "RIO",
+      "Identifier": "2740434",
+      "Weight": "22.67%",
+      "Market Value": "319,482,836.30",
+      "Shares Held": "3,387,941.00",
+      "Asset Category": "Equity",
+      "Price": "94.3"
+    },
+    {
+      "Name": "PANASONIC HOLDINGS CORPORATION",
+      "Ticker": "6752 JP",
+      "Identifier": "6572707",
+      "Weight": "7.15%",
+      "Market Value": "100,734,800.89",
+      "Shares Held": "3,591,577.00",
+      "Asset Category": "Equity",
+      "Price": "28.04751252444261"
+    },
+    {
+      "Name": "SAMSUNG SDI CO LTD",
+      "Ticker": "006400 KS",
+      "Identifier": "6771645",
+      "Weight": "6.21%",
+      "Market Value": "87,475,829.53",
+      "Shares Held": "208,180.00",
+      "Asset Category": "Equity",
+      "Price": "420.193243971563"
+    },
+    {
+      "Name": "TDK CORP",
+      "Ticker": "6762 JP",
+      "Identifier": "6869302",
+      "Weight": "6.19%",
+      "Market Value": "87,239,588.97",
+      "Shares Held": "4,236,379.00",
+      "Asset Category": "Equity",
+      "Price": "20.59296134033334"
+    },
+    {
+      "Name": "NAURA TECHNOLOGY GROUP CO-A",
+      "Ticker": "002371 C2",
+      "Identifier": "BD5LYF1",
+      "Weight": "6.06%",
+      "Market Value": "85,390,779.73",
+      "Shares Held": "972,210.00",
+      "Asset Category": "Equity",
+      "Price": "87.83162046265726"
+    },
+    {
+      "Name": "LG ENERGY SOLUTION",
+      "Ticker": "373220 KS",
+      "Identifier": "BNSP8W5",
+      "Weight": "4.69%",
+      "Market Value": "66,069,311.66",
+      "Shares Held": "221,631.00",
+      "Asset Category": "Equity",
+      "Price": "298.1050108513701"
+    },
+    {
+      "Name": "TESLA INC",
+      "Ticker": "TSLA",
+      "Identifier": "B616C79",
+      "Weight": "4.66%",
+      "Market Value": "65,665,701.15",
+      "Shares Held": "173,705.00",
+      "Asset Category": "Equity",
+      "Price": "378.03"
+    },
+    {
+      "Name": "ALBEMARLE CORP",
+      "Ticker": "ALB",
+      "Identifier": "2046853",
+      "Weight": "3.86%",
+      "Market Value": "54,412,688.07",
+      "Shares Held": "552,357.00",
+      "Asset Category": "Equity",
+      "Price": "98.51"
+    },
+    {
+      "Name": "EVE ENERGY CO LTD-A",
+      "Ticker": "300014 C2",
+      "Identifier": "BD5C7G6",
+      "Weight": "3.36%",
+      "Market Value": "47,380,213.57",
+      "Shares Held": "6,295,794.00",
+      "Asset Category": "Equity",
+      "Price": "7.52569311670617"
+    },
+    {
+      "Name": "CONTEMPORARY AMPEREX TECHN-A",
+      "Ticker": "300750 C2",
+      "Identifier": "BHQPSY7",
+      "Weight": "3.21%",
+      "Market Value": "45,256,424.58",
+      "Shares Held": "1,015,365.00",
+      "Asset Category": "Equity",
+      "Price": "44.57158221920196"
+    },
+    {
+      "Name": "BYD CO LTD-H",
+      "Ticker": "1211 HK",
+      "Identifier": "6536651",
+      "Weight": "3.14%",
+      "Market Value": "44,240,033.56",
+      "Shares Held": "4,669,421.00",
+      "Asset Category": "Equity",
+      "Price": "9.474415256195575"
+    },
+    {
+      "Name": "QUIMICA Y MINERA CHIL-SP ADR",
+      "Ticker": "SQM",
+      "Identifier": "2771122",
+      "Weight": "2.96%",
+      "Market Value": "41,751,324.74",
+      "Shares Held": "668,342.00",
+      "Asset Category": "Equity",
+      "Price": "62.47000000000001"
+    },
+    {
+      "Name": "GANFENG LITHIUM GROUP CO L-A",
+      "Ticker": "002460 C2",
+      "Identifier": "BD5CB19",
+      "Weight": "2.31%",
+      "Market Value": "32,580,122.75",
+      "Shares Held": "4,993,232.00",
+      "Asset Category": "Equity",
+      "Price": "6.524856595888195"
+    },
+    {
+      "Name": "PLS GROUP LTD",
+      "Ticker": "PLS AU",
+      "Identifier": "B2368L5",
+      "Weight": "2.30%",
+      "Market Value": "32,370,551.71",
+      "Shares Held": "13,795,042.00",
+      "Asset Category": "Equity",
+      "Price": "2.346535205184587"
+    },
+    {
+      "Name": "GUANGZHOU TINCI MATERIALS -A",
+      "Ticker": "002709 C2",
+      "Identifier": "BD5LR63",
+      "Weight": "2.17%",
+      "Market Value": "30,562,445.46",
+      "Shares Held": "5,889,385.00",
+      "Asset Category": "Equity",
+      "Price": "5.189412045570124"
+    },
+    {
+      "Name": "ENERSYS",
+      "Ticker": "ENS",
+      "Identifier": "B020GQ5",
+      "Weight": "2.16%",
+      "Market Value": "30,455,973.25",
+      "Shares Held": "170,861.00",
+      "Asset Category": "Equity",
+      "Price": "178.25"
+    },
+    {
+      "Name": "WUXI LEAD INTELLIGENT EQUI-A",
+      "Ticker": "300450 C2",
+      "Identifier": "BD6QWJ5",
+      "Weight": "1.95%",
+      "Market Value": "27,522,244.08",
+      "Shares Held": "4,863,910.00",
+      "Asset Category": "Equity",
+      "Price": "5.658460802111881"
+    },
+    {
+      "Name": "MINERAL RESOURCES LTD",
+      "Ticker": "MIN AU",
+      "Identifier": "B17ZL56",
+      "Weight": "1.94%",
+      "Market Value": "27,289,267.38",
+      "Shares Held": "798,528.00",
+      "Asset Category": "Equity",
+      "Price": "34.17446524104352"
+    },
+    {
+      "Name": "TIANQI LITHIUM CORP-A",
+      "Ticker": "002466 C2",
+      "Identifier": "BD5CKH8",
+      "Weight": "1.88%",
+      "Market Value": "26,518,768.58",
+      "Shares Held": "4,525,293.00",
+      "Asset Category": "Equity",
+      "Price": "5.860121892659768"
+    },
+    {
+      "Name": "ECOPRO BM CO LTD",
+      "Ticker": "247540 KS",
+      "Identifier": "BJ321P7",
+      "Weight": "1.52%",
+      "Market Value": "21,459,640.78",
+      "Shares Held": "247,844.00",
+      "Asset Category": "Equity",
+      "Price": "86.58527452752539"
+    },
+    {
+      "Name": "SUNWODA ELECTRONIC CO LTD-A",
+      "Ticker": "300207 C2",
+      "Identifier": "BD5CCV6",
+      "Weight": "1.32%",
+      "Market Value": "18,549,486.08",
+      "Shares Held": "6,196,491.00",
+      "Asset Category": "Equity",
+      "Price": "2.993546844496345"
+    },
+    {
+      "Name": "YUNNAN ENERGY NEW MATERIAL-A",
+      "Ticker": "002812 C2",
+      "Identifier": "BFCCR30",
+      "Weight": "1.25%",
+      "Market Value": "17,662,669.63",
+      "Shares Held": "2,524,359.00",
+      "Asset Category": "Equity",
+      "Price": "6.996892926085394"
+    },
+    {
+      "Name": "SINOMINE RESOURCE GROUP CO-A",
+      "Ticker": "002738 C2",
+      "Identifier": "BNR4M32",
+      "Weight": "1.14%",
+      "Market Value": "16,028,459.61",
+      "Shares Held": "2,769,056.00",
+      "Asset Category": "Equity",
+      "Price": "5.78842017279535"
+    },
+    {
+      "Name": "SHANGHAI PUTAILAI NEW ENERGY",
+      "Ticker": "603659 C1",
+      "Identifier": "BF2DZJ5",
+      "Weight": "1.02%",
+      "Market Value": "14,416,405.89",
+      "Shares Held": "4,447,428.00",
+      "Asset Category": "Equity",
+      "Price": "3.241515296031774"
+    },
+    {
+      "Name": "IGO LTD",
+      "Ticker": "IGO AU",
+      "Identifier": "6439567",
+      "Weight": "0.92%",
+      "Market Value": "12,982,176.66",
+      "Shares Held": "3,165,447.00",
+      "Asset Category": "Equity",
+      "Price": "4.101214349821684"
+    },
+    {
+      "Name": "L&F CO LTD",
+      "Ticker": "066970 KS",
+      "Identifier": "6578608",
+      "Weight": "0.76%",
+      "Market Value": "10,733,077.07",
+      "Shares Held": "134,048.00",
+      "Asset Category": "Equity",
+      "Price": "80.06890867450466"
+    },
+    {
+      "Name": "ELEVRA LITHIUM LTD",
+      "Ticker": "ELV AU",
+      "Identifier": "BVBM1M0",
+      "Weight": "0.16%",
+      "Market Value": "2,221,749.00",
+      "Shares Held": "699,734.00",
+      "Asset Category": "Equity",
+      "Price": "3.175133693660734"
+    },
+    {
+      "Name": "PMET RESOURCES INC",
+      "Ticker": "PMET CN",
+      "Identifier": "BRJJYV5",
+      "Weight": "0.14%",
+      "Market Value": "1,991,697.57",
+      "Shares Held": "717,841.00",
+      "Asset Category": "Equity",
+      "Price": "2.774566470848001"
+    },
+    {
+      "Name": "ERAMET",
+      "Ticker": "ERA FP",
+      "Identifier": "4017017",
+      "Weight": "0.14%",
+      "Market Value": "1,947,486.08",
+      "Shares Held": "40,051.00",
+      "Asset Category": "Equity",
+      "Price": "48.62515492746748"
+    },
+    {
+      "Name": "EUROPEAN LITHIUM LTD",
+      "Ticker": "EUR AU",
+      "Identifier": "BDGJNV3",
+      "Weight": "0.12%",
+      "Market Value": "1,736,667.92",
+      "Shares Held": "6,740,900.00",
+      "Asset Category": "Equity",
+      "Price": "0.2576314616742572"
+    },
+    {
+      "Name": "STANDARD LITHIUM LTD",
+      "Ticker": "SLI CN",
+      "Identifier": "BDSFRL7",
+      "Weight": "0.11%",
+      "Market Value": "1,606,634.79",
+      "Shares Held": "1,019,142.00",
+      "Asset Category": "Equity",
+      "Price": "1.576458226625927"
+    },
+    {
+      "Name": "VULCAN ENERGY RESOURCES LTD",
+      "Ticker": "VUL AU",
+      "Identifier": "BKYBH63",
+      "Weight": "0.10%",
+      "Market Value": "1,421,892.03",
+      "Shares Held": "1,490,558.00",
+      "Asset Category": "Equity",
+      "Price": "0.9539327084219467"
+    },
+    {
+      "Name": "IONEER LTD",
+      "Ticker": "INR AU",
+      "Identifier": "BGYBHZ4",
+      "Weight": "0.07%",
+      "Market Value": "923,093.27",
+      "Shares Held": "12,625,806.00",
+      "Asset Category": "Equity",
+      "Price": "0.07311163105151465"
+    },
+    {
+      "Name": "KOREAN WON",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.06%",
+      "Market Value": "833,229.81",
+      "Shares Held": "1,112,445,121.00",
+      "Asset Category": "Equity",
+      "Price": "0.0007490075638526713"
     }
   ]
 }

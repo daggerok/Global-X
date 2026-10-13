@@ -2,7 +2,7 @@
   "ticker": "NORW",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4312,
+  "totalRows": 4313,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-14",
+      "Close": "22.45",
+      "Adj Close": "17.83",
+      "Volume": "32000"
+    },
     {
       "Date": "2022-10-13",
       "Close": "23.42",
@@ -6003,12 +6009,6 @@
       "Close": "20.36",
       "Adj Close": "14.49",
       "Volume": "600"
-    },
-    {
-      "Date": "2018-10-24",
-      "Close": "20.21",
-      "Adj Close": "14.39",
-      "Volume": "1900"
     }
   ]
 }
