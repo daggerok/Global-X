@@ -396,6 +396,22 @@ describe("pipeline", () => {
     expect(readdirSync(dir, { recursive: true } as any).some((name: any) => String(name).includes(".tmp-"))).toBe(false);
   });
 
+  test("console output: config with TICKERS=all, one catalog line, fund lines, two done lines from the reporter", async () => {
+    const dir = fresh(); installMock(() => THREE);
+    const lines: string[] = [];
+    console.log = (line: unknown) => { lines.push(...String(line).split("\n")); };
+    await run(dir);
+    expect(lines).toContain("              TICKERS=all");
+    expect(lines.filter((line) => line.startsWith("[ catalog  ] "))).toEqual(["[ catalog  ] 3 Global X ETFs (globalxetfs.com Explore Our ETFs table)"]);
+    expect(lines.some((line) => line === "")).toBe(false);
+    expect(lines.filter((line) => /^\[ +\d+\/3 +\] /.test(line))).toHaveLength(3);
+    expect(lines.at(-2)).toMatch(/^\[ done {5}\] 3 funds: 3 updated, 0 unchanged, 0 kept, 0 skipped, 0 failed in \d+\.\ds$/);
+    expect(lines.at(-1)).toBe("[ done     ] counts: 3 funds / 6 holdings rows / 6 history rows");
+    lines.length = 0;
+    await run(dir);
+    expect(lines.at(-2)).toMatch(/ 3 funds: 0 updated, 3 unchanged, /);
+  });
+
   test("a second identical run writes nothing, even generatedAt", async () => {
     const dir = fresh(); installMock(() => THREE); quiet();
     await run(dir);
