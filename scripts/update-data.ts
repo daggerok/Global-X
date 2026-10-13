@@ -1717,7 +1717,8 @@ export function nportToHoldings(positions: NportPosition[], netAssets: number | 
 // Yahoo Finance chart feed
 // ---------------------------------------------------------------------------
 
-export type YahooHistoryRow = { date: string; close: number | null; adjClose: number | null; volume: number | null };
+// adjCloseRaw: Yahoo's unrounded value, only used to tell float noise from a real change (never persisted).
+export type YahooHistoryRow = { date: string; close: number | null; adjClose: number | null; volume: number | null; adjCloseRaw?: number | null };
 export type YahooDistribution = { date: string; amount: number };
 
 export function parseYahooChart(json: unknown): { history: YahooHistoryRow[]; dividends: YahooDistribution[] } {
@@ -1733,7 +1734,7 @@ export function parseYahooChart(json: unknown): { history: YahooHistoryRow[]; di
     const adjusted = adjustedRaw === null ? null : round(adjustedRaw, 2);
     if (close === null && adjusted === null) continue;
     const date = new Date(timestamps[index] * 1000).toISOString().slice(0, 10);
-    history.push({ date, close, adjClose: adjusted, volume: numberOrNull(quote.volume?.[index]) });
+    history.push({ date, close, adjClose: adjusted, volume: numberOrNull(quote.volume?.[index]), adjCloseRaw: adjustedRaw });
   }
   history.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   const dividends: YahooDistribution[] = [];
@@ -2033,13 +2034,27 @@ async function writeHistoryPages(fundDir: string, ticker: string, historyRows: A
   return changed;
 }
 
-function yahooHistoryRows(parsed: ReturnType<typeof parseYahooChart>): Array<Record<string, string>> {
-  return parsed.history.map((row) => ({
-    Date: row.date,
-    Close: row.close === null ? '' : row.close.toFixed(2),
-    'Adj Close': row.adjClose === null ? '' : row.adjClose.toFixed(2),
-    Volume: row.volume === null ? '' : String(row.volume),
-  }));
+// Yahoo's adjusted close is float32 and its last digits move with the request's period2, so a value
+// sitting on a cent boundary (31.544998 vs 31.545001) flips between runs. Within that noise the
+// published cent is kept: a rerun with the same source data changes nothing.
+export const ADJ_CLOSE_NOISE = 1e-4;
+
+/** Fresh Yahoo rows; `published` (the previously written history) keeps its Adj Close cent within float noise. */
+export function yahooHistoryRows(parsed: ReturnType<typeof parseYahooChart>, published: Array<Record<string, string>> | null = null): Array<Record<string, string>> {
+  const prior = new Map((published || []).map((row) => [row.Date, row]));
+  return parsed.history.map((row) => {
+    const out = {
+      Date: row.date,
+      Close: row.close === null ? '' : row.close.toFixed(2),
+      'Adj Close': row.adjClose === null ? '' : row.adjClose.toFixed(2),
+      Volume: row.volume === null ? '' : String(row.volume),
+    };
+    const previous = prior.get(row.date);
+    const priorAdj = previous ? numberOrNull(previous['Adj Close']) : null;
+    const raw = row.adjCloseRaw ?? row.adjClose;
+    if (previous && priorAdj !== null && raw !== null && out['Adj Close'] !== previous['Adj Close'] && Math.abs(raw - priorAdj) <= 0.005 + ADJ_CLOSE_NOISE) out['Adj Close'] = previous['Adj Close'];
+    return out;
+  });
 }
 
 /**
@@ -2053,7 +2068,7 @@ async function updateHistoryOnly(fund: LineupFund, previousEntry: CatalogEntry |
   if (config.skipYahoo) { stats.unchanged += 1; return previousEntry; }
   const url = yahooChartUrl(ticker, config.historyRange);
   const json = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`, (response) => response.json());
-  const rows = yahooHistoryRows(parseYahooChart(json));
+  const rows = yahooHistoryRows(parseYahooChart(json), await readPreviousHistory(ticker, previousMeta));
   if (!rows.length) throw new Error(`${ticker}: Yahoo returned no bars`);
   const fundDir = path.join(API_ROOT, 'funds', ticker);
   const manifest = {
@@ -2184,7 +2199,7 @@ async function updateFund(
       const parsed = parseYahooChart(json);
       yahooDividends = parsed.dividends;
       yahooExchange = parseYahooExchangeName(json);
-      historyRows = yahooHistoryRows(parsed);
+      historyRows = yahooHistoryRows(parsed, await readPreviousHistory(ticker, previousMeta));
     } catch (error) {
       outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: Yahoo chart unavailable (${errorMessage(error)}), keeping the published history`);
     }

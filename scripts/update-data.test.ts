@@ -421,6 +421,35 @@ describe("pipeline", () => {
     expect(snapshot(dir)).toEqual(first);
   });
 
+  test("two runs on the same source data write zero changes even when Yahoo adjusted closes jitter across a cent boundary", async () => {
+    // Yahoo float32 noise seen live: AAM SPDV 2024-11-12 came back as 31.544998 and 31.545001 a minute apart
+    const dir = fresh(); installMock(() => THREE);
+    const base = globalThis.fetch;
+    const jittered = (adjclose: number[]) => {
+      globalThis.fetch = (async (input: any, init?: RequestInit) => {
+        if (!String(input).includes("finance.yahoo.com")) return base(input, init);
+        const payload = yahooJson() as any;
+        payload.chart.result[0].indicators.adjclose = [{ adjclose }];
+        return new Response(JSON.stringify(payload));
+      }) as unknown as typeof fetch;
+    };
+    const lines: string[] = [];
+    console.log = (line: unknown) => { lines.push(String(line)); };
+    jittered([9.915001, 10.984999]);
+    await run(dir);
+    const first = snapshot(dir);
+    expect(JSON.parse(first["/funds/AAA/history/001.json"]).rows.map((r: any) => r["Adj Close"])).toEqual(["10.98", "9.92"]);
+    jittered([9.914998, 10.985002]);
+    lines.length = 0;
+    await run(dir);
+    expect(snapshot(dir)).toEqual(first);
+    expect(lines.some((line) => / 3 funds: 0 updated, 3 unchanged, /.test(line))).toBe(true);
+    // a real change beyond the noise is still written
+    jittered([9.9, 10.97]);
+    await run(dir);
+    expect(JSON.parse(readFileSync(join(dir, "funds", "AAA", "history", "001.json"), "utf8")).rows.map((r: any) => r["Adj Close"])).toEqual(["10.97", "9.90"]);
+  });
+
   test("a one-ticker run keeps every row and leaves other funds untouched; unknown ticker is an error", async () => {
     const dir = fresh(); installMock(() => THREE); quiet();
     await run(dir);
