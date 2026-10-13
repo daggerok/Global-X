@@ -1207,6 +1207,18 @@ const FUND_DETAIL_LABELS = new Set([
   'daily change (%)',
 ]);
 
+/** Appended to the holdings source kind while a fund in liquidation keeps its last published holdings. */
+const LIQUIDATION_KEPT_NOTE = '; kept: fund in liquidation, no current holdings CSV';
+
+/**
+ * A fund being wound down carries an "In Liquidation" label under its name
+ * (BTRN, 2026-10). Its page still publishes current fund details, but the
+ * dated holdings CSV it links answers HTTP 404.
+ */
+export function isGlobalXFundInLiquidation(html: string): boolean {
+  return /(?:>|\\?")\s*In Liquidation\b/.test(html);
+}
+
 /** The `Fund Details` panel: CUSIP, ISIN, NAV, market price, exchange, share count. */
 export function parseGlobalXFundDetails(html: string): GlobalXFundDetails {
   const flight = extractNextFlightText(html);
@@ -1949,6 +1961,21 @@ async function readPreviousHistory(ticker: string, meta: Record<string, any> | n
   return rows;
 }
 
+/** The previously published holdings (headers and all page rows), or null when none were published. */
+async function readPreviousHoldings(ticker: string, meta: Record<string, any> | null): Promise<{ headers: string[]; rows: Array<Record<string, string>> } | null> {
+  const pages: unknown = meta?.holdings?.pages;
+  if (!Array.isArray(pages) || !pages.length) return null;
+  let headers: string[] = [];
+  const rows: Array<Record<string, string>> = [];
+  for (const page of pages) {
+    const envelope = await readJsonIfExists(path.join(API_ROOT, 'funds', ticker, String(page)));
+    if (!envelope || !Array.isArray(envelope.rows)) return null;
+    if (Array.isArray(envelope.headers)) headers = envelope.headers;
+    rows.push(...envelope.rows);
+  }
+  return { headers, rows };
+}
+
 /** `Global X Silver Miners ETF` (N-PORT series name) vs `Silver Miners ETF` (catalog name). */
 export function sameSeries(seriesName: string | null | undefined, fundName: string): boolean {
   const norm = (value: string) => cleanText(value).toLowerCase().replace(/^global x\s+/, '').replace(/[^a-z0-9]+/g, '');
@@ -2068,33 +2095,49 @@ async function updateFund(
         await writeIfChanged(path.join(API_ROOT, 'raw', `${ticker}-holdings.csv`), csv);
       }
     } catch (error) {
-      if (!config.edgarFallback) throw error;
-      outputNote(`[ ${'holdings'.padEnd(9)}] ${ticker}: holdings CSV unavailable (${errorMessage(error)}), trying EDGAR`);
-      const xml = await fetchText(globalxEdgarFilingsUrl(), secHeaders(config), config, `${ticker} EDGAR`);
-      const filings = [...xml.matchAll(/href=["'](\/Archives\/[^"']+primary_doc\.xml)["']/gi)].map((match) => match[1]);
-      if (!filings.length) throw new Error(`${ticker}: no N-PORT primary_doc.xml link on the EDGAR page`);
-      // The page lists the filings of every series of the trust: take the first one that is this fund's.
-      let chosen: { nport: ReturnType<typeof parseNportXml>; filing: string } | null = null;
-      for (const filing of filings.slice(0, MAX_NPORT_FILINGS_SCANNED)) {
-        const candidate = parseNportXml(await fetchText(`https://www.sec.gov${filing}`, secHeaders(config), config, `${ticker} N-PORT`));
-        if (sameSeries(candidate.seriesName, fund.name)) { chosen = { nport: candidate, filing }; break; }
+      // A fund in liquidation no longer publishes its holdings CSV: keep the
+      // last published holdings and still refresh the fund details.
+      const kept = isGlobalXFundInLiquidation(pageHtml) ? await readPreviousHoldings(ticker, previousMeta) : null;
+      if (kept && previousMeta?.holdings) {
+        outputNote(`[ ${'holdings'.padEnd(9)}] ${ticker}: fund in liquidation, holdings CSV unavailable (${errorMessage(error)}), keeping the published holdings`);
+        holdings = {
+          ...holdings,
+          headers: kept.headers.length ? kept.headers : holdings.headers,
+          rows: kept.rows,
+          asOfDate: toIsoDate(previousMeta.holdings.asOf) || '',
+          totalRows: kept.rows.length,
+          source: String(previousMeta.holdings.source || holdings.source),
+          sourceKind: `${String(previousMeta.holdings.sourceKind || holdings.sourceKind).replace(LIQUIDATION_KEPT_NOTE, '')}${LIQUIDATION_KEPT_NOTE}`,
+        };
+      } else {
+        if (!config.edgarFallback) throw error;
+        outputNote(`[ ${'holdings'.padEnd(9)}] ${ticker}: holdings CSV unavailable (${errorMessage(error)}), trying EDGAR`);
+        const xml = await fetchText(globalxEdgarFilingsUrl(), secHeaders(config), config, `${ticker} EDGAR`);
+        const filings = [...xml.matchAll(/href=["'](\/Archives\/[^"']+primary_doc\.xml)["']/gi)].map((match) => match[1]);
+        if (!filings.length) throw new Error(`${ticker}: no N-PORT primary_doc.xml link on the EDGAR page`);
+        // The page lists the filings of every series of the trust: take the first one that is this fund's.
+        let chosen: { nport: ReturnType<typeof parseNportXml>; filing: string } | null = null;
+        for (const filing of filings.slice(0, MAX_NPORT_FILINGS_SCANNED)) {
+          const candidate = parseNportXml(await fetchText(`https://www.sec.gov${filing}`, secHeaders(config), config, `${ticker} N-PORT`));
+          if (sameSeries(candidate.seriesName, fund.name)) { chosen = { nport: candidate, filing }; break; }
+        }
+        if (!chosen) throw new Error(`${ticker}: no N-PORT filing of this series among the latest ${Math.min(filings.length, MAX_NPORT_FILINGS_SCANNED)} on the EDGAR page`);
+        const nport = chosen.nport;
+        // The fallback may never replace fresher published holdings.
+        const publishedAsOf = toIsoDate(previousMeta?.holdings?.asOf);
+        if (publishedAsOf && toIsoDate(nport.repPdDate) < publishedAsOf) {
+          throw new Error(`${ticker}: N-PORT report period ${nport.repPdDate} is older than the published holdings (${publishedAsOf}), keeping them`);
+        }
+        holdings = {
+          ...holdings,
+          headers: [...HOLDINGS_HEADERS],
+          rows: nportToHoldings(nport.positions, details.netAssets ?? null),
+          asOfDate: nport.repPdDate,
+          totalRows: nport.positions.length,
+          source: `https://www.sec.gov${chosen.filing}`,
+          sourceKind: 'SEC EDGAR Form N-PORT-P (fallback)',
+        };
       }
-      if (!chosen) throw new Error(`${ticker}: no N-PORT filing of this series among the latest ${Math.min(filings.length, MAX_NPORT_FILINGS_SCANNED)} on the EDGAR page`);
-      const nport = chosen.nport;
-      // The fallback may never replace fresher published holdings.
-      const publishedAsOf = toIsoDate(previousMeta?.holdings?.asOf);
-      if (publishedAsOf && toIsoDate(nport.repPdDate) < publishedAsOf) {
-        throw new Error(`${ticker}: N-PORT report period ${nport.repPdDate} is older than the published holdings (${publishedAsOf}), keeping them`);
-      }
-      holdings = {
-        ...holdings,
-        headers: [...HOLDINGS_HEADERS],
-        rows: nportToHoldings(nport.positions, details.netAssets ?? null),
-        asOfDate: nport.repPdDate,
-        totalRows: nport.positions.length,
-        source: `https://www.sec.gov${chosen.filing}`,
-        sourceKind: 'SEC EDGAR Form N-PORT-P (fallback)',
-      };
     }
   }
 
