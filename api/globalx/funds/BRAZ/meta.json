@@ -11,51 +11,51 @@
   "terGross": "0.75%",
   "terGrossValue": 0.75,
   "nav": {
-    "display": "$37.83",
-    "value": 37.83,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-0.06 (-0.16%)",
+    "display": "$36.10",
+    "value": 36.1,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.06 (-0.17%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 37.83,
+  "navValue": 36.1,
   "aum": {
-    "display": "$12.49M",
-    "value": 12485448.25,
-    "asOfDate": "Oct 12 2026",
-    "source": "Global X fund page Fund Details \"Net Assets\""
+    "display": "$11.91M",
+    "value": 11913505.4,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 12485448.25,
-  "asOfDate": "Oct 12 2026",
+  "aumValue": 11913505.4,
+  "asOfDate": "Oct 16 2026",
   "inceptionDate": "Aug 16 2023",
   "inceptionDateFundPage": "Aug 16 2023",
   "exchange": "NYSE Arca",
-  "closePrice": "$37.88",
-  "closePriceValue": 37.88,
+  "closePrice": "$36.07",
+  "closePriceValue": 36.07,
   "premiumDiscount": {
-    "display": "0.13%",
-    "value": 0.1274,
-    "derivedValue": 0.13,
-    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+    "display": "-0.10%",
+    "value": -0.099,
+    "derivedValue": -0.08,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": 0.1274,
-  "premiumDiscountDerivedValue": 0.13,
-  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "premiumDiscountValue": -0.099,
+  "premiumDiscountDerivedValue": -0.08,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.40%",
     "value": 0.4,
-    "asOfDate": "Oct 12 2026",
-    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.4,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 12485448.25,
+  "totalNetAssets": 11913505.4,
   "sharesOutstanding": {
     "display": "330,000",
     "value": 330000,
-    "asOfDate": "Oct 12 2026"
+    "asOfDate": "Oct 16 2026"
   },
-  "netAssetsAsOf": "Oct 12 2026",
-  "secYieldAsOf": "Oct 12 2026",
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
   "distributions": {
     "frequency": "Semi-Annually",
     "paymentsPerYear": 2,
@@ -130,16 +130,14 @@
       "sinceInceptionCumulative": 40.74,
       "market": {
         "ONE_YEAR": 25.32,
-        "SINCE_INCEPTION": 11.66,
-        "THREE_YEAR": 11.85
+        "THREE_YEAR": 11.85,
+        "SINCE_INCEPTION": 11.66
       },
-      "benchmarkName": "Index",
+      "benchmarkName": "Benchmark",
       "benchmark": {
-        "FIVE_YEAR": 11.99,
         "ONE_YEAR": 26.53,
-        "SINCE_INCEPTION": 13.32,
-        "TEN_YEAR": 7.2,
-        "THREE_YEAR": 13.58
+        "THREE_YEAR": 13.58,
+        "SINCE_INCEPTION": 13.32
       }
     },
     "quarterEnd": {
@@ -157,8 +155,8 @@
       "sinceInceptionCumulative": 40.74,
       "market": {
         "ONE_YEAR": 25.32,
-        "SINCE_INCEPTION": 11.66,
-        "THREE_YEAR": 11.85
+        "THREE_YEAR": 11.85,
+        "SINCE_INCEPTION": 11.66
       }
     }
   },
@@ -172,10 +170,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 11.55,
-    "dividendYield": 2.12,
-    "dividendYieldText": "2.12%",
-    "distributionYield": 2.12,
-    "distributionYieldText": "2.12%",
+    "dividendYield": 0.85,
+    "dividendYieldText": "0.85%",
+    "distributionYield": 0.85,
+    "distributionYieldText": "0.85%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 1.64,
@@ -192,9 +190,9 @@
     ],
     "pageSize": 250,
     "totalRows": 29,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
-    "source": "https://assets.globalxetfs.com/funds/holdings/braz_full-holdings_20261012.csv",
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/braz_full-holdings_20261016.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -202,9 +200,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 790,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
+    "totalRows": 794,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/BRAZ",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -214,7 +212,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/braz/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/braz_full-holdings_20261012.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/braz_full-holdings_20261016.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BRAZ",
@@ -226,15 +224,15 @@
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
-    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
     "cusip": "37960A560",
     "isin": "US37960A5609",
     "underlyingExposure": null,
     "indexName": null,
-    "benchmarkIndexName": "Index"
+    "benchmarkIndexName": "Benchmark"
   },
   "expenseRatio": {
     "display": "0.75%",
@@ -244,18 +242,18 @@
     "managementFeeValue": 0.75
   },
   "marketPrice": {
-    "display": "$37.88",
-    "value": 37.88,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$0.03 (0.08%)",
+    "display": "$36.07",
+    "value": 36.07,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.44 (-1.21%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": 2.12,
-    "dividendYieldText": "2.12%",
+    "dividendYield": 0.85,
+    "dividendYieldText": "0.85%",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": 2.12,
-    "distributionRateText": "2.12%",
+    "distributionRate": 0.85,
+    "distributionRateText": "0.85%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 1.64,
@@ -263,17 +261,17 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 12 2026"
+    "distributionInfoAsOfDate": "Oct 16 2026"
   },
   "navIndex": null,
   "documents": {
-    "prospectus": null,
-    "summaryProspectus": null,
-    "sai": null,
-    "annualReport": null,
-    "semiAnnualReport": null,
-    "fiscalQ1Holdings": null,
-    "fiscalQ3Holdings": null,
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/1eVfVVTeOV75R3Beaotsrw/64620cafc695273941b6471b73efcdc0/Statutory-Prospectus_Active.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-braz-prospectus-regulatory-summary-pr-759bbaea12/308dd107da05ac33af9c918449f2371d/Summary-Prospectus.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/3TNQPk4UfBCGRChYKxvK32/afb7ef860d3cbb855239e14268554f26/Statement-of-Additional-Information_Actively-Managed-April-2024.pdf",
+    "annualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-braz-prospectus-regulatory-annual-sha-e218410726/738b4ed5b3c1c44b3ab19b7edeeff7f4/Annual-Shareholder-Report.pdf",
+    "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-braz-prospectus-regulatory-semi-annua-5d6f731cd1/d1411e5b2c697124638e18e9ce927838/Semi-Annual-Shareholder-Report.pdf",
+    "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-braz-prospectus-regulatory-q1-complet-f9a92e34f7/0099f6ffcf860d4c6b3d2f3fa8f77ff7/Q1-Complete-Holdings.pdf",
+    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-braz-prospectus-regulatory-q3-complet-261dc0a3ed/4443c0fa795f6eb5371acdc50d68594d/Q3-Complete-Holdings.pdf",
     "taxInfo": null,
     "form8937": null
   },

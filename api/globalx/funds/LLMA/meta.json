@@ -11,51 +11,51 @@
   "terGross": "0.75%",
   "terGrossValue": 0.75,
   "nav": {
-    "display": "$25.47",
-    "value": 25.47,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$0.14 (0.55%)",
+    "display": "$23.73",
+    "value": 23.73,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.31 (-1.29%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 25.47,
+  "navValue": 23.73,
   "aum": {
-    "display": "$1.27M",
-    "value": 1273624.29,
-    "asOfDate": "Oct 12 2026",
-    "source": "Global X fund page Fund Details \"Net Assets\""
+    "display": "$2.61M",
+    "value": 2610729.32,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 1273624.29,
-  "asOfDate": "Oct 12 2026",
+  "aumValue": 2610729.32,
+  "asOfDate": "Oct 16 2026",
   "inceptionDate": "Sep 30 2026",
   "inceptionDateFundPage": "Sep 30 2026",
   "exchange": "Cboe BZX",
-  "closePrice": "$25.43",
-  "closePriceValue": 25.43,
+  "closePrice": "$23.55",
+  "closePriceValue": 23.55,
   "premiumDiscount": {
-    "display": "-0.17%",
-    "value": -0.1668,
-    "derivedValue": -0.16,
-    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+    "display": "-0.77%",
+    "value": -0.7749,
+    "derivedValue": -0.76,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": -0.1668,
-  "premiumDiscountDerivedValue": -0.16,
-  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "premiumDiscountValue": -0.7749,
+  "premiumDiscountDerivedValue": -0.76,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Oct 12 2026",
-    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+    "display": null,
+    "value": null,
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
-  "bidAskSpreadValue": 0,
+  "bidAskSpreadValue": null,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 1273624.29,
+  "totalNetAssets": 2610729.32,
   "sharesOutstanding": {
-    "display": "50,000",
-    "value": 50000,
-    "asOfDate": "Oct 12 2026"
+    "display": "110,000",
+    "value": 110000,
+    "asOfDate": "Oct 16 2026"
   },
-  "netAssetsAsOf": "Oct 12 2026",
-  "secYieldAsOf": "Oct 12 2026",
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
   "distributions": {
     "frequency": "Semi-Annually",
     "paymentsPerYear": 2,
@@ -121,8 +121,8 @@
     "distributionYieldText": "—",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": 0,
-    "secYieldText": "0.00%",
+    "secYield": null,
+    "secYieldText": "—",
     "dividendYieldBasis": null,
     "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
     "performanceAsOf": null
@@ -135,9 +135,9 @@
     ],
     "pageSize": 250,
     "totalRows": 14,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
-    "source": "https://assets.globalxetfs.com/funds/holdings/llma_full-holdings_20261012.csv",
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/llma_full-holdings_20261016.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -145,9 +145,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 8,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
+    "totalRows": 12,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/LLMA",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -157,7 +157,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/llma/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/llma_full-holdings_20261012.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/llma_full-holdings_20261016.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LLMA",
@@ -169,8 +169,8 @@
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
-    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
     "cusip": "37966B745",
@@ -187,10 +187,10 @@
     "managementFeeValue": 0.75
   },
   "marketPrice": {
-    "display": "$25.43",
-    "value": 25.43,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$0.01 (0.04%)",
+    "display": "$23.55",
+    "value": 23.55,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.68 (-2.81%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
@@ -201,18 +201,18 @@
     "distributionRateText": "—",
     "yield12M": null,
     "yield12MText": "—",
-    "secYield": 0,
-    "secYieldText": "0.00%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 12 2026"
+    "distributionInfoAsOfDate": "Oct 16 2026"
   },
   "navIndex": null,
   "documents": {
-    "prospectus": null,
-    "summaryProspectus": null,
-    "sai": null,
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/3Nl84zlDnd3mLfxvQZmlc2/96f7c314dfdd064290f52c433ac905b5/Statutory_Prospectus_LLMA.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/74nOXa5A6J0DLtOdFdAcEB/87e4c38700d12bb1d46f4d988b442072/Summary-Prospectus_LLMA.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/5MedSYLQygXjN6FPbHi7cf/3b3d03f278d3f9a08dd5e41458496992/Statement_of_Additional_Information_LLMA.pdf",
     "annualReport": null,
     "semiAnnualReport": null,
     "fiscalQ1Holdings": null,

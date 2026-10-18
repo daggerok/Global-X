@@ -11,51 +11,51 @@
   "terGross": "0.58%",
   "terGrossValue": 0.58,
   "nav": {
-    "display": "$23.94",
-    "value": 23.94,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-0.04 (-0.17%)",
+    "display": "$23.62",
+    "value": 23.62,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.09 (-0.38%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 23.94,
+  "navValue": 23.62,
   "aum": {
-    "display": "$1.18B",
-    "value": 1180370119.93,
-    "asOfDate": "Oct 12 2026",
-    "source": "Global X fund page Fund Details \"Net Assets\""
+    "display": "$1.16B",
+    "value": 1164647333.63,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 1180370119.93,
-  "asOfDate": "Oct 12 2026",
+  "aumValue": 1164647333.63,
+  "asOfDate": "Oct 16 2026",
   "inceptionDate": "Jun 08 2011",
   "inceptionDateFundPage": "Jun 08 2011",
   "exchange": "NYSE Arca",
-  "closePrice": "$23.93",
-  "closePriceValue": 23.93,
+  "closePrice": "$23.58",
+  "closePriceValue": 23.58,
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.0335,
-    "derivedValue": -0.04,
-    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+    "display": "-0.17%",
+    "value": -0.1658,
+    "derivedValue": -0.17,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": -0.0335,
-  "premiumDiscountDerivedValue": -0.04,
-  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "premiumDiscountValue": -0.1658,
+  "premiumDiscountDerivedValue": -0.17,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.04%",
     "value": 0.04,
-    "asOfDate": "Oct 12 2026",
-    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.04,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 1180370119.93,
+  "totalNetAssets": 1164647333.63,
   "sharesOutstanding": {
     "display": "49,309,412",
     "value": 49309412,
-    "asOfDate": "Oct 12 2026"
+    "asOfDate": "Oct 16 2026"
   },
-  "netAssetsAsOf": "Oct 12 2026",
-  "secYieldAsOf": "Oct 12 2026",
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
   "distributions": {
     "frequency": "Monthly",
     "paymentsPerYear": 12,
@@ -1375,19 +1375,19 @@
       "sinceInception": 1,
       "sinceInceptionCumulative": 16.52,
       "market": {
-        "FIVE_YEAR": 0.16,
         "ONE_YEAR": 6.63,
-        "SINCE_INCEPTION": 0.96,
+        "THREE_YEAR": 13.17,
+        "FIVE_YEAR": 0.16,
         "TEN_YEAR": -0.83,
-        "THREE_YEAR": 13.17
+        "SINCE_INCEPTION": 0.96
       },
       "benchmarkName": "Index",
       "benchmark": {
-        "FIVE_YEAR": 0.08,
         "ONE_YEAR": 8.05,
-        "SINCE_INCEPTION": 0.85,
+        "THREE_YEAR": 13.92,
+        "FIVE_YEAR": 0.08,
         "TEN_YEAR": -0.7,
-        "THREE_YEAR": 13.92
+        "SINCE_INCEPTION": 0.85
       }
     },
     "quarterEnd": {
@@ -1404,11 +1404,11 @@
       "sinceInception": 1,
       "sinceInceptionCumulative": 16.52,
       "market": {
-        "FIVE_YEAR": 0.16,
         "ONE_YEAR": 6.63,
-        "SINCE_INCEPTION": 0.96,
+        "THREE_YEAR": 13.17,
+        "FIVE_YEAR": 0.16,
         "TEN_YEAR": -0.83,
-        "THREE_YEAR": 13.17
+        "SINCE_INCEPTION": 0.96
       }
     }
   },
@@ -1422,12 +1422,12 @@
     "cagr5y": 0.2,
     "cagr10y": -0.74,
     "siAnn": 1,
-    "dividendYield": 9.71,
-    "dividendYieldText": "9.71%",
-    "distributionYield": 9.71,
-    "distributionYieldText": "9.71%",
-    "yield12M": null,
-    "yield12MText": "—",
+    "dividendYield": 8.97,
+    "dividendYieldText": "8.97%",
+    "distributionYield": 8.97,
+    "distributionYieldText": "8.97%",
+    "yield12M": 9.85,
+    "yield12MText": "9.85%",
     "secYield": 9.77,
     "secYieldText": "9.77%",
     "dividendYieldBasis": "official-distribution-rate",
@@ -1441,10 +1441,10 @@
       "./holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 120,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
-    "source": "https://assets.globalxetfs.com/funds/holdings/sdiv_full-holdings_20261012.csv",
+    "totalRows": 118,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/sdiv_full-holdings_20261016.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -1455,9 +1455,9 @@
       "./history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3858,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
+    "totalRows": 3862,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/SDIV",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -1467,7 +1467,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/sdiv/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/sdiv_full-holdings_20261012.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/sdiv_full-holdings_20261016.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SDIV",
@@ -1479,8 +1479,8 @@
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
-    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
     "cusip": "37960A669",
@@ -1497,36 +1497,36 @@
     "managementFeeValue": 0.58
   },
   "marketPrice": {
-    "display": "$23.93",
-    "value": 23.93,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-0.03 (-0.13%)",
+    "display": "$23.58",
+    "value": 23.58,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.09 (-0.38%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": 9.71,
-    "dividendYieldText": "9.71%",
+    "dividendYield": 8.97,
+    "dividendYieldText": "8.97%",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": 9.71,
-    "distributionRateText": "9.71%",
-    "yield12M": null,
-    "yield12MText": "—",
+    "distributionRate": 8.97,
+    "distributionRateText": "8.97%",
+    "yield12M": 9.85,
+    "yield12MText": "9.85%",
     "secYield": 9.77,
     "secYieldText": "9.77%",
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 12 2026"
+    "distributionInfoAsOfDate": "Oct 16 2026"
   },
   "navIndex": null,
   "documents": {
-    "prospectus": null,
-    "summaryProspectus": null,
-    "sai": null,
-    "annualReport": null,
-    "semiAnnualReport": null,
-    "fiscalQ1Holdings": null,
-    "fiscalQ3Holdings": null,
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/1YFIECMmhXIfNSLL7vYHP5/3f458fd4954d3140437706c5ad65562c/Statutory-Prospectus_Special-Opportunities-Operational.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-sdiv-prospectus-regulatory-summary-pr-baf1ce6b40/2cda73f591575116423f8a1683738d84/Summary-Prospectus_SDIV.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/1mDHzSUoJVgp87j4RoRXaU/183dc9356d8467d1a7843774290e9091/Statement-of-Additional-Information_March.pdf",
+    "annualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-sdiv-prospectus-regulatory-annual-sha-2a362d9cb6/21786e2686a7f62c968c6ad291db2624/Annual-Shareholder-Report.pdf",
+    "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-sdiv-prospectus-regulatory-semi-annua-9946cea8a6/cd42e685907b0ac167c98fc4cad238ca/Semi-Annual-Shareholder-Report.pdf",
+    "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-sdiv-prospectus-regulatory-q1-complet-dff8a795e7/e16d6c265dfe8a088bfbe5875afaf1b4/Q1-Complete-Holdings.pdf",
+    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-sdiv-prospectus-regulatory-q3-complet-bb41de352b/8d0f14e553253d6b0235f0389f70c40e/Q3-Complete-Holdings_SDIV.pdf",
     "taxInfo": null,
     "form8937": null
   },

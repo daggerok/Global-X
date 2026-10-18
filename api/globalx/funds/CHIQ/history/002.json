@@ -2,7 +2,7 @@
   "ticker": "CHIQ",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4241,
+  "totalRows": 4245,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-20",
+      "Close": "16.06",
+      "Adj Close": "14.96",
+      "Volume": "71100"
+    },
+    {
+      "Date": "2022-10-19",
+      "Close": "15.90",
+      "Adj Close": "14.81",
+      "Volume": "63900"
+    },
+    {
+      "Date": "2022-10-18",
+      "Close": "16.85",
+      "Adj Close": "15.69",
+      "Volume": "91900"
+    },
+    {
+      "Date": "2022-10-17",
+      "Close": "16.83",
+      "Adj Close": "15.67",
+      "Volume": "101100"
+    },
     {
       "Date": "2022-10-14",
       "Close": "16.28",
@@ -5985,30 +6009,6 @@
       "Close": "13.54",
       "Adj Close": "12.10",
       "Volume": "61300"
-    },
-    {
-      "Date": "2018-10-30",
-      "Close": "13.05",
-      "Adj Close": "11.66",
-      "Volume": "35300"
-    },
-    {
-      "Date": "2018-10-29",
-      "Close": "12.88",
-      "Adj Close": "11.51",
-      "Volume": "80400"
-    },
-    {
-      "Date": "2018-10-26",
-      "Close": "13.26",
-      "Adj Close": "11.85",
-      "Volume": "39100"
-    },
-    {
-      "Date": "2018-10-25",
-      "Close": "13.42",
-      "Adj Close": "11.99",
-      "Volume": "11000"
     }
   ]
 }

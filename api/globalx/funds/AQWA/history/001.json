@@ -2,7 +2,7 @@
   "ticker": "AQWA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1383,
+  "totalRows": 1387,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-16",
+      "Close": "18.37",
+      "Adj Close": "18.37",
+      "Volume": "9700"
+    },
+    {
+      "Date": "2026-10-15",
+      "Close": "18.28",
+      "Adj Close": "18.28",
+      "Volume": "2700"
+    },
+    {
+      "Date": "2026-10-14",
+      "Close": "18.05",
+      "Adj Close": "18.05",
+      "Volume": "3000"
+    },
+    {
+      "Date": "2026-10-13",
+      "Close": "18.11",
+      "Adj Close": "18.11",
+      "Volume": "3600"
+    },
     {
       "Date": "2026-10-12",
       "Close": "18.04",
@@ -5985,30 +6009,6 @@
       "Close": "12.72",
       "Adj Close": "11.97",
       "Volume": "1400"
-    },
-    {
-      "Date": "2022-10-20",
-      "Close": "12.45",
-      "Adj Close": "11.72",
-      "Volume": "1500"
-    },
-    {
-      "Date": "2022-10-19",
-      "Close": "12.79",
-      "Adj Close": "12.04",
-      "Volume": "600"
-    },
-    {
-      "Date": "2022-10-18",
-      "Close": "12.94",
-      "Adj Close": "12.18",
-      "Volume": "900"
-    },
-    {
-      "Date": "2022-10-17",
-      "Close": "12.80",
-      "Adj Close": "12.05",
-      "Volume": "900"
     }
   ]
 }

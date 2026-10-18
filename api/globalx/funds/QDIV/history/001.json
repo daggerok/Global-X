@@ -2,7 +2,7 @@
   "ticker": "QDIV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2071,
+  "totalRows": 2075,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-16",
+      "Close": "40.85",
+      "Adj Close": "40.85",
+      "Volume": "3400"
+    },
+    {
+      "Date": "2026-10-15",
+      "Close": "40.51",
+      "Adj Close": "40.51",
+      "Volume": "17000"
+    },
+    {
+      "Date": "2026-10-14",
+      "Close": "39.83",
+      "Adj Close": "39.83",
+      "Volume": "1700"
+    },
+    {
+      "Date": "2026-10-13",
+      "Close": "39.46",
+      "Adj Close": "39.46",
+      "Volume": "600"
+    },
     {
       "Date": "2026-10-12",
       "Close": "39.23",
@@ -5985,30 +6009,6 @@
       "Close": "29.56",
       "Adj Close": "26.11",
       "Volume": "2200"
-    },
-    {
-      "Date": "2022-10-20",
-      "Close": "28.88",
-      "Adj Close": "25.51",
-      "Volume": "800"
-    },
-    {
-      "Date": "2022-10-19",
-      "Close": "29.26",
-      "Adj Close": "25.85",
-      "Volume": "1200"
-    },
-    {
-      "Date": "2022-10-18",
-      "Close": "29.53",
-      "Adj Close": "26.09",
-      "Volume": "2700"
-    },
-    {
-      "Date": "2022-10-17",
-      "Close": "29.18",
-      "Adj Close": "25.78",
-      "Volume": "1100"
     }
   ]
 }

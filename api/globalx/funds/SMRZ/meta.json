@@ -1,0 +1,224 @@
+{
+  "ticker": "SMRZ",
+  "name": "Small Modular Reactor ETF",
+  "category": "Equity / Thematic",
+  "fundPage": "https://www.globalxetfs.com/funds/smrz/",
+  "dataFile": "./funds/SMRZ/meta.json",
+  "cusip": "37966B711",
+  "isin": "US37966B7111",
+  "ter": "0.75%",
+  "terValue": 0.75,
+  "terGross": "0.75%",
+  "terGrossValue": 0.75,
+  "nav": {
+    "display": "$21.90",
+    "value": 21.9,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-1.28 (-5.52%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 21.9,
+  "aum": {
+    "display": "$876.14K",
+    "value": 876142.74,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
+  },
+  "aumValue": 876142.74,
+  "asOfDate": "Oct 16 2026",
+  "inceptionDate": "Oct 14 2026",
+  "inceptionDateFundPage": "Oct 14 2026",
+  "exchange": "Cboe BZX",
+  "closePrice": "$21.92",
+  "closePriceValue": 21.92,
+  "premiumDiscount": {
+    "display": "0.09%",
+    "value": 0.0873,
+    "derivedValue": 0.09,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
+  },
+  "premiumDiscountValue": 0.0873,
+  "premiumDiscountDerivedValue": 0.09,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
+  "bidAskSpread": {
+    "display": null,
+    "value": null,
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
+  },
+  "bidAskSpreadValue": null,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 876142.74,
+  "sharesOutstanding": {
+    "display": "40,000",
+    "value": 40000,
+    "asOfDate": "Oct 16 2026"
+  },
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
+  "distributions": {
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 2,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "dividendYieldBasis": null,
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
+    "performanceAsOf": null
+  },
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Equity / Thematic",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 13,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/smrz_full-holdings_20261016.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 2,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/SMRZ",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/smrz/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/smrz_full-holdings_20261016.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SMRZ",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
+  },
+  "identifiers": {
+    "cusip": "37966B711",
+    "isin": "US37966B7111",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.75%",
+    "value": 0.75,
+    "gross": 0.75,
+    "managementFeeDisplay": "0.75%",
+    "managementFeeValue": 0.75
+  },
+  "marketPrice": {
+    "display": "$21.92",
+    "value": 21.92,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-1.21 (-5.23%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Oct 16 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/aL7EplO9yzVI8vLLLFCgE/537a376fa45a24931ca60e36fa709e51/Statutory-Prospectus_SMRZ.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/6SdZy8Dt0fBJK5Q6KLwjdv/e49a6cf37a98668bf273a9561c3d4f14/Summary-Prospectus_SMRZ.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/4Aw7ExcNT8iqdVxZd5FRHU/7d5e230d103c0431e6303403a4b91b34/Statement-of-Additional-Information_SMRZ.pdf",
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

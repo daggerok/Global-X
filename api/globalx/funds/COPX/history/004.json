@@ -2,7 +2,7 @@
   "ticker": "COPX",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 4146,
+  "totalRows": 4150,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-11-10",
+      "Close": "24.36",
+      "Adj Close": "19.32",
+      "Volume": "5967"
+    },
+    {
+      "Date": "2014-11-07",
+      "Close": "24.42",
+      "Adj Close": "19.37",
+      "Volume": "3300"
+    },
+    {
+      "Date": "2014-11-06",
+      "Close": "23.82",
+      "Adj Close": "18.89",
+      "Volume": "16667"
+    },
+    {
+      "Date": "2014-11-05",
+      "Close": "24.03",
+      "Adj Close": "19.06",
+      "Volume": "7633"
+    },
     {
       "Date": "2014-11-04",
       "Close": "24.45",
@@ -5985,30 +6009,6 @@
       "Close": "52.74",
       "Adj Close": "37.37",
       "Volume": "11900"
-    },
-    {
-      "Date": "2010-11-18",
-      "Close": "52.74",
-      "Adj Close": "37.37",
-      "Volume": "52200"
-    },
-    {
-      "Date": "2010-11-17",
-      "Close": "50.58",
-      "Adj Close": "35.84",
-      "Volume": "51900"
-    },
-    {
-      "Date": "2010-11-16",
-      "Close": "50.19",
-      "Adj Close": "35.56",
-      "Volume": "78300"
-    },
-    {
-      "Date": "2010-11-15",
-      "Close": "52.53",
-      "Adj Close": "37.22",
-      "Volume": "17233"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "GURU",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3609,
+  "totalRows": 3613,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-20",
+      "Close": "31.90",
+      "Adj Close": "31.56",
+      "Volume": "2200"
+    },
+    {
+      "Date": "2022-10-19",
+      "Close": "32.07",
+      "Adj Close": "31.73",
+      "Volume": "2400"
+    },
+    {
+      "Date": "2022-10-18",
+      "Close": "32.75",
+      "Adj Close": "32.41",
+      "Volume": "400"
+    },
+    {
+      "Date": "2022-10-17",
+      "Close": "32.42",
+      "Adj Close": "32.08",
+      "Volume": "1700"
+    },
     {
       "Date": "2022-10-14",
       "Close": "31.41",
@@ -5985,30 +6009,6 @@
       "Close": "30.19",
       "Adj Close": "28.71",
       "Volume": "3500"
-    },
-    {
-      "Date": "2018-10-30",
-      "Close": "29.42",
-      "Adj Close": "27.97",
-      "Volume": "5000"
-    },
-    {
-      "Date": "2018-10-29",
-      "Close": "28.81",
-      "Adj Close": "27.39",
-      "Volume": "5900"
-    },
-    {
-      "Date": "2018-10-26",
-      "Close": "29.27",
-      "Adj Close": "27.83",
-      "Volume": "4200"
-    },
-    {
-      "Date": "2018-10-25",
-      "Close": "29.64",
-      "Adj Close": "28.18",
-      "Volume": "14200"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "SPFF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3578,
+  "totalRows": 3582,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-16",
+      "Close": "8.83",
+      "Adj Close": "8.83",
+      "Volume": "30500"
+    },
+    {
+      "Date": "2026-10-15",
+      "Close": "8.91",
+      "Adj Close": "8.91",
+      "Volume": "58300"
+    },
+    {
+      "Date": "2026-10-14",
+      "Close": "8.83",
+      "Adj Close": "8.83",
+      "Volume": "32900"
+    },
+    {
+      "Date": "2026-10-13",
+      "Close": "9.04",
+      "Adj Close": "9.04",
+      "Volume": "48900"
+    },
     {
       "Date": "2026-10-12",
       "Close": "8.97",
@@ -5985,30 +6009,6 @@
       "Close": "9.47",
       "Adj Close": "7.29",
       "Volume": "175700"
-    },
-    {
-      "Date": "2022-10-20",
-      "Close": "9.45",
-      "Adj Close": "7.28",
-      "Volume": "135800"
-    },
-    {
-      "Date": "2022-10-19",
-      "Close": "9.56",
-      "Adj Close": "7.36",
-      "Volume": "67700"
-    },
-    {
-      "Date": "2022-10-18",
-      "Close": "9.60",
-      "Adj Close": "7.39",
-      "Volume": "94200"
-    },
-    {
-      "Date": "2022-10-17",
-      "Close": "9.58",
-      "Adj Close": "7.38",
-      "Volume": "24700"
     }
   ]
 }

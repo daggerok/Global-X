@@ -11,51 +11,51 @@
   "terGross": "0.55%",
   "terGrossValue": 0.55,
   "nav": {
-    "display": "$29.89",
-    "value": 29.89,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-0.06 (-0.20%)",
+    "display": "$29.73",
+    "value": 29.73,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$0.31 (1.05%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 29.89,
+  "navValue": 29.73,
   "aum": {
-    "display": "$5.98M",
-    "value": 5978565.48,
-    "asOfDate": "Oct 12 2026",
-    "source": "Global X fund page Fund Details \"Net Assets\""
+    "display": "$5.95M",
+    "value": 5945095.89,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 5978565.48,
-  "asOfDate": "Oct 12 2026",
+  "aumValue": 5945095.89,
+  "asOfDate": "Oct 16 2026",
   "inceptionDate": "Aug 27 2024",
   "inceptionDateFundPage": "Aug 27 2024",
   "exchange": "Cboe BZX",
-  "closePrice": "$29.90",
-  "closePriceValue": 29.9,
+  "closePrice": "$29.59",
+  "closePriceValue": 29.59,
   "premiumDiscount": {
-    "display": "0.02%",
-    "value": 0.0183,
-    "derivedValue": 0.03,
-    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+    "display": "-0.46%",
+    "value": -0.4635,
+    "derivedValue": -0.47,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": 0.0183,
-  "premiumDiscountDerivedValue": 0.03,
-  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "premiumDiscountValue": -0.4635,
+  "premiumDiscountDerivedValue": -0.47,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.41%",
     "value": 0.41,
-    "asOfDate": "Oct 12 2026",
-    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.41,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 5978565.48,
+  "totalNetAssets": 5945095.89,
   "sharesOutstanding": {
     "display": "200,000",
     "value": 200000,
-    "asOfDate": "Oct 12 2026"
+    "asOfDate": "Oct 16 2026"
   },
-  "netAssetsAsOf": "Oct 12 2026",
-  "secYieldAsOf": "Oct 12 2026",
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
   "distributions": {
     "frequency": "Semi-Annually",
     "paymentsPerYear": 2,
@@ -153,10 +153,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 11.66,
-    "dividendYield": 1.6,
-    "dividendYieldText": "1.60%",
-    "distributionYield": 1.6,
-    "distributionYieldText": "1.60%",
+    "dividendYield": 1.52,
+    "dividendYieldText": "1.52%",
+    "distributionYield": 1.52,
+    "distributionYieldText": "1.52%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 0.91,
@@ -172,10 +172,10 @@
       "./holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 108,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
-    "source": "https://assets.globalxetfs.com/funds/holdings/ipav_full-holdings_20261012.csv",
+    "totalRows": 106,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/ipav_full-holdings_20261016.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -183,9 +183,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 532,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
+    "totalRows": 536,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/IPAV",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -195,7 +195,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/ipav/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/ipav_full-holdings_20261012.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/ipav_full-holdings_20261016.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/IPAV",
@@ -207,8 +207,8 @@
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
-    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
     "cusip": "37960A446",
@@ -225,18 +225,18 @@
     "managementFeeValue": 0.55
   },
   "marketPrice": {
-    "display": "$29.90",
-    "value": 29.9,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-0.19 (-0.63%)",
+    "display": "$29.59",
+    "value": 29.59,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.12 (-0.40%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": 1.6,
-    "dividendYieldText": "1.60%",
+    "dividendYield": 1.52,
+    "dividendYieldText": "1.52%",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": 1.6,
-    "distributionRateText": "1.60%",
+    "distributionRate": 1.52,
+    "distributionRateText": "1.52%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 0.91,
@@ -244,17 +244,17 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 12 2026"
+    "distributionInfoAsOfDate": "Oct 16 2026"
   },
   "navIndex": null,
   "documents": {
-    "prospectus": null,
-    "summaryProspectus": null,
-    "sai": null,
-    "annualReport": null,
-    "semiAnnualReport": null,
-    "fiscalQ1Holdings": null,
-    "fiscalQ3Holdings": null,
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/3lgxX5M4eBMk5RmXnwMNia/6f72cb3836f622de7b0a72aea1a95efa/Statutory-Prospectus_Thematic.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-ipav-prospectus-regulatory-summary-pr-1ae9e81740/34dd3c5712df413076ac30350cc6c6df/Summary-Prospectus.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/1fEbYPATbPenSf8wBLsYF8/6b44fa06e55c1dfc246e08b204370711/Statement-of-Additional-Information_Passively-Managed-April.pdf",
+    "annualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-ipav-prospectus-regulatory-annual-sha-3de41d9c24/5e2891d59e9738e895fc1d3bfb49c88c/Annual-Shareholder-Report.pdf",
+    "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-ipav-prospectus-regulatory-semi-annua-4fd7768141/e67d268f205df426277610df1f8be7fb/Semi-Annual-Shareholder-Report.pdf",
+    "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-ipav-prospectus-regulatory-q1-complet-088241dd09/4c929108bf0fa8e5e9f7cd1ac1b08386/Q1-Complete-Holdings.pdf",
+    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-ipav-prospectus-regulatory-q3-complet-b874c170e6/9f56220754b218c32e5418d3cad84abc/Q3-Complete-Holdings.pdf",
     "taxInfo": null,
     "form8937": null
   },

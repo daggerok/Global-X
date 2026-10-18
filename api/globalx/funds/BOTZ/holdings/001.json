@@ -2,7 +2,7 @@
   "ticker": "BOTZ",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 88,
+  "totalRows": 85,
   "headers": [
     "Name",
     "Ticker",
@@ -14,414 +14,834 @@
   ],
   "rows": [
     {
+      "Name": "INTUITIVE SURGICAL INC",
+      "Ticker": "ISRG",
+      "Identifier": "2871301",
+      "Weight": "9.49%",
+      "Market Value": "299,843,370.10",
+      "Shares Held": "702,703.00",
+      "Asset Category": "Equity",
+      "Price": "426.7"
+    },
+    {
+      "Name": "FANUC CORP",
+      "Ticker": "6954 JP",
+      "Identifier": "6356934",
+      "Weight": "8.69%",
+      "Market Value": "274,637,598.89",
+      "Shares Held": "7,244,616.00",
+      "Asset Category": "Equity",
+      "Price": "37.90920027921425"
+    },
+    {
+      "Name": "KEYENCE CORP",
+      "Ticker": "6861 JP",
+      "Identifier": "6490995",
+      "Weight": "8.63%",
+      "Market Value": "272,733,367.19",
+      "Shares Held": "533,343.00",
+      "Asset Category": "Equity",
+      "Price": "511.3657949762161"
+    },
+    {
+      "Name": "ABB LTD-REG",
+      "Ticker": "ABBN SW",
+      "Identifier": "7108899",
+      "Weight": "7.98%",
+      "Market Value": "252,305,667.97",
+      "Shares Held": "2,742,924.00",
+      "Asset Category": "Equity",
+      "Price": "91.9841993325371"
+    },
+    {
+      "Name": "NVIDIA CORP",
+      "Ticker": "NVDA",
+      "Identifier": "2379504",
+      "Weight": "7.89%",
+      "Market Value": "249,411,985.97",
+      "Shares Held": "1,164,769.00",
+      "Asset Category": "Equity",
+      "Price": "214.13"
+    },
+    {
+      "Name": "SMC CORP",
+      "Ticker": "6273 JP",
+      "Identifier": "6763965",
+      "Weight": "4.78%",
+      "Market Value": "150,982,949.41",
+      "Shares Held": "352,420.00",
+      "Asset Category": "Equity",
+      "Price": "428.4176533965155"
+    },
+    {
+      "Name": "DAIFUKU CO LTD",
+      "Ticker": "6383 JP",
+      "Identifier": "6250025",
+      "Weight": "3.50%",
+      "Market Value": "110,565,507.64",
+      "Shares Held": "3,180,042.00",
+      "Asset Category": "Equity",
+      "Price": "34.76856835224189"
+    },
+    {
+      "Name": "SHENZHEN INOVANCE TECHNOLO-A",
+      "Ticker": "300124 C2",
+      "Identifier": "BD5CMN8",
+      "Weight": "2.53%",
+      "Market Value": "79,913,846.25",
+      "Shares Held": "10,746,724.00",
+      "Asset Category": "Equity",
+      "Price": "7.436112274773224"
+    },
+    {
+      "Name": "COGNEX CORP",
+      "Ticker": "CGNX",
+      "Identifier": "2208288",
+      "Weight": "2.42%",
+      "Market Value": "76,465,119.17",
+      "Shares Held": "1,416,283.00",
+      "Asset Category": "Equity",
+      "Price": "53.99"
+    },
+    {
+      "Name": "AURORA INNOVATION INC",
+      "Ticker": "AUR",
+      "Identifier": "BMF0P92",
+      "Weight": "2.21%",
+      "Market Value": "69,819,211.24",
+      "Shares Held": "14,380,888.00",
+      "Asset Category": "Equity",
+      "Price": "4.855"
+    },
+    {
+      "Name": "ALPHABET INC-CL A",
+      "Ticker": "GOOGL",
+      "Identifier": "BYVY8G0",
+      "Weight": "2.09%",
+      "Market Value": "65,992,037.22",
+      "Shares Held": "193,758.00",
+      "Asset Category": "Equity",
+      "Price": "340.59"
+    },
+    {
+      "Name": "TESLA INC",
+      "Ticker": "TSLA",
+      "Identifier": "B616C79",
+      "Weight": "2.06%",
+      "Market Value": "64,930,077.12",
+      "Shares Held": "183,046.00",
+      "Asset Category": "Equity",
+      "Price": "354.72"
+    },
+    {
+      "Name": "OMRON CORP",
+      "Ticker": "6645 JP",
+      "Identifier": "6659428",
+      "Weight": "2.03%",
+      "Market Value": "64,028,776.50",
+      "Shares Held": "1,726,787.00",
+      "Asset Category": "Equity",
+      "Price": "37.07971886515245"
+    },
+    {
+      "Name": "YASKAWA ELECTRIC CORP",
+      "Ticker": "6506 JP",
+      "Identifier": "6986041",
+      "Weight": "1.96%",
+      "Market Value": "61,894,713.08",
+      "Shares Held": "2,232,762.00",
+      "Asset Category": "Equity",
+      "Price": "27.72114228027887"
+    },
+    {
+      "Name": "DEERE & CO",
+      "Ticker": "DE",
+      "Identifier": "2261203",
+      "Weight": "1.90%",
+      "Market Value": "60,042,793.70",
+      "Shares Held": "93,545.00",
+      "Asset Category": "Equity",
+      "Price": "641.86"
+    },
+    {
+      "Name": "HORIZON ROBOTICS INC",
+      "Ticker": "9660 HK",
+      "Identifier": "BS5YNY7",
+      "Weight": "1.83%",
+      "Market Value": "57,939,716.87",
+      "Shares Held": "115,996,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.4994966806671253"
+    },
+    {
+      "Name": "XIAOMI CORP-CLASS B",
+      "Ticker": "1810 HK",
+      "Identifier": "BG0ZMJ9",
+      "Weight": "1.68%",
+      "Market Value": "52,971,458.86",
+      "Shares Held": "15,593,200.00",
+      "Asset Category": "Equity",
+      "Price": "3.397087118744068"
+    },
+    {
+      "Name": "ROBOTECHNIK INTELLIGENT TE-A",
+      "Ticker": "300757 C2",
+      "Identifier": "BNHPGJ9",
+      "Weight": "1.57%",
+      "Market Value": "49,585,277.77",
+      "Shares Held": "748,945.00",
+      "Asset Category": "Equity",
+      "Price": "66.20683464072796"
+    },
+    {
+      "Name": "AUTOSTORE HOLDINGS LTD",
+      "Ticker": "AUTO NO",
+      "Identifier": "BN49G27",
+      "Weight": "1.47%",
+      "Market Value": "46,364,078.17",
+      "Shares Held": "28,665,518.00",
+      "Asset Category": "Equity",
+      "Price": "1.617416373567713"
+    },
+    {
+      "Name": "RAINBOW ROBOTICS",
+      "Ticker": "277810 KS",
+      "Identifier": "BM9Q3J2",
+      "Weight": "1.37%",
+      "Market Value": "43,377,983.27",
+      "Shares Held": "164,018.00",
+      "Asset Category": "Equity",
+      "Price": "264.4708706971186"
+    },
+    {
+      "Name": "SYMBOTIC INC",
+      "Ticker": "SYM",
+      "Identifier": "BPG82M8",
+      "Weight": "1.33%",
+      "Market Value": "42,199,322.81",
+      "Shares Held": "1,088,453.00",
+      "Asset Category": "Equity",
+      "Price": "38.77"
+    },
+    {
+      "Name": "FUJI CORP/AICHI",
+      "Ticker": "6134 JP",
+      "Identifier": "6356592",
+      "Weight": "1.16%",
+      "Market Value": "36,562,145.25",
+      "Shares Held": "823,600.00",
+      "Asset Category": "Equity",
+      "Price": "44.39308553909665"
+    },
+    {
+      "Name": "ROCKWELL AUTOMATION INC",
+      "Ticker": "ROK",
+      "Identifier": "2754060",
+      "Weight": "1.09%",
+      "Market Value": "34,598,794.02",
+      "Shares Held": "81,174.00",
+      "Asset Category": "Equity",
+      "Price": "426.23"
+    },
+    {
+      "Name": "TECAN GROUP AG-REG",
+      "Ticker": "TECN SW",
+      "Identifier": "7110902",
+      "Weight": "1.00%",
+      "Market Value": "31,484,845.21",
+      "Shares Held": "107,397.00",
+      "Asset Category": "Equity",
+      "Price": "293.1631722487593"
+    },
+    {
+      "Name": "UBTECH ROBOTICS CORP LTD-H",
+      "Ticker": "9880 HK",
+      "Identifier": "BR4VSK3",
+      "Weight": "0.96%",
+      "Market Value": "30,336,147.61",
+      "Shares Held": "3,688,227.00",
+      "Asset Category": "Equity",
+      "Price": "8.225130288889485"
+    },
+    {
+      "Name": "LEADER HARMONIOUS DRIVE SY-A",
+      "Ticker": "688017 C1",
+      "Identifier": "BMGJQ17",
+      "Weight": "0.92%",
+      "Market Value": "29,091,741.95",
+      "Shares Held": "821,278.00",
+      "Asset Category": "Equity",
+      "Price": "35.42252678143089"
+    },
+    {
+      "Name": "HIWIN TECHNOLOGIES CORP",
+      "Ticker": "2049 TT",
+      "Identifier": "B1YMYT5",
+      "Weight": "0.90%",
+      "Market Value": "28,483,053.46",
+      "Shares Held": "2,967,000.00",
+      "Asset Category": "Equity",
+      "Price": "9.599950610043816"
+    },
+    {
+      "Name": "HARMONIC DRIVE SYSTEMS INC",
+      "Ticker": "6324 JP",
+      "Identifier": "6108179",
+      "Weight": "0.87%",
+      "Market Value": "27,469,860.06",
+      "Shares Held": "810,900.00",
+      "Asset Category": "Equity",
+      "Price": "33.87576773954865"
+    },
+    {
+      "Name": "DOOSAN ROBOTICS INC",
+      "Ticker": "454910 KS",
+      "Identifier": "BN4P528",
+      "Weight": "0.77%",
+      "Market Value": "24,255,314.55",
+      "Shares Held": "547,944.00",
+      "Asset Category": "Equity",
+      "Price": "44.26604643905217"
+    },
+    {
       "Name": "ROBOTIS CO LTD",
       "Ticker": "108490 KS",
       "Identifier": "BGR7CR6",
-      "Weight": "0.72%",
-      "Market Value": "23,868,218.11",
+      "Weight": "0.68%",
+      "Market Value": "21,396,721.31",
       "Shares Held": "123,994.00",
       "Asset Category": "Equity",
-      "Price": "192.4949441908479"
-    },
-    {
-      "Name": "OUSTER INC",
-      "Ticker": "OUST",
-      "Identifier": "BMHVMY7",
-      "Weight": "0.68%",
-      "Market Value": "22,627,995.99",
-      "Shares Held": "607,137.00",
-      "Asset Category": "Equity",
-      "Price": "37.27"
+      "Price": "172.5625539138991"
     },
     {
       "Name": "SHANGHAI MICROPORT MEDBOT-H",
       "Ticker": "2252 HK",
       "Identifier": "BMX6SZ9",
-      "Weight": "0.64%",
-      "Market Value": "21,302,668.00",
+      "Weight": "0.67%",
+      "Market Value": "21,301,446.50",
       "Shares Held": "7,892,900.00",
       "Asset Category": "Equity",
-      "Price": "2.698965906067478"
+      "Price": "2.698811146726805"
     },
     {
       "Name": "EXAIL TECHNOLOGIES",
       "Ticker": "EXA FP",
       "Identifier": "B06BGH5",
-      "Weight": "0.60%",
-      "Market Value": "19,911,070.38",
+      "Weight": "0.64%",
+      "Market Value": "20,165,962.30",
       "Shares Held": "142,679.00",
       "Asset Category": "Equity",
-      "Price": "139.5515133972063"
+      "Price": "141.3379845667548"
+    },
+    {
+      "Name": "AVIC CHENGDU UAS CO LTD-A",
+      "Ticker": "688297 C1",
+      "Identifier": "BNTXRV0",
+      "Weight": "0.58%",
+      "Market Value": "18,333,235.05",
+      "Shares Held": "3,008,397.00",
+      "Asset Category": "Equity",
+      "Price": "6.094021184704014"
     },
     {
       "Name": "BEIJING ROBOROCK TECHNOLOG-A",
       "Ticker": "688169 C1",
       "Identifier": "BNR4NT5",
       "Weight": "0.56%",
-      "Market Value": "18,622,683.05",
+      "Market Value": "17,654,106.77",
       "Shares Held": "1,156,794.00",
       "Asset Category": "Equity",
-      "Price": "16.09853011858637"
+      "Price": "15.26123646042424"
     },
     {
       "Name": "ECOVACS ROBOTICS CO LTD-A",
       "Ticker": "603486 C1",
       "Identifier": "BDFWW61",
       "Weight": "0.56%",
-      "Market Value": "18,573,575.68",
+      "Market Value": "17,541,739.98",
       "Shares Held": "2,580,717.00",
       "Asset Category": "Equity",
-      "Price": "7.197060227835908"
+      "Price": "6.797235024220013"
     },
     {
-      "Name": "AVIC CHENGDU UAS CO LTD-A",
-      "Ticker": "688297 C1",
-      "Identifier": "BNTXRV0",
-      "Weight": "0.52%",
-      "Market Value": "17,148,725.73",
-      "Shares Held": "3,008,397.00",
+      "Name": "OUSTER INC",
+      "Ticker": "OUST",
+      "Identifier": "BMHVMY7",
+      "Weight": "0.55%",
+      "Market Value": "17,260,904.91",
+      "Shares Held": "607,137.00",
       "Asset Category": "Equity",
-      "Price": "5.700286807226573"
-    },
-    {
-      "Name": "PONY AI INC",
-      "Ticker": "PONY",
-      "Identifier": "BRWKBD6",
-      "Weight": "0.51%",
-      "Market Value": "16,955,650.04",
-      "Shares Held": "2,953,946.00",
-      "Asset Category": "Equity",
-      "Price": "5.739999999999999"
+      "Price": "28.43"
     },
     {
       "Name": "BAIDU INC - SPON ADR",
       "Ticker": "BIDU",
       "Identifier": "B0FXT17",
       "Weight": "0.51%",
-      "Market Value": "16,941,096.60",
+      "Market Value": "16,105,094.68",
       "Shares Held": "200,962.00",
       "Asset Category": "Equity",
-      "Price": "84.30000000000001"
-    },
-    {
-      "Name": "HESAI GROUP",
-      "Ticker": "HSAI",
-      "Identifier": "BMWS7Y8",
-      "Weight": "0.50%",
-      "Market Value": "16,566,757.20",
-      "Shares Held": "1,095,685.00",
-      "Asset Category": "Equity",
-      "Price": "15.12"
-    },
-    {
-      "Name": "ALLIENT INC",
-      "Ticker": "ALNT",
-      "Identifier": "2414717",
-      "Weight": "0.46%",
-      "Market Value": "15,160,745.70",
-      "Shares Held": "142,515.00",
-      "Asset Category": "Equity",
-      "Price": "106.38"
+      "Price": "80.14"
     },
     {
       "Name": "ATS CORP",
       "Ticker": "ATS CN",
       "Identifier": "BP8JT73",
-      "Weight": "0.44%",
-      "Market Value": "14,437,095.41",
+      "Weight": "0.47%",
+      "Market Value": "14,914,220.91",
       "Shares Held": "817,997.00",
       "Asset Category": "Equity",
-      "Price": "17.64932562099861"
+      "Price": "18.23261076752115"
+    },
+    {
+      "Name": "PONY AI INC",
+      "Ticker": "PONY",
+      "Identifier": "BRWKBD6",
+      "Weight": "0.46%",
+      "Market Value": "14,562,953.78",
+      "Shares Held": "2,953,946.00",
+      "Asset Category": "Equity",
+      "Price": "4.93"
+    },
+    {
+      "Name": "HESAI GROUP",
+      "Ticker": "HSAI",
+      "Identifier": "BMWS7Y8",
+      "Weight": "0.43%",
+      "Market Value": "13,608,407.70",
+      "Shares Held": "1,095,685.00",
+      "Asset Category": "Equity",
+      "Price": "12.42"
     },
     {
       "Name": "OMNICELL INC",
       "Ticker": "OMCL",
       "Identifier": "2789523",
       "Weight": "0.43%",
-      "Market Value": "14,094,184.29",
+      "Market Value": "13,528,429.13",
       "Shares Held": "382,267.00",
       "Asset Category": "Equity",
-      "Price": "36.87"
+      "Price": "35.39"
+    },
+    {
+      "Name": "ALLIENT INC",
+      "Ticker": "ALNT",
+      "Identifier": "2414717",
+      "Weight": "0.42%",
+      "Market Value": "13,202,589.60",
+      "Shares Held": "142,515.00",
+      "Asset Category": "Equity",
+      "Price": "92.64"
     },
     {
       "Name": "SIASUN ROBOT & AUTOMATION-A",
       "Ticker": "300024 C2",
       "Identifier": "BD5CNQ8",
-      "Weight": "0.42%",
-      "Market Value": "13,805,892.50",
+      "Weight": "0.41%",
+      "Market Value": "12,904,922.38",
       "Shares Held": "7,012,304.00",
       "Asset Category": "Equity",
-      "Price": "1.96880975211571"
+      "Price": "1.840325573449183"
     },
     {
       "Name": "ESTUN AUTOMATION CO LTD-A",
       "Ticker": "002747 C2",
       "Identifier": "BFCCQJ9",
-      "Weight": "0.41%",
-      "Market Value": "13,602,308.40",
+      "Weight": "0.40%",
+      "Market Value": "12,697,145.28",
       "Shares Held": "3,500,934.00",
       "Asset Category": "Equity",
-      "Price": "3.885336998640934"
+      "Price": "3.626787960012956"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.39%",
-      "Market Value": "12,887,318.23",
-      "Shares Held": "12,887,318.23",
+      "Weight": "0.40%",
+      "Market Value": "12,531,800.44",
+      "Shares Held": "12,531,800.44",
       "Asset Category": "Cash",
       "Price": "1.0"
-    },
-    {
-      "Name": "WERIDE INC-ADR",
-      "Ticker": "WRD",
-      "Identifier": "BMYDW80",
-      "Weight": "0.38%",
-      "Market Value": "12,716,085.82",
-      "Shares Held": "2,660,269.00",
-      "Asset Category": "Equity",
-      "Price": "4.78"
     },
     {
       "Name": "SPG CO LTD",
       "Ticker": "058610 KS",
       "Identifier": "6541945",
-      "Weight": "0.37%",
-      "Market Value": "12,249,696.35",
+      "Weight": "0.35%",
+      "Market Value": "11,121,778.44",
       "Shares Held": "186,696.00",
       "Asset Category": "Equity",
-      "Price": "65.61306267943608"
+      "Price": "59.57159467797917"
+    },
+    {
+      "Name": "WERIDE INC-ADR",
+      "Ticker": "WRD",
+      "Identifier": "BMYDW80",
+      "Weight": "0.34%",
+      "Market Value": "10,853,897.52",
+      "Shares Held": "2,660,269.00",
+      "Asset Category": "Equity",
+      "Price": "4.08"
     },
     {
       "Name": "SHENZHEN EDGE MEDICAL CO -H",
       "Ticker": "2675 HK",
       "Identifier": "BVK63N8",
-      "Weight": "0.35%",
-      "Market Value": "11,559,504.30",
+      "Weight": "0.34%",
+      "Market Value": "10,687,006.72",
       "Shares Held": "2,758,900.00",
       "Asset Category": "Equity",
-      "Price": "4.189896081771721"
+      "Price": "3.873647729167422"
     },
     {
       "Name": "MIRLE AUTOMATION CORP",
       "Ticker": "2464 TT",
       "Identifier": "6140999",
-      "Weight": "0.34%",
-      "Market Value": "11,268,053.49",
+      "Weight": "0.32%",
+      "Market Value": "10,219,039.39",
       "Shares Held": "1,881,000.00",
       "Asset Category": "Equity",
-      "Price": "5.990459059011164"
+      "Price": "5.432769479000532"
     },
     {
-      "Name": "OPT MACHINE VISION TECH CO-A",
-      "Ticker": "688686 C1",
-      "Identifier": "BNHPPC5",
-      "Weight": "0.28%",
-      "Market Value": "9,442,638.67",
-      "Shares Held": "547,534.00",
+      "Name": "ZHEJIANG GALAXIS TECHNOLO-H",
+      "Ticker": "2729 HK",
+      "Identifier": "BVQYSG4",
+      "Weight": "0.30%",
+      "Market Value": "9,435,590.67",
+      "Shares Held": "3,584,200.00",
       "Asset Category": "Equity",
-      "Price": "17.24575765157963"
-    },
-    {
-      "Name": "PROCEPT BIOROBOTICS CORP",
-      "Ticker": "PRCT",
-      "Identifier": "BMYRFV6",
-      "Weight": "0.28%",
-      "Market Value": "9,393,971.83",
-      "Shares Held": "480,019.00",
-      "Asset Category": "Equity",
-      "Price": "19.57"
+      "Price": "2.632551383851347"
     },
     {
       "Name": "NASDAQ 100 E-MINI DEC26",
       "Ticker": "NQZ6 Index",
       "Identifier": "",
       "Weight": "0.28%",
-      "Market Value": "9,269,475.00",
+      "Market Value": "8,817,450.00",
       "Shares Held": "15.00",
       "Asset Category": "Equity",
-      "Price": "617965.0"
+      "Price": "587830.0"
+    },
+    {
+      "Name": "OPT MACHINE VISION TECH CO-A",
+      "Ticker": "688686 C1",
+      "Identifier": "BNHPPC5",
+      "Weight": "0.28%",
+      "Market Value": "8,711,587.40",
+      "Shares Held": "547,534.00",
+      "Asset Category": "Equity",
+      "Price": "15.91058710509302"
+    },
+    {
+      "Name": "PROCEPT BIOROBOTICS CORP",
+      "Ticker": "PRCT",
+      "Identifier": "BMYRFV6",
+      "Weight": "0.27%",
+      "Market Value": "8,433,933.83",
+      "Shares Held": "480,019.00",
+      "Asset Category": "Equity",
+      "Price": "17.57"
     },
     {
       "Name": "CIDI INC-H",
       "Ticker": "3881 HK",
       "Identifier": "BNBVJL6",
-      "Weight": "0.28%",
-      "Market Value": "9,215,552.82",
+      "Weight": "0.25%",
+      "Market Value": "7,960,114.04",
       "Shares Held": "3,634,100.00",
       "Asset Category": "Equity",
-      "Price": "2.535855595608266"
-    },
-    {
-      "Name": "ZHEJIANG GALAXIS TECHNOLO-H",
-      "Ticker": "2729 HK",
-      "Identifier": "BVQYSG4",
-      "Weight": "0.28%",
-      "Market Value": "9,089,013.63",
-      "Shares Held": "3,584,200.00",
-      "Asset Category": "Equity",
-      "Price": "2.535855596785894"
-    },
-    {
-      "Name": "TERRA DRONE CORP",
-      "Ticker": "278A JP",
-      "Identifier": "BM9VKF2",
-      "Weight": "0.27%",
-      "Market Value": "9,009,849.08",
-      "Shares Held": "179,400.00",
-      "Asset Category": "Equity",
-      "Price": "50.22212419175028"
+      "Price": "2.190394881813929"
     },
     {
       "Name": "ROBOSENSE TECHNOLOGY CO LTD",
       "Ticker": "2498 HK",
       "Identifier": "BNG5JM4",
-      "Weight": "0.25%",
-      "Market Value": "8,382,247.99",
+      "Weight": "0.24%",
+      "Market Value": "7,685,019.94",
       "Shares Held": "4,080,600.00",
       "Asset Category": "Equity",
-      "Price": "2.054170462677057"
+      "Price": "1.883306361809538"
     },
     {
-      "Name": "UNUSUAL MACHINES INC /US",
-      "Ticker": "UMAC",
-      "Identifier": "BQXNTY4",
-      "Weight": "0.25%",
-      "Market Value": "8,259,700.20",
-      "Shares Held": "420,555.00",
+      "Name": "MOOG INC-CLASS A",
+      "Ticker": "MOG/A",
+      "Identifier": "2601218",
+      "Weight": "0.24%",
+      "Market Value": "7,674,989.20",
+      "Shares Held": "20,822.00",
       "Asset Category": "Equity",
-      "Price": "19.64"
+      "Price": "368.6"
     },
     {
       "Name": "TECHMAN ROBOT INC",
       "Ticker": "4585 TT",
       "Identifier": "BP2DZD9",
       "Weight": "0.24%",
-      "Market Value": "7,960,522.41",
+      "Market Value": "7,598,345.47",
       "Shares Held": "876,000.00",
       "Asset Category": "Equity",
-      "Price": "9.087354349315069"
+      "Price": "8.673910353881277"
+    },
+    {
+      "Name": "AEVEX CORP-CL A",
+      "Ticker": "AVEX",
+      "Identifier": "BVPKF40",
+      "Weight": "0.23%",
+      "Market Value": "7,270,118.40",
+      "Shares Held": "473,315.00",
+      "Asset Category": "Equity",
+      "Price": "15.36"
     },
     {
       "Name": "SHENZHEN DOBOT CORP LTD-H",
       "Ticker": "2432 HK",
       "Identifier": "BTDQ4G1",
-      "Weight": "0.24%",
-      "Market Value": "7,828,516.27",
+      "Weight": "0.23%",
+      "Market Value": "7,114,890.35",
       "Shares Held": "3,311,800.00",
       "Asset Category": "Equity",
-      "Price": "2.363825191738631"
+      "Price": "2.148345416389879"
     },
     {
-      "Name": "MOOG INC-CLASS A",
-      "Ticker": "MOG/A",
-      "Identifier": "2601218",
+      "Name": "TERRA DRONE CORP",
+      "Ticker": "278A JP",
+      "Identifier": "BM9VKF2",
       "Weight": "0.23%",
-      "Market Value": "7,740,786.72",
-      "Shares Held": "20,822.00",
+      "Market Value": "7,111,023.87",
+      "Shares Held": "179,400.00",
       "Asset Category": "Equity",
-      "Price": "371.76"
-    },
-    {
-      "Name": "BEIJING GEEKPLUS TECHNOLOG-H",
-      "Ticker": "2590 HK",
-      "Identifier": "BV6L638",
-      "Weight": "0.23%",
-      "Market Value": "7,472,205.62",
-      "Shares Held": "8,623,200.00",
-      "Asset Category": "Equity",
-      "Price": "0.8665235202708971"
+      "Price": "39.63781421404682"
     },
     {
       "Name": "HIRATA CORP",
       "Ticker": "6258 JP",
       "Identifier": "B1GZ9S6",
       "Weight": "0.22%",
-      "Market Value": "7,404,257.92",
+      "Market Value": "6,980,436.27",
       "Shares Held": "268,883.00",
       "Asset Category": "Equity",
-      "Price": "27.5370994819308"
+      "Price": "25.96086874216667"
+    },
+    {
+      "Name": "UNUSUAL MACHINES INC /US",
+      "Ticker": "UMAC",
+      "Identifier": "BQXNTY4",
+      "Weight": "0.22%",
+      "Market Value": "6,859,252.05",
+      "Shares Held": "420,555.00",
+      "Asset Category": "Equity",
+      "Price": "16.31"
     },
     {
       "Name": "NINGBO ZHONGDA LEADER INTE-A",
       "Ticker": "002896 C2",
       "Identifier": "BPDWS58",
-      "Weight": "0.22%",
-      "Market Value": "7,238,794.22",
+      "Weight": "0.21%",
+      "Market Value": "6,726,581.48",
       "Shares Held": "879,800.00",
       "Asset Category": "Equity",
-      "Price": "8.22777247101614"
+      "Price": "7.645580222777904"
     },
     {
-      "Name": "AEVEX CORP-CL A",
-      "Ticker": "AVEX",
-      "Identifier": "BVPKF40",
-      "Weight": "0.20%",
-      "Market Value": "6,796,803.40",
-      "Shares Held": "473,315.00",
+      "Name": "BEIJING GEEKPLUS TECHNOLOG-H",
+      "Ticker": "2590 HK",
+      "Identifier": "BV6L638",
+      "Weight": "0.21%",
+      "Market Value": "6,680,647.82",
+      "Shares Held": "8,623,200.00",
       "Asset Category": "Equity",
-      "Price": "14.36"
+      "Price": "0.7747295458762409"
     },
     {
       "Name": "XPENG INC - ADR",
       "Ticker": "XPEV",
       "Identifier": "BMXR2T4",
       "Weight": "0.17%",
-      "Market Value": "5,536,416.48",
+      "Market Value": "5,289,971.44",
       "Shares Held": "573,128.00",
       "Asset Category": "Equity",
-      "Price": "9.66"
+      "Price": "9.23"
+    },
+    {
+      "Name": "EFORT INTELLIGENT ROBOT CO-A",
+      "Ticker": "688165 C1",
+      "Identifier": "BPDWRG2",
+      "Weight": "0.15%",
+      "Market Value": "4,603,163.49",
+      "Shares Held": "2,325,450.00",
+      "Asset Category": "Equity",
+      "Price": "1.97947214087596"
+    },
+    {
+      "Name": "KINCO AUTOMATION SHANGHAI-A",
+      "Ticker": "688160 C1",
+      "Identifier": "BPDWRF1",
+      "Weight": "0.14%",
+      "Market Value": "4,598,008.09",
+      "Shares Held": "406,767.00",
+      "Asset Category": "Equity",
+      "Price": "11.30378838499682"
+    },
+    {
+      "Name": "YUIL ROBOTICS CO LTD",
+      "Ticker": "388720 KS",
+      "Identifier": "BPJGTG2",
+      "Weight": "0.14%",
+      "Market Value": "4,483,241.78",
+      "Shares Held": "99,096.00",
+      "Asset Category": "Equity",
+      "Price": "45.24140005651086"
+    },
+    {
+      "Name": "TINAVI MEDICAL TECHNOLOGIE-A",
+      "Ticker": "688277 C1",
+      "Identifier": "BNHPMQ8",
+      "Weight": "0.14%",
+      "Market Value": "4,257,272.66",
+      "Shares Held": "2,079,964.00",
+      "Asset Category": "Equity",
+      "Price": "2.046801127327204"
+    },
+    {
+      "Name": "GUANGDONG HUAYAN ROBOTICS -H",
+      "Ticker": "1021 HK",
+      "Identifier": "BTG0Q53",
+      "Weight": "0.13%",
+      "Market Value": "3,996,257.72",
+      "Shares Held": "4,515,800.00",
+      "Asset Category": "Equity",
+      "Price": "0.8849501129367997"
+    },
+    {
+      "Name": "ROBOSTAR CO LTD",
+      "Ticker": "090360 KS",
+      "Identifier": "B5LTV29",
+      "Weight": "0.12%",
+      "Market Value": "3,759,975.32",
+      "Shares Held": "82,021.00",
+      "Asset Category": "Equity",
+      "Price": "45.84161763450823"
+    },
+    {
+      "Name": "NOVANTA INC",
+      "Ticker": "NOVT",
+      "Identifier": "BD8S5H8",
+      "Weight": "0.11%",
+      "Market Value": "3,561,043.50",
+      "Shares Held": "27,650.00",
+      "Asset Category": "Equity",
+      "Price": "128.79"
+    },
+    {
+      "Name": "THK CO LTD",
+      "Ticker": "6481 JP",
+      "Identifier": "6869131",
+      "Weight": "0.11%",
+      "Market Value": "3,444,180.97",
+      "Shares Held": "87,100.00",
+      "Asset Category": "Equity",
+      "Price": "39.54283547646384"
+    },
+    {
+      "Name": "YIJIAHE TECHNOLOGY CO LTD-A",
+      "Ticker": "603666 C1",
+      "Identifier": "BFYX634",
+      "Weight": "0.10%",
+      "Market Value": "3,203,601.95",
+      "Shares Held": "916,200.00",
+      "Asset Category": "Equity",
+      "Price": "3.496618587644619"
+    },
+    {
+      "Name": "NEUROMEKA CO LTD",
+      "Ticker": "348340 KS",
+      "Identifier": "BMYY830",
+      "Weight": "0.08%",
+      "Market Value": "2,515,372.07",
+      "Shares Held": "196,174.00",
+      "Asset Category": "Equity",
+      "Price": "12.82214804204431"
+    },
+    {
+      "Name": "SERVE ROBOTICS INC",
+      "Ticker": "SERV",
+      "Identifier": "BPBJW48",
+      "Weight": "0.07%",
+      "Market Value": "2,347,337.90",
+      "Shares Held": "726,730.00",
+      "Asset Category": "Equity",
+      "Price": "3.23"
+    },
+    {
+      "Name": "KODIAK AI INC",
+      "Ticker": "KDK",
+      "Identifier": "BVBFG46",
+      "Weight": "0.07%",
+      "Market Value": "2,269,857.60",
+      "Shares Held": "1,681,376.00",
+      "Asset Category": "Equity",
+      "Price": "1.35"
+    },
+    {
+      "Name": "RICHTECH ROBOTICS INC-CL B",
+      "Ticker": "RR",
+      "Identifier": "BNV0DF5",
+      "Weight": "0.06%",
+      "Market Value": "2,001,953.58",
+      "Shares Held": "1,551,902.00",
+      "Asset Category": "Equity",
+      "Price": "1.29"
+    },
+    {
+      "Name": "ANGEL ROBOTICS CO LTD",
+      "Ticker": "455900 KS",
+      "Identifier": "BRC2TP0",
+      "Weight": "0.06%",
+      "Market Value": "1,751,961.11",
+      "Shares Held": "129,512.00",
+      "Asset Category": "Equity",
+      "Price": "13.52740371548582"
+    },
+    {
+      "Name": "EHANG HOLDINGS LTD-SPS ADR",
+      "Ticker": "EH",
+      "Identifier": "BJBYDW6",
+      "Weight": "0.05%",
+      "Market Value": "1,704,439.84",
+      "Shares Held": "472,144.00",
+      "Asset Category": "Equity",
+      "Price": "3.61"
+    },
+    {
+      "Name": "CYBERDYNE INC",
+      "Ticker": "7779 JP",
+      "Identifier": "BK0S445",
+      "Weight": "0.05%",
+      "Market Value": "1,553,566.14",
+      "Shares Held": "1,151,900.00",
+      "Asset Category": "Equity",
+      "Price": "1.348698793298029"
     },
     {
       "Name": "MINIEYE TECHNOLOGY CO LTD-H",
       "Ticker": "2431 HK",
       "Identifier": "BMYRRN2",
       "Weight": "0.02%",
-      "Market Value": "687,696.51",
+      "Market Value": "625,314.54",
       "Shares Held": "2,965,200.00",
       "Asset Category": "Equity",
-      "Price": "0.231922470659652"
-    },
-    {
-      "Name": "CHINESE YUAN RENMINBI",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.01%",
-      "Market Value": "219,388.66",
-      "Shares Held": "1,468,675.45",
-      "Asset Category": "Equity",
-      "Price": "0.1493785846287551"
-    },
-    {
-      "Name": "KOREAN WON",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "129,704.96",
-      "Shares Held": "173,169,095.00",
-      "Asset Category": "Equity",
-      "Price": "0.0007490075524157473"
+      "Price": "0.2108844394981789"
     },
     {
       "Name": "CASH",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "55,217.16",
-      "Shares Held": "55,217.16",
+      "Weight": "0.01%",
+      "Market Value": "368,227.19",
+      "Shares Held": "368,227.19",
       "Asset Category": "Cash",
       "Price": "1.0"
-    },
-    {
-      "Name": "TAIWAN DOLLAR",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "46,702.31",
-      "Shares Held": "1,492,956.00",
-      "Asset Category": "Equity",
-      "Price": "0.03128177253716787"
     },
     {
       "Name": "BRITISH STERLING POUND",
@@ -438,460 +858,10 @@
       "Ticker": "",
       "Identifier": "",
       "Weight": "-0.00%",
-      "Market Value": "-19,437.08",
+      "Market Value": "-19,531.24",
       "Shares Held": "-3,084,568.00",
       "Asset Category": "Equity",
-      "Price": "0.006301394555088428"
-    },
-    {
-      "Name": "INTUITIVE SURGICAL INC",
-      "Ticker": "ISRG",
-      "Identifier": "2871301",
-      "Weight": "9.08%",
-      "Market Value": "300,503,910.92",
-      "Shares Held": "702,703.00",
-      "Asset Category": "Equity",
-      "Price": "427.64"
-    },
-    {
-      "Name": "FANUC CORP",
-      "Ticker": "6954 JP",
-      "Identifier": "6356934",
-      "Weight": "8.41%",
-      "Market Value": "278,609,228.07",
-      "Shares Held": "7,244,616.00",
-      "Asset Category": "Equity",
-      "Price": "38.45741831865209"
-    },
-    {
-      "Name": "KEYENCE CORP",
-      "Ticker": "6861 JP",
-      "Identifier": "6490995",
-      "Weight": "8.18%",
-      "Market Value": "270,679,260.34",
-      "Shares Held": "533,343.00",
-      "Asset Category": "Equity",
-      "Price": "507.5144144387382"
-    },
-    {
-      "Name": "NVIDIA CORP",
-      "Ticker": "NVDA",
-      "Identifier": "2379504",
-      "Weight": "7.96%",
-      "Market Value": "263,610,520.08",
-      "Shares Held": "1,164,769.00",
-      "Asset Category": "Equity",
-      "Price": "226.32"
-    },
-    {
-      "Name": "ABB LTD-REG",
-      "Ticker": "ABBN SW",
-      "Identifier": "7108899",
-      "Weight": "7.95%",
-      "Market Value": "263,081,359.80",
-      "Shares Held": "2,742,924.00",
-      "Asset Category": "Equity",
-      "Price": "95.91274122068275"
-    },
-    {
-      "Name": "SMC CORP",
-      "Ticker": "6273 JP",
-      "Identifier": "6763965",
-      "Weight": "4.91%",
-      "Market Value": "162,380,354.77",
-      "Shares Held": "352,420.00",
-      "Asset Category": "Equity",
-      "Price": "460.7580579138528"
-    },
-    {
-      "Name": "DAIFUKU CO LTD",
-      "Ticker": "6383 JP",
-      "Identifier": "6250025",
-      "Weight": "3.49%",
-      "Market Value": "115,683,433.42",
-      "Shares Held": "3,180,042.00",
-      "Asset Category": "Equity",
-      "Price": "36.37795771879743"
-    },
-    {
-      "Name": "COGNEX CORP",
-      "Ticker": "CGNX",
-      "Identifier": "2208288",
-      "Weight": "2.64%",
-      "Market Value": "87,554,615.06",
-      "Shares Held": "1,416,283.00",
-      "Asset Category": "Equity",
-      "Price": "61.82"
-    },
-    {
-      "Name": "AURORA INNOVATION INC",
-      "Ticker": "AUR",
-      "Identifier": "BMF0P92",
-      "Weight": "2.46%",
-      "Market Value": "81,395,826.08",
-      "Shares Held": "14,380,888.00",
-      "Asset Category": "Equity",
-      "Price": "5.66"
-    },
-    {
-      "Name": "SHENZHEN INOVANCE TECHNOLO-A",
-      "Ticker": "300124 C2",
-      "Identifier": "BD5CMN8",
-      "Weight": "2.45%",
-      "Market Value": "80,988,919.96",
-      "Shares Held": "10,746,724.00",
-      "Asset Category": "Equity",
-      "Price": "7.536149617315937"
-    },
-    {
-      "Name": "OMRON CORP",
-      "Ticker": "6645 JP",
-      "Identifier": "6659428",
-      "Weight": "2.10%",
-      "Market Value": "69,585,071.14",
-      "Shares Held": "1,726,787.00",
-      "Asset Category": "Equity",
-      "Price": "40.29742587823512"
-    },
-    {
-      "Name": "TESLA INC",
-      "Ticker": "TSLA",
-      "Identifier": "B616C79",
-      "Weight": "2.09%",
-      "Market Value": "69,196,879.38",
-      "Shares Held": "183,046.00",
-      "Asset Category": "Equity",
-      "Price": "378.03"
-    },
-    {
-      "Name": "ALPHABET INC-CL A",
-      "Ticker": "GOOGL",
-      "Identifier": "BYVY8G0",
-      "Weight": "2.06%",
-      "Market Value": "68,342,321.76",
-      "Shares Held": "193,758.00",
-      "Asset Category": "Equity",
-      "Price": "352.72"
-    },
-    {
-      "Name": "YASKAWA ELECTRIC CORP",
-      "Ticker": "6506 JP",
-      "Identifier": "6986041",
-      "Weight": "2.03%",
-      "Market Value": "67,294,499.80",
-      "Shares Held": "2,232,762.00",
-      "Asset Category": "Equity",
-      "Price": "30.13957591539089"
-    },
-    {
-      "Name": "DEERE & CO",
-      "Ticker": "DE",
-      "Identifier": "2261203",
-      "Weight": "1.79%",
-      "Market Value": "59,177,502.45",
-      "Shares Held": "93,545.00",
-      "Asset Category": "Equity",
-      "Price": "632.61"
-    },
-    {
-      "Name": "HORIZON ROBOTICS INC",
-      "Ticker": "9660 HK",
-      "Identifier": "BS5YNY7",
-      "Weight": "1.78%",
-      "Market Value": "59,051,643.40",
-      "Shares Held": "115,996,200.00",
-      "Asset Category": "Equity",
-      "Price": "0.5090825682220624"
-    },
-    {
-      "Name": "ROBOTECHNIK INTELLIGENT TE-A",
-      "Ticker": "300757 C2",
-      "Identifier": "BNHPGJ9",
-      "Weight": "1.63%",
-      "Market Value": "53,879,647.47",
-      "Shares Held": "748,945.00",
-      "Asset Category": "Equity",
-      "Price": "71.94072658205876"
-    },
-    {
-      "Name": "XIAOMI CORP-CLASS B",
-      "Ticker": "1810 HK",
-      "Identifier": "BG0ZMJ9",
-      "Weight": "1.47%",
-      "Market Value": "48,722,230.02",
-      "Shares Held": "15,593,200.00",
-      "Asset Category": "Equity",
-      "Price": "3.12458187030244"
-    },
-    {
-      "Name": "RAINBOW ROBOTICS",
-      "Ticker": "277810 KS",
-      "Identifier": "BM9Q3J2",
-      "Weight": "1.45%",
-      "Market Value": "48,034,632.61",
-      "Shares Held": "164,018.00",
-      "Asset Category": "Equity",
-      "Price": "292.8619578948652"
-    },
-    {
-      "Name": "AUTOSTORE HOLDINGS LTD",
-      "Ticker": "AUTO NO",
-      "Identifier": "BN49G27",
-      "Weight": "1.41%",
-      "Market Value": "46,514,108.21",
-      "Shares Held": "28,665,518.00",
-      "Asset Category": "Equity",
-      "Price": "1.622650189332005"
-    },
-    {
-      "Name": "SYMBOTIC INC",
-      "Ticker": "SYM",
-      "Identifier": "BPG82M8",
-      "Weight": "1.34%",
-      "Market Value": "44,387,113.34",
-      "Shares Held": "1,088,453.00",
-      "Asset Category": "Equity",
-      "Price": "40.78"
-    },
-    {
-      "Name": "FUJI CORP/AICHI",
-      "Ticker": "6134 JP",
-      "Identifier": "6356592",
-      "Weight": "1.32%",
-      "Market Value": "43,781,402.06",
-      "Shares Held": "823,600.00",
-      "Asset Category": "Equity",
-      "Price": "53.15857462360369"
-    },
-    {
-      "Name": "ROCKWELL AUTOMATION INC",
-      "Ticker": "ROK",
-      "Identifier": "2754060",
-      "Weight": "1.06%",
-      "Market Value": "35,227,080.78",
-      "Shares Held": "81,174.00",
-      "Asset Category": "Equity",
-      "Price": "433.97"
-    },
-    {
-      "Name": "UBTECH ROBOTICS CORP LTD-H",
-      "Ticker": "9880 HK",
-      "Identifier": "BR4VSK3",
-      "Weight": "0.96%",
-      "Market Value": "31,818,357.29",
-      "Shares Held": "3,688,227.00",
-      "Asset Category": "Equity",
-      "Price": "8.627006225484495"
-    },
-    {
-      "Name": "HARMONIC DRIVE SYSTEMS INC",
-      "Ticker": "6324 JP",
-      "Identifier": "6108179",
-      "Weight": "0.96%",
-      "Market Value": "31,782,967.33",
-      "Shares Held": "810,900.00",
-      "Asset Category": "Equity",
-      "Price": "39.19468162535454"
-    },
-    {
-      "Name": "HIWIN TECHNOLOGIES CORP",
-      "Ticker": "2049 TT",
-      "Identifier": "B1YMYT5",
-      "Weight": "0.95%",
-      "Market Value": "31,370,798.47",
-      "Shares Held": "2,967,000.00",
-      "Asset Category": "Equity",
-      "Price": "10.57323844624199"
-    },
-    {
-      "Name": "LEADER HARMONIOUS DRIVE SY-A",
-      "Ticker": "688017 C1",
-      "Identifier": "BMGJQ17",
-      "Weight": "0.93%",
-      "Market Value": "30,918,152.72",
-      "Shares Held": "821,278.00",
-      "Asset Category": "Equity",
-      "Price": "37.64639101497909"
-    },
-    {
-      "Name": "TECAN GROUP AG-REG",
-      "Ticker": "TECN SW",
-      "Identifier": "7110902",
-      "Weight": "0.92%",
-      "Market Value": "30,508,317.15",
-      "Shares Held": "107,397.00",
-      "Asset Category": "Equity",
-      "Price": "284.0704782256487"
-    },
-    {
-      "Name": "DOOSAN ROBOTICS INC",
-      "Ticker": "454910 KS",
-      "Identifier": "BN4P528",
-      "Weight": "0.78%",
-      "Market Value": "25,938,177.51",
-      "Shares Held": "547,944.00",
-      "Asset Category": "Equity",
-      "Price": "47.33727809776182"
-    },
-    {
-      "Name": "KINCO AUTOMATION SHANGHAI-A",
-      "Ticker": "688160 C1",
-      "Identifier": "BPDWRF1",
-      "Weight": "0.16%",
-      "Market Value": "5,163,578.46",
-      "Shares Held": "406,767.00",
-      "Asset Category": "Equity",
-      "Price": "12.6941921542308"
-    },
-    {
-      "Name": "EFORT INTELLIGENT ROBOT CO-A",
-      "Ticker": "688165 C1",
-      "Identifier": "BPDWRG2",
-      "Weight": "0.15%",
-      "Market Value": "4,884,056.38",
-      "Shares Held": "2,325,450.00",
-      "Asset Category": "Equity",
-      "Price": "2.100262908254316"
-    },
-    {
-      "Name": "GUANGDONG HUAYAN ROBOTICS -H",
-      "Ticker": "1021 HK",
-      "Identifier": "BTG0Q53",
-      "Weight": "0.14%",
-      "Market Value": "4,796,359.71",
-      "Shares Held": "4,515,800.00",
-      "Asset Category": "Equity",
-      "Price": "1.062128462287967"
-    },
-    {
-      "Name": "YUIL ROBOTICS CO LTD",
-      "Ticker": "388720 KS",
-      "Identifier": "BPJGTG2",
-      "Weight": "0.14%",
-      "Market Value": "4,683,512.55",
-      "Shares Held": "99,096.00",
-      "Asset Category": "Equity",
-      "Price": "47.26237739162025"
-    },
-    {
-      "Name": "TINAVI MEDICAL TECHNOLOGIE-A",
-      "Ticker": "688277 C1",
-      "Identifier": "BNHPMQ8",
-      "Weight": "0.14%",
-      "Market Value": "4,539,357.38",
-      "Shares Held": "2,079,964.00",
-      "Asset Category": "Equity",
-      "Price": "2.182421128442608"
-    },
-    {
-      "Name": "ROBOSTAR CO LTD",
-      "Ticker": "090360 KS",
-      "Identifier": "B5LTV29",
-      "Weight": "0.12%",
-      "Market Value": "4,146,818.59",
-      "Shares Held": "82,021.00",
-      "Asset Category": "Equity",
-      "Price": "50.55801063142366"
-    },
-    {
-      "Name": "NOVANTA INC",
-      "Ticker": "NOVT",
-      "Identifier": "BD8S5H8",
-      "Weight": "0.12%",
-      "Market Value": "4,010,079.50",
-      "Shares Held": "27,650.00",
-      "Asset Category": "Equity",
-      "Price": "145.03"
-    },
-    {
-      "Name": "THK CO LTD",
-      "Ticker": "6481 JP",
-      "Identifier": "6869131",
-      "Weight": "0.11%",
-      "Market Value": "3,682,794.04",
-      "Shares Held": "87,100.00",
-      "Asset Category": "Equity",
-      "Price": "42.28236555683123"
-    },
-    {
-      "Name": "YIJIAHE TECHNOLOGY CO LTD-A",
-      "Ticker": "603666 C1",
-      "Identifier": "BFYX634",
-      "Weight": "0.10%",
-      "Market Value": "3,279,181.41",
-      "Shares Held": "916,200.00",
-      "Asset Category": "Equity",
-      "Price": "3.579110903732809"
-    },
-    {
-      "Name": "KODIAK AI INC",
-      "Ticker": "KDK",
-      "Identifier": "BVBFG46",
-      "Weight": "0.09%",
-      "Market Value": "2,925,594.24",
-      "Shares Held": "1,681,376.00",
-      "Asset Category": "Equity",
-      "Price": "1.74"
-    },
-    {
-      "Name": "SERVE ROBOTICS INC",
-      "Ticker": "SERV",
-      "Identifier": "BPBJW48",
-      "Weight": "0.09%",
-      "Market Value": "2,845,147.95",
-      "Shares Held": "726,730.00",
-      "Asset Category": "Equity",
-      "Price": "3.915"
-    },
-    {
-      "Name": "NEUROMEKA CO LTD",
-      "Ticker": "348340 KS",
-      "Identifier": "BMYY830",
-      "Weight": "0.08%",
-      "Market Value": "2,747,699.65",
-      "Shares Held": "196,174.00",
-      "Asset Category": "Equity",
-      "Price": "14.00644147542488"
-    },
-    {
-      "Name": "RICHTECH ROBOTICS INC-CL B",
-      "Ticker": "RR",
-      "Identifier": "BNV0DF5",
-      "Weight": "0.07%",
-      "Market Value": "2,343,372.02",
-      "Shares Held": "1,551,902.00",
-      "Asset Category": "Equity",
-      "Price": "1.51"
-    },
-    {
-      "Name": "ANGEL ROBOTICS CO LTD",
-      "Ticker": "455900 KS",
-      "Identifier": "BRC2TP0",
-      "Weight": "0.06%",
-      "Market Value": "1,903,247.28",
-      "Shares Held": "129,512.00",
-      "Asset Category": "Equity",
-      "Price": "14.6955284452406"
-    },
-    {
-      "Name": "EHANG HOLDINGS LTD-SPS ADR",
-      "Ticker": "EH",
-      "Identifier": "BJBYDW6",
-      "Weight": "0.06%",
-      "Market Value": "1,874,411.68",
-      "Shares Held": "472,144.00",
-      "Asset Category": "Equity",
-      "Price": "3.97"
-    },
-    {
-      "Name": "CYBERDYNE INC",
-      "Ticker": "7779 JP",
-      "Identifier": "BK0S445",
-      "Weight": "0.05%",
-      "Market Value": "1,531,559.91",
-      "Shares Held": "1,151,900.00",
-      "Asset Category": "Equity",
-      "Price": "1.329594504731313"
+      "Price": "0.006331920709804421"
     }
   ]
 }

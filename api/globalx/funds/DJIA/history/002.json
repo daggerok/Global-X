@@ -2,7 +2,7 @@
   "ticker": "DJIA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1162,
+  "totalRows": 1166,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-20",
+      "Close": "21.32",
+      "Adj Close": "14.64",
+      "Volume": "25300"
+    },
+    {
+      "Date": "2022-10-19",
+      "Close": "21.39",
+      "Adj Close": "14.69",
+      "Volume": "24100"
+    },
+    {
+      "Date": "2022-10-18",
+      "Close": "21.41",
+      "Adj Close": "14.70",
+      "Volume": "36500"
+    },
+    {
+      "Date": "2022-10-17",
+      "Close": "21.22",
+      "Adj Close": "14.57",
+      "Volume": "22800"
+    },
     {
       "Date": "2022-10-14",
       "Close": "20.86",

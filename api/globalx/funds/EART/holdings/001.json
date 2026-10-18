@@ -2,7 +2,7 @@
   "ticker": "EART",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 57,
+  "totalRows": 55,
   "headers": [
     "Name",
     "Ticker",
@@ -14,224 +14,524 @@
   ],
   "rows": [
     {
+      "Name": "ANGLO AMERICAN PLC",
+      "Ticker": "AAL LN",
+      "Identifier": "BTK05J6",
+      "Weight": "6.01%",
+      "Market Value": "2,693,154.48",
+      "Shares Held": "49,837.00",
+      "Asset Category": "Equity",
+      "Price": "54.03925757970985"
+    },
+    {
+      "Name": "GRUPO MEXICO SAB DE CV-SER B",
+      "Ticker": "GMEXICOB MM",
+      "Identifier": "2643674",
+      "Weight": "5.81%",
+      "Market Value": "2,603,654.03",
+      "Shares Held": "196,480.00",
+      "Asset Category": "Equity",
+      "Price": "13.25149648819218"
+    },
+    {
+      "Name": "FREEPORT-MCMORAN INC",
+      "Ticker": "FCX",
+      "Identifier": "2352118",
+      "Weight": "5.75%",
+      "Market Value": "2,579,377.68",
+      "Shares Held": "37,092.00",
+      "Asset Category": "Equity",
+      "Price": "69.54"
+    },
+    {
+      "Name": "SOUTHERN COPPER CORP",
+      "Ticker": "SCCO",
+      "Identifier": "2823777",
+      "Weight": "5.64%",
+      "Market Value": "2,528,431.10",
+      "Shares Held": "12,610.00",
+      "Asset Category": "Equity",
+      "Price": "200.51"
+    },
+    {
+      "Name": "RIO TINTO PLC",
+      "Ticker": "RIO LN",
+      "Identifier": "0718875",
+      "Weight": "4.70%",
+      "Market Value": "2,109,055.52",
+      "Shares Held": "23,173.00",
+      "Asset Category": "Equity",
+      "Price": "91.01348638501705"
+    },
+    {
+      "Name": "ANTOFAGASTA PLC",
+      "Ticker": "ANTO LN",
+      "Identifier": "0045614",
+      "Weight": "4.51%",
+      "Market Value": "2,020,614.23",
+      "Shares Held": "44,507.00",
+      "Asset Category": "Equity",
+      "Price": "45.39991978789853"
+    },
+    {
+      "Name": "SUMITOMO METAL MINING CO LTD",
+      "Ticker": "5713 JP",
+      "Identifier": "6858849",
+      "Weight": "4.07%",
+      "Market Value": "1,824,392.55",
+      "Shares Held": "32,805.00",
+      "Asset Category": "Equity",
+      "Price": "55.61324645633288"
+    },
+    {
+      "Name": "VALTERRA PLATINUM LIMITED",
+      "Ticker": "VAL SJ",
+      "Identifier": "6761000",
+      "Weight": "4.01%",
+      "Market Value": "1,798,740.17",
+      "Shares Held": "23,597.00",
+      "Asset Category": "Equity",
+      "Price": "76.22749374920541"
+    },
+    {
+      "Name": "BOLIDEN AB",
+      "Ticker": "BOL SS",
+      "Identifier": "BPYTZ57",
+      "Weight": "3.78%",
+      "Market Value": "1,695,492.45",
+      "Shares Held": "31,447.00",
+      "Asset Category": "Equity",
+      "Price": "53.91587273825802"
+    },
+    {
+      "Name": "IMPALA PLATINUM HOLDINGS LTD",
+      "Ticker": "IMP SJ",
+      "Identifier": "B1FFT76",
+      "Weight": "3.56%",
+      "Market Value": "1,594,352.07",
+      "Shares Held": "139,421.00",
+      "Asset Category": "Equity",
+      "Price": "11.4355231277928"
+    },
+    {
+      "Name": "HUDBAY MINERALS INC",
+      "Ticker": "HBM CN",
+      "Identifier": "B05BDX1",
+      "Weight": "3.46%",
+      "Market Value": "1,549,879.76",
+      "Shares Held": "65,632.00",
+      "Asset Category": "Equity",
+      "Price": "23.61469648951731"
+    },
+    {
+      "Name": "CHINA NORTHERN RARE EARTH -A",
+      "Ticker": "600111 C1",
+      "Identifier": "BP3R370",
+      "Weight": "3.41%",
+      "Market Value": "1,527,242.80",
+      "Shares Held": "289,000.00",
+      "Asset Category": "Equity",
+      "Price": "5.284577162629758"
+    },
+    {
+      "Name": "EVE ENERGY CO LTD-A",
+      "Ticker": "300014 C2",
+      "Identifier": "BD5C7G6",
+      "Weight": "3.10%",
+      "Market Value": "1,387,917.89",
+      "Shares Held": "197,200.00",
+      "Asset Category": "Equity",
+      "Price": "7.03812317444219"
+    },
+    {
+      "Name": "WESTERN MINING CO -A",
+      "Ticker": "601168 C1",
+      "Identifier": "BP3R7X4",
+      "Weight": "2.84%",
+      "Market Value": "1,274,955.11",
+      "Shares Held": "259,400.00",
+      "Asset Category": "Equity",
+      "Price": "4.915015844255976"
+    },
+    {
+      "Name": "SIBANYE STILLWATER LTD",
+      "Ticker": "SSW SJ",
+      "Identifier": "BL0L913",
+      "Weight": "2.77%",
+      "Market Value": "1,243,237.59",
+      "Shares Held": "485,829.00",
+      "Asset Category": "Equity",
+      "Price": "2.559002426779793"
+    },
+    {
+      "Name": "ALBEMARLE CORP",
+      "Ticker": "ALB",
+      "Identifier": "2046853",
+      "Weight": "2.64%",
+      "Market Value": "1,184,333.92",
+      "Shares Held": "12,404.00",
+      "Asset Category": "Equity",
+      "Price": "95.47999999999999"
+    },
+    {
+      "Name": "HEXCEL CORP",
+      "Ticker": "HXL",
+      "Identifier": "2416779",
+      "Weight": "2.58%",
+      "Market Value": "1,158,875.90",
+      "Shares Held": "12,845.00",
+      "Asset Category": "Equity",
+      "Price": "90.22"
+    },
+    {
+      "Name": "ZHEJIANG HUAYOU COBALT CO -A",
+      "Ticker": "603799 C1",
+      "Identifier": "BFF5BV2",
+      "Weight": "2.52%",
+      "Market Value": "1,129,734.35",
+      "Shares Held": "234,130.00",
+      "Asset Category": "Equity",
+      "Price": "4.825243881604237"
+    },
+    {
+      "Name": "PLS GROUP LTD",
+      "Ticker": "PLS AU",
+      "Identifier": "B2368L5",
+      "Weight": "2.48%",
+      "Market Value": "1,113,222.66",
+      "Shares Held": "536,267.00",
+      "Asset Category": "Equity",
+      "Price": "2.075873883718371"
+    },
+    {
+      "Name": "LYNAS RARE EARTHS LIMITED",
+      "Ticker": "LYC AU",
+      "Identifier": "6121176",
+      "Weight": "2.45%",
+      "Market Value": "1,099,242.35",
+      "Shares Held": "142,548.00",
+      "Asset Category": "Equity",
+      "Price": "7.711383884726549"
+    },
+    {
+      "Name": "MP MATERIALS CORP",
+      "Ticker": "MP",
+      "Identifier": "BN15Y35",
+      "Weight": "2.21%",
+      "Market Value": "990,672.54",
+      "Shares Held": "24,662.00",
+      "Asset Category": "Equity",
+      "Price": "40.17"
+    },
+    {
+      "Name": "NORTHAM PLATINUM HOLDINGS LT",
+      "Ticker": "NPH SJ",
+      "Identifier": "BMZ1NS0",
+      "Weight": "2.10%",
+      "Market Value": "940,415.65",
+      "Shares Held": "62,758.00",
+      "Asset Category": "Equity",
+      "Price": "14.98479317377864"
+    },
+    {
+      "Name": "CHINA RARE EARTH RESOURCES-A",
+      "Ticker": "000831 C2",
+      "Identifier": "BFY8HG9",
+      "Weight": "1.94%",
+      "Market Value": "868,418.97",
+      "Shares Held": "123,100.00",
+      "Asset Category": "Equity",
+      "Price": "7.054581397238017"
+    },
+    {
+      "Name": "SHENGHE RESOURCES HOLDINGS-A",
+      "Ticker": "600392 C1",
+      "Identifier": "BFYQHK7",
+      "Weight": "1.73%",
+      "Market Value": "776,404.33",
+      "Shares Held": "298,400.00",
+      "Asset Category": "Equity",
+      "Price": "2.601891186327077"
+    },
+    {
+      "Name": "GEM CO LTD-A",
+      "Ticker": "002340 C2",
+      "Identifier": "BD5CFW8",
+      "Weight": "1.53%",
+      "Market Value": "687,742.53",
+      "Shares Held": "782,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.8794661508951407"
+    },
+    {
+      "Name": "MMG LTD",
+      "Ticker": "1208 HK",
+      "Identifier": "6728793",
+      "Weight": "1.48%",
+      "Market Value": "662,545.10",
+      "Shares Held": "681,020.00",
+      "Asset Category": "Equity",
+      "Price": "0.9728717218290212"
+    },
+    {
+      "Name": "SINOMINE RESOURCE GROUP CO-A",
+      "Ticker": "002738 C2",
+      "Identifier": "BNR4M32",
+      "Weight": "1.47%",
+      "Market Value": "658,388.59",
+      "Shares Held": "124,200.00",
+      "Asset Category": "Equity",
+      "Price": "5.301035346215781"
+    },
+    {
+      "Name": "YUNNAN CHIHONG ZINC & GERM-A",
+      "Ticker": "600497 C1",
+      "Identifier": "BP3R701",
+      "Weight": "1.35%",
+      "Market Value": "605,729.85",
+      "Shares Held": "508,600.00",
+      "Asset Category": "Equity",
+      "Price": "1.190974931183641"
+    },
+    {
+      "Name": "WEIHAI GUANGWEI COMPOSITES-A",
+      "Ticker": "300699 C2",
+      "Identifier": "BFY8H81",
+      "Weight": "1.15%",
+      "Market Value": "513,647.02",
+      "Shares Held": "141,160.00",
+      "Asset Category": "Equity",
+      "Price": "3.638757580051006"
+    },
+    {
+      "Name": "TOKAI CARBON CO LTD",
+      "Ticker": "5301 JP",
+      "Identifier": "6894003",
+      "Weight": "0.92%",
+      "Market Value": "414,525.11",
+      "Shares Held": "32,170.00",
+      "Asset Category": "Equity",
+      "Price": "12.88545570407212"
+    },
+    {
+      "Name": "IGO LTD",
+      "Ticker": "IGO AU",
+      "Identifier": "6439567",
+      "Weight": "0.86%",
+      "Market Value": "386,568.40",
+      "Shares Held": "102,010.00",
+      "Asset Category": "Equity",
+      "Price": "3.789514753455544"
+    },
+    {
       "Name": "FANGDA CARBON NEW MATERIAL-A",
       "Ticker": "600516 C1",
       "Identifier": "BP3R7V2",
-      "Weight": "0.71%",
-      "Market Value": "333,761.95",
+      "Weight": "0.72%",
+      "Market Value": "321,541.68",
       "Shares Held": "426,400.00",
       "Asset Category": "Equity",
-      "Price": "0.7827437851782364"
+      "Price": "0.7540846153846154"
     },
     {
       "Name": "XTC NEW ENERGY MATERIALS X-A",
       "Ticker": "688778 C1",
       "Identifier": "BNHPPQ9",
-      "Weight": "0.64%",
-      "Market Value": "297,099.15",
-      "Shares Held": "42,855.00",
-      "Asset Category": "Equity",
-      "Price": "6.932660133006651"
-    },
-    {
-      "Name": "YOUNGY CO LTD-A",
-      "Ticker": "002192 C2",
-      "Identifier": "BD5CQT2",
       "Weight": "0.55%",
-      "Market Value": "258,518.31",
-      "Shares Held": "32,500.00",
+      "Market Value": "246,299.47",
+      "Shares Held": "43,343.00",
       "Asset Category": "Equity",
-      "Price": "7.954409538461539"
+      "Price": "5.68256627367741"
     },
     {
       "Name": "MERSEN",
       "Ticker": "MRN FP",
       "Identifier": "5481202",
-      "Weight": "0.53%",
-      "Market Value": "246,818.76",
-      "Shares Held": "5,417.00",
+      "Weight": "0.55%",
+      "Market Value": "246,171.16",
+      "Shares Held": "5,469.00",
       "Asset Category": "Equity",
-      "Price": "45.5637363854532"
+      "Price": "45.01209727555312"
+    },
+    {
+      "Name": "YOUNGY CO LTD-A",
+      "Ticker": "002192 C2",
+      "Identifier": "BD5CQT2",
+      "Weight": "0.52%",
+      "Market Value": "232,434.62",
+      "Shares Held": "32,500.00",
+      "Asset Category": "Equity",
+      "Price": "7.151834461538462"
     },
     {
       "Name": "NANJING HANRUI COBALT CO L-A",
       "Ticker": "300618 C2",
       "Identifier": "BFCCQZ5",
-      "Weight": "0.52%",
-      "Market Value": "243,528.92",
-      "Shares Held": "53,000.00",
+      "Weight": "0.51%",
+      "Market Value": "227,838.44",
+      "Shares Held": "53,300.00",
       "Asset Category": "Equity",
-      "Price": "4.594885283018868"
+      "Price": "4.274642401500938"
     },
     {
       "Name": "GRAFTECH INTERNATIONAL LTD",
       "Ticker": "EAF",
       "Identifier": "BV6G2Q8",
-      "Weight": "0.47%",
-      "Market Value": "220,646.64",
-      "Shares Held": "26,616.00",
+      "Weight": "0.42%",
+      "Market Value": "189,158.20",
+      "Shares Held": "26,642.00",
       "Asset Category": "Equity",
-      "Price": "8.290000000000001"
+      "Price": "7.100000000000001"
     },
     {
       "Name": "MINMETALS NEW ENERGY MATERIA",
       "Ticker": "688779 C1",
       "Identifier": "BNRLFZ6",
-      "Weight": "0.42%",
-      "Market Value": "193,954.04",
-      "Shares Held": "165,613.00",
+      "Weight": "0.39%",
+      "Market Value": "174,183.62",
+      "Shares Held": "167,507.00",
       "Asset Category": "Equity",
-      "Price": "1.171128111923581"
-    },
-    {
-      "Name": "NICKEL INDUSTRIES LTD",
-      "Ticker": "NIC AU",
-      "Identifier": "BZ7NDP2",
-      "Weight": "0.38%",
-      "Market Value": "175,723.21",
-      "Shares Held": "341,036.00",
-      "Asset Category": "Equity",
-      "Price": "0.5152629341183922"
+      "Price": "1.039858752171551"
     },
     {
       "Name": "NIPPON CARBON CO LTD",
       "Ticker": "5302 JP",
       "Identifier": "6641168",
-      "Weight": "0.36%",
-      "Market Value": "166,246.64",
+      "Weight": "0.37%",
+      "Market Value": "164,790.10",
       "Shares Held": "5,103.00",
       "Asset Category": "Equity",
-      "Price": "32.57821673525378"
+      "Price": "32.29278855575152"
     },
     {
-      "Name": "SYLVANIA PLATINUM LTD",
-      "Ticker": "SLP LN",
-      "Identifier": "B3V5PR6",
-      "Weight": "0.33%",
-      "Market Value": "155,841.97",
-      "Shares Held": "125,413.00",
+      "Name": "NICKEL INDUSTRIES LTD",
+      "Ticker": "NIC AU",
+      "Identifier": "BZ7NDP2",
+      "Weight": "0.37%",
+      "Market Value": "164,779.71",
+      "Shares Held": "342,823.00",
       "Asset Category": "Equity",
-      "Price": "1.242630110116176"
+      "Price": "0.4806553527622126"
     },
     {
       "Name": "SINOFIBERS TECHNOLOGY CO L-A",
       "Ticker": "300777 C2",
       "Identifier": "BK4XY91",
-      "Weight": "0.32%",
-      "Market Value": "149,047.71",
-      "Shares Held": "51,300.00",
+      "Weight": "0.36%",
+      "Market Value": "160,423.13",
+      "Shares Held": "51,400.00",
       "Asset Category": "Equity",
-      "Price": "2.905413450292397"
+      "Price": "3.121072568093386"
     },
     {
-      "Name": "JIANGXI BLACK CAT CARBON -A",
-      "Ticker": "002068 C2",
-      "Identifier": "BFCCQ22",
-      "Weight": "0.31%",
-      "Market Value": "143,646.33",
-      "Shares Held": "109,400.00",
+      "Name": "SYLVANIA PLATINUM LTD",
+      "Ticker": "SLP LN",
+      "Identifier": "B3V5PR6",
+      "Weight": "0.34%",
+      "Market Value": "153,447.30",
+      "Shares Held": "125,592.00",
       "Asset Category": "Equity",
-      "Price": "1.313037751371115"
-    },
-    {
-      "Name": "CASH",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.31%",
-      "Market Value": "142,871.02",
-      "Shares Held": "142,871.02",
-      "Asset Category": "Cash",
-      "Price": "1.0"
+      "Price": "1.221791993120581"
     },
     {
       "Name": "AFRICAN RAINBOW MINERALS LTD",
       "Ticker": "ARI SJ",
       "Identifier": "6041122",
-      "Weight": "0.29%",
-      "Market Value": "135,568.45",
-      "Shares Held": "15,418.00",
+      "Weight": "0.32%",
+      "Market Value": "141,880.42",
+      "Shares Held": "15,442.00",
       "Asset Category": "Equity",
-      "Price": "8.79286872486704"
+      "Price": "9.18795622328714"
     },
     {
-      "Name": "XIANGTAN ELECTROCHEMICAL -A",
-      "Ticker": "002125 C2",
-      "Identifier": "BLC7SW3",
-      "Weight": "0.28%",
-      "Market Value": "130,730.16",
-      "Shares Held": "71,500.00",
+      "Name": "JIANGXI BLACK CAT CARBON -A",
+      "Ticker": "002068 C2",
+      "Identifier": "BFCCQ22",
+      "Weight": "0.30%",
+      "Market Value": "134,038.54",
+      "Shares Held": "110,600.00",
       "Asset Category": "Equity",
-      "Price": "1.828393846153846"
+      "Price": "1.211921699819168"
     },
     {
       "Name": "LITHIUM AMERICAS CORP",
       "Ticker": "LAC CN",
       "Identifier": "BRBS357",
-      "Weight": "0.28%",
-      "Market Value": "129,200.97",
-      "Shares Held": "55,376.00",
+      "Weight": "0.27%",
+      "Market Value": "121,165.50",
+      "Shares Held": "55,444.00",
       "Asset Category": "Equity",
-      "Price": "2.333158227390927"
+      "Price": "2.185367217372484"
     },
     {
-      "Name": "ERAMET",
-      "Ticker": "ERA FP",
-      "Identifier": "4017017",
+      "Name": "XIANGTAN ELECTROCHEMICAL -A",
+      "Ticker": "002125 C2",
+      "Identifier": "BLC7SW3",
       "Weight": "0.27%",
-      "Market Value": "125,307.02",
-      "Shares Held": "2,577.00",
+      "Market Value": "120,035.91",
+      "Shares Held": "73,200.00",
       "Asset Category": "Equity",
-      "Price": "48.6251532790066"
+      "Price": "1.639834836065574"
     },
     {
       "Name": "GUIZHOU ZHENHUA E-CHEM INC-A",
       "Ticker": "688707 C1",
       "Identifier": "BNRLFY5",
       "Weight": "0.26%",
-      "Market Value": "123,259.29",
+      "Market Value": "114,688.19",
       "Shares Held": "75,150.00",
       "Asset Category": "Equity",
-      "Price": "1.640176846307385"
+      "Price": "1.526123619427811"
     },
     {
-      "Name": "AMERICAN BATTERY TECHNOLOGY",
-      "Ticker": "ABAT",
-      "Identifier": "BQC80B4",
-      "Weight": "0.20%",
-      "Market Value": "91,509.15",
-      "Shares Held": "50,005.00",
+      "Name": "ERAMET",
+      "Ticker": "ERA FP",
+      "Identifier": "4017017",
+      "Weight": "0.24%",
+      "Market Value": "109,727.79",
+      "Shares Held": "2,610.00",
       "Asset Category": "Equity",
-      "Price": "1.83"
+      "Price": "42.04129885057471"
     },
     {
       "Name": "ZHONGFU SHENYING CARBON FI-A",
       "Ticker": "688295 C1",
       "Identifier": "BNDKPJ1",
-      "Weight": "0.19%",
-      "Market Value": "88,245.16",
-      "Shares Held": "17,324.00",
+      "Weight": "0.21%",
+      "Market Value": "94,196.22",
+      "Shares Held": "17,527.00",
       "Asset Category": "Equity",
-      "Price": "5.09380974370815"
+      "Price": "5.374349289667371"
+    },
+    {
+      "Name": "AMERICAN BATTERY TECHNOLOGY",
+      "Ticker": "ABAT",
+      "Identifier": "BQC80B4",
+      "Weight": "0.17%",
+      "Market Value": "74,124.32",
+      "Shares Held": "50,084.00",
+      "Asset Category": "Equity",
+      "Price": "1.48"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.03%",
-      "Market Value": "14,332.18",
-      "Shares Held": "14,332.18",
+      "Weight": "0.05%",
+      "Market Value": "20,533.28",
+      "Shares Held": "20,533.28",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
     {
-      "Name": "SOUTH AFRICAN RAND",
+      "Name": "CASH",
       "Ticker": "",
       "Identifier": "",
       "Weight": "0.01%",
-      "Market Value": "4,669.52",
-      "Shares Held": "77,268.80",
-      "Asset Category": "Equity",
-      "Price": "0.0604321537282836"
+      "Market Value": "6,287.83",
+      "Shares Held": "6,287.83",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
       "Name": "CHINESE YUAN RENMINBI",
@@ -242,16 +542,6 @@
       "Shares Held": "31.50",
       "Asset Category": "Equity",
       "Price": "0.1495238095238095"
-    },
-    {
-      "Name": "CURRENCY CONTRACT - USD",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "0.86",
-      "Shares Held": "-82,098.10",
-      "Asset Category": "Equity",
-      "Price": "-0.00001047527287476811"
     },
     {
       "Name": "JAPANESE YEN",
@@ -268,320 +558,10 @@
       "Ticker": "",
       "Identifier": "",
       "Weight": "-0.00%",
-      "Market Value": "-525.42",
+      "Market Value": "-530.36",
       "Shares Held": "-749.90",
       "Asset Category": "Equity",
-      "Price": "0.7006534204560608"
-    },
-    {
-      "Name": "ANGLO AMERICAN PLC",
-      "Ticker": "AAL LN",
-      "Identifier": "BTK05J6",
-      "Weight": "5.90%",
-      "Market Value": "2,752,791.69",
-      "Shares Held": "49,770.00",
-      "Asset Category": "Equity",
-      "Price": "55.31026100060277"
-    },
-    {
-      "Name": "FREEPORT-MCMORAN INC",
-      "Ticker": "FCX",
-      "Identifier": "2352118",
-      "Weight": "5.82%",
-      "Market Value": "2,715,614.37",
-      "Shares Held": "37,053.00",
-      "Asset Category": "Equity",
-      "Price": "73.29"
-    },
-    {
-      "Name": "SOUTHERN COPPER CORP",
-      "Ticker": "SCCO",
-      "Identifier": "2823777",
-      "Weight": "5.62%",
-      "Market Value": "2,624,902.82",
-      "Shares Held": "12,578.00",
-      "Asset Category": "Equity",
-      "Price": "208.69"
-    },
-    {
-      "Name": "GRUPO MEXICO SAB DE CV-SER B",
-      "Ticker": "GMEXICOB MM",
-      "Identifier": "2643674",
-      "Weight": "5.51%",
-      "Market Value": "2,573,018.17",
-      "Shares Held": "193,780.00",
-      "Asset Category": "Equity",
-      "Price": "13.27803782640107"
-    },
-    {
-      "Name": "ANTOFAGASTA PLC",
-      "Ticker": "ANTO LN",
-      "Identifier": "0045614",
-      "Weight": "4.78%",
-      "Market Value": "2,232,850.38",
-      "Shares Held": "44,449.00",
-      "Asset Category": "Equity",
-      "Price": "50.23398456658192"
-    },
-    {
-      "Name": "RIO TINTO PLC",
-      "Ticker": "RIO LN",
-      "Identifier": "0718875",
-      "Weight": "4.65%",
-      "Market Value": "2,170,889.78",
-      "Shares Held": "22,987.00",
-      "Asset Category": "Equity",
-      "Price": "94.4398912428764"
-    },
-    {
-      "Name": "SUMITOMO METAL MINING CO LTD",
-      "Ticker": "5713 JP",
-      "Identifier": "6858849",
-      "Weight": "4.15%",
-      "Market Value": "1,938,455.72",
-      "Shares Held": "32,705.00",
-      "Asset Category": "Equity",
-      "Price": "59.27092860418896"
-    },
-    {
-      "Name": "VALTERRA PLATINUM LIMITED",
-      "Ticker": "VAL SJ",
-      "Identifier": "6761000",
-      "Weight": "3.73%",
-      "Market Value": "1,741,523.52",
-      "Shares Held": "23,570.00",
-      "Asset Category": "Equity",
-      "Price": "73.88729401781926"
-    },
-    {
-      "Name": "BOLIDEN AB",
-      "Ticker": "BOL SS",
-      "Identifier": "BPYTZ57",
-      "Weight": "3.68%",
-      "Market Value": "1,718,692.96",
-      "Shares Held": "31,413.00",
-      "Asset Category": "Equity",
-      "Price": "54.71279279279279"
-    },
-    {
-      "Name": "HUDBAY MINERALS INC",
-      "Ticker": "HBM CN",
-      "Identifier": "B05BDX1",
-      "Weight": "3.66%",
-      "Market Value": "1,710,000.27",
-      "Shares Held": "65,537.00",
-      "Asset Category": "Equity",
-      "Price": "26.09213528235958"
-    },
-    {
-      "Name": "IMPALA PLATINUM HOLDINGS LTD",
-      "Ticker": "IMP SJ",
-      "Identifier": "B1FFT76",
-      "Weight": "3.29%",
-      "Market Value": "1,536,871.82",
-      "Shares Held": "139,228.00",
-      "Asset Category": "Equity",
-      "Price": "11.038525440285"
-    },
-    {
-      "Name": "CHINA NORTHERN RARE EARTH -A",
-      "Ticker": "600111 C1",
-      "Identifier": "BP3R370",
-      "Weight": "3.22%",
-      "Market Value": "1,503,968.24",
-      "Shares Held": "288,900.00",
-      "Asset Category": "Equity",
-      "Price": "5.205843682935272"
-    },
-    {
-      "Name": "EVE ENERGY CO LTD-A",
-      "Ticker": "300014 C2",
-      "Identifier": "BD5C7G6",
-      "Weight": "3.18%",
-      "Market Value": "1,482,561.54",
-      "Shares Held": "197,000.00",
-      "Asset Category": "Equity",
-      "Price": "7.525693096446701"
-    },
-    {
-      "Name": "WESTERN MINING CO -A",
-      "Ticker": "601168 C1",
-      "Identifier": "BP3R7X4",
-      "Weight": "2.88%",
-      "Market Value": "1,343,019.84",
-      "Shares Held": "258,800.00",
-      "Asset Category": "Equity",
-      "Price": "5.189412055641422"
-    },
-    {
-      "Name": "PLS GROUP LTD",
-      "Ticker": "PLS AU",
-      "Identifier": "B2368L5",
-      "Weight": "2.69%",
-      "Market Value": "1,256,656.42",
-      "Shares Held": "535,537.00",
-      "Asset Category": "Equity",
-      "Price": "2.34653519738132"
-    },
-    {
-      "Name": "ALBEMARLE CORP",
-      "Ticker": "ALB",
-      "Identifier": "2046853",
-      "Weight": "2.60%",
-      "Market Value": "1,211,377.47",
-      "Shares Held": "12,297.00",
-      "Asset Category": "Equity",
-      "Price": "98.50999999999999"
-    },
-    {
-      "Name": "ZHEJIANG HUAYOU COBALT CO -A",
-      "Ticker": "603799 C1",
-      "Identifier": "BFF5BV2",
-      "Weight": "2.59%",
-      "Market Value": "1,207,652.50",
-      "Shares Held": "234,130.00",
-      "Asset Category": "Equity",
-      "Price": "5.15804254046897"
-    },
-    {
-      "Name": "SIBANYE STILLWATER LTD",
-      "Ticker": "SSW SJ",
-      "Identifier": "BL0L913",
-      "Weight": "2.56%",
-      "Market Value": "1,194,783.35",
-      "Shares Held": "485,170.00",
-      "Asset Category": "Equity",
-      "Price": "2.462607642681947"
-    },
-    {
-      "Name": "LYNAS RARE EARTHS LIMITED",
-      "Ticker": "LYC AU",
-      "Identifier": "6121176",
-      "Weight": "2.54%",
-      "Market Value": "1,187,093.85",
-      "Shares Held": "141,835.00",
-      "Asset Category": "Equity",
-      "Price": "8.369541015969261"
-    },
-    {
-      "Name": "HEXCEL CORP",
-      "Ticker": "HXL",
-      "Identifier": "2416779",
-      "Weight": "2.34%",
-      "Market Value": "1,091,182.75",
-      "Shares Held": "12,845.00",
-      "Asset Category": "Equity",
-      "Price": "84.95"
-    },
-    {
-      "Name": "MP MATERIALS CORP",
-      "Ticker": "MP",
-      "Identifier": "BN15Y35",
-      "Weight": "2.29%",
-      "Market Value": "1,067,913.44",
-      "Shares Held": "24,629.00",
-      "Asset Category": "Equity",
-      "Price": "43.36"
-    },
-    {
-      "Name": "NORTHAM PLATINUM HOLDINGS LT",
-      "Ticker": "NPH SJ",
-      "Identifier": "BMZ1NS0",
-      "Weight": "1.98%",
-      "Market Value": "924,409.42",
-      "Shares Held": "62,663.00",
-      "Asset Category": "Equity",
-      "Price": "14.75207730239535"
-    },
-    {
-      "Name": "CHINA RARE EARTH RESOURCES-A",
-      "Ticker": "000831 C2",
-      "Identifier": "BFY8HG9",
-      "Weight": "1.89%",
-      "Market Value": "880,175.97",
-      "Shares Held": "122,500.00",
-      "Asset Category": "Equity",
-      "Price": "7.185109959183674"
-    },
-    {
-      "Name": "SHENGHE RESOURCES HOLDINGS-A",
-      "Ticker": "600392 C1",
-      "Identifier": "BFYQHK7",
-      "Weight": "1.82%",
-      "Market Value": "851,816.44",
-      "Shares Held": "297,000.00",
-      "Asset Category": "Equity",
-      "Price": "2.868068821548821"
-    },
-    {
-      "Name": "MMG LTD",
-      "Ticker": "1208 HK",
-      "Identifier": "6728793",
-      "Weight": "1.58%",
-      "Market Value": "738,951.54",
-      "Shares Held": "681,020.00",
-      "Asset Category": "Equity",
-      "Price": "1.085065842412851"
-    },
-    {
-      "Name": "GEM CO LTD-A",
-      "Ticker": "002340 C2",
-      "Identifier": "BD5CFW8",
-      "Weight": "1.55%",
-      "Market Value": "721,910.85",
-      "Shares Held": "782,000.00",
-      "Asset Category": "Equity",
-      "Price": "0.9231596547314578"
-    },
-    {
-      "Name": "SINOMINE RESOURCE GROUP CO-A",
-      "Ticker": "002738 C2",
-      "Identifier": "BNR4M32",
-      "Weight": "1.53%",
-      "Market Value": "714,869.89",
-      "Shares Held": "123,500.00",
-      "Asset Category": "Equity",
-      "Price": "5.78842016194332"
-    },
-    {
-      "Name": "YUNNAN CHIHONG ZINC & GERM-A",
-      "Ticker": "600497 C1",
-      "Identifier": "BP3R701",
-      "Weight": "1.39%",
-      "Market Value": "650,337.00",
-      "Shares Held": "508,600.00",
-      "Asset Category": "Equity",
-      "Price": "1.27868069209595"
-    },
-    {
-      "Name": "WEIHAI GUANGWEI COMPOSITES-A",
-      "Ticker": "300699 C2",
-      "Identifier": "BFY8H81",
-      "Weight": "1.04%",
-      "Market Value": "483,719.29",
-      "Shares Held": "141,160.00",
-      "Asset Category": "Equity",
-      "Price": "3.426744757721734"
-    },
-    {
-      "Name": "TOKAI CARBON CO LTD",
-      "Ticker": "5301 JP",
-      "Identifier": "6894003",
-      "Weight": "0.99%",
-      "Market Value": "461,685.47",
-      "Shares Held": "32,170.00",
-      "Asset Category": "Equity",
-      "Price": "14.35142897109108"
-    },
-    {
-      "Name": "IGO LTD",
-      "Ticker": "IGO AU",
-      "Identifier": "6439567",
-      "Weight": "0.90%",
-      "Market Value": "417,827.62",
-      "Shares Held": "101,879.00",
-      "Asset Category": "Equity",
-      "Price": "4.101214381766606"
+      "Price": "0.7072409654620616"
     }
   ]
 }

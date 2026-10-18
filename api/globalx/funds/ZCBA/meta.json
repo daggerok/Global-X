@@ -11,51 +11,51 @@
   "terGross": "0.07%",
   "terGrossValue": 0.07,
   "nav": {
-    "display": "$47.67",
-    "value": 47.67,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-0.02 (-0.04%)",
+    "display": "$47.94",
+    "value": 47.94,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$0.07 (0.15%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 47.67,
+  "navValue": 47.94,
   "aum": {
-    "display": "$953.49K",
-    "value": 953492.93,
-    "asOfDate": "Oct 12 2026",
-    "source": "Global X fund page Fund Details \"Net Assets\""
+    "display": "$958.75K",
+    "value": 958750.43,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 953492.93,
-  "asOfDate": "Oct 12 2026",
+  "aumValue": 958750.43,
+  "asOfDate": "Oct 16 2026",
   "inceptionDate": "Jan 06 2026",
   "inceptionDateFundPage": "Jan 06 2026",
   "exchange": "NYSE Arca",
-  "closePrice": "$47.72",
-  "closePriceValue": 47.72,
+  "closePrice": "$47.98",
+  "closePriceValue": 47.98,
   "premiumDiscount": {
-    "display": "0.08%",
-    "value": 0.0849,
-    "derivedValue": 0.1,
-    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+    "display": "0.10%",
+    "value": 0.0988,
+    "derivedValue": 0.08,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": 0.0849,
-  "premiumDiscountDerivedValue": 0.1,
-  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "premiumDiscountValue": 0.0988,
+  "premiumDiscountDerivedValue": 0.08,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.08%",
     "value": 0.08,
-    "asOfDate": "Oct 12 2026",
-    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.08,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 953492.93,
+  "totalNetAssets": 958750.43,
   "sharesOutstanding": {
     "display": "20,000",
     "value": 20000,
-    "asOfDate": "Oct 12 2026"
+    "asOfDate": "Oct 16 2026"
   },
-  "netAssetsAsOf": "Oct 12 2026",
-  "secYieldAsOf": "Oct 12 2026",
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
   "distributions": {
     "frequency": "Monthly",
     "paymentsPerYear": 12,
@@ -137,10 +137,10 @@
   "returns": {
     "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
     "monthEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Sep 30 2026",
+      "raw": "2026-09-30",
+      "mo1": -1.73,
+      "mo3": -2.07,
       "mo6": null,
       "ytd": null,
       "yr1": null,
@@ -148,16 +148,16 @@
       "yr5": null,
       "yr10": null,
       "sinceInception": null,
-      "sinceInceptionCumulative": null,
+      "sinceInceptionCumulative": -2.22,
       "market": {},
       "benchmarkName": null,
       "benchmark": {}
     },
     "quarterEnd": {
-      "asOfDate": "",
-      "raw": "",
-      "mo1": null,
-      "mo3": null,
+      "asOfDate": "Sep 30 2026",
+      "raw": "2026-09-30",
+      "mo1": -1.73,
+      "mo3": -2.07,
       "mo6": null,
       "ytd": null,
       "yr1": null,
@@ -165,7 +165,7 @@
       "yr5": null,
       "yr10": null,
       "sinceInception": null,
-      "sinceInceptionCumulative": null,
+      "sinceInceptionCumulative": -2.22,
       "market": {}
     }
   },
@@ -179,17 +179,17 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "distributionYield": null,
-    "distributionYieldText": "—",
+    "dividendYield": 4.21,
+    "dividendYieldText": "4.21%",
+    "distributionYield": 4.21,
+    "distributionYieldText": "4.21%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 4.91,
     "secYieldText": "4.91%",
-    "dividendYieldBasis": null,
+    "dividendYieldBasis": "official-distribution-rate",
     "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
-    "performanceAsOf": null
+    "performanceAsOf": "2026-09-30"
   },
   "distributionFrequency": "01 - Monthly",
   "providerCategory": "Fixed Income / Core",
@@ -199,9 +199,9 @@
     ],
     "pageSize": 250,
     "totalRows": 6,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
-    "source": "https://assets.globalxetfs.com/funds/holdings/zcba_full-holdings_20261012.csv",
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/zcba_full-holdings_20261016.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -209,9 +209,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 191,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
+    "totalRows": 195,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/ZCBA",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -221,7 +221,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/zcba/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/zcba_full-holdings_20261012.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/zcba_full-holdings_20261016.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ZCBA",
@@ -233,8 +233,8 @@
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
-    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
     "cusip": "37966B109",
@@ -251,18 +251,18 @@
     "managementFeeValue": 0.07
   },
   "marketPrice": {
-    "display": "$47.72",
-    "value": 47.72,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-0.02 (-0.04%)",
+    "display": "$47.98",
+    "value": 47.98,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$0.07 (0.15%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.21,
+    "dividendYieldText": "4.21%",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": null,
-    "distributionRateText": "—",
+    "distributionRate": 4.21,
+    "distributionRateText": "4.21%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 4.91,
@@ -270,16 +270,16 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 12 2026"
+    "distributionInfoAsOfDate": "Oct 16 2026"
   },
   "navIndex": null,
   "documents": {
-    "prospectus": null,
-    "summaryProspectus": null,
-    "sai": null,
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/7yjmjvWqg0sIYrFxgaeKw3/5b4010e1731ac75e6df2332fe72c766c/Statutory-Prospectus_Non-Thematic.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-zcba-prospectus-regulatory-summary-pr-046698ca9c/59588c8cf9a3f381ab77fecbf476864c/Summary-Prospectus_ZCBA.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/1fEbYPATbPenSf8wBLsYF8/6b44fa06e55c1dfc246e08b204370711/Statement-of-Additional-Information_Passively-Managed-April.pdf",
     "annualReport": null,
-    "semiAnnualReport": null,
-    "fiscalQ1Holdings": null,
+    "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-zcba-prospectus-regulatory-semi-annua-a159061ebe/ca865ca75a921f2abe57ace13b2e7ddd/Semi-Annual-Shareholder-Report.pdf",
+    "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-zcba-prospectus-regulatory-q1-complet-f282054138/a5881d7588cbf305c7ce95d7820fb9c4/Q1-Complete-Holdings.pdf",
     "fiscalQ3Holdings": null,
     "taxInfo": null,
     "form8937": null

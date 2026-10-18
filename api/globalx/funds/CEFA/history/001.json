@@ -2,7 +2,7 @@
   "ticker": "CEFA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1583,
+  "totalRows": 1587,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-16",
+      "Close": "39.92",
+      "Adj Close": "39.92",
+      "Volume": "81200"
+    },
+    {
+      "Date": "2026-10-15",
+      "Close": "39.95",
+      "Adj Close": "39.95",
+      "Volume": "7500"
+    },
+    {
+      "Date": "2026-10-14",
+      "Close": "39.58",
+      "Adj Close": "39.58",
+      "Volume": "1200"
+    },
+    {
+      "Date": "2026-10-13",
+      "Close": "40.00",
+      "Adj Close": "40.00",
+      "Volume": "39400"
+    },
     {
       "Date": "2026-10-12",
       "Close": "39.83",
@@ -5985,30 +6009,6 @@
       "Close": "22.92",
       "Adj Close": "20.65",
       "Volume": "100"
-    },
-    {
-      "Date": "2022-10-20",
-      "Close": "22.56",
-      "Adj Close": "20.32",
-      "Volume": "3000"
-    },
-    {
-      "Date": "2022-10-19",
-      "Close": "22.58",
-      "Adj Close": "20.35",
-      "Volume": "2800"
-    },
-    {
-      "Date": "2022-10-18",
-      "Close": "22.83",
-      "Adj Close": "20.57",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-17",
-      "Close": "22.71",
-      "Adj Close": "20.46",
-      "Volume": "300"
     }
   ]
 }

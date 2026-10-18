@@ -2,7 +2,7 @@
   "ticker": "SIL",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 43,
+  "totalRows": 42,
   "headers": [
     "Name",
     "Ticker",
@@ -14,102 +14,402 @@
   ],
   "rows": [
     {
+      "Name": "WHEATON PRECIOUS METALS CORP",
+      "Ticker": "WPM",
+      "Identifier": "BDG1S92",
+      "Weight": "24.56%",
+      "Market Value": "1,022,956,385.16",
+      "Shares Held": "7,623,762.00",
+      "Asset Category": "Equity",
+      "Price": "134.18"
+    },
+    {
+      "Name": "PAN AMERICAN SILVER CORP",
+      "Ticker": "PAAS",
+      "Identifier": "2703396",
+      "Weight": "11.47%",
+      "Market Value": "477,815,623.23",
+      "Shares Held": "10,807,863.00",
+      "Asset Category": "Equity",
+      "Price": "44.21"
+    },
+    {
+      "Name": "COEUR MINING INC",
+      "Ticker": "CDE",
+      "Identifier": "2208136",
+      "Weight": "9.80%",
+      "Market Value": "408,086,208.53",
+      "Shares Held": "26,379,199.00",
+      "Asset Category": "Equity",
+      "Price": "15.47"
+    },
+    {
+      "Name": "INDUSTRIAS PENOLES SAB DE CV",
+      "Ticker": "PE&OLES* MM",
+      "Identifier": "2448200",
+      "Weight": "4.93%",
+      "Market Value": "205,304,310.28",
+      "Shares Held": "4,209,479.00",
+      "Asset Category": "Equity",
+      "Price": "48.77190509324313"
+    },
+    {
+      "Name": "HECLA MINING CO",
+      "Ticker": "HL",
+      "Identifier": "2418601",
+      "Weight": "4.48%",
+      "Market Value": "186,480,072.00",
+      "Shares Held": "12,188,240.00",
+      "Asset Category": "Equity",
+      "Price": "15.3"
+    },
+    {
+      "Name": "OR ROYALTIES INC",
+      "Ticker": "OR CN",
+      "Identifier": "BPJJWP1",
+      "Weight": "4.43%",
+      "Market Value": "184,748,501.55",
+      "Shares Held": "5,197,476.00",
+      "Asset Category": "Equity",
+      "Price": "35.54581138037001"
+    },
+    {
+      "Name": "SSR MINING INC",
+      "Ticker": "SSRM",
+      "Identifier": "BF7MQ72",
+      "Weight": "4.27%",
+      "Market Value": "177,877,313.25",
+      "Shares Held": "5,584,845.00",
+      "Asset Category": "Equity",
+      "Price": "31.85"
+    },
+    {
+      "Name": "FIRST MAJESTIC SILVER CORP",
+      "Ticker": "AG CN",
+      "Identifier": "2833583",
+      "Weight": "4.25%",
+      "Market Value": "176,994,828.21",
+      "Shares Held": "11,068,635.00",
+      "Asset Category": "Equity",
+      "Price": "15.99066445049457"
+    },
+    {
+      "Name": "FRESNILLO PLC",
+      "Ticker": "FRES LN",
+      "Identifier": "B2QPKJ1",
+      "Weight": "4.18%",
+      "Market Value": "174,111,776.77",
+      "Shares Held": "4,795,598.00",
+      "Asset Category": "Equity",
+      "Price": "36.30658298923304"
+    },
+    {
+      "Name": "CIA DE MINAS BUENAVENTUR-ADR",
+      "Ticker": "BVN",
+      "Identifier": "2210476",
+      "Weight": "3.75%",
+      "Market Value": "155,986,550.46",
+      "Shares Held": "5,127,763.00",
+      "Asset Category": "Equity",
+      "Price": "30.42"
+    },
+    {
+      "Name": "DISCOVERY MINING LTD",
+      "Ticker": "DSV CN",
+      "Identifier": "BSBFLD9",
+      "Weight": "3.52%",
+      "Market Value": "146,830,777.87",
+      "Shares Held": "17,882,117.00",
+      "Asset Category": "Equity",
+      "Price": "8.211039994313873"
+    },
+    {
+      "Name": "AYA GOLD & SILVER INC",
+      "Ticker": "AYA CN",
+      "Identifier": "BK94091",
+      "Weight": "2.43%",
+      "Market Value": "101,394,751.53",
+      "Shares Held": "3,808,903.00",
+      "Asset Category": "Equity",
+      "Price": "26.62046041340512"
+    },
+    {
+      "Name": "KOREA ZINC CO LTD",
+      "Ticker": "010130 KS",
+      "Identifier": "6495428",
+      "Weight": "2.19%",
+      "Market Value": "91,200,262.60",
+      "Shares Held": "128,495.00",
+      "Asset Category": "Equity",
+      "Price": "709.7572870539709"
+    },
+    {
+      "Name": "FORTUNA MINING CORP",
+      "Ticker": "FVI CN",
+      "Identifier": "BPLQGB4",
+      "Weight": "2.18%",
+      "Market Value": "90,713,864.85",
+      "Shares Held": "8,466,328.00",
+      "Asset Category": "Equity",
+      "Price": "10.71466459248921"
+    },
+    {
+      "Name": "ENDEAVOUR SILVER CORP",
+      "Ticker": "EXK",
+      "Identifier": "B018TM7",
+      "Weight": "1.62%",
+      "Market Value": "67,685,996.80",
+      "Shares Held": "8,214,320.00",
+      "Asset Category": "Equity",
+      "Price": "8.24"
+    },
+    {
+      "Name": "TRIPLE FLAG PRECIOUS MET",
+      "Ticker": "TFPM CN",
+      "Identifier": "BJ171P4",
+      "Weight": "1.43%",
+      "Market Value": "59,428,426.62",
+      "Shares Held": "1,935,702.00",
+      "Asset Category": "Equity",
+      "Price": "30.70122705871048"
+    },
+    {
+      "Name": "HOCHSCHILD MINING PLC",
+      "Ticker": "HOC LN",
+      "Identifier": "B1FW502",
+      "Weight": "1.42%",
+      "Market Value": "59,073,204.23",
+      "Shares Held": "8,557,045.00",
+      "Asset Category": "Equity",
+      "Price": "6.90345840532567"
+    },
+    {
+      "Name": "SILVERCORP METALS INC",
+      "Ticker": "SVM CN",
+      "Identifier": "2784261",
+      "Weight": "1.38%",
+      "Market Value": "57,495,891.54",
+      "Shares Held": "5,882,512.00",
+      "Asset Category": "Equity",
+      "Price": "9.774037271832169"
+    },
+    {
+      "Name": "ABRASILVER RESOURCE CORP",
+      "Ticker": "ABRA CN",
+      "Identifier": "BR4XSQ5",
+      "Weight": "0.76%",
+      "Market Value": "31,440,306.73",
+      "Shares Held": "3,916,742.00",
+      "Asset Category": "Equity",
+      "Price": "8.027157961897924"
+    },
+    {
+      "Name": "GOGOLD RESOURCES INC",
+      "Ticker": "GGD CN",
+      "Identifier": "B60BNP0",
+      "Weight": "0.74%",
+      "Market Value": "30,686,638.81",
+      "Shares Held": "11,328,818.00",
+      "Asset Category": "Equity",
+      "Price": "2.708723788306953"
+    },
+    {
+      "Name": "VIZSLA SILVER CORP",
+      "Ticker": "VZLA CN",
+      "Identifier": "BS84LB7",
+      "Weight": "0.72%",
+      "Market Value": "29,875,947.88",
+      "Shares Held": "9,203,289.00",
+      "Asset Category": "Equity",
+      "Price": "3.246225113652304"
+    },
+    {
+      "Name": "AVINO SILVER & GOLD MINES",
+      "Ticker": "ASM CN",
+      "Identifier": "2474261",
+      "Weight": "0.56%",
+      "Market Value": "23,415,823.47",
+      "Shares Held": "4,385,272.00",
+      "Asset Category": "Equity",
+      "Price": "5.339651330635819"
+    },
+    {
+      "Name": "MCEWEN INC",
+      "Ticker": "MUX",
+      "Identifier": "BQGD8H7",
+      "Weight": "0.55%",
+      "Market Value": "23,000,354.72",
+      "Shares Held": "1,416,278.00",
+      "Asset Category": "Equity",
+      "Price": "16.24"
+    },
+    {
+      "Name": "AMERICAS GOLD AND SILVER CORP",
+      "Ticker": "USA CN",
+      "Identifier": "BVMJP62",
+      "Weight": "0.55%",
+      "Market Value": "22,845,920.76",
+      "Shares Held": "6,049,249.00",
+      "Asset Category": "Equity",
+      "Price": "3.776654054081755"
+    },
+    {
+      "Name": "KINGSGATE CONSOLIDATED LTD",
+      "Ticker": "KCN AU",
+      "Identifier": "6492731",
+      "Weight": "0.53%",
+      "Market Value": "22,077,700.21",
+      "Shares Held": "6,700,512.00",
+      "Asset Category": "Equity",
+      "Price": "3.294927344358163"
+    },
+    {
+      "Name": "HYCROFT MINING HOLDING CO-A",
+      "Ticker": "HYMC",
+      "Identifier": "BS70KX1",
+      "Weight": "0.52%",
+      "Market Value": "21,518,714.58",
+      "Shares Held": "1,253,274.00",
+      "Asset Category": "Equity",
+      "Price": "17.17"
+    },
+    {
+      "Name": "SANTACRUZ SILVER MINING LTD",
+      "Ticker": "SCZ CN",
+      "Identifier": "BVV5T70",
+      "Weight": "0.48%",
+      "Market Value": "19,884,024.12",
+      "Shares Held": "2,380,611.00",
+      "Asset Category": "Equity",
+      "Price": "8.352487710087873"
+    },
+    {
+      "Name": "HIGHLANDER SILVER CORP",
+      "Ticker": "HSLV CN",
+      "Identifier": "BRBR2F7",
+      "Weight": "0.46%",
+      "Market Value": "19,269,460.20",
+      "Shares Held": "3,832,075.00",
+      "Asset Category": "Equity",
+      "Price": "5.028466353085469"
+    },
+    {
+      "Name": "NEW PACIFIC METALS CORP",
+      "Ticker": "NUAG CN",
+      "Identifier": "BMW5909",
+      "Weight": "0.43%",
+      "Market Value": "17,909,679.97",
+      "Shares Held": "2,737,664.00",
+      "Asset Category": "Equity",
+      "Price": "6.541956927511922"
+    },
+    {
+      "Name": "INTEGRA RESOURCES CORP",
+      "Ticker": "ITR CN",
+      "Identifier": "BRK42Y8",
+      "Weight": "0.30%",
+      "Market Value": "12,613,159.79",
+      "Shares Held": "5,184,412.00",
+      "Asset Category": "Equity",
+      "Price": "2.432900739756022"
+    },
+    {
+      "Name": "SILVER TIGER METALS INC",
+      "Ticker": "SLVR CN",
+      "Identifier": "BLFLCL9",
+      "Weight": "0.20%",
+      "Market Value": "8,336,320.82",
+      "Shares Held": "15,111,719.00",
+      "Asset Category": "Equity",
+      "Price": "0.5516460979720441"
+    },
+    {
       "Name": "ANDEAN PRECIOUS METALS CORP",
       "Ticker": "APM CN",
       "Identifier": "BNDS6V4",
       "Weight": "0.15%",
-      "Market Value": "6,502,291.01",
+      "Market Value": "6,255,619.68",
       "Shares Held": "1,554,505.00",
       "Asset Category": "Equity",
-      "Price": "4.182869151273235"
+      "Price": "4.024187558097272"
     },
     {
       "Name": "UNICO SILVER LTD",
       "Ticker": "USL AU",
       "Identifier": "BQXR4J6",
       "Weight": "0.14%",
-      "Market Value": "6,200,275.32",
+      "Market Value": "5,876,481.96",
       "Shares Held": "13,390,357.00",
       "Asset Category": "Equity",
-      "Price": "0.4630403296939731"
+      "Price": "0.4388592447535193"
     },
     {
       "Name": "ANDEAN SILVER LTD",
       "Ticker": "ASL AU",
       "Identifier": "BSFS736",
       "Weight": "0.13%",
-      "Market Value": "5,722,335.55",
+      "Market Value": "5,461,395.62",
       "Shares Held": "5,041,834.00",
       "Asset Category": "Equity",
-      "Price": "1.134971034349802"
+      "Price": "1.083216071770709"
     },
     {
       "Name": "BLACKROCK SILVER CORP",
       "Ticker": "BRC CN",
       "Identifier": "BNGHFP5",
       "Weight": "0.12%",
-      "Market Value": "5,243,282.40",
+      "Market Value": "5,174,988.76",
       "Shares Held": "8,314,972.00",
       "Asset Category": "Equity",
-      "Price": "0.6305832899978497"
+      "Price": "0.6223699562668401"
     },
     {
       "Name": "GUANAJUATO SILVER CO LTD",
       "Ticker": "GSVR CN",
       "Identifier": "BMDM727",
       "Weight": "0.12%",
-      "Market Value": "5,217,024.70",
+      "Market Value": "4,915,024.29",
       "Shares Held": "19,855,996.00",
       "Asset Category": "Equity",
-      "Price": "0.2627430374180172"
+      "Price": "0.2475335052444612"
     },
     {
       "Name": "SILVER MINES LTD",
       "Ticker": "SVL AU",
       "Identifier": "B1HMJH5",
-      "Weight": "0.12%",
-      "Market Value": "5,010,297.60",
+      "Weight": "0.11%",
+      "Market Value": "4,611,464.59",
       "Shares Held": "57,564,712.00",
       "Asset Category": "Equity",
-      "Price": "0.08703765598618819"
+      "Price": "0.08010922715986141"
     },
     {
       "Name": "SOTKAMO SILVER AB",
       "Ticker": "SOSI SS",
       "Identifier": "7788354",
-      "Weight": "0.07%",
-      "Market Value": "3,231,479.71",
+      "Weight": "0.08%",
+      "Market Value": "3,181,189.77",
       "Shares Held": "7,550,100.00",
       "Asset Category": "Equity",
-      "Price": "0.4280048886769712"
+      "Price": "0.4213440576946001"
     },
     {
       "Name": "AFTERMATH SILVER LTD",
       "Ticker": "AAG CN",
       "Identifier": "BDFS6H8",
-      "Weight": "0.07%",
-      "Market Value": "2,895,921.32",
+      "Weight": "0.06%",
+      "Market Value": "2,526,800.31",
       "Shares Held": "7,005,430.00",
       "Asset Category": "Equity",
-      "Price": "0.4133823790973573"
-    },
-    {
-      "Name": "KOREAN WON",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.01%",
-      "Market Value": "563,499.03",
-      "Shares Held": "752,327,561.00",
-      "Asset Category": "Equity",
-      "Price": "0.0007490075589560915"
+      "Price": "0.3606916791688733"
     },
     {
       "Name": "CASH",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.01%",
-      "Market Value": "513,101.99",
-      "Shares Held": "513,101.99",
+      "Weight": "0.03%",
+      "Market Value": "1,425,093.19",
+      "Shares Held": "1,425,093.19",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
@@ -118,330 +418,20 @@
       "Ticker": "",
       "Identifier": "",
       "Weight": "0.00%",
-      "Market Value": "-11,342.04",
-      "Shares Held": "-16,187.93",
+      "Market Value": "-11,448.74",
+      "Shares Held": "-16,187.94",
       "Asset Category": "Equity",
-      "Price": "0.700647951899965"
+      "Price": "0.7072388457085954"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "-0.01%",
-      "Market Value": "-568,029.28",
-      "Shares Held": "-568,029.28",
+      "Weight": "-0.03%",
+      "Market Value": "-1,196,961.34",
+      "Shares Held": "-1,196,961.34",
       "Asset Category": "Cash",
       "Price": "1.0"
-    },
-    {
-      "Name": "WHEATON PRECIOUS METALS CORP",
-      "Ticker": "WPM",
-      "Identifier": "BDG1S92",
-      "Weight": "24.20%",
-      "Market Value": "1,052,917,769.82",
-      "Shares Held": "7,623,762.00",
-      "Asset Category": "Equity",
-      "Price": "138.11"
-    },
-    {
-      "Name": "PAN AMERICAN SILVER CORP",
-      "Ticker": "PAAS",
-      "Identifier": "2703396",
-      "Weight": "11.36%",
-      "Market Value": "494,027,417.73",
-      "Shares Held": "10,807,863.00",
-      "Asset Category": "Equity",
-      "Price": "45.71"
-    },
-    {
-      "Name": "COEUR MINING INC",
-      "Ticker": "CDE",
-      "Identifier": "2208136",
-      "Weight": "10.16%",
-      "Market Value": "442,115,375.24",
-      "Shares Held": "26,379,199.00",
-      "Asset Category": "Equity",
-      "Price": "16.76"
-    },
-    {
-      "Name": "INDUSTRIAS PENOLES SAB DE CV",
-      "Ticker": "PE&OLES* MM",
-      "Identifier": "2448200",
-      "Weight": "4.96%",
-      "Market Value": "215,890,927.57",
-      "Shares Held": "4,209,479.00",
-      "Asset Category": "Equity",
-      "Price": "51.28685226128934"
-    },
-    {
-      "Name": "HECLA MINING CO",
-      "Ticker": "HL",
-      "Identifier": "2418601",
-      "Weight": "4.72%",
-      "Market Value": "205,249,961.60",
-      "Shares Held": "12,188,240.00",
-      "Asset Category": "Equity",
-      "Price": "16.84"
-    },
-    {
-      "Name": "SSR MINING INC",
-      "Ticker": "SSRM",
-      "Identifier": "BF7MQ72",
-      "Weight": "4.55%",
-      "Market Value": "197,926,906.80",
-      "Shares Held": "5,584,845.00",
-      "Asset Category": "Equity",
-      "Price": "35.44"
-    },
-    {
-      "Name": "FIRST MAJESTIC SILVER CORP",
-      "Ticker": "AG CN",
-      "Identifier": "2833583",
-      "Weight": "4.39%",
-      "Market Value": "191,088,573.41",
-      "Shares Held": "11,068,635.00",
-      "Asset Category": "Equity",
-      "Price": "17.26396917144707"
-    },
-    {
-      "Name": "OR ROYALTIES INC",
-      "Ticker": "OR CN",
-      "Identifier": "BPJJWP1",
-      "Weight": "4.16%",
-      "Market Value": "180,878,355.52",
-      "Shares Held": "5,197,476.00",
-      "Asset Category": "Equity",
-      "Price": "34.80119110121913"
-    },
-    {
-      "Name": "FRESNILLO PLC",
-      "Ticker": "FRES LN",
-      "Identifier": "B2QPKJ1",
-      "Weight": "4.02%",
-      "Market Value": "174,717,342.46",
-      "Shares Held": "4,795,598.00",
-      "Asset Category": "Equity",
-      "Price": "36.43285831297786"
-    },
-    {
-      "Name": "CIA DE MINAS BUENAVENTUR-ADR",
-      "Ticker": "BVN",
-      "Identifier": "2210476",
-      "Weight": "3.81%",
-      "Market Value": "165,626,744.90",
-      "Shares Held": "5,127,763.00",
-      "Asset Category": "Equity",
-      "Price": "32.3"
-    },
-    {
-      "Name": "DISCOVERY MINING LTD",
-      "Ticker": "DSV CN",
-      "Identifier": "BSBFLD9",
-      "Weight": "3.37%",
-      "Market Value": "146,715,424.82",
-      "Shares Held": "17,882,117.00",
-      "Asset Category": "Equity",
-      "Price": "8.204589245221916"
-    },
-    {
-      "Name": "AYA GOLD & SILVER INC",
-      "Ticker": "AYA CN",
-      "Identifier": "BK94091",
-      "Weight": "2.39%",
-      "Market Value": "104,159,386.30",
-      "Shares Held": "3,808,903.00",
-      "Asset Category": "Equity",
-      "Price": "27.3462953244018"
-    },
-    {
-      "Name": "KOREA ZINC CO LTD",
-      "Ticker": "010130 KS",
-      "Identifier": "6495428",
-      "Weight": "2.23%",
-      "Market Value": "97,109,920.61",
-      "Shares Held": "128,495.00",
-      "Asset Category": "Equity",
-      "Price": "755.7486330985641"
-    },
-    {
-      "Name": "FORTUNA MINING CORP",
-      "Ticker": "FVI CN",
-      "Identifier": "BPLQGB4",
-      "Weight": "2.12%",
-      "Market Value": "92,359,941.82",
-      "Shares Held": "8,466,328.00",
-      "Asset Category": "Equity",
-      "Price": "10.90909090930566"
-    },
-    {
-      "Name": "ENDEAVOUR SILVER CORP",
-      "Ticker": "EXK",
-      "Identifier": "B018TM7",
-      "Weight": "1.61%",
-      "Market Value": "70,150,292.80",
-      "Shares Held": "8,214,320.00",
-      "Asset Category": "Equity",
-      "Price": "8.54"
-    },
-    {
-      "Name": "SILVERCORP METALS INC",
-      "Ticker": "SVM CN",
-      "Identifier": "2784261",
-      "Weight": "1.41%",
-      "Market Value": "61,535,052.84",
-      "Shares Held": "5,882,512.00",
-      "Asset Category": "Equity",
-      "Price": "10.46067612611755"
-    },
-    {
-      "Name": "TRIPLE FLAG PRECIOUS MET",
-      "Ticker": "TFPM CN",
-      "Identifier": "BJ171P4",
-      "Weight": "1.39%",
-      "Market Value": "60,271,569.02",
-      "Shares Held": "1,935,702.00",
-      "Asset Category": "Equity",
-      "Price": "31.13680154279946"
-    },
-    {
-      "Name": "HOCHSCHILD MINING PLC",
-      "Ticker": "HOC LN",
-      "Identifier": "B1FW502",
-      "Weight": "1.36%",
-      "Market Value": "59,218,108.79",
-      "Shares Held": "8,557,045.00",
-      "Asset Category": "Equity",
-      "Price": "6.920392353902544"
-    },
-    {
-      "Name": "VIZSLA SILVER CORP",
-      "Ticker": "VZLA CN",
-      "Identifier": "BS84LB7",
-      "Weight": "0.75%",
-      "Market Value": "32,692,713.42",
-      "Shares Held": "9,203,289.00",
-      "Asset Category": "Equity",
-      "Price": "3.552285864325243"
-    },
-    {
-      "Name": "ABRASILVER RESOURCE CORP",
-      "Ticker": "ABRA CN",
-      "Identifier": "BR4XSQ5",
-      "Weight": "0.73%",
-      "Market Value": "31,833,390.93",
-      "Shares Held": "3,916,742.00",
-      "Asset Category": "Equity",
-      "Price": "8.127517954973802"
-    },
-    {
-      "Name": "GOGOLD RESOURCES INC",
-      "Ticker": "GGD CN",
-      "Identifier": "B60BNP0",
-      "Weight": "0.72%",
-      "Market Value": "31,273,808.32",
-      "Shares Held": "11,328,818.00",
-      "Asset Category": "Equity",
-      "Price": "2.760553512290514"
-    },
-    {
-      "Name": "AMERICAS GOLD AND SILVER CORP",
-      "Ticker": "USA CN",
-      "Identifier": "BVMJP62",
-      "Weight": "0.61%",
-      "Market Value": "26,362,815.75",
-      "Shares Held": "6,049,249.00",
-      "Asset Category": "Equity",
-      "Price": "4.35803117874632"
-    },
-    {
-      "Name": "MCEWEN INC",
-      "Ticker": "MUX",
-      "Identifier": "BQGD8H7",
-      "Weight": "0.57%",
-      "Market Value": "24,799,027.78",
-      "Shares Held": "1,416,278.00",
-      "Asset Category": "Equity",
-      "Price": "17.51"
-    },
-    {
-      "Name": "AVINO SILVER & GOLD MINES",
-      "Ticker": "ASM CN",
-      "Identifier": "2474261",
-      "Weight": "0.56%",
-      "Market Value": "24,242,281.37",
-      "Shares Held": "4,385,272.00",
-      "Asset Category": "Equity",
-      "Price": "5.528113505844107"
-    },
-    {
-      "Name": "HYCROFT MINING HOLDING CO-A",
-      "Ticker": "HYMC",
-      "Identifier": "BS70KX1",
-      "Weight": "0.53%",
-      "Market Value": "22,897,315.98",
-      "Shares Held": "1,253,274.00",
-      "Asset Category": "Equity",
-      "Price": "18.27"
-    },
-    {
-      "Name": "KINGSGATE CONSOLIDATED LTD",
-      "Ticker": "KCN AU",
-      "Identifier": "6492731",
-      "Weight": "0.51%",
-      "Market Value": "22,254,792.11",
-      "Shares Held": "6,700,512.00",
-      "Asset Category": "Equity",
-      "Price": "3.32135695152848"
-    },
-    {
-      "Name": "SANTACRUZ SILVER MINING LTD",
-      "Ticker": "SCZ CN",
-      "Identifier": "BVV5T70",
-      "Weight": "0.50%",
-      "Market Value": "21,733,656.56",
-      "Shares Held": "2,380,611.00",
-      "Asset Category": "Equity",
-      "Price": "9.129444734986102"
-    },
-    {
-      "Name": "HIGHLANDER SILVER CORP",
-      "Ticker": "HSLV CN",
-      "Identifier": "BRBR2F7",
-      "Weight": "0.45%",
-      "Market Value": "19,546,334.56",
-      "Shares Held": "3,832,075.00",
-      "Asset Category": "Equity",
-      "Price": "5.100718164440936"
-    },
-    {
-      "Name": "NEW PACIFIC METALS CORP",
-      "Ticker": "NUAG CN",
-      "Identifier": "BMW5909",
-      "Weight": "0.41%",
-      "Market Value": "17,915,418.99",
-      "Shares Held": "2,737,664.00",
-      "Asset Category": "Equity",
-      "Price": "6.544053247586263"
-    },
-    {
-      "Name": "INTEGRA RESOURCES CORP",
-      "Ticker": "ITR CN",
-      "Identifier": "BRK42Y8",
-      "Weight": "0.31%",
-      "Market Value": "13,476,383.62",
-      "Shares Held": "5,184,412.00",
-      "Asset Category": "Equity",
-      "Price": "2.599404449337746"
-    },
-    {
-      "Name": "SILVER TIGER METALS INC",
-      "Ticker": "SLVR CN",
-      "Identifier": "BLFLCL9",
-      "Weight": "0.21%",
-      "Market Value": "8,999,797.62",
-      "Shares Held": "15,111,719.00",
-      "Asset Category": "Equity",
-      "Price": "0.595550884714042"
     }
   ]
 }

@@ -1,0 +1,224 @@
+{
+  "ticker": "ACHP",
+  "name": "Asia Semiconductor ETF",
+  "category": "Equity / Thematic",
+  "fundPage": "https://www.globalxetfs.com/funds/achp/",
+  "dataFile": "./funds/ACHP/meta.json",
+  "cusip": "37966B737",
+  "isin": "US37966B7376",
+  "ter": "0.50%",
+  "terValue": 0.5,
+  "terGross": "0.50%",
+  "terGrossValue": 0.5,
+  "nav": {
+    "display": "$21.44",
+    "value": 21.44,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$0.03 (0.14%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 21.44,
+  "aum": {
+    "display": "$428.87K",
+    "value": 428873.17,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
+  },
+  "aumValue": 428873.17,
+  "asOfDate": "Oct 16 2026",
+  "inceptionDate": "Oct 13 2026",
+  "inceptionDateFundPage": "Oct 13 2026",
+  "exchange": "Nasdaq",
+  "closePrice": "$20.95",
+  "closePriceValue": 20.95,
+  "premiumDiscount": {
+    "display": "-2.30%",
+    "value": -2.304,
+    "derivedValue": -2.29,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
+  },
+  "premiumDiscountValue": -2.304,
+  "premiumDiscountDerivedValue": -2.29,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
+  "bidAskSpread": {
+    "display": null,
+    "value": null,
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
+  },
+  "bidAskSpreadValue": null,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 428873.17,
+  "sharesOutstanding": {
+    "display": "20,000",
+    "value": 20000,
+    "asOfDate": "Oct 16 2026"
+  },
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
+  "distributions": {
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 2,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "dividendYieldBasis": null,
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
+    "performanceAsOf": null
+  },
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Equity / Thematic",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 30,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/achp_full-holdings_20261016.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 2,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACHP",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/achp/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/achp_full-holdings_20261016.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ACHP",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
+  },
+  "identifiers": {
+    "cusip": "37966B737",
+    "isin": "US37966B7376",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.50%",
+    "value": 0.5,
+    "gross": 0.5,
+    "managementFeeDisplay": "0.50%",
+    "managementFeeValue": 0.5
+  },
+  "marketPrice": {
+    "display": "$20.95",
+    "value": 20.95,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.97 (-4.43%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Oct 16 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/3NFlO5x0WmPnbgllno8dr5/10e77b84659441b84c044813f74083a1/Statutory-Prospectus_ACHP.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/19MCwX7lo6a5ox81PrJ8iV/3a08eb262c0f563334944a106f652d00/Summary-Prospectus_ACHP.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/6hrsILqcXEIMqMY5kDqCbo/6a1bd7ddc4e864e8969b9114adbeff3a/Statement-of-Additional-Information_ACHP.pdf",
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

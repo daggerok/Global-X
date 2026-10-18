@@ -2,7 +2,7 @@
   "ticker": "COLO",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 30,
+  "totalRows": 31,
   "headers": [
     "Name",
     "Ticker",
@@ -14,304 +14,314 @@
   ],
   "rows": [
     {
+      "Name": "GRUPO CIBEST SA",
+      "Ticker": "PFCIBEST CB",
+      "Identifier": "BTPR2M4",
+      "Weight": "15.65%",
+      "Market Value": "30,770,615.95",
+      "Shares Held": "1,259,483.00",
+      "Asset Category": "Equity",
+      "Price": "24.43114829656296"
+    },
+    {
+      "Name": "ECOPETROL SA",
+      "Ticker": "ECOPETL CB",
+      "Identifier": "B2473N4",
+      "Weight": "7.83%",
+      "Market Value": "15,390,520.17",
+      "Shares Held": "17,281,947.00",
+      "Asset Category": "Equity",
+      "Price": "0.890554760409808"
+    },
+    {
+      "Name": "INTERCONEXION ELECTRICA SA",
+      "Ticker": "ISA CB",
+      "Identifier": "2205706",
+      "Weight": "7.57%",
+      "Market Value": "14,877,198.02",
+      "Shares Held": "1,627,350.00",
+      "Asset Category": "Equity",
+      "Price": "9.141978074784157"
+    },
+    {
+      "Name": "GRUPO CIBEST SA",
+      "Ticker": "CIBEST CB",
+      "Identifier": "BP6QXH4",
+      "Weight": "6.56%",
+      "Market Value": "12,896,477.84",
+      "Shares Held": "454,454.00",
+      "Asset Category": "Equity",
+      "Price": "28.37796089373182"
+    },
+    {
+      "Name": "GRUPO ENERGIA BOGOTA SA ESP",
+      "Ticker": "GEB CB",
+      "Identifier": "B3V65K2",
+      "Weight": "4.58%",
+      "Market Value": "9,000,978.82",
+      "Shares Held": "9,517,575.00",
+      "Asset Category": "Equity",
+      "Price": "0.9457218692786766"
+    },
+    {
+      "Name": "CEMENTOS ARGOS SA",
+      "Ticker": "CEMARGOS CB",
+      "Identifier": "B89Z692",
+      "Weight": "4.45%",
+      "Market Value": "8,749,828.82",
+      "Shares Held": "2,413,568.00",
+      "Asset Category": "Equity",
+      "Price": "3.625267164629296"
+    },
+    {
+      "Name": "DAVIVIENDA GROUP SA",
+      "Ticker": "PFDAVIGR CB",
+      "Identifier": "BTZ9W53",
+      "Weight": "4.42%",
+      "Market Value": "8,686,136.35",
+      "Shares Held": "715,688.00",
+      "Asset Category": "Equity",
+      "Price": "12.13676399492516"
+    },
+    {
+      "Name": "GRUPO DE INVERSIONES SURA",
+      "Ticker": "PFGRUPSU CB",
+      "Identifier": "B4ZRC96",
+      "Weight": "4.13%",
+      "Market Value": "8,124,628.30",
+      "Shares Held": "430,983.00",
+      "Asset Category": "Equity",
+      "Price": "18.85138926593392"
+    },
+    {
+      "Name": "GRUPO DE INV SURAMERICANA",
+      "Ticker": "GRUPOSUR CB",
+      "Identifier": "BMSK715",
+      "Weight": "3.91%",
+      "Market Value": "7,691,802.57",
+      "Shares Held": "344,922.00",
+      "Asset Category": "Equity",
+      "Price": "22.3001216796841"
+    },
+    {
+      "Name": "PFAVAL",
+      "Ticker": "PFAVAL CB",
+      "Identifier": "B66Y3W0",
+      "Weight": "3.38%",
+      "Market Value": "6,656,107.56",
+      "Shares Held": "27,174,223.00",
+      "Asset Category": "Equity",
+      "Price": "0.2449419643019784"
+    },
+    {
+      "Name": "TECNOGLASS HOLDINGS INC",
+      "Ticker": "TGLS",
+      "Identifier": "BXD1FS3",
+      "Weight": "3.11%",
+      "Market Value": "6,117,248.70",
+      "Shares Held": "161,065.00",
+      "Asset Category": "Equity",
+      "Price": "37.98"
+    },
+    {
+      "Name": "GRUPO ARGOS SA",
+      "Ticker": "GRUPOARG CB",
+      "Identifier": "B8SGSP6",
+      "Weight": "2.92%",
+      "Market Value": "5,745,704.63",
+      "Shares Held": "872,077.00",
+      "Asset Category": "Equity",
+      "Price": "6.588529028973359"
+    },
+    {
+      "Name": "CORP FINANCIERA COLOMBIANA",
+      "Ticker": "CORFICOL CB",
+      "Identifier": "B000C92",
+      "Weight": "2.83%",
+      "Market Value": "5,559,018.66",
+      "Shares Held": "843,742.00",
+      "Asset Category": "Equity",
+      "Price": "6.588529029015979"
+    },
+    {
+      "Name": "MINEROS SA",
+      "Ticker": "MINEROS CB",
+      "Identifier": "2593490",
+      "Weight": "2.81%",
+      "Market Value": "5,536,398.12",
+      "Shares Held": "813,830.00",
+      "Asset Category": "Equity",
+      "Price": "6.80289264342676"
+    },
+    {
+      "Name": "CELSIA SA",
+      "Ticker": "CELSIA CB",
+      "Identifier": "BJ0K875",
+      "Weight": "2.65%",
+      "Market Value": "5,218,137.53",
+      "Shares Held": "3,499,550.00",
+      "Asset Category": "Equity",
+      "Price": "1.491088148476233"
+    },
+    {
+      "Name": "PATRIMONIO AUTONOMO ESTRAT",
+      "Ticker": "PEI CB",
+      "Identifier": "BMYSGK5",
+      "Weight": "2.58%",
+      "Market Value": "5,083,698.16",
+      "Shares Held": "241,341.00",
+      "Asset Category": "Equity",
+      "Price": "21.06437845206575"
+    },
+    {
+      "Name": "EMPRESAS COPEC SA",
+      "Ticker": "COPEC CI",
+      "Identifier": "2196026",
+      "Weight": "2.44%",
+      "Market Value": "4,791,806.76",
+      "Shares Held": "696,921.00",
+      "Asset Category": "Equity",
+      "Price": "6.875681404348556"
+    },
+    {
+      "Name": "GEOPARK LTD",
+      "Ticker": "GPRK",
+      "Identifier": "B244PB7",
+      "Weight": "2.43%",
+      "Market Value": "4,783,368.24",
+      "Shares Held": "406,749.00",
+      "Asset Category": "Equity",
+      "Price": "11.76"
+    },
+    {
+      "Name": "PAREX RESOURCES INC",
+      "Ticker": "PXT CN",
+      "Identifier": "B575D14",
+      "Weight": "2.39%",
+      "Market Value": "4,694,763.24",
+      "Shares Held": "230,172.00",
+      "Asset Category": "Equity",
+      "Price": "20.39676085709817"
+    },
+    {
+      "Name": "MILLICOM INTL CELLULAR S.A.",
+      "Ticker": "TIGO",
+      "Identifier": "2418128",
+      "Weight": "2.24%",
+      "Market Value": "4,406,263.51",
+      "Shares Held": "53,174.00",
+      "Asset Category": "Equity",
+      "Price": "82.865"
+    },
+    {
+      "Name": "ARIS MINING CORP",
+      "Ticker": "ARIS CN",
+      "Identifier": "BQKRCQ2",
+      "Weight": "2.14%",
+      "Market Value": "4,200,600.76",
+      "Shares Held": "240,658.00",
+      "Asset Category": "Equity",
+      "Price": "17.45464833913687"
+    },
+    {
+      "Name": "BROOKFIELD RENEWABLE CORP",
+      "Ticker": "BEPC CN",
+      "Identifier": "BSQLLY3",
+      "Weight": "2.00%",
+      "Market Value": "3,937,839.34",
+      "Shares Held": "137,242.00",
+      "Asset Category": "Equity",
+      "Price": "28.69266944521356"
+    },
+    {
+      "Name": "BANCO DE BOGOTA",
+      "Ticker": "BOGOTA CB",
+      "Identifier": "2075039",
+      "Weight": "1.89%",
+      "Market Value": "3,721,361.86",
+      "Shares Held": "310,817.00",
+      "Asset Category": "Equity",
+      "Price": "11.97283887303461"
+    },
+    {
+      "Name": "ORGANIZACION TERPEL SA",
+      "Ticker": "TERPEL CB",
+      "Identifier": "BQ26XM0",
+      "Weight": "1.84%",
+      "Market Value": "3,623,522.95",
+      "Shares Held": "603,701.00",
+      "Asset Category": "Equity",
+      "Price": "6.002181460689978"
+    },
+    {
+      "Name": "ALMACENES EXITO SA",
+      "Ticker": "EXITO CB",
+      "Identifier": "BN99343",
+      "Weight": "1.80%",
+      "Market Value": "3,540,057.65",
+      "Shares Held": "2,259,497.00",
+      "Asset Category": "Equity",
+      "Price": "1.566745895214731"
+    },
+    {
+      "Name": "GRUPO ARGOS SA/COLOMBIA",
+      "Ticker": "PFGRUPOA CB",
+      "Identifier": "B8JBYR4",
+      "Weight": "1.30%",
+      "Market Value": "2,548,065.47",
+      "Shares Held": "496,494.00",
+      "Asset Category": "Equity",
+      "Price": "5.132117346836014"
+    },
+    {
       "Name": "COLOMBIAN PESO",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.02%",
-      "Market Value": "44,005.80",
-      "Shares Held": "140,336,704.76",
+      "Weight": "0.68%",
+      "Market Value": "1,334,858.61",
+      "Shares Held": "4,234,411,794.33",
       "Asset Category": "Equity",
-      "Price": "0.0003135729891567393"
+      "Price": "0.0003152406225080458"
+    },
+    {
+      "Name": "CASH",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.16%",
+      "Market Value": "307,972.52",
+      "Shares Held": "307,972.52",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "CHILEAN PESO",
+      "Ticker": "",
+      "Identifier": "",
+      "Weight": "0.02%",
+      "Market Value": "35,671.90",
+      "Shares Held": "35,009,476.00",
+      "Asset Category": "Equity",
+      "Price": "0.00101892127719935"
     },
     {
       "Name": "CANADIAN DOLLAR",
       "Ticker": "",
       "Identifier": "",
       "Weight": "-0.00%",
-      "Market Value": "-2,139.06",
+      "Market Value": "-2,159.18",
       "Shares Held": "-3,052.97",
       "Asset Category": "Equity",
-      "Price": "0.7006488763400885"
-    },
-    {
-      "Name": "CASH",
-      "Ticker": "",
-      "Identifier": "",
-      "Weight": "0.35%",
-      "Market Value": "705,241.64",
-      "Shares Held": "705,241.64",
-      "Asset Category": "Cash",
-      "Price": "1.0"
+      "Price": "0.7072391802081252"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "",
       "Identifier": "",
-      "Weight": "0.18%",
-      "Market Value": "359,956.70",
-      "Shares Held": "359,956.70",
+      "Weight": "-0.70%",
+      "Market Value": "-1,375,825.98",
+      "Shares Held": "-1,375,825.98",
       "Asset Category": "Cash",
       "Price": "1.0"
-    },
-    {
-      "Name": "GRUPO CIBEST SA",
-      "Ticker": "PFCIBEST CB",
-      "Identifier": "BTPR2M4",
-      "Weight": "15.24%",
-      "Market Value": "30,296,304.70",
-      "Shares Held": "1,281,725.00",
-      "Asset Category": "Equity",
-      "Price": "23.63713331642903"
-    },
-    {
-      "Name": "INTERCONEXION ELECTRICA SA",
-      "Ticker": "ISA CB",
-      "Identifier": "2205706",
-      "Weight": "7.62%",
-      "Market Value": "15,143,083.66",
-      "Shares Held": "1,656,106.00",
-      "Asset Category": "Equity",
-      "Price": "9.143788899985871"
-    },
-    {
-      "Name": "ECOPETROL SA",
-      "Ticker": "ECOPETL CB",
-      "Identifier": "B2473N4",
-      "Weight": "7.53%",
-      "Market Value": "14,965,024.63",
-      "Shares Held": "17,675,634.00",
-      "Asset Category": "Equity",
-      "Price": "0.8466471205502445"
-    },
-    {
-      "Name": "GRUPO CIBEST SA",
-      "Ticker": "CIBEST CB",
-      "Identifier": "BP6QXH4",
-      "Weight": "6.42%",
-      "Market Value": "12,761,372.82",
-      "Shares Held": "462,462.00",
-      "Asset Category": "Equity",
-      "Price": "27.59442466624285"
-    },
-    {
-      "Name": "DAVIVIENDA GROUP SA",
-      "Ticker": "PFDAVIGR CB",
-      "Identifier": "BTZ9W53",
-      "Weight": "4.67%",
-      "Market Value": "9,277,161.94",
-      "Shares Held": "728,344.00",
-      "Asset Category": "Equity",
-      "Price": "12.73733557220215"
-    },
-    {
-      "Name": "GRUPO ENERGIA BOGOTA SA ESP",
-      "Ticker": "GEB CB",
-      "Identifier": "B3V65K2",
-      "Weight": "4.62%",
-      "Market Value": "9,187,845.55",
-      "Shares Held": "9,734,385.00",
-      "Asset Category": "Equity",
-      "Price": "0.9438547530224046"
-    },
-    {
-      "Name": "CEMENTOS ARGOS SA",
-      "Ticker": "CEMARGOS CB",
-      "Identifier": "B89Z692",
-      "Weight": "4.48%",
-      "Market Value": "8,901,808.85",
-      "Shares Held": "2,468,549.00",
-      "Asset Category": "Equity",
-      "Price": "3.606089589471386"
-    },
-    {
-      "Name": "GRUPO DE INVERSIONES SURA",
-      "Ticker": "PFGRUPSU CB",
-      "Identifier": "B4ZRC96",
-      "Weight": "4.05%",
-      "Market Value": "8,059,624.65",
-      "Shares Held": "438,610.00",
-      "Asset Category": "Equity",
-      "Price": "18.3753782403502"
-    },
-    {
-      "Name": "GRUPO DE INV SURAMERICANA",
-      "Ticker": "GRUPOSUR CB",
-      "Identifier": "BMSK715",
-      "Weight": "3.73%",
-      "Market Value": "7,427,148.36",
-      "Shares Held": "351,001.00",
-      "Asset Category": "Equity",
-      "Price": "21.15990655297279"
-    },
-    {
-      "Name": "PFAVAL",
-      "Ticker": "PFAVAL CB",
-      "Identifier": "B66Y3W0",
-      "Weight": "3.49%",
-      "Market Value": "6,938,631.44",
-      "Shares Held": "27,763,667.00",
-      "Asset Category": "Equity",
-      "Price": "0.249917687025997"
-    },
-    {
-      "Name": "TECNOGLASS HOLDINGS INC",
-      "Ticker": "TGLS",
-      "Identifier": "BXD1FS3",
-      "Weight": "3.14%",
-      "Market Value": "6,249,157.15",
-      "Shares Held": "164,755.00",
-      "Asset Category": "Equity",
-      "Price": "37.93"
-    },
-    {
-      "Name": "MINEROS SA",
-      "Ticker": "MINEROS CB",
-      "Identifier": "2593490",
-      "Weight": "2.98%",
-      "Market Value": "5,920,858.55",
-      "Shares Held": "828,188.00",
-      "Asset Category": "Equity",
-      "Price": "7.149172108265273"
-    },
-    {
-      "Name": "GRUPO ARGOS SA",
-      "Ticker": "GRUPOARG CB",
-      "Identifier": "B8SGSP6",
-      "Weight": "2.94%",
-      "Market Value": "5,838,797.45",
-      "Shares Held": "886,677.00",
-      "Asset Category": "Equity",
-      "Price": "6.585033163147347"
-    },
-    {
-      "Name": "CORP FINANCIERA COLOMBIANA",
-      "Ticker": "CORFICOL CB",
-      "Identifier": "B000C92",
-      "Weight": "2.81%",
-      "Market Value": "5,596,952.96",
-      "Shares Held": "852,386.00",
-      "Asset Category": "Equity",
-      "Price": "6.56621877881617"
-    },
-    {
-      "Name": "CELSIA SA",
-      "Ticker": "CELSIA CB",
-      "Identifier": "BJ0K875",
-      "Weight": "2.70%",
-      "Market Value": "5,365,194.10",
-      "Shares Held": "3,557,146.00",
-      "Asset Category": "Equity",
-      "Price": "1.508286165369653"
-    },
-    {
-      "Name": "PATRIMONIO AUTONOMO ESTRAT",
-      "Ticker": "PEI CB",
-      "Identifier": "BMYSGK5",
-      "Weight": "2.55%",
-      "Market Value": "5,065,764.56",
-      "Shares Held": "246,867.00",
-      "Asset Category": "Equity",
-      "Price": "20.52021760705157"
-    },
-    {
-      "Name": "GEOPARK LTD",
-      "Ticker": "GPRK",
-      "Identifier": "B244PB7",
-      "Weight": "2.48%",
-      "Market Value": "4,941,664.20",
-      "Shares Held": "415,965.00",
-      "Asset Category": "Equity",
-      "Price": "11.88"
-    },
-    {
-      "Name": "EMPRESAS COPEC SA",
-      "Ticker": "COPEC CI",
-      "Identifier": "2196026",
-      "Weight": "2.48%",
-      "Market Value": "4,929,267.19",
-      "Shares Held": "706,085.00",
-      "Asset Category": "Equity",
-      "Price": "6.981124354716501"
-    },
-    {
-      "Name": "PAREX RESOURCES INC",
-      "Ticker": "PXT CN",
-      "Identifier": "B575D14",
-      "Weight": "2.26%",
-      "Market Value": "4,491,476.17",
-      "Shares Held": "235,419.00",
-      "Asset Category": "Equity",
-      "Price": "19.07864773021719"
-    },
-    {
-      "Name": "MILLICOM INTL CELLULAR S.A.",
-      "Ticker": "TIGO",
-      "Identifier": "2418128",
-      "Weight": "2.19%",
-      "Market Value": "4,365,626.40",
-      "Shares Held": "54,380.00",
-      "Asset Category": "Equity",
-      "Price": "80.28"
-    },
-    {
-      "Name": "ARIS MINING CORP",
-      "Ticker": "ARIS CN",
-      "Identifier": "BQKRCQ2",
-      "Weight": "2.13%",
-      "Market Value": "4,229,852.85",
-      "Shares Held": "243,823.00",
-      "Asset Category": "Equity",
-      "Price": "17.34804694388962"
-    },
-    {
-      "Name": "BROOKFIELD RENEWABLE CORP",
-      "Ticker": "BEPC CN",
-      "Identifier": "BSQLLY3",
-      "Weight": "2.09%",
-      "Market Value": "4,163,539.95",
-      "Shares Held": "140,383.00",
-      "Asset Category": "Equity",
-      "Price": "29.65843406965231"
-    },
-    {
-      "Name": "BANCO DE BOGOTA",
-      "Ticker": "BOGOTA CB",
-      "Identifier": "2075039",
-      "Weight": "1.91%",
-      "Market Value": "3,791,954.35",
-      "Shares Held": "315,079.00",
-      "Asset Category": "Equity",
-      "Price": "12.03493203291873"
-    },
-    {
-      "Name": "ORGANIZACION TERPEL SA",
-      "Ticker": "TERPEL CB",
-      "Identifier": "BQ26XM0",
-      "Weight": "1.82%",
-      "Market Value": "3,611,656.44",
-      "Shares Held": "604,924.00",
-      "Asset Category": "Equity",
-      "Price": "5.970430070554317"
-    },
-    {
-      "Name": "ALMACENES EXITO SA",
-      "Ticker": "EXITO CB",
-      "Identifier": "BN99343",
-      "Weight": "1.81%",
-      "Market Value": "3,604,954.68",
-      "Shares Held": "2,272,012.00",
-      "Asset Category": "Equity",
-      "Price": "1.586679418946731"
-    },
-    {
-      "Name": "GRUPO ARGOS SA/COLOMBIA",
-      "Ticker": "PFGRUPOA CB",
-      "Identifier": "B8JBYR4",
-      "Weight": "1.31%",
-      "Market Value": "2,614,280.27",
-      "Shares Held": "505,277.00",
-      "Asset Category": "Equity",
-      "Price": "5.17395462290981"
     }
   ]
 }

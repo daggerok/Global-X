@@ -11,51 +11,51 @@
   "terGross": "0.50%",
   "terGrossValue": 0.5,
   "nav": {
-    "display": "$63.58",
-    "value": 63.58,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-1.01 (-1.56%)",
+    "display": "$55.57",
+    "value": 55.57,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-4.83 (-8.00%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 63.58,
+  "navValue": 55.57,
   "aum": {
-    "display": "$268.06M",
-    "value": 268063877.41,
-    "asOfDate": "Oct 12 2026",
-    "source": "Global X fund page Fund Details \"Net Assets\""
+    "display": "$234.27M",
+    "value": 234265292.95,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 268063877.41,
-  "asOfDate": "Oct 12 2026",
+  "aumValue": 234265292.95,
+  "asOfDate": "Oct 16 2026",
   "inceptionDate": "Jul 12 2021",
   "inceptionDateFundPage": "Jul 12 2021",
   "exchange": "Nasdaq",
-  "closePrice": "$63.57",
-  "closePriceValue": 63.57,
+  "closePrice": "$55.65",
+  "closePriceValue": 55.65,
   "premiumDiscount": {
-    "display": "-0.02%",
-    "value": -0.023,
-    "derivedValue": -0.02,
-    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+    "display": "0.15%",
+    "value": 0.1483,
+    "derivedValue": 0.14,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": -0.023,
-  "premiumDiscountDerivedValue": -0.02,
-  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "premiumDiscountValue": 0.1483,
+  "premiumDiscountDerivedValue": 0.14,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
-    "display": "0.49%",
-    "value": 0.49,
-    "asOfDate": "Oct 12 2026",
-    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+    "display": "0.48%",
+    "value": 0.48,
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
-  "bidAskSpreadValue": 0.49,
+  "bidAskSpreadValue": 0.48,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 268063877.41,
+  "totalNetAssets": 234265292.95,
   "sharesOutstanding": {
     "display": "4,215,860",
     "value": 4215860,
-    "asOfDate": "Oct 12 2026"
+    "asOfDate": "Oct 16 2026"
   },
-  "netAssetsAsOf": "Oct 12 2026",
-  "secYieldAsOf": "Oct 12 2026",
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
   "distributions": {
     "frequency": "Semi-Annually",
     "paymentsPerYear": 2,
@@ -150,17 +150,17 @@
       "sinceInception": -3.68,
       "sinceInceptionCumulative": -17.78,
       "market": {
-        "FIVE_YEAR": -2.74,
         "ONE_YEAR": -17.52,
-        "SINCE_INCEPTION": -3.66,
-        "THREE_YEAR": 49.51
+        "THREE_YEAR": 49.51,
+        "FIVE_YEAR": -2.74,
+        "SINCE_INCEPTION": -3.66
       },
       "benchmarkName": "Index",
       "benchmark": {
-        "FIVE_YEAR": -3.48,
         "ONE_YEAR": -17.48,
-        "SINCE_INCEPTION": -4.36,
-        "THREE_YEAR": 49.49
+        "THREE_YEAR": 49.49,
+        "FIVE_YEAR": -3.48,
+        "SINCE_INCEPTION": -4.36
       }
     },
     "quarterEnd": {
@@ -177,10 +177,10 @@
       "sinceInception": -3.68,
       "sinceInceptionCumulative": -17.78,
       "market": {
-        "FIVE_YEAR": -2.74,
         "ONE_YEAR": -17.52,
-        "SINCE_INCEPTION": -3.66,
-        "THREE_YEAR": 49.51
+        "THREE_YEAR": 49.51,
+        "FIVE_YEAR": -2.74,
+        "SINCE_INCEPTION": -3.66
       }
     }
   },
@@ -194,15 +194,15 @@
     "cagr5y": -2.73,
     "cagr10y": null,
     "siAnn": -3.68,
-    "dividendYield": 1.92,
-    "dividendYieldText": "1.92%",
-    "distributionYield": 1.92,
-    "distributionYieldText": "1.92%",
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": -0.48,
     "secYieldText": "-0.48%",
-    "dividendYieldBasis": "official-distribution-rate",
+    "dividendYieldBasis": null,
     "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
     "performanceAsOf": "2026-09-30"
   },
@@ -214,9 +214,9 @@
     ],
     "pageSize": 250,
     "totalRows": 35,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
-    "source": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261012.csv",
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261016.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -225,9 +225,9 @@
       "./history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1318,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
+    "totalRows": 1322,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/BKCH",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -237,7 +237,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/bkch/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261012.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261016.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BKCH",
@@ -249,8 +249,8 @@
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
-    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
     "cusip": "37960A735",
@@ -267,18 +267,18 @@
     "managementFeeValue": 0.5
   },
   "marketPrice": {
-    "display": "$63.57",
-    "value": 63.57,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$-1.05 (-1.62%)",
+    "display": "$55.65",
+    "value": 55.65,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-4.79 (-7.93%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": 1.92,
-    "dividendYieldText": "1.92%",
+    "dividendYield": null,
+    "dividendYieldText": "—",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": 1.92,
-    "distributionRateText": "1.92%",
+    "distributionRate": null,
+    "distributionRateText": "—",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": -0.48,
@@ -286,17 +286,17 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 12 2026"
+    "distributionInfoAsOfDate": "Oct 16 2026"
   },
   "navIndex": null,
   "documents": {
-    "prospectus": null,
-    "summaryProspectus": null,
-    "sai": null,
-    "annualReport": null,
-    "semiAnnualReport": null,
-    "fiscalQ1Holdings": null,
-    "fiscalQ3Holdings": null,
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/3lgxX5M4eBMk5RmXnwMNia/6f72cb3836f622de7b0a72aea1a95efa/Statutory-Prospectus_Thematic.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-summary-pr-d8602fcac3/85d315084e63707637e52fcf366689bf/Summary-Prospectus.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/1fEbYPATbPenSf8wBLsYF8/6b44fa06e55c1dfc246e08b204370711/Statement-of-Additional-Information_Passively-Managed-April.pdf",
+    "annualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-annual-sha-7b071221ac/02ce530a232d3c4c4aa662989af6f892/Annual-Shareholder-Report.pdf",
+    "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-semi-annua-9a6dcaeee2/32279fb3787b7e2197556ac59add1f77/Semi-Annual-Shareholder-Report.pdf",
+    "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-q1-complet-4405b87aad/56c485e400fef976f5d2252e53fdc959/Q1-Complete-Holdings.pdf",
+    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-q3-complet-ff191f52ae/09bb6ad6a43058dd06f20ce2cd37a8a0/Q3-Complete-Holdings.pdf",
     "taxInfo": null,
     "form8937": null
   },

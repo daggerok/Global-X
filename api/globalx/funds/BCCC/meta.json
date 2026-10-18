@@ -11,51 +11,51 @@
   "terGross": "0.75%",
   "terGrossValue": 0.75,
   "nav": {
-    "display": "$13.29",
-    "value": 13.29,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$0.08 (0.61%)",
+    "display": "$13.12",
+    "value": 13.12,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.07 (-0.53%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 13.29,
+  "navValue": 13.12,
   "aum": {
-    "display": "$9.57M",
-    "value": 9566430.42,
-    "asOfDate": "Oct 12 2026",
-    "source": "Global X fund page Fund Details \"Net Assets\""
+    "display": "$9.58M",
+    "value": 9575737.28,
+    "asOfDate": "Oct 16 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 9566430.42,
-  "asOfDate": "Oct 12 2026",
+  "aumValue": 9575737.28,
+  "asOfDate": "Oct 16 2026",
   "inceptionDate": "Jun 03 2025",
   "inceptionDateFundPage": "Jun 03 2025",
   "exchange": "Cboe BZX",
-  "closePrice": "$13.30",
-  "closePriceValue": 13.3,
+  "closePrice": "$13.12",
+  "closePriceValue": 13.12,
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.1,
-    "derivedValue": 0.08,
-    "kind": "official (fund page Fund Details \"Premium Discount (%)\")"
+    "display": "0.03%",
+    "value": 0.0263,
+    "derivedValue": 0,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": 0.1,
-  "premiumDiscountDerivedValue": 0.08,
-  "premiumDiscountKind": "official (fund page Fund Details \"Premium Discount (%)\")",
+  "premiumDiscountValue": 0.0263,
+  "premiumDiscountDerivedValue": 0,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.32%",
     "value": 0.32,
-    "asOfDate": "Oct 12 2026",
-    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\")"
+    "asOfDate": "Oct 16 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.32,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 9566430.42,
+  "totalNetAssets": 9575737.28,
   "sharesOutstanding": {
-    "display": "720,000",
-    "value": 720000,
-    "asOfDate": "Oct 12 2026"
+    "display": "730,000",
+    "value": 730000,
+    "asOfDate": "Oct 16 2026"
   },
-  "netAssetsAsOf": "Oct 12 2026",
-  "secYieldAsOf": "Oct 12 2026",
+  "netAssetsAsOf": "Oct 16 2026",
+  "secYieldAsOf": "Oct 16 2026",
   "distributions": {
     "frequency": "Weekly",
     "paymentsPerYear": 52,
@@ -573,7 +573,7 @@
         "ONE_YEAR": -21.94,
         "SINCE_INCEPTION": -11.21
       },
-      "benchmarkName": "Index",
+      "benchmarkName": null,
       "benchmark": {}
     },
     "quarterEnd": {
@@ -605,12 +605,12 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -11.35,
-    "dividendYield": 53.33,
-    "dividendYieldText": "53.33%",
-    "distributionYield": 53.33,
-    "distributionYieldText": "53.33%",
-    "yield12M": null,
-    "yield12MText": "—",
+    "dividendYield": 30.09,
+    "dividendYieldText": "30.09%",
+    "distributionYield": 30.09,
+    "distributionYieldText": "30.09%",
+    "yield12M": 52.67,
+    "yield12MText": "52.67%",
     "secYield": -0.73,
     "secYieldText": "-0.73%",
     "dividendYieldBasis": "official-distribution-rate",
@@ -625,9 +625,9 @@
     ],
     "pageSize": 250,
     "totalRows": 7,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
-    "source": "https://assets.globalxetfs.com/funds/holdings/bccc_full-holdings_20261012.csv",
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
+    "source": "https://assets.globalxetfs.com/funds/holdings/bccc_full-holdings_20261016.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -635,9 +635,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 341,
-    "asOfDate": "Oct 12 2026",
-    "asOf": "2026-10-12",
+    "totalRows": 345,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "2026-10-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/BCCC",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -647,7 +647,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/bccc/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/bccc_full-holdings_20261012.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/bccc_full-holdings_20261016.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BCCC",
@@ -659,15 +659,15 @@
     "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Fund Details \"Premium Discount (%)\")",
-    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread (%)\""
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
     "cusip": "37960A347",
     "isin": "US37960A3471",
     "underlyingExposure": null,
     "indexName": null,
-    "benchmarkIndexName": "Index"
+    "benchmarkIndexName": null
   },
   "expenseRatio": {
     "display": "0.75%",
@@ -677,36 +677,36 @@
     "managementFeeValue": 0.75
   },
   "marketPrice": {
-    "display": "$13.30",
-    "value": 13.3,
-    "asOfDate": "Oct 12 2026",
-    "dailyChangeText": "$0.06 (0.45%)",
+    "display": "$13.12",
+    "value": 13.12,
+    "asOfDate": "Oct 16 2026",
+    "dailyChangeText": "$-0.10 (-0.76%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": 53.33,
-    "dividendYieldText": "53.33%",
+    "dividendYield": 30.09,
+    "dividendYieldText": "30.09%",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": 53.33,
-    "distributionRateText": "53.33%",
-    "yield12M": null,
-    "yield12MText": "—",
+    "distributionRate": 30.09,
+    "distributionRateText": "30.09%",
+    "yield12M": 52.67,
+    "yield12MText": "52.67%",
     "secYield": -0.73,
     "secYieldText": "-0.73%",
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 12 2026"
+    "distributionInfoAsOfDate": "Oct 16 2026"
   },
   "navIndex": null,
   "documents": {
-    "prospectus": null,
-    "summaryProspectus": null,
-    "sai": null,
-    "annualReport": null,
-    "semiAnnualReport": null,
-    "fiscalQ1Holdings": null,
-    "fiscalQ3Holdings": null,
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/6x4Tzx0hFi3CGprzX5a3dD/a8f7a4ae89c2c97eefd09f93e0f6626c/Statutory_Prospectus_Digital_Assets.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bccc-prospectus-regulatory-summary-pr-08233a7576/89b5a691f656db9622fdc555ef865850/Summary-Prospectus_BCCC.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/6FWiAY9aucI5Ejv1MOMPR2/7568d5e579cfe23c580e5a33a22a36a8/Statement_of_Additional_Information_Digital_Assets.pdf",
+    "annualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bccc-prospectus-regulatory-annual-sha-9e613c5b25/7fb4606a581063e8eef3c19b1c7c54ba/Annual-Shareholder-Report_BCCC.pdf",
+    "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bccc-prospectus-regulatory-semi-annua-7b6da6cf1c/880410e77ea4bb07307a3fc1da89b1a6/Semi-Annual-Shareholder-Report.pdf",
+    "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bccc-prospectus-regulatory-q1-complet-eb344dbdf0/ea42c27012f2f0c885e25c04165c86bd/Q1-Complete-Holdings.pdf",
+    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bccc-prospectus-regulatory-q3-complet-8052959163/8d52b46f98683b96941eab4d6fed8f66/Q3-Complete-Holdings_BCCC.pdf",
     "taxInfo": null,
     "form8937": null
   },
