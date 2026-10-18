@@ -165,25 +165,22 @@ function outputCounts(funds: number, holdings: number, history: number): string 
  *
  * Source ladder:
  *   (a) official globalxetfs.com ETF lineup table ..... fund universe, name,
- *       (`#explore-etfs` → `#etf-table`)              category grouping,
+ *       (`/explore`, Flight `rows`)                     category grouping,
  *                                                     declared frequency,
  *                                                     distribution rate,
- *                                                     30-day SEC yield,
- *                                                     management fee,
+ *                                                     gross/net expenses,
  *                                                     net assets, inception
- *   (b) official per-fund page ...................... Fund Details (CUSIP, ISIN,
- *       (`https://www.globalxetfs.com/funds/<ticker>/`)      NAV, market price, daily
- *                                                      change, exchange, net
- *                                                      assets, shares
- *                                                      outstanding), the
- *                                                      Distribution Information
- *                                                      block, the Distribution
- *                                                      History calendar, the
- *                                                      monthly/quarterly
- *                                                      performance tables, the
- *                                                      "Growth of $10,000 at NAV"
- *                                                      daily index and the
- *                                                      document links
+ *   (b) official per-fund page ...................... Fund Details and ETF
+ *       (`https://www.globalxetfs.com/funds/<ticker>/`)      Prices panels (CUSIP,
+ *                                                      ISIN, NAV, market price,
+ *                                                      daily change, exchange,
+ *                                                      shares outstanding), the
+ *                                                      latest premium/discount,
+ *                                                      the distribution metric
+ *                                                      cards and history, the
+ *                                                      month/quarter-end Returns
+ *                                                      tables and the document
+ *                                                      links
  *   (c) official daily full-holdings CSV ............ every position, market
  *       (assets.globalxetfs.com/funds/holdings/)       value, weight, net assets
  *   (d) SEC EDGAR Form N-PORT-P ..................... holdings fallback only
@@ -195,8 +192,7 @@ function outputCounts(funds: number, holdings: number, history: number): string 
  *
  * The globalxetfs.com endpoints are the issuer's own public pages and downloads:
  * the ETF lineup and fund pages carry the headline figures, and each fund page's
- * "Full Holdings (.csv)" link points to the dated assets.globalxetfs.com file
- * that the site hands to a visitor.
+ * holdings download names the as-of day of the dated assets.globalxetfs.com file.
  * Nothing is scraped from a client-rendered widget and no value is invented:
  * a metric Global X does not publish stays `null` and the app renders `—`.
  */
@@ -258,14 +254,19 @@ export function globalxFundPageUrl(ticker: string): string {
   }
 
 /**
- * The official daily holdings download linked by each Global X fund page.
- * The current Next.js page publishes a dated asset URL such as
+ * The official daily holdings download of a Global X fund, a dated asset such as
  * `https://assets.globalxetfs.com/funds/holdings/pave_full-holdings_20260925.csv`.
+ * The page linked it until 2026-10; the redesigned page links no CSV, but its
+ * holdings modal names the as-of day (`PAVE-holdings-Sep-25-2026.csv`), which
+ * is the date of that official file.
  */
 export function globalxHoldingsCsvUrl(ticker: string, html?: string): string {
   if (html) {
     const match = html.match(/https:\/\/assets\.globalxetfs\.com\/funds\/holdings\/[^"'\\ ]+_full-holdings_\d{8}\.csv/i);
     if (match) return match[0];
+    const named = new RegExp(String.raw`\\?"fileName\\?":\\?"${sanitizeTicker(ticker)}-holdings-([A-Za-z]{3})-(\d{1,2})-(\d{4})\.csv`, 'i').exec(html);
+    const day = named ? toIsoDate(`${named[1]} ${named[2]}, ${named[3]}`) : '';
+    if (day) return `https://assets.globalxetfs.com/funds/holdings/${sanitizeTicker(ticker).toLowerCase()}_full-holdings_${day.replace(/-/g, '')}.csv`;
   }
   // The date is supplied by the live fund page. This fallback is only for a
   // page response that omits the link; it is never written as provenance.
@@ -885,82 +886,6 @@ export function decodeHtmlEntities(text: string): string {
     .replace(/&gt;/gi, '>');
 }
 
-function stripTags(fragment: string): string {
-  return decodeHtmlEntities(String(fragment ?? '').replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
-}
-
-export type HtmlTable = string[][];
-
-/**
- * Split one `<tr>` into its cell texts.
- *
- * globalxetfs.com ships several rows with a MISSING `</td>` (the ticker column of
- * XSPI/XQQI/XBCI/NEHI/MLPI/NLSI and the first cell of the Fund Details table),
- * so cells are cut on `<td` opening tags rather than paired with `</td>`: a
- * regex that requires a closing tag silently merges three columns into one.
- */
-export function splitRowCells(rowHtml: string): string[] {
-  const cells: string[] = [];
-  const openings = [...rowHtml.matchAll(/<(td|th)\b[^>]*>/gi)];
-  for (let index = 0; index < openings.length; index += 1) {
-    const start = openings[index].index! + openings[index][0].length;
-    const end = index + 1 < openings.length ? openings[index + 1].index! : rowHtml.length;
-    let chunk = rowHtml.slice(start, end);
-    // Drop a trailing closing tag only; a missing one must not swallow the value.
-    chunk = chunk.replace(/<\/t[dh]>\s*$/i, '');
-    cells.push(stripTags(chunk));
-  }
-  return cells;
-}
-
-export function parseHtmlTables(html: string): HtmlTable[] {
-  const tables: HtmlTable[] = [];
-  const tablePattern = /<table\b[^>]*>([\s\S]*?)<\/table>/gi;
-  for (const match of html.matchAll(tablePattern)) {
-    const rows: HtmlTable = [];
-    const rowPattern = /<tr\b[^>]*>([\s\S]*?)<\/tr>/gi;
-    for (const row of match[1].matchAll(rowPattern)) {
-      cellsLoop: {
-        // An unclosed final row would otherwise be dropped by the row regex, so
-        // each row body is additionally scanned for orphan cells.
-        const cells = splitRowCells(row[1]);
-        if (cells.length) rows.push(cells);
-        break cellsLoop;
-      }
-    }
-    if (rows.length) tables.push(rows);
-  }
-  return tables;
-}
-
-/** The `<table>` whose `id="..."` matches, or null. */
-export function tableById(html: string, id: string): HtmlTable | null {
-  const pattern = new RegExp(`<table\\b[^>]*id=["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*>([\\s\\S]*?)<\\/table>`, 'i');
-  const match = pattern.exec(html);
-  if (!match) return null;
-  const rows: HtmlTable = [];
-  for (const row of match[1].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
-    const cells = splitRowCells(row[1]);
-    if (cells.length) rows.push(cells);
-  }
-  return rows;
-}
-
-/** Raw `<tr>` HTML of the table whose `id` matches, so markup-level hooks (the ticker CSS class) survive. */
-export function tableRowsByIdRaw(html: string, id: string): string[] {
-  const pattern = new RegExp(`<table\\b[^>]*id=["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*>([\\s\\S]*?)<\\/table>`, 'i');
-  const match = pattern.exec(html);
-  if (!match) return [];
-  return [...match[1].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map((row) => row[1]);
-}
-
-/** Text of the first element carrying `id="..."`. */
-export function elementTextById(html: string, id: string): string | null {
-  const pattern = new RegExp(`<([a-z0-9]+)\\b[^>]*id=["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*>([\\s\\S]*?)<\\/\\1>`, 'i');
-  const match = pattern.exec(html);
-  return match ? stripTags(match[2]) : null;
-}
-
 // ---------------------------------------------------------------------------
 // Next.js Flight payload helpers
 // ---------------------------------------------------------------------------
@@ -968,8 +893,7 @@ export function elementTextById(html: string, id: string): string | null {
 /**
  * globalxetfs.com is a Next.js application. The initial HTML contains a
  * skeleton, while the real catalog and fund data are serialized in
- * `self.__next_f.push([1, "..."])` Flight chunks. Decode those chunks first;
- * the fallback HTML table parser remains useful for fixtures and older pages.
+ * `self.__next_f.push([1, "..."])` Flight chunks. Decode those chunks first.
  */
 export function extractNextFlightText(html: string): string {
   const chunks: string[] = [];
@@ -980,76 +904,60 @@ export function extractNextFlightText(html: string): string {
   return chunks.join('');
 }
 
+/**
+ * Split the Flight text into its `<id>:<json>` rows. A text row `<id>:T<hex>,`
+ * carries that many UTF-8 bytes and no line break, so the next row follows it
+ * on the same line (the redesigned fund page puts its Documents list there).
+ */
 function parseNextFlightRecords(flight: string): Map<string, unknown> {
   const records = new Map<string, unknown>();
-  for (const line of flight.split('\n')) {
-    const match = /^([0-9a-z]+):(\{[\s\S]*\}|\[[\s\S]*\])$/.exec(line);
-    if (!match) continue;
-    try { records.set(match[1], JSON.parse(match[2])); } catch { /* data record may be a text chunk */ }
+  const data = new TextEncoder().encode(flight);
+  const decoder = new TextDecoder();
+  let position = 0;
+  while (position < data.length) {
+    const colon = data.indexOf(0x3a, position);
+    let lineEnd = data.indexOf(0x0a, position);
+    if (lineEnd < 0) lineEnd = data.length;
+    const id = colon < 0 || colon > lineEnd ? '' : decoder.decode(data.subarray(position, colon));
+    if (!/^[0-9a-z]+$/.test(id)) { position = lineEnd + 1; continue; }
+    if (data[colon + 1] === 0x54) {
+      const comma = data.indexOf(0x2c, colon);
+      const length = Number.parseInt(decoder.decode(data.subarray(colon + 2, comma)), 16);
+      if (comma > 0 && Number.isFinite(length)) {
+        records.set(id, decoder.decode(data.subarray(comma + 1, comma + 1 + length)));
+        position = comma + 1 + length;
+        continue;
+      }
+    }
+    const body = decoder.decode(data.subarray(colon + 1, lineEnd));
+    if (/^[[{]/.test(body)) {
+      try { records.set(id, JSON.parse(body)); } catch { /* not a JSON row */ }
+    }
+    position = lineEnd + 1;
   }
   return records;
 }
 
-function resolveNextFlightValue(value: unknown, records: Map<string, unknown>, seen = new Set<string>()): unknown {
-  if (typeof value === 'string' && value.startsWith('$') && !value.startsWith('$D')) {
-    const key = value.slice(1);
-    if (key === 'undefined') return undefined;
-    if (records.has(key) && !seen.has(key)) {
-      const nextSeen = new Set(seen); nextSeen.add(key);
-      return resolveNextFlightValue(records.get(key), records, nextSeen);
-    }
-  }
-  if (Array.isArray(value)) return value.map((item) => resolveNextFlightValue(item, records, seen));
-  if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, resolveNextFlightValue(item, records, seen)]));
-  }
-  return value;
-}
-
-function walkNextFlight(value: unknown, visit: (value: Record<string, unknown>) => void): void {
-  if (Array.isArray(value)) for (const item of value) walkNextFlight(item, visit);
-  else if (value && typeof value === 'object') {
+/** Every object anywhere in a Flight value that `match` accepts (a match is not searched further). */
+function collectFlightObjects(value: unknown, match: (object: Record<string, unknown>) => boolean, out: Record<string, unknown>[] = []): Record<string, unknown>[] {
+  if (Array.isArray(value)) {
+    for (const item of value) collectFlightObjects(item, match, out);
+  } else if (value && typeof value === 'object') {
     const object = value as Record<string, unknown>;
-    visit(object);
-    for (const item of Object.values(object)) walkNextFlight(item, visit);
+    if (match(object)) out.push(object);
+    else for (const item of Object.values(object)) collectFlightObjects(item, match, out);
   }
+  return out;
 }
 
-function rscDate(value: unknown): string {
-  const text = cleanText(value);
-  const match = /^\$D(\d{4}-\d{2}-\d{2})/.exec(text);
-  return match ? match[1] : toIsoDate(text);
-}
-
-function findRscObjectAfterKey(text: string, key: string): unknown {
-  const marker = `"${key}":`;
-  let from = 0;
-  while (true) {
-    const at = text.indexOf(marker, from);
-    if (at < 0) return null;
-    let start = at + marker.length;
-    while (/\s/.test(text[start] || '')) start += 1;
-    const opener = text[start];
-    if (opener !== '{' && opener !== '[') { from = start + 1; continue; }
-    let depth = 0; let quoted = false; let escaped = false;
-    for (let index = start; index < text.length; index += 1) {
-      const char = text[index];
-      if (quoted) { if (escaped) escaped = false; else if (char === '\\') escaped = true; else if (char === '"') quoted = false; continue; }
-      if (char === '"') { quoted = true; continue; }
-      if (char === opener) depth += 1;
-      else if ((opener === '{' && char === '}') || (opener === '[' && char === ']')) {
-        depth -= 1;
-        if (depth === 0) {
-          try { return JSON.parse(text.slice(start, index + 1)); } catch { break; }
-        }
-      }
-    }
-    from = start + 1;
-  }
+/** A Flight string value: React escapes a leading `$` as `$$` (`"$$37.44"` is `$37.44`). */
+function flightString(raw: unknown): string {
+  const text = cleanText(raw);
+  return text.startsWith('$$') ? text.slice(1) : text;
 }
 
 // ---------------------------------------------------------------------------
-// globalxetfs.com — ETF lineup (`#explore-etfs`)
+// globalxetfs.com — ETF lineup (`/explore`)
 // ---------------------------------------------------------------------------
 
 export type LineupFund = {
@@ -1093,65 +1001,47 @@ const CATEGORY_CLASS_LABELS: Record<string, string> = {
   'ticker-enhanced-income-treasuries': 'Enhanced Fixed Income',
 };
 
+
 /**
- * Read the server-rendered "Explore Our ETFs" table. Column order is
- * `Ticker | Fund Name | Distribution Frequency | Distribution Rate |
- * 30-Day SEC Yield | Management Fee | Net Assets | Inception Date`, but the rows
- * of the funds whose ticker carries an explicit class are missing their `</td>`
- * separators, which is why `splitRowCells` cuts on opening tags.
+ * Read the "Explore" lineup. Since the 2026-10 redesign it is a client table fed
+ * with camelCase `rows` (`ticker`, `netAssetsValue`, `grossExpensesValue`,
+ * `netExpensesValue`, `distributionRateValue`, `inceptionDateValue` in epoch ms,
+ * `hierarchyNames`, `distributionFrequency`) nested in a Flight element.
  */
 export function parseGlobalXLineup(html: string): LineupFund[] {
-  const flight = extractNextFlightText(html);
-  const records = parseNextFlightRecords(flight);
+  const records = parseNextFlightRecords(extractNextFlightText(html));
   const funds: LineupFund[] = [];
   const seen = new Set<string>();
-  for (const raw of records.values()) {
-    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) continue;
-    const record = raw as Record<string, unknown>;
-    if (!record.ETF_TICKER || !('FUND_DATA' in record) || !('GROSS_EXP' in record)) continue;
-    const ticker = sanitizeTicker(record.ETF_TICKER);
+  const rows = collectFlightObjects([...records.values()], (row) => typeof row.ticker === 'string' && 'netExpensesValue' in row && 'hierarchyNames' in row);
+  for (const row of rows) {
+    const ticker = sanitizeTicker(row.ticker);
     if (!/^[A-Z]{2,6}$/.test(ticker) || seen.has(ticker)) continue;
-    const data = resolveNextFlightValue(record.FUND_DATA, records) as Record<string, unknown> | undefined;
-    const category = [record.THEME, record.SUB_THEME].filter(Boolean).map(cleanText).join(' / ') || 'Other';
-    const gross = numberOrNull(record.GROSS_EXP);
-    const net = numberOrNull(record.NET_EXP);
+    const hierarchy = Array.isArray(row.hierarchyNames) ? row.hierarchyNames.map(cleanText).filter(Boolean) : [];
+    const gross = numberOrNull(row.grossExpensesValue);
+    const net = numberOrNull(row.netExpensesValue);
     const fee = net !== null ? net : gross;
-    const name = cleanText(data?.etf_name || ticker);
-    const inceptionDate = rscDate(data?.inception_date);
+    const netAssets = numberOrNull(row.netAssetsValue);
+    const inception = numberOrNull(row.inceptionDateValue);
+    const distributionRate = numberOrNull(row.distributionRateValue);
     funds.push({
       ticker,
-      name,
-      category,
-      categoryClass: cleanText(record.SUB_THEME),
-      frequency: '',
-      distributionRate: null,
-      distributionRateText: '',
+      name: cleanText(row.name || ticker),
+      category: hierarchy.slice(0, 2).join(' / ') || 'Other',
+      categoryClass: hierarchy[1] || '',
+      frequency: cleanText(row.distributionFrequency),
+      distributionRate,
+      distributionRateText: distributionRate === null ? '' : formatPercentText(distributionRate),
       secYield: null,
       secYieldText: '',
       managementFee: fee,
       grossExpense: gross,
       managementFeeText: fee === null ? '' : formatPercentText(fee),
-      netAssets: numberOrNull(data?.net_assets),
-      netAssetsText: data?.net_assets == null ? '' : formatAumDisplay(Number(data.net_assets)),
-      inceptionDate,
+      netAssets,
+      netAssetsText: netAssets === null ? '' : formatAumDisplay(netAssets),
+      inceptionDate: inception === null ? toIsoDate(row.inceptionDate) : new Date(inception).toISOString().slice(0, 10),
       fundPage: globalxFundPageUrl(ticker),
     });
     seen.add(ticker);
-  }
-  if (funds.length) return funds;
-
-  // Fixture/legacy fallback for a plain server-rendered table.
-  const tables = parseHtmlTables(html);
-  for (const table of tables) {
-    const header = table.find((row) => row[0]?.includes('Ticker') && row[1]?.includes('ETF Name'));
-    if (!header) continue;
-    for (const row of table) {
-      if (row === header || row.length < 6) continue;
-      const ticker = sanitizeTicker(row[0]);
-      if (!/^[A-Z]{2,6}$/.test(ticker) || seen.has(ticker)) continue;
-      funds.push({ ticker, name: cleanText(row[1]), category: 'Other', categoryClass: '', frequency: '', distributionRate: null, distributionRateText: '', secYield: null, secYieldText: '', managementFee: numberOrNull(row[4]), managementFeeText: cleanText(row[4]), netAssets: moneyOrNull(row[3]), netAssetsText: cleanText(row[3]), inceptionDate: '', fundPage: globalxFundPageUrl(ticker) });
-    }
-    if (funds.length) break;
   }
   return funds;
 }
@@ -1191,10 +1081,10 @@ export type GlobalXFundDetails = {
   marketPriceText: string | null;
   marketPriceDailyChangeValue: number | null;
   marketPriceDailyChangePercent: number | null;
-  /** The fund page's own `Premium Discount (%)` row (published, not derived). */
+  /** The fund page's own latest premium/discount in percent (published, not derived). */
   premiumDiscount: number | null;
   premiumDiscountText: string | null;
-  /** `30-Day Median Bid-Ask Spread (%)`, published by the quote tables. */
+  /** `30-Day Median Bid-Ask Spread`, published by the Fund Details panel. */
   bidAskSpread: number | null;
   bidAskSpreadText: string | null;
   /** `Acquired Fund Fees & Expenses` when the panel itemizes it. */
@@ -1202,115 +1092,155 @@ export type GlobalXFundDetails = {
   asOfDate: string;
 };
 
-/** `$12,151,808,030` -> 12151808030; `1,234` -> 1234. */
+const MONEY_SCALES: Record<string, number> = { k: 1e3, thousand: 1e3, m: 1e6, million: 1e6, b: 1e9, billion: 1e9, t: 1e12, trillion: 1e12 };
+
+/** `$12,151,808,030` -> 12151808030; `$90.97 million` -> 90970000; `1,234` -> 1234. */
 export function moneyOrNull(raw: string | null | undefined): number | null {
   if (raw === null || raw === undefined) return null;
   const text = cleanText(raw).replace(/[$,]/g, '');
   if (!text || isMissingCell(text)) return null;
-  const parsed = Number(text);
-  return Number.isFinite(parsed) ? parsed : null;
+  const match = /^(-?\d+(?:\.\d+)?)\s*([a-z]*)$/i.exec(text);
+  if (!match) return null;
+  const scale = match[2] ? MONEY_SCALES[match[2].toLowerCase()] : 1;
+  return scale ? round(Number(match[1]) * scale, 2) : null;
 }
 
+/** One label/value row of a fund page panel (Fund Details, ETF Prices). */
+type FundPageCard = { label: string; values: string[] };
+
+/** Everything the per-fund parsers read, decoded once per call. */
+type GlobalXFundPage = { flight: string; recordMap: Map<string, unknown>; records: unknown[]; cards: FundPageCard[] };
+
 /**
- * The labels the `Fund Details` panel uses. Only these can start a label/value
- * pair, which keeps the reader aligned even when the provider drops a `<tr>`.
+ * Since the 2026-10 redesign the fund page is a Flight tree: the Fund Details and
+ * ETF Prices panels are `li` rows (a label span, then `data-card-value-*` spans),
+ * while returns, distributions, the premium/discount series and the documents
+ * are plain data props of client components.
  */
-const FUND_DETAIL_LABELS = new Set([
-  'fund inception',
-  'fund ticker',
-  'cusip',
-  'isin',
-  'management fee',
-  'acquired fund fees & expenses',
-  'total annual fund operating expenses',
-  'net assets',
-  'shares outstanding',
-  'primary exchange',
-  'underlying exposure',
-  'distribution frequency',
-  'net asset value',
-  'market price',
-  'premium discount (%)',
-  'premium / discount',
-  '30-day median bid-ask spread (%)',
-  'daily change ($)',
-  'daily change (%)',
-]);
+function readFundPage(html: string): GlobalXFundPage {
+  const flight = extractNextFlightText(html);
+  const cards: FundPageCard[] = [];
+  const pattern = /"className":"text-xs font-semibold text-muted-foreground","children":("(?:\\.|[^"\\])*")\}|"data-card-value-(?:\\.|[^"\\])*",\{"className":"[^"]*","children":("(?:\\.|[^"\\])*")\}/g;
+  for (const match of flight.matchAll(pattern)) {
+    const text = flightString(JSON.parse(match[1] ?? match[2]));
+    if (match[1] !== undefined) cards.push({ label: text, values: [] });
+    else cards.at(-1)?.values.push(text);
+  }
+  const recordMap = parseNextFlightRecords(flight);
+  return { flight, recordMap, records: [...recordMap.values()], cards };
+}
+
+/** The text children of a Flight element tree, with lazy `$L<id>` references resolved. */
+function flightChildrenText(node: unknown, records: Map<string, unknown>, depth = 0): string[] {
+  if (depth > 60) return [];
+  if (typeof node === 'string') {
+    const reference = /^\$L?([0-9a-z]+)$/.exec(node);
+    if (reference && records.has(reference[1])) return flightChildrenText(records.get(reference[1]), records, depth + 1);
+    return node.startsWith('$') && !node.startsWith('$$') ? [] : [flightString(node)];
+  }
+  if (!Array.isArray(node)) return [];
+  if (node[0] === '$' && node.length >= 4) {
+    const props = node[3] as Record<string, unknown> | null;
+    return props ? flightChildrenText(props.children, records, depth + 1) : [];
+  }
+  return node.flatMap((item) => flightChildrenText(item, records, depth + 1));
+}
+
+/** Every Flight element (`["$", type, key, props]`) whose key starts with `prefix`. */
+function collectFlightElements(value: unknown, prefix: string, out: unknown[][] = []): unknown[][] {
+  if (Array.isArray(value)) {
+    if (value[0] === '$' && typeof value[2] === 'string' && value[2].startsWith(prefix)) out.push(value);
+    for (const item of value) collectFlightElements(item, prefix, out);
+  } else if (value && typeof value === 'object') {
+    for (const item of Object.values(value)) collectFlightElements(item, prefix, out);
+  }
+  return out;
+}
+
+/** First value of the panel row labelled `label`; null when absent or printed as `-`. */
+function cardValue(page: GlobalXFundPage, label: string): string | null {
+  const value = page.cards.find((card) => card.label.toLowerCase() === label.toLowerCase() && card.values.length)?.values[0];
+  return value === undefined || isMissingCell(value) ? null : value;
+}
+
+/** The `Daily Change` row printed right after `label` in ETF Prices: `$0.10 / 0.27%`. */
+function dailyChangeAfter(page: GlobalXFundPage, label: string): { value: number | null; percent: number | null } {
+  const at = page.cards.findIndex((card) => card.label === label && card.values.length);
+  const next = at >= 0 ? page.cards[at + 1] : undefined;
+  if (!next || next.label !== 'Daily Change' || !next.values.length) return { value: null, percent: null };
+  const [value, percent] = next.values[0].split('/');
+  return { value: numberOrNull(value), percent: numberOrNull(percent) };
+}
+
+/** `05/09/16` (the panel's short US date) -> `2016-05-09`; other formats via toIsoDate. */
+function fundPageDate(raw: string | null): string {
+  const match = /^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(cleanText(raw));
+  if (!match) return toIsoDate(raw);
+  const year = Number(match[3]) < 70 ? 2000 + Number(match[3]) : 1900 + Number(match[3]);
+  return `${year}-${match[1].padStart(2, '0')}-${match[2].padStart(2, '0')}`;
+}
 
 /** Appended to the holdings source kind while a fund in liquidation keeps its last published holdings. */
 const LIQUIDATION_KEPT_NOTE = '; kept: fund in liquidation, no current holdings CSV';
 
 /**
  * A fund being wound down carries an "In Liquidation" label under its name
- * (BTRN, 2026-10). Its page still publishes current fund details, but the
- * dated holdings CSV it links answers HTTP 404.
+ * (BTRN, 2026-10) or, since the redesign, the rendered notice "The Fund will
+ * liquidate on or about <date>" (every page also ships the unrendered
+ * `{__date__}` template, which does not count). Its page still publishes
+ * current fund details, but the dated holdings CSV answers HTTP 404.
  */
 export function isGlobalXFundInLiquidation(html: string): boolean {
-  return /(?:>|\\?")\s*In Liquidation\b/.test(html);
+  return /(?<!liquidation\.planned\\?":\\?)(?:>|\\?")\s*In Liquidation\b/.test(html) || /The Fund will liquidate on or about (?!\{)/.test(html);
 }
 
-/** The `Fund Details` panel: CUSIP, ISIN, NAV, market price, exchange, share count. */
+/** The `Fund Details` and `ETF Prices` panels plus the latest premium/discount card. */
 export function parseGlobalXFundDetails(html: string): GlobalXFundDetails {
-  const flight = extractNextFlightText(html);
-  const details = findRscObjectAfterKey(flight, 'ETF_DETAILS') as Record<string, unknown> | null;
-  const result: GlobalXFundDetails = {
-    inceptionDate: rscDate(details?.INCEPTION_DATE),
-    ticker: sanitizeTicker(details?.BLOOMBERG_TICKER),
-    cusip: details?.CUSIP ? cleanText(details.CUSIP) : null,
-    isin: details?.ISIN ? cleanText(details.ISIN) : null,
+  const page = readFundPage(html);
+  const card = (label: string) => cardValue(page, label);
+  const prices = collectFlightObjects(page.records, (object) => !!object.latest && typeof object.latest === 'object' && 'premiumDiscountPct' in (object.latest as object))[0];
+  const latest = (prices?.latest ?? {}) as Record<string, unknown>;
+  const nav = numberOrNull(latest.nav) ?? numberOrNull(card('NAV'));
+  const price = numberOrNull(latest.marketPrice) ?? numberOrNull(card('Market Price'));
+  const navDaily = dailyChangeAfter(page, 'NAV');
+  const priceDaily = dailyChangeAfter(page, 'Market Price');
+  const premium = numberOrNull(latest.premiumDiscountPct);
+  const netAssetsText = card('Net Assets');
+  const shares = numberOrNull(card('Shares Outstanding'));
+  const spreadText = card('30-Day Median Bid-Ask Spread');
+  const spread = numberOrNull(spreadText);
+  const asOf = /"children":"(?:Fund Details|ETF Prices)"\}\],\["\$","p",null,\{"className":"[^"]*","children":"As of ([^"]+)"\}/.exec(page.flight)?.[1];
+  return {
+    inceptionDate: fundPageDate(card('Inception Date')),
+    ticker: sanitizeTicker(card('Ticker')),
+    cusip: card('CUSIP'),
+    isin: card('ISIN'),
     managementFeeText: null,
-    totalOperatingExpensesText: null,
-    netAssets: numberOrNull(details?.ASSETS),
-    netAssetsText: details?.ASSETS == null ? null : formatAumDisplay(Number(details.ASSETS)),
-    sharesOutstanding: numberOrNull(details?.SHARES_OUTSTANDING),
-    sharesOutstandingText: details?.SHARES_OUTSTANDING == null ? null : Number(details.SHARES_OUTSTANDING).toLocaleString('en-US'),
-    primaryExchange: details?.EXCHANGE ? cleanText(details.EXCHANGE) : null,
+    totalOperatingExpensesText: card('Total Expense Ratio'),
+    netAssets: moneyOrNull(netAssetsText),
+    netAssetsText,
+    sharesOutstanding: shares,
+    sharesOutstandingText: shares === null ? null : shares.toLocaleString('en-US'),
+    primaryExchange: card('Primary Exchange'),
     underlyingExposure: null,
-    distributionFrequency: null,
-    netAssetValue: numberOrNull(details?.NET_ASSET_VALUE),
-    netAssetValueText: details?.NET_ASSET_VALUE == null ? null : cleanText(details.NET_ASSET_VALUE),
-    navDailyChangeValue: null,
-    navDailyChangePercent: null,
-    marketPrice: null,
-    marketPriceText: null,
-    marketPriceDailyChangeValue: null,
-    marketPriceDailyChangePercent: null,
-    premiumDiscount: null,
-    premiumDiscountText: null,
-    bidAskSpread: details?.THIRTY_DAY_MEDIAN_BID_ASK == null ? null : round(Number(details.THIRTY_DAY_MEDIAN_BID_ASK) * 100, 2),
-    bidAskSpreadText: details?.THIRTY_DAY_MEDIAN_BID_ASK == null ? null : `${(Number(details.THIRTY_DAY_MEDIAN_BID_ASK) * 100).toFixed(2)}%`,
+    distributionFrequency: card('Distribution Frequency'),
+    netAssetValue: nav,
+    netAssetValueText: nav === null ? null : nav.toFixed(2),
+    navDailyChangeValue: navDaily.value,
+    navDailyChangePercent: navDaily.percent,
+    marketPrice: price,
+    marketPriceText: price === null ? null : formatMoneyText(price),
+    marketPriceDailyChangeValue: priceDaily.value,
+    marketPriceDailyChangePercent: priceDaily.percent,
+    premiumDiscount: premium === null ? null : round(premium, 4),
+    premiumDiscountText: premium === null ? null : `${premium.toFixed(4)}%`,
+    bidAskSpread: spread === null ? null : round(spread, 2),
+    bidAskSpreadText: spread === null ? null : `${spread.toFixed(2)}%`,
     acquiredFundFeesText: null,
-    asOfDate: rscDate(details?.AS_OF_DATE),
+    asOfDate: toIsoDate(asOf),
   };
-  const tables = parseHtmlTables(html);
-  for (const table of tables) {
-    for (const row of table) {
-      if (row.length < 2) continue;
-      const label = cleanText(row[0]);
-      if (/^NAV$/i.test(label) && row.length >= 5) {
-        result.netAssetValue = numberOrNull(row[1]) ?? result.netAssetValue;
-        result.netAssetValueText = cleanText(row[1]) || result.netAssetValueText;
-        result.navDailyChangeValue = numberOrNull(row[3]);
-        result.navDailyChangePercent = numberOrNull(row[4]);
-      } else if (/^Market Price$/i.test(label) && row.length >= 5) {
-        result.marketPrice = numberOrNull(row[1]);
-        result.marketPriceText = cleanText(row[1]);
-        result.marketPriceDailyChangeValue = numberOrNull(row[3]);
-        result.marketPriceDailyChangePercent = numberOrNull(row[4]);
-      }
-    }
-  }
-  // The premium/discount history is serialized in the Flight payload. The
-  // current day's figure is optional; the updater derives it from NAV/market
-  // price when the issuer does not expose a scalar field.
-  const premium = findRscObjectAfterKey(flight, 'PREMIUM_DISCOUNT') as Record<string, unknown> | null;
-  const latest = premium?.latest_discount_pctg;
-  if (typeof latest === 'number') {
-    result.premiumDiscount = round(latest * 100, 4);
-    result.premiumDiscountText = `${(latest * 100).toFixed(4)}%`;
-  }
-  return result;
 }
+
 /**
  * Global X prints a 0 distribution rate for funds that have not paid anything
  * yet (monthly bond funds with a 4-6% SEC yield included), so a zero rate is
@@ -1338,26 +1268,33 @@ export type GlobalXDistributionInfo = {
 };
 
 /**
- * The "Distribution Information (as of MM/DD/YYYY)" table under the fund page
- * `Distributions` heading. It is a plain two-column label/value table, so it is
- * located by its own header cell rather than by position.
+ * The metric cards above the Distribution History table (`30-Day SEC Yield`,
+ * `Distribution Rate`, `Trailing 12-Month Distribution (%)`, `Distribution
+ * Frequency`); a fund prints only the cards it has figures for.
  */
 export function parseGlobalXDistributionInfo(html: string): GlobalXDistributionInfo | null {
-  const flight = extractNextFlightText(html);
-  const details = findRscObjectAfterKey(flight, 'ETF_DETAILS') as Record<string, unknown> | null;
-  const frequency = /"children":"Distribution Frequency"[\s\S]{0,900}?"children":"([^"]+)"/.exec(flight)?.[1] || null;
-  const asOf = rscDate(details?.AS_OF_DATE);
-  if (!details && !frequency) return null;
-  const sec = numberOrNull(details?.YIELD_SEC_30);
-  const rate = positiveYieldOrNull(details?.DIV_YIELD);
+  const page = readFundPage(html);
+  const cards = new Map<string, string>();
+  const prefix = 'distribution-history-metric-card-';
+  for (const element of collectFlightElements(page.records, prefix)) {
+    const label = String(element[2]).slice(prefix.length).replace(/-(?:undefined|\d+)-\d+$/, '');
+    const texts = flightChildrenText(element, page.recordMap);
+    const value = texts.length > 1 ? texts[texts.length - 1] : '';
+    if (!cards.has(label) && !isMissingCell(value)) cards.set(label, value);
+  }
+  const frequency = cards.get('Distribution Frequency') ?? cardValue(page, 'Distribution Frequency');
+  if (!cards.size && !frequency) return null;
+  const sec = numberOrNull(cards.get('30-Day SEC Yield'));
+  const rate = positiveYieldOrNull(cards.get('Distribution Rate'));
+  const trailing = positiveYieldOrNull(cards.get('Trailing 12-Month Distribution (%)'));
   return {
-    asOfDate: asOf,
+    asOfDate: parseGlobalXFundDetails(html).asOfDate,
     frequency,
     managementFeeText: null,
     distributionRate: rate,
     distributionRateText: rate === null ? null : `${rate.toFixed(2)}%`,
-    trailingRate12M: null,
-    trailingRate12MText: null,
+    trailingRate12M: trailing,
+    trailingRate12MText: trailing === null ? null : `${trailing.toFixed(2)}%`,
     distributionAmount: null,
     distributionAmountText: null,
     distributionAmountPercent: null,
@@ -1383,31 +1320,60 @@ export const GLOBALX_DISTRIBUTION_HEADERS = [
 ] as const;
 
 /**
- * The official Distribution History calendar. Rows are grouped in per-year
- * `<div id="dc-year-<YYYY>">` blocks, newest first, and a declared-but-unpaid
- * month ships an empty Amount cell — kept verbatim so the table mirrors the page.
+ * The official Distribution History table (`distributions`: `exDate`,
+ * `recordDate`, `payableDate`, `amount` as printed, e.g. `$0.16`), newest first.
+ * A declared-but-unpaid past row keeps an empty Amount so the table mirrors the page.
  */
 export function parseGlobalXDistributionHistory(html: string, now: Date = new Date()): GlobalXDistributionRow[] {
-  const flight = extractNextFlightText(html);
-  const history = findRscObjectAfterKey(flight, 'DISTRIBUTION_HISTORY');
-  if (!Array.isArray(history)) return [];
+  const page = readFundPage(html);
+  const table = collectFlightObjects(page.records, (object) => Array.isArray(object.distributions)
+    && (object.distributions as unknown[]).some((row) => !!row && typeof row === 'object' && 'exDate' in row))[0];
+  if (!table) return [];
   const today = now.toISOString().slice(0, 10);
-  // The page lists the forward schedule with an empty amount (a scheduled date,
-  // not a paid distribution); those placeholder rows are not history.
-  return history.filter((item) => {
-    const row = item as Record<string, unknown>;
-    return !(row.amount == null && cleanText(row.ex_date) > today);
-  }).map((item) => {
-    const row = item as Record<string, unknown>;
-    return {
+  const rows: GlobalXDistributionRow[] = [];
+  for (const item of table.distributions as Array<Record<string, unknown>>) {
+    const exDate = toIsoDate(item.exDate);
+    const amountText = flightString(item.amount);
+    const amount = numberOrNull(amountText);
+    // The page lists the forward schedule with an empty amount (a scheduled date,
+    // not a paid distribution); those placeholder rows are not history.
+    if (!exDate || (amount === null && exDate > today)) continue;
+    rows.push({
       'Declaration Date': '',
-      'Ex-Div Date': cleanText(row.ex_date),
-      'Record Date': cleanText(row.record_date),
-      'Payable Date': cleanText(row.payable_date),
-      'Amount ($)': row.amount == null ? '' : `$${Number(row.amount).toFixed(6)}`,
-    };
-  }).sort((a, b) => b['Ex-Div Date'].localeCompare(a['Ex-Div Date']));
+      'Ex-Div Date': exDate,
+      'Record Date': toIsoDate(item.recordDate),
+      'Payable Date': toIsoDate(item.payableDate),
+      'Amount ($)': amount === null ? '' : `$${normalizeNumberText(amountText)}`,
+    });
+  }
+  return rows.sort((a, b) => b['Ex-Div Date'].localeCompare(a['Ex-Div Date']));
 }
+
+/**
+ * The redesigned page prints distribution amounts rounded to cents ($0.16) where
+ * the earlier page published the exact figure ($0.155500). A row already
+ * published with the exact issuer figure keeps it while the page still prints
+ * that same figure rounded (same ex-date, equal at the page's precision); any
+ * other row is taken from the page as printed.
+ */
+export function keepPublishedAmountPrecision(rows: GlobalXDistributionRow[], published: unknown): GlobalXDistributionRow[] {
+  if (!Array.isArray(published)) return rows;
+  const exact = new Map<string, string>();
+  for (const row of published as Array<Record<string, unknown>>) {
+    if (row && typeof row['Ex-Div Date'] === 'string' && typeof row['Amount ($)'] === 'string') exact.set(row['Ex-Div Date'], row['Amount ($)']);
+  }
+  return rows.map((row) => {
+    const previous = exact.get(row['Ex-Div Date']);
+    const printed = numberOrNull(row['Amount ($)']);
+    const kept = numberOrNull(previous);
+    if (previous === undefined || printed === null || kept === null) return row;
+    const decimals = (normalizeNumberText(row['Amount ($)']).split('.')[1] ?? '').length;
+    const digitsKept = (normalizeNumberText(previous).split('.')[1] ?? '').length;
+    if (digitsKept <= decimals || Math.abs(kept - printed) > 0.5 * 10 ** -decimals + 1e-9) return row;
+    return { ...row, 'Amount ($)': previous };
+  });
+}
+
 export type GlobalXPerformance = {
   asOfDate: string;
   nav: Record<string, number | null>;
@@ -1416,49 +1382,48 @@ export type GlobalXPerformance = {
   benchmark: Record<string, number | null>;
 };
 
-/** Column label -> the field the feed stores it as. */
-const PERFORMANCE_COLUMNS: Record<string, string> = {
-  '1 mo': 'mo1',
-  '3 mo': 'mo3',
-  '6 mo': 'mo6',
-  ytd: 'ytd',
-  'inception (cumulative)': 'sinceInceptionCumulative',
-  '1 yr': 'yr1',
-  '3 yr': 'yr3',
-  '5 yr': 'yr5',
-  '10 yr': 'yr10',
-  'inception (annualized)': 'sinceInception',
-  'since inception': 'sinceInceptionCumulative',
-};
-
 /**
- * One `#monthly-performance` / `#quarterly-performance` table. Returns the NAV
- * and Market rows plus the first benchmark row the page prints.
+ * The Returns tables (`avgAnnualized` and `cumulative`, one entry per cadence:
+ * `month-end`, `quarter-end`). Each has `columns` keys (ONE_YEAR, YTD, ...) and
+ * `rows` labelled `Fund NAV`, `Market Price` and the benchmark (`Index`).
  */
 export function parseGlobalXPerformanceSection(html: string, sectionId: string): GlobalXPerformance | null {
-  const flight = extractNextFlightText(html);
-  const performance = findRscObjectAfterKey(flight, 'PERFORMANCE_HISTORY') as Record<string, any> | null;
-  if (!performance) return null;
-  const periodKey = /quarter/i.test(sectionId) ? 'quarter_end' : 'month_end';
-  const period = performance.avg_annualized?.[periodKey];
-  if (!period) return null;
-  const annual = period.fund_nav || {};
-  const cumulative = performance.cumulative?.[periodKey]?.fund_nav || {};
-  const pct = (value: unknown): number | null => {
-    const n = numberOrNull(value);
-    return n === null ? null : round(n * 100, 2);
+  const page = readFundPage(html);
+  const data = collectFlightObjects(page.records, (object) => Array.isArray(object.avgAnnualized) && Array.isArray(object.cumulative))[0];
+  if (!data) return null;
+  const cadence = /quarter/i.test(sectionId) ? 'quarter-end' : 'month-end';
+  const pick = (list: unknown) => (list as Array<Record<string, unknown>>).find((table) => table?.cadence === cadence) ?? null;
+  const annual = pick(data.avgAnnualized);
+  const cumulative = pick(data.cumulative);
+  if (!annual && !cumulative) return null;
+  const byRow = (table: Record<string, unknown> | null): Map<string, Record<string, number | null>> => {
+    const keys = Array.isArray(table?.columns) ? (table.columns as Array<Record<string, unknown>>).map((column) => cleanText(column?.key)) : [];
+    const out = new Map<string, Record<string, number | null>>();
+    for (const row of Array.isArray(table?.rows) ? (table.rows as Array<Record<string, unknown>>) : []) {
+      const values = Array.isArray(row?.values) ? row.values : [];
+      out.set(cleanText(row?.label), Object.fromEntries(keys.map((key, index) => {
+        const n = numberOrNull(flightString(values[index]));
+        return [key, n === null ? null : round(n, 2)];
+      })));
+    }
+    return out;
   };
+  const annualRows = byRow(annual);
+  const cumulativeRows = byRow(cumulative);
+  const navAnnual = annualRows.get('Fund NAV') ?? {};
+  const navCumulative = cumulativeRows.get('Fund NAV') ?? {};
+  const benchmarkName = [...annualRows.keys()].find((label) => label !== 'Fund NAV' && label !== 'Market Price') ?? null;
   return {
-    asOfDate: rscDate(performance[periodKey === 'quarter_end' ? 'quarter_end_date' : 'month_end_date']),
+    asOfDate: toIsoDate(annual?.asOf ?? cumulative?.asOf),
     nav: {
-      yr1: pct(annual.ONE_YEAR), yr3: pct(annual.THREE_YEAR), yr5: pct(annual.FIVE_YEAR), yr10: pct(annual.TEN_YEAR),
-      sinceInception: pct(annual.SINCE_INCEPTION),
-      mo1: pct(cumulative.ONE_MONTH), mo3: pct(cumulative.THREE_MONTH), ytd: pct(cumulative.YTD),
-      sinceInceptionCumulative: pct(cumulative.SINCE_INCEPTION),
+      yr1: navAnnual.ONE_YEAR ?? null, yr3: navAnnual.THREE_YEAR ?? null, yr5: navAnnual.FIVE_YEAR ?? null, yr10: navAnnual.TEN_YEAR ?? null,
+      sinceInception: navAnnual.SINCE_INCEPTION ?? null,
+      mo1: navCumulative.ONE_MONTH ?? null, mo3: navCumulative.THREE_MONTH ?? null, mo6: navCumulative.SIX_MONTH ?? null, ytd: navCumulative.YTD ?? null,
+      sinceInceptionCumulative: navCumulative.SINCE_INCEPTION ?? null,
     },
-    market: Object.fromEntries(Object.entries(period.market_price || {}).map(([key, value]) => [key, pct(value)])),
-    benchmarkName: 'Index',
-    benchmark: Object.fromEntries(Object.entries(period.index || {}).map(([key, value]) => [key, pct(value)])),
+    market: annualRows.get('Market Price') ?? {},
+    benchmarkName,
+    benchmark: benchmarkName ? annualRows.get(benchmarkName) ?? {} : {},
   };
 }
 export type GlobalXNavIndex = {
@@ -1485,7 +1450,7 @@ export type GlobalXDocuments = {
   form8937: string | null;
 };
 
-/** The `Documents` table: every row's label matched to its first PDF link. */
+/** The `Documents` lists (`documents`: `name` plus `file.url` or `url`), each name matched to its first link. */
 export function parseGlobalXDocuments(html: string): GlobalXDocuments {
   const documents: GlobalXDocuments = {
     prospectus: null,
@@ -1498,35 +1463,26 @@ export function parseGlobalXDocuments(html: string): GlobalXDocuments {
     taxInfo: null,
     form8937: null,
   };
-  const start = html.search(/id=["']fund_documents["']/i);
-  const section = start >= 0 ? html.slice(start, start + 20000) : html;
-  for (const row of section.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
-    const cell = row[1];
-    const label = stripTags(cell);
-    const href = /href=["'](https?:\/\/[^"']+\.pdf)["']/i.exec(cell);
-    if (!href) continue;
-    const url = href[1];
+  const page = readFundPage(html);
+  const items = collectFlightObjects(page.records, (object) => typeof object.name === 'string' && 'fileType' in object);
+  for (const item of items) {
+    const file = item.file as Record<string, unknown> | undefined;
+    const raw = cleanText(file?.url ?? item.url);
+    if (!raw) continue;
+    const url = raw.startsWith('//') ? `https:${raw}` : raw;
+    const label = cleanText(item.name);
     const set = (key: keyof GlobalXDocuments) => {
       if (!documents[key]) documents[key] = url;
     };
     if (/^summary prospectus/i.test(label)) set('summaryProspectus');
-    else if (/^prospectus/i.test(label)) set('prospectus');
+    else if (/^(?:statutory )?prospectus/i.test(label)) set('prospectus');
     else if (/statement of additional information/i.test(label)) set('sai');
-    else if (/^semi-annual report/i.test(label)) set('semiAnnualReport');
-    else if (/^annual report/i.test(label)) set('annualReport');
-    else if (/portfolio holdings/i.test(label)) {
-      if (/q1/i.test(label)) set('fiscalQ1Holdings');
-      else if (/q3/i.test(label)) set('fiscalQ3Holdings');
-    } else if (/supplemental tax information/i.test(label)) set('taxInfo');
-  }
-  // Form 8937 filings live in their own tab as a list of period-labelled links.
-  // The filing is matched on its own filename, so a fund whose 8937 tab is
-  // empty never picks up the first PDF of the tab that follows it.
-  const formStart = html.search(/id=["']tab-form-8937["']/i);
-  if (formStart >= 0) {
-    const formSection = html.slice(formStart, formStart + 12000);
-    const pdf = /href=["'](https?:\/\/[^"']*8937[^"']*\.pdf)["']/i.exec(formSection);
-    if (pdf) documents.form8937 = pdf[1];
+    else if (/^semi[- ]?annual shareholder report/i.test(label)) set('semiAnnualReport');
+    else if (/^annual shareholder report/i.test(label)) set('annualReport');
+    else if (/^q1 complete holdings/i.test(label)) set('fiscalQ1Holdings');
+    else if (/^q3 complete holdings/i.test(label)) set('fiscalQ3Holdings');
+    else if (/supplemental tax information/i.test(label)) set('taxInfo');
+    else if (/8937/.test(label)) set('form8937');
   }
   return documents;
 }
@@ -2108,7 +2064,8 @@ async function updateFund(
 
   const details = parseGlobalXFundDetails(pageHtml);
   const distributionInfo = parseGlobalXDistributionInfo(pageHtml);
-  const distributionRows = parseGlobalXDistributionHistory(pageHtml);
+  // Rows the earlier page published with the exact amount keep it (see keepPublishedAmountPrecision).
+  const distributionRows = keepPublishedAmountPrecision(parseGlobalXDistributionHistory(pageHtml), previousMeta?.distributions?.fallback ? null : previousMeta?.distributions?.rows);
   const monthly = parseGlobalXPerformanceSection(pageHtml, 'monthly-performance');
   const quarterly = parseGlobalXPerformanceSection(pageHtml, 'quarterly-performance');
   const navIndex = parseGlobalXNavIndex(pageHtml);
@@ -2210,7 +2167,8 @@ async function updateFund(
   }
 
   // --- assemble metrics --------------------------------------------------
-  const netAssets = holdings.netAssets ?? details.netAssets ?? fund.netAssets ?? null;
+  // The lineup prints Net Assets to the cent; the fund page panel only rounds it ($90.97 million).
+  const netAssets = holdings.netAssets ?? fund.netAssets ?? details.netAssets ?? null;
   const sharesOutstanding = holdings.sharesOutstanding ?? details.sharesOutstanding ?? null;
   // Global X prints NAV and Market Price directly; the derived quotient is only a
   // guard for the day a fund page omits the panel.
@@ -2220,11 +2178,11 @@ async function updateFund(
   const marketPriceValue = details.marketPrice
     ?? (historyRows.length ? numberOrNull(historyRows[0].Close) : null);
   const derivedPremiumDiscount = navValue && marketPriceValue !== null ? round(((marketPriceValue - navValue) / navValue) * 100, 2) : null;
-  // Global X prints its own `Premium Discount (%)`; the quotient is only the guard
-  // for the day a panel omits the row.
+  // Global X prints its own latest premium/discount; the quotient is only the guard
+  // for the day the page omits it.
   const premiumDiscount = details.premiumDiscount ?? derivedPremiumDiscount;
   const premiumDiscountKind = details.premiumDiscount !== null
-    ? 'official (fund page Fund Details "Premium Discount (%)")'
+    ? 'official (fund page Daily Premium / Discount, latest day)'
     : 'derived (Market Price - NAV) / NAV';
 
   const monthEndValues = monthly?.nav || {};
@@ -2317,7 +2275,7 @@ async function updateFund(
       exchangeSource: 'Global X fund page Fund Details "Primary Exchange"',
       navSource: `Global X fund page Fund Details "Net Asset Value" (${navKind})`,
       premiumDiscountSource: premiumDiscountKind,
-      bidAskSpreadSource: 'Global X fund page Fund Details "30-Day Median Bid-Ask Spread (%)"',
+      bidAskSpreadSource: 'Global X fund page Fund Details "30-Day Median Bid-Ask Spread"',
     },
     identifiers: {
       cusip: details.cusip || null,
@@ -2361,13 +2319,15 @@ async function updateFund(
       display: details.bidAskSpreadText || null,
       value: details.bidAskSpread,
       asOfDate: details.asOfDate ? formatGlobalXDate(details.asOfDate) : null,
-      kind: 'official (fund page Fund Details "30-Day Median Bid-Ask Spread (%)")',
+      kind: 'official (fund page Fund Details "30-Day Median Bid-Ask Spread")',
     },
     aum: {
       display: netAssets === null ? null : formatAumDisplay(netAssets),
       value: netAssets,
       asOfDate: details.asOfDate ? formatGlobalXDate(details.asOfDate) : holdingsMeta.asOfDate,
-      source: holdings.netAssets !== null ? holdings.sourceKind : 'Global X fund page Fund Details "Net Assets"',
+      source: holdings.netAssets !== null
+        ? holdings.sourceKind
+        : (fund.netAssets !== null ? 'Global X ETF lineup "Net Assets"' : 'Global X fund page Fund Details "Net Assets"'),
     },
     sharesOutstanding: {
       display: sharesOutstanding === null ? null : sharesOutstanding.toLocaleString('en-US'),
@@ -2695,7 +2655,7 @@ export async function main(env: Record<string, string | undefined> = process.env
     const home = await fetchText(GLOBALX_LINEUP_URL, browserHeaders(), config, 'Global X home page');
     if (config.storeRawDownloads) await writeIfChanged(path.join(API_ROOT, 'raw', 'lineup.html'), home);
     lineup = parseGlobalXLineup(home);
-    if (!lineup.length) throw new Error('lineup: the #explore-etfs #etf-table was not found on globalxetfs.com');
+    if (!lineup.length) throw new Error('lineup: no ETF table rows were found on globalxetfs.com/explore');
   } else {
     lineup = Object.values(previous).map((entry) => ({
       ticker: String(entry.ticker),
@@ -2793,7 +2753,7 @@ export async function main(env: Record<string, string | undefined> = process.env
       market: 'us',
       site: GLOBALX_SITE,
       catalog: GLOBALX_LINEUP_URL,
-      catalogNote: 'Server-rendered "Explore Our ETFs" table (#explore-etfs -> #etf-table); five asset-class groups.',
+      catalogNote: 'ETF table rows of globalxetfs.com/explore (React Flight payload); category = first two hierarchy levels.',
       fundPages: `${GLOBALX_SITE}/funds/<ticker>/`,
       holdings: 'https://assets.globalxetfs.com/funds/holdings/<ticker>_full-holdings_<YYYYMMDD>.csv',
       holdingsNote: 'Official dated daily full-holdings CSV linked by the fund page.',
