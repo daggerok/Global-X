@@ -17,9 +17,11 @@ import {
   installSystemCa,
   isGlobalXFundInLiquidation,
   isCertError,
+  keepPublishedAmountPrecision,
   main,
   parseGlobalXDistributionHistory,
   parseGlobalXDistributionInfo,
+  parseGlobalXDocuments,
   parseGlobalXFundDetails,
   parseGlobalXHoldingsCsv,
   parseGlobalXLineup,
@@ -70,6 +72,10 @@ afterEach(() => {
 function flightHtml(chunks: string[]): string {
   return `<script>self.__next_f.push([1,${JSON.stringify(chunks.join("\n"))}])</script>`;
 }
+// One panel row of the 2026-10 fund page: a label span, then a data-card-value span
+const li = (label: string, value: string) => `["$","li",${JSON.stringify(label)},{"children":[["$","span",null,{"className":"text-xs font-semibold text-muted-foreground","children":${JSON.stringify(label)}}],["$","span","data-card-value-0",{"className":"v","children":${JSON.stringify(value)}}]]}]`;
+const metricCard = (label: string, value: string) => `["$","div","distribution-history-metric-card-${label}-undefined-0",{"children":[["$","p",null,{"children":[${JSON.stringify(label)},false]}],["$","p",null,{"className":"font-bold","children":${JSON.stringify(value)}}]]}]`;
+const lineupRows = (rows: object[]) => flightHtml([`5:["$","$L5b",null,{"rows":${JSON.stringify(rows)}}]`]);
 
 describe("controls", () => {
   test("precedence is file < advanced < nonblank input < env, blank input inherits", () => {
@@ -160,11 +166,6 @@ describe("controls", () => {
 });
 
 describe("parsing", () => {
-  const lineup = flightHtml([
-    '8e:{"etf_name":"U.S. Infrastructure Development ETF","inception_date":"$D2017-03-06T00:00:00.000Z","nav":53.46,"net_assets":13532865123.34}',
-    '8d:{"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","ETF_TICKER":"PAVE","FUND_DATA":"$8e","THEME":"Equity","SUB_THEME":"Thematic","GROSS_EXP":0.47,"NET_EXP":"$undefined"}',
-  ]);
-
   test("N-PORT fallback: positions, report date and series are read (element text and value attributes)", () => {
     const xml = `<edgarSubmission><repPdDate>2026-06-30</repPdDate><seriesName>Global X &amp; Co Test ETF</seriesName>
       <invstOrSec><name>Acme Corp</name><cusip>000111222</cusip><balance>1500</balance><valUSD>3000.50</valUSD><pctVal>1.25</pctVal><assetCat>EC</assetCat>
@@ -177,37 +178,52 @@ describe("parsing", () => {
     expect(parsed.positions[1]).toMatchObject({ balance: null, valueUsd: null, percent: null });
   });
 
-  test("catalog: Flight chunks decode and references resolve", () => {
-    expect(extractNextFlightText(lineup)).toContain('"ETF_TICKER":"PAVE"');
-    const funds = parseGlobalXLineup(lineup);
-    expect(funds).toHaveLength(1);
-    expect(funds[0]).toMatchObject({ ticker: "PAVE", name: "U.S. Infrastructure Development ETF", category: "Equity / Thematic", managementFee: 0.47, netAssets: 13532865123.34, inceptionDate: "2017-03-06" });
-  });
-
-  test("fund page: details, distribution info, history and returns", () => {
-    const html = flightHtml([
-      'p:{"ETF_DETAILS":{"ASSETS":13532865123.34,"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","BLOOMBERG_TICKER":"IPAVE","CUSIP":"37954Y673","DIST_YIELD":0.56,"DIV_YIELD":0.8,"EXCHANGE":"Cboe BZX","INCEPTION_DATE":"$D2017-03-06T00:00:00.000Z","ISIN":"US37954Y6730","NET_ASSET_VALUE":"53.46","SHARES_OUTSTANDING":253120000,"THIRTY_DAY_MEDIAN_BID_ASK":0.000187,"YIELD_SEC_30":0.5},"PERFORMANCE_HISTORY":{"avg_annualized":{"month_end":{"fund_nav":{"FIVE_YEAR":0.1579,"ONE_YEAR":0.1864,"SINCE_INCEPTION":0.1534,"THREE_YEAR":0.2008,"TEN_YEAR":0.0836}},"quarter_end":{"fund_nav":{"ONE_YEAR":0.3629}}},"cumulative":{"month_end":{"fund_nav":{"YTD":0.146}},"quarter_end":{"fund_nav":{"YTD":0.234}}},"month_end_date":"$D2026-08-31T00:00:00.000Z","quarter_end_date":"$D2026-06-30T00:00:00.000Z"},"DISTRIBUTION_HISTORY":[{"amount":0.1027,"ex_date":"2026-06-29","record_date":"2026-06-29","payable_date":"2026-07-02"}]}',
-      'q:{"children":"Distribution Frequency"}',
-      'r:{"children":"Semi-Annually"}',
+  test("catalog: the 2026-10 client table rows are read, missing values become null", () => {
+    const rows = lineupRows([
+      { ticker: "SMRZ", name: "Small Modular Reactor ETF", netAssetsValue: 876142.74, grossExpensesValue: 0.75, netExpensesValue: 0.75, distributionRateValue: null, inceptionDate: "Oct 14, 2026", inceptionDateValue: 1791936000000, hierarchyNames: ["Equity", "Thematic", "Disruptive Technology"], distributionFrequency: "Semi-Annually" },
+      { ticker: "QYLD", name: "Nasdaq 100 Covered Call ETF", netAssetsValue: null, grossExpensesValue: 0.61, netExpensesValue: 0.6, distributionRateValue: 12.1, inceptionDateValue: null, inceptionDate: "Dec 11, 2013", hierarchyNames: ["Income"], distributionFrequency: "Monthly" },
     ]);
-    const withPrices = `${html}<table><tr><td>NAV</td><td>$53.46</td><td>Daily Change</td><td>$0.40</td><td>0.75%</td></tr><tr><td>Market Price</td><td>$53.47</td><td>Daily Change</td><td>$0.40</td><td>0.75%</td></tr></table>`;
-    expect(parseGlobalXFundDetails(withPrices)).toMatchObject({ cusip: "37954Y673", isin: "US37954Y6730", netAssetValue: 53.46, marketPrice: 53.47, navDailyChangePercent: 0.75, bidAskSpread: 0.02 });
-    expect(parseGlobalXDistributionInfo(html)).toMatchObject({ frequency: "Semi-Annually", secYield: 0.5 });
-    expect(parseGlobalXDistributionHistory(html)[0]).toMatchObject({ "Ex-Div Date": "2026-06-29", "Amount ($)": "$0.102700" });
-    const monthly = parseGlobalXPerformanceSection(html, "monthly-performance");
-    expect(monthly?.nav).toMatchObject({ yr1: 18.64, yr10: 8.36, ytd: 14.6 });
-    expect(monthly?.asOfDate).toBe("2026-08-31");
-    expect(parseGlobalXPerformanceSection(html, "quarterly-performance")?.asOfDate).toBe("2026-06-30");
+    expect(extractNextFlightText(rows)).toContain('"ticker":"SMRZ"');
+    const funds = parseGlobalXLineup(rows);
+    expect(funds.map((f) => f.ticker)).toEqual(["SMRZ", "QYLD"]);
+    expect(funds[0]).toMatchObject({ category: "Equity / Thematic", managementFee: 0.75, grossExpense: 0.75, netAssets: 876142.74, inceptionDate: "2026-10-14", distributionRate: null, frequency: "Semi-Annually" });
+    expect(funds[1]).toMatchObject({ category: "Income", managementFee: 0.6, grossExpense: 0.61, netAssets: null, inceptionDate: "2013-12-11", distributionRate: 12.1 });
   });
 
-  test("distributions: unscheduled rows are skipped, a published 0 rate is null, cadence maps to payments", () => {
-    const html = flightHtml(['p:{"DISTRIBUTION_HISTORY":[{"amount":null,"ex_date":"2026-12-30","record_date":"2026-12-30","payable_date":"2027-01-05"},{"amount":0.1079,"ex_date":"2026-06-29","record_date":"2026-06-29","payable_date":"2026-07-07"}]}']);
-    expect(parseGlobalXDistributionHistory(html, new Date("2026-10-02T00:00:00Z")).map((row) => row["Ex-Div Date"])).toEqual(["2026-06-29"]);
-    expect(parseGlobalXDistributionHistory(html, new Date("2027-02-01T00:00:00Z"))).toHaveLength(2);
-    const info = (rate: number) => parseGlobalXDistributionInfo(flightHtml([`p:{"ETF_DETAILS":{"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","DIV_YIELD":${rate},"YIELD_SEC_30":4.6}}`, 'q:{"children":"Distribution Frequency"}', 'r:{"children":"Monthly"}']));
-    expect(info(0)?.distributionRate).toBeNull();
-    expect(info(0)?.secYield).toBe(4.6);
-    expect(info(3.1)?.distributionRate).toBe(3.1);
+  test("fund page (2026-10): panels, prices, returns, distribution cards and history, documents, holdings date", () => {
+    const html = flightHtml([
+      '1:["$","div",null,{"children":[["$","h3",null,{"children":"Fund Details"}],["$","p",null,{"className":"text-xs","children":"As of Oct 16, 2026"}]]}]',
+      `2:[${[li("Ticker", "PAVE"), li("Inception Date", "03/06/17"), li("Net Assets", "$$13.57 billion"), li("Shares Outstanding", "257,030,000"), li("Primary Exchange", "Cboe BZX"), li("CUSIP", "37954Y673"), li("ISIN", "US37954Y6730"), li("30-Day Median Bid-Ask Spread", "-"), li("Distribution Frequency", "Semi-Annually"), li("NAV", "$$52.80"), li("Daily Change", "-$0.40 / -0.75%")].join(",")}]`,
+      '3:["$","$Lce",null,{"data":{"asOf":"Oct 16, 2026","latest":{"nav":52.8,"marketPrice":52.81,"premiumDiscountPct":0.0189}}}]',
+      '4:["$","$L9e",null,{"data":{"avgAnnualized":[{"cadence":"month-end","asOf":"Sep 30, 2026","columns":[{"key":"ONE_YEAR"},{"key":"TEN_YEAR"}],"rows":[{"label":"Fund NAV","values":["+18.64%","-"]},{"label":"Market Price","values":["+18.60%","-"]},{"label":"Index","values":["+19.00%","-"]}]}],"cumulative":[{"cadence":"month-end","asOf":"Sep 30, 2026","columns":[{"key":"YTD"}],"rows":[{"label":"Fund NAV","values":["+14.60%"]}]},{"cadence":"quarter-end","asOf":"Jun 30, 2026","columns":[{"key":"YTD"}],"rows":[{"label":"Fund NAV","values":["+23.40%"]}]}]}}]',
+      `5:${metricCard("30-Day SEC Yield", "0.50%")}`,
+      '6:["$","div","distribution-history-metric-card-Distribution Rate-2-1",{"children":["$L7","$L8"]}]',
+      '7:["$","p",null,{"children":["Distribution Rate",false]}]',
+      '8:["$","p",null,{"className":"font-bold","children":"0.00%"}]',
+      '9:["$","$Le9",null,{"distributions":[{"exDate":"Dec 30, 2026","recordDate":"Dec 30, 2026","payableDate":"Jan 5, 2027","amount":"-"},{"exDate":"Jun 29, 2026","recordDate":"Jun 29, 2026","payableDate":"Jul 2, 2026","amount":"$$0.10"}]}]',
+      // a text row (T + hex byte length) is followed by the next row on the same line
+      'a:T5,hellob:["$","$L81",null,{"documents":[{"name":"Summary Prospectus","fileType":"PDF","file":{"url":"//assets.ctfassets.net/x/Summary-Prospectus.pdf"}},{"name":"Proxy Voting","fileType":"","url":"https://www.sec.gov/x"}]}]',
+      'c:["$","$Lcd",null,{"ticker":"PAVE","fileName":"PAVE-holdings-Oct-16-2026.csv"}]',
+    ]);
+    expect(parseGlobalXFundDetails(html)).toMatchObject({ cusip: "37954Y673", isin: "US37954Y6730", inceptionDate: "2017-03-06", netAssets: 13570000000, sharesOutstanding: 257030000, primaryExchange: "Cboe BZX", netAssetValue: 52.8, marketPrice: 52.81, navDailyChangeValue: -0.4, navDailyChangePercent: -0.75, premiumDiscount: 0.0189, bidAskSpread: null, asOfDate: "2026-10-16" });
+    expect(parseGlobalXDistributionInfo(html)).toMatchObject({ frequency: "Semi-Annually", secYield: 0.5, distributionRate: null, trailingRate12M: null });
+    expect(parseGlobalXDistributionHistory(html, new Date("2026-10-02T00:00:00Z"))).toEqual([{ "Declaration Date": "", "Ex-Div Date": "2026-06-29", "Record Date": "2026-06-29", "Payable Date": "2026-07-02", "Amount ($)": "$0.10" }]);
+    expect(parseGlobalXDistributionHistory(html, new Date("2027-02-01T00:00:00Z"))[0]["Amount ($)"]).toBe("");
+    const monthly = parseGlobalXPerformanceSection(html, "monthly-performance");
+    expect(monthly).toMatchObject({ asOfDate: "2026-09-30", nav: { yr1: 18.64, yr10: null, ytd: 14.6, mo6: null }, market: { ONE_YEAR: 18.6, TEN_YEAR: null }, benchmarkName: "Index" });
+    expect(parseGlobalXPerformanceSection(html, "quarterly-performance")).toMatchObject({ asOfDate: "2026-06-30", nav: { ytd: 23.4, yr1: null } });
+    expect(parseGlobalXDocuments(html)).toMatchObject({ summaryProspectus: "https://assets.ctfassets.net/x/Summary-Prospectus.pdf", prospectus: null });
+    expect(globalxHoldingsCsvUrl("PAVE", html)).toBe("https://assets.globalxetfs.com/funds/holdings/pave_full-holdings_20261016.csv");
+  });
+
+  test("distributions: a published 0 rate is null, exact published amounts survive the page's rounding, cadence maps to payments", () => {
+    const info = parseGlobalXDistributionInfo(flightHtml([`1:[${metricCard("Distribution Rate", "11.34%")},${metricCard("Trailing 12-Month Distribution (%)", "12.26%")},${metricCard("30-Day SEC Yield", "0.00%")},${metricCard("Distribution Frequency", "Monthly")}]`]));
+    expect(info).toMatchObject({ distributionRate: 11.34, trailingRate12M: 12.26, secYield: 0, frequency: "Monthly" });
+    expect(parseGlobalXDistributionInfo(flightHtml(['1:{"children":"nothing"}']))).toBeNull();
+    const row = (exDate: string, amount: string) => ({ "Declaration Date": "", "Ex-Div Date": exDate, "Record Date": exDate, "Payable Date": exDate, "Amount ($)": amount });
+    const kept = keepPublishedAmountPrecision([row("2026-06-29", "$0.16"), row("2026-07-20", "$0.18"), row("2026-08-24", "$0.18")], [row("2026-06-29", "$0.155500"), row("2026-07-20", "$0.170000")]);
+    expect(kept.map((r) => r["Amount ($)"])).toEqual(["$0.155500", "$0.18", "$0.18"]);
+    expect(keepPublishedAmountPrecision([row("2026-06-29", "$0.16")], null)[0]["Amount ($)"]).toBe("$0.16");
     expect([positiveYieldOrNull(0), positiveYieldOrNull("0"), positiveYieldOrNull(4.2)]).toEqual([null, null, 4.2]);
     expect([paymentsPerYear("Semi-Annually"), paymentsPerYear("semi-annual"), paymentsPerYear("Quarterly"), paymentsPerYear("Monthly")]).toEqual([2, 2, 4, 12]);
   });
@@ -295,20 +311,18 @@ describe("metrics", () => {
 type MockFund = { ticker: string; name: string; net?: number | null; gross?: number | null; divYield?: number; pageOk?: boolean; yahooOk?: boolean; ten?: number; liquidation?: boolean; csvOk?: boolean };
 
 function lineupPage(funds: MockFund[]): string {
-  const chunks: string[] = [];
-  funds.forEach((fund, i) => {
-    chunks.push(`${i}a:{"etf_name":${JSON.stringify(fund.name)},"inception_date":"$D2015-03-06T00:00:00.000Z","nav":10,"net_assets":1000000000}`);
-    chunks.push(`${i}b:{"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","ETF_TICKER":"${fund.ticker}","FUND_DATA":"$${i}a","THEME":"Equity","SUB_THEME":"Thematic","GROSS_EXP":${fund.gross ?? 0.6},"NET_EXP":${fund.net === null ? '"$undefined"' : (fund.net ?? 0.5)}}`);
-  });
-  return flightHtml(chunks);
+  return lineupRows(funds.map((fund) => ({ ticker: fund.ticker, name: fund.name, netAssetsValue: 1000000000, grossExpensesValue: fund.gross ?? 0.6, netExpensesValue: fund.net === null ? null : (fund.net ?? 0.5), distributionRateValue: null, inceptionDateValue: Date.UTC(2015, 2, 6), hierarchyNames: ["Equity", "Thematic"], distributionFrequency: "Semi-Annually" })));
 }
 
 function fundPage(fund: MockFund): string {
-  const ten = fund.ten === undefined ? '' : `,"TEN_YEAR":${fund.ten}`;
+  const ten = fund.ten === undefined ? "-" : `+${(fund.ten * 100).toFixed(2)}%`;
   return flightHtml([
-    `p:{"ETF_DETAILS":{"ASSETS":1000000000,"AS_OF_DATE":"$D2026-09-25T00:00:00.000Z","CUSIP":"37954Y673","DIV_YIELD":${fund.divYield ?? 2.5},"EXCHANGE":"Cboe BZX","INCEPTION_DATE":"$D2015-03-06T00:00:00.000Z","ISIN":"US37954Y6730","NET_ASSET_VALUE":"10.50","SHARES_OUTSTANDING":1000000,"YIELD_SEC_30":1.5},"PERFORMANCE_HISTORY":{"avg_annualized":{"month_end":{"fund_nav":{"FIVE_YEAR":0.1,"ONE_YEAR":0.2,"SINCE_INCEPTION":0.08,"THREE_YEAR":0.15${ten}}}},"cumulative":{"month_end":{"fund_nav":{"YTD":0.1}}},"month_end_date":"$D2026-08-31T00:00:00.000Z","quarter_end_date":"$D2026-06-30T00:00:00.000Z"},"DISTRIBUTION_HISTORY":[{"amount":null,"ex_date":"2999-12-30","record_date":"2999-12-30","payable_date":"2999-12-31"},{"amount":0.25,"ex_date":"2026-06-29","record_date":"2026-06-29","payable_date":"2026-07-07"}]}`,
-    'q:{"children":"Distribution Frequency"}',
-    'r:{"children":"Semi-Annually"}',
+    '1:["$","div",null,{"children":[["$","h3",null,{"children":"Fund Details"}],["$","p",null,{"className":"text-xs","children":"As of Sep 25, 2026"}]]}]',
+    `2:[${[li("CUSIP", "37954Y673"), li("ISIN", "US37954Y6730"), li("Inception Date", "03/06/15"), li("Net Assets", "$$1.00 billion"), li("Shares Outstanding", "1,000,000"), li("Primary Exchange", "Cboe BZX"), li("Distribution Frequency", "Semi-Annually"), li("NAV", "$$10.50")].join(",")}]`,
+    `3:["$","$L9e",null,{"data":{"avgAnnualized":[{"cadence":"month-end","asOf":"Aug 31, 2026","columns":[{"key":"ONE_YEAR"},{"key":"THREE_YEAR"},{"key":"FIVE_YEAR"},{"key":"TEN_YEAR"},{"key":"SINCE_INCEPTION"}],"rows":[{"label":"Fund NAV","values":["+20.00%","+15.00%","+10.00%",${JSON.stringify(ten)},"+8.00%"]}]}],"cumulative":[{"cadence":"month-end","asOf":"Aug 31, 2026","columns":[{"key":"YTD"}],"rows":[{"label":"Fund NAV","values":["+10.00%"]}]}]}}]`,
+    `4:[${metricCard("30-Day SEC Yield", "1.50%")},${metricCard("Distribution Rate", `${fund.divYield ?? 2.5}%`)}]`,
+    '5:["$","$Le9",null,{"distributions":[{"exDate":"Dec 30, 2999","recordDate":"Dec 30, 2999","payableDate":"Dec 31, 2999","amount":"-"},{"exDate":"Jun 29, 2026","recordDate":"Jun 29, 2026","payableDate":"Jul 7, 2026","amount":"$$0.25"}]}]',
+    `6:["$","$Lcd",null,{"ticker":"${fund.ticker}","fileName":"${fund.ticker}-holdings-Sep-25-2026.csv"}]`,
     ...(fund.liquidation ? ['s:{"className":"block text-sea text-2xl mb-6","children":["In Liquidation",["$","sup",null,{"children":"^"}]]}'] : []),
   ]);
 }
@@ -488,6 +502,9 @@ describe("pipeline", () => {
     expect(isGlobalXFundInLiquidation(fundPage({ ticker: "AAA", name: "Alpha Index ETF", liquidation: true }))).toBe(true);
     expect(isGlobalXFundInLiquidation(fundPage({ ticker: "AAA", name: "Alpha Index ETF" }))).toBe(false);
     expect(isGlobalXFundInLiquidation("<p>the fund is not in liquidation</p>")).toBe(false);
+    // every 2026-10 page ships the label dictionary and the notice template; only a rendered notice counts
+    expect(isGlobalXFundInLiquidation(flightHtml(['0:{"liquidation.planned":"In Liquidation^","liquidation.designated":"The Fund will liquidate on or about {__date__}"}']))).toBe(false);
+    expect(isGlobalXFundInLiquidation(flightHtml(['1:["$","p",null,{"children":"The Fund will liquidate on or about Nov 20, 2026"}]']))).toBe(true);
     const dir = fresh(); installMock(() => THREE); quiet();
     await run(dir);
     const holdings = readFileSync(join(dir, "funds", "AAA", "holdings", "001.json"), "utf8");
