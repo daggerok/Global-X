@@ -2,7 +2,7 @@
   "ticker": "CLIP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 834,
+  "totalRows": 835,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-19",
+      "Close": "100.24",
+      "Adj Close": "100.24",
+      "Volume": "145300"
+    },
     {
       "Date": "2026-10-16",
       "Close": "100.24",

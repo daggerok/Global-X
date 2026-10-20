@@ -2,7 +2,7 @@
   "ticker": "EMBD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1602,
+  "totalRows": 1603,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-19",
+      "Close": "22.72",
+      "Adj Close": "22.72",
+      "Volume": "39500"
+    },
     {
       "Date": "2026-10-16",
       "Close": "22.80",
@@ -6003,12 +6009,6 @@
       "Close": "19.73",
       "Adj Close": "15.79",
       "Volume": "18300"
-    },
-    {
-      "Date": "2022-10-21",
-      "Close": "19.74",
-      "Adj Close": "15.80",
-      "Volume": "9600"
     }
   ]
 }

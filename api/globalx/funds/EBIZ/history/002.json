@@ -2,7 +2,7 @@
   "ticker": "EBIZ",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1979,
+  "totalRows": 1980,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-21",
+      "Close": "15.00",
+      "Adj Close": "14.82",
+      "Volume": "3700"
+    },
     {
       "Date": "2022-10-20",
       "Close": "14.75",

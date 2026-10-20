@@ -2,7 +2,7 @@
   "ticker": "CPTL",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2582,
+  "totalRows": 2583,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-10-31",
+      "Close": "19.86",
+      "Adj Close": "17.70",
+      "Volume": "10000"
+    },
     {
       "Date": "2018-10-30",
       "Close": "19.72",

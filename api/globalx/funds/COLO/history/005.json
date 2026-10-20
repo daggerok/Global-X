@@ -2,7 +2,7 @@
   "ticker": "COLO",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4450,
+  "totalRows": 4451,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-11-19",
+      "Close": "84.10",
+      "Adj Close": "46.11",
+      "Volume": "48450"
+    },
     {
       "Date": "2010-11-18",
       "Close": "86.02",

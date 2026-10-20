@@ -2,7 +2,7 @@
   "ticker": "SLDR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 500,
+  "totalRows": 501,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-19",
+      "Close": "49.44",
+      "Adj Close": "49.44",
+      "Volume": "100"
+    },
     {
       "Date": "2026-10-16",
       "Close": "49.46",

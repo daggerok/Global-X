@@ -2,7 +2,7 @@
   "ticker": "ALTY",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2833,
+  "totalRows": 2834,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-21",
+      "Close": "10.53",
+      "Adj Close": "7.77",
+      "Volume": "4400"
+    },
     {
       "Date": "2022-10-20",
       "Close": "10.52",
@@ -6003,12 +6009,6 @@
       "Close": "14.51",
       "Adj Close": "7.70",
       "Volume": "7100"
-    },
-    {
-      "Date": "2018-10-31",
-      "Close": "14.39",
-      "Adj Close": "7.64",
-      "Volume": "5400"
     }
   ]
 }

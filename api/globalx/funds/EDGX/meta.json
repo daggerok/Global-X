@@ -11,51 +11,51 @@
   "terGross": "0.50%",
   "terGrossValue": 0.5,
   "nav": {
-    "display": "$26.47",
-    "value": 26.47,
-    "asOfDate": "Oct 16 2026",
-    "dailyChangeText": "$-0.36 (-1.34%)",
+    "display": "$26.56",
+    "value": 26.56,
+    "asOfDate": "Oct 19 2026",
+    "dailyChangeText": "$0.09 (0.34%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 26.47,
+  "navValue": 26.56,
   "aum": {
-    "display": "$6.88M",
-    "value": 6881590.15,
-    "asOfDate": "Oct 16 2026",
+    "display": "$6.91M",
+    "value": 6906188.21,
+    "asOfDate": "Oct 19 2026",
     "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 6881590.15,
-  "asOfDate": "Oct 16 2026",
+  "aumValue": 6906188.21,
+  "asOfDate": "Oct 19 2026",
   "inceptionDate": "Feb 17 2026",
   "inceptionDateFundPage": "Feb 17 2026",
   "exchange": "NYSE Arca",
-  "closePrice": "$26.43",
-  "closePriceValue": 26.43,
+  "closePrice": "$26.58",
+  "closePriceValue": 26.58,
   "premiumDiscount": {
-    "display": "-0.14%",
-    "value": -0.1423,
-    "derivedValue": -0.15,
+    "display": "0.06%",
+    "value": 0.0626,
+    "derivedValue": 0.08,
     "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": -0.1423,
-  "premiumDiscountDerivedValue": -0.15,
+  "premiumDiscountValue": 0.0626,
+  "premiumDiscountDerivedValue": 0.08,
   "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.44%",
     "value": 0.44,
-    "asOfDate": "Oct 16 2026",
+    "asOfDate": "Oct 19 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.44,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 6881590.15,
+  "totalNetAssets": 6906188.21,
   "sharesOutstanding": {
     "display": "260,000",
     "value": 260000,
-    "asOfDate": "Oct 16 2026"
+    "asOfDate": "Oct 19 2026"
   },
-  "netAssetsAsOf": "Oct 16 2026",
-  "secYieldAsOf": "Oct 16 2026",
+  "netAssetsAsOf": "Oct 19 2026",
+  "secYieldAsOf": "Oct 19 2026",
   "distributions": {
     "frequency": "Weekly",
     "paymentsPerYear": 52,
@@ -67,6 +67,13 @@
       "Amount ($)"
     ],
     "rows": [
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-10-19",
+        "Record Date": "2026-10-19",
+        "Payable Date": "2026-10-22",
+        "Amount ($)": ""
+      },
       {
         "Declaration Date": "",
         "Ex-Div Date": "2026-10-13",
@@ -354,10 +361,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": 9.26,
-    "dividendYieldText": "9.26%",
-    "distributionYield": 9.26,
-    "distributionYieldText": "9.26%",
+    "dividendYield": 8.99,
+    "dividendYieldText": "8.99%",
+    "distributionYield": 8.99,
+    "distributionYieldText": "8.99%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 2.5,
@@ -374,9 +381,9 @@
     ],
     "pageSize": 250,
     "totalRows": 6,
-    "asOfDate": "Oct 16 2026",
-    "asOf": "2026-10-16",
-    "source": "https://assets.globalxetfs.com/funds/holdings/edgx_full-holdings_20261016.csv",
+    "asOfDate": "Oct 19 2026",
+    "asOf": "2026-10-19",
+    "source": "https://assets.globalxetfs.com/funds/holdings/edgx_full-holdings_20261019.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -384,9 +391,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 168,
-    "asOfDate": "Oct 16 2026",
-    "asOf": "2026-10-16",
+    "totalRows": 169,
+    "asOfDate": "Oct 19 2026",
+    "asOf": "2026-10-19",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/EDGX",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -396,7 +403,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/edgx/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/edgx_full-holdings_20261016.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/edgx_full-holdings_20261019.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EDGX",
@@ -426,18 +433,18 @@
     "managementFeeValue": 0
   },
   "marketPrice": {
-    "display": "$26.43",
-    "value": 26.43,
-    "asOfDate": "Oct 16 2026",
-    "dailyChangeText": "$-0.35 (-1.31%)",
+    "display": "$26.58",
+    "value": 26.58,
+    "asOfDate": "Oct 19 2026",
+    "dailyChangeText": "$0.15 (0.57%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
-    "dividendYield": 9.26,
-    "dividendYieldText": "9.26%",
+    "dividendYield": 8.99,
+    "dividendYieldText": "8.99%",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": 9.26,
-    "distributionRateText": "9.26%",
+    "distributionRate": 8.99,
+    "distributionRateText": "8.99%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 2.5,
@@ -445,7 +452,7 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 16 2026"
+    "distributionInfoAsOfDate": "Oct 19 2026"
   },
   "navIndex": null,
   "documents": {

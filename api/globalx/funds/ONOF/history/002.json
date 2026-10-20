@@ -2,7 +2,7 @@
   "ticker": "ONOF",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1447,
+  "totalRows": 1448,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-21",
+      "Close": "26.07",
+      "Adj Close": "24.70",
+      "Volume": "14100"
+    },
     {
       "Date": "2022-10-20",
       "Close": "25.53",
