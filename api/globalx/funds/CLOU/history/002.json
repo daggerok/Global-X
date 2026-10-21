@@ -2,7 +2,7 @@
   "ticker": "CLOU",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1888,
+  "totalRows": 1889,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "16.09",
+      "Adj Close": "16.09",
+      "Volume": "355500"
+    },
     {
       "Date": "2022-10-21",
       "Close": "16.19",

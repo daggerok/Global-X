@@ -2,7 +2,7 @@
   "ticker": "GXPE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 313,
+  "totalRows": 314,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-20",
+      "Close": "39.88",
+      "Adj Close": "39.88",
+      "Volume": "300"
+    },
+    {
       "Date": "2026-10-19",
       "Close": "39.86",
       "Adj Close": "39.86",
-      "Volume": "2374"
+      "Volume": "2400"
     },
     {
       "Date": "2026-10-16",

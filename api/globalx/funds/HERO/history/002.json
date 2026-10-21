@@ -2,7 +2,7 @@
   "ticker": "HERO",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1750,
+  "totalRows": 1751,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "17.14",
+      "Adj Close": "16.48",
+      "Volume": "28600"
+    },
     {
       "Date": "2022-10-21",
       "Close": "17.54",

@@ -2,7 +2,7 @@
   "ticker": "SRET",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2916,
+  "totalRows": 2917,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "20.25",
+      "Adj Close": "14.58",
+      "Volume": "25667"
+    },
     {
       "Date": "2022-10-21",
       "Close": "20.31",
@@ -6003,12 +6009,6 @@
       "Close": "43.80",
       "Adj Close": "23.18",
       "Volume": "24767"
-    },
-    {
-      "Date": "2018-11-01",
-      "Close": "44.04",
-      "Adj Close": "23.31",
-      "Volume": "6900"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "LIT",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4085,
+  "totalRows": 4086,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "66.79",
+      "Adj Close": "64.22",
+      "Volume": "625300"
+    },
     {
       "Date": "2022-10-21",
       "Close": "68.07",
@@ -6003,12 +6009,6 @@
       "Close": "31.88",
       "Adj Close": "29.05",
       "Volume": "204900"
-    },
-    {
-      "Date": "2018-11-01",
-      "Close": "31.48",
-      "Adj Close": "28.69",
-      "Volume": "409600"
     }
   ]
 }

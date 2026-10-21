@@ -2,7 +2,7 @@
   "ticker": "SPFF",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3583,
+  "totalRows": 3584,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "9.46",
+      "Adj Close": "7.29",
+      "Volume": "78200"
+    },
     {
       "Date": "2022-10-21",
       "Close": "9.47",
@@ -6003,12 +6009,6 @@
       "Close": "11.45",
       "Adj Close": "6.88",
       "Volume": "47100"
-    },
-    {
-      "Date": "2018-11-01",
-      "Close": "11.48",
-      "Adj Close": "6.90",
-      "Volume": "46400"
     }
   ]
 }

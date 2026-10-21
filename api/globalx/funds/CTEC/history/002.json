@@ -2,7 +2,7 @@
   "ticker": "CTEC",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1499,
+  "totalRows": 1500,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "65.20",
+      "Adj Close": "63.21",
+      "Volume": "1300"
+    },
     {
       "Date": "2022-10-21",
       "Close": "66.15",

@@ -2,7 +2,7 @@
   "ticker": "SDEM",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2916,
+  "totalRows": 2917,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-11-01",
+      "Close": "39.63",
+      "Adj Close": "22.76",
+      "Volume": "2167"
+    },
     {
       "Date": "2018-10-31",
       "Close": "38.73",

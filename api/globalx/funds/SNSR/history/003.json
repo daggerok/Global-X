@@ -2,7 +2,7 @@
   "ticker": "SNSR",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2536,
+  "totalRows": 2537,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-11-01",
+      "Close": "18.46",
+      "Adj Close": "17.36",
+      "Volume": "10500"
+    },
     {
       "Date": "2018-10-31",
       "Close": "17.97",

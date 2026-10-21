@@ -2,7 +2,7 @@
   "ticker": "XTR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1285,
+  "totalRows": 1286,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "22.91",
+      "Adj Close": "15.80",
+      "Volume": "100"
+    },
     {
       "Date": "2022-10-21",
       "Close": "22.72",

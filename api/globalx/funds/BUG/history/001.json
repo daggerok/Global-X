@@ -2,7 +2,7 @@
   "ticker": "BUG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1749,
+  "totalRows": 1750,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-20",
+      "Close": "45.22",
+      "Adj Close": "45.22",
+      "Volume": "1252700"
+    },
     {
       "Date": "2026-10-19",
       "Close": "44.87",
@@ -6003,12 +6009,6 @@
       "Close": "24.85",
       "Adj Close": "24.40",
       "Volume": "209600"
-    },
-    {
-      "Date": "2022-10-24",
-      "Close": "24.04",
-      "Adj Close": "23.60",
-      "Volume": "191600"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "CHRI",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 269,
+  "totalRows": 270,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-20",
+      "Close": "91.56",
+      "Adj Close": "91.56",
+      "Volume": "1400"
+    },
+    {
       "Date": "2026-10-19",
       "Close": "91.41",
       "Adj Close": "91.41",
-      "Volume": "3612"
+      "Volume": "3000"
     },
     {
       "Date": "2026-10-16",

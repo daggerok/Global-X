@@ -2,7 +2,7 @@
   "ticker": "RNRG",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2866,
+  "totalRows": 2867,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "37.50",
+      "Adj Close": "35.54",
+      "Volume": "11033"
+    },
     {
       "Date": "2022-10-21",
       "Close": "37.62",
@@ -6003,12 +6009,6 @@
       "Close": "34.86",
       "Adj Close": "29.87",
       "Volume": "30367"
-    },
-    {
-      "Date": "2018-11-01",
-      "Close": "34.65",
-      "Adj Close": "29.69",
-      "Volume": "3033"
     }
   ]
 }

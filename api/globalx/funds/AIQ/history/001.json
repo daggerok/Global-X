@@ -2,7 +2,7 @@
   "ticker": "AIQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2118,
+  "totalRows": 2119,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-20",
+      "Close": "63.18",
+      "Adj Close": "63.18",
+      "Volume": "931800"
+    },
     {
       "Date": "2026-10-19",
       "Close": "62.96",
@@ -6003,12 +6009,6 @@
       "Close": "19.82",
       "Adj Close": "19.66",
       "Volume": "13100"
-    },
-    {
-      "Date": "2022-10-24",
-      "Close": "19.37",
-      "Adj Close": "19.21",
-      "Volume": "9500"
     }
   ]
 }

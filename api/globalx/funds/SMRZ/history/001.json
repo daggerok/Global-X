@@ -2,7 +2,7 @@
   "ticker": "SMRZ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3,
+  "totalRows": 4,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-20",
+      "Close": "21.38",
+      "Adj Close": "21.38",
+      "Volume": "10300"
+    },
+    {
       "Date": "2026-10-19",
       "Close": "21.97",
       "Adj Close": "21.97",
-      "Volume": "3005"
+      "Volume": "3000"
     },
     {
       "Date": "2026-10-16",

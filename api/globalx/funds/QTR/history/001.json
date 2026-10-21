@@ -2,7 +2,7 @@
   "ticker": "QTR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1292,
+  "totalRows": 1293,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-20",
+      "Close": "33.75",
+      "Adj Close": "33.75",
+      "Volume": "300"
+    },
     {
       "Date": "2026-10-19",
       "Close": "33.84",
@@ -6003,12 +6009,6 @@
       "Close": "19.56",
       "Adj Close": "16.27",
       "Volume": "100"
-    },
-    {
-      "Date": "2022-10-24",
-      "Close": "19.18",
-      "Adj Close": "15.95",
-      "Volume": "400"
     }
   ]
 }

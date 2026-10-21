@@ -2,7 +2,7 @@
   "ticker": "SIL",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4151,
+  "totalRows": 4152,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "24.62",
+      "Adj Close": "23.53",
+      "Volume": "446700"
+    },
     {
       "Date": "2022-10-21",
       "Close": "24.90",
@@ -6003,12 +6009,6 @@
       "Close": "24.11",
       "Adj Close": "21.57",
       "Volume": "63700"
-    },
-    {
-      "Date": "2018-11-01",
-      "Close": "23.97",
-      "Adj Close": "21.44",
-      "Volume": "80300"
     }
   ]
 }

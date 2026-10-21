@@ -2,7 +2,7 @@
   "ticker": "MLCC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 27,
+  "totalRows": 28,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-20",
+      "Close": "46.49",
+      "Adj Close": "46.49",
+      "Volume": "1900"
+    },
     {
       "Date": "2026-10-19",
       "Close": "46.68",

@@ -2,7 +2,7 @@
   "ticker": "AUSF",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2046,
+  "totalRows": 2047,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-11-01",
+      "Close": "24.09",
+      "Adj Close": "19.02",
+      "Volume": "30100"
+    },
     {
       "Date": "2018-10-31",
       "Close": "24.00",

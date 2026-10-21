@@ -2,7 +2,7 @@
   "ticker": "FINX",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2539,
+  "totalRows": 2540,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-24",
+      "Close": "20.63",
+      "Adj Close": "20.27",
+      "Volume": "122600"
+    },
     {
       "Date": "2022-10-21",
       "Close": "20.58",
@@ -6003,12 +6009,6 @@
       "Close": "25.60",
       "Adj Close": "23.76",
       "Volume": "194500"
-    },
-    {
-      "Date": "2018-11-01",
-      "Close": "25.62",
-      "Adj Close": "23.78",
-      "Volume": "172500"
     }
   ]
 }

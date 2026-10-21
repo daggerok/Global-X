@@ -2,7 +2,7 @@
   "ticker": "XTR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1285,
+  "totalRows": 1286,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-20",
+      "Close": "28.98",
+      "Adj Close": "28.98",
+      "Volume": "400"
+    },
     {
       "Date": "2026-10-19",
       "Close": "28.96",
@@ -6002,12 +6008,6 @@
       "Date": "2022-10-25",
       "Close": "23.20",
       "Adj Close": "16.00",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-24",
-      "Close": "22.91",
-      "Adj Close": "15.80",
       "Volume": "100"
     }
   ]
