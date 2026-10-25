@@ -13,6 +13,7 @@ import {
   globalxEdgarFilingsUrl,
   globalxFundPageUrl,
   globalxHoldingsCsvUrl,
+  holdingsGuard,
   horizonValue,
   installSystemCa,
   isGlobalXFundInLiquidation,
@@ -235,6 +236,21 @@ describe("parsing", () => {
     expect(parsed.rows).toHaveLength(2);
     expect(parsed.rows[0]).toMatchObject({ Name: "CASH", "Asset Category": "Cash", Weight: "0.02%" });
     expect(parsed.rows[1]).toMatchObject({ Ticker: "DE", Identifier: "2261203", "Market Value": "493,517,332.36" });
+  });
+
+  test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
+    const headers = ['Name', 'Ticker', 'Weight'];
+    const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
+    expect(holdingsGuard(headers, rows, 2)).toBeNull();
+    expect(holdingsGuard(headers, [['A', 'A', '60'], ['B', 'B', '40']], null)).toBeNull();
+    expect(holdingsGuard([], [], 0)).toBeNull(); // nothing published before: an empty sheet is honest
+    expect(holdingsGuard(headers, [], 505)).toContain('no holdings rows');
+    expect(holdingsGuard(['Name', 'Ticker', 'Wt'], rows, 2)).toContain('no weight column');
+    expect(holdingsGuard(headers, rows.map((row) => ({ ...row, Weight: '6\u200B0' })), 2)).toContain('numeric weight');
+    const allocation = [{ Name: 'Cash&Collateral', Ticker: '-', Weight: '100' }, { Name: 'Equities', Ticker: '-', Weight: '476' }];
+    expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
+    expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
+    expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
   });
 
   test("urls, tickers, Yahoo adjusted close, dates and N-PORT series matching", () => {
@@ -525,6 +541,28 @@ describe("pipeline", () => {
     await run(dir, { TICKERS: "AAA,BBB" });
     expect(lines.some((line) => /AAA/.test(line) && /unchanged/.test(line))).toBe(true);
     expect(lines.some((line) => /BBB/.test(line) && /failed/.test(line) && /HTTP 404/.test(line))).toBe(true);
+  });
+
+  test("fresh holdings that fail the guard keep the fund exactly as published and report it failed", async () => {
+    const dir = fresh(); installMock(() => THREE); quiet();
+    await run(dir);
+    const first = snapshot(dir);
+    const good = globalThis.fetch;
+    const headerOnly = 'Fund Holdings Data as of 09/26/2026\n% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n';
+    const badSum = HOLDINGS_CSV.replace(/50\.00,/g, "238.00,"); // 476: an allocation summary, not a holdings sheet
+    globalThis.fetch = (async (input: any, init?: RequestInit) => {
+      const url = String(input);
+      if (url.includes("/holdings/aaa_full-holdings")) return new Response(headerOnly);
+      if (url.includes("/holdings/bbb_full-holdings")) return new Response(badSum);
+      return good(input, init);
+    }) as unknown as typeof fetch;
+    const lines: string[] = [];
+    console.log = (line: unknown) => { lines.push(String(line)); };
+    await run(dir);
+    expect(snapshot(dir)).toEqual(first);
+    expect(lines.some((line) => /AAA/.test(line) && /failed/.test(line) && /holdings guard: no holdings rows \(2 published\)/.test(line))).toBe(true);
+    expect(lines.some((line) => /BBB/.test(line) && /failed/.test(line) && /holdings guard: weights add up to 476\.00/.test(line))).toBe(true);
+    expect(lines.some((line) => /CCC/.test(line) && /unchanged/.test(line))).toBe(true);
   });
 
   test("filters exclude funds without a figure and write nothing for them", async () => {
