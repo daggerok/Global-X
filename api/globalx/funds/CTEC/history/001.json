@@ -2,7 +2,7 @@
   "ticker": "CTEC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1500,
+  "totalRows": 1503,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "49.77",
+      "Adj Close": "49.77",
+      "Volume": "1200"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "50.47",
+      "Adj Close": "50.47",
+      "Volume": "200"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "53.10",
+      "Adj Close": "53.10",
+      "Volume": "700"
+    },
     {
       "Date": "2026-10-20",
       "Close": "52.34",
@@ -5991,24 +6009,6 @@
       "Close": "70.10",
       "Adj Close": "67.96",
       "Volume": "3280"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "70.55",
-      "Adj Close": "68.39",
-      "Volume": "2280"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "70.25",
-      "Adj Close": "68.10",
-      "Volume": "2580"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "67.75",
-      "Adj Close": "65.68",
-      "Volume": "1220"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "PFFD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2287,
+  "totalRows": 2290,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "17.16",
+      "Adj Close": "17.16",
+      "Volume": "745500"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "17.20",
+      "Adj Close": "17.20",
+      "Volume": "902400"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "17.17",
+      "Adj Close": "17.17",
+      "Volume": "879200"
+    },
     {
       "Date": "2026-10-20",
       "Close": "17.19",
@@ -5991,24 +6009,6 @@
       "Close": "19.67",
       "Adj Close": "15.25",
       "Volume": "589600"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "19.47",
-      "Adj Close": "15.09",
-      "Volume": "472900"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "19.53",
-      "Adj Close": "15.14",
-      "Volume": "692400"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "19.49",
-      "Adj Close": "15.11",
-      "Volume": "753900"
     }
   ]
 }

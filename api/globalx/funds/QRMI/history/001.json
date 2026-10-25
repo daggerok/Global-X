@@ -2,7 +2,7 @@
   "ticker": "QRMI",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1293,
+  "totalRows": 1296,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "14.90",
+      "Adj Close": "14.90",
+      "Volume": "1500"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "14.90",
+      "Adj Close": "14.90",
+      "Volume": "2200"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "15.01",
+      "Adj Close": "15.01",
+      "Volume": "3500"
+    },
     {
       "Date": "2026-10-20",
       "Close": "14.98",
@@ -5991,24 +6009,6 @@
       "Close": "18.21",
       "Adj Close": "11.22",
       "Volume": "500"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "18.04",
-      "Adj Close": "11.12",
-      "Volume": "2400"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "18.17",
-      "Adj Close": "11.20",
-      "Volume": "1300"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "18.18",
-      "Adj Close": "11.21",
-      "Volume": "13200"
     }
   ]
 }

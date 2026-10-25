@@ -2,7 +2,7 @@
   "ticker": "SDIV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3864,
+  "totalRows": 3867,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "24.23",
+      "Adj Close": "24.23",
+      "Volume": "442400"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "23.91",
+      "Adj Close": "23.91",
+      "Volume": "333300"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "23.85",
+      "Adj Close": "23.85",
+      "Volume": "293100"
+    },
     {
       "Date": "2026-10-20",
       "Close": "23.90",
@@ -5991,24 +6009,6 @@
       "Close": "23.37",
       "Adj Close": "15.29",
       "Volume": "217567"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "23.28",
-      "Adj Close": "15.23",
-      "Volume": "97300"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "23.37",
-      "Adj Close": "15.29",
-      "Volume": "118067"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "23.28",
-      "Adj Close": "15.23",
-      "Volume": "123533"
     }
   ]
 }

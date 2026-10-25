@@ -2,7 +2,7 @@
   "ticker": "CEFA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1589,
+  "totalRows": 1592,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "39.60",
+      "Adj Close": "39.60",
+      "Volume": "1300"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "39.63",
+      "Adj Close": "39.63",
+      "Volume": "3300"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "40.10",
+      "Adj Close": "40.10",
+      "Volume": "29300"
+    },
     {
       "Date": "2026-10-20",
       "Close": "39.77",
@@ -5991,24 +6009,6 @@
       "Close": "23.58",
       "Adj Close": "21.24",
       "Volume": "0"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "23.41",
-      "Adj Close": "21.09",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "23.63",
-      "Adj Close": "21.29",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "23.42",
-      "Adj Close": "21.10",
-      "Volume": "100"
     }
   ]
 }

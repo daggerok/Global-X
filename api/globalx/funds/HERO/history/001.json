@@ -2,7 +2,7 @@
   "ticker": "HERO",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1751,
+  "totalRows": 1754,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "27.41",
+      "Adj Close": "27.41",
+      "Volume": "13800"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "27.80",
+      "Adj Close": "27.80",
+      "Volume": "11900"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "27.98",
+      "Adj Close": "27.98",
+      "Volume": "8900"
+    },
     {
       "Date": "2026-10-20",
       "Close": "28.14",
@@ -5991,24 +6009,6 @@
       "Close": "17.56",
       "Adj Close": "16.88",
       "Volume": "39500"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "17.57",
-      "Adj Close": "16.89",
-      "Volume": "16600"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "17.65",
-      "Adj Close": "16.97",
-      "Volume": "30200"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "17.57",
-      "Adj Close": "16.89",
-      "Volume": "15900"
     }
   ]
 }

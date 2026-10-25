@@ -2,7 +2,7 @@
   "ticker": "CPTL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2584,
+  "totalRows": 2587,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "48.65",
+      "Adj Close": "48.65",
+      "Volume": "1900"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "48.78",
+      "Adj Close": "48.78",
+      "Volume": "700"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "49.30",
+      "Adj Close": "49.30",
+      "Volume": "2500"
+    },
     {
       "Date": "2026-10-20",
       "Close": "49.01",
@@ -5991,24 +6009,6 @@
       "Close": "27.92",
       "Adj Close": "26.42",
       "Volume": "11300"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "27.36",
-      "Adj Close": "25.89",
-      "Volume": "2800"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "27.46",
-      "Adj Close": "25.99",
-      "Volume": "8800"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "27.57",
-      "Adj Close": "26.09",
-      "Volume": "31300"
     }
   ]
 }

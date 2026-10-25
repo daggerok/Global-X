@@ -2,7 +2,7 @@
   "ticker": "SRET",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2917,
+  "totalRows": 2920,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-27",
+      "Close": "21.39",
+      "Adj Close": "15.41",
+      "Volume": "77267"
+    },
+    {
+      "Date": "2022-10-26",
+      "Close": "21.33",
+      "Adj Close": "15.36",
+      "Volume": "52200"
+    },
+    {
+      "Date": "2022-10-25",
+      "Close": "20.95",
+      "Adj Close": "15.09",
+      "Volume": "31067"
+    },
     {
       "Date": "2022-10-24",
       "Close": "20.25",
@@ -5991,24 +6009,6 @@
       "Close": "44.64",
       "Adj Close": "23.79",
       "Volume": "28833"
-    },
-    {
-      "Date": "2018-11-06",
-      "Close": "44.10",
-      "Adj Close": "23.50",
-      "Volume": "18167"
-    },
-    {
-      "Date": "2018-11-05",
-      "Close": "43.95",
-      "Adj Close": "23.42",
-      "Volume": "38033"
-    },
-    {
-      "Date": "2018-11-02",
-      "Close": "43.80",
-      "Adj Close": "23.18",
-      "Volume": "24767"
     }
   ]
 }

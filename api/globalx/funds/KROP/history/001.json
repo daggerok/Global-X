@@ -2,7 +2,7 @@
   "ticker": "KROP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1324,
+  "totalRows": 1327,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-23",
+      "Close": "34.22",
+      "Adj Close": "34.22",
+      "Volume": "1500"
+    },
+    {
+      "Date": "2026-10-22",
+      "Close": "34.12",
+      "Adj Close": "34.12",
+      "Volume": "100"
+    },
+    {
+      "Date": "2026-10-21",
+      "Close": "34.09",
+      "Adj Close": "34.09",
+      "Volume": "4000"
+    },
     {
       "Date": "2026-10-20",
       "Close": "33.93",
@@ -5991,24 +6009,6 @@
       "Close": "45.75",
       "Adj Close": "42.87",
       "Volume": "633"
-    },
-    {
-      "Date": "2022-10-27",
-      "Close": "45.39",
-      "Adj Close": "42.53",
-      "Volume": "667"
-    },
-    {
-      "Date": "2022-10-26",
-      "Close": "45.27",
-      "Adj Close": "42.42",
-      "Volume": "967"
-    },
-    {
-      "Date": "2022-10-25",
-      "Close": "44.70",
-      "Adj Close": "41.88",
-      "Volume": "467"
     }
   ]
 }

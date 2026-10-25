@@ -2,7 +2,7 @@
   "ticker": "URA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4012,
+  "totalRows": 4015,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-10-27",
+      "Close": "20.57",
+      "Adj Close": "17.96",
+      "Volume": "1805600"
+    },
+    {
+      "Date": "2022-10-26",
+      "Close": "21.00",
+      "Adj Close": "18.34",
+      "Volume": "1516300"
+    },
+    {
+      "Date": "2022-10-25",
+      "Close": "20.53",
+      "Adj Close": "17.93",
+      "Volume": "1068200"
+    },
     {
       "Date": "2022-10-24",
       "Close": "20.07",
@@ -5991,24 +6009,6 @@
       "Close": "13.21",
       "Adj Close": "10.40",
       "Volume": "869100"
-    },
-    {
-      "Date": "2018-11-06",
-      "Close": "12.98",
-      "Adj Close": "10.22",
-      "Volume": "611800"
-    },
-    {
-      "Date": "2018-11-05",
-      "Close": "12.87",
-      "Adj Close": "10.13",
-      "Volume": "640900"
-    },
-    {
-      "Date": "2018-11-02",
-      "Close": "12.46",
-      "Adj Close": "9.81",
-      "Volume": "372100"
     }
   ]
 }

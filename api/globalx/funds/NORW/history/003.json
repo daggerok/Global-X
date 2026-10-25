@@ -2,7 +2,7 @@
   "ticker": "NORW",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 4319,
+  "totalRows": 4322,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,24 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-11-06",
+      "Close": "21.05",
+      "Adj Close": "14.99",
+      "Volume": "1900"
+    },
+    {
+      "Date": "2018-11-05",
+      "Close": "21.02",
+      "Adj Close": "14.96",
+      "Volume": "200"
+    },
+    {
+      "Date": "2018-11-02",
+      "Close": "21.02",
+      "Adj Close": "14.96",
+      "Volume": "7500"
+    },
     {
       "Date": "2018-11-01",
       "Close": "20.99",
@@ -5991,24 +6009,6 @@
       "Close": "24.33",
       "Adj Close": "15.07",
       "Volume": "29400"
-    },
-    {
-      "Date": "2014-11-17",
-      "Close": "23.91",
-      "Adj Close": "14.81",
-      "Volume": "2600"
-    },
-    {
-      "Date": "2014-11-14",
-      "Close": "23.95",
-      "Adj Close": "14.83",
-      "Volume": "3400"
-    },
-    {
-      "Date": "2014-11-13",
-      "Close": "23.96",
-      "Adj Close": "14.84",
-      "Volume": "19700"
     }
   ]
 }
