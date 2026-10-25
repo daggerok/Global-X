@@ -1588,37 +1588,80 @@ export type ParsedHoldings = {
 };
 
 /**
- * Map the official CSV onto the shared holdings contract. The feed keeps the
- * provider's own `Weightings` percentage string, its `MarketValue` and its
- * `Shares` verbatim — including the negative values of written options.
+ * Header names of the official holdings CSV (lower case, the first one found wins): the seven-column
+ * sheet of most funds (`% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)`),
+ * the exposure sheet of the futures funds BITS and COMD (`Exposure (%),...,Price/Unit ($),Units Held,
+ * Exposure Amount ($),Market Value ($),Market Value (%)`) and the older export (GLOBALX_HOLDINGS_CSV_HEADERS).
+ * Market Value follows the weight column: the exposure sheet publishes Exposure Amount ($) next to Exposure (%).
+ */
+const GLOBALX_HOLDINGS_COLUMNS = {
+  weight: ['% of net assets', 'exposure (%)', 'weightings'],
+  ticker: ['ticker', 'stockticker'],
+  name: ['name', 'securityname'],
+  sedol: ['sedol'],
+  price: ['market price ($)', 'price/unit ($)', 'price'],
+  shares: ['shares held', 'units held', 'shares'],
+  marketValue: ['exposure amount ($)', 'market value ($)', 'marketvalue'],
+};
+
+/**
+ * Map the official CSV onto the shared holdings contract, reading every column by its header name, so a
+ * reordered sheet gives the same rows. The feed keeps the provider's own weight percentage, market value and
+ * shares verbatim, including the negative values of written options; rows without a numeric weight (the
+ * disclaimer line, cash rows of the exposure sheet) are left out. A sheet without a Name or weight column or
+ * without any holdings row throws, so the source counts as failed and the published fund is kept.
  */
 export function parseGlobalXHoldingsCsv(text: string): ParsedHoldings {
   const table = parseCsv(text);
-  const rows: Array<Record<string, string>> = [];
+  const known = ([] as string[]).concat(GLOBALX_HOLDINGS_COLUMNS.weight, GLOBALX_HOLDINGS_COLUMNS.name);
   let asOfDate = '';
-  for (const row of table) {
+  let headerAt = -1;
+  for (let index = 0; index < table.length && headerAt < 0; index += 1) {
+    const row = table[index];
     if (row[0]?.includes('Fund Holdings Data as of')) {
       const match = row[0].match(/as of\s+(\d{1,2}\/\d{1,2}\/\d{4})/i);
       if (match) asOfDate = toIsoDate(match[1]);
-      continue;
+    } else if (row.length > 1 && row.some((cell) => known.indexOf(cleanText(cell).toLowerCase()) >= 0)) {
+      headerAt = index;
     }
-    if (row.length < 7 || /% of Net Assets/i.test(row[0]) || /Holdings/i.test(row[0])) continue;
-    const weight = cleanText(row[0]);
+  }
+  if (headerAt < 0) throw new Error('holdings CSV: no header row with a Name or weight column');
+  const header = table[headerAt].map((cell) => cleanText(cell).toLowerCase());
+  const columnOf = (aliases: string[]): number => {
+    for (const alias of aliases) if (header.indexOf(alias) >= 0) return header.indexOf(alias);
+    return -1;
+  };
+  const at = {
+    weight: columnOf(GLOBALX_HOLDINGS_COLUMNS.weight),
+    ticker: columnOf(GLOBALX_HOLDINGS_COLUMNS.ticker),
+    name: columnOf(GLOBALX_HOLDINGS_COLUMNS.name),
+    sedol: columnOf(GLOBALX_HOLDINGS_COLUMNS.sedol),
+    price: columnOf(GLOBALX_HOLDINGS_COLUMNS.price),
+    shares: columnOf(GLOBALX_HOLDINGS_COLUMNS.shares),
+    marketValue: columnOf(GLOBALX_HOLDINGS_COLUMNS.marketValue),
+  };
+  if (at.name < 0 || at.weight < 0) {
+    throw new Error(`holdings CSV: no ${at.weight < 0 ? 'weight (% of Net Assets)' : 'Name'} column (headers: ${table[headerAt].map(cleanText).join(', ')})`);
+  }
+  const cell = (row: string[], index: number): string => (index < 0 ? '' : cleanText(row[index]));
+  const rows: Array<Record<string, string>> = [];
+  for (const row of table.slice(headerAt + 1)) {
+    const weight = cell(row, at.weight);
     if (!/^[-+]?\d+(?:\.\d+)?$/.test(weight)) continue;
-    const ticker = cleanText(row[1]);
-    const name = cleanText(row[2]);
-    const sedol = cleanText(row[3]);
+    const ticker = cell(row, at.ticker);
+    const name = cell(row, at.name);
     rows.push({
       Name: name,
       Ticker: ticker,
-      Identifier: sedol,
+      Identifier: cell(row, at.sedol),
       Weight: `${weight}%`,
-      'Market Value': cleanText(row[6]),
-      'Shares Held': cleanText(row[5]),
+      'Market Value': cell(row, at.marketValue),
+      'Shares Held': cell(row, at.shares),
       'Asset Category': globalxAssetCategory(ticker, name, ''),
-      Price: cleanText(row[4]),
+      Price: cell(row, at.price),
     });
   }
+  if (!rows.length) throw new Error('holdings CSV: no holdings rows under the header');
   return { headers: [...HOLDINGS_HEADERS], rows, asOfDate, netAssets: null, sharesOutstanding: null, creationUnits: null, totalRows: rows.length };
 }
 export type NportPosition = { name: string; ticker: string; cusip: string; balance: number | null; valueUsd: number | null; percent: number | null; assetCategory: string };
