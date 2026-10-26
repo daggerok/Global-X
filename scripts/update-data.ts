@@ -1535,16 +1535,29 @@ const OCC_OPTION = /^[A-Z0-9]{1,6}\s+\d{6}[CP]\d{8}$/;
 const FUTURE_CODE = /^[A-Z0-9]{1,5} ?[FGHJKMNQUVXZ]\d{1,2} (?:Comdty|Curncy|Index)$/i;
 /** `PNFP 7.68764 PERP`, `NRUC 5 1/2 05/15/64`, `DTE 4 3/8 12/01/2081` - a Bloomberg preferred or bond description (issuer, coupon, PERP or maturity). */
 const DEBT_NAME = /^\S+ (?:FLOAT|FRN|\d+(?:\.\d+)?|\d+ \d+\/\d+|\d+\/\d+) (?:PERP|\d{1,2}\/\d{1,2}\/(?:\d{2}|\d{4}))$/i;
+/** `2324462D` (a Cartesian CVR), `2200963D` (an OmniAb earnout) - a Bloomberg internal id, digits and a letter, not an exchange ticker. */
+const BLOOMBERG_ID = /^\d{5,}[A-Z]$/i;
+
+/**
+ * A cash line: `CASH` (or `CASH & OTHER`) as the name, or as the ticker of a row whose name is blank or says cash, dollar or
+ * currency. `CASH` alone is also Pathward Financial's Nasdaq ticker (RSSL `CASH,PATHWARD FINANCIAL INC`): that row is a stock.
+ */
+function globalxCashLine(ticker: string, name: string): boolean {
+  const cash = /^cash(?:\s*&\s*other|\s+and\s+other)?$/i;
+  return cash.test(name) || (cash.test(ticker) && (!name || /\b(?:cash|dollars?|currency|usd)\b/i.test(name)));
+}
 
 /**
  * The published Ticker of a holdings CSV row (GLOBALX-3). The CSV ticker is a Bloomberg code: bare for a U.S. listing (`ABBV`,
  * `BRK/B`) and qualified with the exchange of a foreign listing (`RO SW`, `2330 TT`), so both stay as published. The CSV also
  * gives a preferred or bond the issuer's equity ticker (PFFD `PNFP 7.68764 PERP` -> `PNFP`) and a future its contract code
- * (`BTCV6 Curncy`): those rows and rows without a code publish `-`, so the Watchlist never merges them with a common share.
+ * (`BTCV6 Curncy`), a CVR or earnout a Bloomberg internal id (`2324462D`) and a cash line `CASH`: those rows and rows without
+ * a code publish `-`, so the Watchlist never merges them with a common share.
  */
 export function globalxHoldingTicker(ticker: string, securityName: string): string {
   const code = cleanText(ticker);
-  return !code || FUTURE_CODE.test(code) || DEBT_NAME.test(cleanText(securityName)) ? '-' : code;
+  const name = cleanText(securityName);
+  return !code || FUTURE_CODE.test(code) || BLOOMBERG_ID.test(code) || DEBT_NAME.test(name) || globalxCashLine(code, name) ? '-' : code;
 }
 
 /**
@@ -1555,7 +1568,7 @@ export function globalxHoldingTicker(ticker: string, securityName: string): stri
 export function globalxAssetCategory(stockTicker: string, securityName: string, moneyMarketFlag: string): string {
   const ticker = cleanText(stockTicker);
   const name = cleanText(securityName);
-  if (/^y$/i.test(cleanText(moneyMarketFlag)) || /^cash(?:\s*&\s*other|\s+and\s+other)?$/i.test(ticker) || /^cash(?:\s*&\s*other|\s+and\s+other)?$/i.test(name) || /other payable & receivable/i.test(name)) return 'Cash';
+  if (/^y$/i.test(cleanText(moneyMarketFlag)) || globalxCashLine(ticker, name) || /other payable & receivable/i.test(name)) return 'Cash';
   if (OCC_OPTION.test(ticker)) return 'Option';
   if (FUTURE_CODE.test(ticker)) return 'Future';
   if (/treasury|t-bill|t bill/i.test(name)) return 'Treasury';
@@ -1687,8 +1700,8 @@ function loadCompanyNames(config: UpdaterConfig): Promise<Map<string, string>> {
 
 /**
  * The Global X holdings sheet (HOLDINGS_HEADERS) of an N-PORT filing: a missing number stays empty (never 0), the weight
- * carries the CSV sheet's percent sign, a missing text is '-'. Tickers come from nportTickers (U.S. equities traded in USD
- * only) and never go to a preferred (EP), the Identifier is the position's own CUSIP, ISIN or other code, the Asset Category
+ * carries the CSV sheet's percent sign, a missing text is '-'. Tickers come from nportTickers (U.S. common stock traded in
+ * USD only, never a preferred, so PFFD keeps GLOBALX-3), the Identifier is the position's own CUSIP, ISIN or other code, the Asset Category
  * the filing's assetCat code.
  */
 export function nportHoldingsSheet(filing: NportFiling, tickers: ReadonlyArray<string>): Array<Record<string, string>> {
@@ -1696,8 +1709,7 @@ export function nportHoldingsSheet(filing: NportFiling, tickers: ReadonlyArray<s
     const weight = nportCell(position.weight);
     return {
       Name: position.name || '-',
-      // a preferred (EP) gets no ticker: the name match would give it the issuer's common share (GLOBALX-3, PFFD)
-      Ticker: (position.assetCat === 'EP' ? '' : tickers[index]) || '-',
+      Ticker: tickers[index] || '-',
       Identifier: nportIdentifier(position) || '-',
       Weight: weight ? `${weight}%` : '',
       'Market Value': nportCell(position.value, 2),
@@ -2998,8 +3010,8 @@ export function withoutClosedFunds<T>(queue: ReadonlyArray<T>, tickerOf: (item: 
  * - identifiers come from the position itself: `<cusip>` text (or a `value` attribute), `<isin value>`, `<ticker value>`,
  *   `<other value>`; a derivative's reference instrument (inside `<derivativeInfo>`) never lends its identifiers to the position
  * - CUSIP `000000000` and `N/A` are missing; a missing weight or value is null (an empty cell), never 0
- * - a ticker only for an equity row (assetCat EC or EP) traded in USD with a U.S. ISIN or none, and never one ticker on two
- *   different securities (`nportTickers`)
+ * - a ticker only for a common-stock row (assetCat EC, not a CVR, right, warrant or escrow line) traded in USD with a U.S.
+ *   ISIN or none, and never one ticker on two different securities (`nportTickers`)
  * - identity: the filing must name the fund's own series id, or, with no series id known, the fund's name (`nportIdentity`)
  * - freshness: the report period must be strictly newer than the published holdings (`nportIsFresh`)
  * - filings come newest report period first from the registrant's own archive folder, never from the filer agent's CIK
@@ -3145,11 +3157,17 @@ export function parseNportFiling(xml: string): NportFiling {
   };
 }
 
-/** A number as sheet text: '' for null, no exponent, at most `digits` decimals (trailing zeros dropped). */
+/**
+ * A number as sheet text: '' for null, no exponent, at most `digits` decimals (trailing zeros dropped), and no binary float
+ * artifact: `115797518.01` stays `115797518.01`, not the `115797518.01000001` of `toFixed(8)`.
+ */
 export function nportCell(value: number | null, digits = 8): string {
   if (value === null || !Number.isFinite(value)) return '';
-  const text = value.toFixed(digits);
-  return text.indexOf('.') < 0 ? text : text.replace(/0+$/, '').replace(/\.$/, '');
+  const fixed = value.toFixed(digits);
+  // the shortest text of the rounded number; toFixed only where that text would be an exponent (very small or large numbers)
+  const shortest = String(Number(fixed));
+  if (!/e/i.test(shortest)) return shortest;
+  return fixed.indexOf('.') < 0 ? fixed : fixed.replace(/0+$/, '').replace(/\.$/, '');
 }
 
 /** The position's own identifier for a sheet: CUSIP, else ISIN, else the "other" code (a Bloomberg or internal id), else ''. */
@@ -3164,8 +3182,9 @@ export function nportIdentifier(position: NportPosition): string {
  * `BANCORP, INC.`), so both spellings of one issuer give one key.
  */
 export function nportNameKey(value: unknown): string {
-  // EDGAR adds a state or qualifier suffix to company titles ("COSTCO WHOLESALE CORP /NEW", "BANK OF AMERICA CORP /DE/", "US BANCORP \DE\"): drop a trailing one
-  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*[\/\\]\s*[A-Za-z]{2,3}\s*[\/\\]?)+\s*$/, '');
+  // EDGAR adds a state or qualifier suffix to company titles ("COSTCO WHOLESALE CORP /NEW", "BANK OF AMERICA CORP /DE/",
+  // "US BANCORP \DE\", "ACUITY INC. (DE)"): drop a trailing one
+  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*(?:[\/\\]\s*[A-Za-z]{2,3}\s*[\/\\]?|\(\s*[A-Za-z]{2,3}\s*\)))+\s*$/, '');
   let text = nportText(raw).toUpperCase().replace(/['’]/g, '').replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, ' ').trim();
   text = text.replace(/\bCLASS\s+([A-Z])\b/g, 'CL $1').replace(/\bCL\s+([A-Z])\b/g, 'CL $1');
   // a run of single letters is one word, never the class letter after CL
@@ -3221,8 +3240,21 @@ export function parseSecFundTickers(payload: unknown): Map<string, NportSeriesRe
 }
 
 /**
- * Exchange tickers for the positions, in their order ('' for none). A ticker is given only to an equity row (assetCat EC or
- * EP) traded in USD (or with no currency) whose ISIN is U.S. or missing: first the filer's own `<ticker value>`, else the
+ * Is the row a contingent value right, a right, a warrant or an escrow line filed as equity? A placeholder CUSIP or ISIN
+ * (`436CVR021`, `US009CVR0445`, `549ESC028`, `866CNT017`) says so; so does the name or title (`NOVO NORDISK A/S - CVR`,
+ * `XYZ INC RIGHTS`, `... WARRANT FEB 2026`, `Luby's Inc Escrow`), except on a CUSIP with the common-stock issue number 10
+ * (Schwab titles Enovix common stock 293594107 "Enovix Corp Warrants"). `CVR` as the first word is a company (CVR Energy).
+ */
+function nportIsRight(position: NportPosition): boolean {
+  if (/^[0-9A-Z]{3}(?:CVR|ESC|CNT)/.test(position.cusip) || /^US[0-9A-Z]{3}(?:CVR|ESC|CNT)/.test(position.isin)) return true;
+  if (/^[0-9A-Z]{6}10[0-9]$/.test(position.cusip)) return false;
+  return [position.name, position.title].some((text) => /\S\s*\bCVRS?\b|\bCONTINGENT\b|\bRIGHTS?\b|\bRTS\b|\bWARRANTS?\b|\bWTS\b|\bESCROW\b/i.test(text));
+}
+
+/**
+ * Exchange tickers for the positions, in their order ('' for none). A ticker is given only to a common-stock row (assetCat
+ * EC; a preferred EP, a CVR, right, warrant or escrow line gets none, a name match would give it the issuer's common ticker)
+ * traded in USD (or with no currency) whose ISIN is U.S. or missing: first the filer's own `<ticker value>`, else the
  * SEC issuer-name table (`names`) when the row has a CUSIP or a U.S. ISIN. A ticker that lands on two different securities
  * (Alphabet A and C, an ordinary share and its ADR) is dropped from the name-matched rows; when the filer itself gave it
  * to two securities it is dropped from all of them. Bonds, cash, funds and derivatives stay identifier-keyed.
@@ -3231,7 +3263,7 @@ export function nportTickers(positions: ReadonlyArray<NportPosition>, names: Map
   const fromFiler: boolean[] = [];
   const tickers = positions.map((position, index) => {
     fromFiler[index] = false;
-    const equity = (position.assetCat === 'EC' || position.assetCat === 'EP') && !position.derivative;
+    const equity = position.assetCat === 'EC' && !position.derivative && !nportIsRight(position);
     const usd = !position.currency || position.currency === 'USD';
     if (!equity || !usd || (position.isin && position.isin.slice(0, 2) !== 'US')) return '';
     if (/^[A-Z][A-Z0-9.-]{0,9}$/.test(position.ticker)) {
