@@ -1510,8 +1510,7 @@ export const GLOBALX_HOLDINGS_CSV_HEADERS = [
 export const HOLDINGS_HEADERS = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category'] as const;
 /** Funds whose holdings legitimately fail a holdingsGuard check (geared, futures, look-through, top-N lists): ticker, or '*' for every fund -> relaxed checks. */
 const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {
-  // Futures strategy funds: the futures exposure plus the T-bill collateral add up to 160-175. Every other published Global X fund passes today.
-  BTRN: ['sum'],
+  // Futures strategy fund: the futures exposure plus the T-bill collateral add up to 160-175. Every other published Global X fund passes today.
   COMD: ['sum'],
 };
 /** Funds the issuer closed, each confirmed from an SEC filing or the issuer notice (`source`): never fetched or guarded, last published data kept, index row marked closed. */
