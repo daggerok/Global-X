@@ -304,7 +304,8 @@ describe("metrics", () => {
     const row = withMetricsContract({ nav: { asOfDate: "Sep 25 2026" }, returns: { monthEnd: { asOfDate: "Aug 31 2026" } }, metrics: { ytd: 6.6, returnsBasis: "-", dividendYieldText: "0.89%" } });
     expect(row.metrics.performanceAsOf).toBe("2026-08-31");
     expect(row.metrics.returnsBasis).toBe(OFFICIAL_RETURNS_BASIS);
-    expect(Object.keys(row.metrics)).toEqual(["ytd", "dividendYieldText", "tr1y", "tr3y", "tr5y", "tr10y", "cagr3y", "cagr5y", "cagr10y", "siAnn", "dividendYield", "secYield", "dividendYieldBasis", "returnsBasis", "performanceAsOf"]);
+    expect(Object.keys(row.metrics)).toEqual(["ytd", "tr1y", "tr3y", "tr5y", "tr10y", "cagr3y", "cagr5y", "cagr10y", "siAnn", "dividendYield", "dividendYieldText", "distributionYield", "distributionYieldText", "yield12M", "yield12MText", "secYield", "secYieldText", "dividendYieldBasis", "returnsBasis", "performanceAsOf"]);
+    expect([row.metrics.dividendYieldText, row.metrics.secYieldText, row.metrics.yield12M]).toEqual(["0.89%", "—", null]);
   });
 
   test("dividendYieldBasis is the official distribution rate code exactly when dividendYield is a number, same keys on every row", async () => {
@@ -668,6 +669,34 @@ describe("pipeline 3", () => {
     await run(other, {}, { deadlineMs: -1 });
     expect(index(other).funds).toHaveLength(3);
     expect(index(other).funds.every((f: any) => f.dataFile === null)).toBe(true);
+  });
+
+  test("a new fund no source answered is failed with a catalog-only row and no files; that row is never read back as published data", async () => {
+    const dir = fresh(); quiet();
+    const lineup = (pageOk: boolean): MockFund[] => [...THREE, { ticker: "NEWF", name: "New Index ETF", pageOk }];
+    installMock(() => lineup(false));
+    await run(dir);
+    const row = (ticker: string) => index(dir).funds.find((f: any) => f.ticker === ticker);
+    const catalogOnly = () => {
+      expect(row("NEWF")).toMatchObject({ dataFile: null, holdings: 0, history: 0 });
+      expect(Object.keys(row("NEWF").metrics)).toEqual(Object.keys(row("AAA").metrics));
+      expect(existsSync(join(dir, "funds", "NEWF"))).toBe(false);
+    };
+    catalogOnly();
+    // the next runs read that catalog-only row: fund page down with SKIP_YAHOO, then SKIP_GLOBALX (no published data to keep) - still failed
+    const silent: Array<Record<string, string>> = [{ SKIP_YAHOO: "true" }, { SKIP_GLOBALX: "true" }, { SKIP_GLOBALX: "true", SKIP_YAHOO: "true" }];
+    for (const env of silent) {
+      await expect(run(dir, { TICKERS: "NEWF", ...env })).rejects.toThrow(/every selected fund failed \(1 of 1\)/);
+      catalogOnly();
+    }
+    // an older catalog-only row with placeholders: the first good refresh builds its row from the new meta.json only
+    const idx = index(dir);
+    idx.funds = idx.funds.map((f: any) => f.ticker === "NEWF" ? { ...f, asOfDate: "—", note: "catalog only" } : f);
+    writeFileSync(join(dir, "index.json"), JSON.stringify(idx));
+    installMock(() => lineup(true));
+    await run(dir, { TICKERS: "NEWF" });
+    expect(row("NEWF")).toMatchObject({ dataFile: "./funds/NEWF/meta.json", asOfDate: row("AAA").asOfDate, holdings: 2, history: 2 });
+    expect(Object.keys(row("NEWF")).sort()).toEqual(Object.keys(row("AAA")).sort());
   });
 
   test("writeIfChanged goes through a temp file and leaves only the target", async () => {
