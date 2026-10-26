@@ -56,7 +56,7 @@ The **Update Global X ETF data** GitHub Actions workflow (`.github/workflows/upd
 | NAV-basis performance | Official fund-page React Flight payload (Returns tables: `avgAnnualized` and `cumulative` per cadence) | Month-end and quarter-end annualized and cumulative Fund NAV, Market Price and Index values are copied from the provider payload. The catalog stores published annualized values and the app renders the same return rows as the sibling applications. |
 | Distribution history and frequency | Official fund-page React Flight payload (Distribution History `distributions`) | Ex-date, record date, payable date and amount are kept in newest-first order. Global X does not publish a declaration date, so that shared row stays blank. Since 2026-10 the page prints amounts rounded to cents; a row already published with the exact amount keeps it while the page shows the same figure rounded, new rows carry the printed amount. |
 | Daily price history (Date / Close / Adj Close / Volume) | [Yahoo Finance chart API](https://query1.finance.yahoo.com/v8/finance/chart/) | Used for the paginated history sheets and as the market-price fallback. Adjusted close is rounded to two decimals before writing. |
-| Holdings fallback | SEC EDGAR Form **N-PORT-P**, [Global X Funds CIK 0001432353](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10), file 811-22209 | Used only when the official holdings CSV is unavailable and `EDGAR_FALLBACK` is enabled; off by default. |
+| Holdings fallback | SEC EDGAR Form **N-PORT-P** (`primary_doc.xml` in the trust's own EDGAR folder), Global X Funds CIK 0001432353, file 811-22209; the fund's series from SEC's [`company_tickers_mf.json`](https://www.sec.gov/files/company_tickers_mf.json) | Used only when the official holdings CSV is unavailable and `EDGAR_FALLBACK` is enabled (off by default), only for a filing that names the fund's own series (its name only when SEC lists no series for the ticker) and only when its report period is strictly newer than the published holdings date (the issuer CSV's as-of day, or an earlier report period); the newest report period is read first. `meta.json` names the document in `source.nportDoc` (no key for a sheet from the issuer CSV). |
 | Dividend-history fallback | Yahoo Finance dividend events | Used only when Global X publishes no distribution-history rows; the feed marks those rows `distributions.fallback: true`. |
 
 The official Global X page was live-verified as a server-rendered Next.js shell with real catalog/fund values in React Flight payloads. No WAF proxy is used. Requests are bounded, retried, and paced by the configured per-worker lanes.
@@ -65,11 +65,13 @@ The official Global X page was live-verified as a server-rendered Next.js shell 
 
 #### The daily holdings CSV
 
-The CSV is parsed with a dependency-free RFC-4180 reader that tolerates the BOM, CRLF and quoted fields. Global X publishes SEDOL for holdings rather than a separate asset-class column, so `Asset Category` is derived conservatively from the row's own name/ticker: cash/payables, Treasury, fund, option-like and otherwise equity. Provider values are otherwise preserved in the generated sheets.
+The CSV is parsed with a dependency-free RFC-4180 reader that tolerates the BOM, CRLF and quoted fields. Global X publishes SEDOL for holdings rather than a separate asset-class column, so `Asset Category` is derived conservatively from the row's own name/ticker: cash/payables, futures (a Bloomberg contract code such as `BTCV6 Curncy`, `COF7 Comdty` or `NQZ6 Index`), Treasury, fund, option-like and otherwise equity. The CSV ticker is a Bloomberg code, bare for a U.S. listing (`ABBV`, `BRK/B`) and qualified with the exchange of a foreign listing (`RO SW`, `2330 TT`), and both are published as they are. The CSV also puts the issuer's equity ticker on preferreds and bonds (PFFD `PNFP 7.68764 PERP` carries `PNFP`) and the contract code on futures: those rows, and rows without a code (cash, currencies), publish Ticker `-`, so the Watchlist never merges a preferred or a future with the issuer's common share. Provider values are otherwise preserved in the generated sheets.
+
+An N-PORT sheet (the EDGAR fallback) keeps the position's own identifiers (CUSIP, else ISIN, else the filing's other code; a derivative never takes its reference security's CUSIP or ticker), uses the filing's asset category code (`EC`, `DBT`, ...), sets a ticker only for a U.S. common share traded in USD (never for a preferred, which the issuer-name match would give the common share ticker) and never on two different securities, and leaves a missing weight, value or balance empty, never `0`.
 
 #### Return arithmetic
 
-The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 years (`TEN_YEAR`) plus since inception, and cumulative monthly/quarterly readings. The feed keeps both readings and does not extrapolate a missing tenor; unavailable values remain `null` and the app renders `—`. A horizon longer than the fund's age at the performance date is `null`, and `siAnn` needs at least one year of history.
+The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 years (`TEN_YEAR`) plus since inception, and cumulative monthly/quarterly readings. The feed keeps both readings and does not extrapolate a missing tenor; unavailable values remain `null` and the app renders `—`. A fund younger than a horizon (calendar anniversary of its inception, inclusive, at the performance date) publishes no return for it: no 1-year or since-inception return before the first anniversary, no 3, 5 or 10-year one before those. Dates are read as plain calendar text (`2026-10-24`, `10/24/2026`, `10/24/26`, `Oct 24, 2026`, `24 Oct 2026`), never through the local time zone, so local runs match CI.
 
 #### Returns provenance fields
 
@@ -92,12 +94,12 @@ Every `funds[].metrics` object also carries `dividendYieldBasis`, a short code f
 #### Publishing rules
 
 - Each fund is computed completely in memory and published as a whole: page files first, then `meta.json`, then the index row, and stale pages are removed only after the new `meta.json` is written. A fund page without fund details, or any other failure, keeps the previously published state of that fund
-- A failed or skipped Yahoo read keeps the published history instead of publishing an empty one; the EDGAR fallback only accepts a filing of the same series and never replaces fresher holdings
+- A failed or skipped Yahoo read keeps the published history instead of publishing an empty one; the EDGAR fallback only accepts a filing of the fund's own series and never replaces holdings that are as new or newer
 - JSON is written through a temp file and a rename. `generatedAt` and `update-state.json` move only when content moved, so a rerun with identical upstream data is a zero-byte diff
 - A row without `funds/<T>/meta.json` has `dataFile: null` and a full `metrics` object (all numbers `null`, non-empty `returnsBasis`)
 - `terValue` is the net expense ratio (the lineup `NET_EXP`, else `GROSS_EXP`), `terGrossValue` is the published gross ratio (`GROSS_EXP`)
 - Scheduled future distribution rows with an empty amount are dropped; a distribution rate of 0 is `null`
-- Funds new in the lineup are printed as `NEW FUNDS: A, B` and appended to the workflow step summary
+- `NEW FUNDS: A, B` is printed (and added to the workflow step summary) when a fund is published for the first time, also when its first read failed and a later run succeeds; `NEW FUNDS (not published yet): C` names new lineup funds whose first read failed. A catalog-only row that the lineup no longer lists (for example an old mistyped `TICKERS` entry) is dropped
 - Every request attempt has a 45 second deadline that also covers reading the body; the run stops taking new funds after 25 minutes and still writes the index
 
 #### Known value limitations
@@ -116,14 +118,14 @@ Every `funds[].metrics` object also carries `dividendYieldBasis`, a short code f
 | Environment variable | Default | Meaning |
 | --- | ---: | --- |
 | `MAX_FETCHES` | `0` | Funds to process; `0` means a full pass. A positive value takes the next funds of the filtered set after the saved cursor in `api/globalx/update-state.json` and wraps around at the end. The cursor counts funds that pass the lineup filters (ticker, category, AUM, TER); yield and return filters are evaluated per fund after its page is read. A `TICKERS` run never reads, moves or deletes the cursor. |
-| `TICKERS` | `""` | Space/comma-separated ticker allowlist, combined with all other filters. A ticker the lineup does not list is an error. |
+| `TICKERS` | `""` | Space/comma-separated ticker allowlist, combined with all other filters. A ticker that is neither in the live lineup nor a published fund (a closed fund keeps its data) is an error before any fund request (nothing is written). |
 | `CATEGORY` | `""` | Substring match on the official `THEME / SUB_THEME` category. |
 | `AUM` / `TER` / `DIVIDEND_YIELD` / `SEC_YIELD` | `:` | Strict `min:max` ranges; `AUM` also accepts `nano`, `micro`, `small`, `mid` and `large`. `DIVIDEND_YIELD` and `SEC_YIELD` use the fund-page values, so a fund without that figure is excluded. |
 | `PERFORMANCE_YTD` … `PERFORMANCE_10Y` / `TOTAL_RETURN_YTD` … `TOTAL_RETURN_10Y` | `:` | `min:max` filters on official/derived return values; a fund with no value for a bounded range is excluded, and an excluded fund keeps its published files. |
 | `CONCURRENCY` / `REQUEST_SLEEP` | `2` / `2` | Per-worker request lanes and the minimum seconds between request starts within each lane; keep `REQUEST_SLEEP` at 2 or more, globalxetfs.com resets bursts. |
 | `HOLDINGS_PAGE_SIZE` / `HISTORY_PAGE_SIZE` | `250` / `1000` | Rows per generated JSON page. |
 | `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 408/425/429/5xx; integer >= 1. |
-| `HISTORY_RANGE` | `max` | Yahoo daily history window: `max` or `<N>y`, sent as an explicit `period1`/`period2` (Yahoo ignores `range` when `period1=0`). Any other value is an error. |
+| `HISTORY_RANGE` | `max` | Yahoo daily history window: `max` or `<N>y`, sent as an explicit `period1`/`period2` (Yahoo ignores `range` when `period1=0`). Any other value is an error. A window keeps the older published history (Adj Close rescaled by the overlapping days), and a window that does not join it keeps the published history. |
 | `EDGAR_FALLBACK` | `false` | Use SEC N-PORT-P if a holdings CSV is unavailable; off by default because EDGAR can reject GitHub-hosted runners. |
 | `SKIP_YAHOO` / `SKIP_GLOBALX` | `false` | `SKIP_YAHOO` keeps the published history. `SKIP_GLOBALX` keeps every published figure and only refreshes the Yahoo history of already published funds. |
 | `STORE_RAW_DOWNLOADS` | `false` | Keep raw catalog, fund pages and CSV samples under `api/globalx/raw`. |

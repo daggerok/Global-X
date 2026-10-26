@@ -277,10 +277,6 @@ export function globalxProvenanceHoldingsUrl(ticker: string, html?: string): str
   return globalxHoldingsCsvUrl(ticker, html);
 }
 
-export function globalxEdgarFilingsUrl(cik: string = GLOBALX_ETF_TRUST_CIK): string {
-  return `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${cik}&type=NPORT-P&dateb=&owner=include&count=10`;
-}
-
 export const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 
 /** `max` or `<N>y`; anything else is rejected instead of silently falling back to the full history. */
@@ -390,51 +386,19 @@ export function formatMoneyText(value: number | null): string {
   return value === null ? '—' : `$${value.toFixed(2)}`;
 }
 
-/**
- * A return over `years` is only meaningful when the fund is at least that old at
- * the performance date (siAnn needs one year). Unknown dates leave the value as
- * published.
- */
-export function horizonValue(value: number | null | undefined, inceptionIso: string, asOfIso: string | null, years: number): number | null {
-  if (value === null || value === undefined) return null;
-  if (!inceptionIso || !asOfIso) return value;
-  const start = Date.parse(`${inceptionIso}T00:00:00Z`);
-  const end = Date.parse(`${asOfIso}T00:00:00Z`);
-  if (!Number.isFinite(start) || !Number.isFinite(end)) return value;
-  return end - start >= years * 365 * 86_400_000 ? value : null;
-}
-
 export function formatPercentText(value: number | null, digits = 2): string {
   return value === null ? '—' : `${value.toFixed(digits)}%`;
 }
 
 /** `08/29/2022` -> `Aug 29 2022`; ISO and `August 29, 2022` also accepted. */
 const MONTH_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const MONTH_LONG = [
-  'january', 'february', 'march', 'april', 'may', 'june',
-  'july', 'august', 'september', 'october', 'november', 'december',
-];
 
 export function toIsoDate(raw: unknown): string {
   const text = cleanText(raw);
   const flightDate = /^\$D(\d{4}-\d{2}-\d{2})/.exec(text);
   if (flightDate) return flightDate[1];
-  if (!text) return '';
-  let m = /^(\d{4})-(\d{2})-(\d{2})/.exec(text);
-  if (m) return `${m[1]}-${m[2]}-${m[3]}`;
-  m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(text);
-  if (m) return `${m[3]}-${m[1].padStart(2, '0')}-${m[2].padStart(2, '0')}`;
-  m = /^([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})$/.exec(text);
-  if (m) {
-    const index = MONTH_LONG.indexOf(m[1].toLowerCase());
-    if (index >= 0) return `${m[3]}-${String(index + 1).padStart(2, '0')}-${m[2].padStart(2, '0')}`;
-  }
-  m = /^([A-Za-z]{3})\w*\s+(\d{1,2}),?\s+(\d{4})$/.exec(text);
-  if (m) {
-    const index = MONTH_SHORT.findIndex((month) => month.toLowerCase() === m![1].toLowerCase());
-    if (index >= 0) return `${m[3]}-${String(index + 1).padStart(2, '0')}-${m[2].padStart(2, '0')}`;
-  }
-  return '';
+  // ISO, U.S. and month-name dates: pure calendar text, the same day in every time zone (shared calendar-dates block)
+  return calendarIso(text) ?? '';
 }
 
 /** `08/29/2022` -> `Aug 29 2022`. Returns the cleaned input when unparseable. */
@@ -1509,7 +1473,7 @@ export const GLOBALX_HOLDINGS_CSV_HEADERS = [
 
 export const HOLDINGS_HEADERS = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category'] as const;
 /** Funds whose holdings legitimately fail a holdingsGuard check (geared, futures, look-through, top-N lists): ticker, or '*' for every fund -> relaxed checks. */
-const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {
+export const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {
   // Futures strategy fund: the futures exposure plus the T-bill collateral add up to 160-175. Every other published Global X fund passes today.
   COMD: ['sum'],
 };
@@ -1567,6 +1531,21 @@ export function parseCsv(text: string): string[][] {
 
 /** `"SPXW  261001P07075000"` — an OCC option symbol (root, padded date, C/P, strike). */
 const OCC_OPTION = /^[A-Z0-9]{1,6}\s+\d{6}[CP]\d{8}$/;
+/** `BTCV6 Curncy`, `COF7 Comdty`, `S F7 Comdty`, `NQZ6 Index` - a Bloomberg futures contract code (root, month letter, year, yellow key). */
+const FUTURE_CODE = /^[A-Z0-9]{1,5} ?[FGHJKMNQUVXZ]\d{1,2} (?:Comdty|Curncy|Index)$/i;
+/** `PNFP 7.68764 PERP`, `NRUC 5 1/2 05/15/64`, `DTE 4 3/8 12/01/2081` - a Bloomberg preferred or bond description (issuer, coupon, PERP or maturity). */
+const DEBT_NAME = /^\S+ (?:FLOAT|FRN|\d+(?:\.\d+)?|\d+ \d+\/\d+|\d+\/\d+) (?:PERP|\d{1,2}\/\d{1,2}\/(?:\d{2}|\d{4}))$/i;
+
+/**
+ * The published Ticker of a holdings CSV row (GLOBALX-3). The CSV ticker is a Bloomberg code: bare for a U.S. listing (`ABBV`,
+ * `BRK/B`) and qualified with the exchange of a foreign listing (`RO SW`, `2330 TT`), so both stay as published. The CSV also
+ * gives a preferred or bond the issuer's equity ticker (PFFD `PNFP 7.68764 PERP` -> `PNFP`) and a future its contract code
+ * (`BTCV6 Curncy`): those rows and rows without a code publish `-`, so the Watchlist never merges them with a common share.
+ */
+export function globalxHoldingTicker(ticker: string, securityName: string): string {
+  const code = cleanText(ticker);
+  return !code || FUTURE_CODE.test(code) || DEBT_NAME.test(cleanText(securityName)) ? '-' : code;
+}
 
 /**
  * A factual position type for the Watchlist. Global X publishes no asset-class
@@ -1578,6 +1557,7 @@ export function globalxAssetCategory(stockTicker: string, securityName: string, 
   const name = cleanText(securityName);
   if (/^y$/i.test(cleanText(moneyMarketFlag)) || /^cash(?:\s*&\s*other|\s+and\s+other)?$/i.test(ticker) || /^cash(?:\s*&\s*other|\s+and\s+other)?$/i.test(name) || /other payable & receivable/i.test(name)) return 'Cash';
   if (OCC_OPTION.test(ticker)) return 'Option';
+  if (FUTURE_CODE.test(ticker)) return 'Future';
   if (/treasury|t-bill|t bill/i.test(name)) return 'Treasury';
   if (/\betf\b|exchange[- ]traded|\bfund\b|\btrust\b/i.test(name)) return 'Fund';
   return 'Equity';
@@ -1658,7 +1638,7 @@ export function parseGlobalXHoldingsCsv(text: string): ParsedHoldings {
     const name = cell(row, at.name);
     rows.push({
       Name: name,
-      Ticker: ticker,
+      Ticker: globalxHoldingTicker(ticker, name),
       Identifier: cell(row, at.sedol),
       Weight: `${weight}%`,
       'Market Value': cell(row, at.marketValue),
@@ -1670,56 +1650,59 @@ export function parseGlobalXHoldingsCsv(text: string): ParsedHoldings {
   if (!rows.length) throw new Error('holdings CSV: no holdings rows under the header');
   return { headers: [...HOLDINGS_HEADERS], rows, asOfDate, netAssets: null, sharesOutstanding: null, creationUnits: null, totalRows: rows.length };
 }
-export type NportPosition = { name: string; ticker: string; cusip: string; balance: number | null; valueUsd: number | null; percent: number | null; assetCategory: string };
+// ---------------------------------------------------------------------------
+// SEC EDGAR Form N-PORT-P fallback: the shared nport-reader block at the end of this file finds, reads and checks the filing
+// ---------------------------------------------------------------------------
 
-/** Text of the first <tag> element (an XML namespace prefix is tolerated), entities decoded; '' when absent. */
-function xmlTagText(xml: string, tag: string): string {
-  const escaped = tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const match = new RegExp(`<(?:[A-Za-z0-9_.-]+:)?${escaped}\\b[^>]*>([\\s\\S]*?)</(?:[A-Za-z0-9_.-]+:)?${escaped}\\s*>`, 'i').exec(xml);
-  return match ? cleanText(decodeHtmlEntities(match[1])) : '';
+export const SEC_FUND_TICKERS_URL = 'https://www.sec.gov/files/company_tickers_mf.json';
+export const SEC_COMPANY_TICKERS_URL = 'https://www.sec.gov/files/company_tickers.json';
+
+/** One run's SEC state: the two SEC ticker tables (each loaded once) and the N-PORT reader cache (submissions and documents). */
+let secState: { funds: Promise<Map<string, NportSeriesRef>> | null; names: Promise<Map<string, string>> | null; reader: Map<string, unknown> } = { funds: null, names: null, reader: new Map() };
+
+/** A fresh SEC state for a run (main and tests). */
+export function resetSecState(): void {
+  secState = { funds: null, names: null, reader: new Map() };
 }
 
-/** N-PORT carries a value either as the element text (<cusip>123</cusip>) or as an attribute (<ticker value="ABC"/>). */
-function xmlValue(xml: string, tag: string): string {
-  const escaped = tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const attribute = new RegExp(`<(?:[A-Za-z0-9_.-]+:)?${escaped}\\b[^>]*\\bvalue="([^"]*)"`, 'i').exec(xml);
-  return attribute ? cleanText(decodeHtmlEntities(attribute[1])) : xmlTagText(xml, tag);
-}
-
-export function parseNportXml(xml: string): { positions: NportPosition[]; repPdDate: string; seriesName: string | null } {
-  const repPdDate = xmlTagText(xml, 'repPdDate') || '';
-  const seriesName = xmlTagText(xml, 'seriesName');
-  const positions: NportPosition[] = [];
-  for (const block of xml.matchAll(/<invstOrSec\b[^>]*>([\s\S]*?)<\/invstOrSec>/gi)) {
-    const body = block[1];
-    const cusip = xmlValue(body, 'cusip') || '';
-    positions.push({
-      name: xmlTagText(body, 'name') || '',
-      ticker: xmlValue(body, 'ticker') || '',
-      cusip,
-      balance: numberOrNull(xmlValue(body, 'balance')),
-      valueUsd: numberOrNull(xmlValue(body, 'valUSD')),
-      percent: numberOrNull(xmlValue(body, 'pctVal')),
-      assetCategory: xmlTagText(body, 'assetCat') || '',
-    });
+/** SEC's fund ticker -> registrant CIK + series id table, loaded once per run (a failed load is asked again by the next fund). */
+function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSeriesRef>> {
+  if (!secState.funds) {
+    const loading = fetchText(SEC_FUND_TICKERS_URL, secHeaders(config), config, 'SEC fund ticker table').then((text) => parseSecFundTickers(JSON.parse(text)));
+    secState.funds = loading;
+    loading.catch(() => { if (secState.funds === loading) secState.funds = null; });
   }
-  return { positions, repPdDate, seriesName };
+  return secState.funds;
 }
 
-/** Fold N-PORT positions onto the shared holdings contract. */
-export function nportToHoldings(positions: NportPosition[], netAssets: number | null): Array<Record<string, string>> {
-  return positions.map((position) => {
-    const weight = position.percent === null
-      ? (netAssets && position.valueUsd !== null ? round((position.valueUsd / netAssets) * 100, 2) : null)
-      : position.percent;
+/** SEC's company name -> ticker table for the N-PORT rows, loaded once per run. */
+function loadCompanyNames(config: UpdaterConfig): Promise<Map<string, string>> {
+  if (!secState.names) {
+    const loading = fetchText(SEC_COMPANY_TICKERS_URL, secHeaders(config), config, 'SEC company ticker table').then((text) => parseSecCompanyNames(JSON.parse(text)));
+    secState.names = loading;
+    loading.catch(() => { if (secState.names === loading) secState.names = null; });
+  }
+  return secState.names;
+}
+
+/**
+ * The Global X holdings sheet (HOLDINGS_HEADERS) of an N-PORT filing: a missing number stays empty (never 0), the weight
+ * carries the CSV sheet's percent sign, a missing text is '-'. Tickers come from nportTickers (U.S. equities traded in USD
+ * only) and never go to a preferred (EP), the Identifier is the position's own CUSIP, ISIN or other code, the Asset Category
+ * the filing's assetCat code.
+ */
+export function nportHoldingsSheet(filing: NportFiling, tickers: ReadonlyArray<string>): Array<Record<string, string>> {
+  return filing.positions.map((position, index) => {
+    const weight = nportCell(position.weight);
     return {
-      Name: position.name,
-      Ticker: position.ticker,
-      Identifier: position.cusip || position.ticker,
-      Weight: weight === null ? '' : `${weight.toFixed(2)}%`,
-      'Market Value': position.valueUsd === null ? '' : formatMoneyText(position.valueUsd),
-      'Shares Held': position.balance === null ? '' : String(position.balance),
-      'Asset Category': cleanText(position.assetCategory) || 'Other',
+      Name: position.name || '-',
+      // a preferred (EP) gets no ticker: the name match would give it the issuer's common share (GLOBALX-3, PFFD)
+      Ticker: (position.assetCat === 'EP' ? '' : tickers[index]) || '-',
+      Identifier: nportIdentifier(position) || '-',
+      Weight: weight ? `${weight}%` : '',
+      'Market Value': nportCell(position.value, 2),
+      'Shares Held': nportCell(position.balance),
+      'Asset Category': position.assetCat || '-',
     };
   });
 }
@@ -1987,8 +1970,6 @@ function readNumber(entry: CatalogEntry, key: string): number | null {
   return typeof value === 'number' ? value : null;
 }
 
-const MAX_NPORT_FILINGS_SCANNED = 25;
-
 async function readJsonIfExists(file: string): Promise<any | null> {
   try { return JSON.parse(await readFile(file, 'utf8')); } catch { return null; }
 }
@@ -2024,14 +2005,6 @@ async function readPreviousHoldings(ticker: string, meta: Record<string, any> | 
     rows.push(...envelope.rows);
   }
   return { headers, rows };
-}
-
-/** `Global X Silver Miners ETF` (N-PORT series name) vs `Silver Miners ETF` (catalog name). */
-export function sameSeries(seriesName: string | null | undefined, fundName: string): boolean {
-  const norm = (value: string) => cleanText(value).toLowerCase().replace(/^global x\s+/, '').replace(/[^a-z0-9]+/g, '');
-  const a = norm(String(seriesName ?? ''));
-  const b = norm(fundName);
-  return a.length > 3 && b.length > 3 && (a === b || a.includes(b) || b.includes(a));
 }
 
 async function writeHistoryPages(fundDir: string, ticker: string, historyRows: Array<Record<string, string>>, config: UpdaterConfig, manifest: { pages: string[] }): Promise<boolean> {
@@ -2077,6 +2050,40 @@ export function yahooHistoryRows(parsed: ReturnType<typeof parseYahooChart>, pub
 }
 
 /**
+ * A HISTORY_RANGE window (`Ny`) never shrinks the published history: the shared windowed-chart block puts the published days
+ * older than the window behind the fresh ones (Adj Close rescaled by the overlapping days) and keeps the older published Yahoo
+ * dividends (`publishedDividends`: [date, amount] rows). Returns `parsed` unchanged for `max`, null when the window does not
+ * join the published history (the caller keeps the published history).
+ */
+export function windowedYahooChart(parsed: ReturnType<typeof parseYahooChart>, range: string, published: Array<Record<string, string>> | null, publishedDividends: unknown[] = []): ReturnType<typeof parseYahooChart> | null {
+  if (parseHistoryRange(range).years === null || !published || !published.length || !parsed.history.length) return parsed;
+  const epoch = (iso: string): number => Date.UTC(Number(iso.slice(0, 4)), Number(iso.slice(5, 7)) - 1, Number(iso.slice(8, 10))) / 1000;
+  const days: WindowedChartDay[] = [];
+  for (let index = parsed.history.length - 1; index >= 0; index -= 1) {
+    const row = parsed.history[index];
+    if (row.close === null || row.adjClose === null) continue;
+    const day: WindowedChartDay = { date: row.date, close: row.close, adjClose: row.adjClose, volume: row.volume ?? 0 };
+    if (row.adjCloseRaw !== null && row.adjCloseRaw !== undefined) day.adjCloseRaw = row.adjCloseRaw;
+    days.push(day);
+  }
+  const merged = mergeWindowedChart({ days, dividends: parsed.dividends.map((row) => ({ epoch: epoch(row.date), amount: row.amount })) }, published, publishedDividends);
+  if (!merged) return null;
+  const oldest = parsed.history[parsed.history.length - 1].date;
+  const older: YahooHistoryRow[] = merged.days.filter((day) => day.date < oldest).reverse()
+    .map((day) => ({ date: day.date, close: day.close, adjClose: day.adjClose, volume: day.volume, adjCloseRaw: day.adjCloseRaw ?? day.adjClose }));
+  const dividends: YahooDistribution[] = merged.dividends.map((row) => ({ date: new Date(row.epoch * 1000).toISOString().slice(0, 10), amount: row.amount }))
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  return { history: parsed.history.concat(older), dividends };
+}
+
+/** The published Yahoo dividend fallback rows (`Ex-Date`, `Dividend`) as [date, amount] for windowedYahooChart; [] when Global X published the distributions. */
+function publishedYahooDividends(meta: Record<string, any> | null): unknown[] {
+  const distributions = meta?.distributions;
+  if (!distributions?.fallback || !Array.isArray(distributions.rows)) return [];
+  return distributions.rows.map((row: Record<string, unknown>) => [row['Ex-Date'], row.Dividend]);
+}
+
+/**
  * SKIP_GLOBALX keeps every published figure and only refreshes the Yahoo
  * history (a fund is never rewritten from an empty page).
  */
@@ -2087,7 +2094,11 @@ async function updateHistoryOnly(fund: LineupFund, previousEntry: CatalogEntry |
   if (config.skipYahoo) { stats.unchanged += 1; return previousEntry; }
   const url = yahooChartUrl(ticker, config.historyRange);
   const json = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`, (response) => response.json());
-  const rows = yahooHistoryRows(parseYahooChart(json), await readPreviousHistory(ticker, previousMeta));
+  const published = await readPreviousHistory(ticker, previousMeta);
+  // A HISTORY_RANGE window never shrinks the published history; a window that does not join it keeps the fund as published
+  const chart = windowedYahooChart(parseYahooChart(json), config.historyRange, published, publishedYahooDividends(previousMeta));
+  if (!chart) throw new Error(`${ticker}: the Yahoo window (${config.historyRange}) does not join the published history, keeping the published data`);
+  const rows = yahooHistoryRows(chart, published);
   if (!rows.length) throw new Error(`${ticker}: Yahoo returned no bars`);
   const fundDir = path.join(API_ROOT, 'funds', ticker);
   const manifest = {
@@ -2151,6 +2162,7 @@ async function updateFund(
     sourceKind: 'official Global X daily full-holdings CSV (assets.globalxetfs.com)',
   };
   let holdingsFresh = false; // false while holdings.rows is the previous run's sheet
+  let nportDocument: string | null = null; // the N-PORT primary_doc.xml the sheet was read from, null for the issuer CSV
   {
     try {
       const csv = await fetchText(globalxHoldingsCsvUrl(ticker, pageHtml), browserHeaders(), config, `${ticker} holdings CSV`);
@@ -2179,37 +2191,38 @@ async function updateFund(
       } else {
         if (!config.edgarFallback) throw error;
         outputNote(`[ ${'holdings'.padEnd(9)}] ${ticker}: holdings CSV unavailable (${errorMessage(error)}), trying EDGAR`);
-        const xml = await fetchText(globalxEdgarFilingsUrl(), secHeaders(config), config, `${ticker} EDGAR`);
-        const filings = [...xml.matchAll(/href=["'](\/Archives\/[^"']+primary_doc\.xml)["']/gi)].map((match) => match[1]);
-        if (!filings.length) throw new Error(`${ticker}: no N-PORT primary_doc.xml link on the EDGAR page`);
-        // The page lists the filings of every series of the trust: take the first one that is this fund's.
-        let chosen: { nport: ReturnType<typeof parseNportXml>; filing: string } | null = null;
-        for (const filing of filings.slice(0, MAX_NPORT_FILINGS_SCANNED)) {
-          const candidate = parseNportXml(await fetchText(`https://www.sec.gov${filing}`, secHeaders(config), config, `${ticker} N-PORT`));
-          if (sameSeries(candidate.seriesName, fund.name)) { chosen = { nport: candidate, filing }; break; }
-        }
-        if (!chosen) throw new Error(`${ticker}: no N-PORT filing of this series among the latest ${Math.min(filings.length, MAX_NPORT_FILINGS_SCANNED)} on the EDGAR page`);
-        const nport = chosen.nport;
-        // The fallback may never replace fresher published holdings.
-        const publishedAsOf = toIsoDate(previousMeta?.holdings?.asOf);
-        if (publishedAsOf && toIsoDate(nport.repPdDate) < publishedAsOf) {
-          throw new Error(`${ticker}: N-PORT report period ${nport.repPdDate} is older than the published holdings (${publishedAsOf}), keeping them`);
-        }
+        // The fund's own newest N-PORT-P filing (shared nport-reader block): identity by the series id of SEC's fund ticker
+        // table (the fund name only when SEC lists no series for the ticker), read only when its report period is strictly newer
+        // than the published holdings date (the issuer's daily CSV date, or an earlier N-PORT report period).
+        const ref = (await loadFundTickerTable(config)).get(ticker);
+        const read = await readNportHoldings(
+          ref ? { ticker, cik: ref.cik, seriesId: ref.seriesId } : { ticker, cik: GLOBALX_ETF_TRUST_CIK, seriesId: null, name: /^global x\b/i.test(fund.name) ? fund.name : `Global X ${fund.name}` },
+          { asOf: calendarIso(previousMeta?.holdings?.asOf) ?? calendarIso(previousMeta?.holdings?.asOfDate), rows: numberOrNull(previousMeta?.holdings?.totalRows) ?? 0 },
+          (url, label) => fetchText(url, secHeaders(config), config, label),
+          { cache: secState.reader },
+        );
+        if ('problem' in read) throw new Error(`${read.problem}; ${previousMeta ? 'kept the previous complete data' : 'no data published for this fund yet'}`);
+        const rows = nportHoldingsSheet(read.filing, nportTickers(read.filing.positions, await loadCompanyNames(config).catch(() => null)));
+        outputNote(`[ ${'nport'.padEnd(9)}] ${ticker}: N-PORT ${read.candidate.accession}, report period ${read.filing.repPdDate || 'n/a'}, ${rows.length} positions${read.loose ? ' (series name matched loosely)' : ''}`);
         holdings = {
           ...holdings,
           headers: [...HOLDINGS_HEADERS],
-          rows: nportToHoldings(nport.positions, details.netAssets ?? null),
-          asOfDate: nport.repPdDate,
-          totalRows: nport.positions.length,
-          source: `https://www.sec.gov${chosen.filing}`,
-          sourceKind: 'SEC EDGAR Form N-PORT-P (fallback)',
+          rows,
+          asOfDate: read.filing.repPdDate,
+          totalRows: rows.length,
+          source: read.url,
+          sourceKind: `SEC EDGAR Form N-PORT-P (fallback; accession ${read.candidate.accession}, report period ${read.filing.repPdDate || 'n/a'})`,
         };
+        nportDocument = read.url;
         holdingsFresh = true;
       }
     }
   }
   // Fresh holdings that look broken (no weight column, non-numeric weights, a bad weight sum, half the rows gone) never replace the published ones.
-  const holdingsProblem = holdingsFresh ? holdingsGuard(holdings.headers, holdings.rows, numberOrNull(previousMeta?.holdings?.totalRows), HOLDINGS_GUARD_RELAX[ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? []) : null;
+  // No relax lets a sheet without a single numeric weight replace a published sheet that had numeric weights (Q24).
+  const publishedHoldings = holdingsFresh && previousMeta ? await readPreviousHoldings(ticker, previousMeta) : null;
+  const publishedWeights = publishedHoldings ? holdingsWeightCount(publishedHoldings.headers.length ? publishedHoldings.headers : [...HOLDINGS_HEADERS], publishedHoldings.rows) : null;
+  const holdingsProblem = holdingsFresh ? holdingsGuard(holdings.headers, holdings.rows, numberOrNull(previousMeta?.holdings?.totalRows), HOLDINGS_GUARD_RELAX[ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? [], publishedWeights) : null;
   if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${previousMeta ? 'kept the previous complete data' : 'no data published for this fund yet'}`);
 
   // --- daily history + dividend fallback (Yahoo) -------------------------
@@ -2222,10 +2235,13 @@ async function updateFund(
     try {
       const url = yahooChartUrl(ticker, config.historyRange);
       const json = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`, (response) => response.json());
-      const parsed = parseYahooChart(json);
+      const published = await readPreviousHistory(ticker, previousMeta);
+      // A HISTORY_RANGE window never shrinks the published history (shared windowed-chart block)
+      const parsed = windowedYahooChart(parseYahooChart(json), config.historyRange, published, publishedYahooDividends(previousMeta));
+      if (!parsed) throw new Error(`the window (${config.historyRange}) does not join the published history`);
       yahooDividends = parsed.dividends;
       yahooExchange = parseYahooExchangeName(json);
-      historyRows = yahooHistoryRows(parsed, await readPreviousHistory(ticker, previousMeta));
+      historyRows = yahooHistoryRows(parsed, published);
     } catch (error) {
       outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: Yahoo chart unavailable (${errorMessage(error)}), keeping the published history`);
     }
@@ -2263,17 +2279,21 @@ async function updateFund(
   const performanceAsOfIso = toIsoDate(monthEndDate) || null;
   const grossExpense = fund.grossExpense ?? numberOrNull(details.totalOperatingExpensesText) ?? fund.managementFee ?? null;
   const inceptionIso = toIsoDate(fund.inceptionDate) || toIsoDate(details.inceptionDate);
-  const forHorizon = (value: number | null | undefined, years: number): number | null => horizonValue(value, inceptionIso, performanceAsOfIso, years);
+  // The shared "younger than its horizon" rule (calendar anniversary of the inception, inclusive): no 1-year or since-inception
+  // return before the first anniversary, no 3, 5 or 10-year return before those; an unknown date keeps the value.
+  const returns = withoutYoungReturns({
+    tr1y: monthEndValues.yr1 ?? null,
+    tr3y: cumulativeFromAnnualized(monthEndValues.yr3 ?? null, 3),
+    tr5y: cumulativeFromAnnualized(monthEndValues.yr5 ?? null, 5),
+    tr10y: cumulativeFromAnnualized(monthEndValues.yr10 ?? null, 10),
+    cagr3y: monthEndValues.yr3 ?? null,
+    cagr5y: monthEndValues.yr5 ?? null,
+    cagr10y: monthEndValues.yr10 ?? null,
+    siAnn: monthEndValues.sinceInception ?? null,
+  }, inceptionIso, performanceAsOfIso, { tr1y: 1, tr3y: 3, tr5y: 5, tr10y: 10, cagr3y: 3, cagr5y: 5, cagr10y: 10, siAnn: 1 });
   const metrics = {
     ytd: monthEndValues.ytd ?? null,
-    tr1y: forHorizon(monthEndValues.yr1, 1),
-    tr3y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr3, 3), 3),
-    tr5y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr5, 5), 5),
-    tr10y: cumulativeFromAnnualized(forHorizon(monthEndValues.yr10, 10), 10),
-    cagr3y: forHorizon(monthEndValues.yr3, 3),
-    cagr5y: forHorizon(monthEndValues.yr5, 5),
-    cagr10y: forHorizon(monthEndValues.yr10, 10),
-    siAnn: forHorizon(monthEndValues.sinceInception, 1),
+    ...returns,
     dividendYield: rateValue,
     dividendYieldText: formatPercentText(rateValue),
     distributionYield: rateValue,
@@ -2340,7 +2360,8 @@ async function updateFund(
       distributionInfoSource: 'Global X fund page Distribution Information block',
       documentsSource: 'Global X fund page Documents table',
       registrant: `Global X Funds (Investment Company Act file ${GLOBALX_ETF_TRUST_FILE_NUMBER})`,
-      nportDoc: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${GLOBALX_ETF_TRUST_CIK}&type=NPORT-P&dateb=&owner=include&count=10`,
+      // the N-PORT primary_doc.xml the holdings were read from; no key when they came from the issuer CSV
+      ...(nportDocument ? { nportDoc: nportDocument } : {}),
       exchangeSource: 'Global X fund page Fund Details "Primary Exchange"',
       navSource: `Global X fund page Fund Details "Net Asset Value" (${navKind})`,
       premiumDiscountSource: premiumDiscountKind,
@@ -2703,6 +2724,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   const startedAt = Date.now();
   const deadlineAt = startedAt + (options.deadlineMs ?? SOFT_DEADLINE_MS);
   outputPrintConfig('Global X', config);
+  resetSecState();
   const stats: RunStats = { updated: 0, unchanged: 0, skipped: 0, failed: 0 };
 
   // The lineup table is the catalog: it lists every fund, its asset class, the
@@ -2747,19 +2769,10 @@ export async function main(env: Record<string, string | undefined> = process.env
   }
   console.log(`[ catalog  ] ${lineup.length} Global X ETFs (${config.skipGlobalX ? 'previous index, SKIP_GLOBALX' : 'globalxetfs.com Explore Our ETFs table'})`);
 
-  // Strict: a requested ticker the provider does not list is an error, never a silently empty run.
-  // A closed fund of the published index is accepted even after the lineup drops it: it is never fetched.
-  if (config.tickers.length) {
-    const known = new Set(lineup.map((fund) => fund.ticker));
-    const missing = config.tickers.filter((ticker) => !known.has(ticker) && !(previous[ticker] && closedFund(CLOSED_FUNDS, ticker)));
-    if (missing.length) throw new Error(`TICKERS: not in the Global X lineup: ${missing.join(', ')}`);
-  }
-
-  const newFunds = previousIndex ? lineup.filter((fund) => !previous[fund.ticker]).map((fund) => fund.ticker) : [];
-  if (newFunds.length) {
-    console.log(`NEW FUNDS: ${newFunds.join(', ')}`);
-    if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### Global X data update\n\nNEW FUNDS: ${newFunds.join(', ')}\n`, 'utf8');
-  }
+  // The live catalog (null when only the published feed is known, SKIP_GLOBALX): a catalog-only row it no longer lists is dropped.
+  const live = config.skipGlobalX ? null : lineup.map((fund) => fund.ticker);
+  // Q27: a TICKERS entry outside the live lineup and the published funds (a closed fund keeps its data) stops the run before any fund request
+  if (config.tickers.length) assertKnownTickers(config.tickers, knownTickers(live, Object.values(previous)), 'the Global X lineup or published feed');
 
   // MAX_FETCHES batches walk the filtered set in lineup order from the saved cursor and wrap around.
   // A TICKERS run is an explicit selection: it never reads, moves or deletes the cursor.
@@ -2809,7 +2822,8 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   // Every published row stays (a bounded, filtered or failed run never drops a fund), fresh rows replace
   // their old ones, lineup funds without data get a placeholder row (dataFile null).
-  const rows: Record<string, CatalogEntry> = { ...previous };
+  const rows: Record<string, CatalogEntry> = {};
+  for (const row of withoutStalePlaceholders(Object.values(previous), live)) rows[row.ticker] = row;
   for (const fund of lineup) if (!rows[fund.ticker]) rows[fund.ticker] = placeholderRow(fund);
   for (const [ticker, entry] of byTicker) rows[ticker] = entry;
   // A closed fund keeps its published row, marked closed (status, closedDate, closedSource).
@@ -2841,6 +2855,10 @@ export async function main(env: Record<string, string | undefined> = process.env
   // generatedAt moves only when content moved: an identical rerun is a zero-byte diff.
   const unchanged = previousIndex !== null && stableStringify({ source: previousIndex.source, counts: previousIndex.counts, funds: previousIndex.funds }) === stableStringify(body);
   if (!unchanged) await writeIfChanged(indexFile, stableStringify({ generatedAt: isoNow(), ...body }));
+  // Q28: a fund is announced on its first successful publish (a catalog-only row is not published), new catalog-only rows as pending
+  const newFunds = newFundsLines(newFundsReport(Object.values(previous), funds));
+  for (const line of newFunds) console.log(line);
+  if (newFunds.length && process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### NEW FUNDS\n\n${newFunds.join('\n')}\n`, 'utf8');
 
   // Cursor bookkeeping: only a MAX_FETCHES run of the whole filter set moves it.
   const stateFile = path.join(API_ROOT, 'update-state.json');
@@ -2875,10 +2893,12 @@ if (import.meta.main) {
  * An empty sheet passes only when nothing was published before. Otherwise a Name and a weight column (Weight,
  * Weight (%) or Market Weight) are required, >= 80% of the rows carry a numeric weight, the weights add up to
  * 50..150 and the sheet keeps >= 50% of the previously published rows. `relax` switches off the checks a fund
- * legitimately fails: 'numeric' and 'sum' (geared, inverse, futures, look-through, top-N lists) and 'count'.
+ * legitimately fails: 'numeric' and 'sum' (geared, inverse, futures, look-through, top-N lists) and 'count'. No relax lets
+ * a sheet without a single numeric weight replace a published sheet that had numeric weights (`previousWeights`: how many
+ * rows of the published sheet carry a numeric weight, see holdingsWeightCount; open-items etfs Q24).
  * Rows are arrays in header order or objects keyed by the header text. A fund in the brand's CLOSED_FUNDS never reaches the guard.
  */
-export function holdingsGuard(headers: ReadonlyArray<string>, rows: ReadonlyArray<unknown>, previousRows: number | null | undefined, relax: ReadonlyArray<string> = []): string | null {
+export function holdingsGuard(headers: ReadonlyArray<string>, rows: ReadonlyArray<unknown>, previousRows: number | null | undefined, relax: ReadonlyArray<string> = [], previousWeights: number | null = null): string | null {
   const previous = Number(previousRows) > 0 ? Number(previousRows) : 0;
   if (!rows.length) return previous ? `no holdings rows (${previous} published)` : null;
   const names = headers.map((header) => String(header).trim().toLowerCase());
@@ -2887,20 +2907,38 @@ export function holdingsGuard(headers: ReadonlyArray<string>, rows: ReadonlyArra
   if (weightAt < 0) weightAt = names.indexOf('weight (%)');
   if (weightAt < 0) weightAt = names.indexOf('market weight');
   if (nameAt < 0 || weightAt < 0) return `no ${nameAt < 0 ? 'Name' : 'weight'} column (headers: ${headers.join(', ') || 'none'})`;
-  let numeric = 0;
+  const weights = holdingsGuardWeights(headers, rows, weightAt);
+  const numeric = weights.count;
+  const sum = weights.sum;
+  if (numeric === 0 && Number(previousWeights) > 0) return `no row has a numeric weight, the published sheet had ${Number(previousWeights)}`;
+  if (relax.indexOf('numeric') < 0 && numeric < rows.length * 0.8) return `only ${numeric} of ${rows.length} rows have a numeric weight`;
+  if (relax.indexOf('sum') < 0 && (sum < 50 || sum > 150)) return `weights add up to ${sum.toFixed(2)}, outside 50..150`;
+  if (relax.indexOf('count') < 0 && previous && rows.length < previous * 0.5) return `${rows.length} rows, less than half of the ${previous} published`;
+  return null;
+}
+
+/** How many rows carry a numeric weight (Weight, Weight (%) or Market Weight column), 0 without such a column: pass it for the published sheet as holdingsGuard's previousWeights. */
+export function holdingsWeightCount(headers: ReadonlyArray<string>, rows: ReadonlyArray<unknown>): number {
+  const names = headers.map((header) => String(header).trim().toLowerCase());
+  let weightAt = names.indexOf('weight');
+  if (weightAt < 0) weightAt = names.indexOf('weight (%)');
+  if (weightAt < 0) weightAt = names.indexOf('market weight');
+  return weightAt < 0 ? 0 : holdingsGuardWeights(headers, rows, weightAt).count;
+}
+
+/** Count and sum of the numeric weights in column weightAt; rows are arrays in header order or objects keyed by the header text. */
+function holdingsGuardWeights(headers: ReadonlyArray<string>, rows: ReadonlyArray<unknown>, weightAt: number): { count: number; sum: number } {
+  let count = 0;
   let sum = 0;
   for (let i = 0; i < rows.length; i++) {
     const row: any = rows[i];
     const weight = holdingsGuardNumber(Array.isArray(row) ? row[weightAt] : row && typeof row === 'object' ? row[headers[weightAt]] : undefined);
     if (weight !== null) {
-      numeric++;
+      count++;
       sum += weight;
     }
   }
-  if (relax.indexOf('numeric') < 0 && numeric < rows.length * 0.8) return `only ${numeric} of ${rows.length} rows have a numeric weight`;
-  if (relax.indexOf('sum') < 0 && (sum < 50 || sum > 150)) return `weights add up to ${sum.toFixed(2)}, outside 50..150`;
-  if (relax.indexOf('count') < 0 && previous && rows.length < previous * 0.5) return `${rows.length} rows, less than half of the ${previous} published`;
-  return null;
+  return { count, sum };
 }
 
 /** A weight cell as a number: %, $, commas and spaces are ignored, (x) is negative; null when it is no plain number (a zero-width character inside counts as broken). */
@@ -2952,3 +2990,600 @@ export function withoutClosedFunds<T>(queue: ReadonlyArray<T>, tickerOf: (item: 
   return open;
 }
 // </holdings-guard>
+
+// <nport-reader> shared block of .claude/tools/etfs/etf-std/nport-reader.block.ts, applied by apply-block.ts: never edit it in one repo
+/**
+ * SEC EDGAR Form N-PORT-P holdings reader (open-items etfs ETF-H2), one copy for every brand. Pure functions plus one reader
+ * that takes the brand's own `getText(url, label)` (its SEC User-Agent, timeout, retries and pacing). Rules it enforces:
+ * - identifiers come from the position itself: `<cusip>` text (or a `value` attribute), `<isin value>`, `<ticker value>`,
+ *   `<other value>`; a derivative's reference instrument (inside `<derivativeInfo>`) never lends its identifiers to the position
+ * - CUSIP `000000000` and `N/A` are missing; a missing weight or value is null (an empty cell), never 0
+ * - a ticker only for an equity row (assetCat EC or EP) traded in USD with a U.S. ISIN or none, and never one ticker on two
+ *   different securities (`nportTickers`)
+ * - identity: the filing must name the fund's own series id, or, with no series id known, the fund's name (`nportIdentity`)
+ * - freshness: the report period must be strictly newer than the published holdings (`nportIsFresh`)
+ * - filings come newest report period first from the registrant's own archive folder, never from the filer agent's CIK
+ *   (the accession number prefix)
+ */
+export type NportPosition = {
+  name: string;
+  title: string;
+  lei: string;
+  cusip: string;
+  isin: string;
+  ticker: string;
+  other: string;
+  otherDesc: string;
+  balance: number | null;
+  units: string;
+  currency: string;
+  /** valUSD, null when the filing has none */
+  value: number | null;
+  /** pctVal: percent of net assets (0.5 = 0.5%), null when the filing has none */
+  weight: number | null;
+  payoff: string;
+  assetCat: string;
+  issuerCat: string;
+  country: string;
+  /** derivCat of the position's derivativeInfo (FUT, FWD, SWP, OPT, ...), empty for a security */
+  derivative: string;
+  /** debtSec annualizedRt and maturityDt (ISO), null and '' for a non-debt row */
+  coupon: number | null;
+  maturity: string;
+};
+
+export type NportFiling = {
+  seriesId: string;
+  seriesName: string;
+  regName: string;
+  regCik: string;
+  /** report period end (genInfo repPdDate) as ISO, '' when missing */
+  repPdDate: string;
+  netAssets: number | null;
+  totalAssets: number | null;
+  positions: NportPosition[];
+};
+
+export type NportCandidate = { accession: string; filed: string; period: string; cik: string };
+export type NportSeriesRef = { cik: string; seriesId: string; classId: string };
+
+/** XML text: entities decoded, tags dropped, whitespace collapsed. */
+function nportText(raw: string): string {
+  return String(raw)
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&#x([0-9a-f]+);/gi, (_m: string, hex: string) => String.fromCharCode(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_m: string, dec: string) => String.fromCharCode(Number(dec)))
+    .replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
+    .replace(/[\s ]+/g, ' ')
+    .trim();
+}
+
+/** Text of the first `<tag>` (any namespace prefix) in `xml`, '' when absent. */
+function nportTag(xml: string, tag: string): string {
+  const match = new RegExp(`<(?:[A-Za-z0-9_.-]+:)?${tag}(?:\\s[^>]*)?>([\\s\\S]*?)</(?:[A-Za-z0-9_.-]+:)?${tag}>`, 'i').exec(xml);
+  return match ? nportText(match[1]) : '';
+}
+
+/** The `attribute` of the first `<tag ...>` (any namespace prefix) in `xml`, '' when absent. */
+function nportAttr(xml: string, tag: string, attribute: string): string {
+  const match = new RegExp(`<(?:[A-Za-z0-9_.-]+:)?${tag}\\s[^>]*?\\b${attribute}\\s*=\\s*"([^"]*)"`, 'i').exec(xml);
+  return match ? nportText(match[1]) : '';
+}
+
+/** A plain decimal or exponent number, null for an empty, N/A or broken cell. */
+function nportNumber(raw: string): number | null {
+  const text = String(raw).replace(/[\s,]/g, '');
+  if (!/^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i.test(text)) return null;
+  const value = Number(text);
+  return Number.isFinite(value) ? value : null;
+}
+
+/** An identifier code, '' for N/A, NONE and all zeros (CUSIP 000000000 means "no CUSIP"). */
+function nportCode(raw: string): string {
+  const text = String(raw).trim().toUpperCase();
+  return !text || /^(N\/?A|NONE|-+|0+)$/.test(text) ? '' : text;
+}
+
+/** ISO date of an N-PORT date (YYYY-MM-DD, possibly with a time), '' otherwise. */
+function nportIso(raw: unknown): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(raw === null || raw === undefined ? '' : raw).trim());
+  return match ? `${match[1]}-${match[2]}-${match[3]}` : '';
+}
+
+/** One N-PORT-P primary_doc.xml (or the full submission .txt that embeds it) as series facts and positions. */
+export function parseNportFiling(xml: string): NportFiling {
+  const text = String(xml === null || xml === undefined ? '' : xml);
+  const genInfo = /<(?:[A-Za-z0-9_.-]+:)?genInfo\b[^>]*>([\s\S]*?)<\/(?:[A-Za-z0-9_.-]+:)?genInfo>/i.exec(text);
+  const fundInfo = /<(?:[A-Za-z0-9_.-]+:)?fundInfo\b[^>]*>([\s\S]*?)<\/(?:[A-Za-z0-9_.-]+:)?fundInfo>/i.exec(text);
+  const gen = genInfo ? genInfo[1] : '';
+  const fund = fundInfo ? fundInfo[1].replace(/<(?:[A-Za-z0-9_.-]+:)?returnInfo\b[\s\S]*?<\/(?:[A-Za-z0-9_.-]+:)?returnInfo>/gi, ' ') : '';
+  const positions: NportPosition[] = [];
+  const blocks = /<(?:[A-Za-z0-9_.-]+:)?invstOrSec\b[^>]*>([\s\S]*?)<\/(?:[A-Za-z0-9_.-]+:)?invstOrSec>/gi;
+  let block: RegExpExecArray | null;
+  while ((block = blocks.exec(text)) !== null) {
+    const raw = block[1];
+    const derivativeInfo = /<(?:[A-Za-z0-9_.-]+:)?derivativeInfo\b[^>]*>([\s\S]*?)<\/(?:[A-Za-z0-9_.-]+:)?derivativeInfo>/i.exec(raw);
+    // The reference instrument of a derivative (SPY for a SPY option, a bond for a CDS) is another security: drop it first.
+    const own = raw.replace(/<(?:[A-Za-z0-9_.-]+:)?derivativeInfo\b[^>]*>[\s\S]*?<\/(?:[A-Za-z0-9_.-]+:)?derivativeInfo>/gi, ' ');
+    const identifiers = /<(?:[A-Za-z0-9_.-]+:)?identifiers\b[^>]*>([\s\S]*?)<\/(?:[A-Za-z0-9_.-]+:)?identifiers>/i.exec(own);
+    const ids = identifiers ? identifiers[1] : '';
+    const debt = /<(?:[A-Za-z0-9_.-]+:)?debtSec\b[^>]*>([\s\S]*?)<\/(?:[A-Za-z0-9_.-]+:)?debtSec>/i.exec(own);
+    const name = nportTag(own, 'name');
+    positions.push({
+      name: name && !/^N\/?A$/i.test(name) ? name : nportTag(own, 'title'),
+      title: nportTag(own, 'title'),
+      lei: nportCode(nportTag(own, 'lei')),
+      cusip: nportCode(nportTag(own, 'cusip') || nportAttr(ids, 'cusip', 'value')),
+      isin: nportCode(nportAttr(ids, 'isin', 'value')),
+      ticker: nportCode(nportAttr(ids, 'ticker', 'value')),
+      other: nportCode(nportAttr(ids, 'other', 'value')),
+      otherDesc: nportAttr(ids, 'other', 'otherDesc'),
+      balance: nportNumber(nportTag(own, 'balance')),
+      units: nportTag(own, 'units'),
+      currency: (nportTag(own, 'curCd') || nportAttr(own, 'currencyConditional', 'curCd')).toUpperCase(),
+      value: nportNumber(nportTag(own, 'valUSD')),
+      weight: nportNumber(nportTag(own, 'pctVal')),
+      payoff: nportTag(own, 'payoffProfile'),
+      assetCat: (nportTag(own, 'assetCat') || nportAttr(own, 'assetConditional', 'assetCat')).toUpperCase(),
+      issuerCat: (nportTag(own, 'issuerCat') || nportAttr(own, 'issuerConditional', 'issuerCat')).toUpperCase(),
+      country: nportTag(own, 'invCountry').toUpperCase(),
+      derivative: derivativeInfo ? (/\bderivCat\s*=\s*"([^"]*)"/i.exec(derivativeInfo[1]) || ['', 'OTHER'])[1].toUpperCase() : '',
+      coupon: debt ? nportNumber(nportTag(debt[1], 'annualizedRt')) : null,
+      maturity: debt ? nportIso(nportTag(debt[1], 'maturityDt')) : '',
+    });
+  }
+  return {
+    seriesId: nportTag(gen, 'seriesId').toUpperCase(),
+    seriesName: nportTag(gen, 'seriesName'),
+    regName: nportTag(gen, 'regName'),
+    regCik: nportTag(gen, 'regCik').replace(/\D/g, ''),
+    repPdDate: nportIso(nportTag(gen, 'repPdDate')),
+    netAssets: nportNumber(nportTag(fund, 'netAssets')),
+    totalAssets: nportNumber(nportTag(fund, 'totAssets')),
+    positions,
+  };
+}
+
+/** A number as sheet text: '' for null, no exponent, at most `digits` decimals (trailing zeros dropped). */
+export function nportCell(value: number | null, digits = 8): string {
+  if (value === null || !Number.isFinite(value)) return '';
+  const text = value.toFixed(digits);
+  return text.indexOf('.') < 0 ? text : text.replace(/0+$/, '').replace(/\.$/, '');
+}
+
+/** The position's own identifier for a sheet: CUSIP, else ISIN, else the "other" code (a Bloomberg or internal id), else ''. */
+export function nportIdentifier(position: NportPosition): string {
+  return position.cusip || position.isin || position.other;
+}
+
+/** A company name as a lookup key: upper case, punctuation and legal suffixes dropped, `CLASS A` -> `CL A`. */
+export function nportNameKey(value: unknown): string {
+  // EDGAR adds a state or qualifier suffix to company titles ("COSTCO WHOLESALE CORP /NEW", "BANK OF AMERICA CORP /DE/"): drop a trailing one
+  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*\/\s*[A-Za-z]{2,3}\s*\/?)+\s*$/, '');
+  let text = nportText(raw).toUpperCase().replace(/['’]/g, '').replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, ' ');
+  text = text.replace(/\bCLASS\s+([A-Z])\b/g, 'CL $1').replace(/\bCL\s+([A-Z])\b/g, 'CL $1');
+  const share = /\bCL [A-Z]\b/.exec(text);
+  text = text.replace(/\b(THE|INC|INCORPORATED|CORP|CORPORATION|CO|COMPANY|LTD|LIMITED|PLC|SA|NV|AG|SE|SPA|ORDINARY|COMMON|STOCK|SHS|SHARES|ADR|DEPOSITARY|RECEIPT|USD|US|REG|REGISTERED)\b/g, ' ').replace(/\s+/g, ' ').trim();
+  if (share && !/\bCL [A-Z]\b/.test(text)) text = `${text} ${share[0]}`;
+  return text;
+}
+
+/** SEC company_tickers.json -> name key -> ticker (the first, largest company wins a shared key; the class-less key is added too). */
+export function parseSecCompanyNames(payload: unknown): Map<string, string> {
+  const names = new Map<string, string>();
+  const rows = payload && typeof payload === 'object' ? Object.keys(payload as object).map((key) => (payload as Record<string, unknown>)[key]) : [];
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i] as { ticker?: unknown; title?: unknown } | null;
+    if (!row || typeof row !== 'object') continue;
+    const ticker = String(row.ticker === null || row.ticker === undefined ? '' : row.ticker).trim().toUpperCase();
+    const key = nportNameKey(row.title);
+    if (!/^[A-Z][A-Z0-9.-]{0,9}$/.test(ticker) || !key) continue;
+    if (!names.has(key)) names.set(key, ticker);
+    const core = key.replace(/ CL [A-Z]$/, '');
+    if (core && !names.has(core)) names.set(core, ticker);
+  }
+  return names;
+}
+
+/** SEC company_tickers_mf.json -> fund ticker -> registrant CIK (10 digits), series id, class id. */
+export function parseSecFundTickers(payload: unknown): Map<string, NportSeriesRef> {
+  const map = new Map<string, NportSeriesRef>();
+  const record = (payload && typeof payload === 'object' ? payload : {}) as { fields?: unknown; data?: unknown };
+  const fields = Array.isArray(record.fields) ? record.fields.map(String) : [];
+  const rows = Array.isArray(record.data) ? record.data : [];
+  const at = (row: unknown[], field: string): string => (fields.indexOf(field) < 0 ? '' : String(row[fields.indexOf(field)] === null || row[fields.indexOf(field)] === undefined ? '' : row[fields.indexOf(field)]).trim());
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i];
+    if (!Array.isArray(row)) continue;
+    const ticker = at(row, 'symbol').toUpperCase();
+    const cik = at(row, 'cik').replace(/\D/g, '');
+    const seriesId = at(row, 'seriesId').toUpperCase();
+    if (!ticker || !Number(cik) || !/^S\d{9}$/.test(seriesId) || map.has(ticker)) continue;
+    map.set(ticker, { cik: `0000000000${Number(cik)}`.slice(-10), seriesId, classId: at(row, 'classId').toUpperCase() });
+  }
+  return map;
+}
+
+/**
+ * Exchange tickers for the positions, in their order ('' for none). A ticker is given only to an equity row (assetCat EC or
+ * EP) traded in USD (or with no currency) whose ISIN is U.S. or missing: first the filer's own `<ticker value>`, else the
+ * SEC issuer-name table (`names`) when the row has a CUSIP or a U.S. ISIN. A ticker that lands on two different securities
+ * (Alphabet A and C, an ordinary share and its ADR) is dropped from the name-matched rows; when the filer itself gave it
+ * to two securities it is dropped from all of them. Bonds, cash, funds and derivatives stay identifier-keyed.
+ */
+export function nportTickers(positions: ReadonlyArray<NportPosition>, names: Map<string, string> | null = null): string[] {
+  const fromFiler: boolean[] = [];
+  const tickers = positions.map((position, index) => {
+    fromFiler[index] = false;
+    const equity = (position.assetCat === 'EC' || position.assetCat === 'EP') && !position.derivative;
+    const usd = !position.currency || position.currency === 'USD';
+    if (!equity || !usd || (position.isin && position.isin.slice(0, 2) !== 'US')) return '';
+    if (/^[A-Z][A-Z0-9.-]{0,9}$/.test(position.ticker)) {
+      fromFiler[index] = true;
+      return position.ticker;
+    }
+    if (!names || !(/^[0-9A-Z]{9}$/.test(position.cusip) || /^US[0-9A-Z]{10}$/.test(position.isin))) return '';
+    const key = nportNameKey(position.name);
+    return names.get(key) || names.get(key.replace(/ CL [A-Z]$/, '')) || '';
+  });
+  const securities = new Map<string, { keys: string[]; filer: string[] }>();
+  tickers.forEach((ticker, index) => {
+    if (!ticker) return;
+    const position = positions[index];
+    const key = position.cusip || position.isin || position.other || nportNameKey(position.name);
+    const seen = securities.get(ticker) || { keys: [], filer: [] };
+    if (seen.keys.indexOf(key) < 0) seen.keys.push(key);
+    if (fromFiler[index] && seen.filer.indexOf(key) < 0) seen.filer.push(key);
+    securities.set(ticker, seen);
+  });
+  return tickers.map((ticker, index) => {
+    const seen = ticker ? securities.get(ticker) : undefined;
+    if (!seen || seen.keys.length < 2) return ticker;
+    return seen.filer.length === 1 && fromFiler[index] ? ticker : '';
+  });
+}
+
+/** The browse-edgar Atom feed of one series' NPORT-P filings. */
+export function nportSeriesFeedUrl(seriesId: string, count = 10): string {
+  return `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${encodeURIComponent(String(seriesId).toUpperCase())}&type=NPORT-P&dateb=&owner=include&count=${count}&output=atom`;
+}
+
+/** The registrant's submissions JSON (report periods of its recent filings). */
+export function nportSubmissionsUrl(cik: string): string {
+  return `https://data.sec.gov/submissions/CIK${`0000000000${Number(String(cik).replace(/\D/g, '')) || 0}`.slice(-10)}.json`;
+}
+
+/** primary_doc.xml of a filing in the registrant's own folder. Throws without a registrant CIK: the accession prefix is the filer agent. */
+export function nportDocumentUrl(registrantCik: string, accession: string): string {
+  const cik = Number(String(registrantCik).replace(/\D/g, ''));
+  if (!cik) throw new Error(`N-PORT ${accession}: no registrant CIK (the accession prefix is the filer agent, never used as the folder)`);
+  return `https://www.sec.gov/Archives/edgar/data/${cik}/${String(accession).replace(/-/g, '')}/primary_doc.xml`;
+}
+
+/** NPORT-P entries of a browse-edgar Atom feed (amendments and other forms skipped), with the registrant CIK of the filing link. */
+export function parseNportFeed(atom: string): NportCandidate[] {
+  const out: NportCandidate[] = [];
+  const entries = /<entry>([\s\S]*?)<\/entry>/gi;
+  let entry: RegExpExecArray | null;
+  while ((entry = entries.exec(String(atom === null || atom === undefined ? '' : atom))) !== null) {
+    const body = entry[1];
+    const form = (nportTag(body, 'filing-type') || nportAttr(body, 'category', 'term')).toUpperCase();
+    const accession = nportTag(body, 'accession-number');
+    if (form !== 'NPORT-P' || !/^\d{10}-\d{2}-\d{6}$/.test(accession)) continue;
+    const folder = /\/Archives\/edgar\/data\/(\d+)\//i.exec(nportTag(body, 'filing-href'));
+    out.push({ accession, filed: nportIso(nportTag(body, 'filing-date')), period: nportIso(nportTag(body, 'period')), cik: folder ? folder[1] : '' });
+  }
+  return out;
+}
+
+/** NPORT-P filings of a registrant's submissions JSON (`filings.recent`), with report periods; the registrant is the JSON's own CIK. */
+export function parseNportSubmissions(payload: unknown): NportCandidate[] {
+  const record = (payload && typeof payload === 'object' ? payload : {}) as { cik?: unknown; filings?: { recent?: Record<string, unknown> } };
+  const recent = record.filings && record.filings.recent ? record.filings.recent : {};
+  const column = (name: string): unknown[] => (Array.isArray(recent[name]) ? (recent[name] as unknown[]) : []);
+  const forms = column('form'), accessions = column('accessionNumber'), filed = column('filingDate'), periods = column('reportDate');
+  const cik = String(record.cik === null || record.cik === undefined ? '' : record.cik).replace(/\D/g, '');
+  const out: NportCandidate[] = [];
+  for (let i = 0; i < forms.length; i++) {
+    const accession = String(accessions[i] === null || accessions[i] === undefined ? '' : accessions[i]);
+    if (String(forms[i]).toUpperCase() !== 'NPORT-P' || !/^\d{10}-\d{2}-\d{6}$/.test(accession)) continue;
+    out.push({ accession, filed: nportIso(filed[i]), period: nportIso(periods[i]), cik });
+  }
+  return out;
+}
+
+/**
+ * Candidates newest report period first, then newest filing: a late filing for an older period never wins. A missing
+ * period is taken from `known` (the registrant's submissions) by accession; candidates still without one go last.
+ */
+export function nportNewestFirst(candidates: ReadonlyArray<NportCandidate>, known: ReadonlyArray<NportCandidate> = []): NportCandidate[] {
+  const periods = new Map<string, string>();
+  for (let i = 0; i < known.length; i++) if (known[i].period) periods.set(known[i].accession, known[i].period);
+  return candidates
+    .map((candidate) => (candidate.period ? candidate : { ...candidate, period: periods.get(candidate.accession) || '' }))
+    .sort((a, b) => (a.period && b.period ? b.period.localeCompare(a.period) : a.period ? -1 : b.period ? 1 : 0) || b.filed.localeCompare(a.filed));
+}
+
+/**
+ * Does the filing belong to the fund? With a series id: only the same series id. Without one: the normalized series name
+ * equals the fund name, or (`loose`, reported to the caller) one contains the other. Returns the problem, or null.
+ */
+export function nportIdentity(filing: Pick<NportFiling, 'seriesId' | 'seriesName'>, fund: { seriesId?: string | null; name?: string | null }): { problem: string | null; loose: boolean } {
+  const wantedSeries = String(fund.seriesId || '').trim().toUpperCase();
+  if (wantedSeries) return { problem: filing.seriesId === wantedSeries ? null : `names series ${filing.seriesId || 'none'}, not ${wantedSeries}`, loose: false };
+  const filed = nportNameKey(filing.seriesName), wanted = nportNameKey(fund.name);
+  if (!filed || !wanted) return { problem: 'no series id and no fund name to match', loose: false };
+  if (filed === wanted) return { problem: null, loose: false };
+  if (filed.indexOf(wanted) >= 0 || wanted.indexOf(filed) >= 0) return { problem: null, loose: true };
+  return { problem: `names series "${filing.seriesName}", not "${String(fund.name)}"`, loose: false };
+}
+
+/**
+ * May a filing replace the published holdings? Nothing published (no rows): any dated or undated report. Otherwise only a
+ * report period strictly newer than the published holdings date; both must be ISO dates (convert the brand's display
+ * date first), an unknown date on either side keeps the published sheet.
+ */
+export function nportIsFresh(repPdDate: unknown, publishedAsOf: unknown, publishedRows: unknown): boolean {
+  if (!(Number(publishedRows) > 0)) return true;
+  const report = nportIso(repPdDate), published = nportIso(publishedAsOf);
+  return Boolean(report && published && String(publishedAsOf).trim().length === 10 && report > published);
+}
+
+export type NportRead = { filing: NportFiling; candidate: NportCandidate; url: string; loose: boolean } | { problem: string };
+
+/**
+ * The newest N-PORT-P filing of one fund, or why there is none. Candidates: the series' Atom feed (when a series id is known;
+ * an empty feed means no filing yet) with periods from the registrant's submissions, else (no series id, or the feed failed)
+ * the registrant's NPORT-P filings themselves; newest period first.
+ * Documents are read until one passes the identity check (at most `maxDocuments`); that newest own filing is returned only
+ * when it is fresh against the published holdings (`published.asOf` ISO, `published.rows`). Errors of the optional
+ * submissions request are tolerated; others come back as `problem`. `cache` (one Map per run) keeps the submissions and
+ * the parsed documents, so funds of one registrant share requests.
+ */
+export async function readNportHoldings(
+  fund: { ticker: string; cik: string; seriesId?: string | null; name?: string | null },
+  published: { asOf?: unknown; rows?: unknown },
+  getText: (url: string, label: string) => Promise<string>,
+  options: { maxDocuments?: number; cache?: Map<string, unknown> } = {},
+): Promise<NportRead> {
+  const cache = options.cache || new Map<string, unknown>();
+  const once = async <T>(key: string, load: () => Promise<T>): Promise<T> => {
+    if (!cache.has(key)) cache.set(key, load().catch((error: unknown) => { cache.delete(key); throw error; }));
+    return (await cache.get(key)) as T;
+  };
+  const cik = String(fund.cik || '').replace(/\D/g, '');
+  if (!Number(cik)) return { problem: `${fund.ticker}: no registrant CIK` };
+  let known: NportCandidate[] = [];
+  try {
+    known = await once(`submissions:${Number(cik)}`, async () => parseNportSubmissions(JSON.parse(await getText(nportSubmissionsUrl(cik), `${fund.ticker} N-PORT periods`))));
+  } catch {
+    known = [];
+  }
+  // null: no series feed (no series id, or the feed failed), so the registrant's own NPORT-P filings are scanned instead
+  let candidates: NportCandidate[] | null = null;
+  try {
+    if (fund.seriesId) candidates = parseNportFeed(await getText(nportSeriesFeedUrl(fund.seriesId), `${fund.ticker} N-PORT filings`));
+  } catch (error) {
+    if (!known.length) return { problem: `${fund.ticker}: N-PORT filings unavailable (${error instanceof Error ? error.message : String(error)})` };
+  }
+  const sorted = nportNewestFirst(candidates || known, known);
+  if (!sorted.length) return { problem: `${fund.ticker}: no NPORT-P filing yet` };
+  const limit = Math.max(1, options.maxDocuments || (candidates ? 3 : 12));
+  const misses: string[] = [];
+  for (let i = 0; i < sorted.length && i < limit; i++) {
+    const candidate = sorted[i];
+    const url = nportDocumentUrl(Number(candidate.cik) ? candidate.cik : cik, candidate.accession);
+    let filing: NportFiling;
+    try {
+      filing = await once(`document:${url}`, async () => parseNportFiling(await getText(url, `${fund.ticker} N-PORT ${candidate.accession}`)));
+    } catch (error) {
+      misses.push(`${candidate.accession} unreadable (${error instanceof Error ? error.message : String(error)})`);
+      continue;
+    }
+    const identity = nportIdentity(filing, fund);
+    if (identity.problem) {
+      misses.push(`${candidate.accession} ${identity.problem}`);
+      continue;
+    }
+    if (!filing.positions.length) return { problem: `${fund.ticker}: ${candidate.accession} has no positions` };
+    if (!nportIsFresh(filing.repPdDate, published.asOf, published.rows)) return { problem: `${fund.ticker}: N-PORT ${filing.repPdDate || 'undated'} is not newer than the published holdings (${String(published.asOf || 'undated')})` };
+    return { filing, candidate, url, loose: identity.loose };
+  }
+  return { problem: `${fund.ticker}: no N-PORT-P filing of its own${misses.length ? `: ${misses.join('; ')}` : ''}` };
+}
+// </nport-reader>
+
+// <calendar-dates> shared block of .claude/tools/etfs/etf-std/calendar-dates.block.ts, applied by apply-block.ts: never edit it in one repo
+/**
+ * A calendar date as ISO `YYYY-MM-DD`, or null. Pure text work, never `Date.parse` or local getters, so a run in Tokyo
+ * publishes the same day as CI (open-items etfs ETF-H4). Accepts ISO (`2026-10-24`, with a time the date part is kept as
+ * written), `2026/10/24`, U.S. `10/24/2026` and `10-24-26` (two-digit years up to 69 are 20xx), month names in either order
+ * (`Oct 24, 2026`, `October 24 2026`, `Sept. 30, 2026`, `24 Oct 2026`, `24-Oct-26`), an optional weekday or `as of` in front.
+ * A day that does not exist (`02/30/2026`) is null.
+ */
+export function calendarIso(value: unknown): string | null {
+  const text = String(value === null || value === undefined ? '' : value).replace(/[\s ]+/g, ' ').trim()
+    .replace(/^as of:? /i, '').replace(/^(mon|tue|wed|thu|fri|sat|sun)[a-z]*\.?,? /i, '');
+  const year = (raw: string): number => (raw.length === 2 ? (Number(raw) <= 69 ? 2000 : 1900) + Number(raw) : Number(raw));
+  const month = (raw: string): number => {
+    const word = raw.toLowerCase();
+    const names = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+    for (let i = 0; i < names.length; i++) if (word.length >= 3 && names[i].indexOf(word) === 0) return i + 1;
+    return 0;
+  };
+  let y = 0, m = 0, d = 0, match: RegExpExecArray | null;
+  if ((match = /^(\d{4})-(\d{1,2})-(\d{1,2})(?:[T ].*)?$/.exec(text)) || (match = /^(\d{4})\/(\d{1,2})\/(\d{1,2})$/.exec(text))) {
+    y = Number(match[1]); m = Number(match[2]); d = Number(match[3]);
+  } else if ((match = /^(\d{1,2})[/-](\d{1,2})[/-](\d{4}|\d{2})$/.exec(text))) {
+    y = year(match[3]); m = Number(match[1]); d = Number(match[2]);
+  } else if ((match = /^([A-Za-z]{3,9})\.? (\d{1,2})(?:st|nd|rd|th)?,? (\d{4})$/.exec(text))) {
+    y = Number(match[3]); m = month(match[1]); d = Number(match[2]);
+  } else if ((match = /^(\d{1,2})(?:st|nd|rd|th)?[ -]([A-Za-z]{3,9})\.?,?[ -](\d{4}|\d{2})$/.exec(text))) {
+    y = year(match[3]); m = month(match[2]); d = Number(match[1]);
+  } else {
+    return null;
+  }
+  const days = [31, y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (y < 1900 || y > 2999 || m < 1 || m > 12 || d < 1 || d > days[m - 1]) return null;
+  return `${y}-${m < 10 ? '0' : ''}${m}-${d < 10 ? '0' : ''}${d}`;
+}
+
+/**
+ * Is the fund at least `years` old on `asOf`? Calendar anniversary, inclusive: a fund started 2025-10-24 is one year old on
+ * 2026-10-24 (a 29 February start on 1 March). Unknown or unreadable dates answer true, so a value is never dropped for want
+ * of a date. The shared "younger than one year" rule: since-inception returns are annualized only from one year on.
+ */
+export function fundAgeAtLeast(inception: unknown, asOf: unknown, years: number): boolean {
+  const start = calendarIso(inception), end = calendarIso(asOf);
+  if (!start || !end) return true;
+  return end >= `${Number(start.slice(0, 4)) + years}${start.slice(4)}`;
+}
+
+/**
+ * The returns with every horizon the fund is too young for set to null: `horizons` maps a key of `returns` to the years it
+ * needs (`{ yr1: 1, cagr3y: 3, siAnn: 1 }`). Keys that are absent or already null stay as they are; the object is copied.
+ */
+export function withoutYoungReturns<T extends object>(returns: T, inception: unknown, asOf: unknown, horizons: Record<string, number>): T {
+  const out: Record<string, unknown> = { ...(returns as Record<string, unknown>) };
+  const keys = Object.keys(horizons);
+  for (let i = 0; i < keys.length; i++) {
+    if (out[keys[i]] !== undefined && out[keys[i]] !== null && !fundAgeAtLeast(inception, asOf, horizons[keys[i]])) out[keys[i]] = null;
+  }
+  return out as T;
+}
+// </calendar-dates>
+
+// <windowed-chart> shared block of .claude/tools/etfs/etf-std/windowed-chart.block.ts, applied by apply-block.ts: never edit it in one repo
+export type WindowedChartDay = { date: string; close: number; adjClose: number; volume: number; adjCloseRaw?: number };
+export type WindowedChartDividend = { epoch: number; amount: number };
+
+/**
+ * A HISTORY_RANGE window (`period1` N years back) never shrinks the published history, and with it the 3y, 5y, 10y and
+ * since-inception returns (open-items etfs Q25; was a byte-identical copy in Fidelity, Invesco and JPMorgan). The published
+ * rows older than the first fresh day are put in front of the fresh days; their Adj Close is rescaled by the ratio measured on
+ * the overlapping days (Yahoo re-adjusts the whole series after each distribution). Published distributions older than the
+ * window are kept as well. Returns the chart unchanged when nothing published is older, and null when the window cannot be
+ * joined safely (no overlap, Close changed, inconsistent or implausible ratio): the caller then keeps the fund as published.
+ * `published` rows carry `Date` (any calendarIso form), `Close`, `Adj Close`, `Volume`; distribution rows are
+ * [date, amount, ...] arrays. The chart's days must be sorted by ISO date.
+ */
+export function mergeWindowedChart<C extends { days: WindowedChartDay[]; dividends: WindowedChartDividend[] }>(chart: C, published: ReadonlyArray<Record<string, unknown>>, publishedDistributions: ReadonlyArray<unknown> = []): C | null {
+  if (!chart.days.length || !published.length) return chart;
+  const num = (value: unknown): number | null => {
+    const text = String(value === null || value === undefined ? '' : value).replace(/[\s,$]/g, '');
+    return text && Number.isFinite(Number(text)) ? Number(text) : null;
+  };
+  const firstFresh = chart.days[0].date;
+  const rows: Array<{ date: string; close: number; adjClose: number; volume: number }> = [];
+  for (let i = 0; i < published.length; i++) {
+    const date = calendarIso(published[i].Date), close = num(published[i].Close), adjClose = num(published[i]['Adj Close']);
+    if (date && close !== null && adjClose !== null && adjClose > 0) rows.push({ date, close, adjClose, volume: num(published[i].Volume) || 0 });
+  }
+  rows.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  const older = rows.filter((row) => row.date < firstFresh);
+  if (!older.length) return chart;
+  const byDate = new Map<string, { close: number; adjClose: number }>();
+  for (let i = 0; i < rows.length; i++) byDate.set(rows[i].date, rows[i]);
+  const adjRatios: number[] = [];
+  const closeRatios: number[] = [];
+  for (let i = 0; i < chart.days.length; i++) {
+    const day = chart.days[i];
+    const prior = byDate.get(day.date);
+    if (!prior) continue;
+    adjRatios.push((day.adjCloseRaw === undefined ? day.adjClose : day.adjCloseRaw) / prior.adjClose);
+    if (prior.close > 0) closeRatios.push(day.close / prior.close);
+  }
+  if (!adjRatios.length) return null;
+  const mean = (values: number[]): number => values.reduce((sum, value) => sum + value, 0) / values.length;
+  if (closeRatios.length && Math.abs(mean(closeRatios) - 1) > 1e-3) return null;
+  if (Math.max.apply(null, adjRatios) / Math.min.apply(null, adjRatios) - 1 > 5e-3) return null;
+  const measured = mean(adjRatios);
+  if (measured < 0.5 || measured > 1.001) return null;
+  const factor = Math.abs(measured - 1) < 1e-4 ? 1 : measured;
+  const days: WindowedChartDay[] = older.map((row) => {
+    const raw = row.adjClose * factor;
+    return { date: row.date, close: row.close, adjClose: factor === 1 ? row.adjClose : Math.round(raw * 100) / 100, volume: row.volume, adjCloseRaw: raw };
+  });
+  const firstFreshEpoch = Date.UTC(Number(firstFresh.slice(0, 4)), Number(firstFresh.slice(5, 7)) - 1, Number(firstFresh.slice(8, 10))) / 1000;
+  const kept: WindowedChartDividend[] = [];
+  for (let i = 0; i < publishedDistributions.length; i++) {
+    const cells = publishedDistributions[i];
+    const date = Array.isArray(cells) ? calendarIso(cells[0]) : null;
+    const amount = Array.isArray(cells) ? num(cells[1]) : null;
+    if (!date || amount === null || amount <= 0) continue;
+    const epoch = Date.UTC(Number(date.slice(0, 4)), Number(date.slice(5, 7)) - 1, Number(date.slice(8, 10))) / 1000;
+    if (epoch < firstFreshEpoch) kept.push({ epoch, amount });
+  }
+  kept.sort((a, b) => a.epoch - b.epoch);
+  return { ...chart, days: days.concat(chart.days), dividends: kept.concat(chart.dividends.filter((dividend) => dividend.epoch >= firstFreshEpoch)) };
+}
+// </windowed-chart>
+
+// <fund-selection> shared block of .claude/tools/etfs/etf-std/fund-selection.block.ts, applied by apply-block.ts: never edit it in one repo
+/** An index row as far as these helpers read it: the ticker and whether it has published data (`dataFile`, null for a catalog-only row). */
+export type FundSelectionRow = { ticker?: unknown; dataFile?: unknown };
+
+function fundSelectionTicker(row: FundSelectionRow): string {
+  return String(row.ticker === null || row.ticker === undefined ? '' : row.ticker).trim().toUpperCase();
+}
+
+/**
+ * The tickers a TICKERS entry may name: the live catalog plus every fund with published data (closed funds included). When
+ * the live catalog could not be read (`live` null) every previous index row counts, since nothing tells a real catalog-only
+ * row from a stale one. A catalog-only row from an earlier mistyped TICKERS run is therefore not "known" (open-items etfs Q27).
+ */
+export function knownTickers(live: ReadonlyArray<string> | null, previous: ReadonlyArray<FundSelectionRow>): string[] {
+  const out: string[] = [];
+  const add = (ticker: string): void => { if (ticker && out.indexOf(ticker) < 0) out.push(ticker); };
+  if (live) for (let i = 0; i < live.length; i++) add(String(live[i]).trim().toUpperCase());
+  for (let i = 0; i < previous.length; i++) if (!live || previous[i].dataFile) add(fundSelectionTicker(previous[i]));
+  return out;
+}
+
+/** Throws before any fund request when TICKERS names a fund outside `known` (see knownTickers): a clear error, nothing fetched or written. */
+export function assertKnownTickers(selected: ReadonlyArray<string> | null, known: ReadonlyArray<string>, where: string): void {
+  const unknown = (selected || []).map((ticker) => String(ticker).trim().toUpperCase()).filter((ticker) => ticker && known.indexOf(ticker) < 0);
+  if (unknown.length) throw new Error(`TICKERS: ${unknown.join(', ')} not in ${where}; nothing was fetched or written`);
+}
+
+/**
+ * The index rows without stale catalog-only rows: a row with no published data whose ticker the live catalog no longer lists
+ * (an earlier mistyped TICKERS entry, a fund withdrawn before launch). Rows with data always stay; nothing is dropped when the
+ * live catalog could not be read (`live` null).
+ */
+export function withoutStalePlaceholders<T extends FundSelectionRow>(rows: ReadonlyArray<T>, live: ReadonlyArray<string> | null): T[] {
+  if (!live) return rows.slice();
+  const listed = live.map((ticker) => String(ticker).trim().toUpperCase());
+  return rows.filter((row) => Boolean(row.dataFile) || listed.indexOf(fundSelectionTicker(row)) >= 0);
+}
+
+/**
+ * New funds of a run (open-items etfs Q28): `published` - first published in this run (the previous index had no row for it,
+ * or only a catalog-only one), so a fund whose first read failed is announced when it finally succeeds; `pending` - new in the
+ * catalog this run but not published yet. Nothing is reported on a first run (empty previous index).
+ */
+export function newFundsReport(previous: ReadonlyArray<FundSelectionRow>, next: ReadonlyArray<FundSelectionRow>): { published: string[]; pending: string[] } {
+  const report = { published: [] as string[], pending: [] as string[] };
+  if (!previous.length) return report;
+  const before = new Map<string, boolean>();
+  for (let i = 0; i < previous.length; i++) before.set(fundSelectionTicker(previous[i]), Boolean(previous[i].dataFile));
+  for (let i = 0; i < next.length; i++) {
+    const ticker = fundSelectionTicker(next[i]);
+    if (!ticker || before.get(ticker)) continue;
+    if (next[i].dataFile) report.published.push(ticker);
+    else if (!before.has(ticker)) report.pending.push(ticker);
+  }
+  report.published.sort();
+  report.pending.sort();
+  return report;
+}
+
+/** The log and step-summary lines of a newFundsReport: `NEW FUNDS: A, B` and `NEW FUNDS (not published yet): C`; none when empty. */
+export function newFundsLines(report: { published: ReadonlyArray<string>; pending: ReadonlyArray<string> }): string[] {
+  const lines: string[] = [];
+  if (report.published.length) lines.push(`NEW FUNDS: ${report.published.join(', ')}`);
+  if (report.pending.length) lines.push(`NEW FUNDS (not published yet): ${report.pending.join(', ')}`);
+  return lines;
+}
+// </fund-selection>

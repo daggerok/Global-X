@@ -6,22 +6,26 @@ import { join } from "node:path";
 import {
   CLOSED_FUNDS,
   CONTROL_NAMES,
+  HOLDINGS_GUARD_RELAX,
   NO_RETURNS_BASIS,
   OFFICIAL_RETURNS_BASIS,
   closedFund,
   extractNextFlightText,
   fetchWithRetry,
   formatGlobalXDate,
-  globalxEdgarFilingsUrl,
   globalxFundPageUrl,
+  globalxHoldingTicker,
   globalxHoldingsCsvUrl,
   holdingsGuard,
-  horizonValue,
+  holdingsWeightCount,
   installSystemCa,
   isGlobalXFundInLiquidation,
   isCertError,
   keepPublishedAmountPrecision,
   main,
+  nportHoldingsSheet,
+  nportIsFresh,
+  nportTickers,
   parseGlobalXDistributionHistory,
   parseGlobalXDistributionInfo,
   parseGlobalXDocuments,
@@ -29,7 +33,9 @@ import {
   parseGlobalXHoldingsCsv,
   parseGlobalXLineup,
   parseGlobalXPerformanceSection,
-  parseNportXml,
+  parseNportFiling,
+  parseSecCompanyNames,
+  parseSecFundTickers,
   parseYahooChart,
   passesDataFilters,
   paymentsPerYear,
@@ -37,9 +43,9 @@ import {
   readConfig,
   resolveControls,
   runtimeControls,
-  sameSeries,
   sanitizeTicker,
   setFetchTuningForTests,
+  toIsoDate,
   withMetricsContract,
   writeIfChanged,
   yahooChartUrl,
@@ -79,6 +85,12 @@ function flightHtml(chunks: string[]): string {
 const li = (label: string, value: string) => `["$","li",${JSON.stringify(label)},{"children":[["$","span",null,{"className":"text-xs font-semibold text-muted-foreground","children":${JSON.stringify(label)}}],["$","span","data-card-value-0",{"className":"v","children":${JSON.stringify(value)}}]]}]`;
 const metricCard = (label: string, value: string) => `["$","div","distribution-history-metric-card-${label}-undefined-0",{"children":[["$","p",null,{"children":[${JSON.stringify(label)},false]}],["$","p",null,{"className":"font-bold","children":${JSON.stringify(value)}}]]}]`;
 const lineupRows = (rows: object[]) => flightHtml([`5:["$","$L5b",null,{"rows":${JSON.stringify(rows)}}]`]);
+// N-PORT-P samples: a U.S. equity, a Treasury note with a ticker but no weight, a future whose reference instrument is SPY
+const NPORT_MRK = '<invstOrSec><name>MERCK &amp; CO INC</name><cusip>58933Y105</cusip><identifiers><isin value="US58933Y1055"/></identifiers><balance>37710468.00000000</balance><curCd>USD</curCd><valUSD>1200</valUSD><pctVal>60</pctVal><assetCat>EC</assetCat></invstOrSec>';
+const NPORT_NOTE = '<invstOrSec><name>UNITED STATES TREASURY NOTE</name><cusip>91282CJL6</cusip><identifiers><ticker value="T"/></identifiers><balance>1000000</balance><curCd>USD</curCd><valUSD>990000</valUSD><assetCat>DBT</assetCat><debtSec><maturityDt>2028-01-31</maturityDt><annualizedRt>3.5</annualizedRt></debtSec></invstOrSec>';
+const NPORT_FUTURE = '<invstOrSec><name>DJIA MINI E-CBOT</name><cusip>000000000</cusip><identifiers><other otherDesc="Bloomberg Identifier" value="BBG01VKPGXL9"/></identifiers><curCd>USD</curCd><valUSD>800</valUSD><pctVal>40</pctVal><assetCat>DE</assetCat><derivativeInfo><futrDeriv derivCat="FUT"><descRefInstrmnt><otherRefInst><identifiers><cusip value="78462F103"/><ticker value="SPY"/></identifiers></otherRefInst></descRefInstrmnt></futrDeriv></derivativeInfo></invstOrSec>';
+const nportXml = (seriesId: string, period: string, positions: string[]) => `<edgarSubmission><genInfo><regName>Global X Funds</regName><regCik>0001432353</regCik><seriesName>Global X Alpha Index ETF</seriesName><seriesId>${seriesId}</seriesId><repPdDate>${period}</repPdDate></genInfo><fundInfo><netAssets>2000</netAssets></fundInfo><invstOrSecs>${positions.join("")}</invstOrSecs></edgarSubmission>`;
+const NPORT_XML = nportXml("S000099001", "2026-09-30", [NPORT_MRK, NPORT_NOTE, NPORT_FUTURE]);
 
 describe("controls", () => {
   test("precedence is file < advanced < nonblank input < env, blank input inherits", () => {
@@ -171,16 +183,19 @@ describe("controls 2", () => {
 });
 
 describe("parsing", () => {
-  test("N-PORT fallback: positions, report date and series are read (element text and value attributes)", () => {
-    const xml = `<edgarSubmission><repPdDate>2026-06-30</repPdDate><seriesName>Global X &amp; Co Test ETF</seriesName>
-      <invstOrSec><name>Acme Corp</name><cusip>000111222</cusip><balance>1500</balance><valUSD>3000.50</valUSD><pctVal>1.25</pctVal><assetCat>EC</assetCat>
-      <identifiers><ticker value="ACME"/></identifiers></invstOrSec>
-      <invstOrSec><name>No Numbers</name><cusip>N/A</cusip><assetCat>DBT</assetCat></invstOrSec></edgarSubmission>`;
-    const parsed = parseNportXml(xml);
-    expect(parsed).toMatchObject({ repPdDate: "2026-06-30", seriesName: "Global X & Co Test ETF" });
-    expect(parsed.positions).toHaveLength(2);
-    expect(parsed.positions[0]).toEqual({ name: "Acme Corp", ticker: "ACME", cusip: "000111222", balance: 1500, valueUsd: 3000.5, percent: 1.25, assetCategory: "EC" });
-    expect(parsed.positions[1]).toMatchObject({ balance: null, valueUsd: null, percent: null });
+  test("SEC EDGAR fallback (shared nport-reader): ticker map, N-PORT sheet with empty missing numbers, no derivative identifiers, tickers only for U.S. equities", () => {
+    const map = parseSecFundTickers({ fields: ["cik", "seriesId", "classId", "symbol"], data: [[1432353, "S000022380", "C000064234", "PAVE"], [1432353, "S000029546", "C000090733", "PFFD"]] });
+    expect(map.get("PAVE")).toEqual({ cik: "0001432353", seriesId: "S000022380", classId: "C000064234" });
+    const filing = parseNportFiling(NPORT_XML);
+    expect([filing.seriesId, filing.repPdDate, filing.netAssets, filing.positions.length]).toEqual(["S000099001", "2026-09-30", 2000, 3]);
+    const names = parseSecCompanyNames({ 0: { ticker: "MRK", title: "Merck & Co., Inc." }, 1: { ticker: "T", title: "AT&T INC." } });
+    const rows = nportHoldingsSheet(filing, nportTickers(filing.positions, names));
+    expect(rows[0]).toEqual({ Name: "MERCK & CO INC", Ticker: "MRK", Identifier: "58933Y105", Weight: "60%", "Market Value": "1200", "Shares Held": "37710468", "Asset Category": "EC" });
+    // the Treasury note keeps no ticker (a bond is no "T" for AT&T) and an empty weight, never 0; the future keeps its own id, not SPY's
+    expect(rows.slice(1).map((row) => [row.Ticker, row.Identifier, row.Weight, row["Asset Category"]])).toEqual([["-", "91282CJL6", "", "DBT"], ["-", "BBG01VKPGXL9", "40%", "DE"]]);
+    // a preferred share (EP) of Merck never takes the common share's ticker (GLOBALX-3: PFFD rows by issuer name)
+    const preferred = parseNportFiling(nportXml("S000099001", "2026-09-30", [NPORT_MRK.replace("<assetCat>EC</assetCat>", "<assetCat>EP</assetCat>").replace("58933Y105", "58933Y204")]));
+    expect(nportHoldingsSheet(preferred, nportTickers(preferred.positions, names)).map((row) => [row.Ticker, row.Identifier])).toEqual([["-", "58933Y204"]]);
   });
 
   test("catalog: the 2026-10 client table rows are read, missing values become null", () => {
@@ -252,7 +267,7 @@ describe("parsing 2", () => {
     expect(seven.rows[0]).toEqual({ Name: "DEERE & CO", Ticker: "DE", Identifier: "2261203", Weight: "3.65%", "Market Value": "493,517,332.36", "Shares Held": "714,766.00", "Asset Category": "Equity", Price: "690.46" });
     // the futures funds (BITS, COMD) publish exposure: Market Value comes from Market Value ($), not Exposure Amount ($); a cash row without exposure is left out
     const exposure = parseGlobalXHoldingsCsv(`${head}Exposure (%),Ticker,Name,SEDOL,Price/Unit ($),Units Held,Exposure Amount ($),Market Value ($),Market Value (%)\n39.69,BTCV6 Curncy,CME BITCOIN FUT   OCT26,"",406025.0,22.00,"8,932,550.00","61,250.00",\n,"",CASH,"",1.0,"4,281,652.47",,"4,281,652.47",19.02`);
-    expect(exposure.rows).toEqual([{ Name: "CME BITCOIN FUT OCT26", Ticker: "BTCV6 Curncy", Identifier: "", Weight: "39.69%", "Market Value": "61,250.00", "Shares Held": "22.00", "Asset Category": "Equity", Price: "406025.0" }]);
+    expect(exposure.rows).toEqual([{ Name: "CME BITCOIN FUT OCT26", Ticker: "-", Identifier: "", Weight: "39.69%", "Market Value": "61,250.00", "Shares Held": "22.00", "Asset Category": "Future", Price: "406025.0" }]);
     expect(() => parseGlobalXHoldingsCsv(`${head}% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n"The information contained herein may not be reproduced."`)).toThrow(/no holdings rows/);
     expect(() => parseGlobalXHoldingsCsv(`${head}Pct,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n3.65,DE,DEERE & CO,2261203,690.46,1,1`)).toThrow(/no weight \(% of Net Assets\) column/);
     expect(() => parseGlobalXHoldingsCsv(`${head}% of Net Assets,Ticker,Security,SEDOL\n3.65,DE,DEERE & CO,2261203`)).toThrow(/no Name column/);
@@ -274,18 +289,59 @@ describe("parsing 2", () => {
     expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
   });
 
-  test("urls, tickers, Yahoo adjusted close, dates and N-PORT series matching", () => {
-    expect(globalxEdgarFilingsUrl()).toContain("CIK=0001432353");
-    expect(globalxEdgarFilingsUrl()).toContain("type=NPORT-P");
+  test("urls, tickers, Yahoo adjusted close and display dates", () => {
     expect(globalxFundPageUrl("pave")).toBe("https://www.globalxetfs.com/funds/pave/");
     expect(globalxHoldingsCsvUrl("PAVE")).toBe("https://assets.globalxetfs.com/funds/holdings/pave_full-holdings.csv");
     expect(sanitizeTicker(" pave ")).toBe("PAVE");
     const parsed = parseYahooChart({ chart: { result: [{ timestamp: [1790899200], indicators: { quote: [{ close: [53.46999], volume: [100] }], adjclose: [{ adjclose: [53.461999] }] }, events: { dividends: {} } }] } });
     expect(parsed.history[0].adjClose).toBe(53.46);
     expect(formatGlobalXDate("2026-01-06")).toBe("Jan 06 2026");
-    expect(sameSeries("Global X Silver Miners ETF", "Silver Miners ETF")).toBe(true);
-    expect(sameSeries("Global X Uranium ETF", "Silver Miners ETF")).toBe(false);
-    expect(sameSeries(null, "Silver Miners ETF")).toBe(false);
+  });
+});
+
+describe("parsing 3", () => {
+  test("holdings CSV tickers (GLOBALX-3): preferreds and bonds lose the issuer's equity ticker, futures are Future with no ticker, U.S. and exchange-qualified listings stay", () => {
+    const csv = "Global X U.S. Preferred ETF\nFund Holdings Data as of 10/23/2026\n% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n" + [
+      '0.15,PNFP,PNFP 7.68764 PERP,BV6GRK7,25.16,"111,080.00","2,794,906.10"',
+      '0.12,GOOGL,GOOGL 6 1/4 05/15/29,BQ7WWQ0,25.30,1,1',
+      '0.11,AHL,AHL 5 5/8 PERP,BMHV5V5,20.00,1,1',
+      '0.10,DTE,DTE 4 3/8 12/01/2081,BD0S963,18.04,1,1',
+      '0.09,BAC NEW YORK,BAC 4.35225 PERP,B1GH4Y3,20.00,1,1',
+      '39.69,BTCV6 Curncy,CME BITCOIN FUT   OCT26,,406025.0,22.00,"61,250.00"',
+      '5.00,COF7 Comdty,BRENT CRUDE FUTR JAN27,,70.0,1,1',
+      '5.00,S F7 Comdty,SOYBEAN FUTURE JAN27,,10.0,1,1',
+      '1.00,NQZ6 Index,NASDAQ 100 E-MINI DEC26,,25000.0,1,1',
+      '3.00,ABBV,ABBVIE INC,B92SR70,200.00,1,1',
+      '2.00,BRK/B,BERKSHIRE HATHAWAY INC-CL B,2073390,500.00,1,1',
+      '1.00,RO SW,ROCHE HOLDING AG-BR,7108918,300.00,1,1',
+      '1.00,2330 TT,TAIWAN SEMICONDUCTOR MANUFAC,6889106,30.00,1,1',
+      '0.50,,CASH,,1.00,1,1',
+    ].join("\n");
+    const rows = parseGlobalXHoldingsCsv(csv).rows;
+    expect(rows.map((row) => [row.Ticker, row["Asset Category"]])).toEqual([
+      ["-", "Equity"], ["-", "Equity"], ["-", "Equity"], ["-", "Equity"], ["-", "Equity"],
+      ["-", "Future"], ["-", "Future"], ["-", "Future"], ["-", "Future"],
+      ["ABBV", "Equity"], ["BRK/B", "Equity"], ["RO SW", "Equity"], ["2330 TT", "Equity"], ["-", "Cash"],
+    ]);
+    // an ETF holding keeps its U.S. ticker even when its name reads like a bill
+    expect(globalxHoldingTicker("CLIP", "GLOBAL X 1-3 MONTH T-BILL")).toBe("CLIP");
+  });
+
+  test("N-PORT freshness: a report replaces published holdings only when strictly newer; nothing published accepts any report", () => {
+    expect(nportIsFresh("2026-06-30", "2026-10-23", 239)).toBe(false); // PFFD published from the 10-23 issuer CSV
+    expect(nportIsFresh("2026-10-23", "2026-10-23", 239)).toBe(false);
+    expect(nportIsFresh("2026-09-30", "2026-06-30", 100)).toBe(true);
+    expect(nportIsFresh("", "2026-03-31", 100)).toBe(false);
+    expect(nportIsFresh("2026-06-30", null, 0)).toBe(true);
+    expect(nportIsFresh("2026-06-30", null, 100)).toBe(false); // published rows without a date cannot be compared: keep them
+  });
+
+  test("dates: month-name and U.S. dates are the same calendar day in every time zone", () => {
+    for (const tz of ["Asia/Tokyo", "America/Los_Angeles", "UTC"]) {
+      process.env.TZ = tz;
+      expect(["Oct 24, 2026", "October 24 2026", "24 Oct 2026", "10/24/2026", "10/24/26", "2026-10-24", "$D2026-10-24T00:00:00.000Z"].map((raw) => toIsoDate(raw))).toEqual(Array(7).fill("2026-10-24"));
+      expect([toIsoDate("not a date"), toIsoDate("02/30/2026")]).toEqual(["", ""]);
+    }
   });
 });
 
@@ -336,20 +392,22 @@ describe("metrics", () => {
     expect(withMetricsContract(once)).toEqual(once);
   });
 
-  test("returns longer than the fund age are null, siAnn needs one year", () => {
-    expect(horizonValue(5, "2026-01-06", "2026-08-31", 1)).toBeNull();
-    expect(horizonValue(5, "2025-08-30", "2026-08-31", 1)).toBe(5);
-    expect(horizonValue(7, "2022-11-21", "2026-08-31", 5)).toBeNull();
-    expect(horizonValue(7, "", "2026-08-31", 5)).toBe(7);
-    expect(horizonValue(null, "2010-01-01", "2026-08-31", 5)).toBeNull();
+  test("a fund younger than a horizon publishes no return for it: calendar anniversaries, inclusive (3y from 2023-09-01 is null on 2026-08-31)", async () => {
+    const dir = fresh(); quiet();
+    installMock(() => [{ ...THREE[0], inception: Date.UTC(2023, 8, 1) }, { ...THREE[1], inception: Date.UTC(2025, 8, 1) }, { ...THREE[2], inception: Date.UTC(2023, 7, 31) }]);
+    await run(dir);
+    const metrics = Object.fromEntries(index(dir).funds.map((fund: any) => [fund.ticker, fund.metrics]));
+    expect([metrics.AAA.tr1y, metrics.AAA.cagr3y, metrics.AAA.tr3y, metrics.AAA.cagr5y, metrics.AAA.siAnn]).toEqual([20, null, null, null, 8]);
+    expect([metrics.BBB.ytd, metrics.BBB.tr1y, metrics.BBB.cagr3y, metrics.BBB.siAnn]).toEqual([10, null, null, null]);
+    expect([metrics.CCC.cagr3y, metrics.CCC.cagr5y]).toEqual([15, null]);
   });
 });
 
 // Offline pipeline helpers: main() against a mocked globalxetfs.com and Yahoo
-type MockFund = { ticker: string; name: string; net?: number | null; gross?: number | null; divYield?: number; pageOk?: boolean; yahooOk?: boolean; ten?: number; liquidation?: boolean; csvOk?: boolean };
+type MockFund = { ticker: string; name: string; inception?: number; net?: number | null; gross?: number | null; divYield?: number; pageOk?: boolean; yahooOk?: boolean; ten?: number; liquidation?: boolean; csvOk?: boolean };
 
 function lineupPage(funds: MockFund[]): string {
-  return lineupRows(funds.map((fund) => ({ ticker: fund.ticker, name: fund.name, netAssetsValue: 1000000000, grossExpensesValue: fund.gross ?? 0.6, netExpensesValue: fund.net === null ? null : (fund.net ?? 0.5), distributionRateValue: null, inceptionDateValue: Date.UTC(2015, 2, 6), hierarchyNames: ["Equity", "Thematic"], distributionFrequency: "Semi-Annually" })));
+  return lineupRows(funds.map((fund) => ({ ticker: fund.ticker, name: fund.name, netAssetsValue: 1000000000, grossExpensesValue: fund.gross ?? 0.6, netExpensesValue: fund.net === null ? null : (fund.net ?? 0.5), distributionRateValue: null, inceptionDateValue: fund.inception ?? Date.UTC(2015, 2, 6), hierarchyNames: ["Equity", "Thematic"], distributionFrequency: "Semi-Annually" })));
 }
 
 function fundPage(fund: MockFund): string {
@@ -416,6 +474,24 @@ function snapshot(dir: string): Record<string, string> {
   };
   walk(dir);
   return out;
+}
+
+const NPORT_ACCESSION = "0001432353-26-000101";
+const NPORT_DOC = "https://www.sec.gov/Archives/edgar/data/1432353/000143235326000101/primary_doc.xml";
+
+/** SEC EDGAR around the Global X mock: fund and company ticker tables, the trust's submissions, AAA's series feed and one N-PORT document. */
+function withSec(xml: string) {
+  const base = globalThis.fetch;
+  globalThis.fetch = (async (input: any, init?: RequestInit) => {
+    const url = String(input);
+    let body: string | null = null;
+    if (url === "https://www.sec.gov/files/company_tickers_mf.json") body = JSON.stringify({ fields: ["cik", "seriesId", "classId", "symbol"], data: [[1432353, "S000099001", "C000099001", "AAA"], [1432353, "S000099002", "C000099002", "BBB"]] });
+    else if (url === "https://www.sec.gov/files/company_tickers.json") body = JSON.stringify({ 0: { ticker: "MRK", title: "Merck & Co., Inc." } });
+    else if (url === "https://data.sec.gov/submissions/CIK0001432353.json") body = JSON.stringify({ cik: "1432353", filings: { recent: { form: ["NPORT-P"], accessionNumber: [NPORT_ACCESSION], filingDate: ["2026-10-20"], reportDate: ["2026-09-30"] } } });
+    else if (url.includes("browse-edgar") && url.includes("CIK=S000099001")) body = `<feed><entry><content><accession-number>${NPORT_ACCESSION}</accession-number><filing-date>2026-10-20</filing-date><filing-type>NPORT-P</filing-type><filing-href>https://www.sec.gov/Archives/edgar/data/1432353/000143235326000101/${NPORT_ACCESSION}-index.htm</filing-href><period>2026-09-30</period></content></entry></feed>`;
+    else if (url === NPORT_DOC) body = xml;
+    return body === null ? base(input, init) : new Response(body);
+  }) as unknown as typeof fetch;
 }
 
 const THREE: MockFund[] = [{ ticker: 'AAA', name: 'Alpha Index ETF' }, { ticker: 'BBB', name: 'Beta Index ETF' }, { ticker: 'CCC', name: 'Gamma Index ETF' }];
@@ -670,7 +746,9 @@ describe("pipeline 3", () => {
     expect(index(other).funds).toHaveLength(3);
     expect(index(other).funds.every((f: any) => f.dataFile === null)).toBe(true);
   });
+});
 
+describe("pipeline 4", () => {
   test("a new fund no source answered is failed with a catalog-only row and no files; that row is never read back as published data", async () => {
     const dir = fresh(); quiet();
     const lineup = (pageOk: boolean): MockFund[] => [...THREE, { ticker: "NEWF", name: "New Index ETF", pageOk }];
@@ -699,11 +777,114 @@ describe("pipeline 3", () => {
     expect(Object.keys(row("NEWF")).sort()).toEqual(Object.keys(row("AAA")).sort());
   });
 
+  test("EDGAR fallback: a fund without its CSV is rebuilt from its own series' N-PORT when strictly newer; another series' filing or a not newer report keeps the fund as published", async () => {
+    const dir = fresh(); installMock(() => THREE); quiet();
+    await run(dir);
+    const first = snapshot(dir);
+    expect(JSON.parse(first["/funds/AAA/meta.json"]).source.nportDoc).toBeUndefined();
+    installMock(() => THREE.map((fund) => ({ ...fund, csvOk: fund.ticker === "CCC" })));
+    withSec(nportXml("S000099001", "2026-09-30", [NPORT_MRK, NPORT_FUTURE]));
+    const lines: string[] = [];
+    console.log = (line: unknown) => { lines.push(String(line)); };
+    await run(dir, { EDGAR_FALLBACK: "true" });
+    const page = JSON.parse(readFileSync(join(dir, "funds", "AAA", "holdings", "001.json"), "utf8"));
+    expect(page.rows.map((row: any) => [row.Name, row.Ticker, row.Identifier, row.Weight, row["Market Value"]])).toEqual([["MERCK & CO INC", "MRK", "58933Y105", "60%", "1200"], ["DJIA MINI E-CBOT", "-", "BBG01VKPGXL9", "40%", "800"]]);
+    const meta = JSON.parse(readFileSync(join(dir, "funds", "AAA", "meta.json"), "utf8"));
+    expect([meta.holdings.asOf, meta.holdings.source, meta.source.nportDoc, meta.source.holdingsDownload]).toEqual(["2026-09-30", NPORT_DOC, NPORT_DOC, NPORT_DOC]);
+    // BBB: SEC's table names series S000099002, the trust's only filing is S000099001's: failed, files as published
+    expect(lines.some((line) => /BBB/.test(line) && /failed/.test(line) && /names series S000099001, not S000099002/.test(line))).toBe(true);
+    const second = snapshot(dir);
+    for (const key of Object.keys(first)) if (key.includes("/BBB/")) expect([key, second[key]]).toEqual([key, first[key]]);
+    // the same report period again is not newer than the published holdings: AAA failed, nothing written
+    lines.length = 0;
+    await run(dir, { EDGAR_FALLBACK: "true", TICKERS: "AAA,CCC" });
+    expect(snapshot(dir)).toEqual(second);
+    expect(lines.some((line) => /AAA/.test(line) && /failed/.test(line) && /not newer than the published holdings \(2026-09-30\)/.test(line))).toBe(true);
+  });
+
   test("writeIfChanged goes through a temp file and leaves only the target", async () => {
     const dir = fresh();
     expect(await writeIfChanged(join(dir, "a.json"), "{}\n")).toBe("written");
     expect(await writeIfChanged(join(dir, "a.json"), "{}\n")).toBe("unchanged");
     expect(readdirSync(dir).sort()).toEqual(["a.json"]);
+  });
+});
+
+describe("pipeline 5", () => {
+  test("a HISTORY_RANGE run after a full run keeps the older history and writes nothing, also with SKIP_GLOBALX (Q25)", async () => {
+    const dir = fresh(); installMock(() => THREE); quiet();
+    await run(dir);
+    const first = snapshot(dir);
+    const base = globalThis.fetch;
+    globalThis.fetch = (async (input: any, init?: RequestInit) => {
+      if (!String(input).includes("finance.yahoo.com")) return base(input, init);
+      const payload = yahooJson() as any;
+      const result = payload.chart.result[0];
+      result.timestamp = result.timestamp.slice(-1);
+      result.indicators.quote[0].close = result.indicators.quote[0].close.slice(-1);
+      result.indicators.quote[0].volume = result.indicators.quote[0].volume.slice(-1);
+      result.indicators.adjclose[0].adjclose = result.indicators.adjclose[0].adjclose.slice(-1);
+      return new Response(JSON.stringify(payload));
+    }) as unknown as typeof fetch;
+    await run(dir, { HISTORY_RANGE: "1y" });
+    expect(snapshot(dir)).toEqual(first);
+    await run(dir, { HISTORY_RANGE: "1y", SKIP_GLOBALX: "true" });
+    expect(snapshot(dir)).toEqual(first);
+    expect(JSON.parse(readFileSync(join(dir, "funds", "AAA", "meta.json"), "utf8")).history.totalRows).toBe(2);
+  });
+
+  test("a relaxed guard still keeps numeric published weights from an all-blank N-PORT sheet (Q24)", async () => {
+    const dir = fresh(); installMock(() => THREE); quiet();
+    await run(dir);
+    const first = snapshot(dir);
+    installMock(() => THREE.map((fund) => ({ ...fund, csvOk: fund.ticker !== "AAA" })));
+    withSec(nportXml("S000099001", "2026-09-30", [NPORT_MRK, NPORT_FUTURE].map((position) => position.replace(/<pctVal>[^<]*<\/pctVal>/, ""))));
+    const lines: string[] = [];
+    console.log = (line: unknown) => { lines.push(String(line)); };
+    HOLDINGS_GUARD_RELAX.AAA = ["numeric", "sum"];
+    try {
+      await run(dir, { EDGAR_FALLBACK: "true", TICKERS: "AAA,BBB" });
+    } finally {
+      delete HOLDINGS_GUARD_RELAX.AAA;
+    }
+    expect(snapshot(dir)).toEqual(first);
+    expect(lines.some((line) => /AAA/.test(line) && /failed/.test(line) && /no row has a numeric weight, the published sheet had 2/.test(line))).toBe(true);
+    expect(holdingsWeightCount(["Name", "Weight"], [["A", "-"], ["B", "2%"]])).toBe(1);
+  });
+
+  test("TICKERS outside the live lineup stops the run before any fund request; a stale catalog-only row is dropped (Q27)", async () => {
+    const dir = fresh(); const calls: string[] = []; installMock(() => THREE, { calls }); quiet();
+    await run(dir);
+    const idx = index(dir);
+    idx.funds.push({ ticker: "NOPE", name: "Nope ETF", dataFile: null, holdings: 0, history: 0 });
+    writeFileSync(join(dir, "index.json"), JSON.stringify(idx));
+    const before = snapshot(dir);
+    calls.length = 0;
+    await expect(run(dir, { TICKERS: "NOPE" })).rejects.toThrow("TICKERS: NOPE not in the Global X lineup or published feed; nothing was fetched or written");
+    expect(calls).toEqual(["https://www.globalxetfs.com/explore"]);
+    expect(snapshot(dir)).toEqual(before);
+    await run(dir);
+    expect(index(dir).funds.map((fund: any) => fund.ticker)).toEqual(["AAA", "BBB", "CCC"]);
+  });
+
+  test("NEW FUNDS announces a fund on its first successful publish, a failed new fund as not published yet (Q28)", async () => {
+    const dir = fresh(); quiet();
+    installMock(() => [THREE[0]]);
+    await run(dir);
+    const summary = join(fresh(), "summary.md");
+    process.env.GITHUB_STEP_SUMMARY = summary;
+    const lines: string[] = [];
+    console.log = (line: unknown) => { if (/^NEW FUNDS/.test(String(line))) lines.push(String(line)); };
+    installMock(() => [THREE[0], THREE[1], { ...THREE[2], pageOk: false }]);
+    await run(dir);
+    expect(lines).toEqual(["NEW FUNDS: BBB", "NEW FUNDS (not published yet): CCC"]);
+    expect(readFileSync(summary, "utf8")).toContain("### NEW FUNDS\n\nNEW FUNDS: BBB\nNEW FUNDS (not published yet): CCC\n");
+    lines.length = 0;
+    await run(dir);
+    expect(lines).toEqual([]);
+    installMock(() => THREE);
+    await run(dir);
+    expect(lines).toEqual(["NEW FUNDS: CCC"]);
   });
 });
 
