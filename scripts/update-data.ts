@@ -1945,19 +1945,27 @@ export const DIVIDEND_YIELD_BASES = ['official-trailing-12m', 'official-distribu
 export type DividendYieldBasis = typeof DIVIDEND_YIELD_BASES[number];
 /** Global X publishes exactly one yield behind `dividendYield`: the official Distribution Rate (latest distribution annualized / ex-date NAV). */
 export const GLOBALX_DIVIDEND_YIELD_BASIS: DividendYieldBasis = 'official-distribution-rate';
-const NULL_METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'secYield'];
+/** Every metrics key a published row carries, in its order: numbers default to null, their display texts to the empty-value text. */
+const METRIC_KEYS: ReadonlyArray<[string, 'number' | 'text']> = [
+  ['ytd', 'number'], ['tr1y', 'number'], ['tr3y', 'number'], ['tr5y', 'number'], ['tr10y', 'number'],
+  ['cagr3y', 'number'], ['cagr5y', 'number'], ['cagr10y', 'number'], ['siAnn', 'number'],
+  ['dividendYield', 'number'], ['dividendYieldText', 'text'], ['distributionYield', 'number'], ['distributionYieldText', 'text'],
+  ['yield12M', 'number'], ['yield12MText', 'text'], ['secYield', 'number'], ['secYieldText', 'text'],
+];
 
 /**
- * Guarantees `metrics` on a catalog row: every number key present (null when
- * unknown), non-empty `returnsBasis` and `performanceAsOf` (ISO date of the
+ * Guarantees `metrics` on a catalog row: every key of METRIC_KEYS present (null
+ * or the empty-value text when unknown), non-empty `returnsBasis` and `performanceAsOf` (ISO date of the
  * performance table, or null) as the last two keys. Rows the updater just
  * built already satisfy it; this covers placeholders and preserved rows.
  */
 export function withMetricsContract<T extends Record<string, any>>(entry: T): T & { metrics: Record<string, any> } {
   const old: Record<string, any> = entry.metrics && typeof entry.metrics === 'object' ? entry.metrics : {};
   const { returnsBasis, performanceAsOf, dividendYieldBasis, ...rest } = old;
-  const metrics: Record<string, any> = { ...rest };
-  for (const key of NULL_METRIC_KEYS) if (!(key in metrics)) metrics[key] = null;
+  // The full key set in the published order (a catalog-only row too), then any other key the row carries.
+  const metrics: Record<string, any> = {};
+  for (const [key, kind] of METRIC_KEYS) metrics[key] = key in rest ? rest[key] : (kind === 'text' ? formatPercentText(null) : null);
+  for (const key of Object.keys(rest)) if (!(key in metrics)) metrics[key] = rest[key];
   const monthEnd = (entry.returns as any)?.monthEnd;
   const hasReturns = ['ytd', 'tr1y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn'].some((key) => typeof metrics[key] === 'number');
   const basis = typeof returnsBasis === 'string' && returnsBasis.trim() && returnsBasis.trim() !== '-'
