@@ -323,12 +323,18 @@ describe("parsing 3", () => {
       '1.00,RO SW,ROCHE HOLDING AG-BR,7108918,300.00,1,1',
       '1.00,2330 TT,TAIWAN SEMICONDUCTOR MANUFAC,6889106,30.00,1,1',
       '0.50,,CASH,,1.00,1,1',
+      // Q34: Pathward Financial trades as CASH (RSSL), a cash line may carry CASH as its ticker, RYLD lists a CVR and earnouts by Bloomberg id
+      '0.06,CASH,PATHWARD FINANCIAL INC,2420316,77.50,1,1',
+      '0.20,CASH,US DOLLAR,,1.00,1,1',
+      '0.00,2324462D,CARTESIAN THERAPEUTICS INC,BM9HFX3,0.13,1,1',
+      '0.00,2200963D,OMNIAB INC - 12.5 EARNOUT,,0.00,1,1',
     ].join("\n");
     const rows = parseGlobalXHoldingsCsv(csv).rows;
     expect(rows.map((row) => [row.Ticker, row["Asset Category"]])).toEqual([
       ["-", "Equity"], ["-", "Equity"], ["-", "Equity"], ["-", "Equity"], ["-", "Equity"],
       ["-", "Future"], ["-", "Future"], ["-", "Future"], ["-", "Future"],
       ["ABBV", "Equity"], ["BRK/B", "Equity"], ["RO SW", "Equity"], ["2330 TT", "Equity"], ["-", "Cash"],
+      ["CASH", "Equity"], ["-", "Cash"], ["-", "Equity"], ["-", "Equity"],
     ]);
     // an ETF holding keeps its U.S. ticker even when its name reads like a bill
     expect(globalxHoldingTicker("CLIP", "GLOBAL X 1-3 MONTH T-BILL")).toBe("CLIP");
