@@ -4,9 +4,11 @@ import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, 
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import {
+  CLOSED_FUNDS,
   CONTROL_NAMES,
   NO_RETURNS_BASIS,
   OFFICIAL_RETURNS_BASIS,
+  closedFund,
   extractNextFlightText,
   fetchWithRetry,
   formatGlobalXDate,
@@ -114,7 +116,9 @@ describe("controls", () => {
   ])("strict validation rejects %s", (_name, advanced) => {
     expect(() => resolveControls({}, advanced as any)).toThrow();
   });
+});
 
+describe("controls 2", () => {
   test("strict validation rejects non-object input, NUL in env, bad tickers and bad HISTORY_RANGE", () => {
     for (const value of [null, []]) expect(() => resolveControls(value as any)).toThrow();
     expect(() => resolveControls({}, [] as any)).toThrow();
@@ -228,7 +232,9 @@ describe("parsing", () => {
     expect([positiveYieldOrNull(0), positiveYieldOrNull("0"), positiveYieldOrNull(4.2)]).toEqual([null, null, 4.2]);
     expect([paymentsPerYear("Semi-Annually"), paymentsPerYear("semi-annual"), paymentsPerYear("Quarterly"), paymentsPerYear("Monthly")]).toEqual([2, 2, 4, 12]);
   });
+});
 
+describe("parsing 2", () => {
   test("holdings CSV: dated seven-column download", () => {
     const csv = `Global X U.S. Infrastructure Development ETF\nFund Holdings Data as of 09/25/2026\n% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n0.02,,CASH,,1.00,"413,416.71","413,416.71"\n3.65,DE,DEERE & CO,2261203,690.46,"714,766.00","493,517,332.36"`;
     const parsed = parseGlobalXHoldingsCsv(csv);
@@ -505,7 +511,9 @@ describe("pipeline", () => {
     for (const key of Object.keys(before)) if (!key.includes("/BBB/") && !key.endsWith("index.json")) expect(after[key]).toBe(before[key]);
     await expect(run(dir, { TICKERS: "ZZZ" })).rejects.toThrow(/not in the Global X lineup/);
   });
+});
 
+describe("pipeline 2", () => {
   test("a failed fund page keeps the fund with dataFile null and a full null metrics object", async () => {
     const dir = fresh(); installMock(() => [...THREE, { ticker: "LLM", name: "LLM ETF", pageOk: false }]); quiet();
     writeFileSync(join(dir, "index.json"), JSON.stringify({ generatedAt: "x", source: {}, counts: {}, funds: [{ ticker: "OLD", name: "Old ETF", dataFile: "./funds/OLD/meta.json", holdings: 0, history: 0 }] }));
@@ -580,6 +588,50 @@ describe("pipeline", () => {
     expect(lines.some((line) => /CCC/.test(line) && /unchanged/.test(line))).toBe(true);
   });
 
+  test("a closed fund is never fetched or reported failed: its files stay as published, its index row says closed, a rerun writes nothing", async () => {
+    const entry = { ticker: "AAA", closed: "2026-10-01", source: "https://www.sec.gov/Archives/edgar/data/1/notice.htm" };
+    expect(() => closedFund([{ ...entry, closed: "soon" }], "AAA")).toThrow("CLOSED_FUNDS");
+    expect(closedFund([entry], "aaa")).toEqual(entry);
+    const dir = fresh(); installMock(() => THREE); quiet();
+    await run(dir);
+    const first = snapshot(dir);
+    const calls: string[] = [];
+    const lines: string[] = [];
+    const badSum = HOLDINGS_CSV.replace(/50\.00,/g, "238.00,"); // the guard would reject these holdings
+    const world = (funds: MockFund[]) => {
+      installMock(() => funds, { calls });
+      const good = globalThis.fetch;
+      globalThis.fetch = (async (input: any, init?: RequestInit) => (String(input).includes("/holdings/aaa_full-holdings") ? new Response(badSum) : good(input, init))) as unknown as typeof fetch;
+    };
+    world(THREE);
+    CLOSED_FUNDS.push(entry);
+    try {
+      console.log = (line: unknown) => { lines.push(String(line)); };
+      await run(dir, { TICKERS: "AAA" });
+      expect(calls.filter((url) => /aaa/i.test(url))).toEqual([]);
+      expect(process.exitCode).not.toBe(1);
+      expect(lines.some((line) => /^\[ closed {3}\] AAA: /.test(line))).toBe(true);
+      expect(lines.some((line) => /failed/.test(line) && !/ 0 failed/.test(line))).toBe(false);
+      const closed = snapshot(dir);
+      for (const key of Object.keys(first)) if (key !== "/index.json") expect([key, closed[key]]).toEqual([key, first[key]]);
+      const rows = index(dir).funds;
+      expect(rows.map((row: any) => row.ticker)).toEqual(["AAA", "BBB", "CCC"]);
+      expect(rows.find((row: any) => row.ticker === "AAA")).toMatchObject({ status: "closed", closedDate: "2026-10-01", closedSource: entry.source, dataFile: "./funds/AAA/meta.json" });
+      expect(rows.filter((row: any) => row.status === "closed")).toHaveLength(1);
+      // the lineup drops the closed fund: a full run and a TICKERS run keep its row and write nothing
+      world(THREE.slice(1));
+      calls.length = 0;
+      await run(dir);
+      await run(dir, { TICKERS: "AAA" });
+      expect(calls.filter((url) => /aaa/i.test(url))).toEqual([]);
+      expect(snapshot(dir)).toEqual(closed);
+    } finally {
+      CLOSED_FUNDS.splice(CLOSED_FUNDS.indexOf(entry), 1);
+    }
+  });
+});
+
+describe("pipeline 3", () => {
   test("filters exclude funds without a figure and write nothing for them", async () => {
     const dir = fresh();
     installMock(() => [{ ticker: "AAA", name: "Alpha Index ETF", divYield: 3 }, { ticker: "BBB", name: "Beta Index ETF", divYield: 0 }]); quiet();

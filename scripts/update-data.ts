@@ -1510,10 +1510,16 @@ export const GLOBALX_HOLDINGS_CSV_HEADERS = [
 export const HOLDINGS_HEADERS = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category'] as const;
 /** Funds whose holdings legitimately fail a holdingsGuard check (geared, futures, look-through, top-N lists): ticker, or '*' for every fund -> relaxed checks. */
 const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {
-  // Futures strategy funds: the futures exposure plus the T-bill collateral add up to 160-175. Every other published Global X fund passes today.
-  BTRN: ['sum'],
+  // Futures strategy fund: the futures exposure plus the T-bill collateral add up to 160-175. Every other published Global X fund passes today.
   COMD: ['sum'],
 };
+/** Funds the issuer closed, each confirmed from an SEC filing or the issuer notice (`source`): never fetched or guarded, last published data kept, index row marked closed. */
+export const CLOSED_FUNDS: ClosedFund[] = [
+  { ticker: 'BTRN', closed: '2026-10-16', source: 'https://www.sec.gov/Archives/edgar/data/1432353/000143235326000712/glx-20260916.htm' },
+  { ticker: 'IRVH', closed: '2026-10-16', source: 'https://www.sec.gov/Archives/edgar/data/1432353/000143235326000713/glx-20260916.htm' },
+  { ticker: 'QCLR', closed: '2026-10-16', source: 'https://www.sec.gov/Archives/edgar/data/1432353/000143235326000712/glx-20260916.htm' },
+  { ticker: 'XCLR', closed: '2026-10-16', source: 'https://www.sec.gov/Archives/edgar/data/1432353/000143235326000712/glx-20260916.htm' },
+];
 export const HISTORY_HEADERS = ['Date', 'Close', 'Adj Close', 'Volume'] as const;
 
 /** RFC-4180-ish reader that tolerates a UTF-8 BOM, CRLF and quoted fields with commas. */
@@ -2734,9 +2740,10 @@ export async function main(env: Record<string, string | undefined> = process.env
   console.log(`[ catalog  ] ${lineup.length} Global X ETFs (${config.skipGlobalX ? 'previous index, SKIP_GLOBALX' : 'globalxetfs.com Explore Our ETFs table'})`);
 
   // Strict: a requested ticker the provider does not list is an error, never a silently empty run.
+  // A closed fund of the published index is accepted even after the lineup drops it: it is never fetched.
   if (config.tickers.length) {
     const known = new Set(lineup.map((fund) => fund.ticker));
-    const missing = config.tickers.filter((ticker) => !known.has(ticker));
+    const missing = config.tickers.filter((ticker) => !known.has(ticker) && !(previous[ticker] && closedFund(CLOSED_FUNDS, ticker)));
     if (missing.length) throw new Error(`TICKERS: not in the Global X lineup: ${missing.join(', ')}`);
   }
 
@@ -2748,7 +2755,8 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   // MAX_FETCHES batches walk the filtered set in lineup order from the saved cursor and wrap around.
   // A TICKERS run is an explicit selection: it never reads, moves or deletes the cursor.
-  const filtered = lineup.filter((fund) => passesFilters(fund, config));
+  // A closed fund leaves the run here, before the cursor and the MAX_FETCHES budget: never fetched, guarded or reported.
+  const filtered = withoutClosedFunds(lineup.filter((fund) => passesFilters(fund, config)), (fund) => fund.ticker, CLOSED_FUNDS);
   const useCursor = config.tickers.length === 0;
   // A cursor left by an interrupted (deadline) run resumes there; a finished pass clears it.
   const cursor = useCursor ? await readCursor() : null;
@@ -2796,7 +2804,8 @@ export async function main(env: Record<string, string | undefined> = process.env
   const rows: Record<string, CatalogEntry> = { ...previous };
   for (const fund of lineup) if (!rows[fund.ticker]) rows[fund.ticker] = placeholderRow(fund);
   for (const [ticker, entry] of byTicker) rows[ticker] = entry;
-  const funds = Object.values(rows).map((fund) => withMetricsContract(withDataFile(fund))).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
+  // A closed fund keeps its published row, marked closed (status, closedDate, closedSource).
+  const funds = markClosedFunds(Object.values(rows).map((fund) => withMetricsContract(withDataFile(fund))).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker))), CLOSED_FUNDS);
   const counts = {
     funds: funds.length,
     holdings: funds.reduce((sum, fund) => sum + Number(fund.holdings || 0), 0),
@@ -2859,7 +2868,7 @@ if (import.meta.main) {
  * Weight (%) or Market Weight) are required, >= 80% of the rows carry a numeric weight, the weights add up to
  * 50..150 and the sheet keeps >= 50% of the previously published rows. `relax` switches off the checks a fund
  * legitimately fails: 'numeric' and 'sum' (geared, inverse, futures, look-through, top-N lists) and 'count'.
- * Rows are arrays in header order or objects keyed by the header text.
+ * Rows are arrays in header order or objects keyed by the header text. A fund in the brand's CLOSED_FUNDS never reaches the guard.
  */
 export function holdingsGuard(headers: ReadonlyArray<string>, rows: ReadonlyArray<unknown>, previousRows: number | null | undefined, relax: ReadonlyArray<string> = []): string | null {
   const previous = Number(previousRows) > 0 ? Number(previousRows) : 0;
@@ -2894,5 +2903,44 @@ function holdingsGuardNumber(value: unknown): number | null {
   if (negative) text = text.slice(1, -1);
   if (!/^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i.test(text)) return null;
   return negative ? -Number(text) : Number(text);
+}
+
+/** A fund its issuer closed (liquidated, delisted or merged away), confirmed from an official source: an SEC filing or the issuer's notice. */
+export type ClosedFund = { ticker: string; closed: string; source: string };
+
+/**
+ * The brand's CLOSED_FUNDS entry for a ticker, or null. A closed fund is never fetched, never guarded and never reported failed: it keeps
+ * its last published data and its index row carries `status: 'closed'`, `closedDate` and `closedSource`. A malformed entry throws, so a
+ * typo (no ISO date, no https source) never ships.
+ */
+export function closedFund(list: ReadonlyArray<ClosedFund>, ticker: unknown): ClosedFund | null {
+  const wanted = String(ticker === null || ticker === undefined ? '' : ticker).trim().toUpperCase();
+  let found: ClosedFund | null = null;
+  for (let i = 0; i < list.length; i++) {
+    const fund = list[i];
+    if (!/^[A-Z0-9][A-Z0-9.-]{0,9}$/.test(fund.ticker) || !/^\d{4}-\d{2}-\d{2}$/.test(fund.closed) || !/^https:\/\/\S+$/.test(fund.source)) throw new Error(`CLOSED_FUNDS: ${fund.ticker} needs an upper-case ticker, an ISO closing date and an https source`);
+    if (fund.ticker === wanted) found = fund;
+  }
+  return found;
+}
+
+/** The index rows with every closed fund marked (`status: 'closed'`, `closedDate`, `closedSource`); other rows are returned as they are. */
+export function markClosedFunds<T extends object>(rows: ReadonlyArray<T>, list: ReadonlyArray<ClosedFund>): T[] {
+  return rows.map((row) => {
+    const fund = closedFund(list, (row as { ticker?: unknown }).ticker);
+    return fund ? ({ ...row, status: 'closed', closedDate: fund.closed, closedSource: fund.source } as T) : row;
+  });
+}
+
+/** A run's queue without the closed funds, which are named once in the log: they are neither fetched nor counted as failed. */
+export function withoutClosedFunds<T>(queue: ReadonlyArray<T>, tickerOf: (item: T) => string, list: ReadonlyArray<ClosedFund>): T[] {
+  const closed: string[] = [];
+  const open: T[] = [];
+  for (let i = 0; i < queue.length; i++) {
+    if (closedFund(list, tickerOf(queue[i]))) closed.push(tickerOf(queue[i]));
+    else open.push(queue[i]);
+  }
+  if (closed.length) console.log(`[ closed   ] ${closed.join(', ')}: closed by the issuer, published data kept`);
+  return open;
 }
 // </holdings-guard>
