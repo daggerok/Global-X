@@ -1592,7 +1592,7 @@ export type ParsedHoldings = {
  * sheet of most funds (`% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)`),
  * the exposure sheet of the futures funds BITS and COMD (`Exposure (%),...,Price/Unit ($),Units Held,
  * Exposure Amount ($),Market Value ($),Market Value (%)`) and the older export (GLOBALX_HOLDINGS_CSV_HEADERS).
- * Market Value follows the weight column: the exposure sheet publishes Exposure Amount ($) next to Exposure (%).
+ * Market Value is always the sheet's Market Value ($), never the exposure sheet's Exposure Amount ($) (notional exposure).
  */
 const GLOBALX_HOLDINGS_COLUMNS = {
   weight: ['% of net assets', 'exposure (%)', 'weightings'],
@@ -1601,7 +1601,7 @@ const GLOBALX_HOLDINGS_COLUMNS = {
   sedol: ['sedol'],
   price: ['market price ($)', 'price/unit ($)', 'price'],
   shares: ['shares held', 'units held', 'shares'],
-  marketValue: ['exposure amount ($)', 'market value ($)', 'marketvalue'],
+  marketValue: ['market value ($)', 'marketvalue'],
 };
 
 /**

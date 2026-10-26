@@ -244,9 +244,9 @@ describe("parsing", () => {
     const reordered = parseGlobalXHoldingsCsv(`${head}Name,market value ($),Ticker,Shares Held,% OF NET ASSETS,SEDOL,Market Price ($)\nDEERE & CO,"493,517,332.36",DE,"714,766.00",3.65,2261203,690.46\nCASH,"413,416.71",,"413,416.71",0.02,,1.00`);
     expect(reordered).toEqual(seven);
     expect(seven.rows[0]).toEqual({ Name: "DEERE & CO", Ticker: "DE", Identifier: "2261203", Weight: "3.65%", "Market Value": "493,517,332.36", "Shares Held": "714,766.00", "Asset Category": "Equity", Price: "690.46" });
-    // the futures funds (BITS, COMD) publish exposure: Exposure Amount goes with Exposure (%), a cash row without exposure is left out
-    const exposure = parseGlobalXHoldingsCsv(`${head}Exposure (%),Ticker,Name,SEDOL,Price/Unit ($),Units Held,Exposure Amount ($),Market Value ($),Market Value (%)\n39.69,BTCV6 Curncy,CME BITCOIN FUT   OCT26,"",406025.0,22.00,"8,932,550.00","8,932,550.00",\n,"",CASH,"",1.0,"4,281,652.47",,"4,281,652.47",19.02`);
-    expect(exposure.rows).toEqual([{ Name: "CME BITCOIN FUT OCT26", Ticker: "BTCV6 Curncy", Identifier: "", Weight: "39.69%", "Market Value": "8,932,550.00", "Shares Held": "22.00", "Asset Category": "Equity", Price: "406025.0" }]);
+    // the futures funds (BITS, COMD) publish exposure: Market Value comes from Market Value ($), not Exposure Amount ($); a cash row without exposure is left out
+    const exposure = parseGlobalXHoldingsCsv(`${head}Exposure (%),Ticker,Name,SEDOL,Price/Unit ($),Units Held,Exposure Amount ($),Market Value ($),Market Value (%)\n39.69,BTCV6 Curncy,CME BITCOIN FUT   OCT26,"",406025.0,22.00,"8,932,550.00","61,250.00",\n,"",CASH,"",1.0,"4,281,652.47",,"4,281,652.47",19.02`);
+    expect(exposure.rows).toEqual([{ Name: "CME BITCOIN FUT OCT26", Ticker: "BTCV6 Curncy", Identifier: "", Weight: "39.69%", "Market Value": "61,250.00", "Shares Held": "22.00", "Asset Category": "Equity", Price: "406025.0" }]);
     expect(() => parseGlobalXHoldingsCsv(`${head}% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n"The information contained herein may not be reproduced."`)).toThrow(/no holdings rows/);
     expect(() => parseGlobalXHoldingsCsv(`${head}Pct,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n3.65,DE,DEERE & CO,2261203,690.46,1,1`)).toThrow(/no weight \(% of Net Assets\) column/);
     expect(() => parseGlobalXHoldingsCsv(`${head}% of Net Assets,Ticker,Security,SEDOL\n3.65,DE,DEERE & CO,2261203`)).toThrow(/no Name column/);
