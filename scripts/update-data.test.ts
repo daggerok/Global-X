@@ -196,6 +196,9 @@ describe("parsing", () => {
     // a preferred share (EP) of Merck never takes the common share's ticker (GLOBALX-3: PFFD rows by issuer name)
     const preferred = parseNportFiling(nportXml("S000099001", "2026-09-30", [NPORT_MRK.replace("<assetCat>EC</assetCat>", "<assetCat>EP</assetCat>").replace("58933Y105", "58933Y204")]));
     expect(nportHoldingsSheet(preferred, nportTickers(preferred.positions, names)).map((row) => [row.Ticker, row.Identifier])).toEqual([["-", "58933Y204"]]);
+    // the issuer-name match reads "PUBLIC LIMITED COMPANY" and dotted abbreviations like SEC's "plc" and undotted titles (PAVE: Eaton)
+    const eaton = parseNportFiling(nportXml("S000099001", "2026-09-30", [NPORT_MRK.replace("MERCK &amp; CO INC", "EATON CORPORATION PUBLIC LIMITED COMPANY").replace("58933Y105", "G29183103").replace(/<identifiers>.*?<\/identifiers>/, ""), NPORT_MRK.replace("MERCK &amp; CO INC", "N.V. Example Holdings N.V.").replace("58933Y105", "N0000X104").replace(/<identifiers>.*?<\/identifiers>/, "")]));
+    expect(nportTickers(eaton.positions, parseSecCompanyNames({ 0: { ticker: "ETN", title: "Eaton Corp plc" }, 1: { ticker: "NVEX", title: "NV Example Holdings NV" } }))).toEqual(["ETN", "NVEX"]);
   });
 
   test("catalog: the 2026-10 client table rows are read, missing values become null", () => {
