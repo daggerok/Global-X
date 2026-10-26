@@ -199,6 +199,10 @@ describe("parsing", () => {
     // the issuer-name match reads "PUBLIC LIMITED COMPANY" and dotted abbreviations like SEC's "plc" and undotted titles (PAVE: Eaton)
     const eaton = parseNportFiling(nportXml("S000099001", "2026-09-30", [NPORT_MRK.replace("MERCK &amp; CO INC", "EATON CORPORATION PUBLIC LIMITED COMPANY").replace("58933Y105", "G29183103").replace(/<identifiers>.*?<\/identifiers>/, ""), NPORT_MRK.replace("MERCK &amp; CO INC", "N.V. Example Holdings N.V.").replace("58933Y105", "N0000X104").replace(/<identifiers>.*?<\/identifiers>/, "")]));
     expect(nportTickers(eaton.positions, parseSecCompanyNames({ 0: { ticker: "ETN", title: "Eaton Corp plc" }, 1: { ticker: "NVEX", title: "NV Example Holdings NV" } }))).toEqual(["ETN", "NVEX"]);
+    // spaced initials are one word (SEC's "C H ROBINSON"), a leading US stays (U.S. Bancorp is not The Bancorp) and a backslash EDGAR suffix is dropped
+    const stock = (name: string, cusip: string) => NPORT_MRK.replace("MERCK &amp; CO INC", name).replace("58933Y105", cusip).replace(/<identifiers>.*?<\/identifiers>/, "");
+    const banks = parseNportFiling(nportXml("S000099001", "2026-09-30", [stock("US Bancorp", "902973304"), stock("Bancorp Inc/The", "05969A105"), stock("CH Robinson Worldwide Inc", "12541W209")]));
+    expect(nportTickers(banks.positions, parseSecCompanyNames({ 0: { ticker: "USB", title: "US BANCORP \\DE\\" }, 1: { ticker: "TBBK", title: "Bancorp, Inc." }, 2: { ticker: "CHRW", title: "C H ROBINSON WORLDWIDE, INC." } }))).toEqual(["USB", "TBBK", "CHRW"]);
   });
 
   test("catalog: the 2026-10 client table rows are read, missing values become null", () => {
