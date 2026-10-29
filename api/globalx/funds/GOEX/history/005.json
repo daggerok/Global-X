@@ -2,7 +2,7 @@
   "ticker": "GOEX",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4016,
+  "totalRows": 4020,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-12-02",
+      "Close": "145.84",
+      "Adj Close": "74.77",
+      "Volume": "13900"
+    },
+    {
+      "Date": "2010-12-01",
+      "Close": "143.20",
+      "Adj Close": "73.41",
+      "Volume": "18700"
+    },
+    {
+      "Date": "2010-11-30",
+      "Close": "141.92",
+      "Adj Close": "72.76",
+      "Volume": "10950"
+    },
+    {
+      "Date": "2010-11-29",
+      "Close": "137.60",
+      "Adj Close": "70.54",
+      "Volume": "9313"
+    },
     {
       "Date": "2010-11-26",
       "Close": "134.64",

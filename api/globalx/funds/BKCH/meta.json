@@ -11,51 +11,51 @@
   "terGross": "0.50%",
   "terGrossValue": 0.5,
   "nav": {
-    "display": "$53.73",
-    "value": 53.73,
-    "asOfDate": "Oct 23 2026",
-    "dailyChangeText": "$-1.19 (-2.17%)",
+    "display": "$56.74",
+    "value": 56.74,
+    "asOfDate": "Oct 28 2026",
+    "dailyChangeText": "$1.62 (2.94%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 53.73,
+  "navValue": 56.74,
   "aum": {
-    "display": "$194.30M",
-    "value": 194298196.88,
-    "asOfDate": "Oct 23 2026",
+    "display": "$205.15M",
+    "value": 205149017.25,
+    "asOfDate": "Oct 28 2026",
     "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 194298196.88,
-  "asOfDate": "Oct 23 2026",
+  "aumValue": 205149017.25,
+  "asOfDate": "Oct 28 2026",
   "inceptionDate": "Jul 12 2021",
   "inceptionDateFundPage": "Jul 12 2021",
   "exchange": "Nasdaq",
-  "closePrice": "$53.54",
-  "closePriceValue": 53.54,
+  "closePrice": "$56.91",
+  "closePriceValue": 56.91,
   "premiumDiscount": {
-    "display": "-0.36%",
-    "value": -0.3629,
-    "derivedValue": -0.35,
+    "display": "0.31%",
+    "value": 0.3069,
+    "derivedValue": 0.3,
     "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": -0.3629,
-  "premiumDiscountDerivedValue": -0.35,
+  "premiumDiscountValue": 0.3069,
+  "premiumDiscountDerivedValue": 0.3,
   "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.49%",
     "value": 0.49,
-    "asOfDate": "Oct 23 2026",
+    "asOfDate": "Oct 28 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.49,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 194298196.88,
+  "totalNetAssets": 205149017.25,
   "sharesOutstanding": {
     "display": "3,615,860",
     "value": 3615860,
-    "asOfDate": "Oct 23 2026"
+    "asOfDate": "Oct 28 2026"
   },
-  "netAssetsAsOf": "Oct 23 2026",
-  "secYieldAsOf": "Oct 23 2026",
+  "netAssetsAsOf": "Oct 28 2026",
+  "secYieldAsOf": "Oct 28 2026",
   "distributions": {
     "frequency": "Semi-Annually",
     "paymentsPerYear": 2,
@@ -214,9 +214,9 @@
     ],
     "pageSize": 250,
     "totalRows": 35,
-    "asOfDate": "Oct 23 2026",
-    "asOf": "2026-10-23",
-    "source": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261023.csv",
+    "asOfDate": "Oct 28 2026",
+    "asOf": "2026-10-28",
+    "source": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261028.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -225,9 +225,9 @@
       "./history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1327,
-    "asOfDate": "Oct 23 2026",
-    "asOf": "2026-10-23",
+    "totalRows": 1331,
+    "asOfDate": "Oct 29 2026",
+    "asOf": "2026-10-29",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/BKCH",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -237,7 +237,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/bkch/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261023.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/bkch_full-holdings_20261028.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BKCH",
@@ -246,7 +246,6 @@
     "distributionInfoSource": "Global X fund page Distribution Information block",
     "documentsSource": "Global X fund page Documents table",
     "registrant": "Global X Funds (Investment Company Act file 811-22209)",
-    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
     "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
@@ -267,10 +266,10 @@
     "managementFeeValue": 0.5
   },
   "marketPrice": {
-    "display": "$53.54",
-    "value": 53.54,
-    "asOfDate": "Oct 23 2026",
-    "dailyChangeText": "$-1.36 (-2.48%)",
+    "display": "$56.91",
+    "value": 56.91,
+    "asOfDate": "Oct 28 2026",
+    "dailyChangeText": "$1.77 (3.21%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
@@ -286,7 +285,7 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 23 2026"
+    "distributionInfoAsOfDate": "Oct 28 2026"
   },
   "navIndex": null,
   "documents": {
@@ -296,7 +295,7 @@
     "annualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-annual-sha-7b071221ac/02ce530a232d3c4c4aa662989af6f892/Annual-Shareholder-Report.pdf",
     "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-semi-annua-9a6dcaeee2/32279fb3787b7e2197556ac59add1f77/Semi-Annual-Shareholder-Report.pdf",
     "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-q1-complet-4405b87aad/56c485e400fef976f5d2252e53fdc959/Q1-Complete-Holdings.pdf",
-    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-q3-complet-ff191f52ae/09bb6ad6a43058dd06f20ce2cd37a8a0/Q3-Complete-Holdings.pdf",
+    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-bkch-prospectus-regulatory-q3-complet-ff191f52ae/addc8ef9e6079112df3a88439d284258/Q3-Complete-Holdings_BKCH.pdf",
     "taxInfo": null,
     "form8937": null
   },

@@ -2,7 +2,7 @@
   "ticker": "GNOM",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1896,
+  "totalRows": 1900,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-29",
+      "Close": "72.31",
+      "Adj Close": "72.31",
+      "Volume": "41855"
+    },
+    {
+      "Date": "2026-10-28",
+      "Close": "71.51",
+      "Adj Close": "71.51",
+      "Volume": "85100"
+    },
+    {
+      "Date": "2026-10-27",
+      "Close": "68.81",
+      "Adj Close": "68.81",
+      "Volume": "17200"
+    },
+    {
+      "Date": "2026-10-26",
+      "Close": "66.46",
+      "Adj Close": "66.46",
+      "Volume": "16200"
+    },
     {
       "Date": "2026-10-23",
       "Close": "65.58",
@@ -5985,30 +6009,6 @@
       "Close": "51.48",
       "Adj Close": "50.73",
       "Volume": "4500"
-    },
-    {
-      "Date": "2022-11-02",
-      "Close": "51.88",
-      "Adj Close": "51.12",
-      "Volume": "6525"
-    },
-    {
-      "Date": "2022-11-01",
-      "Close": "53.08",
-      "Adj Close": "52.30",
-      "Volume": "6275"
-    },
-    {
-      "Date": "2022-10-31",
-      "Close": "52.60",
-      "Adj Close": "51.83",
-      "Volume": "10275"
-    },
-    {
-      "Date": "2022-10-28",
-      "Close": "53.32",
-      "Adj Close": "52.54",
-      "Volume": "10625"
     }
   ]
 }

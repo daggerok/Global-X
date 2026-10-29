@@ -2,7 +2,7 @@
   "ticker": "ASEA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3944,
+  "totalRows": 3948,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-02",
+      "Close": "14.02",
+      "Adj Close": "12.08",
+      "Volume": "10500"
+    },
+    {
+      "Date": "2022-11-01",
+      "Close": "14.15",
+      "Adj Close": "12.20",
+      "Volume": "6700"
+    },
+    {
+      "Date": "2022-10-31",
+      "Close": "14.14",
+      "Adj Close": "12.19",
+      "Volume": "5200"
+    },
+    {
+      "Date": "2022-10-28",
+      "Close": "14.08",
+      "Adj Close": "12.14",
+      "Volume": "4800"
+    },
     {
       "Date": "2022-10-27",
       "Close": "13.92",
@@ -5985,30 +6009,6 @@
       "Close": "15.43",
       "Adj Close": "11.63",
       "Volume": "800"
-    },
-    {
-      "Date": "2018-11-12",
-      "Close": "15.30",
-      "Adj Close": "11.53",
-      "Volume": "1500"
-    },
-    {
-      "Date": "2018-11-09",
-      "Close": "15.79",
-      "Adj Close": "11.90",
-      "Volume": "100"
-    },
-    {
-      "Date": "2018-11-08",
-      "Close": "15.79",
-      "Adj Close": "11.90",
-      "Volume": "500"
-    },
-    {
-      "Date": "2018-11-07",
-      "Close": "15.83",
-      "Adj Close": "11.93",
-      "Volume": "23900"
     }
   ]
 }

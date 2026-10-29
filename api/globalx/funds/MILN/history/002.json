@@ -2,7 +2,7 @@
   "ticker": "MILN",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2632,
+  "totalRows": 2636,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-02",
+      "Close": "25.70",
+      "Adj Close": "25.41",
+      "Volume": "11300"
+    },
+    {
+      "Date": "2022-11-01",
+      "Close": "26.77",
+      "Adj Close": "26.47",
+      "Volume": "4600"
+    },
+    {
+      "Date": "2022-10-31",
+      "Close": "26.76",
+      "Adj Close": "26.46",
+      "Volume": "6000"
+    },
+    {
+      "Date": "2022-10-28",
+      "Close": "27.07",
+      "Adj Close": "26.76",
+      "Volume": "9500"
+    },
     {
       "Date": "2022-10-27",
       "Close": "26.61",
@@ -5985,30 +6009,6 @@
       "Close": "21.58",
       "Adj Close": "21.07",
       "Volume": "7300"
-    },
-    {
-      "Date": "2018-11-12",
-      "Close": "21.57",
-      "Adj Close": "21.06",
-      "Volume": "7500"
-    },
-    {
-      "Date": "2018-11-09",
-      "Close": "21.98",
-      "Adj Close": "21.46",
-      "Volume": "46300"
-    },
-    {
-      "Date": "2018-11-08",
-      "Close": "22.31",
-      "Adj Close": "21.78",
-      "Volume": "8200"
-    },
-    {
-      "Date": "2018-11-07",
-      "Close": "22.38",
-      "Adj Close": "21.85",
-      "Volume": "7700"
     }
   ]
 }

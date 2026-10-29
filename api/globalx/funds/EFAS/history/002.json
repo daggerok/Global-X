@@ -2,7 +2,7 @@
   "ticker": "EFAS",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2477,
+  "totalRows": 2481,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-02",
+      "Close": "11.81",
+      "Adj Close": "9.25",
+      "Volume": "2400"
+    },
+    {
+      "Date": "2022-11-01",
+      "Close": "12.10",
+      "Adj Close": "9.47",
+      "Volume": "3100"
+    },
+    {
+      "Date": "2022-10-31",
+      "Close": "11.90",
+      "Adj Close": "9.32",
+      "Volume": "500"
+    },
+    {
+      "Date": "2022-10-28",
+      "Close": "12.05",
+      "Adj Close": "9.43",
+      "Volume": "900"
+    },
     {
       "Date": "2022-10-27",
       "Close": "12.03",
@@ -5985,30 +6009,6 @@
       "Close": "16.16",
       "Adj Close": "10.10",
       "Volume": "600"
-    },
-    {
-      "Date": "2018-11-12",
-      "Close": "16.08",
-      "Adj Close": "10.05",
-      "Volume": "900"
-    },
-    {
-      "Date": "2018-11-09",
-      "Close": "16.23",
-      "Adj Close": "10.15",
-      "Volume": "100"
-    },
-    {
-      "Date": "2018-11-08",
-      "Close": "16.23",
-      "Adj Close": "10.15",
-      "Volume": "100"
-    },
-    {
-      "Date": "2018-11-07",
-      "Close": "16.23",
-      "Adj Close": "10.15",
-      "Volume": "100"
     }
   ]
 }

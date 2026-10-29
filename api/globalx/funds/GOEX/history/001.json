@@ -2,7 +2,7 @@
   "ticker": "GOEX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 4016,
+  "totalRows": 4020,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-29",
+      "Close": "73.84",
+      "Adj Close": "73.84",
+      "Volume": "12156"
+    },
+    {
+      "Date": "2026-10-28",
+      "Close": "76.27",
+      "Adj Close": "76.27",
+      "Volume": "6600"
+    },
+    {
+      "Date": "2026-10-27",
+      "Close": "75.35",
+      "Adj Close": "75.35",
+      "Volume": "3400"
+    },
+    {
+      "Date": "2026-10-26",
+      "Close": "72.81",
+      "Adj Close": "72.81",
+      "Volume": "2500"
+    },
     {
       "Date": "2026-10-23",
       "Close": "72.32",
@@ -5985,30 +6009,6 @@
       "Close": "19.53",
       "Adj Close": "18.49",
       "Volume": "4900"
-    },
-    {
-      "Date": "2022-11-02",
-      "Close": "19.89",
-      "Adj Close": "18.83",
-      "Volume": "1600"
-    },
-    {
-      "Date": "2022-11-01",
-      "Close": "20.80",
-      "Adj Close": "19.69",
-      "Volume": "3600"
-    },
-    {
-      "Date": "2022-10-31",
-      "Close": "20.37",
-      "Adj Close": "19.28",
-      "Volume": "2300"
-    },
-    {
-      "Date": "2022-10-28",
-      "Close": "20.71",
-      "Adj Close": "19.60",
-      "Volume": "2300"
     }
   ]
 }

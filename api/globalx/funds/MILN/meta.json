@@ -11,51 +11,51 @@
   "terGross": "0.50%",
   "terGrossValue": 0.5,
   "nav": {
-    "display": "$43.70",
-    "value": 43.7,
-    "asOfDate": "Oct 23 2026",
-    "dailyChangeText": "$-0.74 (-1.67%)",
+    "display": "$43.05",
+    "value": 43.05,
+    "asOfDate": "Oct 28 2026",
+    "dailyChangeText": "$-0.17 (-0.39%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 43.7,
+  "navValue": 43.05,
   "aum": {
-    "display": "$89.14M",
-    "value": 89138072.22,
-    "asOfDate": "Oct 23 2026",
+    "display": "$87.82M",
+    "value": 87823052.82,
+    "asOfDate": "Oct 28 2026",
     "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 89138072.22,
-  "asOfDate": "Oct 23 2026",
+  "aumValue": 87823052.82,
+  "asOfDate": "Oct 28 2026",
   "inceptionDate": "May 04 2016",
   "inceptionDateFundPage": "May 04 2016",
   "exchange": "Nasdaq",
-  "closePrice": "$43.68",
-  "closePriceValue": 43.68,
+  "closePrice": "$43.05",
+  "closePriceValue": 43.05,
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.0367,
-    "derivedValue": -0.05,
+    "display": "-0.00%",
+    "value": -0.0012,
+    "derivedValue": 0,
     "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": -0.0367,
-  "premiumDiscountDerivedValue": -0.05,
+  "premiumDiscountValue": -0.0012,
+  "premiumDiscountDerivedValue": 0,
   "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.28%",
     "value": 0.28,
-    "asOfDate": "Oct 23 2026",
+    "asOfDate": "Oct 28 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.28,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 89138072.22,
+  "totalNetAssets": 87823052.82,
   "sharesOutstanding": {
     "display": "2,040,000",
     "value": 2040000,
-    "asOfDate": "Oct 23 2026"
+    "asOfDate": "Oct 28 2026"
   },
-  "netAssetsAsOf": "Oct 23 2026",
-  "secYieldAsOf": "Oct 23 2026",
+  "netAssetsAsOf": "Oct 28 2026",
+  "secYieldAsOf": "Oct 28 2026",
   "distributions": {
     "frequency": "Semi-Annually",
     "paymentsPerYear": 2,
@@ -280,9 +280,9 @@
     ],
     "pageSize": 250,
     "totalRows": 82,
-    "asOfDate": "Oct 23 2026",
-    "asOf": "2026-10-23",
-    "source": "https://assets.globalxetfs.com/funds/holdings/miln_full-holdings_20261023.csv",
+    "asOfDate": "Oct 28 2026",
+    "asOf": "2026-10-28",
+    "source": "https://assets.globalxetfs.com/funds/holdings/miln_full-holdings_20261028.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -292,9 +292,9 @@
       "./history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2632,
-    "asOfDate": "Oct 23 2026",
-    "asOf": "2026-10-23",
+    "totalRows": 2636,
+    "asOfDate": "Oct 29 2026",
+    "asOf": "2026-10-29",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/MILN",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -304,7 +304,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/miln/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/miln_full-holdings_20261023.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/miln_full-holdings_20261028.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MILN",
@@ -313,7 +313,6 @@
     "distributionInfoSource": "Global X fund page Distribution Information block",
     "documentsSource": "Global X fund page Documents table",
     "registrant": "Global X Funds (Investment Company Act file 811-22209)",
-    "nportDoc": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001432353&type=NPORT-P&dateb=&owner=include&count=10",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
     "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
@@ -334,10 +333,10 @@
     "managementFeeValue": 0.5
   },
   "marketPrice": {
-    "display": "$43.68",
-    "value": 43.68,
-    "asOfDate": "Oct 23 2026",
-    "dailyChangeText": "$-0.73 (-1.64%)",
+    "display": "$43.05",
+    "value": 43.05,
+    "asOfDate": "Oct 28 2026",
+    "dailyChangeText": "$-0.18 (-0.42%)",
     "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
@@ -353,7 +352,7 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Oct 23 2026"
+    "distributionInfoAsOfDate": "Oct 28 2026"
   },
   "navIndex": null,
   "documents": {
@@ -363,7 +362,7 @@
     "annualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-miln-prospectus-regulatory-annual-sha-5169685b17/52cbb24bb738d5915c9a0b3e98230552/Annual-Shareholder-Report.pdf",
     "semiAnnualReport": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-miln-prospectus-regulatory-semi-annua-25fd86ac8f/e440d39f956ae0bba0517907c9f974d8/Semi-Annual-Shareholder-Report.pdf",
     "fiscalQ1Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-miln-prospectus-regulatory-q1-complet-dfc527e734/fa02d2eb6b8e39eb42be28a5be19458d/Q1-Complete-Holdings.pdf",
-    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-miln-prospectus-regulatory-q3-complet-d154234c5f/fd2828288572a21d64b06d314290a8f9/Q3-Complete-Holdings.pdf",
+    "fiscalQ3Holdings": "https://assets.ctfassets.net/9gigg57dwmx9/funds-documents-miln-prospectus-regulatory-q3-complet-d154234c5f/55da4d1329bb0654226cb623d586774e/Q3-Complete-Holdings_MILN.pdf",
     "taxInfo": null,
     "form8937": null
   },

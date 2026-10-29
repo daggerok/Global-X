@@ -2,7 +2,7 @@
   "ticker": "SIL",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4155,
+  "totalRows": 4159,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-02",
+      "Close": "24.12",
+      "Adj Close": "23.06",
+      "Volume": "286900"
+    },
+    {
+      "Date": "2022-11-01",
+      "Close": "25.44",
+      "Adj Close": "24.32",
+      "Volume": "346100"
+    },
+    {
+      "Date": "2022-10-31",
+      "Close": "25.02",
+      "Adj Close": "23.92",
+      "Volume": "340400"
+    },
+    {
+      "Date": "2022-10-28",
+      "Close": "25.14",
+      "Adj Close": "24.03",
+      "Volume": "287700"
+    },
     {
       "Date": "2022-10-27",
       "Close": "25.41",
@@ -5985,30 +6009,6 @@
       "Close": "22.47",
       "Adj Close": "20.10",
       "Volume": "92400"
-    },
-    {
-      "Date": "2018-11-12",
-      "Close": "22.61",
-      "Adj Close": "20.22",
-      "Volume": "94800"
-    },
-    {
-      "Date": "2018-11-09",
-      "Close": "23.35",
-      "Adj Close": "20.89",
-      "Volume": "92700"
-    },
-    {
-      "Date": "2018-11-08",
-      "Close": "23.62",
-      "Adj Close": "21.13",
-      "Volume": "43100"
-    },
-    {
-      "Date": "2018-11-07",
-      "Close": "23.65",
-      "Adj Close": "21.15",
-      "Volume": "81200"
     }
   ]
 }

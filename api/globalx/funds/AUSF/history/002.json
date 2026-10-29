@@ -2,7 +2,7 @@
   "ticker": "AUSF",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2050,
+  "totalRows": 2054,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-02",
+      "Close": "30.98",
+      "Adj Close": "27.91",
+      "Volume": "3600"
+    },
+    {
+      "Date": "2022-11-01",
+      "Close": "31.58",
+      "Adj Close": "28.45",
+      "Volume": "800"
+    },
+    {
+      "Date": "2022-10-31",
+      "Close": "31.60",
+      "Adj Close": "28.47",
+      "Volume": "4800"
+    },
+    {
+      "Date": "2022-10-28",
+      "Close": "31.62",
+      "Adj Close": "28.49",
+      "Volume": "1000"
+    },
     {
       "Date": "2022-10-27",
       "Close": "31.09",
@@ -5985,30 +6009,6 @@
       "Close": "24.18",
       "Adj Close": "19.26",
       "Volume": "32500"
-    },
-    {
-      "Date": "2018-11-12",
-      "Close": "24.21",
-      "Adj Close": "19.28",
-      "Volume": "130800"
-    },
-    {
-      "Date": "2018-11-09",
-      "Close": "24.40",
-      "Adj Close": "19.44",
-      "Volume": "26300"
-    },
-    {
-      "Date": "2018-11-08",
-      "Close": "24.41",
-      "Adj Close": "19.44",
-      "Volume": "44400"
-    },
-    {
-      "Date": "2018-11-07",
-      "Close": "24.69",
-      "Adj Close": "19.50",
-      "Volume": "67700"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "URA",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 4015,
+  "totalRows": 4019,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,30 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-11-12",
+      "Close": "12.44",
+      "Adj Close": "9.79",
+      "Volume": "226600"
+    },
+    {
+      "Date": "2018-11-09",
+      "Close": "12.63",
+      "Adj Close": "9.94",
+      "Volume": "569900"
+    },
+    {
+      "Date": "2018-11-08",
+      "Close": "12.97",
+      "Adj Close": "10.21",
+      "Volume": "223700"
+    },
+    {
+      "Date": "2018-11-07",
+      "Close": "13.21",
+      "Adj Close": "10.40",
+      "Volume": "869100"
+    },
     {
       "Date": "2018-11-06",
       "Close": "12.98",
@@ -5985,30 +6009,6 @@
       "Close": "26.64",
       "Adj Close": "18.00",
       "Volume": "176050"
-    },
-    {
-      "Date": "2014-11-21",
-      "Close": "27.46",
-      "Adj Close": "18.55",
-      "Volume": "242450"
-    },
-    {
-      "Date": "2014-11-20",
-      "Close": "27.46",
-      "Adj Close": "18.55",
-      "Volume": "113400"
-    },
-    {
-      "Date": "2014-11-19",
-      "Close": "27.54",
-      "Adj Close": "18.60",
-      "Volume": "138200"
-    },
-    {
-      "Date": "2014-11-18",
-      "Close": "27.86",
-      "Adj Close": "18.82",
-      "Volume": "153550"
     }
   ]
 }
