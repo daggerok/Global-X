@@ -2,7 +2,7 @@
   "ticker": "ACHP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 10,
+  "totalRows": 11,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-10-29",
+      "Close": "21.55",
+      "Adj Close": "21.55",
+      "Volume": "82"
+    },
     {
       "Date": "2026-10-28",
       "Close": "22.62",
