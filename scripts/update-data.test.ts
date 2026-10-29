@@ -391,7 +391,8 @@ describe("metrics", () => {
     expect(meta.metrics.dividendYieldBasis).toBe("official-distribution-rate");
     const keys = Object.keys(rows.AAA.metrics);
     expect(Object.keys(rows.BBB.metrics)).toEqual(keys);
-    expect(Object.keys(rows.LLM.metrics).slice(-3)).toEqual(["dividendYieldBasis", "returnsBasis", "performanceAsOf"]);
+    // the seven 52-week keys of the range-52w block sit between dividendYieldBasis and the returns pair
+    expect(Object.keys(rows.LLM.metrics).slice(-10)).toEqual(["dividendYieldBasis", "week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis", "returnsBasis", "performanceAsOf"]);
     // a retained row (failed page) keeps the yield together with its code
     installMock(() => [{ ticker: "AAA", name: "Alpha Index ETF", pageOk: false }, { ticker: "BBB", name: "Beta Index ETF", divYield: 0 }]);
     await run(dir);
@@ -528,6 +529,7 @@ describe("pipeline", () => {
       expect(existsSync(join(dir, "funds", f.ticker, "meta.json"))).toBe(true);
       expect([f.terValue, f.terGrossValue]).toEqual([0.5, 0.6]);
       expect(Object.keys(f.metrics)).toEqual(Object.keys(idx.funds[0].metrics));
+      expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(["week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis"])); // 52-week keys from its history pages (range-52w block)
       expect(f.metrics.returnsBasis.length).toBeGreaterThan(0);
     }
     expect(idx.funds[0].metrics.cagr10y).toBe(8.36);
