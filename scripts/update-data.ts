@@ -2070,13 +2070,14 @@ export function yahooHistoryRows(parsed: ReturnType<typeof parseYahooChart>, pub
 }
 
 /**
- * A HISTORY_RANGE window (`Ny`) never shrinks the published history: the shared windowed-chart block puts the published days
- * older than the window behind the fresh ones (Adj Close rescaled by the overlapping days) and keeps the older published Yahoo
- * dividends (`publishedDividends`: [date, amount] rows). Returns `parsed` unchanged for `max`, null when the window does not
- * join the published history (the caller keeps the published history).
+ * A fresh Yahoo chart never shrinks the published history: the shared windowed-chart block puts the published days older than
+ * the chart behind the fresh ones (Adj Close rescaled by the overlapping days) and keeps the older published Yahoo dividends
+ * (`publishedDividends`: [date, amount] rows). It covers a HISTORY_RANGE window and a truncated `max` answer (2026-10-29: Yahoo
+ * returned 2 bars for Franklin DVAL and USFI); a full `max` answer starts at inception, nothing published is older, so it comes
+ * back unchanged. Returns null when the chart does not join the published history (the caller keeps the published history).
  */
 export function windowedYahooChart(parsed: ReturnType<typeof parseYahooChart>, range: string, published: Array<Record<string, string>> | null, publishedDividends: unknown[] = []): ReturnType<typeof parseYahooChart> | null {
-  if (parseHistoryRange(range).years === null || !published || !published.length || !parsed.history.length) return parsed;
+  if (!published || !published.length || !parsed.history.length) return parsed;
   const epoch = (iso: string): number => Date.UTC(Number(iso.slice(0, 4)), Number(iso.slice(5, 7)) - 1, Number(iso.slice(8, 10))) / 1000;
   const days: WindowedChartDay[] = [];
   for (let index = parsed.history.length - 1; index >= 0; index -= 1) {
@@ -2115,9 +2116,9 @@ async function updateHistoryOnly(fund: LineupFund, previousEntry: CatalogEntry |
   const url = yahooChartUrl(ticker, config.historyRange);
   const json = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`, (response) => response.json());
   const published = await readPreviousHistory(ticker, previousMeta);
-  // A HISTORY_RANGE window never shrinks the published history; a window that does not join it keeps the fund as published
+  // A fresh chart never shrinks the published history; a chart that does not join it keeps the fund as published
   const chart = windowedYahooChart(parseYahooChart(json), config.historyRange, published, publishedYahooDividends(previousMeta));
-  if (!chart) throw new Error(`${ticker}: the Yahoo window (${config.historyRange}) does not join the published history, keeping the published data`);
+  if (!chart) throw new Error(`${ticker}: the Yahoo chart does not join the published history (${config.historyRange}, ${parseYahooChart(json).history.length} days), keeping the published data`);
   const rows = yahooHistoryRows(chart, published);
   if (!rows.length) throw new Error(`${ticker}: Yahoo returned no bars`);
   const fundDir = path.join(API_ROOT, 'funds', ticker);
@@ -2256,9 +2257,9 @@ async function updateFund(
       const url = yahooChartUrl(ticker, config.historyRange);
       const json = await fetchWithRetry(url, yahooHeaders(), config, `${ticker} Yahoo chart`, (response) => response.json());
       const published = await readPreviousHistory(ticker, previousMeta);
-      // A HISTORY_RANGE window never shrinks the published history (shared windowed-chart block)
+      // A fresh chart never shrinks the published history (shared windowed-chart block): a HISTORY_RANGE window or a truncated `max` answer
       const parsed = windowedYahooChart(parseYahooChart(json), config.historyRange, published, publishedYahooDividends(previousMeta));
-      if (!parsed) throw new Error(`the window (${config.historyRange}) does not join the published history`);
+      if (!parsed) throw new Error(`the chart does not join the published history (${config.historyRange}, ${parseYahooChart(json).history.length} days)`);
       yahooDividends = parsed.dividends;
       yahooExchange = parseYahooExchangeName(json);
       historyRows = yahooHistoryRows(parsed, published);
