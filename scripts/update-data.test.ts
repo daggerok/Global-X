@@ -845,6 +845,20 @@ describe("pipeline 5", () => {
     expect(snapshot(dir)).toEqual(first);
     await run(dir, { HISTORY_RANGE: "1y", SKIP_GLOBALX: "true" });
     expect(snapshot(dir)).toEqual(first);
+    // a truncated default-range (`max`) answer never shrinks the history either (Yahoo served 2 bars for Franklin DVAL and USFI on 2026-10-29):
+    // one that joins the published days keeps them all, one that does not join keeps the fund as published
+    await run(dir);
+    expect(snapshot(dir)).toEqual(first);
+    const short = globalThis.fetch;
+    globalThis.fetch = (async (input: any, init?: RequestInit) => {
+      const response = await short(input, init);
+      if (!String(input).includes("finance.yahoo.com")) return response;
+      const payload = (await response.json()) as any;
+      payload.chart.result[0].timestamp = [Math.floor(Date.UTC(2031, 0, 2) / 1000)];
+      return new Response(JSON.stringify(payload));
+    }) as unknown as typeof fetch;
+    await run(dir);
+    await expect(run(dir, { SKIP_GLOBALX: "true" })).rejects.toThrow("every selected fund failed"); // history-only run: the fund is kept as published
     expect(JSON.parse(readFileSync(join(dir, "funds", "AAA", "meta.json"), "utf8")).history.totalRows).toBe(2);
   });
 
