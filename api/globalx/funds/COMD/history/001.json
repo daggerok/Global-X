@@ -2,7 +2,7 @@
   "ticker": "COMD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 181,
+  "totalRows": 182,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "29.94",
+      "Adj Close": "29.94",
+      "Volume": "1600"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "29.96",
-      "Adj Close": "29.96",
-      "Volume": "1414"
+      "Close": "30.06",
+      "Adj Close": "30.06",
+      "Volume": "1900"
     },
     {
       "Date": "2026-10-28",

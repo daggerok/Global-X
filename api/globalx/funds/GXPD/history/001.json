@@ -2,7 +2,7 @@
   "ticker": "GXPD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 321,
+  "totalRows": 322,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "25.73",
+      "Adj Close": "25.73",
+      "Volume": "10400"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "25.90",
+      "Close": "25.91",
       "Adj Close": "25.90",
-      "Volume": "3988"
+      "Volume": "4600"
     },
     {
       "Date": "2026-10-28",

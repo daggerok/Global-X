@@ -2,7 +2,7 @@
   "ticker": "XRMI",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1300,
+  "totalRows": 1301,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-03",
+      "Close": "20.92",
+      "Adj Close": "13.03",
+      "Volume": "10100"
+    },
     {
       "Date": "2022-11-02",
       "Close": "21.00",

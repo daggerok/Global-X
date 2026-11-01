@@ -2,7 +2,7 @@
   "ticker": "EBIZ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1988,
+  "totalRows": 1989,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "28.74",
+      "Adj Close": "28.74",
+      "Volume": "1200"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "28.73",
-      "Adj Close": "28.73",
-      "Volume": "2328"
+      "Close": "28.80",
+      "Adj Close": "28.80",
+      "Volume": "2400"
     },
     {
       "Date": "2026-10-28",
@@ -6003,12 +6009,6 @@
       "Close": "15.16",
       "Adj Close": "14.98",
       "Volume": "8700"
-    },
-    {
-      "Date": "2022-11-03",
-      "Close": "14.96",
-      "Adj Close": "14.78",
-      "Volume": "4700"
     }
   ]
 }

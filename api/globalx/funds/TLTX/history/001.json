@@ -2,7 +2,7 @@
   "ticker": "TLTX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 326,
+  "totalRows": 327,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "20.63",
+      "Adj Close": "20.63",
+      "Volume": "4900"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "20.62",
-      "Adj Close": "20.62",
-      "Volume": "6741"
+      "Close": "20.63",
+      "Adj Close": "20.63",
+      "Volume": "7100"
     },
     {
       "Date": "2026-10-28",

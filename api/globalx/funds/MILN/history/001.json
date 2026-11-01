@@ -2,7 +2,7 @@
   "ticker": "MILN",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2636,
+  "totalRows": 2637,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "43.73",
+      "Adj Close": "43.73",
+      "Volume": "6000"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "43.97",
-      "Adj Close": "43.97",
-      "Volume": "5340"
+      "Close": "43.87",
+      "Adj Close": "43.87",
+      "Volume": "5400"
     },
     {
       "Date": "2026-10-28",
@@ -6002,12 +6008,6 @@
       "Date": "2022-11-04",
       "Close": "25.61",
       "Adj Close": "25.32",
-      "Volume": "6300"
-    },
-    {
-      "Date": "2022-11-03",
-      "Close": "25.40",
-      "Adj Close": "25.11",
       "Volume": "6300"
     }
   ]

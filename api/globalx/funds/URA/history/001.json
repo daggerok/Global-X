@@ -2,7 +2,7 @@
   "ticker": "URA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 4019,
+  "totalRows": 4020,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "33.73",
+      "Adj Close": "33.73",
+      "Volume": "4946000"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "35.60",
-      "Adj Close": "35.60",
-      "Volume": "3753767"
+      "Close": "35.72",
+      "Adj Close": "35.72",
+      "Volume": "4269900"
     },
     {
       "Date": "2026-10-28",
@@ -6003,12 +6009,6 @@
       "Close": "20.24",
       "Adj Close": "17.68",
       "Volume": "1471100"
-    },
-    {
-      "Date": "2022-11-03",
-      "Close": "19.72",
-      "Adj Close": "17.22",
-      "Volume": "1006300"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "EMM",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 869,
+  "totalRows": 870,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "39.82",
+      "Adj Close": "39.82",
+      "Volume": "4600"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "41.00",
-      "Adj Close": "41.00",
-      "Volume": "2733"
+      "Close": "41.21",
+      "Adj Close": "41.21",
+      "Volume": "2900"
     },
     {
       "Date": "2026-10-28",

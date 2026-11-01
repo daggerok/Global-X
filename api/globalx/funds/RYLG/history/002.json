@@ -2,7 +2,7 @@
   "ticker": "RYLG",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1021,
+  "totalRows": 1022,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-03",
+      "Close": "26.04",
+      "Adj Close": "16.06",
+      "Volume": "200"
+    },
     {
       "Date": "2022-11-02",
       "Close": "26.10",

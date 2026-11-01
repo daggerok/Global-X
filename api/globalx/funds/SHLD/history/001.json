@@ -2,7 +2,7 @@
   "ticker": "SHLD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 785,
+  "totalRows": 786,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "63.78",
+      "Adj Close": "63.78",
+      "Volume": "900900"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "64.81",
-      "Adj Close": "64.81",
-      "Volume": "722551"
+      "Close": "64.99",
+      "Adj Close": "64.99",
+      "Volume": "865700"
     },
     {
       "Date": "2026-10-28",

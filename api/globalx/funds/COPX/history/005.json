@@ -2,7 +2,7 @@
   "ticker": "COPX",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4159,
+  "totalRows": 4160,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-12-03",
+      "Close": "54.57",
+      "Adj Close": "38.67",
+      "Volume": "74467"
+    },
     {
       "Date": "2010-12-02",
       "Close": "53.88",

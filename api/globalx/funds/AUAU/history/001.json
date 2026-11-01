@@ -2,7 +2,7 @@
   "ticker": "AUAU",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 222,
+  "totalRows": 223,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "33.21",
+      "Adj Close": "33.21",
+      "Volume": "2500"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "36.04",
-      "Adj Close": "36.04",
-      "Volume": "121"
+      "Close": "35.02",
+      "Adj Close": "35.02",
+      "Volume": "200"
     },
     {
       "Date": "2026-10-28",

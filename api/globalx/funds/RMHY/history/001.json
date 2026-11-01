@@ -2,7 +2,7 @@
   "ticker": "RMHY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 90,
+  "totalRows": 91,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "24.25",
+      "Adj Close": "24.25",
+      "Volume": "1400"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "24.34",
-      "Adj Close": "24.34",
-      "Volume": "3483"
+      "Close": "24.29",
+      "Adj Close": "24.29",
+      "Volume": "3500"
     },
     {
       "Date": "2026-10-28",

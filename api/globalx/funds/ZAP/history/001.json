@@ -2,7 +2,7 @@
   "ticker": "ZAP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 467,
+  "totalRows": 468,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "31.55",
+      "Adj Close": "31.55",
+      "Volume": "127200"
+    },
+    {
       "Date": "2026-10-29",
       "Close": "31.75",
       "Adj Close": "31.75",
-      "Volume": "57499"
+      "Volume": "73900"
     },
     {
       "Date": "2026-10-28",

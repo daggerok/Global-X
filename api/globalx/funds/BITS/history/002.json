@@ -2,7 +2,7 @@
   "ticker": "BITS",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1243,
+  "totalRows": 1244,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-03",
+      "Close": "25.92",
+      "Adj Close": "14.54",
+      "Volume": "1675"
+    },
     {
       "Date": "2022-11-02",
       "Close": "26.24",

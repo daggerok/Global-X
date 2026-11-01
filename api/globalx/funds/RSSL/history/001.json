@@ -2,7 +2,7 @@
   "ticker": "RSSL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 603,
+  "totalRows": 604,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "109.22",
+      "Adj Close": "109.22",
+      "Volume": "2800"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "110.87",
-      "Adj Close": "110.87",
-      "Volume": "2370"
+      "Close": "111.16",
+      "Adj Close": "111.16",
+      "Volume": "21600"
     },
     {
       "Date": "2026-10-28",

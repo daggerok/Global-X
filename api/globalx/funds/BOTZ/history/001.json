@@ -2,7 +2,7 @@
   "ticker": "BOTZ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2547,
+  "totalRows": 2548,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "32.22",
+      "Adj Close": "32.22",
+      "Volume": "909300"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "33.34",
-      "Adj Close": "33.34",
-      "Volume": "655153"
+      "Close": "33.42",
+      "Adj Close": "33.42",
+      "Volume": "740600"
     },
     {
       "Date": "2026-10-28",
@@ -6003,12 +6009,6 @@
       "Close": "19.43",
       "Adj Close": "19.22",
       "Volume": "746700"
-    },
-    {
-      "Date": "2022-11-03",
-      "Close": "18.87",
-      "Adj Close": "18.67",
-      "Volume": "472000"
     }
   ]
 }

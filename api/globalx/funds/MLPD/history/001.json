@@ -2,7 +2,7 @@
   "ticker": "MLPD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 622,
+  "totalRows": 623,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,16 @@
   ],
   "rows": [
     {
+      "Date": "2026-10-30",
+      "Close": "24.94",
+      "Adj Close": "24.94",
+      "Volume": "9000"
+    },
+    {
       "Date": "2026-10-29",
-      "Close": "24.90",
-      "Adj Close": "24.90",
-      "Volume": "8630"
+      "Close": "24.95",
+      "Adj Close": "24.95",
+      "Volume": "8700"
     },
     {
       "Date": "2026-10-28",

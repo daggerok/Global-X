@@ -2,7 +2,7 @@
   "ticker": "CHIQ",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4254,
+  "totalRows": 4255,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-12-03",
+      "Close": "19.82",
+      "Adj Close": "15.63",
+      "Volume": "113900"
+    },
     {
       "Date": "2010-12-02",
       "Close": "20.01",
