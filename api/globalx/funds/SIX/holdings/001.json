@@ -1,0 +1,97 @@
+{
+  "ticker": "SIX",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 8,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "APPLE INC",
+      "Ticker": "AAPL",
+      "Identifier": "2046251",
+      "Weight": "24.92%",
+      "Market Value": "48,869,893.80",
+      "Shares Held": "142,740.00",
+      "Asset Category": "Equity",
+      "Price": "342.37"
+    },
+    {
+      "Name": "NVIDIA CORP",
+      "Ticker": "NVDA",
+      "Identifier": "2379504",
+      "Weight": "21.52%",
+      "Market Value": "42,217,968.00",
+      "Shares Held": "226,200.00",
+      "Asset Category": "Equity",
+      "Price": "186.64"
+    },
+    {
+      "Name": "MICROSOFT CORP",
+      "Ticker": "MSFT",
+      "Identifier": "2588173",
+      "Weight": "19.62%",
+      "Market Value": "38,490,449.40",
+      "Shares Held": "72,540.00",
+      "Asset Category": "Equity",
+      "Price": "530.61"
+    },
+    {
+      "Name": "ALPHABET INC-CL A",
+      "Ticker": "GOOGL",
+      "Identifier": "BYVY8G0",
+      "Weight": "14.38%",
+      "Market Value": "28,210,306.80",
+      "Shares Held": "99,060.00",
+      "Asset Category": "Equity",
+      "Price": "284.78"
+    },
+    {
+      "Name": "AMAZON.COM INC",
+      "Ticker": "AMZN",
+      "Identifier": "2000019",
+      "Weight": "12.68%",
+      "Market Value": "24,877,242.00",
+      "Shares Held": "95,940.00",
+      "Asset Category": "Equity",
+      "Price": "259.3"
+    },
+    {
+      "Name": "META PLATFORMS INC",
+      "Ticker": "META",
+      "Identifier": "B7TL820",
+      "Weight": "6.79%",
+      "Market Value": "13,325,676.00",
+      "Shares Held": "21,840.00",
+      "Asset Category": "Equity",
+      "Price": "610.15"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-11.21",
+      "Shares Held": "-11.21",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "CASH",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.07%",
+      "Market Value": "141,322.19",
+      "Shares Held": "141,322.19",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    }
+  ]
+}

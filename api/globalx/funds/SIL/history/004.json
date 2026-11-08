@@ -2,7 +2,7 @@
   "ticker": "SIL",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 4160,
+  "totalRows": 4165,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-02",
+      "Close": "27.69",
+      "Adj Close": "23.83",
+      "Volume": "167633"
+    },
+    {
+      "Date": "2014-12-01",
+      "Close": "29.34",
+      "Adj Close": "25.25",
+      "Volume": "86333"
+    },
+    {
+      "Date": "2014-11-28",
+      "Close": "27.42",
+      "Adj Close": "23.59",
+      "Volume": "134233"
+    },
+    {
+      "Date": "2014-11-26",
+      "Close": "30.21",
+      "Adj Close": "26.00",
+      "Volume": "48667"
+    },
+    {
+      "Date": "2014-11-25",
+      "Close": "31.02",
+      "Adj Close": "26.69",
+      "Volume": "162267"
+    },
     {
       "Date": "2014-11-24",
       "Close": "29.91",
@@ -5979,36 +6009,6 @@
       "Close": "78.87",
       "Adj Close": "66.07",
       "Volume": "132833"
-    },
-    {
-      "Date": "2010-12-10",
-      "Close": "77.31",
-      "Adj Close": "64.77",
-      "Volume": "180267"
-    },
-    {
-      "Date": "2010-12-09",
-      "Close": "76.92",
-      "Adj Close": "64.44",
-      "Volume": "176200"
-    },
-    {
-      "Date": "2010-12-08",
-      "Close": "76.56",
-      "Adj Close": "64.14",
-      "Volume": "403833"
-    },
-    {
-      "Date": "2010-12-07",
-      "Close": "78.39",
-      "Adj Close": "65.67",
-      "Volume": "488567"
-    },
-    {
-      "Date": "2010-12-06",
-      "Close": "80.49",
-      "Adj Close": "67.43",
-      "Volume": "364233"
     }
   ]
 }

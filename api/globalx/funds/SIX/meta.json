@@ -1,0 +1,223 @@
+{
+  "ticker": "SIX",
+  "name": "Magnificent Six ETF",
+  "category": "Equity / Core",
+  "fundPage": "https://www.globalxetfs.com/funds/six/",
+  "dataFile": "./funds/SIX/meta.json",
+  "cusip": "37966B695",
+  "isin": "US37966B6956",
+  "ter": "0.20%",
+  "terValue": 0.2,
+  "terGross": "0.20%",
+  "terGrossValue": 0.2,
+  "nav": {
+    "display": "$25.15",
+    "value": 25.15,
+    "asOfDate": "Nov 06 2026",
+    "dailyChangeText": "$0.10 (0.40%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 25.15,
+  "aum": {
+    "display": "$97.31M",
+    "value": 97312065.57,
+    "asOfDate": "Nov 06 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
+  },
+  "aumValue": 97312065.57,
+  "asOfDate": "Nov 06 2026",
+  "inceptionDate": "Nov 03 2026",
+  "inceptionDateFundPage": "Nov 03 2026",
+  "exchange": "Cboe BZX",
+  "closePrice": "$25.16",
+  "closePriceValue": 25.16,
+  "premiumDiscount": {
+    "display": "0.07%",
+    "value": 0.073,
+    "derivedValue": 0.04,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
+  },
+  "premiumDiscountValue": 0.073,
+  "premiumDiscountDerivedValue": 0.04,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
+  "bidAskSpread": {
+    "display": null,
+    "value": null,
+    "asOfDate": "Nov 06 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
+  },
+  "bidAskSpreadValue": null,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 97312065.57,
+  "sharesOutstanding": {
+    "display": "3,870,000",
+    "value": 3870000,
+    "asOfDate": "Nov 06 2026"
+  },
+  "netAssetsAsOf": "Nov 06 2026",
+  "secYieldAsOf": "Nov 06 2026",
+  "distributions": {
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 2,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "dividendYieldBasis": null,
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
+    "performanceAsOf": null
+  },
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Equity / Core",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 8,
+    "asOfDate": "Nov 06 2026",
+    "asOf": "2026-11-06",
+    "source": "https://assets.globalxetfs.com/funds/holdings/six_full-holdings_20261106.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [
+      "./history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 3,
+    "asOfDate": "Nov 06 2026",
+    "asOf": "2026-11-06",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/SIX",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/six/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/six_full-holdings_20261106.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SIX",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
+  },
+  "identifiers": {
+    "cusip": "37966B695",
+    "isin": "US37966B6956",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.20%",
+    "value": 0.2,
+    "gross": 0.2,
+    "managementFeeDisplay": "0.20%",
+    "managementFeeValue": 0.2
+  },
+  "marketPrice": {
+    "display": "$25.16",
+    "value": 25.16,
+    "asOfDate": "Nov 06 2026",
+    "dailyChangeText": "$0.09 (0.36%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Nov 06 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/4278hPjDhKs9bPY8cjEtXW/04762dbea61897cb41f7c6edaefd1b30/Statutory-Prospectus_SIX.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/2Rib34nDi1SjKe3nHLbYvj/7095f37571a089cf6de973feaa2ca76d/Summary-Prospectus_SIX.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/5X7qxZ8YGcINNvzCv4rrhc/aa848efd975572ef68817daa22557575/Statement-of-Additional-Information_SIX.pdf",
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

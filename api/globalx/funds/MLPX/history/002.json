@@ -2,7 +2,7 @@
   "ticker": "MLPX",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3329,
+  "totalRows": 3334,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-10",
+      "Close": "42.60",
+      "Adj Close": "35.29",
+      "Volume": "128500"
+    },
+    {
+      "Date": "2022-11-09",
+      "Close": "41.10",
+      "Adj Close": "34.04",
+      "Volume": "126100"
+    },
+    {
+      "Date": "2022-11-08",
+      "Close": "42.43",
+      "Adj Close": "35.15",
+      "Volume": "97500"
+    },
+    {
+      "Date": "2022-11-07",
+      "Close": "42.25",
+      "Adj Close": "35.00",
+      "Volume": "92700"
+    },
+    {
+      "Date": "2022-11-04",
+      "Close": "42.49",
+      "Adj Close": "34.74",
+      "Volume": "74200"
+    },
     {
       "Date": "2022-11-03",
       "Close": "42.16",
@@ -5979,36 +6009,6 @@
       "Close": "36.45",
       "Adj Close": "23.26",
       "Volume": "108967"
-    },
-    {
-      "Date": "2018-11-20",
-      "Close": "35.67",
-      "Adj Close": "22.77",
-      "Volume": "64800"
-    },
-    {
-      "Date": "2018-11-19",
-      "Close": "36.63",
-      "Adj Close": "23.38",
-      "Volume": "298267"
-    },
-    {
-      "Date": "2018-11-16",
-      "Close": "36.60",
-      "Adj Close": "23.36",
-      "Volume": "107733"
-    },
-    {
-      "Date": "2018-11-15",
-      "Close": "36.60",
-      "Adj Close": "23.36",
-      "Volume": "618100"
-    },
-    {
-      "Date": "2018-11-14",
-      "Close": "36.06",
-      "Adj Close": "23.02",
-      "Volume": "61433"
     }
   ]
 }

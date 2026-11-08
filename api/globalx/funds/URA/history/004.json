@@ -2,7 +2,7 @@
   "ticker": "URA",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 4020,
+  "totalRows": 4025,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-02",
+      "Close": "24.76",
+      "Adj Close": "16.73",
+      "Volume": "168900"
+    },
+    {
+      "Date": "2014-12-01",
+      "Close": "25.34",
+      "Adj Close": "17.12",
+      "Volume": "192400"
+    },
+    {
+      "Date": "2014-11-28",
+      "Close": "25.74",
+      "Adj Close": "17.39",
+      "Volume": "134700"
+    },
+    {
+      "Date": "2014-11-26",
+      "Close": "26.86",
+      "Adj Close": "18.14",
+      "Volume": "149050"
+    },
+    {
+      "Date": "2014-11-25",
+      "Close": "26.62",
+      "Adj Close": "17.98",
+      "Volume": "186350"
+    },
     {
       "Date": "2014-11-24",
       "Close": "26.64",
@@ -5979,36 +6009,6 @@
       "Close": "119.10",
       "Adj Close": "76.98",
       "Volume": "34067"
-    },
-    {
-      "Date": "2010-12-10",
-      "Close": "118.86",
-      "Adj Close": "76.82",
-      "Volume": "38017"
-    },
-    {
-      "Date": "2010-12-09",
-      "Close": "118.80",
-      "Adj Close": "76.78",
-      "Volume": "43883"
-    },
-    {
-      "Date": "2010-12-08",
-      "Close": "117.60",
-      "Adj Close": "76.01",
-      "Volume": "77400"
-    },
-    {
-      "Date": "2010-12-07",
-      "Close": "121.14",
-      "Adj Close": "78.30",
-      "Volume": "106283"
-    },
-    {
-      "Date": "2010-12-06",
-      "Close": "120.90",
-      "Adj Close": "78.14",
-      "Volume": "63850"
     }
   ]
 }

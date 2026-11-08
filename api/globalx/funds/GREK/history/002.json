@@ -2,7 +2,7 @@
   "ticker": "GREK",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3745,
+  "totalRows": 3750,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-10",
+      "Close": "25.75",
+      "Adj Close": "22.38",
+      "Volume": "10700"
+    },
+    {
+      "Date": "2022-11-09",
+      "Close": "24.85",
+      "Adj Close": "21.60",
+      "Volume": "26400"
+    },
+    {
+      "Date": "2022-11-08",
+      "Close": "25.02",
+      "Adj Close": "21.75",
+      "Volume": "15800"
+    },
+    {
+      "Date": "2022-11-07",
+      "Close": "24.98",
+      "Adj Close": "21.71",
+      "Volume": "18300"
+    },
+    {
+      "Date": "2022-11-04",
+      "Close": "24.57",
+      "Adj Close": "21.36",
+      "Volume": "8200"
+    },
     {
       "Date": "2022-11-03",
       "Close": "23.55",
@@ -5979,36 +6009,6 @@
       "Close": "21.39",
       "Adj Close": "16.85",
       "Volume": "112500"
-    },
-    {
-      "Date": "2018-11-20",
-      "Close": "21.06",
-      "Adj Close": "16.59",
-      "Volume": "95067"
-    },
-    {
-      "Date": "2018-11-19",
-      "Close": "22.02",
-      "Adj Close": "17.35",
-      "Volume": "112167"
-    },
-    {
-      "Date": "2018-11-16",
-      "Close": "22.68",
-      "Adj Close": "17.87",
-      "Volume": "109133"
-    },
-    {
-      "Date": "2018-11-15",
-      "Close": "22.71",
-      "Adj Close": "17.89",
-      "Volume": "110000"
-    },
-    {
-      "Date": "2018-11-14",
-      "Close": "22.65",
-      "Adj Close": "17.84",
-      "Volume": "113800"
     }
   ]
 }
