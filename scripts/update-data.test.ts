@@ -391,8 +391,8 @@ describe("metrics", () => {
     expect(meta.metrics.dividendYieldBasis).toBe("official-distribution-rate");
     const keys = Object.keys(rows.AAA.metrics);
     expect(Object.keys(rows.BBB.metrics)).toEqual(keys);
-    // the seven 52-week keys of the range-52w block sit between dividendYieldBasis and the returns pair
-    expect(Object.keys(rows.LLM.metrics).slice(-10)).toEqual(["dividendYieldBasis", "week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis", "returnsBasis", "performanceAsOf"]);
+    // the seven 52-week keys of the range-52w block and the nine swing keys of the swing block sit between dividendYieldBasis and the returns pair
+    expect(Object.keys(rows.LLM.metrics).slice(-19)).toEqual(["dividendYieldBasis", "week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis", "pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d", "returnsBasis", "performanceAsOf"]);
     // a retained row (failed page) keeps the yield together with its code
     installMock(() => [{ ticker: "AAA", name: "Alpha Index ETF", pageOk: false }, { ticker: "BBB", name: "Beta Index ETF", divYield: 0 }]);
     await run(dir);
@@ -530,6 +530,9 @@ describe("pipeline", () => {
       expect([f.terValue, f.terGrossValue]).toEqual([0.5, 0.6]);
       expect(Object.keys(f.metrics)).toEqual(Object.keys(idx.funds[0].metrics));
       expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(["week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis"])); // 52-week keys from its history pages (range-52w block)
+      // the swing keys from the Close column of the same pages (shared swing block): ATH and its basis from the first close
+      expect(Object.keys(f.metrics).slice(-11, -2)).toEqual(["pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d"]);
+      expect([typeof f.metrics.athPrice, f.metrics.athBasis]).toEqual(["number", expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
       expect(f.metrics.returnsBasis.length).toBeGreaterThan(0);
     }
     expect(idx.funds[0].metrics.cagr10y).toBe(8.36);
