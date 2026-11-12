@@ -77,6 +77,13 @@ The source publishes annualized NAV values for 1, 3, 5 and, where available, 10 
 
 Every `funds[].metrics` object in `api/globalx/index.json` (and in each `meta.json`) ends with two mandatory fields:
 
+- Swing metrics (shared `swing` block, the formulas of the Stocks feed) from the split-adjusted, not dividend-adjusted daily `Close` column of the published history, with the last close as the price; `null` (never `0`) when the history is too short:
+  - `pctFrom52wHigh` - last close against the highest close of the last 52 weeks, in percent
+  - `athPrice`, `athDate`, `athBasis` - highest close of the whole history, its date and the history it covers (`daily closes since <first date>`)
+  - `pctFromAth` - last close against `athPrice`, in percent
+  - `volatility1y` - annualized volatility of the last 252 daily log returns, in percent (needs 253 closes)
+  - `sigmaFromMean60d` - distance of the last close from the mean of the last 60 closes, in sample standard deviations
+  - `high60d`, `low60d` - highest and lowest of the last 60 closes
 - `returnsBasis` - non-empty text saying how the returns were computed. Global X returns are the official NAV total returns from the fund page `NAV Performance` table (monthly series), so the label is `official Global X fund page NAV Performance (monthly series)`. A fund with no published performance yet carries an explicit `none: ...` label with every return `null`, never an empty string or `-`
 - `performanceAsOf` - ISO `YYYY-MM-DD` month-end date of that performance table (for example `2026-08-31`). It is not the NAV date (`asOfDate`), which is newer. `null` only when the table date is unknown
 
