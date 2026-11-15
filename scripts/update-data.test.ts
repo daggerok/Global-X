@@ -391,8 +391,8 @@ describe("metrics", () => {
     expect(meta.metrics.dividendYieldBasis).toBe("official-distribution-rate");
     const keys = Object.keys(rows.AAA.metrics);
     expect(Object.keys(rows.BBB.metrics)).toEqual(keys);
-    // the seven 52-week keys of the range-52w block and the nine swing keys of the swing block sit between dividendYieldBasis and the returns pair
-    expect(Object.keys(rows.LLM.metrics).slice(-19)).toEqual(["dividendYieldBasis", "week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis", "pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d", "returnsBasis", "performanceAsOf"]);
+    // the seven 52-week keys of the range-52w block, the nine swing keys and the six dividend keys sit between dividendYieldBasis and the returns pair
+    expect(Object.keys(rows.LLM.metrics).slice(-25)).toEqual(["dividendYieldBasis", "week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis", "pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d", "dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y", "returnsBasis", "performanceAsOf"]);
     // a retained row (failed page) keeps the yield together with its code
     installMock(() => [{ ticker: "AAA", name: "Alpha Index ETF", pageOk: false }, { ticker: "BBB", name: "Beta Index ETF", divYield: 0 }]);
     await run(dir);
@@ -439,8 +439,10 @@ function fundPage(fund: MockFund): string {
 
 const HOLDINGS_CSV = 'Fund Holdings Data as of 09/25/2026\n% of Net Assets,Ticker,Name,SEDOL,Market Price ($),Shares Held,Market Value ($)\n50.00,AAA,AAA CORP,123,10.00,"100.00","1,000.00"\n50.00,BBB,BBB CORP,456,10.00,"100.00","1,000.00"\n';
 
-function yahooJson(close = 10): unknown {
-  return { chart: { result: [{ timestamp: [1790380800, 1790467200], indicators: { quote: [{ close: [close, close + 1], volume: [100, 200] }], adjclose: [{ adjclose: [close, close + 1] }] }, events: { dividends: {} }, meta: { exchangeName: 'PCX' } }] } };
+// the dividends block's request (swingChartUrl: period1=0 and includePrePost=false) also gets one dividend event and the listing date
+const DIVIDEND_CHART_URL = /chart\/([A-Z]+)\?period1=0&.*includePrePost=false/;
+function yahooJson(close = 10, dividend = false): unknown {
+  return { chart: { result: [{ timestamp: [1790380800, 1790467200], indicators: { quote: [{ close: [close, close + 1], volume: [100, 200] }], adjclose: [{ adjclose: [close, close + 1] }] }, events: { dividends: dividend ? { '1790467200': { amount: 0.25, date: 1790467200 } } : {} }, meta: dividend ? { exchangeName: 'PCX', dataGranularity: '1d', firstTradeDate: 1790380800 } : { exchangeName: 'PCX' } }] } };
 }
 
 function installMock(funds: () => MockFund[], hooks: { delayMs?: number; failYahoo?: Set<string>; calls?: string[] } = {}) {
@@ -468,7 +470,7 @@ function installMock(funds: () => MockFund[], hooks: { delayMs?: number; failYah
       if (url.includes('finance.yahoo.com')) {
         const ticker = /chart\/([A-Z]+)\?/.exec(url)![1];
         if (hooks.failYahoo?.has(ticker)) return new Response('no', { status: 404 });
-        return new Response(JSON.stringify(yahooJson()));
+        return new Response(JSON.stringify(yahooJson(10, DIVIDEND_CHART_URL.test(url))));
       }
       return new Response('not mocked', { status: 404 });
     } finally {
@@ -531,7 +533,11 @@ describe("pipeline", () => {
       expect(Object.keys(f.metrics)).toEqual(Object.keys(idx.funds[0].metrics));
       expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(["week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis"])); // 52-week keys from its history pages (range-52w block)
       // the swing keys from the Close column of the same pages (shared swing block): ATH and its basis from the first close
-      expect(Object.keys(f.metrics).slice(-11, -2)).toEqual(["pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d"]);
+      expect(Object.keys(f.metrics).slice(-17, -8)).toEqual(["pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d"]);
+      // the dividend keys from the Yahoo dividend events of one daily chart per updated fund (dividends block, own-request mode): one payment in the last 12 months,
+      // no complete year after the listing year, so growth, streak and cut are null (never 0)
+      expect(Object.keys(f.metrics).slice(-8, -2)).toEqual(["dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y"]);
+      expect(["dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y"].map((key) => f.metrics[key])).toEqual([0.25, null, null, null, null, null]);
       expect([typeof f.metrics.athPrice, f.metrics.athBasis]).toEqual(["number", expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
       expect(f.metrics.returnsBasis.length).toBeGreaterThan(0);
     }
@@ -597,10 +603,13 @@ describe("pipeline", () => {
   });
 
   test("a one-ticker run keeps every row and leaves other funds untouched; unknown ticker is an error", async () => {
-    const dir = fresh(); installMock(() => THREE); quiet();
+    const dir = fresh(); const calls: string[] = []; installMock(() => THREE, { calls }); quiet();
     await run(dir);
     const before = snapshot(dir);
+    calls.length = 0;
     await run(dir, { TICKERS: "BBB" });
+    // the dividends block asks Yahoo for the daily chart of the updated fund only (own-request mode)
+    expect(calls.filter((url) => DIVIDEND_CHART_URL.test(url)).map((url) => DIVIDEND_CHART_URL.exec(url)![1])).toEqual(["BBB"]);
     expect(index(dir).funds).toHaveLength(3);
     const after = snapshot(dir);
     for (const key of Object.keys(before)) if (!key.includes("/BBB/") && !key.endsWith("index.json")) expect(after[key]).toBe(before[key]);
