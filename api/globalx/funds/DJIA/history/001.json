@@ -2,7 +2,7 @@
   "ticker": "DJIA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1181,
+  "totalRows": 1186,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-13",
+      "Close": "22.71",
+      "Adj Close": "22.71",
+      "Volume": "66400"
+    },
+    {
+      "Date": "2026-11-12",
+      "Close": "22.64",
+      "Adj Close": "22.64",
+      "Volume": "88200"
+    },
+    {
+      "Date": "2026-11-11",
+      "Close": "22.74",
+      "Adj Close": "22.74",
+      "Volume": "48500"
+    },
+    {
+      "Date": "2026-11-10",
+      "Close": "22.66",
+      "Adj Close": "22.66",
+      "Volume": "200400"
+    },
+    {
+      "Date": "2026-11-09",
+      "Close": "22.58",
+      "Adj Close": "22.58",
+      "Volume": "139500"
+    },
     {
       "Date": "2026-11-06",
       "Close": "22.21",
@@ -5979,36 +6009,6 @@
       "Close": "22.09",
       "Adj Close": "15.22",
       "Volume": "50200"
-    },
-    {
-      "Date": "2022-11-17",
-      "Close": "22.11",
-      "Adj Close": "15.24",
-      "Volume": "66900"
-    },
-    {
-      "Date": "2022-11-16",
-      "Close": "22.12",
-      "Adj Close": "15.24",
-      "Volume": "48200"
-    },
-    {
-      "Date": "2022-11-15",
-      "Close": "21.97",
-      "Adj Close": "15.14",
-      "Volume": "85500"
-    },
-    {
-      "Date": "2022-11-14",
-      "Close": "22.08",
-      "Adj Close": "15.21",
-      "Volume": "30400"
-    },
-    {
-      "Date": "2022-11-11",
-      "Close": "21.92",
-      "Adj Close": "15.10",
-      "Volume": "73600"
     }
   ]
 }

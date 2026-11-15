@@ -2,7 +2,7 @@
   "ticker": "CPTL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2597,
+  "totalRows": 2602,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,36 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-13",
+      "Close": "49.07",
+      "Adj Close": "49.07",
+      "Volume": "3000"
+    },
+    {
+      "Date": "2026-11-12",
+      "Close": "49.44",
+      "Adj Close": "49.44",
+      "Volume": "3000"
+    },
+    {
+      "Date": "2026-11-11",
+      "Close": "49.40",
+      "Adj Close": "49.40",
+      "Volume": "200"
+    },
+    {
+      "Date": "2026-11-10",
+      "Close": "48.72",
+      "Adj Close": "48.72",
+      "Volume": "4600"
+    },
+    {
+      "Date": "2026-11-09",
+      "Close": "48.78",
+      "Adj Close": "48.78",
+      "Volume": "4300"
+    },
     {
       "Date": "2026-11-06",
       "Close": "47.36",
@@ -5979,36 +6009,6 @@
       "Close": "28.64",
       "Adj Close": "27.10",
       "Volume": "2400"
-    },
-    {
-      "Date": "2022-11-17",
-      "Close": "28.46",
-      "Adj Close": "26.93",
-      "Volume": "13100"
-    },
-    {
-      "Date": "2022-11-16",
-      "Close": "28.63",
-      "Adj Close": "27.09",
-      "Volume": "16900"
-    },
-    {
-      "Date": "2022-11-15",
-      "Close": "28.82",
-      "Adj Close": "27.27",
-      "Volume": "6300"
-    },
-    {
-      "Date": "2022-11-14",
-      "Close": "28.55",
-      "Adj Close": "27.02",
-      "Volume": "16400"
-    },
-    {
-      "Date": "2022-11-11",
-      "Close": "28.82",
-      "Adj Close": "27.27",
-      "Volume": "5100"
     }
   ]
 }
