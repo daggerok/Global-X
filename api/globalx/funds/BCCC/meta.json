@@ -41,12 +41,12 @@
   "premiumDiscountDerivedValue": 0.09,
   "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
-    "display": "0.32%",
-    "value": 0.32,
+    "display": "0.31%",
+    "value": 0.31,
     "asOfDate": "Nov 13 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
-  "bidAskSpreadValue": 0.32,
+  "bidAskSpreadValue": 0.31,
   "acquiredFundFeesText": null,
   "totalNetAssets": 8433159.79,
   "sharesOutstanding": {
@@ -67,6 +67,13 @@
       "Amount ($)"
     ],
     "rows": [
+      {
+        "Declaration Date": "",
+        "Ex-Div Date": "2026-11-16",
+        "Record Date": "2026-11-16",
+        "Payable Date": "2026-11-19",
+        "Amount ($)": ""
+      },
       {
         "Declaration Date": "",
         "Ex-Div Date": "2026-11-09",
@@ -663,9 +670,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 365,
-    "asOfDate": "Nov 13 2026",
-    "asOf": "2026-11-13",
+    "totalRows": 366,
+    "asOfDate": "Nov 16 2026",
+    "asOf": "2026-11-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/BCCC",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },

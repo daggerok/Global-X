@@ -2,7 +2,7 @@
   "ticker": "CHPX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 283,
+  "totalRows": 284,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-16",
+      "Close": "76.31",
+      "Adj Close": "76.31",
+      "Volume": "20641"
+    },
     {
       "Date": "2026-11-13",
       "Close": "80.21",

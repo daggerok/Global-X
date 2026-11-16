@@ -2,7 +2,7 @@
   "ticker": "ONOF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1467,
+  "totalRows": 1468,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-16",
+      "Close": "40.27",
+      "Adj Close": "40.27",
+      "Volume": "1236"
+    },
     {
       "Date": "2026-11-13",
       "Close": "40.27",
@@ -6003,12 +6009,6 @@
       "Close": "27.33",
       "Adj Close": "25.90",
       "Volume": "68700"
-    },
-    {
-      "Date": "2022-11-18",
-      "Close": "27.41",
-      "Adj Close": "25.97",
-      "Volume": "2900"
     }
   ]
 }

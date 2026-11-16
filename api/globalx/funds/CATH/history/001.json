@@ -2,7 +2,7 @@
   "ticker": "CATH",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2655,
+  "totalRows": 2656,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-16",
+      "Close": "88.44",
+      "Adj Close": "88.44",
+      "Volume": "42222"
+    },
     {
       "Date": "2026-11-13",
       "Close": "89.56",
@@ -6003,12 +6009,6 @@
       "Close": "48.15",
       "Adj Close": "46.20",
       "Volume": "90400"
-    },
-    {
-      "Date": "2022-11-18",
-      "Close": "48.38",
-      "Adj Close": "46.42",
-      "Volume": "108100"
     }
   ]
 }

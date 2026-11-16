@@ -2,7 +2,7 @@
   "ticker": "TYLG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 998,
+  "totalRows": 999,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-16",
+      "Close": "37.83",
+      "Adj Close": "37.83",
+      "Volume": "1405"
+    },
     {
       "Date": "2026-11-13",
       "Close": "38.83",

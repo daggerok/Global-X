@@ -2,7 +2,7 @@
   "ticker": "QDIV",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2095,
+  "totalRows": 2096,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-11-29",
+      "Close": "24.08",
+      "Adj Close": "18.90",
+      "Volume": "100"
+    },
     {
       "Date": "2018-11-28",
       "Close": "24.08",

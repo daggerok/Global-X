@@ -69,6 +69,13 @@
     "rows": [
       {
         "Declaration Date": "",
+        "Ex-Div Date": "2026-11-16",
+        "Record Date": "2026-11-16",
+        "Payable Date": "2026-11-19",
+        "Amount ($)": ""
+      },
+      {
+        "Declaration Date": "",
         "Ex-Div Date": "2026-11-09",
         "Record Date": "2026-11-09",
         "Payable Date": "2026-11-13",
@@ -363,9 +370,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 157,
-    "asOfDate": "Nov 13 2026",
-    "asOf": "2026-11-13",
+    "totalRows": 158,
+    "asOfDate": "Nov 16 2026",
+    "asOf": "2026-11-16",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/EHCC",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },

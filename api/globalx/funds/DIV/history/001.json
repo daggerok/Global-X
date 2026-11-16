@@ -2,7 +2,7 @@
   "ticker": "DIV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3442,
+  "totalRows": 3443,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-16",
+      "Close": "19.03",
+      "Adj Close": "19.03",
+      "Volume": "92690"
+    },
     {
       "Date": "2026-11-13",
       "Close": "19.09",
@@ -6003,12 +6009,6 @@
       "Close": "19.32",
       "Adj Close": "14.72",
       "Volume": "89400"
-    },
-    {
-      "Date": "2022-11-18",
-      "Close": "19.24",
-      "Adj Close": "14.66",
-      "Volume": "65700"
     }
   ]
 }

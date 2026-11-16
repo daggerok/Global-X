@@ -2,7 +2,7 @@
   "ticker": "HYDR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1342,
+  "totalRows": 1343,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-16",
+      "Close": "31.67",
+      "Adj Close": "31.67",
+      "Volume": "5012"
+    },
     {
       "Date": "2026-11-13",
       "Close": "33.01",
@@ -6003,12 +6009,6 @@
       "Close": "58.75",
       "Adj Close": "55.76",
       "Volume": "4620"
-    },
-    {
-      "Date": "2022-11-18",
-      "Close": "59.55",
-      "Adj Close": "56.52",
-      "Volume": "1920"
     }
   ]
 }

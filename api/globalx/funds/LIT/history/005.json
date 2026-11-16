@@ -2,7 +2,7 @@
   "ticker": "LIT",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4104,
+  "totalRows": 4105,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-12-20",
+      "Close": "42.56",
+      "Adj Close": "34.84",
+      "Volume": "68600"
+    },
     {
       "Date": "2010-12-17",
       "Close": "42.40",

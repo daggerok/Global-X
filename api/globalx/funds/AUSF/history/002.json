@@ -2,7 +2,7 @@
   "ticker": "AUSF",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2065,
+  "totalRows": 2066,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-18",
+      "Close": "31.39",
+      "Adj Close": "28.33",
+      "Volume": "6700"
+    },
     {
       "Date": "2022-11-17",
       "Close": "31.21",
@@ -6003,12 +6009,6 @@
       "Close": "24.40",
       "Adj Close": "19.36",
       "Volume": "25600"
-    },
-    {
-      "Date": "2018-11-29",
-      "Close": "24.28",
-      "Adj Close": "19.27",
-      "Volume": "67800"
     }
   ]
 }

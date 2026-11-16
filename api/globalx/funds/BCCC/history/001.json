@@ -2,7 +2,7 @@
   "ticker": "BCCC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 365,
+  "totalRows": 366,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-16",
+      "Close": "10.63",
+      "Adj Close": "10.63",
+      "Volume": "22234"
+    },
     {
       "Date": "2026-11-13",
       "Close": "11.25",
