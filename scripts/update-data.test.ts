@@ -391,8 +391,8 @@ describe("metrics", () => {
     expect(meta.metrics.dividendYieldBasis).toBe("official-distribution-rate");
     const keys = Object.keys(rows.AAA.metrics);
     expect(Object.keys(rows.BBB.metrics)).toEqual(keys);
-    // the seven 52-week keys of the range-52w block, the nine swing keys and the six dividend keys sit between dividendYieldBasis and the returns pair
-    expect(Object.keys(rows.LLM.metrics).slice(-25)).toEqual(["dividendYieldBasis", "week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis", "pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d", "dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y", "returnsBasis", "performanceAsOf"]);
+    // the seven 52-week keys of the range-52w block, the nine swing keys and the eight dividend keys and the 32 benchmark keys sit between dividendYieldBasis and the returns pair
+    expect(Object.keys(rows.LLM.metrics).slice(-59)).toEqual(["dividendYieldBasis", "week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis", "pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d", "dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y", "paymentsPerYear", "payFrequency", "perf1y", "perf3y", "perf5y", "perf10y", "perfSi", "maxDrawdown1y", "maxDrawdown3y", "maxDrawdown5y", "maxDrawdown10y", "vsSpy1y", "vsSpy3y", "vsSpy5y", "vsSpy10y", "beta1ySpy", "corr1ySpy", "upCapture3ySpy", "downCapture3ySpy", "relStrength3mSpy", "stressReturnSpy", "stressBasisSpy", "vsQqq1y", "vsQqq3y", "vsQqq5y", "vsQqq10y", "beta1yQqq", "corr1yQqq", "upCapture3yQqq", "downCapture3yQqq", "relStrength3mQqq", "stressReturnQqq", "stressBasisQqq", "benchmarkAsOf", "returnsBasis", "performanceAsOf"]);
     // a retained row (failed page) keeps the yield together with its code
     installMock(() => [{ ticker: "AAA", name: "Alpha Index ETF", pageOk: false }, { ticker: "BBB", name: "Beta Index ETF", divYield: 0 }]);
     await run(dir);
@@ -533,11 +533,15 @@ describe("pipeline", () => {
       expect(Object.keys(f.metrics)).toEqual(Object.keys(idx.funds[0].metrics));
       expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(["week52Low", "week52High", "range52w", "range52wClose", "range52wAsOf", "range52wSince", "range52wBasis"])); // 52-week keys from its history pages (range-52w block)
       // the swing keys from the Close column of the same pages (shared swing block): ATH and its basis from the first close
-      expect(Object.keys(f.metrics).slice(-17, -8)).toEqual(["pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d"]);
+      expect(Object.keys(f.metrics).slice(-51, -42)).toEqual(["pctFrom52wHigh", "athPrice", "athDate", "athBasis", "pctFromAth", "volatility1y", "sigmaFromMean60d", "high60d", "low60d"]);
       // the dividend keys from the Yahoo dividend events of one daily chart per updated fund (dividends block, own-request mode): one payment in the last 12 months,
       // no complete year after the listing year, so growth, streak and cut are null (never 0)
-      expect(Object.keys(f.metrics).slice(-8, -2)).toEqual(["dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y"]);
-      expect(["dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y"].map((key) => f.metrics[key])).toEqual([0.25, null, null, null, null, null]);
+      expect(Object.keys(f.metrics).slice(-42, -34)).toEqual(["dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y", "paymentsPerYear", "payFrequency"]);
+      expect(["dividendRate", "dividendGrowth", "dividendGrowth3y", "dividendGrowth5y", "dividendStreak", "dividendCut10y", "paymentsPerYear", "payFrequency"].map((key) => f.metrics[key])).toEqual([0.25, null, null, null, null, null, 1, null]);
+      // the 32 benchmark keys against SPY and QQQ (benchmark block) sit before the returns pair; two mocked bars (the benchmarks answer the same ones):
+      // every horizon and the 252-return statistics are null (never 0), the common date is set
+      expect(Object.keys(f.metrics).slice(-34, -2)).toEqual(["perf1y", "perf3y", "perf5y", "perf10y", "perfSi", "maxDrawdown1y", "maxDrawdown3y", "maxDrawdown5y", "maxDrawdown10y", "vsSpy1y", "vsSpy3y", "vsSpy5y", "vsSpy10y", "beta1ySpy", "corr1ySpy", "upCapture3ySpy", "downCapture3ySpy", "relStrength3mSpy", "stressReturnSpy", "stressBasisSpy", "vsQqq1y", "vsQqq3y", "vsQqq5y", "vsQqq10y", "beta1yQqq", "corr1yQqq", "upCapture3yQqq", "downCapture3yQqq", "relStrength3mQqq", "stressReturnQqq", "stressBasisQqq", "benchmarkAsOf"]);
+      expect([f.metrics.perf1y, f.metrics.perfSi, f.metrics.vsSpy1y, f.metrics.beta1ySpy, f.metrics.relStrength3mQqq, f.metrics.benchmarkAsOf]).toEqual([null, null, null, null, null, "2026-09-27"]);
       expect([typeof f.metrics.athPrice, f.metrics.athBasis]).toEqual(["number", expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
       expect(f.metrics.returnsBasis.length).toBeGreaterThan(0);
     }
@@ -608,8 +612,8 @@ describe("pipeline", () => {
     const before = snapshot(dir);
     calls.length = 0;
     await run(dir, { TICKERS: "BBB" });
-    // the dividends block asks Yahoo for the daily chart of the updated fund only (own-request mode)
-    expect(calls.filter((url) => DIVIDEND_CHART_URL.test(url)).map((url) => DIVIDEND_CHART_URL.exec(url)![1])).toEqual(["BBB"]);
+    // the dividends block asks Yahoo for the daily chart of the updated fund only (own-request mode); the benchmark block adds exactly the SPY and the QQQ chart, no request per fund
+    expect(calls.filter((url) => DIVIDEND_CHART_URL.test(url)).map((url) => DIVIDEND_CHART_URL.exec(url)![1]).sort()).toEqual(["BBB", "QQQ", "SPY"]);
     expect(index(dir).funds).toHaveLength(3);
     const after = snapshot(dir);
     for (const key of Object.keys(before)) if (!key.includes("/BBB/") && !key.endsWith("index.json")) expect(after[key]).toBe(before[key]);
