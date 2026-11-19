@@ -2,7 +2,7 @@
   "ticker": "CATH",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2656,
+  "totalRows": 2658,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-12-03",
+      "Close": "34.78",
+      "Adj Close": "31.28",
+      "Volume": "24200"
+    },
+    {
+      "Date": "2018-11-30",
+      "Close": "34.29",
+      "Adj Close": "30.84",
+      "Volume": "2700"
+    },
     {
       "Date": "2018-11-29",
       "Close": "34.13",

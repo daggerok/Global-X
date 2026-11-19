@@ -2,7 +2,7 @@
   "ticker": "LLMA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 33,
+  "totalRows": 35,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "19.90",
+      "Adj Close": "19.90",
+      "Volume": "900"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "19.74",
+      "Adj Close": "19.74",
+      "Volume": "4900"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "20.13",
-      "Adj Close": "20.13",
-      "Volume": "4221"
+      "Close": "20.00",
+      "Adj Close": "20.00",
+      "Volume": "4300"
     },
     {
       "Date": "2026-11-13",

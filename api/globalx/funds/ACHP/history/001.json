@@ -2,7 +2,7 @@
   "ticker": "ACHP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 23,
+  "totalRows": 25,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "17.93",
+      "Adj Close": "17.93",
+      "Volume": "2400"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "17.82",
+      "Adj Close": "17.82",
+      "Volume": "3600"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "18.57",
-      "Adj Close": "18.57",
-      "Volume": "2976"
+      "Close": "18.08",
+      "Adj Close": "18.08",
+      "Volume": "3000"
     },
     {
       "Date": "2026-11-13",

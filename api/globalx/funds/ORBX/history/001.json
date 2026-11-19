@@ -2,7 +2,7 @@
   "ticker": "ORBX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 150,
+  "totalRows": 152,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "34.82",
+      "Adj Close": "34.82",
+      "Volume": "10800"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "35.10",
+      "Adj Close": "35.10",
+      "Volume": "8600"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "35.73",
-      "Adj Close": "35.73",
-      "Volume": "4325"
+      "Close": "35.28",
+      "Adj Close": "35.28",
+      "Volume": "8800"
     },
     {
       "Date": "2026-11-13",

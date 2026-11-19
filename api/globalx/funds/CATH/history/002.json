@@ -2,7 +2,7 @@
   "ticker": "CATH",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2656,
+  "totalRows": 2658,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-22",
+      "Close": "48.83",
+      "Adj Close": "46.85",
+      "Volume": "16500"
+    },
+    {
+      "Date": "2022-11-21",
+      "Close": "48.15",
+      "Adj Close": "46.20",
+      "Volume": "90400"
+    },
     {
       "Date": "2022-11-18",
       "Close": "48.38",
@@ -5997,18 +6009,6 @@
       "Close": "33.63",
       "Adj Close": "30.24",
       "Volume": "41700"
-    },
-    {
-      "Date": "2018-12-03",
-      "Close": "34.78",
-      "Adj Close": "31.28",
-      "Volume": "24200"
-    },
-    {
-      "Date": "2018-11-30",
-      "Close": "34.29",
-      "Adj Close": "30.84",
-      "Volume": "2700"
     }
   ]
 }

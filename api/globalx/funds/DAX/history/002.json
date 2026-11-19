@@ -2,7 +2,7 @@
   "ticker": "DAX",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3034,
+  "totalRows": 3036,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-22",
+      "Close": "25.94",
+      "Adj Close": "23.76",
+      "Volume": "30700"
+    },
+    {
+      "Date": "2022-11-21",
+      "Close": "25.56",
+      "Adj Close": "23.41",
+      "Volume": "15900"
+    },
     {
       "Date": "2022-11-18",
       "Close": "25.80",
@@ -5997,18 +6009,6 @@
       "Close": "25.20",
       "Adj Close": "20.48",
       "Volume": "3700"
-    },
-    {
-      "Date": "2018-12-03",
-      "Close": "25.97",
-      "Adj Close": "21.11",
-      "Volume": "1200"
-    },
-    {
-      "Date": "2018-11-30",
-      "Close": "25.54",
-      "Adj Close": "20.76",
-      "Volume": "2300"
     }
   ]
 }

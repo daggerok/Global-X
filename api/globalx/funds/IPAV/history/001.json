@@ -2,7 +2,7 @@
   "ticker": "IPAV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 557,
+  "totalRows": 559,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "29.15",
+      "Adj Close": "29.15",
+      "Volume": "200"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "29.35",
+      "Adj Close": "29.35",
+      "Volume": "300"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "29.90",
-      "Adj Close": "29.90",
-      "Volume": "7"
+      "Close": "29.47",
+      "Adj Close": "29.47",
+      "Volume": "300"
     },
     {
       "Date": "2026-11-13",

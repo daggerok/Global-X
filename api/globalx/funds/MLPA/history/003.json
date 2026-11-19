@@ -2,7 +2,7 @@
   "ticker": "MLPA",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 3666,
+  "totalRows": 3668,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-12-03",
+      "Close": "52.74",
+      "Adj Close": "26.67",
+      "Volume": "134000"
+    },
+    {
+      "Date": "2018-11-30",
+      "Close": "51.24",
+      "Adj Close": "25.91",
+      "Volume": "142833"
+    },
     {
       "Date": "2018-11-29",
       "Close": "51.90",
@@ -5997,18 +6009,6 @@
       "Close": "90.72",
       "Adj Close": "33.85",
       "Volume": "32117"
-    },
-    {
-      "Date": "2014-12-12",
-      "Close": "92.28",
-      "Adj Close": "34.43",
-      "Volume": "13500"
-    },
-    {
-      "Date": "2014-12-11",
-      "Close": "92.88",
-      "Adj Close": "34.65",
-      "Volume": "10783"
     }
   ]
 }

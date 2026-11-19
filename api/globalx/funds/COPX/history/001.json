@@ -2,7 +2,7 @@
   "ticker": "COPX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 4171,
+  "totalRows": 4173,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "61.19",
+      "Adj Close": "61.19",
+      "Volume": "10453700"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "65.31",
+      "Adj Close": "65.31",
+      "Volume": "5637700"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "66.34",
-      "Adj Close": "66.34",
-      "Volume": "3359633"
+      "Close": "65.51",
+      "Adj Close": "65.51",
+      "Volume": "7437900"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "34.70",
       "Adj Close": "31.91",
       "Volume": "216500"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "34.35",
-      "Adj Close": "31.59",
-      "Volume": "569400"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "33.33",
-      "Adj Close": "30.65",
-      "Volume": "365800"
     }
   ]
 }

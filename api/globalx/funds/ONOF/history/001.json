@@ -2,7 +2,7 @@
   "ticker": "ONOF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1468,
+  "totalRows": 1470,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "39.04",
+      "Adj Close": "39.04",
+      "Volume": "900"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "39.05",
+      "Adj Close": "39.05",
+      "Volume": "5400"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "40.27",
-      "Adj Close": "40.27",
-      "Volume": "1236"
+      "Close": "39.47",
+      "Adj Close": "39.47",
+      "Volume": "15400"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "27.84",
       "Adj Close": "26.39",
       "Volume": "9800"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "27.67",
-      "Adj Close": "26.22",
-      "Volume": "45400"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "27.33",
-      "Adj Close": "25.90",
-      "Volume": "68700"
     }
   ]
 }

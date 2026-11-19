@@ -2,7 +2,7 @@
   "ticker": "AGNG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2646,
+  "totalRows": 2648,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "39.78",
+      "Adj Close": "39.78",
+      "Volume": "24200"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "40.17",
+      "Adj Close": "40.17",
+      "Volume": "3200"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "40.72",
-      "Adj Close": "40.72",
-      "Volume": "1050"
+      "Close": "40.49",
+      "Adj Close": "40.49",
+      "Volume": "3600"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "26.06",
       "Adj Close": "25.23",
       "Volume": "800"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "25.83",
-      "Adj Close": "25.01",
-      "Volume": "500"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "25.73",
-      "Adj Close": "24.91",
-      "Volume": "2300"
     }
   ]
 }

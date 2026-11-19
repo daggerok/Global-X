@@ -2,7 +2,7 @@
   "ticker": "SDEM",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 64,
+  "totalRows": 68,
   "headers": [
     "Name",
     "Ticker",
@@ -14,14 +14,614 @@
   ],
   "rows": [
     {
+      "Name": "NEW RUSSIAN ROUBLE",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.13%",
+      "Market Value": "50,201.53",
+      "Shares Held": "4,136,605.92",
+      "Asset Category": "Equity",
+      "Price": "0.01213592277603277"
+    },
+    {
+      "Name": "UAE DIRHAM",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.73%",
+      "Market Value": "280,806.29",
+      "Shares Held": "1,031,415.56",
+      "Asset Category": "Equity",
+      "Price": "0.272253300115038"
+    },
+    {
+      "Name": "MSCI EMER MKTS AS DEC26",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.51%",
+      "Market Value": "194,840.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Future",
+      "Price": "97420.0"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.43%",
+      "Market Value": "164,866.42",
+      "Shares Held": "164,866.42",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "COLOMBIAN PESO",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.32%",
+      "Market Value": "121,273.93",
+      "Shares Held": "402,107,956.06",
+      "Asset Category": "Equity",
+      "Price": "0.00030159545010819"
+    },
+    {
+      "Name": "SAUDI RIYAL",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.23%",
+      "Market Value": "87,830.58",
+      "Shares Held": "329,478.87",
+      "Asset Category": "Equity",
+      "Price": "0.2665742419233136"
+    },
+    {
+      "Name": "KUWAIT DINAR",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.22%",
+      "Market Value": "86,155.61",
+      "Shares Held": "26,863.32",
+      "Asset Category": "Equity",
+      "Price": "3.207183996616948"
+    },
+    {
+      "Name": "INDIA RUPEE",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.21%",
+      "Market Value": "79,454.91",
+      "Shares Held": "7,424,862.38",
+      "Asset Category": "Equity",
+      "Price": "0.01070119632304889"
+    },
+    {
+      "Name": "EGYPTIAN POUND",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.19%",
+      "Market Value": "74,769.83",
+      "Shares Held": "4,018,878.26",
+      "Asset Category": "Equity",
+      "Price": "0.01860465163729543"
+    },
+    {
+      "Name": "GRUPO CIBEST SA",
+      "Ticker": "PFCIBEST CB",
+      "Identifier": "BTPR2M4",
+      "Weight": "2.72%",
+      "Market Value": "1,046,214.11",
+      "Shares Held": "48,193.00",
+      "Asset Category": "Equity",
+      "Price": "21.70883966551159"
+    },
+    {
+      "Name": "HUANENG POWER INTL INC-H",
+      "Ticker": "902 HK",
+      "Identifier": "6099671",
+      "Weight": "2.61%",
+      "Market Value": "1,004,806.73",
+      "Shares Held": "1,269,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.791435672652804"
+    },
+    {
+      "Name": "INNER MONGOLIA JUNZHENG EN-A",
+      "Ticker": "601216 C1",
+      "Identifier": "BP3R7B2",
+      "Weight": "2.46%",
+      "Market Value": "948,043.55",
+      "Shares Held": "1,350,800.00",
+      "Asset Category": "Equity",
+      "Price": "0.701838577139473"
+    },
+    {
+      "Name": "TELEFONICA BRASIL S.A.",
+      "Ticker": "VIVT3 BZ",
+      "Identifier": "B6XFBX3",
+      "Weight": "2.41%",
+      "Market Value": "927,867.44",
+      "Shares Held": "151,800.00",
+      "Asset Category": "Equity",
+      "Price": "6.11243372859025"
+    },
+    {
+      "Name": "INNER MONGOLIA YITAI COAL-B",
+      "Ticker": "900948 CH",
+      "Identifier": "6019011",
+      "Weight": "2.32%",
+      "Market Value": "895,163.40",
+      "Shares Held": "305,100.00",
+      "Asset Category": "Equity",
+      "Price": "2.934"
+    },
+    {
+      "Name": "TRUST FIBRA UNO",
+      "Ticker": "FUNO11 MM",
+      "Identifier": "B671GT8",
+      "Weight": "2.31%",
+      "Market Value": "891,430.29",
+      "Shares Held": "452,800.00",
+      "Asset Category": "Fund",
+      "Price": "1.968706470848057"
+    },
+    {
+      "Name": "LUZHOU LAOJIAO CO LTD-A",
+      "Ticker": "000568 C2",
+      "Identifier": "BD5CMM7",
+      "Weight": "2.21%",
+      "Market Value": "850,664.35",
+      "Shares Held": "69,600.00",
+      "Asset Category": "Equity",
+      "Price": "12.22218893678161"
+    },
+    {
+      "Name": "TINGYI (CAYMAN ISLN) HLDG CO",
+      "Ticker": "322 HK",
+      "Identifier": "6903556",
+      "Weight": "2.20%",
+      "Market Value": "848,944.12",
+      "Shares Held": "482,000.00",
+      "Asset Category": "Equity",
+      "Price": "1.761294854771784"
+    },
+    {
+      "Name": "YANBU NATIONAL PETROCHEMICAL",
+      "Ticker": "YANSAB AB",
+      "Identifier": "B128CF7",
+      "Weight": "2.18%",
+      "Market Value": "840,356.25",
+      "Shares Held": "100,910.00",
+      "Asset Category": "Equity",
+      "Price": "8.327779704687345"
+    },
+    {
+      "Name": "MOL HUNGARIAN OIL AND GAS PL",
+      "Ticker": "MOL HB",
+      "Identifier": "BD5ZXH8",
+      "Weight": "2.17%",
+      "Market Value": "835,911.07",
+      "Shares Held": "58,421.00",
+      "Asset Category": "Equity",
+      "Price": "14.30840057513565"
+    },
+    {
+      "Name": "EMAAR PROPERTIES PJSC",
+      "Ticker": "EMAAR UH",
+      "Identifier": "B01RM25",
+      "Weight": "2.17%",
+      "Market Value": "834,965.63",
+      "Shares Held": "246,533.00",
+      "Asset Category": "Equity",
+      "Price": "3.38683109360613"
+    },
+    {
+      "Name": "SCB X PCL-NVDR",
+      "Ticker": "SCB-R TB",
+      "Identifier": "BPH0728",
+      "Weight": "2.17%",
+      "Market Value": "834,819.33",
+      "Shares Held": "184,612.00",
+      "Asset Category": "Equity",
+      "Price": "4.522020941217256"
+    },
+    {
+      "Name": "ITAUSA SA",
+      "Ticker": "ITSA4 BZ",
+      "Identifier": "2458771",
+      "Weight": "2.14%",
+      "Market Value": "825,710.55",
+      "Shares Held": "365,300.00",
+      "Asset Category": "Equity",
+      "Price": "2.260362852450041"
+    },
+    {
+      "Name": "BOSIDENG INTL HLDGS LTD",
+      "Ticker": "3998 HK",
+      "Identifier": "B24FZ32",
+      "Weight": "2.14%",
+      "Market Value": "824,131.78",
+      "Shares Held": "1,415,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.5824252862190813"
+    },
+    {
+      "Name": "POWSZECHNY ZAKLAD UBEZPIECZE",
+      "Ticker": "PZU PW",
+      "Identifier": "B63DG21",
+      "Weight": "2.11%",
+      "Market Value": "812,932.14",
+      "Shares Held": "44,032.00",
+      "Asset Category": "Equity",
+      "Price": "18.46230332485465"
+    },
+    {
+      "Name": "ITAU UNIBANCO HOLDING SA",
+      "Ticker": "ITUB4 BZ",
+      "Identifier": "B037HR3",
+      "Weight": "2.11%",
+      "Market Value": "811,032.98",
+      "Shares Held": "117,400.00",
+      "Asset Category": "Equity",
+      "Price": "6.908287734241908"
+    },
+    {
+      "Name": "AIR ARABIA PJSC",
+      "Ticker": "AIRARABI UH",
+      "Identifier": "B23DL40",
+      "Weight": "2.10%",
+      "Market Value": "809,752.97",
+      "Shares Held": "588,963.00",
+      "Asset Category": "Equity",
+      "Price": "1.37487918595905"
+    },
+    {
+      "Name": "GREE ELECTRIC APPLIANCES I-A",
+      "Ticker": "000651 C2",
+      "Identifier": "BD5CPN9",
+      "Weight": "2.08%",
+      "Market Value": "802,386.70",
+      "Shares Held": "131,300.00",
+      "Asset Category": "Equity",
+      "Price": "6.111094440213252"
+    },
+    {
+      "Name": "CHINA CITIC BANK CORP LTD-H",
+      "Ticker": "998 HK",
+      "Identifier": "B1W0JF2",
+      "Weight": "2.08%",
+      "Market Value": "799,197.11",
+      "Shares Held": "751,006.00",
+      "Asset Category": "Equity",
+      "Price": "1.064168741661185"
+    },
+    {
+      "Name": "BANK PEKAO SA",
+      "Ticker": "PEO PW",
+      "Identifier": "5473113",
+      "Weight": "2.07%",
+      "Market Value": "796,855.22",
+      "Shares Held": "12,173.00",
+      "Asset Category": "Equity",
+      "Price": "65.46087406555492"
+    },
+    {
+      "Name": "EMAAR DEVELOPMENT PJSC",
+      "Ticker": "EMAARDEV UH",
+      "Identifier": "BDG1977",
+      "Weight": "2.05%",
+      "Market Value": "789,607.79",
+      "Shares Held": "197,566.00",
+      "Asset Category": "Equity",
+      "Price": "3.996678527681889"
+    },
+    {
+      "Name": "CAIXA SEGURIDADE PARTICIPACO",
+      "Ticker": "CXSE3 BZ",
+      "Identifier": "BMDWWN3",
+      "Weight": "2.01%",
+      "Market Value": "775,227.11",
+      "Shares Held": "220,000.00",
+      "Asset Category": "Equity",
+      "Price": "3.523759590909091"
+    },
+    {
+      "Name": "YUTONG BUS CO LTD-A",
+      "Ticker": "600066 C1",
+      "Identifier": "BP3R5T6",
+      "Weight": "1.98%",
+      "Market Value": "764,123.00",
+      "Shares Held": "161,500.00",
+      "Asset Category": "Equity",
+      "Price": "4.731411764705882"
+    },
+    {
+      "Name": "JBS NV-A",
+      "Ticker": "JBS",
+      "Identifier": "BT18HL5",
+      "Weight": "1.98%",
+      "Market Value": "763,113.74",
+      "Shares Held": "63,487.00",
+      "Asset Category": "Equity",
+      "Price": "12.02"
+    },
+    {
+      "Name": "NEPI ROCKCASTLE N.V.",
+      "Ticker": "NRP SJ",
+      "Identifier": "BLF9GQ6",
+      "Weight": "1.97%",
+      "Market Value": "759,682.23",
+      "Shares Held": "89,526.00",
+      "Asset Category": "Equity",
+      "Price": "8.485604517123518"
+    },
+    {
+      "Name": "MBRF GLOBAL FOODS COMPANY SA",
+      "Ticker": "MBRF3 BZ",
+      "Identifier": "BV8H6L2",
+      "Weight": "1.94%",
+      "Market Value": "747,901.99",
+      "Shares Held": "232,800.00",
+      "Asset Category": "Equity",
+      "Price": "3.212637414089347"
+    },
+    {
+      "Name": "MOBILE TELECOMMUNICATIONS CO",
+      "Ticker": "ZAIN KK",
+      "Identifier": "6600084",
+      "Weight": "1.92%",
+      "Market Value": "740,507.16",
+      "Shares Held": "404,361.00",
+      "Asset Category": "Equity",
+      "Price": "1.831302128543554"
+    },
+    {
+      "Name": "BANK RAKYAT INDONESIA PERSER",
+      "Ticker": "BBRI IJ",
+      "Identifier": "6709099",
+      "Weight": "1.91%",
+      "Market Value": "736,622.44",
+      "Shares Held": "4,416,100.00",
+      "Asset Category": "Equity",
+      "Price": "0.1668038404927424"
+    },
+    {
+      "Name": "KOMERCNI BANKA AS",
+      "Ticker": "KOMB CP",
+      "Identifier": "4519449",
+      "Weight": "1.91%",
+      "Market Value": "735,173.15",
+      "Shares Held": "16,028.00",
+      "Asset Category": "Equity",
+      "Price": "45.8680527826304"
+    },
+    {
+      "Name": "GRUPO FINANCIERO BANORTE-O",
+      "Ticker": "GFNORTEO MM",
+      "Identifier": "2421041",
+      "Weight": "1.90%",
+      "Market Value": "730,281.25",
+      "Shares Held": "68,810.00",
+      "Asset Category": "Equity",
+      "Price": "10.61301046359541"
+    },
+    {
+      "Name": "MONETA MONEY BANK AS",
+      "Ticker": "MONET CP",
+      "Identifier": "BD3CQ16",
+      "Weight": "1.88%",
+      "Market Value": "723,536.70",
+      "Shares Held": "85,584.00",
+      "Asset Category": "Equity",
+      "Price": "8.454111749859786"
+    },
+    {
+      "Name": "BB SEGURIDADE PARTICIPACOES",
+      "Ticker": "BBSE3 BZ",
+      "Identifier": "B9N3SQ0",
+      "Weight": "1.87%",
+      "Market Value": "719,632.84",
+      "Shares Held": "114,200.00",
+      "Asset Category": "Equity",
+      "Price": "6.301513485113835"
+    },
+    {
+      "Name": "REDE D'OR SAO LUIZ SA",
+      "Ticker": "RDOR3 BZ",
+      "Identifier": "BNDQ8P6",
+      "Weight": "1.84%",
+      "Market Value": "708,393.42",
+      "Shares Held": "113,500.00",
+      "Asset Category": "Equity",
+      "Price": "6.241351718061674"
+    },
+    {
+      "Name": "PETROCHINA CO LTD-H",
+      "Ticker": "857 HK",
+      "Identifier": "6226576",
+      "Weight": "1.82%",
+      "Market Value": "700,843.69",
+      "Shares Held": "533,900.00",
+      "Asset Category": "Equity",
+      "Price": "1.312687188612099"
+    },
+    {
+      "Name": "KLABIN SA - UNIT",
+      "Ticker": "KLBN11 BZ",
+      "Identifier": "BJ0K6Z9",
+      "Weight": "1.82%",
+      "Market Value": "700,199.22",
+      "Shares Held": "237,800.00",
+      "Asset Category": "Equity",
+      "Price": "2.944487888982338"
+    },
+    {
+      "Name": "BANK MANDIRI PERSERO TBK PT",
+      "Ticker": "BMRI IJ",
+      "Identifier": "6651048",
+      "Weight": "1.81%",
+      "Market Value": "699,125.82",
+      "Shares Held": "3,250,400.00",
+      "Asset Category": "Equity",
+      "Price": "0.2150891644105341"
+    },
+    {
+      "Name": "LAOPU GOLD CO L-H",
+      "Ticker": "6181 HK",
+      "Identifier": "BS854D3",
+      "Weight": "1.80%",
+      "Market Value": "693,863.51",
+      "Shares Held": "19,500.00",
+      "Asset Category": "Equity",
+      "Price": "35.58274410256411"
+    },
+    {
+      "Name": "CHINA HONGQIAO GROUP LTD",
+      "Ticker": "1378 HK",
+      "Identifier": "B44ZV94",
+      "Weight": "1.80%",
+      "Market Value": "692,783.41",
+      "Shares Held": "302,500.00",
+      "Asset Category": "Equity",
+      "Price": "2.290193090909091"
+    },
+    {
+      "Name": "COMPANHIA PARANAENSE DE ENER",
+      "Ticker": "CPLE3 BZ",
+      "Identifier": "2192831",
+      "Weight": "1.78%",
+      "Market Value": "687,089.80",
+      "Shares Held": "261,600.00",
+      "Asset Category": "Equity",
+      "Price": "2.62649006116208"
+    },
+    {
+      "Name": "PTT EXPLOR & PROD PCL-NVDR",
+      "Ticker": "PTTEP-R TB",
+      "Identifier": "B1359L2",
+      "Weight": "1.77%",
+      "Market Value": "680,333.72",
+      "Shares Held": "161,496.00",
+      "Asset Category": "Equity",
+      "Price": "4.212697032743844"
+    },
+    {
+      "Name": "AMBEV SA",
+      "Ticker": "ABEV3 BZ",
+      "Identifier": "BG7ZWY7",
+      "Weight": "1.75%",
+      "Market Value": "673,721.00",
+      "Shares Held": "243,900.00",
+      "Asset Category": "Equity",
+      "Price": "2.762283722837228"
+    },
+    {
+      "Name": "CPFL ENERGIA SA",
+      "Ticker": "CPFE3 BZ",
+      "Identifier": "B031NN3",
+      "Weight": "1.74%",
+      "Market Value": "671,472.16",
+      "Shares Held": "88,500.00",
+      "Asset Category": "Equity",
+      "Price": "7.587256045197741"
+    },
+    {
+      "Name": "ABSA GROUP LTD",
+      "Ticker": "ABG SJ",
+      "Identifier": "BFX05H3",
+      "Weight": "1.74%",
+      "Market Value": "671,074.74",
+      "Shares Held": "55,607.00",
+      "Asset Category": "Equity",
+      "Price": "12.06817019439999"
+    },
+    {
+      "Name": "COAL INDIA LTD",
+      "Ticker": "COAL IN",
+      "Identifier": "B4Z9XF5",
+      "Weight": "1.73%",
+      "Market Value": "665,314.28",
+      "Shares Held": "160,237.00",
+      "Asset Category": "Equity",
+      "Price": "4.152064005192309"
+    },
+    {
+      "Name": "TIM SA",
+      "Ticker": "TIMS3 BZ",
+      "Identifier": "BN71RB6",
+      "Weight": "1.72%",
+      "Market Value": "663,979.44",
+      "Shares Held": "174,000.00",
+      "Asset Category": "Equity",
+      "Price": "3.815973793103448"
+    },
+    {
+      "Name": "CIA ENERGETICA DE MINAS G",
+      "Ticker": "CMIG4 BZ",
+      "Identifier": "B1YBRG0",
+      "Weight": "1.66%",
+      "Market Value": "640,442.97",
+      "Shares Held": "340,885.00",
+      "Asset Category": "Equity",
+      "Price": "1.878765478093785"
+    },
+    {
+      "Name": "EASTERN CO SAE",
+      "Ticker": "EAST EY",
+      "Identifier": "6298177",
+      "Weight": "1.66%",
+      "Market Value": "638,437.28",
+      "Shares Held": "1,006,925.00",
+      "Asset Category": "Equity",
+      "Price": "0.634046507932567"
+    },
+    {
+      "Name": "PLDT INC",
+      "Ticker": "TEL PM",
+      "Identifier": "BDGN274",
+      "Weight": "1.58%",
+      "Market Value": "607,224.53",
+      "Shares Held": "38,725.00",
+      "Asset Category": "Equity",
+      "Price": "15.68042685603615"
+    },
+    {
+      "Name": "BANCO BRADESCO S.A.",
+      "Ticker": "BBDC3 BZ",
+      "Identifier": "B00FM86",
+      "Weight": "1.47%",
+      "Market Value": "564,769.28",
+      "Shares Held": "254,700.00",
+      "Asset Category": "Equity",
+      "Price": "2.217390184530821"
+    },
+    {
+      "Name": "TELKOM INDONESIA PERSERO TBK",
+      "Ticker": "TLKM IJ",
+      "Identifier": "BD4T6W7",
+      "Weight": "1.33%",
+      "Market Value": "514,230.45",
+      "Shares Held": "4,359,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.1179698210598761"
+    },
+    {
+      "Name": "BRAZILIAN REAL",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.03%",
+      "Market Value": "12,538.91",
+      "Shares Held": "72,947.00",
+      "Asset Category": "Equity",
+      "Price": "0.1718906877596063"
+    },
+    {
       "Name": "MEXICAN PESO",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "0.00%",
-      "Market Value": "360.33",
+      "Market Value": "358.08",
       "Shares Held": "6,682.50",
       "Asset Category": "Equity",
-      "Price": "0.05392143658810325"
+      "Price": "0.05358473625140291"
     },
     {
       "Name": "ALROSA PJSC",
@@ -54,16 +654,6 @@
       "Price": "1.395381287936929e-7"
     },
     {
-      "Name": "INDIA RUPEE",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "0.00",
-      "Shares Held": "0.20",
-      "Asset Category": "Equity",
-      "Price": "0.0"
-    },
-    {
       "Name": "SOUTH AFRICAN RAND",
       "Ticker": "-",
       "Identifier": "",
@@ -84,574 +674,24 @@
       "Price": "0.0"
     },
     {
-      "Name": "COLOMBIAN PESO",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "-105.98",
-      "Shares Held": "-350,932.93",
-      "Asset Category": "Equity",
-      "Price": "0.0003019950279388144"
-    },
-    {
       "Name": "HONG KONG DOLLAR",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "0.00%",
-      "Market Value": "-166.07",
+      "Market Value": "-166.03",
       "Shares Held": "-1,302.76",
       "Asset Category": "Equity",
-      "Price": "0.1274755135251313"
+      "Price": "0.1274448094814087"
     },
     {
       "Name": "CASH",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "-0.01%",
-      "Market Value": "-2,002.36",
-      "Shares Held": "-2,002.36",
+      "Weight": "-1.91%",
+      "Market Value": "-734,302.75",
+      "Shares Held": "-734,302.75",
       "Asset Category": "Cash",
       "Price": "1.0"
-    },
-    {
-      "Name": "SAUDI RIYAL",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.02%",
-      "Market Value": "-9,538.82",
-      "Shares Held": "-35,799.21",
-      "Asset Category": "Equity",
-      "Price": "0.2664533658703642"
-    },
-    {
-      "Name": "NEW RUSSIAN ROUBLE",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.11%",
-      "Market Value": "50,095.14",
-      "Shares Held": "4,136,605.92",
-      "Asset Category": "Equity",
-      "Price": "0.01211020362316747"
-    },
-    {
-      "Name": "MSCI EMER MKTS AS DEC26",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.47%",
-      "Market Value": "204,580.00",
-      "Shares Held": "2.00",
-      "Asset Category": "Future",
-      "Price": "102290.0"
-    },
-    {
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.44%",
-      "Market Value": "191,084.48",
-      "Shares Held": "191,084.48",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "GRUPO CIBEST SA",
-      "Ticker": "PFCIBEST CB",
-      "Identifier": "BTPR2M4",
-      "Weight": "2.74%",
-      "Market Value": "1,201,848.84",
-      "Shares Held": "53,779.00",
-      "Asset Category": "Equity",
-      "Price": "22.34792093568122"
-    },
-    {
-      "Name": "HUANENG POWER INTL INC-H",
-      "Ticker": "902 HK",
-      "Identifier": "6099671",
-      "Weight": "2.59%",
-      "Market Value": "1,136,055.73",
-      "Shares Held": "1,418,000.00",
-      "Asset Category": "Equity",
-      "Price": "0.8011676516220028"
-    },
-    {
-      "Name": "INNER MONGOLIA YITAI COAL-B",
-      "Ticker": "900948 CH",
-      "Identifier": "6019011",
-      "Weight": "2.36%",
-      "Market Value": "1,034,584.20",
-      "Shares Held": "340,100.00",
-      "Asset Category": "Equity",
-      "Price": "3.042"
-    },
-    {
-      "Name": "INNER MONGOLIA JUNZHENG EN-A",
-      "Ticker": "601216 C1",
-      "Identifier": "BP3R7B2",
-      "Weight": "2.35%",
-      "Market Value": "1,027,760.21",
-      "Shares Held": "1,507,600.00",
-      "Asset Category": "Equity",
-      "Price": "0.6817194282302997"
-    },
-    {
-      "Name": "TELEFONICA BRASIL S.A.",
-      "Ticker": "VIVT3 BZ",
-      "Identifier": "B6XFBX3",
-      "Weight": "2.34%",
-      "Market Value": "1,026,456.06",
-      "Shares Held": "170,000.00",
-      "Asset Category": "Equity",
-      "Price": "6.037976823529412"
-    },
-    {
-      "Name": "TRUST FIBRA UNO",
-      "Ticker": "FUNO11 MM",
-      "Identifier": "B671GT8",
-      "Weight": "2.27%",
-      "Market Value": "996,643.33",
-      "Shares Held": "504,600.00",
-      "Asset Category": "Fund",
-      "Price": "1.975115596512089"
-    },
-    {
-      "Name": "ITAUSA SA",
-      "Ticker": "ITSA4 BZ",
-      "Identifier": "2458771",
-      "Weight": "2.25%",
-      "Market Value": "986,163.56",
-      "Shares Held": "407,300.00",
-      "Asset Category": "Equity",
-      "Price": "2.421221605696047"
-    },
-    {
-      "Name": "ITAU UNIBANCO HOLDING SA",
-      "Ticker": "ITUB4 BZ",
-      "Identifier": "B037HR3",
-      "Weight": "2.25%",
-      "Market Value": "985,211.57",
-      "Shares Held": "131,400.00",
-      "Asset Category": "Equity",
-      "Price": "7.497804946727549"
-    },
-    {
-      "Name": "MOL HUNGARIAN OIL AND GAS PL",
-      "Ticker": "MOL HB",
-      "Identifier": "BD5ZXH8",
-      "Weight": "2.24%",
-      "Market Value": "982,291.37",
-      "Shares Held": "65,239.00",
-      "Asset Category": "Equity",
-      "Price": "15.05681218289673"
-    },
-    {
-      "Name": "YANBU NATIONAL PETROCHEMICAL",
-      "Ticker": "YANSAB AB",
-      "Identifier": "B128CF7",
-      "Weight": "2.15%",
-      "Market Value": "941,585.46",
-      "Shares Held": "112,684.00",
-      "Asset Category": "Equity",
-      "Price": "8.355981860778815"
-    },
-    {
-      "Name": "SCB X PCL-NVDR",
-      "Ticker": "SCB-R TB",
-      "Identifier": "BPH0728",
-      "Weight": "2.14%",
-      "Market Value": "938,909.20",
-      "Shares Held": "205,612.00",
-      "Asset Category": "Equity",
-      "Price": "4.566412466198471"
-    },
-    {
-      "Name": "TINGYI (CAYMAN ISLN) HLDG CO",
-      "Ticker": "322 HK",
-      "Identifier": "6903556",
-      "Weight": "2.13%",
-      "Market Value": "934,751.68",
-      "Shares Held": "538,000.00",
-      "Asset Category": "Equity",
-      "Price": "1.737456654275093"
-    },
-    {
-      "Name": "LUZHOU LAOJIAO CO LTD-A",
-      "Ticker": "000568 C2",
-      "Identifier": "BD5CMM7",
-      "Weight": "2.12%",
-      "Market Value": "930,254.86",
-      "Shares Held": "78,000.00",
-      "Asset Category": "Equity",
-      "Price": "11.92634435897436"
-    },
-    {
-      "Name": "POWSZECHNY ZAKLAD UBEZPIECZE",
-      "Ticker": "PZU PW",
-      "Identifier": "B63DG21",
-      "Weight": "2.12%",
-      "Market Value": "930,219.96",
-      "Shares Held": "49,170.00",
-      "Asset Category": "Equity",
-      "Price": "18.91844539353264"
-    },
-    {
-      "Name": "CAIXA SEGURIDADE PARTICIPACO",
-      "Ticker": "CXSE3 BZ",
-      "Identifier": "BMDWWN3",
-      "Weight": "2.12%",
-      "Market Value": "928,581.94",
-      "Shares Held": "245,200.00",
-      "Asset Category": "Equity",
-      "Price": "3.787038907014681"
-    },
-    {
-      "Name": "EMAAR PROPERTIES PJSC",
-      "Ticker": "EMAAR UH",
-      "Identifier": "B01RM25",
-      "Weight": "2.10%",
-      "Market Value": "921,817.70",
-      "Shares Held": "275,275.00",
-      "Asset Category": "Equity",
-      "Price": "3.348715647988375"
-    },
-    {
-      "Name": "BOSIDENG INTL HLDGS LTD",
-      "Ticker": "3998 HK",
-      "Identifier": "B24FZ32",
-      "Weight": "2.10%",
-      "Market Value": "920,547.88",
-      "Shares Held": "1,580,200.00",
-      "Asset Category": "Equity",
-      "Price": "0.5825514998101506"
-    },
-    {
-      "Name": "BANK PEKAO SA",
-      "Ticker": "PEO PW",
-      "Identifier": "5473113",
-      "Weight": "2.07%",
-      "Market Value": "908,157.38",
-      "Shares Held": "13,587.00",
-      "Asset Category": "Equity",
-      "Price": "66.84016927945831"
-    },
-    {
-      "Name": "AIR ARABIA PJSC",
-      "Ticker": "AIRARABI UH",
-      "Identifier": "B23DL40",
-      "Weight": "2.07%",
-      "Market Value": "907,746.78",
-      "Shares Held": "657,633.00",
-      "Asset Category": "Equity",
-      "Price": "1.380324253801132"
-    },
-    {
-      "Name": "CHINA CITIC BANK CORP LTD-H",
-      "Ticker": "998 HK",
-      "Identifier": "B1W0JF2",
-      "Weight": "2.04%",
-      "Market Value": "893,785.20",
-      "Shares Held": "839,206.00",
-      "Asset Category": "Equity",
-      "Price": "1.065036713274214"
-    },
-    {
-      "Name": "EMAAR DEVELOPMENT PJSC",
-      "Ticker": "EMAARDEV UH",
-      "Identifier": "BDG1977",
-      "Weight": "2.01%",
-      "Market Value": "881,707.25",
-      "Shares Held": "220,610.00",
-      "Asset Category": "Equity",
-      "Price": "3.996678527718598"
-    },
-    {
-      "Name": "GREE ELECTRIC APPLIANCES I-A",
-      "Ticker": "000651 C2",
-      "Identifier": "BD5CPN9",
-      "Weight": "2.00%",
-      "Market Value": "878,314.13",
-      "Shares Held": "146,700.00",
-      "Asset Category": "Equity",
-      "Price": "5.987144717109747"
-    },
-    {
-      "Name": "JBS NV-A",
-      "Ticker": "JBS",
-      "Identifier": "BT18HL5",
-      "Weight": "1.97%",
-      "Market Value": "861,888.64",
-      "Shares Held": "70,879.00",
-      "Asset Category": "Equity",
-      "Price": "12.16"
-    },
-    {
-      "Name": "NEPI ROCKCASTLE N.V.",
-      "Ticker": "NRP SJ",
-      "Identifier": "BLF9GQ6",
-      "Weight": "1.97%",
-      "Market Value": "861,277.55",
-      "Shares Held": "99,984.00",
-      "Asset Category": "Equity",
-      "Price": "8.614153764602337"
-    },
-    {
-      "Name": "GRUPO FINANCIERO BANORTE-O",
-      "Ticker": "GFNORTEO MM",
-      "Identifier": "2421041",
-      "Weight": "1.95%",
-      "Market Value": "855,707.83",
-      "Shares Held": "77,210.00",
-      "Asset Category": "Equity",
-      "Price": "11.08286271208393"
-    },
-    {
-      "Name": "ABSA GROUP LTD",
-      "Ticker": "ABG SJ",
-      "Identifier": "BFX05H3",
-      "Weight": "1.92%",
-      "Market Value": "842,892.47",
-      "Shares Held": "62,089.00",
-      "Asset Category": "Equity",
-      "Price": "13.57555235226852"
-    },
-    {
-      "Name": "YUTONG BUS CO LTD-A",
-      "Ticker": "600066 C1",
-      "Identifier": "BP3R5T6",
-      "Weight": "1.92%",
-      "Market Value": "840,034.16",
-      "Shares Held": "179,700.00",
-      "Asset Category": "Equity",
-      "Price": "4.674647523650528"
-    },
-    {
-      "Name": "MBRF GLOBAL FOODS COMPANY SA",
-      "Ticker": "MBRF3 BZ",
-      "Identifier": "BV8H6L2",
-      "Weight": "1.92%",
-      "Market Value": "839,720.45",
-      "Shares Held": "259,400.00",
-      "Asset Category": "Equity",
-      "Price": "3.237164417887432"
-    },
-    {
-      "Name": "BB SEGURIDADE PARTICIPACOES",
-      "Ticker": "BBSE3 BZ",
-      "Identifier": "B9N3SQ0",
-      "Weight": "1.92%",
-      "Market Value": "839,612.96",
-      "Shares Held": "126,800.00",
-      "Asset Category": "Equity",
-      "Price": "6.621553312302839"
-    },
-    {
-      "Name": "CHINA HONGQIAO GROUP LTD",
-      "Ticker": "1378 HK",
-      "Identifier": "B44ZV94",
-      "Weight": "1.91%",
-      "Market Value": "836,350.19",
-      "Shares Held": "337,500.00",
-      "Asset Category": "Equity",
-      "Price": "2.478074637037037"
-    },
-    {
-      "Name": "MOBILE TELECOMMUNICATIONS CO",
-      "Ticker": "ZAIN KK",
-      "Identifier": "6600084",
-      "Weight": "1.91%",
-      "Market Value": "835,168.55",
-      "Shares Held": "451,513.00",
-      "Asset Category": "Equity",
-      "Price": "1.849710971777114"
-    },
-    {
-      "Name": "BANK RAKYAT INDONESIA PERSER",
-      "Ticker": "BBRI IJ",
-      "Identifier": "6709099",
-      "Weight": "1.89%",
-      "Market Value": "829,336.52",
-      "Shares Held": "4,931,300.00",
-      "Asset Category": "Equity",
-      "Price": "0.1681780706912984"
-    },
-    {
-      "Name": "KLABIN SA - UNIT",
-      "Ticker": "KLBN11 BZ",
-      "Identifier": "BJ0K6Z9",
-      "Weight": "1.87%",
-      "Market Value": "819,891.62",
-      "Shares Held": "265,800.00",
-      "Asset Category": "Equity",
-      "Price": "3.084618585402558"
-    },
-    {
-      "Name": "LAOPU GOLD CO L-H",
-      "Ticker": "6181 HK",
-      "Identifier": "BS854D3",
-      "Weight": "1.85%",
-      "Market Value": "812,997.14",
-      "Shares Held": "22,300.00",
-      "Asset Category": "Equity",
-      "Price": "36.45727085201793"
-    },
-    {
-      "Name": "KOMERCNI BANKA AS",
-      "Ticker": "KOMB CP",
-      "Identifier": "4519449",
-      "Weight": "1.85%",
-      "Market Value": "812,256.04",
-      "Shares Held": "17,890.00",
-      "Asset Category": "Equity",
-      "Price": "45.40279709334824"
-    },
-    {
-      "Name": "MONETA MONEY BANK AS",
-      "Ticker": "MONET CP",
-      "Identifier": "BD3CQ16",
-      "Weight": "1.84%",
-      "Market Value": "805,504.50",
-      "Shares Held": "95,552.00",
-      "Asset Category": "Equity",
-      "Price": "8.430011930676491"
-    },
-    {
-      "Name": "COMPANHIA PARANAENSE DE ENER",
-      "Ticker": "CPLE3 BZ",
-      "Identifier": "2192831",
-      "Weight": "1.82%",
-      "Market Value": "797,692.66",
-      "Shares Held": "292,400.00",
-      "Asset Category": "Equity",
-      "Price": "2.72808707250342"
-    },
-    {
-      "Name": "PETROCHINA CO LTD-H",
-      "Ticker": "857 HK",
-      "Identifier": "6226576",
-      "Weight": "1.79%",
-      "Market Value": "785,995.44",
-      "Shares Held": "596,900.00",
-      "Asset Category": "Equity",
-      "Price": "1.316795845200201"
-    },
-    {
-      "Name": "REDE D'OR SAO LUIZ SA",
-      "Ticker": "RDOR3 BZ",
-      "Identifier": "BNDQ8P6",
-      "Weight": "1.79%",
-      "Market Value": "785,322.08",
-      "Shares Held": "126,100.00",
-      "Asset Category": "Equity",
-      "Price": "6.227772244250595"
-    },
-    {
-      "Name": "BANK MANDIRI PERSERO TBK PT",
-      "Ticker": "BMRI IJ",
-      "Identifier": "6651048",
-      "Weight": "1.77%",
-      "Market Value": "776,033.09",
-      "Shares Held": "3,629,800.00",
-      "Asset Category": "Equity",
-      "Price": "0.2137949997245027"
-    },
-    {
-      "Name": "PTT EXPLOR & PROD PCL-NVDR",
-      "Ticker": "PTTEP-R TB",
-      "Identifier": "B1359L2",
-      "Weight": "1.76%",
-      "Market Value": "773,434.18",
-      "Shares Held": "181,096.00",
-      "Asset Category": "Equity",
-      "Price": "4.270851813402836"
-    },
-    {
-      "Name": "CPFL ENERGIA SA",
-      "Ticker": "CPFE3 BZ",
-      "Identifier": "B031NN3",
-      "Weight": "1.75%",
-      "Market Value": "766,676.01",
-      "Shares Held": "98,300.00",
-      "Asset Category": "Equity",
-      "Price": "7.799349033570702"
-    },
-    {
-      "Name": "COAL INDIA LTD",
-      "Ticker": "COAL IN",
-      "Identifier": "B4Z9XF5",
-      "Weight": "1.75%",
-      "Market Value": "765,966.61",
-      "Shares Held": "178,913.00",
-      "Asset Category": "Equity",
-      "Price": "4.281223890941408"
-    },
-    {
-      "Name": "AMBEV SA",
-      "Ticker": "ABEV3 BZ",
-      "Identifier": "BG7ZWY7",
-      "Weight": "1.74%",
-      "Market Value": "761,540.89",
-      "Shares Held": "271,900.00",
-      "Asset Category": "Equity",
-      "Price": "2.800812394262596"
-    },
-    {
-      "Name": "CIA ENERGETICA DE MINAS G",
-      "Ticker": "CMIG4 BZ",
-      "Identifier": "B1YBRG0",
-      "Weight": "1.70%",
-      "Market Value": "743,632.11",
-      "Shares Held": "380,085.00",
-      "Asset Category": "Equity",
-      "Price": "1.956488969572596"
-    },
-    {
-      "Name": "TIM SA",
-      "Ticker": "TIMS3 BZ",
-      "Identifier": "BN71RB6",
-      "Weight": "1.69%",
-      "Market Value": "740,038.85",
-      "Shares Held": "193,600.00",
-      "Asset Category": "Equity",
-      "Price": "3.82251472107438"
-    },
-    {
-      "Name": "EASTERN CO SAE",
-      "Ticker": "EAST EY",
-      "Identifier": "6298177",
-      "Weight": "1.66%",
-      "Market Value": "727,172.72",
-      "Shares Held": "1,124,329.00",
-      "Asset Category": "Equity",
-      "Price": "0.6467615084196885"
-    },
-    {
-      "Name": "PLDT INC",
-      "Ticker": "TEL PM",
-      "Identifier": "BDGN274",
-      "Weight": "1.64%",
-      "Market Value": "718,161.91",
-      "Shares Held": "43,205.00",
-      "Asset Category": "Equity",
-      "Price": "16.62219442194191"
-    },
-    {
-      "Name": "BANCO BRADESCO S.A.",
-      "Ticker": "BBDC3 BZ",
-      "Identifier": "B00FM86",
-      "Weight": "1.55%",
-      "Market Value": "677,286.46",
-      "Shares Held": "284,100.00",
-      "Asset Category": "Equity",
-      "Price": "2.383972052094333"
-    },
-    {
-      "Name": "TELKOM INDONESIA PERSERO TBK",
-      "Ticker": "TLKM IJ",
-      "Identifier": "BD4T6W7",
-      "Weight": "1.32%",
-      "Market Value": "577,804.45",
-      "Shares Held": "4,867,200.00",
-      "Asset Category": "Equity",
-      "Price": "0.1187139320348455"
     }
   ]
 }

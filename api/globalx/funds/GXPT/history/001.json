@@ -2,7 +2,7 @@
   "ticker": "GXPT",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 333,
+  "totalRows": 335,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "30.05",
+      "Adj Close": "30.05",
+      "Volume": "22500"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "29.97",
+      "Adj Close": "29.97",
+      "Volume": "1097600"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "30.41",
-      "Adj Close": "30.41",
-      "Volume": "15993"
+      "Close": "30.22",
+      "Adj Close": "30.22",
+      "Volume": "19500"
     },
     {
       "Date": "2026-11-13",

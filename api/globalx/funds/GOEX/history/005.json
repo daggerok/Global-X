@@ -2,7 +2,7 @@
   "ticker": "GOEX",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4032,
+  "totalRows": 4034,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-12-22",
+      "Close": "143.04",
+      "Adj Close": "73.33",
+      "Volume": "4238"
+    },
+    {
+      "Date": "2010-12-21",
+      "Close": "146.40",
+      "Adj Close": "75.05",
+      "Volume": "4263"
+    },
     {
       "Date": "2010-12-20",
       "Close": "146.08",

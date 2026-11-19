@@ -2,7 +2,7 @@
   "ticker": "SDIV",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 3883,
+  "totalRows": 3885,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-12-03",
+      "Close": "57.66",
+      "Adj Close": "26.10",
+      "Volume": "64767"
+    },
+    {
+      "Date": "2018-11-30",
+      "Close": "57.51",
+      "Adj Close": "26.03",
+      "Volume": "57733"
+    },
     {
       "Date": "2018-11-29",
       "Close": "57.63",
@@ -5997,18 +6009,6 @@
       "Close": "67.26",
       "Adj Close": "23.10",
       "Volume": "201433"
-    },
-    {
-      "Date": "2014-12-12",
-      "Close": "68.22",
-      "Adj Close": "23.43",
-      "Volume": "110033"
-    },
-    {
-      "Date": "2014-12-11",
-      "Close": "69.18",
-      "Adj Close": "23.76",
-      "Volume": "93733"
     }
   ]
 }

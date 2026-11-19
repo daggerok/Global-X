@@ -2,7 +2,7 @@
   "ticker": "NYSX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 163,
+  "totalRows": 165,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "22.69",
+      "Adj Close": "22.69",
+      "Volume": "13800"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "22.53",
+      "Adj Close": "22.53",
+      "Volume": "8500"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "22.93",
-      "Adj Close": "22.93",
-      "Volume": "5195"
+      "Close": "22.78",
+      "Adj Close": "22.78",
+      "Volume": "7600"
     },
     {
       "Date": "2026-11-13",

@@ -1,0 +1,221 @@
+{
+  "ticker": "SHLA",
+  "name": "Asia Defense Tech ETF",
+  "category": "Equity / Thematic",
+  "fundPage": "https://www.globalxetfs.com/funds/shla/",
+  "dataFile": "./funds/SHLA/meta.json",
+  "cusip": "37966B729",
+  "isin": "US37966B7293",
+  "ter": "0.50%",
+  "terValue": 0.5,
+  "terGross": "0.50%",
+  "terGrossValue": 0.5,
+  "nav": {
+    "display": "$24.46",
+    "value": 24.46,
+    "asOfDate": "Nov 18 2026",
+    "dailyChangeText": "$-0.03 (-0.12%)",
+    "kind": "official (fund page Fund Details)"
+  },
+  "navValue": 24.46,
+  "aum": {
+    "display": "$978.25K",
+    "value": 978247.85,
+    "asOfDate": "Nov 18 2026",
+    "source": "Global X ETF lineup \"Net Assets\""
+  },
+  "aumValue": 978247.85,
+  "asOfDate": "Nov 18 2026",
+  "inceptionDate": "Nov 17 2026",
+  "inceptionDateFundPage": "Nov 17 2026",
+  "exchange": "NYSE Arca",
+  "closePrice": "$24.30",
+  "closePriceValue": 24.3,
+  "premiumDiscount": {
+    "display": "-0.62%",
+    "value": -0.6231,
+    "derivedValue": -0.65,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
+  },
+  "premiumDiscountValue": -0.6231,
+  "premiumDiscountDerivedValue": -0.65,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
+  "bidAskSpread": {
+    "display": null,
+    "value": null,
+    "asOfDate": "Nov 18 2026",
+    "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
+  },
+  "bidAskSpreadValue": null,
+  "acquiredFundFeesText": null,
+  "totalNetAssets": 978247.85,
+  "sharesOutstanding": {
+    "display": "40,000",
+    "value": 40000,
+    "asOfDate": "Nov 18 2026"
+  },
+  "netAssetsAsOf": "Nov 18 2026",
+  "secYieldAsOf": "Nov 18 2026",
+  "distributions": {
+    "frequency": "Semi-Annually",
+    "paymentsPerYear": 2,
+    "headers": [
+      "Declaration Date",
+      "Ex-Div Date",
+      "Record Date",
+      "Payable Date",
+      "Amount ($)"
+    ],
+    "rows": [],
+    "fallback": false,
+    "source": "Global X fund page Distribution History table"
+  },
+  "returns": {
+    "derivedFrom": "official Global X fund page performance tables (NAV Performance series)",
+    "monthEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {},
+      "benchmarkName": null,
+      "benchmark": {}
+    },
+    "quarterEnd": {
+      "asOfDate": "",
+      "raw": "",
+      "mo1": null,
+      "mo3": null,
+      "mo6": null,
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "sinceInceptionCumulative": null,
+      "market": {}
+    }
+  },
+  "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "distributionYield": null,
+    "distributionYieldText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "dividendYieldBasis": null,
+    "returnsBasis": "official Global X fund page NAV Performance (monthly series)",
+    "performanceAsOf": null
+  },
+  "distributionFrequency": "06 - Semi-annually",
+  "providerCategory": "Equity / Thematic",
+  "holdings": {
+    "pages": [
+      "./holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 43,
+    "asOfDate": "Nov 18 2026",
+    "asOf": "2026-11-18",
+    "source": "https://assets.globalxetfs.com/funds/holdings/shla_full-holdings_20261118.csv",
+    "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
+  },
+  "history": {
+    "pages": [],
+    "pageSize": 1000,
+    "totalRows": 0,
+    "asOfDate": "",
+    "asOf": "",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/SHLA",
+    "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
+  },
+  "navKind": "official (fund page Fund Details)",
+  "source": {
+    "provider": "Global X Investment Management LLC (Global X ETFs)",
+    "site": "https://www.globalxetfs.com",
+    "lineup": "https://www.globalxetfs.com/explore",
+    "fundPage": "https://www.globalxetfs.com/funds/shla/",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/shla_full-holdings_20261118.csv",
+    "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
+    "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
+    "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SHLA",
+    "returnsSource": "Global X fund page performance tables (NAV Performance)",
+    "distributionsSource": "Global X fund page Distribution History table",
+    "distributionInfoSource": "Global X fund page Distribution Information block",
+    "documentsSource": "Global X fund page Documents table",
+    "registrant": "Global X Funds (Investment Company Act file 811-22209)",
+    "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
+    "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
+  },
+  "identifiers": {
+    "cusip": "37966B729",
+    "isin": "US37966B7293",
+    "underlyingExposure": null,
+    "indexName": null,
+    "benchmarkIndexName": null
+  },
+  "expenseRatio": {
+    "display": "0.50%",
+    "value": 0.5,
+    "gross": 0.5,
+    "managementFeeDisplay": "0.50%",
+    "managementFeeValue": 0.5
+  },
+  "marketPrice": {
+    "display": "$24.30",
+    "value": 24.3,
+    "asOfDate": "Nov 18 2026",
+    "dailyChangeText": "$-0.19 (-0.78%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
+    "distributionRate": null,
+    "distributionRateText": "—",
+    "yield12M": null,
+    "yield12MText": "—",
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "official Global X 30-Day SEC Yield",
+    "distributionAmountText": null,
+    "distributionAmountPercentText": null,
+    "distributionInfoAsOfDate": "Nov 18 2026"
+  },
+  "navIndex": null,
+  "documents": {
+    "prospectus": "https://assets.ctfassets.net/9gigg57dwmx9/3osGJwFUCB5JaZYYu3Ec6Q/06504b18660d5c2867018ddb325f6c6b/Statutory-Prospectus_SHLA.pdf",
+    "summaryProspectus": "https://assets.ctfassets.net/9gigg57dwmx9/7oNv7XTTYIzt9t91wMVVJ4/2a223bb767c846afe6a838210d595a4e/Summary-Prospectus_SHLA.pdf",
+    "sai": "https://assets.ctfassets.net/9gigg57dwmx9/3EZMiAWIQuDos5EMDYOevy/06bddcea2ecf98107b49ea236e4c499d/Statement-of-Additional-Information_SHLA.pdf",
+    "annualReport": null,
+    "semiAnnualReport": null,
+    "fiscalQ1Holdings": null,
+    "fiscalQ3Holdings": null,
+    "taxInfo": null,
+    "form8937": null
+  },
+  "inceptionNote": null
+}

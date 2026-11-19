@@ -2,7 +2,7 @@
   "ticker": "COLO",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 4471,
+  "totalRows": 4473,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-12",
+      "Close": "47.92",
+      "Adj Close": "28.55",
+      "Volume": "30100"
+    },
+    {
+      "Date": "2014-12-11",
+      "Close": "48.92",
+      "Adj Close": "29.14",
+      "Volume": "39200"
+    },
     {
       "Date": "2014-12-10",
       "Close": "50.28",
@@ -5997,18 +6009,6 @@
       "Close": "84.82",
       "Adj Close": "46.51",
       "Volume": "15450"
-    },
-    {
-      "Date": "2010-12-22",
-      "Close": "85.04",
-      "Adj Close": "46.63",
-      "Volume": "16350"
-    },
-    {
-      "Date": "2010-12-21",
-      "Close": "83.62",
-      "Adj Close": "45.85",
-      "Volume": "17850"
     }
   ]
 }

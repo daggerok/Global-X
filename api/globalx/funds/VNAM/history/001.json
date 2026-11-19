@@ -2,7 +2,7 @@
   "ticker": "VNAM",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1238,
+  "totalRows": 1240,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "23.97",
+      "Adj Close": "23.97",
+      "Volume": "4700"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "24.11",
+      "Adj Close": "24.11",
+      "Volume": "3900"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "24.20",
-      "Adj Close": "24.20",
-      "Volume": "819"
+      "Close": "24.22",
+      "Adj Close": "24.22",
+      "Volume": "1900"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "13.28",
       "Adj Close": "12.90",
       "Volume": "300"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "13.44",
-      "Adj Close": "13.05",
-      "Volume": "3300"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "13.69",
-      "Adj Close": "13.29",
-      "Volume": "34400"
     }
   ]
 }

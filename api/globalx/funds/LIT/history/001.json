@@ -2,7 +2,7 @@
   "ticker": "LIT",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 4105,
+  "totalRows": 4107,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "55.57",
+      "Adj Close": "55.57",
+      "Volume": "146300"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "56.42",
+      "Adj Close": "56.42",
+      "Volume": "205500"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "57.37",
-      "Adj Close": "57.37",
-      "Volume": "116848"
+      "Close": "56.84",
+      "Adj Close": "56.84",
+      "Volume": "206400"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "68.19",
       "Adj Close": "65.57",
       "Volume": "306400"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "67.00",
-      "Adj Close": "64.42",
-      "Volume": "691500"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "67.28",
-      "Adj Close": "64.69",
-      "Volume": "465600"
     }
   ]
 }

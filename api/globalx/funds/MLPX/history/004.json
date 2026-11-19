@@ -2,7 +2,7 @@
   "ticker": "MLPX",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3340,
+  "totalRows": 3342,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-12",
+      "Close": "51.93",
+      "Adj Close": "27.19",
+      "Volume": "35400"
+    },
+    {
+      "Date": "2014-12-11",
+      "Close": "52.68",
+      "Adj Close": "27.58",
+      "Volume": "34500"
+    },
     {
       "Date": "2014-12-10",
       "Close": "52.44",

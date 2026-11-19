@@ -2,7 +2,7 @@
   "ticker": "GXPE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 333,
+  "totalRows": 335,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "36.06",
+      "Adj Close": "36.06",
+      "Volume": "3600"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "37.24",
+      "Adj Close": "37.24",
+      "Volume": "400"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "38.12",
-      "Adj Close": "38.12",
-      "Volume": "341"
+      "Close": "37.47",
+      "Adj Close": "37.47",
+      "Volume": "500"
     },
     {
       "Date": "2026-11-13",

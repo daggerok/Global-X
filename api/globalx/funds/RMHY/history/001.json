@@ -2,7 +2,7 @@
   "ticker": "RMHY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 102,
+  "totalRows": 104,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "24.05",
+      "Adj Close": "24.05",
+      "Volume": "4900"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "24.05",
+      "Adj Close": "24.05",
+      "Volume": "14700"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "24.16",
-      "Adj Close": "24.16",
-      "Volume": "1328"
+      "Close": "24.11",
+      "Adj Close": "24.11",
+      "Volume": "9300"
     },
     {
       "Date": "2026-11-13",

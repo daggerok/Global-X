@@ -2,7 +2,7 @@
   "ticker": "ASEA",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3960,
+  "totalRows": 3962,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-12",
+      "Close": "15.94",
+      "Adj Close": "10.81",
+      "Volume": "3600"
+    },
+    {
+      "Date": "2014-12-11",
+      "Close": "16.09",
+      "Adj Close": "10.91",
+      "Volume": "11800"
+    },
     {
       "Date": "2014-12-10",
       "Close": "16.15",

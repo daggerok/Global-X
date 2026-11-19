@@ -2,7 +2,7 @@
   "ticker": "CLOU",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1908,
+  "totalRows": 1910,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "25.48",
+      "Adj Close": "25.48",
+      "Volume": "235600"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "25.15",
+      "Adj Close": "25.15",
+      "Volume": "291800"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "26.22",
-      "Adj Close": "26.22",
-      "Volume": "277237"
+      "Close": "26.00",
+      "Adj Close": "26.00",
+      "Volume": "482400"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "16.16",
       "Adj Close": "16.16",
       "Volume": "536400"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "15.64",
-      "Adj Close": "15.64",
-      "Volume": "260800"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "15.60",
-      "Adj Close": "15.60",
-      "Volume": "249300"
     }
   ]
 }

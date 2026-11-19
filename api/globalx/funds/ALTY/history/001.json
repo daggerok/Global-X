@@ -2,7 +2,7 @@
   "ticker": "ALTY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2854,
+  "totalRows": 2856,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "11.39",
+      "Adj Close": "11.39",
+      "Volume": "11400"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "11.39",
+      "Adj Close": "11.39",
+      "Volume": "14900"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "11.52",
-      "Adj Close": "11.52",
-      "Volume": "6243"
+      "Close": "11.47",
+      "Adj Close": "11.47",
+      "Volume": "7700"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "11.28",
       "Adj Close": "8.31",
       "Volume": "9800"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "11.26",
-      "Adj Close": "8.30",
-      "Volume": "9400"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "11.18",
-      "Adj Close": "8.24",
-      "Volume": "14500"
     }
   ]
 }

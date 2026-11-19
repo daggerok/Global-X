@@ -2,7 +2,7 @@
   "ticker": "DRIV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2159,
+  "totalRows": 2161,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "26.82",
+      "Adj Close": "26.82",
+      "Volume": "20700"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "27.00",
+      "Adj Close": "27.00",
+      "Volume": "29900"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "27.66",
-      "Adj Close": "27.66",
-      "Volume": "26455"
+      "Close": "27.35",
+      "Adj Close": "27.35",
+      "Volume": "39900"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "22.72",
       "Adj Close": "21.46",
       "Volume": "90100"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "22.48",
-      "Adj Close": "21.23",
-      "Volume": "90700"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "22.19",
-      "Adj Close": "20.96",
-      "Volume": "81700"
     }
   ]
 }

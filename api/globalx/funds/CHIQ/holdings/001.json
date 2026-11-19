@@ -2,7 +2,7 @@
   "ticker": "CHIQ",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 54,
+  "totalRows": 55,
   "headers": [
     "Name",
     "Ticker",
@@ -14,12 +14,202 @@
   ],
   "rows": [
     {
+      "Name": "MSCI CHINA FUTURE DEC26",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.05%",
+      "Market Value": "53,510.00",
+      "Shares Held": "2.00",
+      "Asset Category": "Future",
+      "Price": "26755.0"
+    },
+    {
+      "Name": "CHINESE YUAN RENMINBI",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "-0.01%",
+      "Market Value": "-11,828.89",
+      "Shares Held": "-78,877.43",
+      "Asset Category": "Equity",
+      "Price": "0.149965459067315"
+    },
+    {
+      "Name": "FUYAO GLASS INDUSTRY GROUP-A",
+      "Ticker": "600660 C1",
+      "Identifier": "BP3R6K4",
+      "Weight": "0.76%",
+      "Market Value": "751,602.35",
+      "Shares Held": "86,114.00",
+      "Asset Category": "Equity",
+      "Price": "8.72799254476624"
+    },
+    {
+      "Name": "GREE ELECTRIC APPLIANCES I-A",
+      "Ticker": "000651 C2",
+      "Identifier": "BD5CPN9",
+      "Weight": "0.74%",
+      "Market Value": "733,942.44",
+      "Shares Held": "120,100.00",
+      "Asset Category": "Equity",
+      "Price": "6.11109442131557"
+    },
+    {
+      "Name": "CHINA TOURISM GROUP DUTY F-A",
+      "Ticker": "601888 C1",
+      "Identifier": "BP3R466",
+      "Weight": "0.66%",
+      "Market Value": "645,846.71",
+      "Shares Held": "83,950.00",
+      "Asset Category": "Equity",
+      "Price": "7.693230613460392"
+    },
+    {
+      "Name": "SAIC MOTOR CORP LTD-A",
+      "Ticker": "600104 C1",
+      "Identifier": "BP3R2D9",
+      "Weight": "0.62%",
+      "Market Value": "609,462.22",
+      "Shares Held": "393,800.00",
+      "Asset Category": "Equity",
+      "Price": "1.547644032503809"
+    },
+    {
+      "Name": "NINGBO TUOPU GROUP CO LTD-A",
+      "Ticker": "601689 C1",
+      "Identifier": "BYQDMF9",
+      "Weight": "0.55%",
+      "Market Value": "537,830.29",
+      "Shares Held": "74,545.00",
+      "Asset Category": "Equity",
+      "Price": "7.214840566101013"
+    },
+    {
+      "Name": "ZHEJIANG CHINA COMMODITIES-A",
+      "Ticker": "600415 C1",
+      "Identifier": "BP3R789",
+      "Weight": "0.44%",
+      "Market Value": "436,832.88",
+      "Shares Held": "235,100.00",
+      "Asset Category": "Equity",
+      "Price": "1.858072649936197"
+    },
+    {
+      "Name": "SERES GROUP CO L-A",
+      "Ticker": "601127 C1",
+      "Identifier": "BYV1VC8",
+      "Weight": "0.43%",
+      "Market Value": "427,251.73",
+      "Shares Held": "70,000.00",
+      "Asset Category": "Equity",
+      "Price": "6.103596142857143"
+    },
+    {
+      "Name": "CHONGQING CHANGAN AUTOMOB-A",
+      "Ticker": "000625 C2",
+      "Identifier": "BD5CP62",
+      "Weight": "0.37%",
+      "Market Value": "367,466.67",
+      "Shares Held": "354,608.00",
+      "Asset Category": "Equity",
+      "Price": "1.036261646663358"
+    },
+    {
+      "Name": "HUAYU AUTOMOTIVE SYSTEMS -A",
+      "Ticker": "600741 C1",
+      "Identifier": "BP3R4T9",
+      "Weight": "0.34%",
+      "Market Value": "338,297.59",
+      "Shares Held": "135,080.00",
+      "Asset Category": "Equity",
+      "Price": "2.50442397098016"
+    },
+    {
+      "Name": "HUIZHOU DESAY SV AUTOMOTIV-A",
+      "Ticker": "002920 C2",
+      "Identifier": "BFY8GX9",
+      "Weight": "0.31%",
+      "Market Value": "309,198.88",
+      "Shares Held": "26,000.00",
+      "Asset Category": "Equity",
+      "Price": "11.89226461538462"
+    },
+    {
+      "Name": "SHENZHEN KEDALI INDUSTRY C-A",
+      "Ticker": "002850 C2",
+      "Identifier": "BFCCQM2",
+      "Weight": "0.30%",
+      "Market Value": "292,226.54",
+      "Shares Held": "12,500.00",
+      "Asset Category": "Equity",
+      "Price": "23.3781232"
+    },
+    {
+      "Name": "ANHUI JIANGHUAI AUTO GROUP-A",
+      "Ticker": "600418 C1",
+      "Identifier": "BP3R1R6",
+      "Weight": "0.27%",
+      "Market Value": "265,975.23",
+      "Shares Held": "96,600.00",
+      "Asset Category": "Equity",
+      "Price": "2.753366770186335"
+    },
+    {
+      "Name": "SAILUN GROUP CO LTD-A",
+      "Ticker": "601058 C1",
+      "Identifier": "BP3RFY1",
+      "Weight": "0.27%",
+      "Market Value": "260,844.01",
+      "Shares Held": "140,953.00",
+      "Asset Category": "Equity",
+      "Price": "1.850574375855782"
+    },
+    {
+      "Name": "WANXIANG QIANCHAO CO LTD-A",
+      "Ticker": "000559 C2",
+      "Identifier": "BD5CNG8",
+      "Weight": "0.23%",
+      "Market Value": "226,899.01",
+      "Shares Held": "142,200.00",
+      "Asset Category": "Equity",
+      "Price": "1.595632981715893"
+    },
+    {
+      "Name": "CASH",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.20%",
+      "Market Value": "198,865.93",
+      "Shares Held": "198,865.93",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "CHONGQING AFARI TECHNOLOGY-A",
+      "Ticker": "601777 C1",
+      "Identifier": "BP3RDF8",
+      "Weight": "0.18%",
+      "Market Value": "180,203.80",
+      "Shares Held": "193,500.00",
+      "Asset Category": "Equity",
+      "Price": "0.931285788113695"
+    },
+    {
+      "Name": "ECOVACS ROBOTICS CO LTD-A",
+      "Ticker": "603486 C1",
+      "Identifier": "BDFWW61",
+      "Weight": "0.18%",
+      "Market Value": "177,024.91",
+      "Shares Held": "25,250.00",
+      "Asset Category": "Equity",
+      "Price": "7.010887524752476"
+    },
+    {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "0.04%",
-      "Market Value": "37,274.95",
-      "Shares Held": "37,274.95",
+      "Weight": "0.18%",
+      "Market Value": "175,200.36",
+      "Shares Held": "175,200.36",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
@@ -27,531 +217,351 @@
       "Name": "SICHUAN CHANGHONG ELECTRIC-A",
       "Ticker": "600839 C1",
       "Identifier": "BP3R6X7",
-      "Weight": "0.15%",
-      "Market Value": "149,290.26",
+      "Weight": "0.17%",
+      "Market Value": "168,401.67",
       "Shares Held": "197,700.00",
       "Asset Category": "Equity",
-      "Price": "0.7551353566009105"
-    },
-    {
-      "Name": "MSCI CHINA FUTURE DEC26",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.06%",
-      "Market Value": "55,270.00",
-      "Shares Held": "2.00",
-      "Asset Category": "Future",
-      "Price": "27635.0"
-    },
-    {
-      "Name": "FUYAO GLASS INDUSTRY GROUP-A",
-      "Ticker": "600660 C1",
-      "Identifier": "BP3R6K4",
-      "Weight": "0.74%",
-      "Market Value": "733,626.30",
-      "Shares Held": "86,114.00",
-      "Asset Category": "Equity",
-      "Price": "8.519245418863367"
-    },
-    {
-      "Name": "GREE ELECTRIC APPLIANCES I-A",
-      "Ticker": "000651 C2",
-      "Identifier": "BD5CPN9",
-      "Weight": "0.73%",
-      "Market Value": "716,661.22",
-      "Shares Held": "119,700.00",
-      "Asset Category": "Equity",
-      "Price": "5.98714469507101"
-    },
-    {
-      "Name": "CHINA TOURISM GROUP DUTY F-A",
-      "Ticker": "601888 C1",
-      "Identifier": "BP3R466",
-      "Weight": "0.66%",
-      "Market Value": "651,545.48",
-      "Shares Held": "83,950.00",
-      "Asset Category": "Equity",
-      "Price": "7.761113519952352"
-    },
-    {
-      "Name": "SAIC MOTOR CORP LTD-A",
-      "Ticker": "600104 C1",
-      "Identifier": "BP3R2D9",
-      "Weight": "0.60%",
-      "Market Value": "590,024.42",
-      "Shares Held": "393,800.00",
-      "Asset Category": "Equity",
-      "Price": "1.498284459116303"
-    },
-    {
-      "Name": "NINGBO TUOPU GROUP CO LTD-A",
-      "Ticker": "601689 C1",
-      "Identifier": "BYQDMF9",
-      "Weight": "0.57%",
-      "Market Value": "561,575.39",
-      "Shares Held": "74,545.00",
-      "Asset Category": "Equity",
-      "Price": "7.5333743376484"
-    },
-    {
-      "Name": "SERES GROUP CO L-A",
-      "Ticker": "601127 C1",
-      "Identifier": "BYV1VC8",
-      "Weight": "0.45%",
-      "Market Value": "441,754.19",
-      "Shares Held": "70,000.00",
-      "Asset Category": "Equity",
-      "Price": "6.310774142857143"
-    },
-    {
-      "Name": "ZHEJIANG CHINA COMMODITIES-A",
-      "Ticker": "600415 C1",
-      "Identifier": "BP3R789",
-      "Weight": "0.43%",
-      "Market Value": "427,576.52",
-      "Shares Held": "234,300.00",
-      "Asset Category": "Equity",
-      "Price": "1.824910456679471"
-    },
-    {
-      "Name": "CHONGQING CHANGAN AUTOMOB-A",
-      "Ticker": "000625 C2",
-      "Identifier": "BD5CP62",
-      "Weight": "0.37%",
-      "Market Value": "364,299.93",
-      "Shares Held": "353,408.00",
-      "Asset Category": "Equity",
-      "Price": "1.030819704137993"
-    },
-    {
-      "Name": "HUAYU AUTOMOTIVE SYSTEMS -A",
-      "Ticker": "600741 C1",
-      "Identifier": "BP3R4T9",
-      "Weight": "0.34%",
-      "Market Value": "335,964.52",
-      "Shares Held": "135,080.00",
-      "Asset Category": "Equity",
-      "Price": "2.487152206100089"
-    },
-    {
-      "Name": "HUIZHOU DESAY SV AUTOMOTIV-A",
-      "Ticker": "002920 C2",
-      "Identifier": "BFY8GX9",
-      "Weight": "0.32%",
-      "Market Value": "319,395.29",
-      "Shares Held": "26,000.00",
-      "Asset Category": "Equity",
-      "Price": "12.28443423076923"
-    },
-    {
-      "Name": "SHENZHEN KEDALI INDUSTRY C-A",
-      "Ticker": "002850 C2",
-      "Identifier": "BFCCQM2",
-      "Weight": "0.31%",
-      "Market Value": "309,957.60",
-      "Shares Held": "12,500.00",
-      "Asset Category": "Equity",
-      "Price": "24.796608"
-    },
-    {
-      "Name": "ANHUI JIANGHUAI AUTO GROUP-A",
-      "Ticker": "600418 C1",
-      "Identifier": "BP3R1R6",
-      "Weight": "0.28%",
-      "Market Value": "277,456.66",
-      "Shares Held": "95,900.00",
-      "Asset Category": "Equity",
-      "Price": "2.893187278415015"
-    },
-    {
-      "Name": "WANXIANG QIANCHAO CO LTD-A",
-      "Ticker": "000559 C2",
-      "Identifier": "BD5CNG8",
-      "Weight": "0.27%",
-      "Market Value": "264,615.62",
-      "Shares Held": "142,200.00",
-      "Asset Category": "Equity",
-      "Price": "1.860869338959212"
-    },
-    {
-      "Name": "SAILUN GROUP CO LTD-A",
-      "Ticker": "601058 C1",
-      "Identifier": "BP3RFY1",
-      "Weight": "0.26%",
-      "Market Value": "258,704.92",
-      "Shares Held": "140,953.00",
-      "Asset Category": "Equity",
-      "Price": "1.835398466155385"
-    },
-    {
-      "Name": "CHONGQING AFARI TECHNOLOGY-A",
-      "Ticker": "601777 C1",
-      "Identifier": "BP3RDF8",
-      "Weight": "0.21%",
-      "Market Value": "203,232.55",
-      "Shares Held": "193,500.00",
-      "Asset Category": "Equity",
-      "Price": "1.050297416020672"
-    },
-    {
-      "Name": "CASH",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.20%",
-      "Market Value": "199,322.04",
-      "Shares Held": "199,322.04",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "ECOVACS ROBOTICS CO LTD-A",
-      "Ticker": "603486 C1",
-      "Identifier": "BDFWW61",
-      "Weight": "0.18%",
-      "Market Value": "173,647.42",
-      "Shares Held": "25,250.00",
-      "Asset Category": "Equity",
-      "Price": "6.877125544554456"
+      "Price": "0.8518040971168438"
     },
     {
       "Name": "PDD HOLDINGS INC",
       "Ticker": "PDD",
       "Identifier": "BYVW0F7",
-      "Weight": "8.73%",
-      "Market Value": "8,626,919.71",
-      "Shares Held": "109,243.00",
+      "Weight": "8.61%",
+      "Market Value": "8,480,465.20",
+      "Shares Held": "109,496.00",
       "Asset Category": "Equity",
-      "Price": "78.97000000000001"
+      "Price": "77.44999999999999"
     },
     {
       "Name": "MEITUAN-CLASS B",
       "Ticker": "3690 HK",
       "Identifier": "BGJW376",
-      "Weight": "8.20%",
-      "Market Value": "8,100,387.52",
-      "Shares Held": "910,400.00",
+      "Weight": "8.28%",
+      "Market Value": "8,161,592.43",
+      "Shares Held": "912,900.00",
       "Asset Category": "Equity",
-      "Price": "8.897613708260105"
+      "Price": "8.94029185014788"
     },
     {
       "Name": "ALIBABA GROUP HOLDING LTD",
       "Ticker": "9988 HK",
       "Identifier": "BK6YZP5",
-      "Weight": "7.46%",
-      "Market Value": "7,372,954.80",
-      "Shares Held": "638,756.00",
+      "Weight": "7.05%",
+      "Market Value": "6,951,854.20",
+      "Shares Held": "639,856.00",
       "Asset Category": "Equity",
-      "Price": "11.54267795527557"
+      "Price": "10.86471674876847"
     },
     {
       "Name": "JD.COM INC-CLASS A",
       "Ticker": "9618 HK",
       "Identifier": "BKPQZT6",
-      "Weight": "6.80%",
-      "Market Value": "6,715,515.76",
-      "Shares Held": "492,354.00",
+      "Weight": "6.23%",
+      "Market Value": "6,142,921.12",
+      "Shares Held": "493,604.00",
       "Asset Category": "Equity",
-      "Price": "13.63960841183376"
+      "Price": "12.44503918120599"
     },
     {
       "Name": "BYD CO LTD-H",
       "Ticker": "1211 HK",
       "Identifier": "6536651",
-      "Weight": "6.11%",
-      "Market Value": "6,033,181.22",
-      "Shares Held": "728,140.00",
+      "Weight": "6.05%",
+      "Market Value": "5,960,041.67",
+      "Shares Held": "730,140.00",
       "Asset Category": "Equity",
-      "Price": "8.28574342846156"
+      "Price": "8.16287516092804"
     },
     {
       "Name": "TRIP.COM GROUP LTD",
       "Ticker": "9961 HK",
       "Identifier": "BNYK8H9",
-      "Weight": "4.87%",
-      "Market Value": "4,808,713.03",
-      "Shares Held": "112,272.00",
+      "Weight": "4.96%",
+      "Market Value": "4,892,319.99",
+      "Shares Held": "112,772.00",
       "Asset Category": "Equity",
-      "Price": "42.83091981972353"
+      "Price": "43.38239979782216"
     },
     {
       "Name": "YUM CHINA HOLDINGS INC",
       "Ticker": "9987 HK",
       "Identifier": "BN2BD13",
-      "Weight": "4.24%",
-      "Market Value": "4,185,725.07",
+      "Weight": "4.45%",
+      "Market Value": "4,381,623.60",
       "Shares Held": "84,848.00",
       "Asset Category": "Equity",
-      "Price": "49.33204165095229"
+      "Price": "51.64085894776541"
     },
     {
       "Name": "ANTA SPORTS PRODUCTS LTD",
       "Ticker": "2020 HK",
       "Identifier": "B1YVKN8",
-      "Weight": "3.26%",
-      "Market Value": "3,218,489.14",
-      "Shares Held": "319,196.00",
+      "Weight": "3.40%",
+      "Market Value": "3,346,109.93",
+      "Shares Held": "319,796.00",
       "Asset Category": "Equity",
-      "Price": "10.08311238236068"
+      "Price": "10.463263861962"
     },
     {
       "Name": "H WORLD GROUP LIMITED",
       "Ticker": "HTHT",
       "Identifier": "BFMFKK7",
-      "Weight": "2.95%",
-      "Market Value": "2,911,483.81",
-      "Shares Held": "57,779.00",
+      "Weight": "3.08%",
+      "Market Value": "3,039,221.76",
+      "Shares Held": "57,912.00",
       "Asset Category": "Equity",
-      "Price": "50.39"
+      "Price": "52.48"
     },
     {
       "Name": "GEELY AUTOMOBILE HOLDINGS LT",
       "Ticker": "175 HK",
       "Identifier": "6531827",
-      "Weight": "2.93%",
-      "Market Value": "2,894,890.25",
-      "Shares Held": "1,693,500.00",
+      "Weight": "2.98%",
+      "Market Value": "2,940,470.27",
+      "Shares Held": "1,696,500.00",
       "Asset Category": "Equity",
-      "Price": "1.709412607026867"
+      "Price": "1.733256864132037"
     },
     {
       "Name": "POP MART INTERNATIONAL GROUP",
       "Ticker": "9992 HK",
       "Identifier": "BN6PP37",
-      "Weight": "2.42%",
-      "Market Value": "2,387,413.32",
-      "Shares Held": "131,800.00",
+      "Weight": "2.46%",
+      "Market Value": "2,425,845.92",
+      "Shares Held": "132,000.00",
       "Asset Category": "Equity",
-      "Price": "18.11390986342944"
+      "Price": "18.37762060606061"
     },
     {
       "Name": "NEW ORIENTAL EDUCATION & TEC",
       "Ticker": "9901 HK",
       "Identifier": "BN4MKV3",
-      "Weight": "2.32%",
-      "Market Value": "2,290,054.00",
-      "Shares Held": "445,340.00",
+      "Weight": "2.42%",
+      "Market Value": "2,382,369.97",
+      "Shares Held": "446,140.00",
       "Asset Category": "Equity",
-      "Price": "5.142259846409485"
+      "Price": "5.339960483256378"
     },
     {
       "Name": "MIDEA GROUP CO LTD-H",
       "Ticker": "300 HK",
       "Identifier": "BQB7ZL7",
-      "Weight": "2.19%",
-      "Market Value": "2,161,564.35",
-      "Shares Held": "166,900.00",
+      "Weight": "2.23%",
+      "Market Value": "2,192,827.38",
+      "Shares Held": "167,700.00",
       "Asset Category": "Equity",
-      "Price": "12.95125434391852"
+      "Price": "13.07589373881932"
     },
     {
       "Name": "HAIER SMART HOME CO LTD-H",
       "Ticker": "6690 HK",
       "Identifier": "BLD4QD0",
-      "Weight": "2.06%",
-      "Market Value": "2,039,145.32",
-      "Shares Held": "764,660.00",
+      "Weight": "2.16%",
+      "Market Value": "2,132,256.47",
+      "Shares Held": "766,060.00",
       "Asset Category": "Equity",
-      "Price": "2.666734653309968"
+      "Price": "2.78340661305903"
     },
     {
       "Name": "LI AUTO INC-CLASS A",
       "Ticker": "2015 HK",
       "Identifier": "BMW5M00",
-      "Weight": "1.97%",
-      "Market Value": "1,947,330.04",
-      "Shares Held": "343,136.00",
+      "Weight": "2.03%",
+      "Market Value": "1,999,639.26",
+      "Shares Held": "344,536.00",
       "Asset Category": "Equity",
-      "Price": "5.675096871211415"
+      "Price": "5.803861599368426"
     },
     {
       "Name": "MIDEA GROUP CO LTD-A",
       "Ticker": "000333 C2",
       "Identifier": "BD5CPP1",
-      "Weight": "1.95%",
-      "Market Value": "1,926,509.15",
+      "Weight": "2.02%",
+      "Market Value": "1,994,286.31",
       "Shares Held": "142,000.00",
       "Asset Category": "Equity",
-      "Price": "13.56696584507042"
-    },
-    {
-      "Name": "FUYAO GLASS INDUSTRY GROUP-H",
-      "Ticker": "3606 HK",
-      "Identifier": "BWGCFG4",
-      "Weight": "1.83%",
-      "Market Value": "1,803,538.65",
-      "Shares Held": "260,800.00",
-      "Asset Category": "Equity",
-      "Price": "6.915408934049079"
-    },
-    {
-      "Name": "TAL EDUCATION GROUP- ADR",
-      "Ticker": "TAL",
-      "Identifier": "B4MGD82",
-      "Weight": "1.74%",
-      "Market Value": "1,716,924.48",
-      "Shares Held": "167,016.00",
-      "Asset Category": "Equity",
-      "Price": "10.28"
-    },
-    {
-      "Name": "BOSIDENG INTL HLDGS LTD",
-      "Ticker": "3998 HK",
-      "Identifier": "B24FZ32",
-      "Weight": "1.70%",
-      "Market Value": "1,679,554.23",
-      "Shares Held": "2,883,100.00",
-      "Asset Category": "Equity",
-      "Price": "0.5825515001213971"
+      "Price": "14.04426978873239"
     },
     {
       "Name": "XPENG INC - CLASS A SHARES",
       "Ticker": "9868 HK",
       "Identifier": "BP6FB33",
-      "Weight": "1.70%",
-      "Market Value": "1,675,418.84",
-      "Shares Held": "363,276.00",
+      "Weight": "1.86%",
+      "Market Value": "1,835,655.78",
+      "Shares Held": "364,276.00",
       "Asset Category": "Equity",
-      "Price": "4.611972274524054"
+      "Price": "5.039189460738561"
     },
     {
-      "Name": "VIPSHOP HOLDINGS LTD - ADR",
-      "Ticker": "VIPS",
-      "Identifier": "B3N0H17",
-      "Weight": "1.69%",
-      "Market Value": "1,669,871.58",
-      "Shares Held": "125,933.00",
+      "Name": "FUYAO GLASS INDUSTRY GROUP-H",
+      "Ticker": "3606 HK",
+      "Identifier": "BWGCFG4",
+      "Weight": "1.84%",
+      "Market Value": "1,810,906.77",
+      "Shares Held": "261,200.00",
       "Asset Category": "Equity",
-      "Price": "13.26"
+      "Price": "6.933027450229709"
     },
     {
-      "Name": "LI NING CO LTD",
-      "Ticker": "2331 HK",
-      "Identifier": "B01JCK9",
-      "Weight": "1.69%",
-      "Market Value": "1,665,522.38",
-      "Shares Held": "867,000.00",
+      "Name": "TAL EDUCATION GROUP- ADR",
+      "Ticker": "TAL",
+      "Identifier": "B4MGD82",
+      "Weight": "1.73%",
+      "Market Value": "1,702,590.21",
+      "Shares Held": "167,413.00",
       "Asset Category": "Equity",
-      "Price": "1.921017739331026"
+      "Price": "10.17"
+    },
+    {
+      "Name": "BOSIDENG INTL HLDGS LTD",
+      "Ticker": "3998 HK",
+      "Identifier": "B24FZ32",
+      "Weight": "1.71%",
+      "Market Value": "1,683,849.74",
+      "Shares Held": "2,891,100.00",
+      "Asset Category": "Equity",
+      "Price": "0.5824252844937913"
     },
     {
       "Name": "SHENZHOU INTERNATIONAL GROUP",
       "Ticker": "2313 HK",
       "Identifier": "B0MP1B0",
-      "Weight": "1.66%",
-      "Market Value": "1,642,651.22",
-      "Shares Held": "303,492.00",
+      "Weight": "1.67%",
+      "Market Value": "1,646,389.66",
+      "Shares Held": "304,392.00",
       "Asset Category": "Equity",
-      "Price": "5.412502537134422"
+      "Price": "5.408780979789219"
+    },
+    {
+      "Name": "VIPSHOP HOLDINGS LTD - ADR",
+      "Ticker": "VIPS",
+      "Identifier": "B3N0H17",
+      "Weight": "1.65%",
+      "Market Value": "1,620,741.84",
+      "Shares Held": "126,226.00",
+      "Asset Category": "Equity",
+      "Price": "12.84"
     },
     {
       "Name": "NIO INC-CLASS A",
       "Ticker": "9866 HK",
       "Identifier": "BPR9XV6",
-      "Weight": "1.66%",
-      "Market Value": "1,638,654.50",
-      "Shares Held": "551,240.00",
+      "Weight": "1.62%",
+      "Market Value": "1,600,230.42",
+      "Shares Held": "552,650.00",
       "Asset Category": "Equity",
-      "Price": "2.972669798998621"
+      "Price": "2.895558527096716"
     },
     {
       "Name": "CHOW TAI FOOK JEWELLERY GROU",
       "Ticker": "1929 HK",
       "Identifier": "B4R39F7",
-      "Weight": "1.59%",
-      "Market Value": "1,573,877.22",
-      "Shares Held": "1,042,800.00",
+      "Weight": "1.57%",
+      "Market Value": "1,542,819.35",
+      "Shares Held": "1,045,400.00",
       "Asset Category": "Equity",
-      "Price": "1.50928003452244"
+      "Price": "1.475817246986799"
     },
     {
       "Name": "BYD CO LTD -A",
       "Ticker": "002594 C2",
       "Identifier": "BD5CQ69",
-      "Weight": "1.47%",
-      "Market Value": "1,455,503.28",
-      "Shares Held": "121,446.00",
+      "Weight": "1.49%",
+      "Market Value": "1,463,354.71",
+      "Shares Held": "121,746.00",
       "Asset Category": "Equity",
-      "Price": "11.98477743194506"
+      "Price": "12.01973543278629"
+    },
+    {
+      "Name": "LI NING CO LTD",
+      "Ticker": "2331 HK",
+      "Identifier": "B01JCK9",
+      "Weight": "1.39%",
+      "Market Value": "1,364,440.20",
+      "Shares Held": "869,000.00",
+      "Asset Category": "Equity",
+      "Price": "1.570126812428078"
     },
     {
       "Name": "HAIDILAO INTERNATIONAL HOLDI",
       "Ticker": "6862 HK",
       "Identifier": "BGN9715",
-      "Weight": "1.12%",
-      "Market Value": "1,105,074.44",
-      "Shares Held": "873,900.00",
+      "Weight": "1.18%",
+      "Market Value": "1,160,945.64",
+      "Shares Held": "875,900.00",
       "Asset Category": "Equity",
-      "Price": "1.264531914406683"
+      "Price": "1.325431715949309"
     },
     {
       "Name": "ZHEJIANG LEAPMOTOR TECHNOL-H",
       "Ticker": "9863 HK",
       "Identifier": "BJLVDM7",
       "Weight": "1.05%",
-      "Market Value": "1,041,498.06",
-      "Shares Held": "270,900.00",
+      "Market Value": "1,033,058.05",
+      "Shares Held": "271,100.00",
       "Asset Category": "Equity",
-      "Price": "3.844584939091916"
+      "Price": "3.81061619328661"
     },
     {
       "Name": "TONGCHENG TRAVEL HOLDINGS LTD",
       "Ticker": "780 HK",
       "Identifier": "BGM5R25",
-      "Weight": "0.98%",
-      "Market Value": "971,542.93",
-      "Shares Held": "705,700.00",
+      "Weight": "0.97%",
+      "Market Value": "959,470.46",
+      "Shares Held": "706,900.00",
       "Asset Category": "Equity",
-      "Price": "1.37670813376789"
+      "Price": "1.357293054180224"
     },
     {
       "Name": "LAOPU GOLD CO L-H",
       "Ticker": "6181 HK",
       "Identifier": "BS854D3",
-      "Weight": "0.97%",
-      "Market Value": "959,555.37",
+      "Weight": "0.95%",
+      "Market Value": "936,537.82",
       "Shares Held": "26,320.00",
       "Asset Category": "Equity",
-      "Price": "36.45727089665653"
-    },
-    {
-      "Name": "YADEA GROUP HOLDINGS LTD",
-      "Ticker": "1585 HK",
-      "Identifier": "BZ04KX9",
-      "Weight": "0.90%",
-      "Market Value": "889,822.56",
-      "Shares Held": "832,000.00",
-      "Asset Category": "Equity",
-      "Price": "1.069498269230769"
-    },
-    {
-      "Name": "GREAT WALL MOTOR CO LTD-H",
-      "Ticker": "2333 HK",
-      "Identifier": "6718255",
-      "Weight": "0.89%",
-      "Market Value": "880,401.86",
-      "Shares Held": "1,186,697.00",
-      "Asset Category": "Equity",
-      "Price": "0.7418927156637288"
-    },
-    {
-      "Name": "HAIER SMART HOME CO LTD-A",
-      "Ticker": "600690 C1",
-      "Identifier": "BP3R3G9",
-      "Weight": "0.86%",
-      "Market Value": "851,894.19",
-      "Shares Held": "267,819.00",
-      "Asset Category": "Equity",
-      "Price": "3.180857930169256"
+      "Price": "35.58274392097264"
     },
     {
       "Name": "MINISO GROUP HOLDING LTD",
       "Ticker": "9896 HK",
       "Identifier": "BQKNM37",
-      "Weight": "0.86%",
-      "Market Value": "848,991.43",
-      "Shares Held": "309,200.00",
+      "Weight": "0.94%",
+      "Market Value": "927,840.44",
+      "Shares Held": "309,800.00",
       "Asset Category": "Equity",
-      "Price": "2.745767884864166"
+      "Price": "2.994965913492575"
+    },
+    {
+      "Name": "YADEA GROUP HOLDINGS LTD",
+      "Ticker": "1585 HK",
+      "Identifier": "BZ04KX9",
+      "Weight": "0.93%",
+      "Market Value": "917,809.21",
+      "Shares Held": "834,000.00",
+      "Asset Category": "Equity",
+      "Price": "1.100490659472422"
+    },
+    {
+      "Name": "HAIER SMART HOME CO LTD-A",
+      "Ticker": "600690 C1",
+      "Identifier": "BP3R3G9",
+      "Weight": "0.92%",
+      "Market Value": "908,714.41",
+      "Shares Held": "268,119.00",
+      "Asset Category": "Equity",
+      "Price": "3.389220495377053"
+    },
+    {
+      "Name": "GREAT WALL MOTOR CO LTD-H",
+      "Ticker": "2333 HK",
+      "Identifier": "6718255",
+      "Weight": "0.88%",
+      "Market Value": "866,151.90",
+      "Shares Held": "1,189,197.00",
+      "Asset Category": "Equity",
+      "Price": "0.7283502228814906"
     }
   ]
 }

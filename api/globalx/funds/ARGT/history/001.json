@@ -2,7 +2,7 @@
   "ticker": "ARGT",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3951,
+  "totalRows": 3953,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "69.17",
+      "Adj Close": "69.17",
+      "Volume": "112000"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "70.77",
+      "Adj Close": "70.77",
+      "Volume": "83500"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "71.44",
-      "Adj Close": "71.44",
-      "Volume": "31843"
+      "Close": "70.55",
+      "Adj Close": "70.55",
+      "Volume": "62400"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "31.93",
       "Adj Close": "30.17",
       "Volume": "2000"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "31.41",
-      "Adj Close": "29.68",
-      "Volume": "500"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "30.88",
-      "Adj Close": "29.18",
-      "Volume": "7300"
     }
   ]
 }

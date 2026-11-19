@@ -2,7 +2,7 @@
   "ticker": "RYLG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1033,
+  "totalRows": 1035,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "22.92",
+      "Adj Close": "22.92",
+      "Volume": "100"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "22.79",
+      "Adj Close": "22.79",
+      "Volume": "2100"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "23.36",
-      "Adj Close": "23.36",
-      "Volume": "877"
+      "Close": "23.06",
+      "Adj Close": "23.06",
+      "Volume": "1100"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "26.65",
       "Adj Close": "16.52",
       "Volume": "2400"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "26.57",
-      "Adj Close": "16.47",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "26.30",
-      "Adj Close": "16.30",
-      "Volume": "300"
     }
   ]
 }

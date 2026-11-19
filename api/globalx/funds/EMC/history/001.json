@@ -2,7 +2,7 @@
   "ticker": "EMC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 881,
+  "totalRows": 883,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "31.98",
+      "Adj Close": "31.98",
+      "Volume": "2300"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "32.11",
+      "Adj Close": "32.11",
+      "Volume": "4000"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "32.69",
-      "Adj Close": "32.69",
-      "Volume": "758"
+      "Close": "32.48",
+      "Adj Close": "32.48",
+      "Volume": "1800"
     },
     {
       "Date": "2026-11-13",

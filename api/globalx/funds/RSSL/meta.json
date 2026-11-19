@@ -11,51 +11,51 @@
   "terGross": "0.08%",
   "terGrossValue": 0.08,
   "nav": {
-    "display": "$108.52",
-    "value": 108.52,
-    "asOfDate": "Nov 13 2026",
-    "dailyChangeText": "$-0.32 (-0.29%)",
+    "display": "$105.59",
+    "value": 105.59,
+    "asOfDate": "Nov 18 2026",
+    "dailyChangeText": "$0.48 (0.46%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 108.52,
+  "navValue": 105.59,
   "aum": {
-    "display": "$1.41B",
-    "value": 1405353799.8,
-    "asOfDate": "Nov 13 2026",
+    "display": "$1.36B",
+    "value": 1356848517.48,
+    "asOfDate": "Nov 18 2026",
     "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 1405353799.8,
-  "asOfDate": "Nov 13 2026",
+  "aumValue": 1356848517.48,
+  "asOfDate": "Nov 18 2026",
   "inceptionDate": "Jun 04 2024",
   "inceptionDateFundPage": "Jun 04 2024",
   "exchange": "NYSE Arca",
-  "closePrice": "$108.71",
-  "closePriceValue": 108.71,
+  "closePrice": "$105.62",
+  "closePriceValue": 105.62,
   "premiumDiscount": {
-    "display": "0.17%",
-    "value": 0.1737,
-    "derivedValue": 0.18,
-    "kind": "official (fund page Daily Premium / Discount, latest day)"
+    "display": "0.03%",
+    "value": 0.03,
+    "derivedValue": 0.03,
+    "kind": "derived (Market Price - NAV) / NAV"
   },
-  "premiumDiscountValue": 0.1737,
-  "premiumDiscountDerivedValue": 0.18,
-  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
+  "premiumDiscountValue": 0.03,
+  "premiumDiscountDerivedValue": 0.03,
+  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
   "bidAskSpread": {
     "display": "0.11%",
     "value": 0.11,
-    "asOfDate": "Nov 13 2026",
+    "asOfDate": "Nov 18 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.11,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 1405353799.8,
+  "totalNetAssets": 1356848517.48,
   "sharesOutstanding": {
-    "display": "12,950,000",
-    "value": 12950000,
-    "asOfDate": "Nov 13 2026"
+    "display": "12,850,000",
+    "value": 12850000,
+    "asOfDate": "Nov 18 2026"
   },
-  "netAssetsAsOf": "Nov 13 2026",
-  "secYieldAsOf": "Nov 13 2026",
+  "netAssetsAsOf": "Nov 18 2026",
+  "secYieldAsOf": "Nov 18 2026",
   "distributions": {
     "frequency": "Quarterly",
     "paymentsPerYear": 4,
@@ -195,10 +195,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 15.81,
-    "dividendYield": 1.49,
-    "dividendYieldText": "1.49%",
-    "distributionYield": 1.49,
-    "distributionYieldText": "1.49%",
+    "dividendYield": 1.53,
+    "dividendYieldText": "1.53%",
+    "distributionYield": 1.53,
+    "distributionYieldText": "1.53%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 1.52,
@@ -221,10 +221,10 @@
       "./holdings/008.json"
     ],
     "pageSize": 250,
-    "totalRows": 1966,
-    "asOfDate": "Nov 13 2026",
-    "asOf": "2026-11-13",
-    "source": "https://assets.globalxetfs.com/funds/holdings/rssl_full-holdings_20261113.csv",
+    "totalRows": 1963,
+    "asOfDate": "Nov 18 2026",
+    "asOf": "2026-11-18",
+    "source": "https://assets.globalxetfs.com/funds/holdings/rssl_full-holdings_20261118.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -232,9 +232,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 615,
-    "asOfDate": "Nov 16 2026",
-    "asOf": "2026-11-16",
+    "totalRows": 617,
+    "asOfDate": "Nov 18 2026",
+    "asOf": "2026-11-18",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/RSSL",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -244,7 +244,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/rssl/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/rssl_full-holdings_20261113.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/rssl_full-holdings_20261118.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/RSSL",
@@ -255,7 +255,7 @@
     "registrant": "Global X Funds (Investment Company Act file 811-22209)",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
+    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
     "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
@@ -273,18 +273,18 @@
     "managementFeeValue": 0.08
   },
   "marketPrice": {
-    "display": "$108.71",
-    "value": 108.71,
-    "asOfDate": "Nov 13 2026",
-    "dailyChangeText": "$-0.12 (-0.11%)",
-    "source": "Global X fund page Fund Details \"Market Price\""
+    "display": "$105.62",
+    "value": 105.62,
+    "asOfDate": "Nov 18 2026",
+    "dailyChangeText": null,
+    "source": "Yahoo Finance daily close"
   },
   "yields": {
-    "dividendYield": 1.49,
-    "dividendYieldText": "1.49%",
+    "dividendYield": 1.53,
+    "dividendYieldText": "1.53%",
     "dividendYieldKind": "official Global X Distribution Rate (latest distribution annualized / ex-date NAV)",
-    "distributionRate": 1.49,
-    "distributionRateText": "1.49%",
+    "distributionRate": 1.53,
+    "distributionRateText": "1.53%",
     "yield12M": null,
     "yield12MText": "—",
     "secYield": 1.52,
@@ -292,7 +292,7 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Nov 13 2026"
+    "distributionInfoAsOfDate": "Nov 18 2026"
   },
   "navIndex": null,
   "documents": {

@@ -2,7 +2,7 @@
   "ticker": "EMBD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1623,
+  "totalRows": 1625,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "22.60",
+      "Adj Close": "22.60",
+      "Volume": "73300"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "22.62",
+      "Adj Close": "22.62",
+      "Volume": "36400"
+    },
+    {
       "Date": "2026-11-16",
       "Close": "22.59",
       "Adj Close": "22.59",
-      "Volume": "54351"
+      "Volume": "83800"
     },
     {
       "Date": "2026-11-13",
@@ -5997,18 +6009,6 @@
       "Close": "21.46",
       "Adj Close": "17.16",
       "Volume": "76100"
-    },
-    {
-      "Date": "2022-11-22",
-      "Close": "21.30",
-      "Adj Close": "17.03",
-      "Volume": "19300"
-    },
-    {
-      "Date": "2022-11-21",
-      "Close": "21.08",
-      "Adj Close": "16.86",
-      "Volume": "21900"
     }
   ]
 }

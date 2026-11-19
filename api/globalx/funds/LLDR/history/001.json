@@ -2,7 +2,7 @@
   "ticker": "LLDR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 549,
+  "totalRows": 551,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-18",
+      "Close": "42.06",
+      "Adj Close": "42.06",
+      "Volume": "100"
+    },
+    {
+      "Date": "2026-11-17",
+      "Close": "41.77",
+      "Adj Close": "41.77",
+      "Volume": "100"
+    },
+    {
       "Date": "2026-11-16",
-      "Close": "41.57",
-      "Adj Close": "41.57",
-      "Volume": "7"
+      "Close": "41.74",
+      "Adj Close": "41.74",
+      "Volume": "100"
     },
     {
       "Date": "2026-11-13",
