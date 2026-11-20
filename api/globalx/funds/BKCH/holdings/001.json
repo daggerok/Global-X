@@ -2,7 +2,7 @@
   "ticker": "BKCH",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 38,
+  "totalRows": 37,
   "headers": [
     "Name",
     "Ticker",
@@ -14,32 +14,352 @@
   ],
   "rows": [
     {
+      "Name": "BITGO HOLDINGS INC-CL A",
+      "Ticker": "BTGO",
+      "Identifier": "BTY39L1",
+      "Weight": "0.75%",
+      "Market Value": "1,085,790.51",
+      "Shares Held": "304,143.00",
+      "Asset Category": "Equity",
+      "Price": "3.57"
+    },
+    {
+      "Name": "CANGO INC/KY-CLASS A",
+      "Ticker": "CANG",
+      "Identifier": "BXWTPD3",
+      "Weight": "0.53%",
+      "Market Value": "757,693.12",
+      "Shares Held": "462,008.00",
+      "Asset Category": "Equity",
+      "Price": "1.64"
+    },
+    {
+      "Name": "INDOKRIPTO KOIN SEMESTA TBK",
+      "Ticker": "COIN IJ",
+      "Identifier": "BV6GGR7",
+      "Weight": "0.48%",
+      "Market Value": "697,451.06",
+      "Shares Held": "33,302,375.00",
+      "Asset Category": "Equity",
+      "Price": "0.02094298259508519"
+    },
+    {
+      "Name": "PHOENIX GROUP PLC",
+      "Ticker": "PHX UH",
+      "Identifier": "BQ759B3",
+      "Weight": "0.41%",
+      "Market Value": "592,856.29",
+      "Shares Held": "4,312,061.00",
+      "Asset Category": "Equity",
+      "Price": "0.1374879181903967"
+    },
+    {
+      "Name": "OSL GROUP LTD",
+      "Ticker": "863 HK",
+      "Identifier": "BKPSJS9",
+      "Weight": "0.34%",
+      "Market Value": "486,729.54",
+      "Shares Held": "414,775.00",
+      "Asset Category": "Equity",
+      "Price": "1.17347848833705"
+    },
+    {
+      "Name": "AMERICAN BITCOIN CORP-A",
+      "Ticker": "ABTC",
+      "Identifier": "BTCL713",
+      "Weight": "0.33%",
+      "Market Value": "477,891.84",
+      "Shares Held": "124,451.00",
+      "Asset Category": "Equity",
+      "Price": "3.84"
+    },
+    {
+      "Name": "CANAAN INC",
+      "Ticker": "CAN",
+      "Identifier": "BL4PZ46",
+      "Weight": "0.32%",
+      "Market Value": "456,274.45",
+      "Shares Held": "3,715,590.00",
+      "Asset Category": "Equity",
+      "Price": "0.1227999994617275"
+    },
+    {
+      "Name": "GEMINI SPACE STATION INC-A",
+      "Ticker": "GEMI",
+      "Identifier": "BT6CC06",
+      "Weight": "0.29%",
+      "Market Value": "414,446.29",
+      "Shares Held": "243,077.00",
+      "Asset Category": "Equity",
+      "Price": "1.705000020569614"
+    },
+    {
+      "Name": "BITCOIN GROUP SE",
+      "Ticker": "ADE GR",
+      "Identifier": "BBCR986",
+      "Weight": "0.29%",
+      "Market Value": "411,934.60",
+      "Shares Held": "19,649.00",
+      "Asset Category": "Equity",
+      "Price": "20.96465977912362"
+    },
+    {
+      "Name": "BAKKT INC",
+      "Ticker": "BKKT",
+      "Identifier": "BMDLW29",
+      "Weight": "0.28%",
+      "Market Value": "397,800.65",
+      "Shares Held": "151,255.00",
+      "Asset Category": "Equity",
+      "Price": "2.63"
+    },
+    {
+      "Name": "AMBER INTERNATIONAL HOLDING",
+      "Ticker": "AMBR",
+      "Identifier": "BQ0KQT2",
+      "Weight": "0.28%",
+      "Market Value": "397,079.34",
+      "Shares Held": "303,114.00",
+      "Asset Category": "Equity",
+      "Price": "1.31"
+    },
+    {
+      "Name": "BTCS INC",
+      "Ticker": "BTCS",
+      "Identifier": "BKSH7V2",
+      "Weight": "0.26%",
+      "Market Value": "380,192.18",
+      "Shares Held": "511,011.00",
+      "Asset Category": "Equity",
+      "Price": "0.7439999921723799"
+    },
+    {
+      "Name": "EXODUS MOVEMENT INC - A",
+      "Ticker": "EXOD",
+      "Identifier": "BNZJKK2",
+      "Weight": "0.23%",
+      "Market Value": "335,380.50",
+      "Shares Held": "103,194.00",
+      "Asset Category": "Equity",
+      "Price": "3.25"
+    },
+    {
+      "Name": "SOLUNA HOLDINGS INC",
+      "Ticker": "SLNH",
+      "Identifier": "BRBR235",
+      "Weight": "0.22%",
+      "Market Value": "317,619.61",
+      "Shares Held": "791,674.00",
+      "Asset Category": "Equity",
+      "Price": "0.4012000015157754"
+    },
+    {
+      "Name": "COINBASE GLOBAL INC -CLASS A",
+      "Ticker": "COIN",
+      "Identifier": "BMC9P69",
+      "Weight": "11.18%",
+      "Market Value": "16,123,429.26",
+      "Shares Held": "148,098.00",
+      "Asset Category": "Equity",
+      "Price": "108.87"
+    },
+    {
+      "Name": "BITMINE IMMERSION TECHNOLOGI",
+      "Ticker": "BMNR",
+      "Identifier": "BNYD8N4",
+      "Weight": "11.01%",
+      "Market Value": "15,875,054.47",
+      "Shares Held": "1,053,421.00",
+      "Asset Category": "Equity",
+      "Price": "15.07"
+    },
+    {
+      "Name": "CIRCLE INTERNET GROUP INC",
+      "Ticker": "CRCL",
+      "Identifier": "BL6K237",
+      "Weight": "10.54%",
+      "Market Value": "15,203,589.64",
+      "Shares Held": "293,053.00",
+      "Asset Category": "Equity",
+      "Price": "51.88"
+    },
+    {
+      "Name": "RIOT PLATFORMS INC",
+      "Ticker": "RIOT",
+      "Identifier": "BD9F675",
+      "Weight": "7.46%",
+      "Market Value": "10,759,734.18",
+      "Shares Held": "606,866.00",
+      "Asset Category": "Equity",
+      "Price": "17.73"
+    },
+    {
+      "Name": "IREN LIMITED",
+      "Ticker": "IREN",
+      "Identifier": "BMQ80V2",
+      "Weight": "6.49%",
+      "Market Value": "9,354,712.62",
+      "Shares Held": "649,182.00",
+      "Asset Category": "Equity",
+      "Price": "14.41"
+    },
+    {
+      "Name": "CORE SCIENTIFIC INC",
+      "Ticker": "CORZ",
+      "Identifier": "BN70TG2",
+      "Weight": "5.44%",
+      "Market Value": "7,838,485.68",
+      "Shares Held": "586,713.00",
+      "Asset Category": "Equity",
+      "Price": "13.36"
+    },
+    {
+      "Name": "TERAWULF INC",
+      "Ticker": "WULF",
+      "Identifier": "BNBRMS2",
+      "Weight": "5.32%",
+      "Market Value": "7,674,540.78",
+      "Shares Held": "662,741.00",
+      "Asset Category": "Equity",
+      "Price": "11.58"
+    },
+    {
+      "Name": "HUT 8 CORP",
+      "Ticker": "HUT CN",
+      "Identifier": "BQQ8805",
+      "Weight": "5.08%",
+      "Market Value": "7,326,787.10",
+      "Shares Held": "130,959.00",
+      "Asset Category": "Equity",
+      "Price": "55.94718270603776"
+    },
+    {
+      "Name": "MARA HOLDINGS INC",
+      "Ticker": "MARA",
+      "Identifier": "BLR7B52",
+      "Weight": "4.97%",
+      "Market Value": "7,171,096.03",
+      "Shares Held": "1,148,294.00",
+      "Asset Category": "Equity",
+      "Price": "6.245"
+    },
+    {
+      "Name": "CIPHER DIGITAL INC",
+      "Ticker": "CIFR",
+      "Identifier": "BMZ8604",
+      "Weight": "4.79%",
+      "Market Value": "6,910,181.28",
+      "Shares Held": "1,066,386.00",
+      "Asset Category": "Equity",
+      "Price": "6.48"
+    },
+    {
+      "Name": "GALAXY DIGITAL INC-A",
+      "Ticker": "GLXY",
+      "Identifier": "BV97X10",
+      "Weight": "4.15%",
+      "Market Value": "5,985,943.04",
+      "Shares Held": "485,872.00",
+      "Asset Category": "Equity",
+      "Price": "12.32"
+    },
+    {
+      "Name": "CLEANSPARK INC",
+      "Ticker": "CLSK",
+      "Identifier": "BJDRX78",
+      "Weight": "4.11%",
+      "Market Value": "5,919,149.52",
+      "Shares Held": "1,013,553.00",
+      "Asset Category": "Equity",
+      "Price": "5.84"
+    },
+    {
+      "Name": "KEEL INFRASTRUCTURE CORP",
+      "Ticker": "KEEL CN",
+      "Identifier": "BS2DWC8",
+      "Weight": "3.79%",
+      "Market Value": "5,461,248.12",
+      "Shares Held": "3,177,625.00",
+      "Asset Category": "Equity",
+      "Price": "1.718657210967311"
+    },
+    {
+      "Name": "ETORO GROUP LTD-A",
+      "Ticker": "ETOR",
+      "Identifier": "BS491D8",
+      "Weight": "3.35%",
+      "Market Value": "4,831,476.00",
+      "Shares Held": "247,768.00",
+      "Asset Category": "Equity",
+      "Price": "19.5"
+    },
+    {
+      "Name": "BULLISH",
+      "Ticker": "BLSH",
+      "Identifier": "BV6KVT6",
+      "Weight": "3.08%",
+      "Market Value": "4,434,912.40",
+      "Shares Held": "222,190.00",
+      "Asset Category": "Equity",
+      "Price": "19.96"
+    },
+    {
+      "Name": "BITDEER TECHNOLOGIES GROUP-A",
+      "Ticker": "BTDR",
+      "Identifier": "BNTCCT0",
+      "Weight": "1.99%",
+      "Market Value": "2,863,653.21",
+      "Shares Held": "839,781.00",
+      "Asset Category": "Equity",
+      "Price": "3.41"
+    },
+    {
+      "Name": "HIVE DIGITAL TECHNOLOGIES LT",
+      "Ticker": "HIVE CN",
+      "Identifier": "BM9HHB5",
+      "Weight": "1.29%",
+      "Market Value": "1,862,748.28",
+      "Shares Held": "1,367,305.00",
+      "Asset Category": "Equity",
+      "Price": "1.36235022910031"
+    },
+    {
+      "Name": "BGIN BLOCKCHAIN LTD CL A",
+      "Ticker": "BGIN",
+      "Identifier": "BMHSG80",
+      "Weight": "1.19%",
+      "Market Value": "1,710,135.57",
+      "Shares Held": "304,837.00",
+      "Asset Category": "Equity",
+      "Price": "5.61"
+    },
+    {
       "Name": "NEPTUNE DIGITAL ASSETS CORP",
       "Ticker": "NDA CN",
       "Identifier": "BJLKG81",
-      "Weight": "0.06%",
-      "Market Value": "84,859.74",
-      "Shares Held": "352,500.00",
+      "Weight": "0.04%",
+      "Market Value": "63,426.14",
+      "Shares Held": "271,000.00",
       "Asset Category": "Equity",
-      "Price": "0.2407368510638298"
+      "Price": "0.2340447970479705"
     },
     {
       "Name": "CANADIAN DOLLAR",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "0.03%",
-      "Market Value": "51,450.26",
-      "Shares Held": "73,733.37",
+      "Weight": "0.04%",
+      "Market Value": "58,331.39",
+      "Shares Held": "83,492.64",
       "Asset Category": "Equity",
-      "Price": "0.6977879893459367"
+      "Price": "0.698641101778552"
     },
     {
       "Name": "OTHER PAYABLE & RECEIVABLES",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "-0.02%",
-      "Market Value": "-23,817.89",
-      "Shares Held": "-23,817.89",
+      "Market Value": "-25,325.36",
+      "Shares Held": "-25,325.36",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
@@ -47,351 +367,21 @@
       "Name": "CASH",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "-0.06%",
-      "Market Value": "-83,094.41",
-      "Shares Held": "-83,094.41",
+      "Weight": "-0.39%",
+      "Market Value": "-567,349.27",
+      "Shares Held": "-567,349.27",
       "Asset Category": "Cash",
       "Price": "1.0"
-    },
-    {
-      "Name": "INDONESIA RUPIAH",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.38%",
-      "Market Value": "-560,391.23",
-      "Shares Held": "-10,213,130,232.00",
-      "Asset Category": "Equity",
-      "Price": "0.00005486968414876079"
-    },
-    {
-      "Name": "BITGO HOLDINGS INC-CL A",
-      "Ticker": "BTGO",
-      "Identifier": "BTY39L1",
-      "Weight": "0.74%",
-      "Market Value": "1,104,039.09",
-      "Shares Held": "304,143.00",
-      "Asset Category": "Equity",
-      "Price": "3.63"
-    },
-    {
-      "Name": "INDOKRIPTO KOIN SEMESTA TBK",
-      "Ticker": "COIN IJ",
-      "Identifier": "BV6GGR7",
-      "Weight": "0.50%",
-      "Market Value": "749,189.23",
-      "Shares Held": "33,302,375.00",
-      "Asset Category": "Equity",
-      "Price": "0.0224965705899354"
-    },
-    {
-      "Name": "CANGO INC/KY-CLASS A",
-      "Ticker": "CANG",
-      "Identifier": "BXWTPD3",
-      "Weight": "0.46%",
-      "Market Value": "683,771.84",
-      "Shares Held": "462,008.00",
-      "Asset Category": "Equity",
-      "Price": "1.48"
-    },
-    {
-      "Name": "PHOENIX GROUP PLC",
-      "Ticker": "PHX UH",
-      "Identifier": "BQ759B3",
-      "Weight": "0.40%",
-      "Market Value": "598,726.16",
-      "Shares Held": "4,312,061.00",
-      "Asset Category": "Equity",
-      "Price": "0.1388491860388802"
-    },
-    {
-      "Name": "CANAAN INC",
-      "Ticker": "CAN",
-      "Identifier": "BL4PZ46",
-      "Weight": "0.36%",
-      "Market Value": "532,072.49",
-      "Shares Held": "3,715,590.00",
-      "Asset Category": "Equity",
-      "Price": "0.1432000005382725"
-    },
-    {
-      "Name": "AMERICAN BITCOIN CORP-A",
-      "Ticker": "ABTC",
-      "Identifier": "BTCL713",
-      "Weight": "0.34%",
-      "Market Value": "507,760.08",
-      "Shares Held": "124,451.00",
-      "Asset Category": "Equity",
-      "Price": "4.08"
-    },
-    {
-      "Name": "OSL GROUP LTD",
-      "Ticker": "863 HK",
-      "Identifier": "BKPSJS9",
-      "Weight": "0.33%",
-      "Market Value": "497,687.71",
-      "Shares Held": "414,775.00",
-      "Asset Category": "Equity",
-      "Price": "1.199898041106624"
-    },
-    {
-      "Name": "GEMINI SPACE STATION INC-A",
-      "Ticker": "GEMI",
-      "Identifier": "BT6CC06",
-      "Weight": "0.30%",
-      "Market Value": "446,046.30",
-      "Shares Held": "243,077.00",
-      "Asset Category": "Equity",
-      "Price": "1.835000020569614"
-    },
-    {
-      "Name": "AMBER INTERNATIONAL HOLDING",
-      "Ticker": "AMBR",
-      "Identifier": "BQ0KQT2",
-      "Weight": "0.29%",
-      "Market Value": "439,526.64",
-      "Shares Held": "261,623.00",
-      "Asset Category": "Equity",
-      "Price": "1.68"
-    },
-    {
-      "Name": "BAKKT INC",
-      "Ticker": "BKKT",
-      "Identifier": "BMDLW29",
-      "Weight": "0.28%",
-      "Market Value": "415,951.25",
-      "Shares Held": "151,255.00",
-      "Asset Category": "Equity",
-      "Price": "2.75"
-    },
-    {
-      "Name": "BITCOIN GROUP SE",
-      "Ticker": "ADE GR",
-      "Identifier": "BBCR986",
-      "Weight": "0.27%",
-      "Market Value": "396,483.71",
-      "Shares Held": "19,649.00",
-      "Asset Category": "Equity",
-      "Price": "20.17831492696829"
-    },
-    {
-      "Name": "BTCS INC",
-      "Ticker": "BTCS",
-      "Identifier": "BKSH7V2",
-      "Weight": "0.26%",
-      "Market Value": "391,689.93",
-      "Shares Held": "511,011.00",
-      "Asset Category": "Equity",
-      "Price": "0.7664999970646424"
-    },
-    {
-      "Name": "EXODUS MOVEMENT INC - A",
-      "Ticker": "EXOD",
-      "Identifier": "BNZJKK2",
-      "Weight": "0.24%",
-      "Market Value": "352,923.48",
-      "Shares Held": "103,194.00",
-      "Asset Category": "Equity",
-      "Price": "3.42"
-    },
-    {
-      "Name": "SOLUNA HOLDINGS INC",
-      "Ticker": "SLNH",
-      "Identifier": "BRBR235",
-      "Weight": "0.21%",
-      "Market Value": "307,169.51",
-      "Shares Held": "791,674.00",
-      "Asset Category": "Equity",
-      "Price": "0.3879999974737076"
     },
     {
       "Name": "BITFUFU INC-A",
       "Ticker": "FUFU",
       "Identifier": "BRC73W0",
-      "Weight": "0.19%",
-      "Market Value": "289,515.24",
-      "Shares Held": "344,661.00",
+      "Weight": "0.11%",
+      "Market Value": "161,647.32",
+      "Shares Held": "187,962.00",
       "Asset Category": "Equity",
-      "Price": "0.84"
-    },
-    {
-      "Name": "COINBASE GLOBAL INC -CLASS A",
-      "Ticker": "COIN",
-      "Identifier": "BMC9P69",
-      "Weight": "10.95%",
-      "Market Value": "16,366,309.98",
-      "Shares Held": "148,098.00",
-      "Asset Category": "Equity",
-      "Price": "110.51"
-    },
-    {
-      "Name": "BITMINE IMMERSION TECHNOLOGI",
-      "Ticker": "BMNR",
-      "Identifier": "BNYD8N4",
-      "Weight": "10.90%",
-      "Market Value": "16,296,422.87",
-      "Shares Held": "1,053,421.00",
-      "Asset Category": "Equity",
-      "Price": "15.47"
-    },
-    {
-      "Name": "CIRCLE INTERNET GROUP INC",
-      "Ticker": "CRCL",
-      "Identifier": "BL6K237",
-      "Weight": "10.45%",
-      "Market Value": "15,622,655.43",
-      "Shares Held": "293,053.00",
-      "Asset Category": "Equity",
-      "Price": "53.31"
-    },
-    {
-      "Name": "RIOT PLATFORMS INC",
-      "Ticker": "RIOT",
-      "Identifier": "BD9F675",
-      "Weight": "7.41%",
-      "Market Value": "11,069,235.84",
-      "Shares Held": "606,866.00",
-      "Asset Category": "Equity",
-      "Price": "18.24"
-    },
-    {
-      "Name": "IREN LIMITED",
-      "Ticker": "IREN",
-      "Identifier": "BMQ80V2",
-      "Weight": "6.62%",
-      "Market Value": "9,893,533.68",
-      "Shares Held": "649,182.00",
-      "Asset Category": "Equity",
-      "Price": "15.24"
-    },
-    {
-      "Name": "CORE SCIENTIFIC INC",
-      "Ticker": "CORZ",
-      "Identifier": "BN70TG2",
-      "Weight": "5.52%",
-      "Market Value": "8,243,317.65",
-      "Shares Held": "586,713.00",
-      "Asset Category": "Equity",
-      "Price": "14.05"
-    },
-    {
-      "Name": "TERAWULF INC",
-      "Ticker": "WULF",
-      "Identifier": "BNBRMS2",
-      "Weight": "5.32%",
-      "Market Value": "7,952,892.00",
-      "Shares Held": "662,741.00",
-      "Asset Category": "Equity",
-      "Price": "12.0"
-    },
-    {
-      "Name": "MARA HOLDINGS INC",
-      "Ticker": "MARA",
-      "Identifier": "BLR7B52",
-      "Weight": "5.04%",
-      "Market Value": "7,532,808.64",
-      "Shares Held": "1,148,294.00",
-      "Asset Category": "Equity",
-      "Price": "6.56"
-    },
-    {
-      "Name": "HUT 8 CORP",
-      "Ticker": "HUT CN",
-      "Identifier": "BQQ8805",
-      "Weight": "5.01%",
-      "Market Value": "7,482,327.07",
-      "Shares Held": "130,959.00",
-      "Asset Category": "Equity",
-      "Price": "57.13488244412373"
-    },
-    {
-      "Name": "CIPHER DIGITAL INC",
-      "Ticker": "CIFR",
-      "Identifier": "BMZ8604",
-      "Weight": "4.69%",
-      "Market Value": "7,006,156.02",
-      "Shares Held": "1,066,386.00",
-      "Asset Category": "Equity",
-      "Price": "6.569999999999999"
-    },
-    {
-      "Name": "GALAXY DIGITAL INC-A",
-      "Ticker": "GLXY",
-      "Identifier": "BV97X10",
-      "Weight": "4.33%",
-      "Market Value": "6,471,815.04",
-      "Shares Held": "485,872.00",
-      "Asset Category": "Equity",
-      "Price": "13.32"
-    },
-    {
-      "Name": "CLEANSPARK INC",
-      "Ticker": "CLSK",
-      "Identifier": "BJDRX78",
-      "Weight": "4.21%",
-      "Market Value": "6,294,164.13",
-      "Shares Held": "1,013,553.00",
-      "Asset Category": "Equity",
-      "Price": "6.21"
-    },
-    {
-      "Name": "KEEL INFRASTRUCTURE CORP",
-      "Ticker": "KEEL CN",
-      "Identifier": "BS2DWC8",
-      "Weight": "3.77%",
-      "Market Value": "5,631,963.92",
-      "Shares Held": "3,177,625.00",
-      "Asset Category": "Equity",
-      "Price": "1.772381549112938"
-    },
-    {
-      "Name": "ETORO GROUP LTD-A",
-      "Ticker": "ETOR",
-      "Identifier": "BS491D8",
-      "Weight": "3.38%",
-      "Market Value": "5,047,034.16",
-      "Shares Held": "247,768.00",
-      "Asset Category": "Equity",
-      "Price": "20.37"
-    },
-    {
-      "Name": "BULLISH",
-      "Ticker": "BLSH",
-      "Identifier": "BV6KVT6",
-      "Weight": "3.03%",
-      "Market Value": "4,523,788.40",
-      "Shares Held": "222,190.00",
-      "Asset Category": "Equity",
-      "Price": "20.36"
-    },
-    {
-      "Name": "BITDEER TECHNOLOGIES GROUP-A",
-      "Ticker": "BTDR",
-      "Identifier": "BNTCCT0",
-      "Weight": "2.19%",
-      "Market Value": "3,266,748.09",
-      "Shares Held": "839,781.00",
-      "Asset Category": "Equity",
-      "Price": "3.89"
-    },
-    {
-      "Name": "HIVE DIGITAL TECHNOLOGIES LT",
-      "Ticker": "HIVE CN",
-      "Identifier": "BM9HHB5",
-      "Weight": "1.29%",
-      "Market Value": "1,927,259.86",
-      "Shares Held": "1,367,305.00",
-      "Asset Category": "Equity",
-      "Price": "1.409531786982422"
-    },
-    {
-      "Name": "BGIN BLOCKCHAIN LTD CL A",
-      "Ticker": "BGIN",
-      "Identifier": "BMHSG80",
-      "Weight": "1.10%",
-      "Market Value": "1,640,023.06",
-      "Shares Held": "304,837.00",
-      "Asset Category": "Equity",
-      "Price": "5.38"
+      "Price": "0.86"
     }
   ]
 }

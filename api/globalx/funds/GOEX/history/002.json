@@ -2,7 +2,7 @@
   "ticker": "GOEX",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4034,
+  "totalRows": 4036,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-25",
+      "Close": "24.35",
+      "Adj Close": "23.05",
+      "Volume": "100"
+    },
+    {
+      "Date": "2022-11-23",
+      "Close": "24.54",
+      "Adj Close": "23.23",
+      "Volume": "3200"
+    },
     {
       "Date": "2022-11-22",
       "Close": "23.98",
@@ -5997,18 +6009,6 @@
       "Close": "18.86",
       "Adj Close": "16.67",
       "Volume": "25000"
-    },
-    {
-      "Date": "2018-12-06",
-      "Close": "17.95",
-      "Adj Close": "15.87",
-      "Volume": "6400"
-    },
-    {
-      "Date": "2018-12-04",
-      "Close": "18.03",
-      "Adj Close": "15.94",
-      "Volume": "7300"
     }
   ]
 }

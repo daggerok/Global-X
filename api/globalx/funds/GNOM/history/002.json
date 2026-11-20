@@ -2,7 +2,7 @@
   "ticker": "GNOM",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1914,
+  "totalRows": 1916,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-25",
+      "Close": "52.16",
+      "Adj Close": "51.40",
+      "Volume": "3500"
+    },
+    {
+      "Date": "2022-11-23",
+      "Close": "52.12",
+      "Adj Close": "51.36",
+      "Volume": "5875"
+    },
     {
       "Date": "2022-11-22",
       "Close": "51.76",

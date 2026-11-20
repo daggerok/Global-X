@@ -2,7 +2,7 @@
   "ticker": "GXDW",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1770,
+  "totalRows": 1772,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-20",
+      "Close": "20.02",
+      "Adj Close": "20.02",
+      "Volume": "85"
+    },
+    {
+      "Date": "2026-11-19",
+      "Close": "21.05",
+      "Adj Close": "21.05",
+      "Volume": "100"
+    },
     {
       "Date": "2026-11-18",
       "Close": "21.37",
@@ -5997,18 +6009,6 @@
       "Close": "24.72",
       "Adj Close": "23.27",
       "Volume": "3500"
-    },
-    {
-      "Date": "2022-11-25",
-      "Close": "25.69",
-      "Adj Close": "24.18",
-      "Volume": "4600"
-    },
-    {
-      "Date": "2022-11-23",
-      "Close": "25.36",
-      "Adj Close": "23.87",
-      "Volume": "9200"
     }
   ]
 }

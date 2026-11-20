@@ -2,7 +2,7 @@
   "ticker": "EGLE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 401,
+  "totalRows": 403,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-20",
+      "Close": "29.35",
+      "Adj Close": "29.35",
+      "Volume": "1540"
+    },
+    {
+      "Date": "2026-11-19",
+      "Close": "30.46",
+      "Adj Close": "30.46",
+      "Volume": "100"
+    },
     {
       "Date": "2026-11-18",
       "Close": "31.03",

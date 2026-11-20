@@ -2,7 +2,7 @@
   "ticker": "EART",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1208,
+  "totalRows": 1210,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-20",
+      "Close": "20.09",
+      "Adj Close": "20.09",
+      "Volume": "15493"
+    },
+    {
+      "Date": "2026-11-19",
+      "Close": "21.09",
+      "Adj Close": "21.09",
+      "Volume": "40100"
+    },
     {
       "Date": "2026-11-18",
       "Close": "21.54",
@@ -5997,18 +6009,6 @@
       "Close": "19.88",
       "Adj Close": "18.93",
       "Volume": "3700"
-    },
-    {
-      "Date": "2022-11-25",
-      "Close": "20.27",
-      "Adj Close": "19.30",
-      "Volume": "1700"
-    },
-    {
-      "Date": "2022-11-23",
-      "Close": "20.82",
-      "Adj Close": "19.83",
-      "Volume": "200"
     }
   ]
 }

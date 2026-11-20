@@ -2,7 +2,7 @@
   "ticker": "XRMI",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1314,
+  "totalRows": 1316,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-20",
+      "Close": "15.92",
+      "Adj Close": "15.92",
+      "Volume": "92982"
+    },
+    {
+      "Date": "2026-11-19",
+      "Close": "16.47",
+      "Adj Close": "16.47",
+      "Volume": "52300"
+    },
     {
       "Date": "2026-11-18",
       "Close": "16.56",
@@ -5997,18 +6009,6 @@
       "Close": "20.86",
       "Adj Close": "13.13",
       "Volume": "28500"
-    },
-    {
-      "Date": "2022-11-25",
-      "Close": "20.98",
-      "Adj Close": "13.20",
-      "Volume": "5300"
-    },
-    {
-      "Date": "2022-11-23",
-      "Close": "20.96",
-      "Adj Close": "13.19",
-      "Volume": "1100"
     }
   ]
 }

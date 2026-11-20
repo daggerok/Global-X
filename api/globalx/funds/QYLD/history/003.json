@@ -2,7 +2,7 @@
   "ticker": "QYLD",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 3253,
+  "totalRows": 3255,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-12-06",
+      "Close": "23.23",
+      "Adj Close": "9.06",
+      "Volume": "188700"
+    },
+    {
+      "Date": "2018-12-04",
+      "Close": "23.13",
+      "Adj Close": "9.02",
+      "Volume": "176600"
+    },
     {
       "Date": "2018-12-03",
       "Close": "23.59",
@@ -5997,18 +6009,6 @@
       "Close": "23.39",
       "Adj Close": "6.46",
       "Volume": "1700"
-    },
-    {
-      "Date": "2014-12-16",
-      "Close": "23.44",
-      "Adj Close": "6.48",
-      "Volume": "12000"
-    },
-    {
-      "Date": "2014-12-15",
-      "Close": "23.40",
-      "Adj Close": "6.47",
-      "Volume": "6500"
     }
   ]
 }

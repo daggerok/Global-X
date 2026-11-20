@@ -2,7 +2,7 @@
   "ticker": "XYLD",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3373,
+  "totalRows": 3375,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-25",
+      "Close": "40.15",
+      "Adj Close": "26.25",
+      "Volume": "222600"
+    },
+    {
+      "Date": "2022-11-23",
+      "Close": "40.15",
+      "Adj Close": "26.25",
+      "Volume": "314700"
+    },
     {
       "Date": "2022-11-22",
       "Close": "40.00",
@@ -5997,18 +6009,6 @@
       "Close": "47.85",
       "Adj Close": "21.90",
       "Volume": "11100"
-    },
-    {
-      "Date": "2018-12-06",
-      "Close": "48.52",
-      "Adj Close": "22.21",
-      "Volume": "18200"
-    },
-    {
-      "Date": "2018-12-04",
-      "Close": "48.92",
-      "Adj Close": "22.39",
-      "Volume": "40000"
     }
   ]
 }

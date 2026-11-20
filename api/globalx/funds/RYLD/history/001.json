@@ -2,7 +2,7 @@
   "ticker": "RYLD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1907,
+  "totalRows": 1909,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-20",
+      "Close": "14.53",
+      "Adj Close": "14.53",
+      "Volume": "1444161"
+    },
+    {
+      "Date": "2026-11-19",
+      "Close": "14.95",
+      "Adj Close": "14.95",
+      "Volume": "1151700"
+    },
     {
       "Date": "2026-11-18",
       "Close": "15.26",
@@ -5997,18 +6009,6 @@
       "Close": "19.27",
       "Adj Close": "12.15",
       "Volume": "730500"
-    },
-    {
-      "Date": "2022-11-25",
-      "Close": "19.46",
-      "Adj Close": "12.27",
-      "Volume": "364600"
-    },
-    {
-      "Date": "2022-11-23",
-      "Close": "19.43",
-      "Adj Close": "12.25",
-      "Volume": "572200"
     }
   ]
 }

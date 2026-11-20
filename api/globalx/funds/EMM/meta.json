@@ -11,51 +11,51 @@
   "terGross": "0.66%",
   "terGrossValue": 0.66,
   "nav": {
-    "display": "$38.17",
-    "value": 38.17,
-    "asOfDate": "Nov 18 2026",
-    "dailyChangeText": "$-0.07 (-0.18%)",
+    "display": "$37.76",
+    "value": 37.76,
+    "asOfDate": "Nov 19 2026",
+    "dailyChangeText": "$-0.41 (-1.07%)",
     "kind": "official (fund page Fund Details)"
   },
-  "navValue": 38.17,
+  "navValue": 37.76,
   "aum": {
-    "display": "$49.26M",
-    "value": 49258772.14,
-    "asOfDate": "Nov 18 2026",
+    "display": "$48.73M",
+    "value": 48728006.76,
+    "asOfDate": "Nov 19 2026",
     "source": "Global X ETF lineup \"Net Assets\""
   },
-  "aumValue": 49258772.14,
-  "asOfDate": "Nov 18 2026",
+  "aumValue": 48728006.76,
+  "asOfDate": "Nov 19 2026",
   "inceptionDate": "Sep 24 2010",
   "inceptionDateFundPage": "Sep 24 2010",
   "exchange": "NYSE Arca",
-  "closePrice": "$37.77",
-  "closePriceValue": 37.77,
+  "closePrice": "$36.91",
+  "closePriceValue": 36.91,
   "premiumDiscount": {
-    "display": "-1.05%",
-    "value": -1.05,
-    "derivedValue": -1.05,
-    "kind": "derived (Market Price - NAV) / NAV"
+    "display": "-2.24%",
+    "value": -2.2419,
+    "derivedValue": -2.25,
+    "kind": "official (fund page Daily Premium / Discount, latest day)"
   },
-  "premiumDiscountValue": -1.05,
-  "premiumDiscountDerivedValue": -1.05,
-  "premiumDiscountKind": "derived (Market Price - NAV) / NAV",
+  "premiumDiscountValue": -2.2419,
+  "premiumDiscountDerivedValue": -2.25,
+  "premiumDiscountKind": "official (fund page Daily Premium / Discount, latest day)",
   "bidAskSpread": {
     "display": "0.44%",
     "value": 0.44,
-    "asOfDate": "Nov 18 2026",
+    "asOfDate": "Nov 19 2026",
     "kind": "official (fund page Fund Details \"30-Day Median Bid-Ask Spread\")"
   },
   "bidAskSpreadValue": 0.44,
   "acquiredFundFeesText": null,
-  "totalNetAssets": 49258772.14,
+  "totalNetAssets": 48728006.76,
   "sharesOutstanding": {
     "display": "1,290,587",
     "value": 1290587,
-    "asOfDate": "Nov 18 2026"
+    "asOfDate": "Nov 19 2026"
   },
-  "netAssetsAsOf": "Nov 18 2026",
-  "secYieldAsOf": "Nov 18 2026",
+  "netAssetsAsOf": "Nov 19 2026",
+  "secYieldAsOf": "Nov 19 2026",
   "distributions": {
     "frequency": "Semi-Annually",
     "paymentsPerYear": 2,
@@ -202,10 +202,10 @@
       "./holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 48,
-    "asOfDate": "Nov 18 2026",
-    "asOf": "2026-11-18",
-    "source": "https://assets.globalxetfs.com/funds/holdings/emm_full-holdings_20261118.csv",
+    "totalRows": 47,
+    "asOfDate": "Nov 19 2026",
+    "asOf": "2026-11-19",
+    "source": "https://assets.globalxetfs.com/funds/holdings/emm_full-holdings_20261119.csv",
     "sourceKind": "official Global X daily full-holdings CSV (assets.globalxetfs.com)"
   },
   "history": {
@@ -213,9 +213,9 @@
       "./history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 883,
-    "asOfDate": "Nov 18 2026",
-    "asOf": "2026-11-18",
+    "totalRows": 885,
+    "asOfDate": "Nov 20 2026",
+    "asOf": "2026-11-20",
     "source": "https://query1.finance.yahoo.com/v8/finance/chart/EMM",
     "sourceKind": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)"
   },
@@ -225,7 +225,7 @@
     "site": "https://www.globalxetfs.com",
     "lineup": "https://www.globalxetfs.com/explore",
     "fundPage": "https://www.globalxetfs.com/funds/emm/",
-    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/emm_full-holdings_20261118.csv",
+    "holdingsDownload": "https://assets.globalxetfs.com/funds/holdings/emm_full-holdings_20261119.csv",
     "holdingsSource": "official Global X daily full-holdings CSV (assets.globalxetfs.com)",
     "historySource": "Yahoo Finance public chart API (daily Close / Adj Close / Volume)",
     "historyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EMM",
@@ -236,7 +236,7 @@
     "registrant": "Global X Funds (Investment Company Act file 811-22209)",
     "exchangeSource": "Global X fund page Fund Details \"Primary Exchange\"",
     "navSource": "Global X fund page Fund Details \"Net Asset Value\" (official (fund page Fund Details))",
-    "premiumDiscountSource": "derived (Market Price - NAV) / NAV",
+    "premiumDiscountSource": "official (fund page Daily Premium / Discount, latest day)",
     "bidAskSpreadSource": "Global X fund page Fund Details \"30-Day Median Bid-Ask Spread\""
   },
   "identifiers": {
@@ -254,11 +254,11 @@
     "managementFeeValue": 0.66
   },
   "marketPrice": {
-    "display": "$37.77",
-    "value": 37.77,
-    "asOfDate": "Nov 18 2026",
-    "dailyChangeText": null,
-    "source": "Yahoo Finance daily close"
+    "display": "$36.91",
+    "value": 36.91,
+    "asOfDate": "Nov 19 2026",
+    "dailyChangeText": "$-0.86 (-2.28%)",
+    "source": "Global X fund page Fund Details \"Market Price\""
   },
   "yields": {
     "dividendYield": 0.65,
@@ -273,7 +273,7 @@
     "secYieldKind": "official Global X 30-Day SEC Yield",
     "distributionAmountText": null,
     "distributionAmountPercentText": null,
-    "distributionInfoAsOfDate": "Nov 18 2026"
+    "distributionInfoAsOfDate": "Nov 19 2026"
   },
   "navIndex": null,
   "documents": {
