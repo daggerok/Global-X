@@ -14,24 +14,374 @@
   ],
   "rows": [
     {
-      "Name": "EURO",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "-476.37",
-      "Shares Held": "-434.23",
+      "Name": "ELI LILLY & CO",
+      "Ticker": "LLY",
+      "Identifier": "2516152",
+      "Weight": "3.98%",
+      "Market Value": "3,849,758.65",
+      "Shares Held": "2,735.00",
       "Asset Category": "Equity",
-      "Price": "1.097045344633029"
+      "Price": "1407.59"
     },
     {
-      "Name": "CASH",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.00%",
-      "Market Value": "-647.28",
-      "Shares Held": "-647.28",
-      "Asset Category": "Cash",
-      "Price": "1.0"
+      "Name": "ABBVIE INC",
+      "Ticker": "ABBV",
+      "Identifier": "B92SR70",
+      "Weight": "3.82%",
+      "Market Value": "3,690,140.92",
+      "Shares Held": "12,289.00",
+      "Asset Category": "Equity",
+      "Price": "300.28"
+    },
+    {
+      "Name": "EDWARDS LIFESCIENCES CORP",
+      "Ticker": "EW",
+      "Identifier": "2567116",
+      "Weight": "3.62%",
+      "Market Value": "3,500,155.96",
+      "Shares Held": "32,983.00",
+      "Asset Category": "Equity",
+      "Price": "106.12"
+    },
+    {
+      "Name": "AMGEN INC",
+      "Ticker": "AMGN",
+      "Identifier": "2023607",
+      "Weight": "3.60%",
+      "Market Value": "3,478,682.90",
+      "Shares Held": "7,340.00",
+      "Asset Category": "Equity",
+      "Price": "473.935"
+    },
+    {
+      "Name": "REGENERON PHARMACEUTICALS",
+      "Ticker": "REGN",
+      "Identifier": "2730190",
+      "Weight": "3.48%",
+      "Market Value": "3,357,093.09",
+      "Shares Held": "3,401.00",
+      "Asset Category": "Equity",
+      "Price": "987.0899999999999"
+    },
+    {
+      "Name": "ROCHE HOLDING AG-BR",
+      "Ticker": "RO SW",
+      "Identifier": "7108918",
+      "Weight": "3.22%",
+      "Market Value": "3,108,272.14",
+      "Shares Held": "6,301.00",
+      "Asset Category": "Equity",
+      "Price": "493.2982288525631"
+    },
+    {
+      "Name": "WELLTOWER INC",
+      "Ticker": "WELL",
+      "Identifier": "BYVYHH4",
+      "Weight": "3.21%",
+      "Market Value": "3,101,511.28",
+      "Shares Held": "12,652.00",
+      "Asset Category": "Equity",
+      "Price": "245.14"
+    },
+    {
+      "Name": "MERCK & CO. INC.",
+      "Ticker": "MRK",
+      "Identifier": "2778844",
+      "Weight": "3.12%",
+      "Market Value": "3,012,609.60",
+      "Shares Held": "21,280.00",
+      "Asset Category": "Equity",
+      "Price": "141.57"
+    },
+    {
+      "Name": "JOHNSON & JOHNSON",
+      "Ticker": "JNJ",
+      "Identifier": "2475833",
+      "Weight": "3.10%",
+      "Market Value": "2,991,020.74",
+      "Shares Held": "10,819.00",
+      "Asset Category": "Equity",
+      "Price": "276.46"
+    },
+    {
+      "Name": "MEDTRONIC PLC",
+      "Ticker": "MDT",
+      "Identifier": "BTN1Y11",
+      "Weight": "2.96%",
+      "Market Value": "2,854,772.61",
+      "Shares Held": "29,697.00",
+      "Asset Category": "Equity",
+      "Price": "96.13"
+    },
+    {
+      "Name": "NOVO NORDISK A/S-B",
+      "Ticker": "NOVOB DC",
+      "Identifier": "BP6KMJ1",
+      "Weight": "2.93%",
+      "Market Value": "2,826,659.92",
+      "Shares Held": "70,120.00",
+      "Asset Category": "Equity",
+      "Price": "40.31175014261266"
+    },
+    {
+      "Name": "BEONE MEDICINES LTD-ADR",
+      "Ticker": "ONC",
+      "Identifier": "BYYWPW6",
+      "Weight": "2.82%",
+      "Market Value": "2,726,051.58",
+      "Shares Held": "6,559.00",
+      "Asset Category": "Equity",
+      "Price": "415.62"
+    },
+    {
+      "Name": "BRISTOL-MYERS SQUIBB CO",
+      "Ticker": "BMY",
+      "Identifier": "2126335",
+      "Weight": "2.82%",
+      "Market Value": "2,722,429.92",
+      "Shares Held": "43,896.00",
+      "Asset Category": "Equity",
+      "Price": "62.02"
+    },
+    {
+      "Name": "VENTAS INC",
+      "Ticker": "VTR",
+      "Identifier": "2927925",
+      "Weight": "2.77%",
+      "Market Value": "2,678,646.93",
+      "Shares Held": "30,729.00",
+      "Asset Category": "Equity",
+      "Price": "87.17"
+    },
+    {
+      "Name": "UCB SA",
+      "Ticker": "UCB BB",
+      "Identifier": "5596991",
+      "Weight": "2.69%",
+      "Market Value": "2,596,829.32",
+      "Shares Held": "8,222.00",
+      "Asset Category": "Equity",
+      "Price": "315.8391291656531"
+    },
+    {
+      "Name": "SANDOZ GROUP AG",
+      "Ticker": "SDZ SW",
+      "Identifier": "BLPLD38",
+      "Weight": "2.64%",
+      "Market Value": "2,551,311.27",
+      "Shares Held": "26,287.00",
+      "Asset Category": "Equity",
+      "Price": "97.05600753224027"
+    },
+    {
+      "Name": "STRYKER CORP",
+      "Ticker": "SYK",
+      "Identifier": "2853688",
+      "Weight": "2.58%",
+      "Market Value": "2,494,767.84",
+      "Shares Held": "7,698.00",
+      "Asset Category": "Equity",
+      "Price": "324.08"
+    },
+    {
+      "Name": "ASTRAZENECA PLC",
+      "Ticker": "AZN",
+      "Identifier": "B01DCL2",
+      "Weight": "2.42%",
+      "Market Value": "2,333,235.20",
+      "Shares Held": "12,736.00",
+      "Asset Category": "Equity",
+      "Price": "183.2"
+    },
+    {
+      "Name": "ALCON INC",
+      "Ticker": "ALC SW",
+      "Identifier": "BJT1GR5",
+      "Weight": "2.37%",
+      "Market Value": "2,287,282.29",
+      "Shares Held": "29,854.00",
+      "Asset Category": "Equity",
+      "Price": "76.61560561398808"
+    },
+    {
+      "Name": "CELLTRION INC",
+      "Ticker": "068270 KS",
+      "Identifier": "B0C5YV1",
+      "Weight": "2.34%",
+      "Market Value": "2,262,038.89",
+      "Shares Held": "14,529.00",
+      "Asset Category": "Equity",
+      "Price": "155.6912994700255"
+    },
+    {
+      "Name": "GENMAB A/S",
+      "Ticker": "GMAB DC",
+      "Identifier": "4595739",
+      "Weight": "2.22%",
+      "Market Value": "2,146,813.15",
+      "Shares Held": "3,840.00",
+      "Asset Category": "Equity",
+      "Price": "559.0659244791666"
+    },
+    {
+      "Name": "CHUGAI PHARMACEUTICAL CO LTD",
+      "Ticker": "4519 JP",
+      "Identifier": "6196408",
+      "Weight": "2.18%",
+      "Market Value": "2,107,580.22",
+      "Shares Held": "47,393.00",
+      "Asset Category": "Equity",
+      "Price": "44.47028506319499"
+    },
+    {
+      "Name": "DEXCOM INC",
+      "Ticker": "DXCM",
+      "Identifier": "B0796X4",
+      "Weight": "2.02%",
+      "Market Value": "1,946,720.00",
+      "Shares Held": "23,000.00",
+      "Asset Category": "Equity",
+      "Price": "84.64"
+    },
+    {
+      "Name": "ASTELLAS PHARMA INC",
+      "Ticker": "4503 JP",
+      "Identifier": "6985383",
+      "Weight": "1.95%",
+      "Market Value": "1,884,162.55",
+      "Shares Held": "108,393.00",
+      "Asset Category": "Equity",
+      "Price": "17.38269583829214"
+    },
+    {
+      "Name": "BOSTON SCIENTIFIC CORP",
+      "Ticker": "BSX",
+      "Identifier": "2113434",
+      "Weight": "1.95%",
+      "Market Value": "1,880,275.72",
+      "Shares Held": "42,598.00",
+      "Asset Category": "Equity",
+      "Price": "44.14"
+    },
+    {
+      "Name": "UNITED THERAPEUTICS CORP",
+      "Ticker": "UTHR",
+      "Identifier": "2430412",
+      "Weight": "1.59%",
+      "Market Value": "1,532,769.75",
+      "Shares Held": "2,619.00",
+      "Asset Category": "Equity",
+      "Price": "585.25"
+    },
+    {
+      "Name": "INCYTE CORP",
+      "Ticker": "INCY",
+      "Identifier": "2471950",
+      "Weight": "1.52%",
+      "Market Value": "1,469,970.12",
+      "Shares Held": "11,892.00",
+      "Asset Category": "Equity",
+      "Price": "123.61"
+    },
+    {
+      "Name": "HANSOH PHARMACEUTICAL GROUP",
+      "Ticker": "3692 HK",
+      "Identifier": "BJYKB72",
+      "Weight": "1.50%",
+      "Market Value": "1,444,854.13",
+      "Shares Held": "362,443.00",
+      "Asset Category": "Equity",
+      "Price": "3.986431328512345"
+    },
+    {
+      "Name": "TERUMO CORP",
+      "Ticker": "4543 JP",
+      "Identifier": "6885074",
+      "Weight": "1.47%",
+      "Market Value": "1,420,236.70",
+      "Shares Held": "88,661.00",
+      "Asset Category": "Equity",
+      "Price": "16.01873089633548"
+    },
+    {
+      "Name": "ZIMMER BIOMET HOLDINGS INC",
+      "Ticker": "ZBH",
+      "Identifier": "2783815",
+      "Weight": "1.32%",
+      "Market Value": "1,274,311.08",
+      "Shares Held": "11,692.00",
+      "Asset Category": "Equity",
+      "Price": "108.99"
+    },
+    {
+      "Name": "STRAUMANN HOLDING AG-REG",
+      "Ticker": "STMN SW",
+      "Identifier": "BQ7ZV06",
+      "Weight": "1.30%",
+      "Market Value": "1,254,591.07",
+      "Shares Held": "9,526.00",
+      "Asset Category": "Equity",
+      "Price": "131.7017709426832"
+    },
+    {
+      "Name": "SONOVA HOLDING AG-REG",
+      "Ticker": "SOON SW",
+      "Identifier": "7156036",
+      "Weight": "1.29%",
+      "Market Value": "1,248,149.35",
+      "Shares Held": "3,562.00",
+      "Asset Category": "Equity",
+      "Price": "350.4068921953959"
+    },
+    {
+      "Name": "EXELIXIS INC",
+      "Ticker": "EXEL",
+      "Identifier": "2576941",
+      "Weight": "1.08%",
+      "Market Value": "1,046,824.00",
+      "Shares Held": "15,520.00",
+      "Asset Category": "Equity",
+      "Price": "67.45"
+    },
+    {
+      "Name": "NEUROCRINE BIOSCIENCES INC",
+      "Ticker": "NBIX",
+      "Identifier": "2623911",
+      "Weight": "1.01%",
+      "Market Value": "980,493.06",
+      "Shares Held": "5,998.00",
+      "Asset Category": "Equity",
+      "Price": "163.47"
+    },
+    {
+      "Name": "GLAUKOS CORP",
+      "Ticker": "GKOS",
+      "Identifier": "BYMWL19",
+      "Weight": "0.92%",
+      "Market Value": "889,150.80",
+      "Shares Held": "3,460.00",
+      "Asset Category": "Equity",
+      "Price": "256.98"
+    },
+    {
+      "Name": "OMEGA HEALTHCARE INVESTORS",
+      "Ticker": "OHI",
+      "Identifier": "2043274",
+      "Weight": "0.86%",
+      "Market Value": "831,220.78",
+      "Shares Held": "17,663.00",
+      "Asset Category": "Equity",
+      "Price": "47.06"
+    },
+    {
+      "Name": "SMITH & NEPHEW PLC",
+      "Ticker": "SN/ LN",
+      "Identifier": "0922320",
+      "Weight": "0.81%",
+      "Market Value": "777,791.13",
+      "Shares Held": "51,061.00",
+      "Asset Category": "Equity",
+      "Price": "15.23258710170189"
     },
     {
       "Name": "FRESENIUS MEDICAL CARE AG",
@@ -504,374 +854,24 @@
       "Price": "0.0007449344828912667"
     },
     {
-      "Name": "ELI LILLY & CO",
-      "Ticker": "LLY",
-      "Identifier": "2516152",
-      "Weight": "3.98%",
-      "Market Value": "3,849,758.65",
-      "Shares Held": "2,735.00",
+      "Name": "EURO",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "-476.37",
+      "Shares Held": "-434.23",
       "Asset Category": "Equity",
-      "Price": "1407.59"
+      "Price": "1.097045344633029"
     },
     {
-      "Name": "ABBVIE INC",
-      "Ticker": "ABBV",
-      "Identifier": "B92SR70",
-      "Weight": "3.82%",
-      "Market Value": "3,690,140.92",
-      "Shares Held": "12,289.00",
-      "Asset Category": "Equity",
-      "Price": "300.28"
-    },
-    {
-      "Name": "EDWARDS LIFESCIENCES CORP",
-      "Ticker": "EW",
-      "Identifier": "2567116",
-      "Weight": "3.62%",
-      "Market Value": "3,500,155.96",
-      "Shares Held": "32,983.00",
-      "Asset Category": "Equity",
-      "Price": "106.12"
-    },
-    {
-      "Name": "AMGEN INC",
-      "Ticker": "AMGN",
-      "Identifier": "2023607",
-      "Weight": "3.60%",
-      "Market Value": "3,478,682.90",
-      "Shares Held": "7,340.00",
-      "Asset Category": "Equity",
-      "Price": "473.935"
-    },
-    {
-      "Name": "REGENERON PHARMACEUTICALS",
-      "Ticker": "REGN",
-      "Identifier": "2730190",
-      "Weight": "3.48%",
-      "Market Value": "3,357,093.09",
-      "Shares Held": "3,401.00",
-      "Asset Category": "Equity",
-      "Price": "987.0899999999999"
-    },
-    {
-      "Name": "ROCHE HOLDING AG-BR",
-      "Ticker": "RO SW",
-      "Identifier": "7108918",
-      "Weight": "3.22%",
-      "Market Value": "3,108,272.14",
-      "Shares Held": "6,301.00",
-      "Asset Category": "Equity",
-      "Price": "493.2982288525631"
-    },
-    {
-      "Name": "WELLTOWER INC",
-      "Ticker": "WELL",
-      "Identifier": "BYVYHH4",
-      "Weight": "3.21%",
-      "Market Value": "3,101,511.28",
-      "Shares Held": "12,652.00",
-      "Asset Category": "Equity",
-      "Price": "245.14"
-    },
-    {
-      "Name": "MERCK & CO. INC.",
-      "Ticker": "MRK",
-      "Identifier": "2778844",
-      "Weight": "3.12%",
-      "Market Value": "3,012,609.60",
-      "Shares Held": "21,280.00",
-      "Asset Category": "Equity",
-      "Price": "141.57"
-    },
-    {
-      "Name": "JOHNSON & JOHNSON",
-      "Ticker": "JNJ",
-      "Identifier": "2475833",
-      "Weight": "3.10%",
-      "Market Value": "2,991,020.74",
-      "Shares Held": "10,819.00",
-      "Asset Category": "Equity",
-      "Price": "276.46"
-    },
-    {
-      "Name": "MEDTRONIC PLC",
-      "Ticker": "MDT",
-      "Identifier": "BTN1Y11",
-      "Weight": "2.96%",
-      "Market Value": "2,854,772.61",
-      "Shares Held": "29,697.00",
-      "Asset Category": "Equity",
-      "Price": "96.13"
-    },
-    {
-      "Name": "NOVO NORDISK A/S-B",
-      "Ticker": "NOVOB DC",
-      "Identifier": "BP6KMJ1",
-      "Weight": "2.93%",
-      "Market Value": "2,826,659.92",
-      "Shares Held": "70,120.00",
-      "Asset Category": "Equity",
-      "Price": "40.31175014261266"
-    },
-    {
-      "Name": "BEONE MEDICINES LTD-ADR",
-      "Ticker": "ONC",
-      "Identifier": "BYYWPW6",
-      "Weight": "2.82%",
-      "Market Value": "2,726,051.58",
-      "Shares Held": "6,559.00",
-      "Asset Category": "Equity",
-      "Price": "415.62"
-    },
-    {
-      "Name": "BRISTOL-MYERS SQUIBB CO",
-      "Ticker": "BMY",
-      "Identifier": "2126335",
-      "Weight": "2.82%",
-      "Market Value": "2,722,429.92",
-      "Shares Held": "43,896.00",
-      "Asset Category": "Equity",
-      "Price": "62.02"
-    },
-    {
-      "Name": "VENTAS INC",
-      "Ticker": "VTR",
-      "Identifier": "2927925",
-      "Weight": "2.77%",
-      "Market Value": "2,678,646.93",
-      "Shares Held": "30,729.00",
-      "Asset Category": "Equity",
-      "Price": "87.17"
-    },
-    {
-      "Name": "UCB SA",
-      "Ticker": "UCB BB",
-      "Identifier": "5596991",
-      "Weight": "2.69%",
-      "Market Value": "2,596,829.32",
-      "Shares Held": "8,222.00",
-      "Asset Category": "Equity",
-      "Price": "315.8391291656531"
-    },
-    {
-      "Name": "SANDOZ GROUP AG",
-      "Ticker": "SDZ SW",
-      "Identifier": "BLPLD38",
-      "Weight": "2.64%",
-      "Market Value": "2,551,311.27",
-      "Shares Held": "26,287.00",
-      "Asset Category": "Equity",
-      "Price": "97.05600753224027"
-    },
-    {
-      "Name": "STRYKER CORP",
-      "Ticker": "SYK",
-      "Identifier": "2853688",
-      "Weight": "2.58%",
-      "Market Value": "2,494,767.84",
-      "Shares Held": "7,698.00",
-      "Asset Category": "Equity",
-      "Price": "324.08"
-    },
-    {
-      "Name": "ASTRAZENECA PLC",
-      "Ticker": "AZN",
-      "Identifier": "B01DCL2",
-      "Weight": "2.42%",
-      "Market Value": "2,333,235.20",
-      "Shares Held": "12,736.00",
-      "Asset Category": "Equity",
-      "Price": "183.2"
-    },
-    {
-      "Name": "ALCON INC",
-      "Ticker": "ALC SW",
-      "Identifier": "BJT1GR5",
-      "Weight": "2.37%",
-      "Market Value": "2,287,282.29",
-      "Shares Held": "29,854.00",
-      "Asset Category": "Equity",
-      "Price": "76.61560561398808"
-    },
-    {
-      "Name": "CELLTRION INC",
-      "Ticker": "068270 KS",
-      "Identifier": "B0C5YV1",
-      "Weight": "2.34%",
-      "Market Value": "2,262,038.89",
-      "Shares Held": "14,529.00",
-      "Asset Category": "Equity",
-      "Price": "155.6912994700255"
-    },
-    {
-      "Name": "GENMAB A/S",
-      "Ticker": "GMAB DC",
-      "Identifier": "4595739",
-      "Weight": "2.22%",
-      "Market Value": "2,146,813.15",
-      "Shares Held": "3,840.00",
-      "Asset Category": "Equity",
-      "Price": "559.0659244791666"
-    },
-    {
-      "Name": "CHUGAI PHARMACEUTICAL CO LTD",
-      "Ticker": "4519 JP",
-      "Identifier": "6196408",
-      "Weight": "2.18%",
-      "Market Value": "2,107,580.22",
-      "Shares Held": "47,393.00",
-      "Asset Category": "Equity",
-      "Price": "44.47028506319499"
-    },
-    {
-      "Name": "DEXCOM INC",
-      "Ticker": "DXCM",
-      "Identifier": "B0796X4",
-      "Weight": "2.02%",
-      "Market Value": "1,946,720.00",
-      "Shares Held": "23,000.00",
-      "Asset Category": "Equity",
-      "Price": "84.64"
-    },
-    {
-      "Name": "ASTELLAS PHARMA INC",
-      "Ticker": "4503 JP",
-      "Identifier": "6985383",
-      "Weight": "1.95%",
-      "Market Value": "1,884,162.55",
-      "Shares Held": "108,393.00",
-      "Asset Category": "Equity",
-      "Price": "17.38269583829214"
-    },
-    {
-      "Name": "BOSTON SCIENTIFIC CORP",
-      "Ticker": "BSX",
-      "Identifier": "2113434",
-      "Weight": "1.95%",
-      "Market Value": "1,880,275.72",
-      "Shares Held": "42,598.00",
-      "Asset Category": "Equity",
-      "Price": "44.14"
-    },
-    {
-      "Name": "UNITED THERAPEUTICS CORP",
-      "Ticker": "UTHR",
-      "Identifier": "2430412",
-      "Weight": "1.59%",
-      "Market Value": "1,532,769.75",
-      "Shares Held": "2,619.00",
-      "Asset Category": "Equity",
-      "Price": "585.25"
-    },
-    {
-      "Name": "INCYTE CORP",
-      "Ticker": "INCY",
-      "Identifier": "2471950",
-      "Weight": "1.52%",
-      "Market Value": "1,469,970.12",
-      "Shares Held": "11,892.00",
-      "Asset Category": "Equity",
-      "Price": "123.61"
-    },
-    {
-      "Name": "HANSOH PHARMACEUTICAL GROUP",
-      "Ticker": "3692 HK",
-      "Identifier": "BJYKB72",
-      "Weight": "1.50%",
-      "Market Value": "1,444,854.13",
-      "Shares Held": "362,443.00",
-      "Asset Category": "Equity",
-      "Price": "3.986431328512345"
-    },
-    {
-      "Name": "TERUMO CORP",
-      "Ticker": "4543 JP",
-      "Identifier": "6885074",
-      "Weight": "1.47%",
-      "Market Value": "1,420,236.70",
-      "Shares Held": "88,661.00",
-      "Asset Category": "Equity",
-      "Price": "16.01873089633548"
-    },
-    {
-      "Name": "ZIMMER BIOMET HOLDINGS INC",
-      "Ticker": "ZBH",
-      "Identifier": "2783815",
-      "Weight": "1.32%",
-      "Market Value": "1,274,311.08",
-      "Shares Held": "11,692.00",
-      "Asset Category": "Equity",
-      "Price": "108.99"
-    },
-    {
-      "Name": "STRAUMANN HOLDING AG-REG",
-      "Ticker": "STMN SW",
-      "Identifier": "BQ7ZV06",
-      "Weight": "1.30%",
-      "Market Value": "1,254,591.07",
-      "Shares Held": "9,526.00",
-      "Asset Category": "Equity",
-      "Price": "131.7017709426832"
-    },
-    {
-      "Name": "SONOVA HOLDING AG-REG",
-      "Ticker": "SOON SW",
-      "Identifier": "7156036",
-      "Weight": "1.29%",
-      "Market Value": "1,248,149.35",
-      "Shares Held": "3,562.00",
-      "Asset Category": "Equity",
-      "Price": "350.4068921953959"
-    },
-    {
-      "Name": "EXELIXIS INC",
-      "Ticker": "EXEL",
-      "Identifier": "2576941",
-      "Weight": "1.08%",
-      "Market Value": "1,046,824.00",
-      "Shares Held": "15,520.00",
-      "Asset Category": "Equity",
-      "Price": "67.45"
-    },
-    {
-      "Name": "NEUROCRINE BIOSCIENCES INC",
-      "Ticker": "NBIX",
-      "Identifier": "2623911",
-      "Weight": "1.01%",
-      "Market Value": "980,493.06",
-      "Shares Held": "5,998.00",
-      "Asset Category": "Equity",
-      "Price": "163.47"
-    },
-    {
-      "Name": "GLAUKOS CORP",
-      "Ticker": "GKOS",
-      "Identifier": "BYMWL19",
-      "Weight": "0.92%",
-      "Market Value": "889,150.80",
-      "Shares Held": "3,460.00",
-      "Asset Category": "Equity",
-      "Price": "256.98"
-    },
-    {
-      "Name": "OMEGA HEALTHCARE INVESTORS",
-      "Ticker": "OHI",
-      "Identifier": "2043274",
-      "Weight": "0.86%",
-      "Market Value": "831,220.78",
-      "Shares Held": "17,663.00",
-      "Asset Category": "Equity",
-      "Price": "47.06"
-    },
-    {
-      "Name": "SMITH & NEPHEW PLC",
-      "Ticker": "SN/ LN",
-      "Identifier": "0922320",
-      "Weight": "0.81%",
-      "Market Value": "777,791.13",
-      "Shares Held": "51,061.00",
-      "Asset Category": "Equity",
-      "Price": "15.23258710170189"
+      "Name": "CASH",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "-0.00%",
+      "Market Value": "-647.28",
+      "Shares Held": "-647.28",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     }
   ]
 }
