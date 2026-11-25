@@ -2,7 +2,7 @@
   "ticker": "SOCL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 3776,
+  "totalRows": 3778,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "37.37",
+      "Adj Close": "37.37",
+      "Volume": "4600"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "37.53",
+      "Adj Close": "37.53",
+      "Volume": "5200"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "36.25",
       "Adj Close": "36.25",
-      "Volume": "19599"
+      "Volume": "19900"
     },
     {
       "Date": "2026-11-19",
@@ -5997,18 +6009,6 @@
       "Close": "30.50",
       "Adj Close": "30.03",
       "Volume": "25500"
-    },
-    {
-      "Date": "2022-11-29",
-      "Close": "28.83",
-      "Adj Close": "28.39",
-      "Volume": "11700"
-    },
-    {
-      "Date": "2022-11-28",
-      "Close": "28.25",
-      "Adj Close": "27.82",
-      "Volume": "6800"
     }
   ]
 }

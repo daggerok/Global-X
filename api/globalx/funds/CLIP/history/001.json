@@ -2,7 +2,7 @@
   "ticker": "CLIP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 859,
+  "totalRows": 861,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "100.31",
+      "Adj Close": "100.31",
+      "Volume": "1577100"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "100.29",
+      "Adj Close": "100.29",
+      "Volume": "229100"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "100.29",
       "Adj Close": "100.29",
-      "Volume": "1484597"
+      "Volume": "1490900"
     },
     {
       "Date": "2026-11-19",

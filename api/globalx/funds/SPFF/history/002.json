@@ -2,7 +2,7 @@
   "ticker": "SPFF",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3607,
+  "totalRows": 3609,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-29",
+      "Close": "9.85",
+      "Adj Close": "7.58",
+      "Volume": "60700"
+    },
+    {
+      "Date": "2022-11-28",
+      "Close": "9.94",
+      "Adj Close": "7.65",
+      "Volume": "76800"
+    },
     {
       "Date": "2022-11-25",
       "Close": "9.96",
@@ -5997,18 +6009,6 @@
       "Close": "11.17",
       "Adj Close": "6.75",
       "Volume": "53800"
-    },
-    {
-      "Date": "2018-12-10",
-      "Close": "11.13",
-      "Adj Close": "6.73",
-      "Volume": "81200"
-    },
-    {
-      "Date": "2018-12-07",
-      "Close": "11.15",
-      "Adj Close": "6.74",
-      "Volume": "80900"
     }
   ]
 }

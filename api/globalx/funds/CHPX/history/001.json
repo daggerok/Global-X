@@ -2,7 +2,7 @@
   "ticker": "CHPX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 288,
+  "totalRows": 290,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "70.20",
+      "Adj Close": "70.20",
+      "Volume": "28200"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "75.18",
+      "Adj Close": "75.18",
+      "Volume": "38200"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "65.44",
       "Adj Close": "65.44",
-      "Volume": "65760"
+      "Volume": "65900"
     },
     {
       "Date": "2026-11-19",

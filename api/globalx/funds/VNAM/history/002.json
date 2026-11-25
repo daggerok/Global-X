@@ -2,7 +2,7 @@
   "ticker": "VNAM",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1242,
+  "totalRows": 1244,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-29",
+      "Close": "14.99",
+      "Adj Close": "14.56",
+      "Volume": "13900"
+    },
+    {
+      "Date": "2022-11-28",
+      "Close": "14.44",
+      "Adj Close": "14.02",
+      "Volume": "8800"
+    },
     {
       "Date": "2022-11-25",
       "Close": "14.01",

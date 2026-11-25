@@ -2,7 +2,7 @@
   "ticker": "FLAG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 403,
+  "totalRows": 405,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "28.99",
+      "Adj Close": "28.99",
+      "Volume": "100"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "28.68",
+      "Adj Close": "28.68",
+      "Volume": "200"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "27.91",
       "Adj Close": "27.91",
-      "Volume": "209"
+      "Volume": "200"
     },
     {
       "Date": "2026-11-19",

@@ -2,7 +2,7 @@
   "ticker": "DYLG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 836,
+  "totalRows": 838,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "26.98",
+      "Adj Close": "26.98",
+      "Volume": "300"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "26.83",
+      "Adj Close": "26.83",
+      "Volume": "900"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "26.14",
       "Adj Close": "26.14",
-      "Volume": "3212"
+      "Volume": "3200"
     },
     {
       "Date": "2026-11-19",

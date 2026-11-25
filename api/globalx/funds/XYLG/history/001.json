@@ -2,7 +2,7 @@
   "ticker": "XYLG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1541,
+  "totalRows": 1543,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "27.51",
+      "Adj Close": "27.51",
+      "Volume": "111000"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "27.68",
+      "Adj Close": "27.68",
+      "Volume": "53400"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "26.75",
       "Adj Close": "26.75",
-      "Volume": "71689"
+      "Volume": "71700"
     },
     {
       "Date": "2026-11-19",
@@ -5997,18 +6009,6 @@
       "Close": "26.22",
       "Adj Close": "16.62",
       "Volume": "6500"
-    },
-    {
-      "Date": "2022-11-29",
-      "Close": "25.67",
-      "Adj Close": "16.27",
-      "Volume": "4000"
-    },
-    {
-      "Date": "2022-11-28",
-      "Close": "25.73",
-      "Adj Close": "16.31",
-      "Volume": "7700"
     }
   ]
 }

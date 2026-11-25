@@ -2,7 +2,7 @@
   "ticker": "EHCC",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 10,
+  "totalRows": 6,
   "headers": [
     "Name",
     "Ticker",
@@ -14,12 +14,42 @@
   ],
   "rows": [
     {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "-0.77%",
+      "Market Value": "-8,368.72",
+      "Shares Held": "-8,368.72",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "4ETHA 11/27/2026 C36.82",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "-2.17%",
+      "Market Value": "-23,665.52",
+      "Shares Held": "-150.00",
+      "Asset Category": "Equity",
+      "Price": "157.7701333333333"
+    },
+    {
+      "Name": "4ETHA 01/29/2027 P40",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "-5.21%",
+      "Market Value": "-56,872.32",
+      "Shares Held": "-112.00",
+      "Asset Category": "Equity",
+      "Price": "507.7885714285714"
+    },
+    {
       "Name": "CASH",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "84.64%",
-      "Market Value": "982,169.88",
-      "Shares Held": "982,169.88",
+      "Weight": "91.35%",
+      "Market Value": "997,763.83",
+      "Shares Held": "997,763.83",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
@@ -27,91 +57,21 @@
       "Name": "4ETHA 12/18/2026 C30",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "15.35%",
-      "Market Value": "178,142.10",
+      "Weight": "13.46%",
+      "Market Value": "146,998.61",
       "Shares Held": "175.00",
       "Asset Category": "Equity",
-      "Price": "1017.954857142857"
+      "Price": "839.9920571428571"
     },
     {
       "Name": "4ETHA 01/29/2027 C40",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "3.96%",
-      "Market Value": "45,916.82",
+      "Weight": "3.33%",
+      "Market Value": "36,413.19",
       "Shares Held": "112.00",
       "Asset Category": "Equity",
-      "Price": "409.9716071428571"
-    },
-    {
-      "Name": "4ETHA 11/20/2026 C48.00",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "-0.20",
-      "Shares Held": "-30.00",
-      "Asset Category": "Equity",
-      "Price": "0.006666666666666667"
-    },
-    {
-      "Name": "4ETHA 11/20/2026 C46.45",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "-0.98",
-      "Shares Held": "-30.00",
-      "Asset Category": "Equity",
-      "Price": "0.03266666666666666"
-    },
-    {
-      "Name": "4ETHA 11/20/2026 C44.90",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.00%",
-      "Market Value": "-14.94",
-      "Shares Held": "-95.00",
-      "Asset Category": "Equity",
-      "Price": "0.1572631578947368"
-    },
-    {
-      "Name": "4ETHA 11/20/2026 C41.95",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.01%",
-      "Market Value": "-136.58",
-      "Shares Held": "-30.00",
-      "Asset Category": "Equity",
-      "Price": "4.552666666666667"
-    },
-    {
-      "Name": "4ETHA 11/20/2026 C41.46",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.02%",
-      "Market Value": "-261.69",
-      "Shares Held": "-30.00",
-      "Asset Category": "Equity",
-      "Price": "8.723"
-    },
-    {
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.04%",
-      "Market Value": "-458.57",
-      "Shares Held": "-458.57",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "4ETHA 01/29/2027 P40",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-3.87%",
-      "Market Value": "-44,921.02",
-      "Shares Held": "-112.00",
-      "Asset Category": "Equity",
-      "Price": "401.0805357142857"
+      "Price": "325.1177678571429"
     }
   ]
 }

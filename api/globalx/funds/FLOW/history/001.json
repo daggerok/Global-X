@@ -2,7 +2,7 @@
   "ticker": "FLOW",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 845,
+  "totalRows": 847,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "43.78",
+      "Adj Close": "43.78",
+      "Volume": "6354"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "43.21",
+      "Adj Close": "43.21",
+      "Volume": "8500"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "42.53",
       "Adj Close": "42.53",
-      "Volume": "40004"
+      "Volume": "40000"
     },
     {
       "Date": "2026-11-19",

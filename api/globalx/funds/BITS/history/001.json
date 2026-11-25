@@ -2,7 +2,7 @@
   "ticker": "BITS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1259,
+  "totalRows": 1261,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "40.85",
+      "Adj Close": "40.85",
+      "Volume": "500"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "42.95",
+      "Adj Close": "42.95",
+      "Volume": "2900"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "39.96",
       "Adj Close": "39.96",
-      "Volume": "1367"
+      "Volume": "1400"
     },
     {
       "Date": "2026-11-19",
@@ -5997,18 +6009,6 @@
       "Close": "21.50",
       "Adj Close": "12.06",
       "Volume": "1150"
-    },
-    {
-      "Date": "2022-11-29",
-      "Close": "20.83",
-      "Adj Close": "11.68",
-      "Volume": "1950"
-    },
-    {
-      "Date": "2022-11-28",
-      "Close": "20.12",
-      "Adj Close": "11.28",
-      "Volume": "2150"
     }
   ]
 }

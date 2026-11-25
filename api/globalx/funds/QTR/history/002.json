@@ -2,7 +2,7 @@
   "ticker": "QTR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1316,
+  "totalRows": 1318,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,18 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-29",
+      "Close": "19.06",
+      "Adj Close": "15.85",
+      "Volume": "0"
+    },
+    {
+      "Date": "2022-11-28",
+      "Close": "19.12",
+      "Adj Close": "15.90",
+      "Volume": "100"
+    },
     {
       "Date": "2022-11-25",
       "Close": "19.54",

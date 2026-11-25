@@ -2,7 +2,7 @@
   "ticker": "XTR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1309,
+  "totalRows": 1311,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "27.23",
+      "Adj Close": "27.23",
+      "Volume": "500"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "27.38",
+      "Adj Close": "27.38",
+      "Volume": "5000"
+    },
+    {
       "Date": "2026-11-20",
-      "Close": "26.68",
+      "Close": "26.67",
       "Adj Close": "26.68",
-      "Volume": "3149"
+      "Volume": "3100"
     },
     {
       "Date": "2026-11-19",
@@ -5996,18 +6008,6 @@
       "Date": "2022-11-30",
       "Close": "24.29",
       "Adj Close": "16.75",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-11-29",
-      "Close": "23.61",
-      "Adj Close": "16.28",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-11-28",
-      "Close": "23.65",
-      "Adj Close": "16.31",
       "Volume": "100"
     }
   ]

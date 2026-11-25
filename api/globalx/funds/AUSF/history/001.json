@@ -2,7 +2,7 @@
   "ticker": "AUSF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2070,
+  "totalRows": 2072,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "49.76",
+      "Adj Close": "49.76",
+      "Volume": "37600"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "50.12",
+      "Adj Close": "50.12",
+      "Volume": "34300"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "48.47",
       "Adj Close": "48.47",
-      "Volume": "67873"
+      "Volume": "67900"
     },
     {
       "Date": "2026-11-19",
@@ -5997,18 +6009,6 @@
       "Close": "32.17",
       "Adj Close": "29.03",
       "Volume": "7800"
-    },
-    {
-      "Date": "2022-11-29",
-      "Close": "31.78",
-      "Adj Close": "28.68",
-      "Volume": "16800"
-    },
-    {
-      "Date": "2022-11-28",
-      "Close": "31.70",
-      "Adj Close": "28.61",
-      "Volume": "11000"
     }
   ]
 }

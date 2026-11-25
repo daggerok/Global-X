@@ -2,7 +2,7 @@
   "ticker": "SLDR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 525,
+  "totalRows": 527,
   "headers": [
     "Date",
     "Close",
@@ -11,10 +11,22 @@
   ],
   "rows": [
     {
+      "Date": "2026-11-24",
+      "Close": "49.51",
+      "Adj Close": "49.51",
+      "Volume": "13000"
+    },
+    {
+      "Date": "2026-11-23",
+      "Close": "49.47",
+      "Adj Close": "49.47",
+      "Volume": "1100"
+    },
+    {
       "Date": "2026-11-20",
       "Close": "49.54",
       "Adj Close": "49.54",
-      "Volume": "6359"
+      "Volume": "6400"
     },
     {
       "Date": "2026-11-19",

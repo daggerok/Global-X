@@ -2,7 +2,7 @@
   "ticker": "SDIV",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 116,
+  "totalRows": 118,
   "headers": [
     "Name",
     "Ticker",
@@ -14,1064 +14,324 @@
   ],
   "rows": [
     {
-      "Name": "WESTERN UNION CO",
-      "Ticker": "WU",
-      "Identifier": "B1F76F9",
+      "Name": "ORCHID ISLAND CAPITAL INC",
+      "Ticker": "ORC",
+      "Identifier": "BMYSHK2",
       "Weight": "0.76%",
-      "Market Value": "7,580,586.27",
-      "Shares Held": "1,248,861.00",
+      "Market Value": "7,486,076.16",
+      "Shares Held": "1,569,408.00",
       "Asset Category": "Equity",
-      "Price": "6.069999999999999"
+      "Price": "4.77"
     },
     {
       "Name": "STARWOOD PROPERTY TRUST INC",
       "Ticker": "STWD",
       "Identifier": "B3PQ520",
-      "Weight": "0.74%",
-      "Market Value": "7,464,600.00",
-      "Shares Held": "663,520.00",
+      "Weight": "0.76%",
+      "Market Value": "7,421,148.36",
+      "Shares Held": "652,122.00",
       "Asset Category": "Fund",
-      "Price": "11.25"
+      "Price": "11.38"
     },
     {
-      "Name": "IS YATIRIM MENKUL DEGERLER A",
-      "Ticker": "ISMEN TI",
-      "Identifier": "B1VYN42",
+      "Name": "AZZAS 2154 SA",
+      "Ticker": "AZZA3 BZ",
+      "Identifier": "BRJPLM3",
+      "Weight": "0.75%",
+      "Market Value": "7,381,876.17",
+      "Shares Held": "3,055,800.00",
+      "Asset Category": "Equity",
+      "Price": "2.415693491066169"
+    },
+    {
+      "Name": "ADAMAS TRUST INC",
+      "Ticker": "ADAM",
+      "Identifier": "BR4NQJ4",
       "Weight": "0.74%",
-      "Market Value": "7,418,161.41",
-      "Shares Held": "14,074,288.00",
-      "Asset Category": "Equity",
-      "Price": "0.5270718781653466"
+      "Market Value": "7,255,206.45",
+      "Shares Held": "1,448,145.00",
+      "Asset Category": "Fund",
+      "Price": "5.01"
     },
     {
-      "Name": "BRADESPAR SA",
-      "Ticker": "BRAP4 BZ",
-      "Identifier": "B01SCS4",
+      "Name": "MFA FINANCIAL INC",
+      "Ticker": "MFA",
+      "Identifier": "BMZM2X1",
       "Weight": "0.74%",
-      "Market Value": "7,416,308.82",
-      "Shares Held": "2,643,100.00",
+      "Market Value": "7,243,231.68",
+      "Shares Held": "1,191,321.00",
       "Asset Category": "Equity",
-      "Price": "2.805913064204911"
-    },
-    {
-      "Name": "GLOBAL NET LEASE INC",
-      "Ticker": "GNL",
-      "Identifier": "BZCFW78",
-      "Weight": "0.73%",
-      "Market Value": "7,357,958.86",
-      "Shares Held": "1,224,286.00",
-      "Asset Category": "Equity",
-      "Price": "6.010000000000001"
-    },
-    {
-      "Name": "INVESCO MORTGAGE CAPITAL",
-      "Ticker": "IVR",
-      "Identifier": "BNBV530",
-      "Weight": "0.72%",
-      "Market Value": "7,191,826.69",
-      "Shares Held": "1,380,389.00",
-      "Asset Category": "Equity",
-      "Price": "5.21"
-    },
-    {
-      "Name": "PENNYMAC MORTGAGE INVESTMENT",
-      "Ticker": "PMT",
-      "Identifier": "B3V8JL7",
-      "Weight": "0.72%",
-      "Market Value": "7,190,867.88",
-      "Shares Held": "951,173.00",
-      "Asset Category": "Equity",
-      "Price": "7.56"
+      "Price": "6.08"
     },
     {
       "Name": "FRANKLIN BSP REALTY TRUST IN",
       "Ticker": "FBRT",
       "Identifier": "BN14T59",
-      "Weight": "0.72%",
-      "Market Value": "7,189,071.04",
-      "Shares Held": "1,182,413.00",
+      "Weight": "0.74%",
+      "Market Value": "7,240,250.57",
+      "Shares Held": "1,162,159.00",
       "Asset Category": "Fund",
-      "Price": "6.08"
+      "Price": "6.23"
+    },
+    {
+      "Name": "PENNYMAC MORTGAGE INVESTMENT",
+      "Ticker": "PMT",
+      "Identifier": "B3V8JL7",
+      "Weight": "0.73%",
+      "Market Value": "7,170,337.85",
+      "Shares Held": "934,855.00",
+      "Asset Category": "Equity",
+      "Price": "7.67"
+    },
+    {
+      "Name": "BRADESPAR SA",
+      "Ticker": "BRAP4 BZ",
+      "Identifier": "B01SCS4",
+      "Weight": "0.71%",
+      "Market Value": "6,964,261.02",
+      "Shares Held": "2,593,900.00",
+      "Asset Category": "Equity",
+      "Price": "2.684861027795983"
+    },
+    {
+      "Name": "IS YATIRIM MENKUL DEGERLER A",
+      "Ticker": "ISMEN TI",
+      "Identifier": "B1VYN42",
+      "Weight": "0.71%",
+      "Market Value": "6,956,413.37",
+      "Shares Held": "13,832,634.00",
+      "Asset Category": "Equity",
+      "Price": "0.5028986793115469"
     },
     {
       "Name": "EZ TEC EMPREENDIMENTOS E PAR",
       "Ticker": "EZTC3 BZ",
       "Identifier": "B1YW5V4",
       "Weight": "0.71%",
-      "Market Value": "7,156,095.75",
-      "Shares Held": "4,576,300.00",
+      "Market Value": "6,952,059.90",
+      "Shares Held": "4,494,300.00",
       "Asset Category": "Equity",
-      "Price": "1.563729595961803"
-    },
-    {
-      "Name": "ORCHID ISLAND CAPITAL INC",
-      "Ticker": "ORC",
-      "Identifier": "BMYSHK2",
-      "Weight": "0.71%",
-      "Market Value": "7,153,278.72",
-      "Shares Held": "1,596,714.00",
-      "Asset Category": "Equity",
-      "Price": "4.48"
-    },
-    {
-      "Name": "ARMOUR RESIDENTIAL REIT INC",
-      "Ticker": "ARR",
-      "Identifier": "BRJ8H91",
-      "Weight": "0.71%",
-      "Market Value": "7,136,645.10",
-      "Shares Held": "658,970.00",
-      "Asset Category": "Equity",
-      "Price": "10.83"
-    },
-    {
-      "Name": "VALE SA",
-      "Ticker": "VALE3 BZ",
-      "Identifier": "2196286",
-      "Weight": "0.71%",
-      "Market Value": "7,135,629.85",
-      "Shares Held": "721,000.00",
-      "Asset Category": "Equity",
-      "Price": "9.89685138696255"
-    },
-    {
-      "Name": "MFA FINANCIAL INC",
-      "Ticker": "MFA",
-      "Identifier": "BMZM2X1",
-      "Weight": "0.71%",
-      "Market Value": "7,103,193.14",
-      "Shares Held": "1,212,149.00",
-      "Asset Category": "Equity",
-      "Price": "5.859999999999999"
-    },
-    {
-      "Name": "ADAMAS TRUST INC",
-      "Ticker": "ADAM",
-      "Identifier": "BR4NQJ4",
-      "Weight": "0.70%",
-      "Market Value": "6,998,654.75",
-      "Shares Held": "1,473,401.00",
-      "Asset Category": "Fund",
-      "Price": "4.75"
+      "Price": "1.546861557973433"
     },
     {
       "Name": "BRIGHTSPIRE CAPITAL INC",
       "Ticker": "BRSP",
       "Identifier": "BN7VBP8",
-      "Weight": "0.69%",
-      "Market Value": "6,882,328.88",
-      "Shares Held": "2,098,271.00",
+      "Weight": "0.68%",
+      "Market Value": "6,682,030.20",
+      "Shares Held": "2,062,355.00",
       "Asset Category": "Equity",
-      "Price": "3.28"
+      "Price": "3.24"
     },
     {
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.67%",
-      "Market Value": "6,726,050.21",
-      "Shares Held": "6,726,050.21",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "DOGUS OTOMOTIV SERVIS VE TIC",
-      "Ticker": "DOAS TI",
-      "Identifier": "B03MRJ0",
-      "Weight": "0.67%",
-      "Market Value": "6,672,505.45",
-      "Shares Held": "2,930,763.00",
+      "Name": "VALE SA",
+      "Ticker": "VALE3 BZ",
+      "Identifier": "2196286",
+      "Weight": "0.68%",
+      "Market Value": "6,624,736.84",
+      "Shares Held": "704,600.00",
       "Asset Category": "Equity",
-      "Price": "2.276712736580884"
-    },
-    {
-      "Name": "ALLWYN AG",
-      "Ticker": "ALWN GA",
-      "Identifier": "7107250",
-      "Weight": "0.65%",
-      "Market Value": "6,514,222.30",
-      "Shares Held": "610,762.00",
-      "Asset Category": "Equity",
-      "Price": "10.66572953130679"
+      "Price": "9.402124382628442"
     },
     {
       "Name": "BLACKSTONE MORTGAGE TRU-CL A",
       "Ticker": "BXMT",
       "Identifier": "B94QHZ0",
-      "Weight": "0.64%",
-      "Market Value": "6,405,606.12",
-      "Shares Held": "615,332.00",
+      "Weight": "0.67%",
+      "Market Value": "6,544,325.52",
+      "Shares Held": "604,836.00",
       "Asset Category": "Equity",
-      "Price": "10.41"
+      "Price": "10.82"
     },
     {
-      "Name": "MARCOPOLO SA",
-      "Ticker": "POMO4 BZ",
-      "Identifier": "2599131",
-      "Weight": "0.60%",
-      "Market Value": "6,064,914.41",
-      "Shares Held": "9,899,800.00",
+      "Name": "DOGUS OTOMOTIV SERVIS VE TIC",
+      "Ticker": "DOAS TI",
+      "Identifier": "B03MRJ0",
+      "Weight": "0.65%",
+      "Market Value": "6,412,476.73",
+      "Shares Held": "2,880,579.00",
       "Asset Category": "Equity",
-      "Price": "0.612629993535223"
+      "Price": "2.226106879901575"
+    },
+    {
+      "Name": "ALLWYN AG",
+      "Ticker": "ALWN GA",
+      "Identifier": "7107250",
+      "Weight": "0.64%",
+      "Market Value": "6,282,266.98",
+      "Shares Held": "600,266.00",
+      "Asset Category": "Equity",
+      "Price": "10.46580512639397"
     },
     {
       "Name": "CHIMERA INVESTMENT CORP",
       "Ticker": "CIM",
       "Identifier": "BN13RW9",
-      "Weight": "0.55%",
-      "Market Value": "5,533,459.92",
-      "Shares Held": "853,929.00",
+      "Weight": "0.59%",
+      "Market Value": "5,774,611.04",
+      "Shares Held": "839,333.00",
       "Asset Category": "Equity",
-      "Price": "6.48"
+      "Price": "6.88"
+    },
+    {
+      "Name": "MARCOPOLO SA",
+      "Ticker": "POMO4 BZ",
+      "Identifier": "2599131",
+      "Weight": "0.57%",
+      "Market Value": "5,584,717.42",
+      "Shares Held": "9,727,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.5741105123565936"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.55%",
+      "Market Value": "5,398,008.72",
+      "Shares Held": "5,398,008.72",
+      "Asset Category": "Cash",
+      "Price": "1.0"
     },
     {
       "Name": "REDWOOD TRUST INC",
       "Ticker": "RWT",
       "Identifier": "2730877",
-      "Weight": "0.49%",
-      "Market Value": "4,875,512.28",
-      "Shares Held": "1,819,221.00",
+      "Weight": "0.50%",
+      "Market Value": "4,952,701.83",
+      "Shares Held": "1,787,979.00",
       "Asset Category": "Fund",
-      "Price": "2.68"
+      "Price": "2.77"
     },
     {
       "Name": "BRILLIANCE CHINA AUTOMOTIVE",
       "Ticker": "1114 HK",
       "Identifier": "6181482",
-      "Weight": "0.47%",
-      "Market Value": "4,677,785.63",
-      "Shares Held": "22,650,300.00",
+      "Weight": "0.44%",
+      "Market Value": "4,344,176.83",
+      "Shares Held": "22,264,900.00",
       "Asset Category": "Equity",
-      "Price": "0.2065220164854329"
+      "Price": "0.1951132423680322"
     },
     {
       "Name": "QFIN HOLDINGS INC-ADR",
       "Ticker": "QFIN",
       "Identifier": "BFMV9Y2",
-      "Weight": "0.43%",
-      "Market Value": "4,278,850.14",
-      "Shares Held": "916,242.00",
+      "Weight": "0.42%",
+      "Market Value": "4,151,673.80",
+      "Shares Held": "900,580.00",
       "Asset Category": "Equity",
-      "Price": "4.67"
+      "Price": "4.609999999999999"
     },
     {
       "Name": "MSCI EM LATAM NTR DEC26",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "0.41%",
-      "Market Value": "4,163,820.00",
+      "Weight": "0.42%",
+      "Market Value": "4,114,230.00",
       "Shares Held": "58.00",
       "Asset Category": "Future",
-      "Price": "71790.0"
+      "Price": "70935.0"
     },
     {
       "Name": "GQG PARTNERS INC-CDI",
       "Ticker": "GQG AU",
       "Identifier": "BN469H4",
-      "Weight": "0.37%",
-      "Market Value": "3,736,799.80",
-      "Shares Held": "9,814,803.00",
+      "Weight": "0.38%",
+      "Market Value": "3,713,207.48",
+      "Shares Held": "9,646,785.00",
       "Asset Category": "Equity",
-      "Price": "0.3807310039743029"
+      "Price": "0.3849165789431401"
+    },
+    {
+      "Name": "BRAZILIAN REAL",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.31%",
+      "Market Value": "3,073,380.67",
+      "Shares Held": "18,040,590.88",
+      "Asset Category": "Equity",
+      "Price": "0.1703592022258641"
     },
     {
       "Name": "ARBOR REALTY TRUST INC",
       "Ticker": "ABR",
       "Identifier": "B00N2S0",
       "Weight": "0.17%",
-      "Market Value": "1,728,719.55",
-      "Shares Held": "1,557,405.00",
+      "Market Value": "1,683,830.50",
+      "Shares Held": "1,530,755.00",
       "Asset Category": "Fund",
-      "Price": "1.11"
+      "Price": "1.1"
     },
     {
-      "Name": "THAIFOODS GROUP PCL-NVDR",
-      "Ticker": "TFG-R TB",
-      "Identifier": "BYVTKN6",
-      "Weight": "1.92%",
-      "Market Value": "19,265,337.07",
-      "Shares Held": "72,555,400.00",
-      "Asset Category": "Equity",
-      "Price": "0.2655258887691336"
-    },
-    {
-      "Name": "HOEGH AUTOLINERS ASA",
-      "Ticker": "HAUTO NO",
-      "Identifier": "BMFDP24",
-      "Weight": "1.81%",
-      "Market Value": "18,132,190.79",
-      "Shares Held": "1,017,694.00",
-      "Asset Category": "Equity",
-      "Price": "17.8169378909574"
-    },
-    {
-      "Name": "VICTREX PLC",
-      "Ticker": "VCT LN",
-      "Identifier": "0929224",
-      "Weight": "1.78%",
-      "Market Value": "17,865,985.19",
-      "Shares Held": "1,491,663.00",
-      "Asset Category": "Equity",
-      "Price": "11.97722621664545"
-    },
-    {
-      "Name": "PERRIGO CO PLC",
-      "Ticker": "PRGO",
-      "Identifier": "BGH1M56",
-      "Weight": "1.76%",
-      "Market Value": "17,695,809.20",
-      "Shares Held": "1,103,230.00",
-      "Asset Category": "Equity",
-      "Price": "16.04"
-    },
-    {
-      "Name": "ROBERT HALF INC",
-      "Ticker": "RHI",
-      "Identifier": "2110703",
-      "Weight": "1.74%",
-      "Market Value": "17,451,100.80",
-      "Shares Held": "465,984.00",
-      "Asset Category": "Equity",
-      "Price": "37.45"
-    },
-    {
-      "Name": "PARK HOTELS & RESORTS INC",
-      "Ticker": "PK",
-      "Identifier": "BYVMVV0",
-      "Weight": "1.69%",
-      "Market Value": "16,907,609.25",
-      "Shares Held": "1,073,499.00",
-      "Asset Category": "Equity",
-      "Price": "15.75"
-    },
-    {
-      "Name": "VAR ENERGI ASA",
-      "Ticker": "VAR NO",
-      "Identifier": "BPLF0Y2",
-      "Weight": "1.66%",
-      "Market Value": "16,657,300.43",
-      "Shares Held": "3,395,244.00",
-      "Asset Category": "Equity",
-      "Price": "4.906068733204447"
-    },
-    {
-      "Name": "NORDIC AMERICAN TANKERS LTD",
-      "Ticker": "NAT",
-      "Identifier": "2113876",
-      "Weight": "1.63%",
-      "Market Value": "16,366,234.44",
-      "Shares Held": "2,648,258.00",
-      "Asset Category": "Equity",
-      "Price": "6.18"
-    },
-    {
-      "Name": "DNO ASA",
-      "Ticker": "DNO NO",
-      "Identifier": "B15GGN4",
-      "Weight": "1.62%",
-      "Market Value": "16,265,025.16",
-      "Shares Held": "7,479,725.00",
-      "Asset Category": "Equity",
-      "Price": "2.174548550915976"
-    },
-    {
-      "Name": "ITHACA ENERGY PLC",
-      "Ticker": "ITH LN",
-      "Identifier": "BPJHV58",
-      "Weight": "1.49%",
-      "Market Value": "14,946,711.86",
-      "Shares Held": "4,654,240.00",
-      "Asset Category": "Equity",
-      "Price": "3.211418375502767"
-    },
-    {
-      "Name": "AUTOHOME INC-ADR",
-      "Ticker": "ATHM",
-      "Identifier": "BH5QGR0",
-      "Weight": "1.43%",
-      "Market Value": "14,288,176.98",
-      "Shares Held": "687,262.00",
-      "Asset Category": "Equity",
-      "Price": "20.79"
-    },
-    {
-      "Name": "STANDARD LIFE PLC",
-      "Ticker": "SDLF LN",
-      "Identifier": "BGXQNP2",
-      "Weight": "1.40%",
-      "Market Value": "14,041,058.82",
-      "Shares Held": "1,197,228.00",
-      "Asset Category": "Equity",
-      "Price": "11.7279739698704"
-    },
-    {
-      "Name": "AKER BP ASA",
-      "Ticker": "AKRBP NO",
-      "Identifier": "B1L95G3",
-      "Weight": "1.36%",
-      "Market Value": "13,658,852.64",
-      "Shares Held": "418,223.00",
-      "Asset Category": "Equity",
-      "Price": "32.65925747747016"
-    },
-    {
-      "Name": "INTELBRAS SA INDUSTRIA DE TE",
-      "Ticker": "INTB3 BZ",
-      "Identifier": "BMZ2WR5",
-      "Weight": "1.30%",
-      "Market Value": "13,082,688.46",
-      "Shares Held": "5,029,600.00",
-      "Asset Category": "Equity",
-      "Price": "2.601138949419437"
-    },
-    {
-      "Name": "MOBILE TELECOMMUNICATIONS CO",
-      "Ticker": "ZAIN KK",
-      "Identifier": "6600084",
-      "Weight": "1.30%",
-      "Market Value": "13,004,687.99",
-      "Shares Held": "7,101,334.00",
-      "Asset Category": "Equity",
-      "Price": "1.831302117320492"
-    },
-    {
-      "Name": "INNOVATIVE INDUSTRIAL PROPER",
-      "Ticker": "IIPR",
-      "Identifier": "BD0NN55",
-      "Weight": "1.28%",
-      "Market Value": "12,810,289.70",
-      "Shares Held": "261,755.00",
-      "Asset Category": "Equity",
-      "Price": "48.94"
-    },
-    {
-      "Name": "LEGAL & GENERAL GROUP PLC",
-      "Ticker": "LGEN LN",
-      "Identifier": "0560399",
-      "Weight": "1.27%",
-      "Market Value": "12,697,418.38",
-      "Shares Held": "3,278,790.00",
-      "Asset Category": "Equity",
-      "Price": "3.872592749154414"
-    },
-    {
-      "Name": "TFS FINANCIAL CORP",
-      "Ticker": "TFSL",
-      "Identifier": "B1W8J67",
-      "Weight": "1.26%",
-      "Market Value": "12,599,525.01",
-      "Shares Held": "803,029.00",
-      "Asset Category": "Equity",
-      "Price": "15.69"
-    },
-    {
-      "Name": "SFL CORP LTD",
-      "Ticker": "SFL",
-      "Identifier": "BJXT857",
-      "Weight": "1.23%",
-      "Market Value": "12,328,065.35",
-      "Shares Held": "1,168,537.00",
-      "Asset Category": "Equity",
-      "Price": "10.55"
-    },
-    {
-      "Name": "PETROLEO BRASILEIRO SA -",
-      "Ticker": "PETR4 BZ",
-      "Identifier": "2684532",
-      "Weight": "1.23%",
-      "Market Value": "12,310,785.50",
-      "Shares Held": "1,704,800.00",
-      "Asset Category": "Equity",
-      "Price": "7.221249120131394"
-    },
-    {
-      "Name": "HALYK BANK-GDR REG S",
-      "Ticker": "HSBK LI",
-      "Identifier": "B1KDG41",
-      "Weight": "1.21%",
-      "Market Value": "12,134,672.55",
-      "Shares Held": "372,801.00",
-      "Asset Category": "Equity",
-      "Price": "32.55"
-    },
-    {
-      "Name": "ALEXANDER'S INC",
-      "Ticker": "ALX",
-      "Identifier": "2014021",
-      "Weight": "1.21%",
-      "Market Value": "12,098,956.80",
-      "Shares Held": "51,520.00",
-      "Asset Category": "Equity",
-      "Price": "234.84"
-    },
-    {
-      "Name": "METROVACESA SA",
-      "Ticker": "MVC SM",
-      "Identifier": "BFWVPW2",
-      "Weight": "1.17%",
-      "Market Value": "11,756,539.24",
-      "Shares Held": "930,893.00",
-      "Asset Category": "Equity",
-      "Price": "12.62931318637051"
-    },
-    {
-      "Name": "BB SEGURIDADE PARTICIPACOES",
-      "Ticker": "BBSE3 BZ",
-      "Identifier": "B9N3SQ0",
-      "Weight": "1.16%",
-      "Market Value": "11,652,355.49",
-      "Shares Held": "1,861,400.00",
-      "Asset Category": "Equity",
-      "Price": "6.259995428172344"
-    },
-    {
-      "Name": "ALAMTRI RESOURCES INDONESIA TBK",
-      "Ticker": "ADRO IJ",
-      "Identifier": "B3BQFC4",
-      "Weight": "1.16%",
-      "Market Value": "11,593,589.47",
-      "Shares Held": "91,149,600.00",
-      "Asset Category": "Equity",
-      "Price": "0.127192982415721"
-    },
-    {
-      "Name": "MCMILLAN SHAKESPEARE LTD",
-      "Ticker": "MMS AU",
-      "Identifier": "B00G1Q0",
-      "Weight": "1.12%",
-      "Market Value": "11,279,438.37",
-      "Shares Held": "1,016,657.00",
-      "Asset Category": "Equity",
-      "Price": "11.09463503423475"
-    },
-    {
-      "Name": "BRANDYWINE REALTY TRUST",
-      "Ticker": "BDN",
-      "Identifier": "2518954",
-      "Weight": "1.11%",
-      "Market Value": "11,178,726.52",
-      "Shares Held": "3,828,331.00",
-      "Asset Category": "Fund",
-      "Price": "2.92"
-    },
-    {
-      "Name": "BANK RAKYAT INDONESIA PERSER",
-      "Ticker": "BBRI IJ",
-      "Identifier": "6709099",
-      "Weight": "1.11%",
-      "Market Value": "11,111,802.63",
-      "Shares Held": "65,592,000.00",
-      "Asset Category": "Equity",
-      "Price": "0.1694078947127699"
-    },
-    {
-      "Name": "COSCO SHIPPING INTERNATIONAL",
-      "Ticker": "517 HK",
-      "Identifier": "6806280",
-      "Weight": "1.10%",
-      "Market Value": "11,056,660.46",
-      "Shares Held": "12,606,200.00",
-      "Asset Category": "Equity",
-      "Price": "0.8770811553045328"
-    },
-    {
-      "Name": "NATIONAL INVESTMENTS CO",
-      "Ticker": "NINV KK",
-      "Identifier": "6614717",
-      "Weight": "1.09%",
-      "Market Value": "10,910,775.38",
-      "Shares Held": "14,354,345.00",
-      "Asset Category": "Equity",
-      "Price": "0.7601026295522367"
-    },
-    {
-      "Name": "MILLROSE PROPERTIES",
-      "Ticker": "MRP",
-      "Identifier": "BRCFZ51",
-      "Weight": "1.09%",
-      "Market Value": "10,897,755.12",
-      "Shares Held": "438,718.00",
-      "Asset Category": "Equity",
-      "Price": "24.84"
-    },
-    {
-      "Name": "FLEX LNG LTD",
-      "Ticker": "FLNG",
-      "Identifier": "BH3T3L4",
-      "Weight": "1.08%",
-      "Market Value": "10,859,085.30",
-      "Shares Held": "463,074.00",
-      "Asset Category": "Equity",
-      "Price": "23.45"
-    },
-    {
-      "Name": "EASTERLY GOVERNMENT PROPERTI",
-      "Ticker": "DEA",
-      "Identifier": "BTTRRD6",
-      "Weight": "1.08%",
-      "Market Value": "10,816,282.33",
-      "Shares Held": "503,317.00",
-      "Asset Category": "Equity",
-      "Price": "21.49"
-    },
-    {
-      "Name": "BANCO DEL BAJIO SA",
-      "Ticker": "BBAJIOO MM",
-      "Identifier": "BYSX0F3",
-      "Weight": "1.08%",
-      "Market Value": "10,811,265.70",
-      "Shares Held": "3,732,400.00",
-      "Asset Category": "Equity",
-      "Price": "2.896598890794127"
-    },
-    {
-      "Name": "SANSIRI PCL-NVDR",
-      "Ticker": "SIRI-R TB",
-      "Identifier": "6363354",
-      "Weight": "1.06%",
-      "Market Value": "10,678,352.85",
-      "Shares Held": "256,697,000.00",
-      "Asset Category": "Equity",
-      "Price": "0.04159905589079732"
-    },
-    {
-      "Name": "AH REALTY TRUST INC",
-      "Ticker": "AHRT",
-      "Identifier": "B96FTB5",
-      "Weight": "1.06%",
-      "Market Value": "10,662,108.86",
-      "Shares Held": "1,745,026.00",
-      "Asset Category": "Fund",
-      "Price": "6.109999999999999"
-    },
-    {
-      "Name": "M6-METROPOLE TELEVISION",
-      "Ticker": "MMT FP",
-      "Identifier": "5993901",
-      "Weight": "1.06%",
-      "Market Value": "10,604,706.98",
-      "Shares Held": "874,677.00",
-      "Asset Category": "Equity",
-      "Price": "12.12414065992361"
-    },
-    {
-      "Name": "BANK MANDIRI PERSERO TBK PT",
-      "Ticker": "BMRI IJ",
-      "Identifier": "6651048",
-      "Weight": "1.04%",
-      "Market Value": "10,444,608.94",
-      "Shares Held": "48,723,700.00",
-      "Asset Category": "Equity",
-      "Price": "0.2143640351615333"
-    },
-    {
-      "Name": "MBRF GLOBAL FOODS COMPANY SA",
-      "Ticker": "MBRF3 BZ",
-      "Identifier": "BV8H6L2",
-      "Weight": "1.04%",
-      "Market Value": "10,424,719.11",
-      "Shares Held": "3,349,600.00",
-      "Asset Category": "Equity",
-      "Price": "3.112228060066874"
-    },
-    {
-      "Name": "VTECH HOLDINGS LTD",
-      "Ticker": "303 HK",
-      "Identifier": "6928560",
-      "Weight": "1.02%",
-      "Market Value": "10,216,904.59",
-      "Shares Held": "1,493,820.00",
-      "Asset Category": "Equity",
-      "Price": "6.839448253470967"
-    },
-    {
-      "Name": "SPARK NEW ZEALAND LTD",
-      "Ticker": "SPK NZ",
-      "Identifier": "6881436",
-      "Weight": "1.02%",
-      "Market Value": "10,199,337.97",
-      "Shares Held": "8,343,426.00",
-      "Asset Category": "Equity",
-      "Price": "1.222440034825023"
-    },
-    {
-      "Name": "ELLINGTON FINANCIAL INC",
-      "Ticker": "EFC",
-      "Identifier": "BJ7MB31",
-      "Weight": "1.01%",
-      "Market Value": "10,155,500.20",
-      "Shares Held": "929,140.00",
-      "Asset Category": "Equity",
-      "Price": "10.93"
-    },
-    {
-      "Name": "GRANITE RIDGE RESOURCES INC",
-      "Ticker": "GRNT",
-      "Identifier": "BPJKCW1",
-      "Weight": "1.01%",
-      "Market Value": "10,144,617.04",
-      "Shares Held": "1,805,092.00",
-      "Asset Category": "Equity",
-      "Price": "5.619999999999999"
-    },
-    {
-      "Name": "NETDRAGON WEBSOFT HOLDINGS L",
-      "Ticker": "777 HK",
-      "Identifier": "B28SXZ5",
-      "Weight": "1.01%",
-      "Market Value": "10,123,222.38",
-      "Shares Held": "10,400,600.00",
-      "Asset Category": "Equity",
-      "Price": "0.9733306136184452"
-    },
-    {
-      "Name": "CIA ENERGETICA DE MINAS G",
-      "Ticker": "CMIG4 BZ",
-      "Identifier": "B1YBRG0",
-      "Weight": "0.99%",
-      "Market Value": "9,915,882.18",
-      "Shares Held": "5,355,800.00",
-      "Asset Category": "Equity",
-      "Price": "1.851428765077113"
-    },
-    {
-      "Name": "EXXARO RESOURCES LTD",
-      "Ticker": "EXX SJ",
-      "Identifier": "6418801",
-      "Weight": "0.99%",
-      "Market Value": "9,903,266.15",
-      "Shares Held": "1,028,993.00",
-      "Asset Category": "Equity",
-      "Price": "9.624230825671312"
-    },
-    {
-      "Name": "HUMANSOFT HOLDING CO KSC",
-      "Ticker": "HUMANSFT KK",
-      "Identifier": "B13BYX7",
-      "Weight": "0.99%",
-      "Market Value": "9,894,772.47",
-      "Shares Held": "1,399,814.00",
-      "Asset Category": "Equity",
-      "Price": "7.06863373991116"
-    },
-    {
-      "Name": "BANCO ABC BRASIL SA",
-      "Ticker": "ABCB4 BZ",
-      "Identifier": "B23DMP8",
-      "Weight": "0.99%",
-      "Market Value": "9,886,830.66",
-      "Shares Held": "2,548,900.00",
-      "Asset Category": "Equity",
-      "Price": "3.878861728588803"
-    },
-    {
-      "Name": "PETRORECONCAVO SA",
-      "Ticker": "RECV3 BZ",
-      "Identifier": "BNC08V5",
-      "Weight": "0.99%",
-      "Market Value": "9,883,766.83",
-      "Shares Held": "5,822,800.00",
-      "Asset Category": "Equity",
-      "Price": "1.697425092738889"
-    },
-    {
-      "Name": "IPH LTD",
-      "Ticker": "IPH AU",
-      "Identifier": "BS7K5S1",
-      "Weight": "0.97%",
-      "Market Value": "9,758,962.78",
-      "Shares Held": "4,652,974.00",
-      "Asset Category": "Equity",
-      "Price": "2.097360264639347"
-    },
-    {
-      "Name": "COMMUNITY HEALTHCARE TRUST I",
-      "Ticker": "CHCT",
-      "Identifier": "BXC87C3",
-      "Weight": "0.97%",
-      "Market Value": "9,739,949.68",
-      "Shares Held": "681,592.00",
-      "Asset Category": "Fund",
-      "Price": "14.29"
-    },
-    {
-      "Name": "LADDER CAPITAL CORP-REIT",
-      "Ticker": "LADR",
-      "Identifier": "BJ367P1",
-      "Weight": "0.96%",
-      "Market Value": "9,586,026.90",
-      "Shares Held": "1,154,943.00",
-      "Asset Category": "Equity",
-      "Price": "8.3"
-    },
-    {
-      "Name": "ESR-REIT",
-      "Ticker": "EREIT SP",
-      "Identifier": "BVDJZ16",
-      "Weight": "0.95%",
-      "Market Value": "9,566,948.04",
-      "Shares Held": "6,176,900.00",
-      "Asset Category": "Equity",
-      "Price": "1.548826764234486"
-    },
-    {
-      "Name": "RITHM CAPITAL CORP",
-      "Ticker": "RITM",
-      "Identifier": "BRJ9GW0",
-      "Weight": "0.94%",
-      "Market Value": "9,400,966.56",
-      "Shares Held": "1,140,894.00",
-      "Asset Category": "Equity",
-      "Price": "8.24"
-    },
-    {
-      "Name": "VITESSE ENERGY INC",
-      "Ticker": "VTS",
-      "Identifier": "BMBX3P7",
-      "Weight": "0.92%",
-      "Market Value": "9,216,100.95",
-      "Shares Held": "633,409.00",
-      "Asset Category": "Equity",
-      "Price": "14.55"
-    },
-    {
-      "Name": "GLADSTONE COMMERCIAL CORP",
-      "Ticker": "GOOD",
-      "Identifier": "2918479",
-      "Weight": "0.91%",
-      "Market Value": "9,089,973.04",
-      "Shares Held": "950,834.00",
-      "Asset Category": "Equity",
-      "Price": "9.559999999999999"
-    },
-    {
-      "Name": "TRIPUTRA AGRO PERSADA PT",
-      "Ticker": "TAPG IJ",
-      "Identifier": "BNVTTV0",
-      "Weight": "0.91%",
-      "Market Value": "9,071,668.04",
-      "Shares Held": "94,552,700.00",
-      "Asset Category": "Equity",
-      "Price": "0.09594298248489995"
-    },
-    {
-      "Name": "GRUPO FINANCIERO BANORTE-O",
-      "Ticker": "GFNORTEO MM",
-      "Identifier": "2421041",
-      "Weight": "0.90%",
-      "Market Value": "9,003,735.01",
-      "Shares Held": "858,700.00",
-      "Asset Category": "Equity",
-      "Price": "10.48530919995342"
-    },
-    {
-      "Name": "ALPHAMIN RESOURCES CORP",
-      "Ticker": "AFM CN",
-      "Identifier": "BTGWK02",
-      "Weight": "0.88%",
-      "Market Value": "8,845,216.60",
-      "Shares Held": "11,943,963.00",
-      "Asset Category": "Equity",
-      "Price": "0.7405596115795067"
-    },
-    {
-      "Name": "ANNALY CAPITAL MANAGEMENT IN",
-      "Ticker": "NLY",
-      "Identifier": "BPMQ7X2",
-      "Weight": "0.88%",
-      "Market Value": "8,800,951.04",
-      "Shares Held": "518,924.00",
-      "Asset Category": "Equity",
-      "Price": "16.96"
-    },
-    {
-      "Name": "TPG RE FINANCE TRUST INC",
-      "Ticker": "TRTX",
-      "Identifier": "BF2F1Q0",
-      "Weight": "0.87%",
-      "Market Value": "8,696,814.48",
-      "Shares Held": "1,354,644.00",
-      "Asset Category": "Fund",
-      "Price": "6.42"
-    },
-    {
-      "Name": "BANCO DO ESTADO DO RIO GR",
-      "Ticker": "BRSR6 BZ",
-      "Identifier": "B23F8S9",
-      "Weight": "0.87%",
-      "Market Value": "8,689,600.35",
-      "Shares Held": "4,120,900.00",
-      "Asset Category": "Equity",
-      "Price": "2.10866566769395"
-    },
-    {
-      "Name": "TEGMA GESTAO LOGISTICA",
-      "Ticker": "TGMA3 BZ",
-      "Identifier": "B1ZBDK5",
-      "Weight": "0.87%",
-      "Market Value": "8,685,774.29",
-      "Shares Held": "1,575,800.00",
-      "Asset Category": "Equity",
-      "Price": "5.511977592334052"
-    },
-    {
-      "Name": "ABOU KIR FERTIL & CHEMICALS",
-      "Ticker": "ABUK EY",
-      "Identifier": "6005474",
-      "Weight": "0.86%",
-      "Market Value": "8,641,696.10",
-      "Shares Held": "6,090,834.00",
-      "Asset Category": "Equity",
-      "Price": "1.418803418382441"
-    },
-    {
-      "Name": "SUN ART RETAIL GROUP LTD",
-      "Ticker": "6808 HK",
-      "Identifier": "B3MPN59",
-      "Weight": "0.84%",
-      "Market Value": "8,429,677.98",
-      "Shares Held": "54,648,000.00",
-      "Asset Category": "Equity",
-      "Price": "0.1542540985946421"
-    },
-    {
-      "Name": "DYNEX CAPITAL INC",
-      "Ticker": "DX",
-      "Identifier": "BJN4K01",
-      "Weight": "0.84%",
-      "Market Value": "8,428,842.00",
-      "Shares Held": "855,720.00",
-      "Asset Category": "Equity",
-      "Price": "9.85"
-    },
-    {
-      "Name": "AGNC INVESTMENT CORP",
-      "Ticker": "AGNC",
-      "Identifier": "BYYHJL8",
-      "Weight": "0.83%",
-      "Market Value": "8,318,748.90",
-      "Shares Held": "1,058,365.00",
-      "Asset Category": "Equity",
-      "Price": "7.86"
-    },
-    {
-      "Name": "CURY CONSTRUTORA E INCORPORA",
-      "Ticker": "CURY3 BZ",
-      "Identifier": "BK93J35",
-      "Weight": "0.83%",
-      "Market Value": "8,278,468.93",
-      "Shares Held": "1,955,900.00",
-      "Asset Category": "Equity",
-      "Price": "4.232562467406309"
-    },
-    {
-      "Name": "GRENDENE SA",
-      "Ticker": "GRND3 BZ",
-      "Identifier": "B03L0B0",
-      "Weight": "0.82%",
-      "Market Value": "8,228,721.52",
-      "Shares Held": "13,212,800.00",
-      "Asset Category": "Equity",
-      "Price": "0.6227840821022039"
-    },
-    {
-      "Name": "YANBU CEMENT CO",
-      "Ticker": "YNCCO AB",
-      "Identifier": "B134K61",
-      "Weight": "0.81%",
-      "Market Value": "8,110,797.10",
-      "Shares Held": "2,388,165.00",
-      "Asset Category": "Equity",
-      "Price": "3.396246532379463"
-    },
-    {
-      "Name": "CORONATION FUND MANAGERS LTD",
-      "Ticker": "CML SJ",
-      "Identifier": "6622710",
-      "Weight": "0.79%",
-      "Market Value": "7,956,735.82",
-      "Shares Held": "3,605,445.00",
-      "Asset Category": "Fund",
-      "Price": "2.206866508849809"
-    },
-    {
-      "Name": "ARTISAN PARTNERS ASSET MA -A",
-      "Ticker": "APAM",
-      "Identifier": "B8FW545",
-      "Weight": "0.78%",
-      "Market Value": "7,864,626.04",
-      "Shares Held": "228,889.00",
-      "Asset Category": "Equity",
-      "Price": "34.36"
-    },
-    {
-      "Name": "ICADE",
-      "Ticker": "ICAD FP",
-      "Identifier": "4554406",
-      "Weight": "0.77%",
-      "Market Value": "7,717,446.96",
-      "Shares Held": "489,711.00",
-      "Asset Category": "Equity",
-      "Price": "15.75918645895232"
-    },
-    {
-      "Name": "AZZAS 2154 SA",
-      "Ticker": "AZZA3 BZ",
-      "Identifier": "BRJPLM3",
-      "Weight": "0.77%",
-      "Market Value": "7,707,988.05",
-      "Shares Held": "3,113,200.00",
-      "Asset Category": "Equity",
-      "Price": "2.475905194012591"
-    },
-    {
-      "Name": "BRAZILIAN REAL",
+      "Name": "KUWAIT DINAR",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "0.02%",
-      "Market Value": "242,998.17",
-      "Shares Held": "1,435,864.05",
+      "Weight": "0.04%",
+      "Market Value": "368,353.93",
+      "Shares Held": "114,889.59",
       "Asset Category": "Equity",
-      "Price": "0.1692348032531353"
+      "Price": "3.206155840577027"
+    },
+    {
+      "Name": "EGYPTIAN POUND",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.01%",
+      "Market Value": "143,783.09",
+      "Shares Held": "7,795,919.01",
+      "Asset Category": "Equity",
+      "Price": "0.01844337913407851"
+    },
+    {
+      "Name": "SAUDI RIYAL",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.01%",
+      "Market Value": "136,838.87",
+      "Shares Held": "513,501.54",
+      "Asset Category": "Equity",
+      "Price": "0.2664819077270927"
     },
     {
       "Name": "EURO",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "0.00%",
-      "Market Value": "21,441.35",
+      "Market Value": "21,418.76",
       "Shares Held": "19,524.06",
       "Asset Category": "Equity",
-      "Price": "1.098201398684495"
+      "Price": "1.097044364747906"
     },
     {
       "Name": "SOUTH AFRICAN RAND",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "0.00%",
-      "Market Value": "4,874.91",
+      "Market Value": "4,854.54",
       "Shares Held": "85,045.45",
       "Asset Category": "Equity",
-      "Price": "0.05732123235281841"
+      "Price": "0.05708171336620595"
     },
     {
       "Name": "UAE DIRHAM",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "0.00%",
-      "Market Value": "4,365.68",
+      "Market Value": "4,365.74",
       "Shares Held": "16,035.35",
       "Asset Category": "Equity",
-      "Price": "0.2722534899456514"
+      "Price": "0.2722572316787597"
     },
     {
       "Name": "THAILAND BAHT",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "0.00%",
-      "Market Value": "3,062.04",
+      "Market Value": "3,059.79",
       "Shares Held": "103,788.00",
       "Asset Category": "Equity",
-      "Price": "0.02950283269742167"
+      "Price": "0.02948115389062319"
     },
     {
       "Name": "BRITISH STERLING POUND",
@@ -1134,32 +394,22 @@
       "Price": "0.0"
     },
     {
-      "Name": "SAUDI RIYAL",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "-6.12",
-      "Shares Held": "-22.96",
-      "Asset Category": "Equity",
-      "Price": "0.2665505226480836"
-    },
-    {
       "Name": "CANADIAN DOLLAR",
       "Ticker": "-",
       "Identifier": "",
       "Weight": "-0.00%",
-      "Market Value": "-10,591.31",
+      "Market Value": "-10,590.20",
       "Shares Held": "-15,159.87",
       "Asset Category": "Equity",
-      "Price": "0.6986412152610807"
+      "Price": "0.6985679956358465"
     },
     {
       "Name": "CASH",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "-0.03%",
-      "Market Value": "-331,804.54",
-      "Shares Held": "-331,804.54",
+      "Weight": "-0.13%",
+      "Market Value": "-1,271,033.60",
+      "Shares Held": "-1,271,033.60",
       "Asset Category": "Cash",
       "Price": "1.0"
     },
@@ -1167,11 +417,781 @@
       "Name": "MSCI EAFE DEC26",
       "Ticker": "-",
       "Identifier": "",
-      "Weight": "0.16%",
-      "Market Value": "1,627,670.00",
+      "Weight": "0.17%",
+      "Market Value": "1,628,825.00",
       "Shares Held": "11.00",
       "Asset Category": "Future",
-      "Price": "147970.0"
+      "Price": "148075.0"
+    },
+    {
+      "Name": "THAIFOODS GROUP PCL-NVDR",
+      "Ticker": "TFG-R TB",
+      "Identifier": "BYVTKN6",
+      "Weight": "1.92%",
+      "Market Value": "18,880,555.90",
+      "Shares Held": "71,317,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.2647405660906485"
+    },
+    {
+      "Name": "ROBERT HALF INC",
+      "Ticker": "RHI",
+      "Identifier": "2110703",
+      "Weight": "1.82%",
+      "Market Value": "17,881,491.20",
+      "Shares Held": "458,030.00",
+      "Asset Category": "Equity",
+      "Price": "39.04"
+    },
+    {
+      "Name": "PERRIGO CO PLC",
+      "Ticker": "PRGO",
+      "Identifier": "BGH1M56",
+      "Weight": "1.75%",
+      "Market Value": "17,154,733.40",
+      "Shares Held": "1,084,370.00",
+      "Asset Category": "Equity",
+      "Price": "15.82"
+    },
+    {
+      "Name": "PARK HOTELS & RESORTS INC",
+      "Ticker": "PK",
+      "Identifier": "BYVMVV0",
+      "Weight": "1.72%",
+      "Market Value": "16,903,198.62",
+      "Shares Held": "1,055,131.00",
+      "Asset Category": "Equity",
+      "Price": "16.02"
+    },
+    {
+      "Name": "VICTREX PLC",
+      "Ticker": "VCT LN",
+      "Identifier": "0929224",
+      "Weight": "1.71%",
+      "Market Value": "16,747,665.36",
+      "Shares Held": "1,466,161.00",
+      "Asset Category": "Equity",
+      "Price": "11.42280101571383"
+    },
+    {
+      "Name": "NORDIC AMERICAN TANKERS LTD",
+      "Ticker": "NAT",
+      "Identifier": "2113876",
+      "Weight": "1.71%",
+      "Market Value": "16,736,724.16",
+      "Shares Held": "2,602,912.00",
+      "Asset Category": "Equity",
+      "Price": "6.43"
+    },
+    {
+      "Name": "HOEGH AUTOLINERS ASA",
+      "Ticker": "HAUTO NO",
+      "Identifier": "BMFDP24",
+      "Weight": "1.64%",
+      "Market Value": "16,049,907.90",
+      "Shares Held": "1,000,310.00",
+      "Asset Category": "Equity",
+      "Price": "16.04493397046916"
+    },
+    {
+      "Name": "VAR ENERGI ASA",
+      "Ticker": "VAR NO",
+      "Identifier": "BPLF0Y2",
+      "Weight": "1.55%",
+      "Market Value": "15,188,842.24",
+      "Shares Held": "3,337,106.00",
+      "Asset Category": "Equity",
+      "Price": "4.551501282848073"
+    },
+    {
+      "Name": "DNO ASA",
+      "Ticker": "DNO NO",
+      "Identifier": "B15GGN4",
+      "Weight": "1.54%",
+      "Market Value": "15,078,060.23",
+      "Shares Held": "7,351,641.00",
+      "Asset Category": "Equity",
+      "Price": "2.050978853564803"
+    },
+    {
+      "Name": "ITHACA ENERGY PLC",
+      "Ticker": "ITH LN",
+      "Identifier": "BPJHV58",
+      "Weight": "1.41%",
+      "Market Value": "13,857,667.31",
+      "Shares Held": "4,574,290.00",
+      "Asset Category": "Equity",
+      "Price": "3.029468466144473"
+    },
+    {
+      "Name": "AUTOHOME INC-ADR",
+      "Ticker": "ATHM",
+      "Identifier": "BH5QGR0",
+      "Weight": "1.41%",
+      "Market Value": "13,814,711.20",
+      "Shares Held": "675,536.00",
+      "Asset Category": "Equity",
+      "Price": "20.45"
+    },
+    {
+      "Name": "STANDARD LIFE PLC",
+      "Ticker": "SDLF LN",
+      "Identifier": "BGXQNP2",
+      "Weight": "1.38%",
+      "Market Value": "13,549,555.86",
+      "Shares Held": "1,176,728.00",
+      "Asset Category": "Equity",
+      "Price": "11.51460308584482"
+    },
+    {
+      "Name": "MOBILE TELECOMMUNICATIONS CO",
+      "Ticker": "ZAIN KK",
+      "Identifier": "6600084",
+      "Weight": "1.31%",
+      "Market Value": "12,822,950.04",
+      "Shares Held": "6,979,892.00",
+      "Asset Category": "Equity",
+      "Price": "1.837127285064009"
+    },
+    {
+      "Name": "AKER BP ASA",
+      "Ticker": "AKRBP NO",
+      "Identifier": "B1L95G3",
+      "Weight": "1.28%",
+      "Market Value": "12,584,164.72",
+      "Shares Held": "411,089.00",
+      "Asset Category": "Equity",
+      "Price": "30.61177681718558"
+    },
+    {
+      "Name": "LEGAL & GENERAL GROUP PLC",
+      "Ticker": "LGEN LN",
+      "Identifier": "0560399",
+      "Weight": "1.27%",
+      "Market Value": "12,492,400.02",
+      "Shares Held": "3,222,456.00",
+      "Asset Category": "Equity",
+      "Price": "3.876670471218226"
+    },
+    {
+      "Name": "TFS FINANCIAL CORP",
+      "Ticker": "TFSL",
+      "Identifier": "B1W8J67",
+      "Weight": "1.25%",
+      "Market Value": "12,304,454.27",
+      "Shares Held": "789,253.00",
+      "Asset Category": "Equity",
+      "Price": "15.59"
+    },
+    {
+      "Name": "SFL CORP LTD",
+      "Ticker": "SFL",
+      "Identifier": "BJXT857",
+      "Weight": "1.25%",
+      "Market Value": "12,266,289.72",
+      "Shares Held": "1,148,529.00",
+      "Asset Category": "Equity",
+      "Price": "10.68"
+    },
+    {
+      "Name": "INNOVATIVE INDUSTRIAL PROPER",
+      "Ticker": "IIPR",
+      "Identifier": "BD0NN55",
+      "Weight": "1.25%",
+      "Market Value": "12,250,006.90",
+      "Shares Held": "257,245.00",
+      "Asset Category": "Equity",
+      "Price": "47.62"
+    },
+    {
+      "Name": "INTELBRAS SA INDUSTRIA DE TE",
+      "Ticker": "INTB3 BZ",
+      "Identifier": "BMZ2WR5",
+      "Weight": "1.23%",
+      "Market Value": "12,117,200.32",
+      "Shares Held": "4,939,400.00",
+      "Asset Category": "Equity",
+      "Price": "2.45317251488035"
+    },
+    {
+      "Name": "HALYK BANK-GDR REG S",
+      "Ticker": "HSBK LI",
+      "Identifier": "B1KDG41",
+      "Weight": "1.22%",
+      "Market Value": "12,018,084.00",
+      "Shares Held": "366,405.00",
+      "Asset Category": "Equity",
+      "Price": "32.8"
+    },
+    {
+      "Name": "ALEXANDER'S INC",
+      "Ticker": "ALX",
+      "Identifier": "2014021",
+      "Weight": "1.22%",
+      "Market Value": "11,945,848.00",
+      "Shares Held": "50,618.00",
+      "Asset Category": "Equity",
+      "Price": "236.0"
+    },
+    {
+      "Name": "PETROLEO BRASILEIRO SA -",
+      "Ticker": "PETR4 BZ",
+      "Identifier": "2684532",
+      "Weight": "1.18%",
+      "Market Value": "11,550,285.78",
+      "Shares Held": "1,672,000.00",
+      "Asset Category": "Equity",
+      "Price": "6.908065657894737"
+    },
+    {
+      "Name": "ALAMTRI RESOURCES INDONESIA TBK",
+      "Ticker": "ADRO IJ",
+      "Identifier": "B3BQFC4",
+      "Weight": "1.17%",
+      "Market Value": "11,503,119.01",
+      "Shares Held": "89,591,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.1283950617022132"
+    },
+    {
+      "Name": "BB SEGURIDADE PARTICIPACOES",
+      "Ticker": "BBSE3 BZ",
+      "Identifier": "B9N3SQ0",
+      "Weight": "1.15%",
+      "Market Value": "11,283,212.29",
+      "Shares Held": "1,828,600.00",
+      "Asset Category": "Equity",
+      "Price": "6.170410308432681"
+    },
+    {
+      "Name": "MCMILLAN SHAKESPEARE LTD",
+      "Ticker": "MMS AU",
+      "Identifier": "B00G1Q0",
+      "Weight": "1.14%",
+      "Market Value": "11,146,919.15",
+      "Shares Held": "999,191.00",
+      "Asset Category": "Equity",
+      "Price": "11.15594430894594"
+    },
+    {
+      "Name": "METROVACESA SA",
+      "Ticker": "MVC SM",
+      "Identifier": "BFWVPW2",
+      "Weight": "1.13%",
+      "Market Value": "11,081,723.68",
+      "Shares Held": "914,985.00",
+      "Asset Category": "Equity",
+      "Price": "12.11137196784647"
+    },
+    {
+      "Name": "MILLROSE PROPERTIES",
+      "Ticker": "MRP",
+      "Identifier": "BRCFZ51",
+      "Weight": "1.12%",
+      "Market Value": "11,031,528.48",
+      "Shares Held": "431,256.00",
+      "Asset Category": "Equity",
+      "Price": "25.58"
+    },
+    {
+      "Name": "BANK RAKYAT INDONESIA PERSER",
+      "Ticker": "BBRI IJ",
+      "Identifier": "6709099",
+      "Weight": "1.12%",
+      "Market Value": "10,965,852.40",
+      "Shares Held": "64,468,600.00",
+      "Asset Category": "Equity",
+      "Price": "0.1700960219393627"
+    },
+    {
+      "Name": "BRANDYWINE REALTY TRUST",
+      "Ticker": "BDN",
+      "Identifier": "2518954",
+      "Weight": "1.11%",
+      "Market Value": "10,950,263.07",
+      "Shares Held": "3,762,977.00",
+      "Asset Category": "Fund",
+      "Price": "2.91"
+    },
+    {
+      "Name": "FLEX LNG LTD",
+      "Ticker": "FLNG",
+      "Identifier": "BH3T3L4",
+      "Weight": "1.11%",
+      "Market Value": "10,922,880.00",
+      "Shares Held": "455,120.00",
+      "Asset Category": "Equity",
+      "Price": "24.0"
+    },
+    {
+      "Name": "AH REALTY TRUST INC",
+      "Ticker": "AHRT",
+      "Identifier": "B96FTB5",
+      "Weight": "1.11%",
+      "Market Value": "10,908,532.08",
+      "Shares Held": "1,715,178.00",
+      "Asset Category": "Fund",
+      "Price": "6.36"
+    },
+    {
+      "Name": "EASTERLY GOVERNMENT PROPERTI",
+      "Ticker": "DEA",
+      "Identifier": "BTTRRD6",
+      "Weight": "1.11%",
+      "Market Value": "10,883,554.00",
+      "Shares Held": "494,707.00",
+      "Asset Category": "Equity",
+      "Price": "22.0"
+    },
+    {
+      "Name": "BANCO DEL BAJIO SA",
+      "Ticker": "BBAJIOO MM",
+      "Identifier": "BYSX0F3",
+      "Weight": "1.07%",
+      "Market Value": "10,527,823.60",
+      "Shares Held": "3,666,800.00",
+      "Asset Category": "Equity",
+      "Price": "2.871120213810407"
+    },
+    {
+      "Name": "BANK MANDIRI PERSERO TBK PT",
+      "Ticker": "BMRI IJ",
+      "Identifier": "6651048",
+      "Weight": "1.07%",
+      "Market Value": "10,483,968.56",
+      "Shares Held": "47,887,300.00",
+      "Asset Category": "Equity",
+      "Price": "0.2189300411591383"
+    },
+    {
+      "Name": "M6-METROPOLE TELEVISION",
+      "Ticker": "MMT FP",
+      "Identifier": "5993901",
+      "Weight": "1.07%",
+      "Market Value": "10,468,381.09",
+      "Shares Held": "859,671.00",
+      "Asset Category": "Equity",
+      "Price": "12.17719463608753"
+    },
+    {
+      "Name": "SANSIRI PCL-NVDR",
+      "Ticker": "SIRI-R TB",
+      "Identifier": "6363354",
+      "Weight": "1.06%",
+      "Market Value": "10,414,076.65",
+      "Shares Held": "252,318,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.04127358490192146"
+    },
+    {
+      "Name": "ELLINGTON FINANCIAL INC",
+      "Ticker": "EFC",
+      "Identifier": "BJ7MB31",
+      "Weight": "1.06%",
+      "Market Value": "10,410,844.80",
+      "Shares Held": "913,232.00",
+      "Asset Category": "Equity",
+      "Price": "11.4"
+    },
+    {
+      "Name": "NATIONAL INVESTMENTS CO",
+      "Ticker": "NINV KK",
+      "Identifier": "6614717",
+      "Weight": "1.05%",
+      "Market Value": "10,358,844.74",
+      "Shares Held": "14,108,837.00",
+      "Asset Category": "Equity",
+      "Price": "0.7342096829100797"
+    },
+    {
+      "Name": "COSCO SHIPPING INTERNATIONAL",
+      "Ticker": "517 HK",
+      "Identifier": "6806280",
+      "Weight": "1.05%",
+      "Market Value": "10,328,026.81",
+      "Shares Held": "12,393,000.00",
+      "Asset Category": "Equity",
+      "Price": "0.833375842007585"
+    },
+    {
+      "Name": "MBRF GLOBAL FOODS COMPANY SA",
+      "Ticker": "MBRF3 BZ",
+      "Identifier": "BV8H6L2",
+      "Weight": "1.04%",
+      "Market Value": "10,263,675.16",
+      "Shares Held": "3,292,200.00",
+      "Asset Category": "Equity",
+      "Price": "3.117573403802928"
+    },
+    {
+      "Name": "BANCO ABC BRASIL SA",
+      "Ticker": "ABCB4 BZ",
+      "Identifier": "B23DMP8",
+      "Weight": "1.02%",
+      "Market Value": "9,976,143.75",
+      "Shares Held": "2,507,900.00",
+      "Asset Category": "Equity",
+      "Price": "3.977887375892181"
+    },
+    {
+      "Name": "EXXARO RESOURCES LTD",
+      "Ticker": "EXX SJ",
+      "Identifier": "6418801",
+      "Weight": "1.01%",
+      "Market Value": "9,900,749.45",
+      "Shares Held": "1,011,363.00",
+      "Asset Category": "Equity",
+      "Price": "9.789511233849764"
+    },
+    {
+      "Name": "GRANITE RIDGE RESOURCES INC",
+      "Ticker": "GRNT",
+      "Identifier": "BPJKCW1",
+      "Weight": "1.01%",
+      "Market Value": "9,882,171.46",
+      "Shares Held": "1,774,178.00",
+      "Asset Category": "Equity",
+      "Price": "5.57"
+    },
+    {
+      "Name": "VTECH HOLDINGS LTD",
+      "Ticker": "303 HK",
+      "Identifier": "6928560",
+      "Weight": "1.00%",
+      "Market Value": "9,864,623.67",
+      "Shares Held": "1,469,220.00",
+      "Asset Category": "Equity",
+      "Price": "6.714190978886756"
+    },
+    {
+      "Name": "LADDER CAPITAL CORP-REIT",
+      "Ticker": "LADR",
+      "Identifier": "BJ367P1",
+      "Weight": "1.00%",
+      "Market Value": "9,818,606.35",
+      "Shares Held": "1,135,099.00",
+      "Asset Category": "Equity",
+      "Price": "8.65"
+    },
+    {
+      "Name": "COMMUNITY HEALTHCARE TRUST I",
+      "Ticker": "CHCT",
+      "Identifier": "BXC87C3",
+      "Weight": "1.00%",
+      "Market Value": "9,787,940.28",
+      "Shares Held": "669,948.00",
+      "Asset Category": "Fund",
+      "Price": "14.61"
+    },
+    {
+      "Name": "RITHM CAPITAL CORP",
+      "Ticker": "RITM",
+      "Identifier": "BRJ9GW0",
+      "Weight": "0.99%",
+      "Market Value": "9,723,058.20",
+      "Shares Held": "1,121,460.00",
+      "Asset Category": "Equity",
+      "Price": "8.67"
+    },
+    {
+      "Name": "CIA ENERGETICA DE MINAS G",
+      "Ticker": "CMIG4 BZ",
+      "Identifier": "B1YBRG0",
+      "Weight": "0.99%",
+      "Market Value": "9,706,009.76",
+      "Shares Held": "5,265,600.00",
+      "Asset Category": "Equity",
+      "Price": "1.843286569431784"
+    },
+    {
+      "Name": "HUMANSOFT HOLDING CO KSC",
+      "Ticker": "HUMANSFT KK",
+      "Identifier": "B13BYX7",
+      "Weight": "0.98%",
+      "Market Value": "9,659,493.88",
+      "Shares Held": "1,375,706.00",
+      "Asset Category": "Equity",
+      "Price": "7.021481246719866"
+    },
+    {
+      "Name": "NETDRAGON WEBSOFT HOLDINGS L",
+      "Ticker": "777 HK",
+      "Identifier": "B28SXZ5",
+      "Weight": "0.98%",
+      "Market Value": "9,579,482.50",
+      "Shares Held": "10,220,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.9373087121582748"
+    },
+    {
+      "Name": "PETRORECONCAVO SA",
+      "Ticker": "RECV3 BZ",
+      "Identifier": "BNC08V5",
+      "Weight": "0.97%",
+      "Market Value": "9,576,505.42",
+      "Shares Held": "5,724,400.00",
+      "Asset Category": "Equity",
+      "Price": "1.672927367060303"
+    },
+    {
+      "Name": "SPARK NEW ZEALAND LTD",
+      "Ticker": "SPK NZ",
+      "Identifier": "6881436",
+      "Weight": "0.97%",
+      "Market Value": "9,570,716.59",
+      "Shares Held": "8,200,172.00",
+      "Asset Category": "Equity",
+      "Price": "1.167136078365185"
+    },
+    {
+      "Name": "IPH LTD",
+      "Ticker": "IPH AU",
+      "Identifier": "BS7K5S1",
+      "Weight": "0.95%",
+      "Market Value": "9,378,632.52",
+      "Shares Held": "4,573,434.00",
+      "Asset Category": "Equity",
+      "Price": "2.050676257709196"
+    },
+    {
+      "Name": "ESR-REIT",
+      "Ticker": "EREIT SP",
+      "Identifier": "BVDJZ16",
+      "Weight": "0.93%",
+      "Market Value": "9,134,643.19",
+      "Shares Held": "6,070,300.00",
+      "Asset Category": "Equity",
+      "Price": "1.504809184060096"
+    },
+    {
+      "Name": "ALPHAMIN RESOURCES CORP",
+      "Ticker": "AFM CN",
+      "Identifier": "BTGWK02",
+      "Weight": "0.93%",
+      "Market Value": "9,103,086.35",
+      "Shares Held": "11,739,701.00",
+      "Asset Category": "Equity",
+      "Price": "0.77541040866373"
+    },
+    {
+      "Name": "ANNALY CAPITAL MANAGEMENT IN",
+      "Ticker": "NLY",
+      "Identifier": "BPMQ7X2",
+      "Weight": "0.91%",
+      "Market Value": "8,945,154.44",
+      "Shares Held": "509,986.00",
+      "Asset Category": "Equity",
+      "Price": "17.54"
+    },
+    {
+      "Name": "GLADSTONE COMMERCIAL CORP",
+      "Ticker": "GOOD",
+      "Identifier": "2918479",
+      "Weight": "0.90%",
+      "Market Value": "8,849,866.52",
+      "Shares Held": "934,516.00",
+      "Asset Category": "Equity",
+      "Price": "9.469999999999999"
+    },
+    {
+      "Name": "TPG RE FINANCE TRUST INC",
+      "Ticker": "TRTX",
+      "Identifier": "BF2F1Q0",
+      "Weight": "0.90%",
+      "Market Value": "8,840,203.84",
+      "Shares Held": "1,331,356.00",
+      "Asset Category": "Fund",
+      "Price": "6.64"
+    },
+    {
+      "Name": "VITESSE ENERGY INC",
+      "Ticker": "VTS",
+      "Identifier": "BMBX3P7",
+      "Weight": "0.90%",
+      "Market Value": "8,803,351.90",
+      "Shares Held": "622,585.00",
+      "Asset Category": "Equity",
+      "Price": "14.14"
+    },
+    {
+      "Name": "TRIPUTRA AGRO PERSADA PT",
+      "Ticker": "TAPG IJ",
+      "Identifier": "BNVTTV0",
+      "Weight": "0.89%",
+      "Market Value": "8,720,042.96",
+      "Shares Held": "92,937,300.00",
+      "Asset Category": "Equity",
+      "Price": "0.09382716046194586"
+    },
+    {
+      "Name": "GRUPO FINANCIERO BANORTE-O",
+      "Ticker": "GFNORTEO MM",
+      "Identifier": "2421041",
+      "Weight": "0.88%",
+      "Market Value": "8,667,186.59",
+      "Shares Held": "842,300.00",
+      "Asset Category": "Equity",
+      "Price": "10.28990453520123"
+    },
+    {
+      "Name": "TEGMA GESTAO LOGISTICA",
+      "Ticker": "TGMA3 BZ",
+      "Identifier": "B1ZBDK5",
+      "Weight": "0.87%",
+      "Market Value": "8,519,780.92",
+      "Shares Held": "1,551,200.00",
+      "Asset Category": "Equity",
+      "Price": "5.492380685920578"
+    },
+    {
+      "Name": "AGNC INVESTMENT CORP",
+      "Ticker": "AGNC",
+      "Identifier": "BYYHJL8",
+      "Weight": "0.86%",
+      "Market Value": "8,488,382.88",
+      "Shares Held": "1,040,243.00",
+      "Asset Category": "Equity",
+      "Price": "8.16"
+    },
+    {
+      "Name": "BANCO DO ESTADO DO RIO GR",
+      "Ticker": "BRSR6 BZ",
+      "Identifier": "B23F8S9",
+      "Weight": "0.86%",
+      "Market Value": "8,480,366.95",
+      "Shares Held": "4,047,100.00",
+      "Asset Category": "Equity",
+      "Price": "2.095418188332386"
+    },
+    {
+      "Name": "DYNEX CAPITAL INC",
+      "Ticker": "DX",
+      "Identifier": "BJN4K01",
+      "Weight": "0.86%",
+      "Market Value": "8,444,061.68",
+      "Shares Held": "841,042.00",
+      "Asset Category": "Equity",
+      "Price": "10.04"
+    },
+    {
+      "Name": "GRENDENE SA",
+      "Ticker": "GRND3 BZ",
+      "Identifier": "B03L0B0",
+      "Weight": "0.85%",
+      "Market Value": "8,360,632.71",
+      "Shares Held": "12,983,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.6439577846755807"
+    },
+    {
+      "Name": "CURY CONSTRUTORA E INCORPORA",
+      "Ticker": "CURY3 BZ",
+      "Identifier": "BK93J35",
+      "Weight": "0.84%",
+      "Market Value": "8,288,729.89",
+      "Shares Held": "1,923,100.00",
+      "Asset Category": "Equity",
+      "Price": "4.310087821746139"
+    },
+    {
+      "Name": "ABOU KIR FERTIL & CHEMICALS",
+      "Ticker": "ABUK EY",
+      "Identifier": "6005474",
+      "Weight": "0.83%",
+      "Market Value": "8,138,122.35",
+      "Shares Held": "5,986,284.00",
+      "Asset Category": "Equity",
+      "Price": "1.359461453883578"
+    },
+    {
+      "Name": "CORONATION FUND MANAGERS LTD",
+      "Ticker": "CML SJ",
+      "Identifier": "6622710",
+      "Weight": "0.80%",
+      "Market Value": "7,882,865.50",
+      "Shares Held": "3,543,699.00",
+      "Asset Category": "Fund",
+      "Price": "2.224473777259299"
+    },
+    {
+      "Name": "GLOBAL NET LEASE INC",
+      "Ticker": "GNL",
+      "Identifier": "BZCFW78",
+      "Weight": "0.80%",
+      "Market Value": "7,833,977.76",
+      "Shares Held": "1,203,376.00",
+      "Asset Category": "Equity",
+      "Price": "6.51"
+    },
+    {
+      "Name": "YANBU CEMENT CO",
+      "Ticker": "YNCCO AB",
+      "Identifier": "B134K61",
+      "Weight": "0.79%",
+      "Market Value": "7,767,338.79",
+      "Shares Held": "2,346,837.00",
+      "Asset Category": "Equity",
+      "Price": "3.309705271392943"
+    },
+    {
+      "Name": "ARTISAN PARTNERS ASSET MA -A",
+      "Ticker": "APAM",
+      "Identifier": "B8FW545",
+      "Weight": "0.78%",
+      "Market Value": "7,688,893.54",
+      "Shares Held": "224,953.00",
+      "Asset Category": "Equity",
+      "Price": "34.18"
+    },
+    {
+      "Name": "WESTERN UNION CO",
+      "Ticker": "WU",
+      "Identifier": "B1F76F9",
+      "Weight": "0.78%",
+      "Market Value": "7,634,794.98",
+      "Shares Held": "1,227,459.00",
+      "Asset Category": "Equity",
+      "Price": "6.220000000000001"
+    },
+    {
+      "Name": "INVESCO MORTGAGE CAPITAL",
+      "Ticker": "IVR",
+      "Identifier": "BNBV530",
+      "Weight": "0.77%",
+      "Market Value": "7,597,928.80",
+      "Shares Held": "1,356,773.00",
+      "Asset Category": "Equity",
+      "Price": "5.6"
+    },
+    {
+      "Name": "ICADE",
+      "Ticker": "ICAD FP",
+      "Identifier": "4554406",
+      "Weight": "0.77%",
+      "Market Value": "7,556,525.85",
+      "Shares Held": "481,347.00",
+      "Asset Category": "Equity",
+      "Price": "15.69870768904761"
+    },
+    {
+      "Name": "ARMOUR RESIDENTIAL REIT INC",
+      "Ticker": "ARR",
+      "Identifier": "BRJ8H91",
+      "Weight": "0.77%",
+      "Market Value": "7,546,124.40",
+      "Shares Held": "647,736.00",
+      "Asset Category": "Equity",
+      "Price": "11.65"
+    },
+    {
+      "Name": "SUN ART RETAIL GROUP LTD",
+      "Ticker": "6808 HK",
+      "Identifier": "B3MPN59",
+      "Weight": "0.77%",
+      "Market Value": "7,534,753.11",
+      "Shares Held": "53,713,200.00",
+      "Asset Category": "Equity",
+      "Price": "0.1402774943589285"
     }
   ]
 }
