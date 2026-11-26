@@ -2,7 +2,7 @@
   "ticker": "BKCH",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1349,
+  "totalRows": 1350,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-25",
+      "Close": "36.12",
+      "Adj Close": "36.12",
+      "Volume": "66000"
+    },
     {
       "Date": "2026-11-24",
       "Close": "35.72",
@@ -6003,12 +6009,6 @@
       "Close": "16.64",
       "Adj Close": "14.85",
       "Volume": "17725"
-    },
-    {
-      "Date": "2022-11-30",
-      "Close": "16.52",
-      "Adj Close": "14.74",
-      "Volume": "22000"
     }
   ]
 }

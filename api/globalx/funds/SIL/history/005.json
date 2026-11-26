@@ -2,7 +2,7 @@
   "ticker": "SIL",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4177,
+  "totalRows": 4178,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-12-30",
+      "Close": "79.59",
+      "Adj Close": "67.29",
+      "Volume": "215500"
+    },
     {
       "Date": "2010-12-29",
       "Close": "80.01",

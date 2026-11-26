@@ -2,7 +2,7 @@
   "ticker": "DTCR",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1525,
+  "totalRows": 1526,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-25",
+      "Close": "22.87",
+      "Adj Close": "22.87",
+      "Volume": "1145200"
+    },
     {
       "Date": "2026-11-24",
       "Close": "22.82",
@@ -6003,12 +6009,6 @@
       "Close": "13.51",
       "Adj Close": "12.65",
       "Volume": "21900"
-    },
-    {
-      "Date": "2022-11-30",
-      "Close": "13.44",
-      "Adj Close": "12.59",
-      "Volume": "30600"
     }
   ]
 }

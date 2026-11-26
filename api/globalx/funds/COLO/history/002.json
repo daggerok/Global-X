@@ -2,7 +2,7 @@
   "ticker": "COLO",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4477,
+  "totalRows": 4478,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-30",
+      "Close": "20.81",
+      "Adj Close": "16.04",
+      "Volume": "19800"
+    },
     {
       "Date": "2022-11-29",
       "Close": "20.76",
@@ -6003,12 +6009,6 @@
       "Close": "34.56",
       "Adj Close": "22.30",
       "Volume": "8375"
-    },
-    {
-      "Date": "2018-12-11",
-      "Close": "34.32",
-      "Adj Close": "22.15",
-      "Volume": "12100"
     }
   ]
 }

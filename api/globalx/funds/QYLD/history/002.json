@@ -2,7 +2,7 @@
   "ticker": "QYLD",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3257,
+  "totalRows": 3258,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-30",
+      "Close": "16.58",
+      "Adj Close": "10.20",
+      "Volume": "4691100"
+    },
     {
       "Date": "2022-11-29",
       "Close": "16.27",
@@ -6003,12 +6009,6 @@
       "Close": "23.20",
       "Adj Close": "8.96",
       "Volume": "197300"
-    },
-    {
-      "Date": "2018-12-11",
-      "Close": "23.04",
-      "Adj Close": "8.89",
-      "Volume": "207500"
     }
   ]
 }

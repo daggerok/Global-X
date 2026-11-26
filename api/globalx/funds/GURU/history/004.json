@@ -2,7 +2,7 @@
   "ticker": "GURU",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3640,
+  "totalRows": 3641,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-19",
+      "Close": "26.37",
+      "Adj Close": "24.51",
+      "Volume": "120800"
+    },
     {
       "Date": "2014-12-18",
       "Close": "26.13",

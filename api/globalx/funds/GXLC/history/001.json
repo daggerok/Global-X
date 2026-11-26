@@ -2,7 +2,7 @@
   "ticker": "GXLC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 295,
+  "totalRows": 296,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-25",
+      "Close": "86.19",
+      "Adj Close": "86.19",
+      "Volume": "500"
+    },
     {
       "Date": "2026-11-24",
       "Close": "86.25",

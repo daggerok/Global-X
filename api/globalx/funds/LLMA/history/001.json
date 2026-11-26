@@ -2,7 +2,7 @@
   "ticker": "LLMA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 39,
+  "totalRows": 40,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-25",
+      "Close": "18.44",
+      "Adj Close": "18.44",
+      "Volume": "3100"
+    },
     {
       "Date": "2026-11-24",
       "Close": "18.51",

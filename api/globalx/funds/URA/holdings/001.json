@@ -2,7 +2,7 @@
   "ticker": "URA",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 62,
+  "totalRows": 61,
   "headers": [
     "Name",
     "Ticker",
@@ -14,364 +14,604 @@
   ],
   "rows": [
     {
+      "Name": "ENCORE ENERGY CORP",
+      "Ticker": "EU CN",
+      "Identifier": "BN48958",
+      "Weight": "0.15%",
+      "Market Value": "5,951,593.85",
+      "Shares Held": "11,298,109.00",
+      "Asset Category": "Equity",
+      "Price": "0.5267778749523482"
+    },
+    {
+      "Name": "GLOBAL ATOMIC CORP",
+      "Ticker": "GLO CN",
+      "Identifier": "BF11BK3",
+      "Weight": "0.15%",
+      "Market Value": "5,759,077.54",
+      "Shares Held": "27,794,870.00",
+      "Asset Category": "Equity",
+      "Price": "0.2071992975682203"
+    },
+    {
+      "Name": "MEGA URANIUM LTD",
+      "Ticker": "MGA CN",
+      "Identifier": "2817833",
+      "Weight": "0.14%",
+      "Market Value": "5,411,079.48",
+      "Shares Held": "20,010,453.00",
+      "Asset Category": "Equity",
+      "Price": "0.2704126428322238"
+    },
+    {
+      "Name": "ALLIGATOR ENERGY LTD",
+      "Ticker": "AGE AU",
+      "Identifier": "B55ZH25",
+      "Weight": "0.12%",
+      "Market Value": "4,427,314.05",
+      "Shares Held": "231,997,363.00",
+      "Asset Category": "Equity",
+      "Price": "0.01908346712544315"
+    },
+    {
+      "Name": "LOTUS RESOURCES LTD",
+      "Ticker": "LOT AU",
+      "Identifier": "BK6XLC1",
+      "Weight": "0.09%",
+      "Market Value": "3,253,713.01",
+      "Shares Held": "29,085,132.00",
+      "Asset Category": "Equity",
+      "Price": "0.1118686004244368"
+    },
+    {
+      "Name": "LARAMIDE RESOURCES",
+      "Ticker": "LAM CN",
+      "Identifier": "2507952",
+      "Weight": "0.08%",
+      "Market Value": "3,156,927.58",
+      "Shares Held": "12,147,772.00",
+      "Asset Category": "Equity",
+      "Price": "0.2598770852795064"
+    },
+    {
+      "Name": "ELEVATE URANIUM LTD",
+      "Ticker": "EL8 AU",
+      "Identifier": "BM8ZH21",
+      "Weight": "0.08%",
+      "Market Value": "3,024,390.30",
+      "Shares Held": "24,189,392.00",
+      "Asset Category": "Equity",
+      "Price": "0.1250296121539557"
+    },
+    {
+      "Name": "ATOMIC EAGLE LTD",
+      "Ticker": "AEU AU",
+      "Identifier": "BSQM0M7",
+      "Weight": "0.07%",
+      "Market Value": "2,767,247.70",
+      "Shares Held": "15,574,890.00",
+      "Asset Category": "Equity",
+      "Price": "0.1776736593324255"
+    },
+    {
+      "Name": "AMERICAN LITHIUM CORP",
+      "Ticker": "LI CN",
+      "Identifier": "BF4XHL9",
+      "Weight": "0.06%",
+      "Market Value": "2,454,872.17",
+      "Shares Held": "13,980,497.00",
+      "Asset Category": "Equity",
+      "Price": "0.175592625212108"
+    },
+    {
+      "Name": "TERRA INNOVATUM GLOBAL NV",
+      "Ticker": "NKLR",
+      "Identifier": "BVBQSY3",
+      "Weight": "0.06%",
+      "Market Value": "2,436,007.77",
+      "Shares Held": "1,288,893.00",
+      "Asset Category": "Equity",
+      "Price": "1.89"
+    },
+    {
+      "Name": "PENINSULA ENERGY LTD",
+      "Ticker": "PEN AU",
+      "Identifier": "6486381",
+      "Weight": "0.06%",
+      "Market Value": "2,362,422.36",
+      "Shares Held": "22,437,697.00",
+      "Asset Category": "Equity",
+      "Price": "0.1052880944064803"
+    },
+    {
+      "Name": "AURA ENERGY LTD",
+      "Ticker": "AEE AU",
+      "Identifier": "B14Z2S9",
+      "Weight": "0.06%",
+      "Market Value": "2,286,628.25",
+      "Shares Held": "55,156,377.00",
+      "Asset Category": "Equity",
+      "Price": "0.04145718726231783"
+    },
+    {
+      "Name": "ASARIAN ENERGY LTD",
+      "Ticker": "ARN CN",
+      "Identifier": "BV87YW9",
+      "Weight": "0.06%",
+      "Market Value": "2,282,932.70",
+      "Shares Held": "9,849,471.00",
+      "Asset Category": "Equity",
+      "Price": "0.2317822652607435"
+    },
+    {
+      "Name": "SKYHARBOUR RESOURCES LTD",
+      "Ticker": "SYH CN",
+      "Identifier": "BDFGHL3",
+      "Weight": "0.06%",
+      "Market Value": "2,262,408.91",
+      "Shares Held": "12,155,112.00",
+      "Asset Category": "Equity",
+      "Price": "0.1861281829406426"
+    },
+    {
+      "Name": "EAGLE NUCLEAR ENERGY CORP",
+      "Ticker": "NUCL",
+      "Identifier": "BSRFLX3",
+      "Weight": "0.06%",
+      "Market Value": "2,220,984.00",
+      "Shares Held": "925,410.00",
+      "Asset Category": "Equity",
+      "Price": "2.4"
+    },
+    {
+      "Name": "CASH",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.06%",
+      "Market Value": "2,184,565.76",
+      "Shares Held": "2,184,565.76",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
+      "Name": "CANALASKA URANIUM LTD",
+      "Ticker": "CVV CN",
+      "Identifier": "BR1YTV3",
+      "Weight": "0.05%",
+      "Market Value": "1,836,925.57",
+      "Shares Held": "12,453,918.00",
+      "Asset Category": "Equity",
+      "Price": "0.1474978051084004"
+    },
+    {
+      "Name": "ANFIELD ENERGY INC",
+      "Ticker": "AEC CN",
+      "Identifier": "BRT7VZ2",
+      "Weight": "0.04%",
+      "Market Value": "1,646,954.03",
+      "Shares Held": "689,662.00",
+      "Asset Category": "Equity",
+      "Price": "2.388059701708953"
+    },
+    {
+      "Name": "CAULDRON ENERGY LTD",
+      "Ticker": "CXU AU",
+      "Identifier": "B04D4W4",
+      "Weight": "0.04%",
+      "Market Value": "1,645,237.02",
+      "Shares Held": "54,351,478.00",
+      "Asset Category": "Equity",
+      "Price": "0.03027032714731327"
+    },
+    {
+      "Name": "F3 URANIUM CORP",
+      "Ticker": "FUU CN",
+      "Identifier": "BMW5VG9",
+      "Weight": "0.04%",
+      "Market Value": "1,644,618.88",
+      "Shares Held": "36,023,479.00",
+      "Asset Category": "Equity",
+      "Price": "0.04565408243884495"
+    },
+    {
+      "Name": "ANSON RESOURCES LTD",
+      "Ticker": "ASN AU",
+      "Identifier": "BD8PFL3",
+      "Weight": "0.04%",
+      "Market Value": "1,483,647.06",
+      "Shares Held": "72,729,336.00",
+      "Asset Category": "Equity",
+      "Price": "0.02039956833924622"
+    },
+    {
+      "Name": "VERDERA ENERGY CORP",
+      "Ticker": "V CN",
+      "Identifier": "BR1FDY7",
+      "Weight": "0.01%",
+      "Market Value": "206,152.37",
+      "Shares Held": "1,630,608.00",
+      "Asset Category": "Equity",
+      "Price": "0.1264266886952597"
+    },
+    {
+      "Name": "VERDERA ENERGY CORP",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.00%",
+      "Market Value": "51,546.31",
+      "Shares Held": "407,717.00",
+      "Asset Category": "Equity",
+      "Price": "0.1264266881194554"
+    },
+    {
+      "Name": "OTHER PAYABLE & RECEIVABLES",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "-0.01%",
+      "Market Value": "-286,850.54",
+      "Shares Held": "-286,850.54",
+      "Asset Category": "Cash",
+      "Price": "1.0"
+    },
+    {
       "Name": "CAMECO CORP",
       "Ticker": "CCO CN",
       "Identifier": "2166160",
-      "Weight": "21.78%",
-      "Market Value": "844,254,109.14",
+      "Weight": "22.69%",
+      "Market Value": "870,454,246.76",
       "Shares Held": "14,174,874.00",
       "Asset Category": "Equity",
-      "Price": "59.55990220018887"
+      "Price": "61.40825285360561"
     },
     {
       "Name": "SPROTT PHYSICAL URANIUM TR",
       "Ticker": "U-U CN",
       "Identifier": "BNZKG52",
-      "Weight": "9.46%",
-      "Market Value": "366,456,312.12",
+      "Weight": "9.38%",
+      "Market Value": "359,859,128.92",
       "Shares Held": "20,387,960.00",
       "Asset Category": "Equity",
-      "Price": "17.97415298637039"
+      "Price": "17.65057067602644"
     },
     {
       "Name": "NEXGEN ENERGY LTD",
       "Ticker": "NXE CN",
       "Identifier": "B987K72",
-      "Weight": "6.43%",
-      "Market Value": "249,299,190.53",
+      "Weight": "6.63%",
+      "Market Value": "254,255,384.83",
       "Shares Held": "36,602,235.00",
       "Asset Category": "Equity",
-      "Price": "6.811037373264228"
+      "Price": "6.94644424937439"
     },
     {
       "Name": "NAC KAZATOMPROM JSC-GDR REGS",
       "Ticker": "KAP LI",
       "Identifier": "BGXQL36",
-      "Weight": "5.47%",
-      "Market Value": "211,907,609.20",
+      "Weight": "4.97%",
+      "Market Value": "190,831,807.20",
       "Shares Held": "3,831,964.00",
       "Asset Category": "Equity",
-      "Price": "55.3"
+      "Price": "49.8"
     },
     {
       "Name": "OKLO INC",
       "Ticker": "OKLO",
       "Identifier": "BMD78K7",
-      "Weight": "4.28%",
-      "Market Value": "166,003,180.80",
+      "Weight": "4.39%",
+      "Market Value": "168,337,600.53",
       "Shares Held": "8,645,999.00",
       "Asset Category": "Equity",
-      "Price": "19.2"
+      "Price": "19.47"
     },
     {
       "Name": "URANIUM ENERGY CORP",
       "Ticker": "UEC",
       "Identifier": "B0VLLY2",
-      "Weight": "3.97%",
-      "Market Value": "153,727,042.70",
+      "Weight": "4.09%",
+      "Market Value": "157,038,935.90",
       "Shares Held": "27,599,110.00",
       "Asset Category": "Equity",
-      "Price": "5.569999999999999"
+      "Price": "5.69"
     },
     {
       "Name": "ITOCHU CORP",
       "Ticker": "8001 JP",
       "Identifier": "6467803",
-      "Weight": "3.31%",
-      "Market Value": "128,188,514.45",
+      "Weight": "3.42%",
+      "Market Value": "131,125,742.86",
       "Shares Held": "9,201,061.00",
       "Asset Category": "Equity",
-      "Price": "13.93192746466956"
+      "Price": "14.25115460706108"
     },
     {
       "Name": "AECON GROUP INC",
       "Ticker": "ARE CN",
       "Identifier": "2699547",
-      "Weight": "2.73%",
-      "Market Value": "105,739,583.83",
+      "Weight": "2.75%",
+      "Market Value": "105,449,693.31",
       "Shares Held": "2,800,485.00",
       "Asset Category": "Equity",
-      "Price": "37.75759692696086"
-    },
-    {
-      "Name": "SIBANYE STILLWATER LTD",
-      "Ticker": "SSW SJ",
-      "Identifier": "BL0L913",
-      "Weight": "2.71%",
-      "Market Value": "105,004,648.90",
-      "Shares Held": "54,489,046.00",
-      "Asset Category": "Equity",
-      "Price": "1.927078130529208"
+      "Price": "37.65408252856201"
     },
     {
       "Name": "PALADIN ENERGY LTD",
       "Ticker": "PDN AU",
       "Identifier": "6668468",
-      "Weight": "2.70%",
-      "Market Value": "104,519,136.76",
+      "Weight": "2.64%",
+      "Market Value": "101,227,219.63",
       "Shares Held": "26,161,383.00",
       "Asset Category": "Equity",
-      "Price": "3.995168633095582"
+      "Price": "3.869337474628157"
     },
     {
-      "Name": "YELLOW CAKE PLC",
-      "Ticker": "YCA LN",
-      "Identifier": "BF50RG4",
-      "Weight": "2.49%",
-      "Market Value": "96,332,831.73",
-      "Shares Held": "14,905,590.00",
+      "Name": "SIBANYE STILLWATER LTD",
+      "Ticker": "SSW SJ",
+      "Identifier": "BL0L913",
+      "Weight": "2.57%",
+      "Market Value": "98,594,824.54",
+      "Shares Held": "54,489,046.00",
       "Asset Category": "Equity",
-      "Price": "6.462866060987857"
-    },
-    {
-      "Name": "BHP GROUP LTD",
-      "Ticker": "BHP AU",
-      "Identifier": "6144690",
-      "Weight": "2.45%",
-      "Market Value": "94,847,302.62",
-      "Shares Held": "2,684,911.00",
-      "Asset Category": "Equity",
-      "Price": "35.32605088958256"
+      "Price": "1.809443030806596"
     },
     {
       "Name": "DENISON MINES CORP",
       "Ticker": "DML CN",
       "Identifier": "2003223",
-      "Weight": "2.39%",
-      "Market Value": "92,485,660.30",
+      "Weight": "2.49%",
+      "Market Value": "95,613,786.27",
       "Shares Held": "53,384,364.00",
       "Asset Category": "Equity",
-      "Price": "1.732448480607543"
+      "Price": "1.791044776144565"
     },
     {
-      "Name": "SAMSUNG C&T CORP",
-      "Ticker": "028260 KS",
-      "Identifier": "BSXN8K7",
-      "Weight": "2.35%",
-      "Market Value": "91,265,625.00",
-      "Shares Held": "461,450.00",
+      "Name": "YELLOW CAKE PLC",
+      "Ticker": "YCA LN",
+      "Identifier": "BF50RG4",
+      "Weight": "2.47%",
+      "Market Value": "94,618,888.73",
+      "Shares Held": "14,905,590.00",
       "Asset Category": "Equity",
-      "Price": "197.780095351609"
+      "Price": "6.34787946870939"
+    },
+    {
+      "Name": "BHP GROUP LTD",
+      "Ticker": "BHP AU",
+      "Identifier": "6144690",
+      "Weight": "2.40%",
+      "Market Value": "92,262,675.65",
+      "Shares Held": "2,684,911.00",
+      "Asset Category": "Equity",
+      "Price": "34.36340185950298"
     },
     {
       "Name": "CENTRUS ENERGY CORP-CLASS A",
       "Ticker": "LEU",
       "Identifier": "BQXKDH6",
       "Weight": "2.33%",
-      "Market Value": "90,461,832.56",
+      "Market Value": "89,546,880.66",
       "Shares Held": "1,076,414.00",
       "Asset Category": "Equity",
-      "Price": "84.04"
+      "Price": "83.19"
     },
     {
       "Name": "X-ENERGY INC",
       "Ticker": "XE",
       "Identifier": "BW0TQY6",
-      "Weight": "2.28%",
-      "Market Value": "88,369,612.08",
+      "Weight": "2.19%",
+      "Market Value": "84,171,287.52",
       "Shares Held": "10,239,816.00",
       "Asset Category": "Equity",
-      "Price": "8.629999999999999"
+      "Price": "8.219999999999999"
     },
     {
-      "Name": "MITSUBISHI HEAVY INDUSTRIES",
-      "Ticker": "7011 JP",
-      "Identifier": "6597067",
-      "Weight": "2.17%",
-      "Market Value": "84,175,955.26",
-      "Shares Held": "4,758,207.00",
+      "Name": "SAMSUNG C&T CORP",
+      "Ticker": "028260 KS",
+      "Identifier": "BSXN8K7",
+      "Weight": "2.18%",
+      "Market Value": "83,659,500.41",
+      "Shares Held": "461,450.00",
       "Asset Category": "Equity",
-      "Price": "17.69068795451732"
+      "Price": "181.2969994799003"
     },
     {
       "Name": "HYUNDAI ENGINEERING & CONST",
       "Ticker": "000720 KS",
       "Identifier": "6450988",
-      "Weight": "2.16%",
-      "Market Value": "83,853,853.55",
+      "Weight": "2.08%",
+      "Market Value": "79,847,779.39",
       "Shares Held": "1,612,685.00",
       "Asset Category": "Equity",
-      "Price": "51.99642431721011"
+      "Price": "49.51232223899893"
     },
     {
       "Name": "DAEWOO ENGINEERING & CONSTR",
       "Ticker": "047040 KS",
       "Identifier": "6344122",
-      "Weight": "2.13%",
-      "Market Value": "82,586,466.92",
+      "Weight": "2.05%",
+      "Market Value": "78,620,257.76",
       "Shares Held": "10,538,410.00",
       "Asset Category": "Equity",
-      "Price": "7.836710369021513"
+      "Price": "7.460352914718634"
     },
     {
-      "Name": "GS ENGINEERING & CONSTRUCT",
-      "Ticker": "006360 KS",
-      "Identifier": "6537096",
-      "Weight": "1.94%",
-      "Market Value": "75,298,461.86",
-      "Shares Held": "3,902,728.00",
+      "Name": "MITSUBISHI HEAVY INDUSTRIES",
+      "Ticker": "7011 JP",
+      "Identifier": "6597067",
+      "Weight": "2.05%",
+      "Market Value": "78,573,426.72",
+      "Shares Held": "4,758,207.00",
       "Asset Category": "Equity",
-      "Price": "19.29380214557612"
+      "Price": "16.51324263950686"
     },
     {
       "Name": "ENERGY FUELS INC",
       "Ticker": "EFR CN",
       "Identifier": "BFV4XV7",
-      "Weight": "1.93%",
-      "Market Value": "74,833,412.71",
+      "Weight": "1.98%",
+      "Market Value": "75,957,337.43",
       "Shares Held": "14,574,698.00",
       "Asset Category": "Equity",
-      "Price": "5.134474327358275"
+      "Price": "5.211589113544583"
+    },
+    {
+      "Name": "GS ENGINEERING & CONSTRUCT",
+      "Ticker": "006360 KS",
+      "Identifier": "6537096",
+      "Weight": "1.92%",
+      "Market Value": "73,806,336.98",
+      "Shares Held": "3,902,728.00",
+      "Asset Category": "Equity",
+      "Price": "18.91147345651554"
     },
     {
       "Name": "DOOSAN ENERBILITY CO LTD",
       "Ticker": "034020 KS",
       "Identifier": "6294670",
-      "Weight": "1.89%",
-      "Market Value": "73,117,664.41",
+      "Weight": "1.78%",
+      "Market Value": "68,218,956.15",
       "Shares Held": "2,290,622.00",
       "Asset Category": "Equity",
-      "Price": "31.92044100248753"
+      "Price": "29.78184796531248"
     },
     {
       "Name": "NUSCALE POWER CORP",
       "Ticker": "SMR",
       "Identifier": "BNXK803",
-      "Weight": "1.69%",
-      "Market Value": "65,601,234.60",
+      "Weight": "1.68%",
+      "Market Value": "64,607,276.50",
       "Shares Held": "19,879,162.00",
       "Asset Category": "Equity",
-      "Price": "3.3"
+      "Price": "3.25"
     },
     {
       "Name": "KEPCO ENGINEERING & CONSTRUC",
       "Ticker": "052690 KS",
       "Identifier": "B4LW1M1",
-      "Weight": "1.34%",
-      "Market Value": "51,895,903.75",
+      "Weight": "1.29%",
+      "Market Value": "49,414,494.23",
       "Shares Held": "1,098,818.00",
       "Asset Category": "Equity",
-      "Price": "47.22884385767252"
+      "Price": "44.97059042534796"
     },
     {
       "Name": "CGN MINING CO LTD",
       "Ticker": "1164 HK",
       "Identifier": "B755514",
-      "Weight": "1.13%",
-      "Market Value": "43,745,336.92",
+      "Weight": "1.02%",
+      "Market Value": "39,317,968.19",
       "Shares Held": "193,804,200.00",
       "Asset Category": "Equity",
-      "Price": "0.2257192409658821"
+      "Price": "0.2028746961624155"
     },
     {
       "Name": "BANNERMAN ENERGY LTD",
       "Ticker": "BMN AU",
       "Identifier": "B07DXJ1",
       "Weight": "0.60%",
-      "Market Value": "23,355,930.27",
+      "Market Value": "23,158,894.77",
       "Shares Held": "11,172,439.00",
       "Asset Category": "Equity",
-      "Price": "2.090495215055549"
-    },
-    {
-      "Name": "DEEP YELLOW LTD",
-      "Ticker": "DYL AU",
-      "Identifier": "6480275",
-      "Weight": "0.59%",
-      "Market Value": "22,951,394.54",
-      "Shares Held": "53,618,016.00",
-      "Asset Category": "Equity",
-      "Price": "0.4280537821466576"
-    },
-    {
-      "Name": "SILEX SYSTEMS LTD",
-      "Ticker": "SLX AU",
-      "Identifier": "6111735",
-      "Weight": "0.59%",
-      "Market Value": "22,813,601.86",
-      "Shares Held": "13,480,781.00",
-      "Asset Category": "Equity",
-      "Price": "1.692305650540573"
+      "Price": "2.072859361326564"
     },
     {
       "Name": "NANO NUCLEAR ENERGY INC",
       "Ticker": "NNE",
       "Identifier": "BPDH477",
-      "Weight": "0.58%",
-      "Market Value": "22,437,369.76",
+      "Weight": "0.59%",
+      "Market Value": "22,475,442.22",
       "Shares Held": "2,538,164.00",
       "Asset Category": "Equity",
-      "Price": "8.84"
+      "Price": "8.854999999999999"
+    },
+    {
+      "Name": "DEEP YELLOW LTD",
+      "Ticker": "DYL AU",
+      "Identifier": "6480275",
+      "Weight": "0.57%",
+      "Market Value": "22,052,104.45",
+      "Shares Held": "53,618,016.00",
+      "Asset Category": "Equity",
+      "Price": "0.4112816194094164"
+    },
+    {
+      "Name": "SILEX SYSTEMS LTD",
+      "Ticker": "SLX AU",
+      "Identifier": "6111735",
+      "Weight": "0.56%",
+      "Market Value": "21,645,327.60",
+      "Shares Held": "13,480,781.00",
+      "Asset Category": "Equity",
+      "Price": "1.605643441578051"
     },
     {
       "Name": "BOSS ENERGY LTD",
       "Ticker": "BOE AU",
       "Identifier": "B1XLCQ6",
-      "Weight": "0.54%",
-      "Market Value": "20,754,985.40",
+      "Weight": "0.53%",
+      "Market Value": "20,198,782.90",
       "Shares Held": "23,165,946.00",
       "Asset Category": "Equity",
-      "Price": "0.8959265207645739"
+      "Price": "0.8719170328723032"
     },
     {
       "Name": "URANIUM ROYALTY CORP",
       "Ticker": "UROY",
       "Identifier": "BRJH5C7",
       "Weight": "0.44%",
-      "Market Value": "17,092,960.60",
+      "Market Value": "16,870,008.94",
       "Shares Held": "7,431,722.00",
       "Asset Category": "Equity",
-      "Price": "2.3"
+      "Price": "2.27"
     },
     {
       "Name": "ISOENERGY LTD",
       "Ticker": "ISO CN",
       "Identifier": "BTTRKM6",
       "Weight": "0.41%",
-      "Market Value": "15,732,053.99",
+      "Market Value": "15,912,519.67",
       "Shares Held": "2,700,292.00",
       "Asset Category": "Equity",
-      "Price": "5.82605658573221"
+      "Price": "5.892888498725323"
     },
     {
       "Name": "BERKELEY ENERGIA LTD",
       "Ticker": "BKY SM",
       "Identifier": "BYVQC08",
       "Weight": "0.35%",
-      "Market Value": "13,697,239.20",
+      "Market Value": "13,308,602.04",
       "Shares Held": "25,377,198.00",
       "Asset Category": "Equity",
-      "Price": "0.539745924668279"
+      "Price": "0.5244315010664298"
     },
     {
       "Name": "UR-ENERGY INC",
       "Ticker": "URG",
       "Identifier": "B0WW4L2",
-      "Weight": "0.25%",
-      "Market Value": "9,852,215.38",
+      "Weight": "0.26%",
+      "Market Value": "10,125,708.57",
       "Shares Held": "21,534,897.00",
       "Asset Category": "Equity",
-      "Price": "0.4575000001160907"
+      "Price": "0.4702000000278618"
     },
     {
       "Name": "ATHA ENERGY CORP",
       "Ticker": "SASK CN",
       "Identifier": "BNQNDF9",
       "Weight": "0.24%",
-      "Market Value": "9,153,465.09",
+      "Market Value": "9,203,290.80",
       "Shares Held": "20,473,727.00",
       "Asset Category": "Equity",
-      "Price": "0.4470834787432694"
+      "Price": "0.4495171201608774"
     },
     {
       "Name": "TERRESTRIAL ENERGY INC",
       "Ticker": "IMSR",
       "Identifier": "BVK6BG7",
-      "Weight": "0.21%",
-      "Market Value": "8,293,900.50",
+      "Weight": "0.23%",
+      "Market Value": "8,761,162.50",
       "Shares Held": "3,893,850.00",
       "Asset Category": "Equity",
-      "Price": "2.13"
+      "Price": "2.25"
     },
     {
       "Name": "LIGHTBRIDGE CORP",
@@ -382,256 +622,6 @@
       "Shares Held": "2,059,647.00",
       "Asset Category": "Equity",
       "Price": "3.16"
-    },
-    {
-      "Name": "GLOBAL ATOMIC CORP",
-      "Ticker": "GLO CN",
-      "Identifier": "BF11BK3",
-      "Weight": "0.14%",
-      "Market Value": "5,339,566.36",
-      "Shares Held": "27,794,870.00",
-      "Asset Category": "Equity",
-      "Price": "0.1921061821839786"
-    },
-    {
-      "Name": "MEGA URANIUM LTD",
-      "Ticker": "MGA CN",
-      "Identifier": "2817833",
-      "Weight": "0.13%",
-      "Market Value": "5,172,104.51",
-      "Shares Held": "20,010,453.00",
-      "Asset Category": "Equity",
-      "Price": "0.258470136083376"
-    },
-    {
-      "Name": "ENCORE ENERGY CORP",
-      "Ticker": "EU CN",
-      "Identifier": "BN48958",
-      "Weight": "0.13%",
-      "Market Value": "5,130,122.84",
-      "Shares Held": "11,298,109.00",
-      "Asset Category": "Equity",
-      "Price": "0.4540691579449269"
-    },
-    {
-      "Name": "ALLIGATOR ENERGY LTD",
-      "Ticker": "AGE AU",
-      "Identifier": "B55ZH25",
-      "Weight": "0.12%",
-      "Market Value": "4,618,946.45",
-      "Shares Held": "231,997,363.00",
-      "Asset Category": "Equity",
-      "Price": "0.0199094782383367"
-    },
-    {
-      "Name": "LOTUS RESOURCES LTD",
-      "Ticker": "LOT AU",
-      "Identifier": "BK6XLC1",
-      "Weight": "0.09%",
-      "Market Value": "3,281,395.55",
-      "Shares Held": "29,085,132.00",
-      "Asset Category": "Equity",
-      "Price": "0.1128203767478174"
-    },
-    {
-      "Name": "ELEVATE URANIUM LTD",
-      "Ticker": "EL8 AU",
-      "Identifier": "BM8ZH21",
-      "Weight": "0.08%",
-      "Market Value": "3,050,121.77",
-      "Shares Held": "24,189,392.00",
-      "Asset Category": "Equity",
-      "Price": "0.126093362330066"
-    },
-    {
-      "Name": "ATOMIC EAGLE LTD",
-      "Ticker": "AEU AU",
-      "Identifier": "BSQM0M7",
-      "Weight": "0.08%",
-      "Market Value": "2,997,516.69",
-      "Shares Held": "15,574,890.00",
-      "Asset Category": "Equity",
-      "Price": "0.1924582895930565"
-    },
-    {
-      "Name": "CASH",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.08%",
-      "Market Value": "2,946,760.03",
-      "Shares Held": "2,946,760.03",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "LARAMIDE RESOURCES",
-      "Ticker": "LAM CN",
-      "Identifier": "2507952",
-      "Weight": "0.07%",
-      "Market Value": "2,885,254.96",
-      "Shares Held": "12,147,772.00",
-      "Asset Category": "Equity",
-      "Price": "0.2375130978750671"
-    },
-    {
-      "Name": "TERRA INNOVATUM GLOBAL NV",
-      "Ticker": "NKLR",
-      "Identifier": "BVBQSY3",
-      "Weight": "0.07%",
-      "Market Value": "2,513,341.35",
-      "Shares Held": "1,288,893.00",
-      "Asset Category": "Equity",
-      "Price": "1.95"
-    },
-    {
-      "Name": "AMERICAN LITHIUM CORP",
-      "Ticker": "LI CN",
-      "Identifier": "BF4XHL9",
-      "Weight": "0.06%",
-      "Market Value": "2,392,750.10",
-      "Shares Held": "13,980,497.00",
-      "Asset Category": "Equity",
-      "Price": "0.1711491444116758"
-    },
-    {
-      "Name": "PENINSULA ENERGY LTD",
-      "Ticker": "PEN AU",
-      "Identifier": "6486381",
-      "Weight": "0.06%",
-      "Market Value": "2,382,521.81",
-      "Shares Held": "22,437,697.00",
-      "Asset Category": "Equity",
-      "Price": "0.1061838837559844"
-    },
-    {
-      "Name": "AURA ENERGY LTD",
-      "Ticker": "AEE AU",
-      "Identifier": "B14Z2S9",
-      "Weight": "0.06%",
-      "Market Value": "2,306,082.84",
-      "Shares Held": "55,156,377.00",
-      "Asset Category": "Equity",
-      "Price": "0.04180990422920635"
-    },
-    {
-      "Name": "SKYHARBOUR RESOURCES LTD",
-      "Ticker": "SYH CN",
-      "Identifier": "BDFGHL3",
-      "Weight": "0.06%",
-      "Market Value": "2,207,704.59",
-      "Shares Held": "12,155,112.00",
-      "Asset Category": "Equity",
-      "Price": "0.1816276633238756"
-    },
-    {
-      "Name": "EAGLE NUCLEAR ENERGY CORP",
-      "Ticker": "NUCL",
-      "Identifier": "BSRFLX3",
-      "Weight": "0.06%",
-      "Market Value": "2,193,221.70",
-      "Shares Held": "925,410.00",
-      "Asset Category": "Equity",
-      "Price": "2.37"
-    },
-    {
-      "Name": "ASARIAN ENERGY LTD",
-      "Ticker": "ARN CN",
-      "Identifier": "BV87YW9",
-      "Weight": "0.06%",
-      "Market Value": "2,167,365.26",
-      "Shares Held": "9,849,471.00",
-      "Asset Category": "Equity",
-      "Price": "0.2200489000881367"
-    },
-    {
-      "Name": "CANALASKA URANIUM LTD",
-      "Ticker": "CVV CN",
-      "Identifier": "BR1YTV3",
-      "Weight": "0.05%",
-      "Market Value": "1,826,980.64",
-      "Shares Held": "12,453,918.00",
-      "Asset Category": "Equity",
-      "Price": "0.1466992668491956"
-    },
-    {
-      "Name": "ANSON RESOURCES LTD",
-      "Ticker": "ASN AU",
-      "Identifier": "BD8PFL3",
-      "Weight": "0.04%",
-      "Market Value": "1,592,803.45",
-      "Shares Held": "72,729,336.00",
-      "Asset Category": "Equity",
-      "Price": "0.0219004261224109"
-    },
-    {
-      "Name": "CAULDRON ENERGY LTD",
-      "Ticker": "CXU AU",
-      "Identifier": "B04D4W4",
-      "Weight": "0.04%",
-      "Market Value": "1,587,094.03",
-      "Shares Held": "54,351,478.00",
-      "Asset Category": "Equity",
-      "Price": "0.02920056801399219"
-    },
-    {
-      "Name": "ANFIELD ENERGY INC",
-      "Ticker": "AEC CN",
-      "Identifier": "BRT7VZ2",
-      "Weight": "0.04%",
-      "Market Value": "1,551,317.95",
-      "Shares Held": "689,662.00",
-      "Asset Category": "Equity",
-      "Price": "2.24938875855129"
-    },
-    {
-      "Name": "F3 URANIUM CORP",
-      "Ticker": "FUU CN",
-      "Identifier": "BMW5VG9",
-      "Weight": "0.04%",
-      "Market Value": "1,509,890.84",
-      "Shares Held": "36,023,479.00",
-      "Asset Category": "Equity",
-      "Price": "0.04191407609464928"
-    },
-    {
-      "Name": "VERDERA ENERGY CORP",
-      "Ticker": "V CN",
-      "Identifier": "BR1FDY7",
-      "Weight": "0.01%",
-      "Market Value": "244,904.45",
-      "Shares Held": "1,630,608.00",
-      "Asset Category": "Equity",
-      "Price": "0.1501921062572979"
-    },
-    {
-      "Name": "VERDERA ENERGY CORP",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "0.00%",
-      "Market Value": "61,235.87",
-      "Shares Held": "407,717.00",
-      "Asset Category": "Equity",
-      "Price": "0.1501920940260033"
-    },
-    {
-      "Name": "OTHER PAYABLE & RECEIVABLES",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.01%",
-      "Market Value": "-222,480.68",
-      "Shares Held": "-222,480.68",
-      "Asset Category": "Cash",
-      "Price": "1.0"
-    },
-    {
-      "Name": "KOREAN WON",
-      "Ticker": "-",
-      "Identifier": "",
-      "Weight": "-0.02%",
-      "Market Value": "-751,884.83",
-      "Shares Held": "-1,009,330,190.00",
-      "Asset Category": "Equity",
-      "Price": "0.0007449344500435482"
     }
   ]
 }

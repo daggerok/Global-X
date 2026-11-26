@@ -2,7 +2,7 @@
   "ticker": "PFFD",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2312,
+  "totalRows": 2313,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-30",
+      "Close": "20.48",
+      "Adj Close": "15.87",
+      "Volume": "866700"
+    },
     {
       "Date": "2022-11-29",
       "Close": "20.17",
@@ -6003,12 +6009,6 @@
       "Close": "22.74",
       "Adj Close": "14.19",
       "Volume": "176900"
-    },
-    {
-      "Date": "2018-12-11",
-      "Close": "22.62",
-      "Adj Close": "14.12",
-      "Volume": "108700"
     }
   ]
 }

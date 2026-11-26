@@ -2,7 +2,7 @@
   "ticker": "BKCH",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1349,
+  "totalRows": 1350,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-30",
+      "Close": "16.52",
+      "Adj Close": "14.74",
+      "Volume": "22000"
+    },
     {
       "Date": "2022-11-29",
       "Close": "15.64",

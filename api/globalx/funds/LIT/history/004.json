@@ -2,7 +2,7 @@
   "ticker": "LIT",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 4111,
+  "totalRows": 4112,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-19",
+      "Close": "22.48",
+      "Adj Close": "19.17",
+      "Volume": "8800"
+    },
     {
       "Date": "2014-12-18",
       "Close": "22.44",
@@ -6003,12 +6009,6 @@
       "Close": "45.48",
       "Adj Close": "37.68",
       "Volume": "158800"
-    },
-    {
-      "Date": "2010-12-30",
-      "Close": "45.08",
-      "Adj Close": "37.35",
-      "Volume": "133600"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DJIA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1193,
+  "totalRows": 1194,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-30",
+      "Close": "22.10",
+      "Adj Close": "15.35",
+      "Volume": "33200"
+    },
     {
       "Date": "2022-11-29",
       "Close": "21.99",

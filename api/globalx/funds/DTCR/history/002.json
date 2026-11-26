@@ -2,7 +2,7 @@
   "ticker": "DTCR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1525,
+  "totalRows": 1526,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-11-30",
+      "Close": "13.44",
+      "Adj Close": "12.59",
+      "Volume": "30600"
+    },
     {
       "Date": "2022-11-29",
       "Close": "13.13",
