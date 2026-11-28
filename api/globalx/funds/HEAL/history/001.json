@@ -2,7 +2,7 @@
   "ticker": "HEAL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1590,
+  "totalRows": 1591,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "28.44",
+      "Adj Close": "28.44",
+      "Volume": "5528"
+    },
     {
       "Date": "2026-11-25",
       "Close": "28.16",
@@ -6003,12 +6009,6 @@
       "Close": "37.83",
       "Adj Close": "37.71",
       "Volume": "13267"
-    },
-    {
-      "Date": "2022-12-01",
-      "Close": "37.11",
-      "Adj Close": "36.99",
-      "Volume": "71933"
     }
   ]
 }

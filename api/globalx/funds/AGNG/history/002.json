@@ -2,7 +2,7 @@
   "ticker": "AGNG",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2653,
+  "totalRows": 2654,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "26.75",
+      "Adj Close": "25.90",
+      "Volume": "2100"
+    },
     {
       "Date": "2022-11-30",
       "Close": "26.59",
@@ -6002,12 +6008,6 @@
       "Date": "2018-12-13",
       "Close": "20.10",
       "Adj Close": "18.81",
-      "Volume": "400"
-    },
-    {
-      "Date": "2018-12-12",
-      "Close": "20.31",
-      "Adj Close": "19.01",
       "Volume": "400"
     }
   ]

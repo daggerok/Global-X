@@ -2,7 +2,7 @@
   "ticker": "RYLD",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1912,
+  "totalRows": 1913,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "19.60",
+      "Adj Close": "12.36",
+      "Volume": "832300"
+    },
     {
       "Date": "2022-11-30",
       "Close": "19.56",

@@ -2,7 +2,7 @@
   "ticker": "IPAV",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 564,
+  "totalRows": 565,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "29.28",
+      "Adj Close": "29.28",
+      "Volume": "333"
+    },
     {
       "Date": "2026-11-25",
       "Close": "28.72",

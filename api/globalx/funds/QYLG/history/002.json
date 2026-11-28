@@ -2,7 +2,7 @@
   "ticker": "QYLG",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1552,
+  "totalRows": 1553,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "23.77",
+      "Adj Close": "13.89",
+      "Volume": "53300"
+    },
     {
       "Date": "2022-11-30",
       "Close": "23.75",

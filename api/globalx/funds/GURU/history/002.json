@@ -2,7 +2,7 @@
   "ticker": "GURU",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3641,
+  "totalRows": 3642,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "35.94",
+      "Adj Close": "35.56",
+      "Volume": "1700"
+    },
     {
       "Date": "2022-11-30",
       "Close": "35.80",
@@ -6003,12 +6009,6 @@
       "Close": "29.44",
       "Adj Close": "27.99",
       "Volume": "2200"
-    },
-    {
-      "Date": "2018-12-12",
-      "Close": "29.68",
-      "Adj Close": "28.22",
-      "Volume": "2300"
     }
   ]
 }

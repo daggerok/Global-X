@@ -2,7 +2,7 @@
   "ticker": "QRMI",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1319,
+  "totalRows": 1320,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "14.15",
+      "Adj Close": "14.15",
+      "Volume": "1416"
+    },
     {
       "Date": "2026-11-25",
       "Close": "14.07",
@@ -6003,12 +6009,6 @@
       "Close": "18.17",
       "Adj Close": "11.20",
       "Volume": "3200"
-    },
-    {
-      "Date": "2022-12-01",
-      "Close": "18.11",
-      "Adj Close": "11.17",
-      "Volume": "2700"
     }
   ]
 }

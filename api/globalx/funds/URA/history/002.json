@@ -2,7 +2,7 @@
   "ticker": "URA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 4038,
+  "totalRows": 4039,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "20.94",
+      "Adj Close": "18.29",
+      "Volume": "1444500"
+    },
     {
       "Date": "2022-11-30",
       "Close": "21.49",
@@ -6003,12 +6009,6 @@
       "Close": "12.47",
       "Adj Close": "9.82",
       "Volume": "127100"
-    },
-    {
-      "Date": "2018-12-12",
-      "Close": "12.42",
-      "Adj Close": "9.78",
-      "Volume": "171000"
     }
   ]
 }

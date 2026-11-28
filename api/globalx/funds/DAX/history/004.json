@@ -2,7 +2,7 @@
   "ticker": "DAX",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3041,
+  "totalRows": 3042,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-22",
+      "Close": "26.61",
+      "Adj Close": "20.34",
+      "Volume": "300"
+    },
     {
       "Date": "2014-12-19",
       "Close": "26.45",

@@ -2,7 +2,7 @@
   "ticker": "BUG",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1776,
+  "totalRows": 1777,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "23.82",
+      "Adj Close": "23.39",
+      "Volume": "476800"
+    },
     {
       "Date": "2022-11-30",
       "Close": "22.95",

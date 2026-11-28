@@ -2,7 +2,7 @@
   "ticker": "AQWA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1415,
+  "totalRows": 1416,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "14.50",
+      "Adj Close": "13.65",
+      "Volume": "300"
+    },
     {
       "Date": "2022-11-30",
       "Close": "14.34",

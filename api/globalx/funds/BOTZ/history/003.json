@@ -2,7 +2,7 @@
   "ticker": "BOTZ",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2566,
+  "totalRows": 2567,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-12-12",
+      "Close": "18.21",
+      "Adj Close": "17.49",
+      "Volume": "1110000"
+    },
     {
       "Date": "2018-12-11",
       "Close": "17.87",

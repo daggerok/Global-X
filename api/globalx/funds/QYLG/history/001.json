@@ -2,7 +2,7 @@
   "ticker": "QYLG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1552,
+  "totalRows": 1553,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "26.67",
+      "Adj Close": "26.67",
+      "Volume": "104517"
+    },
     {
       "Date": "2026-11-25",
       "Close": "26.24",
@@ -6003,12 +6009,6 @@
       "Close": "23.76",
       "Adj Close": "13.88",
       "Volume": "14600"
-    },
-    {
-      "Date": "2022-12-01",
-      "Close": "23.77",
-      "Adj Close": "13.89",
-      "Volume": "53300"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "CHIQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 4273,
+  "totalRows": 4274,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "15.86",
+      "Adj Close": "15.86",
+      "Volume": "8639"
+    },
     {
       "Date": "2026-11-25",
       "Close": "15.53",
@@ -6003,12 +6009,6 @@
       "Close": "20.28",
       "Adj Close": "18.89",
       "Volume": "98100"
-    },
-    {
-      "Date": "2022-12-01",
-      "Close": "19.64",
-      "Adj Close": "18.29",
-      "Volume": "67900"
     }
   ]
 }

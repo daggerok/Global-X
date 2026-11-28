@@ -2,7 +2,7 @@
   "ticker": "URA",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4038,
+  "totalRows": 4039,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2010-12-31",
+      "Close": "122.82",
+      "Adj Close": "80.95",
+      "Volume": "22200"
+    },
     {
       "Date": "2010-12-30",
       "Close": "121.32",

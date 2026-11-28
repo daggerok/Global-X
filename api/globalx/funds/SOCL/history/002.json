@@ -2,7 +2,7 @@
   "ticker": "SOCL",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 3779,
+  "totalRows": 3780,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "30.65",
+      "Adj Close": "30.18",
+      "Volume": "8400"
+    },
     {
       "Date": "2022-11-30",
       "Close": "30.50",
@@ -6003,12 +6009,6 @@
       "Close": "29.47",
       "Adj Close": "28.92",
       "Volume": "20300"
-    },
-    {
-      "Date": "2018-12-12",
-      "Close": "29.80",
-      "Adj Close": "29.24",
-      "Volume": "24900"
     }
   ]
 }

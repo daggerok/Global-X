@@ -2,7 +2,7 @@
   "ticker": "QRMI",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1319,
+  "totalRows": 1320,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "18.11",
+      "Adj Close": "11.17",
+      "Volume": "2700"
+    },
     {
       "Date": "2022-11-30",
       "Close": "18.17",

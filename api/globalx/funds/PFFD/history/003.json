@@ -2,7 +2,7 @@
   "ticker": "PFFD",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2313,
+  "totalRows": 2314,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2018-12-12",
+      "Close": "22.74",
+      "Adj Close": "14.19",
+      "Volume": "176900"
+    },
     {
       "Date": "2018-12-11",
       "Close": "22.62",

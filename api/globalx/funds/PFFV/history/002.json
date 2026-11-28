@@ -2,7 +2,7 @@
   "ticker": "PFFV",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1614,
+  "totalRows": 1615,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "23.68",
+      "Adj Close": "17.63",
+      "Volume": "90400"
+    },
     {
       "Date": "2022-11-30",
       "Close": "23.54",

@@ -2,7 +2,7 @@
   "ticker": "KROP",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1350,
+  "totalRows": 1351,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "47.34",
+      "Adj Close": "44.36",
+      "Volume": "267"
+    },
     {
       "Date": "2022-11-30",
       "Close": "47.06",

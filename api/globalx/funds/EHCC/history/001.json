@@ -2,7 +2,7 @@
   "ticker": "EHCC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 165,
+  "totalRows": 166,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "15.69",
+      "Adj Close": "15.69",
+      "Volume": "280"
+    },
     {
       "Date": "2026-11-25",
       "Close": "15.75",

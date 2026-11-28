@@ -2,7 +2,7 @@
   "ticker": "DIV",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3450,
+  "totalRows": 3451,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2014-12-22",
+      "Close": "29.04",
+      "Adj Close": "13.06",
+      "Volume": "887900"
+    },
     {
       "Date": "2014-12-19",
       "Close": "28.97",

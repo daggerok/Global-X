@@ -2,7 +2,7 @@
   "ticker": "ORBX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 157,
+  "totalRows": 158,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "33.75",
+      "Adj Close": "33.75",
+      "Volume": "11850"
+    },
     {
       "Date": "2026-11-25",
       "Close": "32.11",

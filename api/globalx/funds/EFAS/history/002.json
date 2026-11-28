@@ -2,7 +2,7 @@
   "ticker": "EFAS",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 2500,
+  "totalRows": 2501,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "13.56",
+      "Adj Close": "10.65",
+      "Volume": "4400"
+    },
     {
       "Date": "2022-11-30",
       "Close": "13.46",
@@ -6002,12 +6008,6 @@
       "Date": "2018-12-13",
       "Close": "15.55",
       "Adj Close": "9.73",
-      "Volume": "600"
-    },
-    {
-      "Date": "2018-12-12",
-      "Close": "15.66",
-      "Adj Close": "9.80",
       "Volume": "600"
     }
   ]

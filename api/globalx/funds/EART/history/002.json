@@ -2,7 +2,7 @@
   "ticker": "EART",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1213,
+  "totalRows": 1214,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2022-12-01",
+      "Close": "21.15",
+      "Adj Close": "20.14",
+      "Volume": "1200"
+    },
     {
       "Date": "2022-11-30",
       "Close": "21.19",
