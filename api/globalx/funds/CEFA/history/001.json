@@ -2,7 +2,7 @@
   "ticker": "CEFA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1615,
+  "totalRows": 1616,
   "headers": [
     "Date",
     "Close",
@@ -10,6 +10,12 @@
     "Volume"
   ],
   "rows": [
+    {
+      "Date": "2026-11-27",
+      "Close": "38.18",
+      "Adj Close": "38.18",
+      "Volume": "200"
+    },
     {
       "Date": "2026-11-25",
       "Close": "37.73",
@@ -6002,12 +6008,6 @@
       "Date": "2022-12-02",
       "Close": "26.80",
       "Adj Close": "24.15",
-      "Volume": "100"
-    },
-    {
-      "Date": "2022-12-01",
-      "Close": "26.82",
-      "Adj Close": "24.16",
       "Volume": "100"
     }
   ]
